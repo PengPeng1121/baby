@@ -49,6 +49,10 @@
                         <label class="col-md-3 front-label">检查日期</label>
                         <label class="col-md-3 front-label"><%=new SimpleDateFormat("yyyy-MM-dd").format(new Date())%></label>
                     </div>
+                    <div class="col-md-6">
+                        <label class="col-md-3 front-label">被访者与儿童的关系：</label>
+                        <label class="col-md-3 front-label"><input id="answerRelation"></input></label>
+                    </div>
                 </div>
             </div>
             <!-- 育儿观念 a1 p1 r1
@@ -203,58 +207,60 @@
     var questionMonthSum = $('#questionMonthSum').val();
     var questionTypeSum = $('#questionTypeSum').val();
     var questionScore = [0,0,0,0,0,0,0,0,0];
+    var questionReason = [questionSum];
 
     function prepare() {
-        var questionReason = [questionSum],
-            temp;
+        questionScore = [0,0,0,0,0,0,0,0,0];
+        questionReason = [questionSum];
+          var  temp;
         for(var i = 0; i < questionSum; i++) {
             questionReason[i] = $("#reason" + (i + 1)).val();
-        }
-        for (var i = 1; i <= questionSum; i++) {
-            // 判断问卷是否填写完整
-            temp = parseInt($("input:radio[name="+i+"]:checked").val());
-            if (temp) {
-                for(var i = 0; i < questionSum; i++) {
-                    if(temp === ''){
-                        continue;
-                    }
-                    if(i < 6){
-                        questionScore[1] += temp;
-                        continue;
-                    }
-                    if(i < 12){
-                        questionScore[2] += temp;
-                        continue;
-                    }
-                    if(i < 18){
-                        questionScore[3] += temp;
-                        continue;
-                    }
-                    if(i < 25){
-                        questionScore[4] += temp;
-                        continue;
-                    }
-                    if(i < 31){
-                        questionScore[5] += temp;
-                        continue;
-                    }
-                    if(i < 36){
-                        questionScore[6] += temp;
-                        continue;
-                    }
-                    if(i < 44) {
-                        questionScore[7] += temp;
-                        continue;
-                    }
-                    if(i < 50) {
-                        questionScore[8] += temp;
-                        continue;
-                    }
-                }
-
-            } else {
-                $.tipModal('alert', 'warning', '有题目未完成！');
+            temp = $("input:radio[name="+ i+1 +"]:checked").val();
+             if (!temp) {
+                 $.tipModal('alert', 'warning', '有题目未完成！');
                 return false;
+             }
+
+        }
+
+
+        for (var i = 1; i <= questionSum; i++) {
+            temp = $("input:radio[name="+ i +"]:checked").val();
+            if(temp==""||temp==undefined){
+                 continue;
+            }
+            temp = parseInt(temp);
+            if(i < 7){
+                questionScore[1] += temp;
+                continue;
+            }
+            if(i < 13){
+                questionScore[2] += temp;
+                continue;
+            }
+            if(i < 19){
+                questionScore[3] += temp;
+                continue;
+            }
+            if(i < 26){
+                questionScore[4] += temp;
+                continue;
+            }
+            if(i < 32){
+                questionScore[5] += temp;
+                continue;
+            }
+            if(i < 37){
+                questionScore[6] += temp;
+                continue;
+            }
+            if(i < 45) {
+                questionScore[7] += temp;
+                continue;
+            }
+            if(i < 51) {
+                questionScore[8] += temp;
+                continue;
             }
         }
         return true;
@@ -283,19 +289,20 @@
     function save() {
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                questionScore = [0,0,0,0,0,0,0,0,0];
                 if(result) {
                     var data = "{";
 
                     //每个题的得分
-                    for(var i = 0; i < questionSum; i++) {
-//                        data += "'result3_6.score" + (i + 1) + "':" + $("#reason" + (i + 1)).val(); + ","
-                    }
+//                    for(var i = 0; i < questionSum; i++) {
+//                       data += "'result3_6.score" + (i + 1) + "':" + $("#reason" + (i + 1)).val(); + ","
+//                    }
 
                     //每个题的原因
-/*                    var questionReason = [questionSum];
+                    questionReason = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
                         questionReason[i] = $("#reason" + (i + 1)).val();
-                    }*/
+                    }
 
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
@@ -345,7 +352,7 @@
                     }
 
 
-                    questionScore[0] = questionScore[1] + questionScore[2] + questionScore[3] + questionScore[4] + questionScore[5] + questionScore[6] + questionScore[7] + questionScore[8];
+//                    questionScore[0] = questionScore[1] + questionScore[2] + questionScore[3] + questionScore[4] + questionScore[5] + questionScore[6] + questionScore[7] + questionScore[8];
 
 
                     data += "'result3_6.a1':" + questionScore[1] + ",";
@@ -357,7 +364,10 @@
                     data += "'result3_6.a7':" + questionScore[7] + ",";
                     data += "'result3_6.a8':" + questionScore[8] + ",";
 
-                    data += "'result3_6.babyId':" + $("#babyid").val() + "}";
+                    data += "'result3_6.babyId':" + $("#babyid").val() + ",";
+                    var answerRelation = $("#answerRelation").val();
+                    answerRelation= " ' "+ answerRelation +" ' ";
+                    data += "'result3_6.answerRelation':" + answerRelation + "}";
 
                     $.ajax({
                         url: 'saveresult3_6',
