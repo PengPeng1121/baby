@@ -64,6 +64,7 @@ public class TestAction {
         questionMonthList = QuestionManager.findMonthByTestid(2);
         questionList = QuestionManager.findByTestid(2);
         baby = BabyManager.findById(babyid);
+        testid = 2;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30;

@@ -1,5 +1,7 @@
 package com.free4lab.babycheckup.action;
 
+import com.free4lab.babycheckup.constant.AnswerValueEnum_R;
+import com.free4lab.babycheckup.constant.AnswerValueEnum_Total;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager3_6;
@@ -22,11 +24,29 @@ public class ResultAction3_6 {
     private String stime;//检查日期
     private Hospital hospital;
 
+    private int a0;//总数
+
+    private String p0;//例如 50~70
+
+    private String r0;//评价
+
     public String showResult3_6() {
         result3_6 = ResultManager3_6.findResultByid(id);
         baby = BabyManager.findById(result3_6.getBabyId());
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result3_6.getTime());
+        //设置初始值
+        a0 = 0;
+        p0 = "0~50";
+        r0 ="需较多改进";
+        try{
+            if (result3_6!=null) {
+                a0 = result3_6.getA1()+ result3_6.getA2()+ result3_6.getA3()+ result3_6.getA4()+ result3_6.getA5()+ result3_6.getA6()+ result3_6.getA7()+ result3_6.getA8();
+                p0 = AnswerValueEnum_Total.getIndex(a0);
+                r0 = AnswerValueEnum_R.getName(p0);
+            }
+        }catch (Exception e){
 
+        }
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         return SUCCESS;
     }
@@ -70,6 +90,29 @@ public class ResultAction3_6 {
         this.hospital = hospital;
     }
 
+    public int getA0() {
+        return a0;
+    }
+
+    public void setA0(int a0) {
+        this.a0 = a0;
+    }
+
+    public String getP0() {
+        return p0;
+    }
+
+    public void setP0(String p0) {
+        this.p0 = p0;
+    }
+
+    public String getR0() {
+        return r0;
+    }
+
+    public void setR0(String r0) {
+        this.r0 = r0;
+    }
 
     public Result3_6 getResult3_6() {
         return result3_6;

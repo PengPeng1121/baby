@@ -17,6 +17,7 @@ public class Result3_6 {
     private int hosId;
     private int userId;
     private String state;
+    private String answerRelation;//答题者与儿童关系
     private int a1;
     private int a2;
     private int a3;
@@ -1456,6 +1457,16 @@ public class Result3_6 {
 
     public void setR8(String r8) {
         this.r8 = r8;
+    }
+
+    @Basic
+    @Column(name = "answer_relation", nullable = true, length = 20)
+    public String getAnswerRelation() {
+        return answerRelation;
+    }
+
+    public void setAnswerRelation(String answerRelation) {
+        this.answerRelation = answerRelation;
     }
 
     @Override

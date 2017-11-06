@@ -20,7 +20,21 @@ public enum AnswerValueEnum_17_P {
 
     SCORE_8(8,"0~50"),
 
-    SCORE_9(9,"0~50");
+    SCORE_9(9,"0~50"),
+
+    SCORE_10(10,"0~50"),
+
+    SCORE_11(11,"50~75"),
+
+    SCORE_12(12,"50~75"),
+
+    SCORE_13(13,"75~90"),
+
+    SCORE_14(14,"90~100"),
+
+    SCORE_15(15,"90~100"),
+
+    SCORE_16(16,"90~100");
 
 
     private Integer name;

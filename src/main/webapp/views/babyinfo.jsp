@@ -87,9 +87,13 @@
                         </span>
                                         </h4>
                                         <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                            <div class="col-md-6" style="padding-left:0px;float: left;">
                                                 <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re3_6.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                            <div class="col-md-6" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">被访者与儿童关系</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re3_6.answerRelation" format="yyyy-MM-dd HH:mm:ss" /></span>
                                             </div>
                                         </div>
                                     </div>

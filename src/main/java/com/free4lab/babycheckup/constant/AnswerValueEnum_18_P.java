@@ -21,7 +21,9 @@ public enum AnswerValueEnum_18_P {
 
     SCORE_10(10,"75~90"),
 
-    SCORE_11(11,"90~100");
+    SCORE_11(11,"90~100"),
+
+    SCORE_12(12,"90~100");
 
 
     private Integer name;

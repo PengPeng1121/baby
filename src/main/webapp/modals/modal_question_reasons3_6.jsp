@@ -3,14 +3,12 @@
 
 <div class="modal-body">
     <form>
-        <!-- <s:iterator value="#parameters.reasons[0].split(';') " id="reason">
-        <input type="radio" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/><br>
-        </s:iterator> -->
-        <input type="radio" name="1" value="0"><s:property value="#parameters.reasons[0].split(';')[0]"/><br>
-        <input type="radio" name="1" value="1"><s:property value="#parameters.reasons[0].split(';')[1]"/><br>
-        <input type="radio" name="1" value="2"><s:property value="#parameters.reasons[0].split(';')[2]"/><br>
-        <!-- <input type="radio" name="1" value="4">其他 -->
-        <input type="text"  id="other" value="">
+        <s:iterator value="#parameters.reasons[0].split(';') " id="reason">
+            <input type="checkbox" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/><br>
+        </s:iterator>
+        <input type="checkbox" name="1" value="4">其他
+        <input type="text"  id="other1" value="">
+        <input type="text"  id="other2" value="">
         <input type="hidden" id="qid" value="">
     </form>
 </div>
@@ -21,16 +19,17 @@
 
 <script type="text/javascript">
     function saveReason(){
-        var select = $("input:radio[name='1']:checked").val();
-        // if(select == 4){
-        //     select = $("#other").val();
-        // }
-        if($("#other").val()){
-            select = 0;
+        var select = $("input:checkbox[name='1']:checked").val();
+        if(select == 4){
+            select = $("#other1").val() + $("#other2").val();
         }
-        
+        // if($("#other").val()){
+        //     select = 0;
+        // }
+
         var qid = $("#qid").val();
         $("#reason"+qid).val(select);
+//        $("#reason"+qid).show();
         $('#front-modal').modal('hide');
     }
 </script>

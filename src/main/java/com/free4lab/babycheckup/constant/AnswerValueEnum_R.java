@@ -39,7 +39,7 @@ public enum AnswerValueEnum_R {
 
     //根据索引获取名称
     public static String getName(String index) {
-        String name = "";
+        String name = "需较多改进";
         for (AnswerValueEnum_R o : AnswerValueEnum_R.values()) {
             if (index .equals( o.getIndex())) {
                 name = o.getName();
