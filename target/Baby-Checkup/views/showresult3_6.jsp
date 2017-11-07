@@ -27,7 +27,7 @@
     <div class="container">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">3-6岁小儿神经心理检查报告单</h1>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -48,9 +48,7 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2">被访者与儿童的关系</td>
-                        <td class="col-md-2"><s:if test=" baby.fatherid">爸爸</s:if>
-                                             <s:if test=" baby.motherid ">妈妈</s:if>
-                                             <s:if test=" !baby.fatherid && !baby.motherid">''</s:if></td>
+                        <td class="col-md-2"><s:property value="result3_6.answerRelation"/></td>
                     </tr>
                 </table>
             </div>
@@ -65,15 +63,15 @@
                         <th class="col-md-1">测试项目</th>
                         <th class="col-md-1">育儿观念</th>
                         <th class="col-md-1">关注和接纳</th>
-                        <th class="col-md-1">规矩或自我调控能力</th>
+                        <th class="col-md-2">规矩或自我调控能力</th>
                         <th class="col-md-1">养育关系和沟通</th>
                         <th class="col-md-1">学习环境</th>
                         <th class="col-md-1">语言环境</th>
                         <th class="col-md-1">玩耍和娱乐</th>
-                        <th class="col-md-1">安全和居住环境</th>
-                        <th class="col-md-3">总和</th>
+                        <th class="col-md-2">安全和居住环境</th>
+                        <th class="col-md-1">总和</th>
 
-                        <!-- 育儿观念 a1 p1 r1  
+                        <!-- 育儿观念 a1 p1 r1
                         关注和接纳
                         规矩或自我调控能力
                         养育关系和沟通
@@ -95,7 +93,7 @@
                         <td id="a6"><s:property value="result3_6.a6"/></td>
                         <td id="a7"><s:property value="result3_6.a7"/></td>
                         <td id="a8"><s:property value="result3_6.a8"/></td>
-                        <td id="a0"><s:property value="result3_6.a0"/></td>
+                        <td id="a0"><s:property value="a0"/></td>
                     </tr>
                     <tr>
                         <td>应得分</td>
@@ -119,7 +117,7 @@
                         <td id="p6"><s:property value="result3_6.p6"/></td>
                         <td id="p7"><s:property value="result3_6.p7"/></td>
                         <td id="p8"><s:property value="result3_6.p8"/></td>
-                        <td id="p0"><s:property value="result3_6.p0"/></td>
+                        <td id="p0"><s:property value="p0"/></td>
                     </tr>
                     <tr>
                         <td>评估意见</td>
@@ -131,7 +129,7 @@
                         <td id="r6"><s:property value="result3_6.r6"/></td>
                         <td id="r7"><s:property value="result3_6.r7"/></td>
                         <td id="r8"><s:property value="result3_6.r8"/></td>
-                        <td id="r0"><s:property value="result3_6.r0"/></td>
+                        <td id="r0"><s:property value="r0"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -172,11 +170,33 @@
 
 
     // 柱状图数据
-    
 
-//    var p1 = "",
-//        p1_1 = "",
-//        p1_2 = "";
+    var series = [{
+        name: '',
+        data:[],
+        color:'white'
+    },{
+        name: '',
+        data:[],
+        color:'green'
+    },{
+        name: '',
+        data:[],
+        color:'blue'
+    },{
+        name: '',
+        data:[],
+        color:'orange'
+    },{
+        name: '',
+        data:[],
+        color:'red'
+    },{
+        name: '',
+        data:[],
+        color:'white'
+    }]
+    var pArr = [];
     var p1 = $('#p1').text();
     p1_1 = parseInt(p1.split('~')[0]);
     p1_2 = p1.split('~')[1];
@@ -217,25 +237,71 @@
     p8_1 = parseInt(p8.split('~')[0]);
     p8_2 = p8.split('~')[1];
 
-    var p0= 0,
-        p0_1 = 0,
-        p0_2 = 0;
-    <%--p0 = <s:property value="result3_6.p0"/>;--%>
-    <%--p0_1 = p0.split('~')[0];--%>
-    <%--p0_2 = p0.split('~')[1];--%>
+    var p0 = $('#p0').text();
+    p0_1 = parseInt(p0.split('~')[0]);
+    p0_2 = p0.split('~')[1];
 
 
-    
-    
+    pArr.push(p1_1);
+    pArr.push(p2_1);
+    pArr.push(p3_1);
+    pArr.push(p4_1);
+    pArr.push(p5_1);
+    pArr.push(p6_1);
+    pArr.push(p7_1);
+    pArr.push(p8_1);
+    pArr.push(p0_1);
+
+
+    // 填充series
+    for (var i = 0, len = pArr.length; i < len; i++) {
+        switch(pArr[i])
+        {
+            case 0:
+                series[0].data.push(50);
+                series[1].data.push(0);
+                series[2].data.push(0);
+                series[3].data.push(0);
+                series[4].data.push(50);
+                series[5].data.push(0);
+                break;
+            case 50:
+                series[0].data.push(25);
+                series[1].data.push(0);
+                series[2].data.push(0);
+                series[3].data.push(25);
+                series[4].data.push(0);
+                series[5].data.push(50);
+                break;
+            case 75:
+                series[0].data.push(10);
+                series[1].data.push(0);
+                series[2].data.push(15);
+                series[3].data.push(0);
+                series[4].data.push(0);
+                series[5].data.push(75);
+                break;
+            case 90:
+                series[0].data.push(0);
+                series[1].data.push(10);
+                series[2].data.push(0);
+                series[3].data.push(0);
+                series[4].data.push(0);
+                series[5].data.push(90);
+                break;
+            default:
+                console.log('');
+        }
+    }
+
 
     $(function () {
-        debugger
         $('#column').highcharts({
             chart: {
                 type: 'column'
             },
             title: {
-                text: '百分比堆叠柱形图'
+                text: ''
             },
             xAxis: {
                 categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境', '总和']
@@ -243,11 +309,11 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: '水果消费总量'
+                    text: '评分结果'
                 }
             },
             tooltip: {
-                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+                pointFormat: '',
                 shared: true
             },
             plotOptions: {
@@ -255,91 +321,14 @@
                     stacking: 'percent'
                 }
             },
-            series: [{
-                name: '',
-                data: [100-p1_2, 100-p2_2, 100-p3_2, 100-p4_2, 100-p5_2,100-p6_2,100-p7_2,100-p8_2,100-p0_2],
-                color: '#eee'
-            }, {
-                name: '',
-                data: [p1_2-p1_1, p2_2-p2_1, p3_2-p3_1, p4_2-p4_1, p5_2-p5_1,p6_2-p6_1,p7_2-p7_1,p8_2-p8_1,p0_2-p0_1],
-                color: 'black'
-            }, {
-                name: '',
-                data: [p1_1, p2_1, p3_1, p4_1, p5_1, p6_1, p7_1, p8_1,p0_1],
-                color:'#eee'
-            }]
+            legend: {
+                enabled:false
+            },
+            series: series
         });
-
-
-        // $('#column').highcharts({
-        //     chart: {
-        //         type: 'column'
-        //     },
-        //     title: {
-        //         text: '小儿测评结果柱状图'
-        //     },
-        //     xAxis: {
-        //         categories: [
-        //             '大运动',
-        //             '精细动作',
-        //             '适应能力',
-        //             '语言',
-        //             '社交行为'
-        //         ]
-        //     },
-        //     yAxis: [{
-        //         min: 0,
-        //         plotLines: [{
-        //             color: 'blue',
-        //             value: monthage,
-        //             width: 2,
-        //             /*label:{
-        //              text:'实足年龄',
-        //              align:'left'
-        //              }*/
-        //         }],
-        //         title: {
-        //             text: '智龄'
-        //         }
-        //     }, {
-        //         title: {
-        //             text: '发育商（DQ）'
-        //         },
-        //         opposite: true
-        //     }],
-        //     legend: {
-        //         shadow: false
-        //     },
-        //     tooltip: {
-        //         shared: true
-        //     },
-        //     plotOptions: {
-        //         column: {
-        //             grouping: false,
-        //             shadow: false,
-        //             borderWidth: 0
-        //         }
-        //     },
-        //     series: [{
-        //         name: '发育商',
-        //         color: 'rgb(169, 255, 150)',
-        //         data: [a1, a2, a3, a4, a5],
-        //         pointPadding: 0.3,
-        //         pointPlacement: -0.2
-        //     }, {
-        //         name: '智龄',
-        //         color: 'rgba(0,0,0)',
-        //         data: [b1, b2, b3, b4, b5],
-        //         tooltip: {
-        //             valuePrefix: '$',
-        //             valueSuffix: ' M'
-        //         },
-        //         pointPadding: 0.3,
-        //         pointPlacement: 0.2,
-        //         yAxis: 1
-        //     }]
-        // });
     });
+
 </script>
 </body>
 </html>
+

@@ -49,6 +49,10 @@
                         <label class="col-md-3 front-label">检查日期</label>
                         <label class="col-md-3 front-label"><%=new SimpleDateFormat("yyyy-MM-dd").format(new Date())%></label>
                     </div>
+                    <div class="col-md-6">
+                        <label class="col-md-3 front-label">被访者与儿童的关系：</label>
+                        <label class="col-md-3 front-label"><input id="answerRelation"></input></label>
+                    </div>
                 </div>
             </div>
             <!-- 育儿观念 a1 p1 r1
@@ -69,60 +73,71 @@
                 <input id="questionMonthSum" type="hidden" value="<s:property value="questionMonthList.size()"/>">
                 <!-- type  题目类型 -->
                 <input id="questionTypeSum" type="hidden" value="<s:property value="questionTypeList.size()"/>">
-                <table id="table-navbar" border="1px solid" style="margin: 0; position: fixed; background-color: white">
-                    <tbody style="width: 100%">
-                    <tr>
-                        <td>题目序号 \ 项目</td>
-                        <s:if test="questionTypeList.contains(11)"><td>育儿观念</td></s:if>
-                        <s:if test="questionTypeList.contains(12)"><td>关注和接纳</td></s:if>
-                        <s:if test="questionTypeList.contains(13)"><td>规矩或自我调控能力</td></s:if>
-                        <s:if test="questionTypeList.contains(14)"><td>养育关系和沟通</td></s:if>
-                        <s:if test="questionTypeList.contains(15)"><td>学习环境</td></s:if>
-                        <s:if test="questionTypeList.contains(16)"><td>语言环境</td></s:if>
-                        <s:if test="questionTypeList.contains(17)"><td>玩耍和娱乐</td></s:if>
-                        <s:if test="questionTypeList.contains(18)"><td>安全和居住环境</td></s:if>
-                    </tr>
-                    </tbody>
-                </table>
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                    <tr>
-                        <td>题目序号 \ 项目</td>
-                        <s:if test="questionTypeList.contains(11)"><td>育儿观念</td></s:if>
-                        <s:if test="questionTypeList.contains(12)"><td>关注和接纳</td></s:if>
-                        <s:if test="questionTypeList.contains(13)"><td>规矩或自我调控能力</td></s:if>
-                        <s:if test="questionTypeList.contains(14)"><td>养育关系和沟通</td></s:if>
-                        <s:if test="questionTypeList.contains(15)"><td>学习环境</td></s:if>
-                        <s:if test="questionTypeList.contains(16)"><td>语言环境</td></s:if>
-                        <s:if test="questionTypeList.contains(17)"><td>玩耍和娱乐</td></s:if>
-                        <s:if test="questionTypeList.contains(18)"><td>安全和居住环境</td></s:if>
-                    </tr>
-                    <s:iterator value="questionMonthList" id="month" status="status">
-                        <tr id="month<s:property value="#month"/>">
-                            <td name="month<s:property value="#status.index"/>"><s:property value="#month"/></td>
-                            <s:iterator value="questionTypeList" id="type">
-                                <td>
-                                    <s:iterator value="questionList" id="question">
-                                        <s:if test="#question.month == #month && #question.type == #type">
-                                            <p>
-                                                <!-- 题目 -->
-                                                <!-- <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>"> -->
-                                                <!-- 问题内容 -->
-                                                <label for="checkbox<s:property value="#question.ordinal"/>"><s:property value="#question.ordinal"/>、<s:property value="#question.description"/><br></label>
-                                                <!-- 答题选择 -->
-                                                <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</a>
-                                                <!-- 选择的结果 -->
-                                                <input type="hidden" id="reason<s:property value="#question.ordinal"/>" value="">
-                                            </p>
-                                        </s:if>
-                                    </s:iterator>
-                                </td>
+                    <s:iterator value="questionTypeList" id="type">
+                        <s:if test="#type == 11">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                               <td colspan="3">育儿观念</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 12">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">关注和接纳</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 13">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">规矩或自我调控能力</td>
+
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 14">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">养育关系和沟通</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 15">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">学习环境</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 16">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">语言环境</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 17">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">玩耍和娱乐</td>
+                            </tr>
+                        </s:if>
+                        <s:if test="#type == 18">
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td colspan="3">安全和居住环境</td>
+                            </tr>
+                        </s:if>
+                        <s:iterator value="questionMonthList" id="month" status="status">
+                            <s:iterator value="questionList" id="question">
+                                <s:if test="#question.month == #month && #question.type == #type">
+                                    <tr>
+                                        <td style="width:60%">
+                                            <s:property value="#question.description"/>
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="2" />A<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />B<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />C<br>
+                                        </td>
+                                        <td>
+                                            <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</ a>
+                                            <input type="hidden" style="color:#000" id="reason<s:property value="#question.ordinal"/>" value="">
+                                        </td>
+                                    </tr>
+                                </s:if>
                             </s:iterator>
-                        </tr>
+                        </s:iterator>
                     </s:iterator>
-
-
-
                     </tbody>
                 </table>
             </div>
@@ -138,36 +153,36 @@
 <script type="text/javascript">
 
     ;(function () {
-        var $tableNavbar = $('#table-navbar');
-        var $tableMain = $('#table-main');
-        $tableNavbar.width($('.panel').width());
-        $tableNavbar.css('top', $('.nav').height() + 1);
-        $tableNavbar.hide();
-        var pos = $tableMain.offset().top - $('nav').height();
-        $(document).scroll(function () {
-            var dataScroll = $tableNavbar.data("scroll") || false;
-            if($(this).scrollTop() >= pos) {
-                if (!dataScroll) {
-                    $tableNavbar.data("scroll", true);
-                    $tableNavbar.show();
-                }
-            } else {
-                if (dataScroll) {
-                    $tableNavbar.data("scroll", false);
-                    $tableNavbar.hide();
-                }
-            }
-        })
-        var monthage = <s:property value="days"/>;
-        if(monthage <= 12){
-            $("#month"+ monthage).css("background-color","#e2efd9");
-        }else if(monthage <= 36){
-            monthage = (parseInt(monthage/3))*3;
-            $("#month"+ monthage).css("background-color","#e2efd9");
-        }else {
-            monthage = (parseInt(monthage/6))*6;
-            $("#month"+ monthage).css("background-color","#e2efd9");
-        }
+        // var $tableNavbar = $('#table-navbar');
+        // var $tableMain = $('#table-main');
+        // $tableNavbar.width($('.panel').width());
+        // $tableNavbar.css('top', $('.nav').height() + 1);
+        // $tableNavbar.hide();
+        // var pos = $tableMain.offset().top - $('nav').height();
+        // $(document).scroll(function () {
+        //     var dataScroll = $tableNavbar.data("scroll") || false;
+        //     if($(this).scrollTop() >= pos) {
+        //         if (!dataScroll) {
+        //             $tableNavbar.data("scroll", true);
+        //             $tableNavbar.show();
+        //         }
+        //     } else {
+        //         if (dataScroll) {
+        //             $tableNavbar.data("scroll", false);
+        //             $tableNavbar.hide();
+        //         }
+        //     }
+        // })
+        // var monthage = <s:property value="days"/>;
+        // if(monthage <= 12){
+        //     $("#month"+ monthage).css("background-color","#e2efd9");
+        // }else if(monthage <= 36){
+        //     monthage = (parseInt(monthage/3))*3;
+        //     $("#month"+ monthage).css("background-color","#e2efd9");
+        // }else {
+        //     monthage = (parseInt(monthage/6))*6;
+        //     $("#month"+ monthage).css("background-color","#e2efd9");
+        // }
     })();
 
     function failReasons(ordinal, reasons) {
@@ -192,21 +207,68 @@
     var questionMonthSum = $('#questionMonthSum').val();
     var questionTypeSum = $('#questionTypeSum').val();
     var questionScore = [0,0,0,0,0,0,0,0,0];
+    var questionReason = [questionSum];
 
     function prepare() {
+        questionScore = [0,0,0,0,0,0,0,0,0];
+        questionReason = [questionSum];
+          var  temp;
+        for(var i = 0; i < questionSum; i++) {
+            questionReason[i] = $("#reason" + (i + 1)).val();
+            temp = $("input:radio[name="+ i+1 +"]:checked").val();
+            // if (!temp) {
+            //     $.tipModal('alert', 'warning', '有题目未完成！');
+            //    return false;
+            // }
+
+        }
+
+
         for (var i = 1; i <= questionSum; i++) {
-            // 判断问卷是否填写完整
-//            if ($("#reason" + (i)).val() === '') {
-//                $.tipModal('alert', 'warning', '有题目未完成！');
-//                return false;
-//            }
+            temp = $("input:radio[name="+ i +"]:checked").val();
+            if(temp==""||temp==undefined){
+                 continue;
+            }
+            temp = parseInt(temp);
+            if(i < 7){
+                questionScore[1] += temp;
+                continue;
+            }
+            if(i < 13){
+                questionScore[2] += temp;
+                continue;
+            }
+            if(i < 19){
+                questionScore[3] += temp;
+                continue;
+            }
+            if(i < 26){
+                questionScore[4] += temp;
+                continue;
+            }
+            if(i < 32){
+                questionScore[5] += temp;
+                continue;
+            }
+            if(i < 37){
+                questionScore[6] += temp;
+                continue;
+            }
+            if(i < 45) {
+                questionScore[7] += temp;
+                continue;
+            }
+            if(i < 51) {
+                questionScore[8] += temp;
+                continue;
+            }
         }
         return true;
     }
 
     function preview() {
         if(prepare()) {
-            $.frontModal({size: 'modal-md', title: '预览', href: 'modals/model_preview_result.jsp'});
+            $.frontModal({size: 'modal-md', title: '预览', href: 'modals/model_preview_result3_6.jsp'});
         }
     }
 
@@ -227,69 +289,70 @@
     function save() {
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                questionScore = [0,0,0,0,0,0,0,0,0];
                 if(result) {
                     var data = "{";
 
                     //每个题的得分
-                    for(var i = 0; i < questionSum; i++) {
-//                        data += "'result3_6.score" + (i + 1) + "':" + $("#reason" + (i + 1)).val(); + ","
-                    }
+//                    for(var i = 0; i < questionSum; i++) {
+//                       data += "'result3_6.score" + (i + 1) + "':" + $("#reason" + (i + 1)).val(); + ","
+//                    }
 
                     //每个题的原因
-                    var questionReason = [questionSum];
+                    questionReason = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
                         questionReason[i] = $("#reason" + (i + 1)).val();
                     }
 
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
-//                            data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                            data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
                     //每组题的得分
 
 
 
-                    for(var i = 0; i < questionSum; i++) {
-                        if(questionReason[i] === ''){
+                    for(var i = 1; i <= questionSum; i++) {
+                        if(!$("input:radio[name="+i+"]:checked").val()){
                             continue;
                         }
-                        if(i < 6){
-                            questionScore[1] += parseInt(questionReason[i]);
+                        if(i < 7){
+                            questionScore[1] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 12){
-                            questionScore[2] += parseInt(questionReason[i]);
+                        if(i < 13){
+                            questionScore[2] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 18){
-                            questionScore[3] += parseInt(questionReason[i]);
+                        if(i < 19){
+                            questionScore[3] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 25){
-                            questionScore[4] += parseInt(questionReason[i]);
+                        if(i < 26){
+                            questionScore[4] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 31){
-                            questionScore[5] += parseInt(questionReason[i]);
+                        if(i < 32){
+                            questionScore[5] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 36){
-                            questionScore[6] += parseInt(questionReason[i]);
+                        if(i < 37){
+                            questionScore[6] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 44) {
-                            questionScore[7] += parseInt(questionReason[i]);
+                        if(i < 45) {
+                            questionScore[7] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
-                        if(i < 50) {
-                            questionScore[8] += parseInt(questionReason[i]);
+                        if(i < 51) {
+                            questionScore[8] += parseInt($("input:radio[name="+i+"]:checked").val());
                             continue;
                         }
                     }
 
 
-                    questionScore[0] = questionScore[1] + questionScore[2] + questionScore[3] + questionScore[4] + questionScore[5] + questionScore[6] + questionScore[7] + questionScore[8];
+//                    questionScore[0] = questionScore[1] + questionScore[2] + questionScore[3] + questionScore[4] + questionScore[5] + questionScore[6] + questionScore[7] + questionScore[8];
 
 
                     data += "'result3_6.a1':" + questionScore[1] + ",";
@@ -300,8 +363,11 @@
                     data += "'result3_6.a6':" + questionScore[6] + ",";
                     data += "'result3_6.a7':" + questionScore[7] + ",";
                     data += "'result3_6.a8':" + questionScore[8] + ",";
-                    data += "'result3_6.a0':" + questionScore[0] + ",";
-                    data += "'result3_6.babyId':" + $("#babyid").val() + "}";
+
+                    data += "'result3_6.babyId':" + $("#babyid").val() + ",";
+                    var answerRelation = $("#answerRelation").val();
+                    answerRelation= " ' "+ answerRelation +" ' ";
+                    data += "'result3_6.answerRelation':" + answerRelation + "}";
 
                     $.ajax({
                         url: 'saveresult3_6',
