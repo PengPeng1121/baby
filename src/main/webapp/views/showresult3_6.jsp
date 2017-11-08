@@ -63,13 +63,13 @@
                         <th class="col-md-1">测试项目</th>
                         <th class="col-md-1">育儿观念</th>
                         <th class="col-md-1">关注和接纳</th>
-                        <th class="col-md-2">规矩或自我调控能力</th>
-                        <th class="col-md-1">养育关系和沟通</th>
+                        <th class="col-md-1">规矩或自我<br/>调控能力</th>
+                        <th class="col-md-1">养育关系<br/>和沟通</th>
                         <th class="col-md-1">学习环境</th>
                         <th class="col-md-1">语言环境</th>
                         <th class="col-md-1">玩耍和娱乐</th>
-                        <th class="col-md-2">安全和居住环境</th>
-                        <th class="col-md-1">总和</th>
+                        <th class="col-md-1">安全和<br/>居住环境</th>
+                        <th class="col-md-3">总和</th>
 
                         <!-- 育儿观念 a1 p1 r1
                         关注和接纳
@@ -108,7 +108,7 @@
                         <td>100</td>
                     </tr>
                     <tr>
-                        <td>百分位数范围</td>
+                        <td>百分位<br/>数范围</td>
                         <td id="p1"><s:property value="result3_6.p1"/></td>
                         <td id="p2"><s:property value="result3_6.p2"/></td>
                         <td id="p3"><s:property value="result3_6.p3"/></td>
@@ -142,7 +142,10 @@
             </tr>
             <tr>
                 <td style="padding: 0px;width: 100%;">
-                    <div id="column"></div>
+                    <div style="border: 1px dashed #ddd">
+                        <div id="column"></div>
+                    </div>
+                    
                 </td>
             </tr>
             </tbody>

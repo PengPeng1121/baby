@@ -76,47 +76,35 @@
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
                     <s:iterator value="questionTypeList" id="type">
-                        <s:if test="#type == 11">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">育儿观念</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 12">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">关注和接纳</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 13">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">规矩或自我调控能力</td>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <s:if test="#type == 11">
+                                <td>育儿观念</td>
+                            </s:if>
+                            <s:if test="#type == 12">
+                                <td>关注和接纳</td>
+                            </s:if>
+                            <s:if test="#type == 13">
+                                <td>规矩或自我调控能力</td>
+                            </s:if>
+                            <s:if test="#type == 14">
+                                <td>养育关系和沟通</td>
+                            </s:if>
+                            <s:if test="#type == 15">
+                                <td>学习环境</td>
+                            </s:if>
+                            <s:if test="#type == 16">
+                                <td>语言环境</td>
+                            </s:if>
+                            <s:if test="#type == 17">
+                                <td>玩耍和娱乐</td>
+                            </s:if>
+                            <s:if test="#type == 18">
+                                <td>安全和居住环境</td>
+                            </s:if>
+                            <td>得分</td>
+                            <td>答题记录</td>
+                        </tr>
 
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 14">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">养育关系和沟通</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 15">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">学习环境</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 16">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">语言环境</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 17">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">玩耍和娱乐</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 18">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">安全和居住环境</td>
-                            </tr>
-                        </s:if>
                         <s:iterator value="questionMonthList" id="month" status="status">
                             <s:iterator value="questionList" id="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
