@@ -88,7 +88,7 @@
                                 <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
                             </div>
                             <div class="media-body">
-                                <p class="media-heading" style="font-size: 16px;">3-6岁小儿神经心理发育检查表</p>
+                                <p class="media-heading" style="font-size: 16px;">育儿技能评估</p>
                                 <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult3_6"/></label>

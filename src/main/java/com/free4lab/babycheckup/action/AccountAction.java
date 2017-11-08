@@ -102,12 +102,14 @@ public class AccountAction {
         }
     }
 
-    public int getId() {
-        return id;
+    public HttpServletRequest getReq() {
+        return req;
     }
-    public void setId(int id) {
-        this.id = id;
+
+    public void setReq(HttpServletRequest req) {
+        this.req = req;
     }
+
     public Hospital getHospital() {
         return hospital;
     }

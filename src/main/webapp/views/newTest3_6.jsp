@@ -24,7 +24,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">3-6岁小儿神经心理发育检查表</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">育儿技能评估</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -78,7 +78,7 @@
                     <s:iterator value="questionTypeList" id="type">
                         <s:if test="#type == 11">
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                               <td colspan="3">育儿观念</td>
+                                <td colspan="3">育儿观念</td>
                             </tr>
                         </s:if>
                         <s:if test="#type == 12">
@@ -153,48 +153,12 @@
 <script type="text/javascript">
 
     ;(function () {
-        // var $tableNavbar = $('#table-navbar');
-        // var $tableMain = $('#table-main');
-        // $tableNavbar.width($('.panel').width());
-        // $tableNavbar.css('top', $('.nav').height() + 1);
-        // $tableNavbar.hide();
-        // var pos = $tableMain.offset().top - $('nav').height();
-        // $(document).scroll(function () {
-        //     var dataScroll = $tableNavbar.data("scroll") || false;
-        //     if($(this).scrollTop() >= pos) {
-        //         if (!dataScroll) {
-        //             $tableNavbar.data("scroll", true);
-        //             $tableNavbar.show();
-        //         }
-        //     } else {
-        //         if (dataScroll) {
-        //             $tableNavbar.data("scroll", false);
-        //             $tableNavbar.hide();
-        //         }
-        //     }
-        // })
-        // var monthage = <s:property value="days"/>;
-        // if(monthage <= 12){
-        //     $("#month"+ monthage).css("background-color","#e2efd9");
-        // }else if(monthage <= 36){
-        //     monthage = (parseInt(monthage/3))*3;
-        //     $("#month"+ monthage).css("background-color","#e2efd9");
-        // }else {
-        //     monthage = (parseInt(monthage/6))*6;
-        //     $("#month"+ monthage).css("background-color","#e2efd9");
-        // }
     })();
 
     function failReasons(ordinal, reasons) {
-        // $('#checkbox' + ordinal).removeAttr("checked");
+
         $('#failMessage' + ordinal).css("color","#ff0049");
-        /*if($('#checkbox' + ordinal).attr("value") == 0){
-         $('#failMessage' + ordinal).css("color","#ff0049");
-         $('#checkbox' + ordinal).attr("value",1);
-         } else if ($('#checkbox' + ordinal).attr("value") == 1){
-         $('#failMessage' + ordinal).css("color","#337ab7");
-         $('#checkbox' + ordinal).attr("value",0);
-         }再次点击变回默认颜色*/
+
         $.frontModal({
             href: "modals/modal_question_reasons3_6.jsp?reasons=" + reasons + "&qid="+ordinal,
             title: "请选择答案："
@@ -211,15 +175,13 @@
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0,0];
-        questionReason = [questionSum];
-          var  temp;
-        for(var i = 0; i < questionSum; i++) {
-            questionReason[i] = $("#reason" + (i + 1)).val();
-            temp = $("input:radio[name="+ i+1 +"]:checked").val();
-             if (!temp) {
-                 $.tipModal('alert', 'warning', '有题目未完成！');
+        var  temp;
+        for(var i = 1; i <= questionSum; i++) {
+            temp = $("input:radio[name="+ i +"]:checked").val();
+            if (!temp) {
+                $.tipModal('alert', 'warning', '有题目未完成！');
                 return false;
-             }
+            }
 
         }
 
@@ -227,7 +189,7 @@
         for (var i = 1; i <= questionSum; i++) {
             temp = $("input:radio[name="+ i +"]:checked").val();
             if(temp==""||temp==undefined){
-                 continue;
+                continue;
             }
             temp = parseInt(temp);
             if(i < 7){
@@ -289,14 +251,8 @@
     function save() {
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
-                questionScore = [0,0,0,0,0,0,0,0,0];
                 if(result) {
                     var data = "{";
-
-                    //每个题的得分
-//                    for(var i = 0; i < questionSum; i++) {
-//                       data += "'result3_6.score" + (i + 1) + "':" + $("#reason" + (i + 1)).val(); + ","
-//                    }
 
                     //每个题的原因
                     questionReason = [questionSum];
@@ -309,50 +265,6 @@
                             data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
-                    //每组题的得分
-
-
-
-                    for(var i = 1; i <= questionSum; i++) {
-                        if(!$("input:radio[name="+i+"]:checked").val()){
-                            continue;
-                        }
-                        if(i < 7){
-                            questionScore[1] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 13){
-                            questionScore[2] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 19){
-                            questionScore[3] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 26){
-                            questionScore[4] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 32){
-                            questionScore[5] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 37){
-                            questionScore[6] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 45) {
-                            questionScore[7] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                        if(i < 51) {
-                            questionScore[8] += parseInt($("input:radio[name="+i+"]:checked").val());
-                            continue;
-                        }
-                    }
-
-
-//                    questionScore[0] = questionScore[1] + questionScore[2] + questionScore[3] + questionScore[4] + questionScore[5] + questionScore[6] + questionScore[7] + questionScore[8];
 
 
                     data += "'result3_6.a1':" + questionScore[1] + ",";

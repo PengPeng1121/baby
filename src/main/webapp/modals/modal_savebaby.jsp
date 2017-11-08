@@ -16,7 +16,7 @@
         </div>
         <div style="margin-top: 10px;">
             <a type="button" class="btn  modal-box text-center" href="javascript:start()"><h4
-                    style="color: white;font-size: small">开始3-6岁小儿<br/>神经心理发育测评</h4></a>
+                    style="color: white;font-size: small">开始育儿技能评估</h4></a>
         </div>
     </div>
 </div>

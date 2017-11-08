@@ -83,7 +83,7 @@
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
                         <span class="front-text-title" >
-                            3-6岁小儿神经心理发育检查表
+                           育儿技能评估
                         </span>
                                         </h4>
                                         <div class="front-text-break">
