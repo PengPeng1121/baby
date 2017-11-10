@@ -5,18 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b912aad9-1b5a-43a0-b810-1cf8f7069c5a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Baby-Checkup/META-INF/MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup.war" afterPath="$PROJECT_DIR$/target/Baby-Checkup.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/AccountAction.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/AccountAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO3_6.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/dao/ResultDAO3_6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/action/AccountAction.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/action/AccountAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/newTest3_6.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/newTest3_6.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/index.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/modals/modal_savebaby.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/modals/modal_savebaby.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/babyinfo.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/babyinfo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/nav.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/nav.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/newTest3_6.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/newTest3_6.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/showresult3_6.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/showresult3_6.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,29 +76,333 @@
       <file leaf-file-name="babyinfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1158">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="1482">
+              <caret line="78" column="52" lean-forward="false" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <file leaf-file-name="TestAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="1235">
+              <caret line="78" column="56" lean-forward="false" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#5159#5160#0" expanded="false" />
+                <element signature="e#5188#5189#0" expanded="false" />
+                <element signature="e#5228#5229#0" expanded="false" />
+                <element signature="e#5264#5265#0" expanded="false" />
+                <element signature="e#5313#5314#0" expanded="false" />
+                <element signature="e#5352#5353#0" expanded="false" />
+                <element signature="e#5422#5423#0" expanded="false" />
+                <element signature="e#5478#5479#0" expanded="false" />
+                <element signature="e#5528#5529#0" expanded="false" />
+                <element signature="e#5568#5569#0" expanded="false" />
+                <element signature="e#5640#5641#0" expanded="false" />
+                <element signature="e#5698#5699#0" expanded="false" />
+                <element signature="e#5744#5745#0" expanded="false" />
+                <element signature="e#5779#5780#0" expanded="false" />
+                <element signature="e#5842#5843#0" expanded="false" />
+                <element signature="e#5890#5891#0" expanded="false" />
+                <element signature="e#5920#5921#0" expanded="false" />
+                <element signature="e#5949#5950#0" expanded="false" />
+                <element signature="e#5989#5990#0" expanded="false" />
+                <element signature="e#6025#6026#0" expanded="false" />
+                <element signature="e#6053#6054#0" expanded="false" />
+                <element signature="e#6080#6081#0" expanded="false" />
+                <element signature="e#6117#6118#0" expanded="false" />
+                <element signature="e#6149#6150#0" expanded="false" />
+                <element signature="e#6192#6193#0" expanded="false" />
+                <element signature="e#6225#6226#0" expanded="false" />
+                <element signature="e#6283#6284#0" expanded="false" />
+                <element signature="e#6327#6328#0" expanded="false" />
+                <element signature="e#6360#6361#0" expanded="false" />
+                <element signature="e#6389#6390#0" expanded="false" />
+                <element signature="e#6433#6434#0" expanded="false" />
+                <element signature="e#6469#6470#0" expanded="false" />
+                <element signature="e#6497#6498#0" expanded="false" />
+                <element signature="e#6524#6525#0" expanded="false" />
+                <element signature="e#6561#6562#0" expanded="false" />
+                <element signature="e#6593#6594#0" expanded="false" />
+                <element signature="e#6631#6632#0" expanded="false" />
+                <element signature="e#6665#6666#0" expanded="false" />
+                <element signature="e#6719#6720#0" expanded="false" />
+                <element signature="e#6765#6766#0" expanded="false" />
+                <element signature="e#6804#6805#0" expanded="false" />
+                <element signature="e#6836#6837#0" expanded="false" />
+                <element signature="e#6889#6890#0" expanded="false" />
+                <element signature="e#6931#6932#0" expanded="false" />
+                <element signature="e#6980#6981#0" expanded="false" />
+                <element signature="e#7016#7017#0" expanded="false" />
+                <element signature="e#7083#7084#0" expanded="false" />
+                <element signature="e#7133#7134#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ResultManager3_6.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager3_6.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="247">
+              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#397#398#0" expanded="false" />
+                <element signature="e#446#447#0" expanded="false" />
+                <element signature="e#496#497#0" expanded="false" />
+                <element signature="e#549#550#0" expanded="false" />
+                <element signature="e#737#738#0" expanded="false" />
+                <element signature="e#801#802#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultDAO3_6.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+              <folding>
+                <element signature="e#1280#1291#0" expanded="true" />
+                <element signature="e#1343#1359#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result3_6.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="1964" column="25" lean-forward="false" selection-start-line="1964" selection-start-column="25" selection-end-line="1964" selection-end-column="25" />
+              <folding>
+                <element signature="e#32456#32457#0" expanded="true" />
+                <element signature="e#32484#32485#0" expanded="true" />
+                <element signature="e#32526#32527#0" expanded="true" />
+                <element signature="e#32560#32561#0" expanded="true" />
+                <element signature="e#32663#32664#0" expanded="true" />
+                <element signature="e#32691#32692#0" expanded="true" />
+                <element signature="e#32733#32734#0" expanded="true" />
+                <element signature="e#32767#32768#0" expanded="true" />
+                <element signature="e#32870#32871#0" expanded="true" />
+                <element signature="e#32898#32899#0" expanded="true" />
+                <element signature="e#32940#32941#0" expanded="true" />
+                <element signature="e#32974#32975#0" expanded="true" />
+                <element signature="e#33076#33077#0" expanded="true" />
+                <element signature="e#33104#33105#0" expanded="true" />
+                <element signature="e#33146#33147#0" expanded="true" />
+                <element signature="e#33180#33181#0" expanded="true" />
+                <element signature="e#33282#33283#0" expanded="true" />
+                <element signature="e#33310#33311#0" expanded="true" />
+                <element signature="e#33352#33353#0" expanded="true" />
+                <element signature="e#33386#33387#0" expanded="true" />
+                <element signature="e#33488#33489#0" expanded="true" />
+                <element signature="e#33516#33517#0" expanded="true" />
+                <element signature="e#33558#33559#0" expanded="true" />
+                <element signature="e#33592#33593#0" expanded="true" />
+                <element signature="e#33694#33695#0" expanded="true" />
+                <element signature="e#33722#33723#0" expanded="true" />
+                <element signature="e#33764#33765#0" expanded="true" />
+                <element signature="e#33798#33799#0" expanded="true" />
+                <element signature="e#33900#33901#0" expanded="true" />
+                <element signature="e#33928#33929#0" expanded="true" />
+                <element signature="e#33970#33971#0" expanded="true" />
+                <element signature="e#34004#34005#0" expanded="true" />
+                <element signature="e#34106#34107#0" expanded="true" />
+                <element signature="e#34134#34135#0" expanded="true" />
+                <element signature="e#34176#34177#0" expanded="true" />
+                <element signature="e#34210#34211#0" expanded="true" />
+                <element signature="e#34314#34315#0" expanded="true" />
+                <element signature="e#34343#34344#0" expanded="true" />
+                <element signature="e#34387#34388#0" expanded="true" />
+                <element signature="e#34423#34424#0" expanded="true" />
+                <element signature="e#34527#34528#0" expanded="true" />
+                <element signature="e#34556#34557#0" expanded="true" />
+                <element signature="e#34600#34601#0" expanded="true" />
+                <element signature="e#34636#34637#0" expanded="true" />
+                <element signature="e#34740#34741#0" expanded="true" />
+                <element signature="e#34769#34770#0" expanded="true" />
+                <element signature="e#34813#34814#0" expanded="true" />
+                <element signature="e#34849#34850#0" expanded="true" />
+                <element signature="e#34953#34954#0" expanded="true" />
+                <element signature="e#34982#34983#0" expanded="true" />
+                <element signature="e#35026#35027#0" expanded="true" />
+                <element signature="e#35062#35063#0" expanded="true" />
+                <element signature="e#35166#35167#0" expanded="true" />
+                <element signature="e#35195#35196#0" expanded="true" />
+                <element signature="e#35239#35240#0" expanded="true" />
+                <element signature="e#35275#35276#0" expanded="true" />
+                <element signature="e#35379#35380#0" expanded="true" />
+                <element signature="e#35408#35409#0" expanded="true" />
+                <element signature="e#35452#35453#0" expanded="true" />
+                <element signature="e#35488#35489#0" expanded="true" />
+                <element signature="e#35592#35593#0" expanded="true" />
+                <element signature="e#35621#35622#0" expanded="true" />
+                <element signature="e#35665#35666#0" expanded="true" />
+                <element signature="e#35701#35702#0" expanded="true" />
+                <element signature="e#35805#35806#0" expanded="true" />
+                <element signature="e#35834#35835#0" expanded="true" />
+                <element signature="e#35878#35879#0" expanded="true" />
+                <element signature="e#35914#35915#0" expanded="true" />
+                <element signature="e#36018#36019#0" expanded="true" />
+                <element signature="e#36047#36048#0" expanded="true" />
+                <element signature="e#36091#36092#0" expanded="true" />
+                <element signature="e#36127#36128#0" expanded="true" />
+                <element signature="e#36231#36232#0" expanded="true" />
+                <element signature="e#36260#36261#0" expanded="true" />
+                <element signature="e#36304#36305#0" expanded="true" />
+                <element signature="e#36340#36341#0" expanded="true" />
+                <element signature="e#36444#36445#0" expanded="true" />
+                <element signature="e#36473#36474#0" expanded="true" />
+                <element signature="e#36517#36518#0" expanded="true" />
+                <element signature="e#36553#36554#0" expanded="true" />
+                <element signature="e#36657#36658#0" expanded="true" />
+                <element signature="e#36686#36687#0" expanded="true" />
+                <element signature="e#36730#36731#0" expanded="true" />
+                <element signature="e#36766#36767#0" expanded="true" />
+                <element signature="e#36870#36871#0" expanded="true" />
+                <element signature="e#36899#36900#0" expanded="true" />
+                <element signature="e#36943#36944#0" expanded="true" />
+                <element signature="e#36979#36980#0" expanded="true" />
+                <element signature="e#37083#37084#0" expanded="true" />
+                <element signature="e#37112#37113#0" expanded="true" />
+                <element signature="e#37156#37157#0" expanded="true" />
+                <element signature="e#37192#37193#0" expanded="true" />
+                <element signature="e#37296#37297#0" expanded="true" />
+                <element signature="e#37325#37326#0" expanded="true" />
+                <element signature="e#37369#37370#0" expanded="true" />
+                <element signature="e#37405#37406#0" expanded="true" />
+                <element signature="e#37509#37510#0" expanded="true" />
+                <element signature="e#37538#37539#0" expanded="true" />
+                <element signature="e#37582#37583#0" expanded="true" />
+                <element signature="e#37618#37619#0" expanded="true" />
+                <element signature="e#37722#37723#0" expanded="true" />
+                <element signature="e#37751#37752#0" expanded="true" />
+                <element signature="e#37795#37796#0" expanded="true" />
+                <element signature="e#37831#37832#0" expanded="true" />
+                <element signature="e#37935#37936#0" expanded="true" />
+                <element signature="e#37964#37965#0" expanded="true" />
+                <element signature="e#38008#38009#0" expanded="true" />
+                <element signature="e#38044#38045#0" expanded="true" />
+                <element signature="e#38148#38149#0" expanded="true" />
+                <element signature="e#38177#38178#0" expanded="true" />
+                <element signature="e#38221#38222#0" expanded="true" />
+                <element signature="e#38257#38258#0" expanded="true" />
+                <element signature="e#38361#38362#0" expanded="true" />
+                <element signature="e#38390#38391#0" expanded="true" />
+                <element signature="e#38434#38435#0" expanded="true" />
+                <element signature="e#38470#38471#0" expanded="true" />
+                <element signature="e#38574#38575#0" expanded="true" />
+                <element signature="e#38603#38604#0" expanded="true" />
+                <element signature="e#38647#38648#0" expanded="true" />
+                <element signature="e#38683#38684#0" expanded="true" />
+                <element signature="e#38787#38788#0" expanded="true" />
+                <element signature="e#38816#38817#0" expanded="true" />
+                <element signature="e#38860#38861#0" expanded="true" />
+                <element signature="e#38896#38897#0" expanded="true" />
+                <element signature="e#39000#39001#0" expanded="true" />
+                <element signature="e#39029#39030#0" expanded="true" />
+                <element signature="e#39073#39074#0" expanded="true" />
+                <element signature="e#39109#39110#0" expanded="true" />
+                <element signature="e#39213#39214#0" expanded="true" />
+                <element signature="e#39242#39243#0" expanded="true" />
+                <element signature="e#39286#39287#0" expanded="true" />
+                <element signature="e#39322#39323#0" expanded="true" />
+                <element signature="e#39426#39427#0" expanded="true" />
+                <element signature="e#39455#39456#0" expanded="true" />
+                <element signature="e#39499#39500#0" expanded="true" />
+                <element signature="e#39535#39536#0" expanded="true" />
+                <element signature="e#39639#39640#0" expanded="true" />
+                <element signature="e#39668#39669#0" expanded="true" />
+                <element signature="e#39712#39713#0" expanded="true" />
+                <element signature="e#39748#39749#0" expanded="true" />
+                <element signature="e#39852#39853#0" expanded="true" />
+                <element signature="e#39881#39882#0" expanded="true" />
+                <element signature="e#39925#39926#0" expanded="true" />
+                <element signature="e#39961#39962#0" expanded="true" />
+                <element signature="e#40065#40066#0" expanded="true" />
+                <element signature="e#40094#40095#0" expanded="true" />
+                <element signature="e#40138#40139#0" expanded="true" />
+                <element signature="e#40174#40175#0" expanded="true" />
+                <element signature="e#40278#40279#0" expanded="true" />
+                <element signature="e#40307#40308#0" expanded="true" />
+                <element signature="e#40351#40352#0" expanded="true" />
+                <element signature="e#40387#40388#0" expanded="true" />
+                <element signature="e#40491#40492#0" expanded="true" />
+                <element signature="e#40520#40521#0" expanded="true" />
+                <element signature="e#40564#40565#0" expanded="true" />
+                <element signature="e#40600#40601#0" expanded="true" />
+                <element signature="e#40704#40705#0" expanded="true" />
+                <element signature="e#40733#40734#0" expanded="true" />
+                <element signature="e#40777#40778#0" expanded="true" />
+                <element signature="e#40813#40814#0" expanded="true" />
+                <element signature="e#40917#40918#0" expanded="true" />
+                <element signature="e#40946#40947#0" expanded="true" />
+                <element signature="e#40990#40991#0" expanded="true" />
+                <element signature="e#41026#41027#0" expanded="true" />
+                <element signature="e#41130#41131#0" expanded="true" />
+                <element signature="e#41159#41160#0" expanded="true" />
+                <element signature="e#41203#41204#0" expanded="true" />
+                <element signature="e#41239#41240#0" expanded="true" />
+                <element signature="e#41343#41344#0" expanded="true" />
+                <element signature="e#41372#41373#0" expanded="true" />
+                <element signature="e#41416#41417#0" expanded="true" />
+                <element signature="e#41452#41453#0" expanded="true" />
+                <element signature="e#41556#41557#0" expanded="true" />
+                <element signature="e#41585#41586#0" expanded="true" />
+                <element signature="e#41629#41630#0" expanded="true" />
+                <element signature="e#41665#41666#0" expanded="true" />
+                <element signature="e#41769#41770#0" expanded="true" />
+                <element signature="e#41798#41799#0" expanded="true" />
+                <element signature="e#41842#41843#0" expanded="true" />
+                <element signature="e#41878#41879#0" expanded="true" />
+                <element signature="e#41982#41983#0" expanded="true" />
+                <element signature="e#42011#42012#0" expanded="true" />
+                <element signature="e#42055#42056#0" expanded="true" />
+                <element signature="e#42091#42092#0" expanded="true" />
+                <element signature="e#42195#42196#0" expanded="true" />
+                <element signature="e#42224#42225#0" expanded="true" />
+                <element signature="e#42268#42269#0" expanded="true" />
+                <element signature="e#42304#42305#0" expanded="true" />
+                <element signature="e#42408#42409#0" expanded="true" />
+                <element signature="e#42437#42438#0" expanded="true" />
+                <element signature="e#42481#42482#0" expanded="true" />
+                <element signature="e#42517#42518#0" expanded="true" />
+                <element signature="e#42621#42622#0" expanded="true" />
+                <element signature="e#42650#42651#0" expanded="true" />
+                <element signature="e#42694#42695#0" expanded="true" />
+                <element signature="e#42730#42731#0" expanded="true" />
+                <element signature="e#42834#42835#0" expanded="true" />
+                <element signature="e#42863#42864#0" expanded="true" />
+                <element signature="e#42907#42908#0" expanded="true" />
+                <element signature="e#42943#42944#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#610#611#0" expanded="false" />
+                <element signature="e#676#677#0" expanded="false" />
+                <element signature="e#727#728#0" expanded="false" />
+                <element signature="e#762#763#0" expanded="false" />
+                <element signature="e#870#871#0" expanded="false" />
+                <element signature="e#900#901#0" expanded="false" />
+                <element signature="e#974#975#0" expanded="false" />
+                <element signature="e#1029#1030#0" expanded="false" />
+                <element signature="e#1467#1468#0" expanded="false" />
+                <element signature="e#1511#1512#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +411,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/AccountDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#530#531#0" expanded="false" />
@@ -124,8 +437,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webdefault.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/webdefault.xml">
+      <file leaf-file-name="showresult.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/showresult.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -134,68 +447,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+      <file leaf-file-name="showresult3_6.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/showresult3_6.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="50" column="88" lean-forward="false" selection-start-line="50" selection-start-column="88" selection-end-line="50" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newbabyinfo.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/newbabyinfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="48" />
-              <folding>
-                <element signature="e#4166#4167#0" expanded="true" />
-                <element signature="e#4192#4193#0" expanded="true" />
-                <element signature="e#4242#4243#0" expanded="true" />
-                <element signature="e#4272#4273#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="root.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/root.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/account.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/landing.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="62" column="84" lean-forward="true" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -213,15 +480,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>saveResult</find>
-      <find>saveResult3_6</find>
-      <find>showResult3_6</find>
-      <find>showresult3_6</find>
-      <find>showreult</find>
-      <find>ResultDAOSingletonHolder</find>
-      <find>r3</find>
-      <find>column</find>
-      <find>result</find>
       <find>dou</find>
       <find>do</find>
       <find>questionScore</find>
@@ -243,6 +501,15 @@
       <find>3-6</find>
       <find>login</find>
       <find>honame</find>
+      <find>y</find>
+      <find />
+      <find>育儿</find>
+      <find>育儿技能评估</find>
+      <find>4</find>
+      <find>404</find>
+      <find>newtest</find>
+      <find>selecttest</find>
+      <find>result3_6List</find>
     </findStrings>
     <replaceStrings>
       <replace>baby_width1</replace>
@@ -276,7 +543,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/views/newTest6_12.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/newTest1.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager3_6.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_14.java" />
@@ -288,7 +554,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_11.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/HomeAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_12_R.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_13.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_11_P.java" />
@@ -296,7 +561,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_13_P.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_14_P.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_16_P.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/root.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_15_P.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_17_P.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_18_P.java" />
@@ -304,15 +568,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction3_6.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_Total.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/modals/modal_question_reasons3_6.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/showresult3_6.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/newTest3_6.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/root.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java" />
       </list>
     </option>
   </component>
@@ -340,6 +607,16 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Baby-Checkup" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -389,6 +666,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BabyCheckup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="baby" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -412,6 +699,110 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BabyCheckup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BabyCheckup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BabyCheckup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BabyCheckup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1174,7 +1565,7 @@
       <deployment>
         <artifact name="Baby-Checkup:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/Baby-Checkup" />
           </settings>
         </artifact>
       </deployment>
@@ -1255,6 +1646,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
   </component>
   <component name="SvnConfiguration" myUseAcceleration="nothing" cleanupOnStartRun="true">
     <configuration>C:\Users\asus\AppData\Roaming\Subversion</configuration>
@@ -1360,7 +1754,10 @@
       <workItem from="1509982590036" duration="1405000" />
       <workItem from="1510060521206" duration="1341000" />
       <workItem from="1510065031015" duration="2234000" />
-      <workItem from="1510096307908" duration="1503000" />
+      <workItem from="1510096307908" duration="2093000" />
+      <workItem from="1510233611425" duration="5363000" />
+      <workItem from="1510316970922" duration="1085000" />
+      <workItem from="1510319974361" duration="1761000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;ADD&gt;增加管理页和测量结果显示页">
       <created>1498187544102</created>
@@ -1656,11 +2053,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510060603557</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="11.8测试版本">
+      <created>1510137290478</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1510137290478</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529954000" />
+    <option name="totallyTimeSpent" value="538753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1670,39 +2074,39 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27987897" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17170954" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32823962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32299545" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47512865" sideWeight="0.49755502" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45969126" sideWeight="0.49755502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4219554" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2607204" sideWeight="0.48655257" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19725558" sideWeight="0.48033282" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2572899" sideWeight="0.48033282" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25037822" sideWeight="0.5549598" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26399395" sideWeight="0.44504023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.44504023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2012894" sideWeight="0.51785713" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903946" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3070326" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5025729" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1809,95 +2213,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_13.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-327">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/HomeAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/HospitalAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/BabyAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-931">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/record.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.3.15.1/xwork-core-2.3.15.1.jar!/com/opensymphony/xwork2/DefaultActionInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="384" column="0" lean-forward="false" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager3_6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/newTest1.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -2006,20 +2321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction3_6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/search_Allbaby.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/template/search_baby.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-950">
@@ -2048,6 +2349,193 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/newTest3_6.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="63" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/webdefault.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/account.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/landing.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="62" column="84" lean-forward="false" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/root.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/record.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="90" column="88" lean-forward="false" selection-start-line="90" selection-start-column="82" selection-end-line="90" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/search_Allbaby.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="96" lean-forward="false" selection-start-line="48" selection-start-column="96" selection-end-line="48" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/BabyAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1184">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/HospitalAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/HomeAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction3_6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1178">
+          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AdminAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3287">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/showresult.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/showresult3_6.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="88" lean-forward="false" selection-start-line="50" selection-start-column="88" selection-end-line="50" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/newbabyinfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2056,10 +2544,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="78" column="52" lean-forward="false" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="1235">
+          <caret line="78" column="56" lean-forward="false" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#5159#5160#0" expanded="false" />
@@ -2114,75 +2610,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/showresult3_6.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager3_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="88" lean-forward="false" selection-start-line="50" selection-start-column="88" selection-end-line="50" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1254">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/newTest3_6.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="63" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="88" lean-forward="false" selection-start-line="90" selection-start-column="88" selection-end-line="90" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/webdefault.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="247">
+          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#446#447#0" expanded="false" />
+            <element signature="e#496#497#0" expanded="false" />
+            <element signature="e#549#550#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/AccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#530#531#0" expanded="false" />
@@ -2207,64 +2654,258 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/babyinfo.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/free4lab/utils/free4lab-common-utils/1.0.20151224-SNAPSHOT/free4lab-common-utils-1.0.20151224-SNAPSHOT-sources.jar!/com/free4lab/utils/sql/AbstractDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="375" column="38" lean-forward="false" selection-start-line="375" selection-start-column="35" selection-end-line="375" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/root.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/account.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/AccountAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="48" />
+        <state relative-caret-position="513">
+          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
           <folding>
-            <element signature="e#4166#4167#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4242#4243#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#676#677#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
+            <element signature="e#762#763#0" expanded="false" />
+            <element signature="e#870#871#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
+            <element signature="e#1029#1030#0" expanded="false" />
+            <element signature="e#1467#1468#0" expanded="false" />
+            <element signature="e#1511#1512#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/landing.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO3_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="62" column="84" lean-forward="true" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
+        <state relative-caret-position="23">
+          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1280#1291#0" expanded="true" />
+            <element signature="e#1343#1359#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result3_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="412">
+          <caret line="1964" column="25" lean-forward="false" selection-start-line="1964" selection-start-column="25" selection-end-line="1964" selection-end-column="25" />
+          <folding>
+            <element signature="e#32456#32457#0" expanded="true" />
+            <element signature="e#32484#32485#0" expanded="true" />
+            <element signature="e#32526#32527#0" expanded="true" />
+            <element signature="e#32560#32561#0" expanded="true" />
+            <element signature="e#32663#32664#0" expanded="true" />
+            <element signature="e#32691#32692#0" expanded="true" />
+            <element signature="e#32733#32734#0" expanded="true" />
+            <element signature="e#32767#32768#0" expanded="true" />
+            <element signature="e#32870#32871#0" expanded="true" />
+            <element signature="e#32898#32899#0" expanded="true" />
+            <element signature="e#32940#32941#0" expanded="true" />
+            <element signature="e#32974#32975#0" expanded="true" />
+            <element signature="e#33076#33077#0" expanded="true" />
+            <element signature="e#33104#33105#0" expanded="true" />
+            <element signature="e#33146#33147#0" expanded="true" />
+            <element signature="e#33180#33181#0" expanded="true" />
+            <element signature="e#33282#33283#0" expanded="true" />
+            <element signature="e#33310#33311#0" expanded="true" />
+            <element signature="e#33352#33353#0" expanded="true" />
+            <element signature="e#33386#33387#0" expanded="true" />
+            <element signature="e#33488#33489#0" expanded="true" />
+            <element signature="e#33516#33517#0" expanded="true" />
+            <element signature="e#33558#33559#0" expanded="true" />
+            <element signature="e#33592#33593#0" expanded="true" />
+            <element signature="e#33694#33695#0" expanded="true" />
+            <element signature="e#33722#33723#0" expanded="true" />
+            <element signature="e#33764#33765#0" expanded="true" />
+            <element signature="e#33798#33799#0" expanded="true" />
+            <element signature="e#33900#33901#0" expanded="true" />
+            <element signature="e#33928#33929#0" expanded="true" />
+            <element signature="e#33970#33971#0" expanded="true" />
+            <element signature="e#34004#34005#0" expanded="true" />
+            <element signature="e#34106#34107#0" expanded="true" />
+            <element signature="e#34134#34135#0" expanded="true" />
+            <element signature="e#34176#34177#0" expanded="true" />
+            <element signature="e#34210#34211#0" expanded="true" />
+            <element signature="e#34314#34315#0" expanded="true" />
+            <element signature="e#34343#34344#0" expanded="true" />
+            <element signature="e#34387#34388#0" expanded="true" />
+            <element signature="e#34423#34424#0" expanded="true" />
+            <element signature="e#34527#34528#0" expanded="true" />
+            <element signature="e#34556#34557#0" expanded="true" />
+            <element signature="e#34600#34601#0" expanded="true" />
+            <element signature="e#34636#34637#0" expanded="true" />
+            <element signature="e#34740#34741#0" expanded="true" />
+            <element signature="e#34769#34770#0" expanded="true" />
+            <element signature="e#34813#34814#0" expanded="true" />
+            <element signature="e#34849#34850#0" expanded="true" />
+            <element signature="e#34953#34954#0" expanded="true" />
+            <element signature="e#34982#34983#0" expanded="true" />
+            <element signature="e#35026#35027#0" expanded="true" />
+            <element signature="e#35062#35063#0" expanded="true" />
+            <element signature="e#35166#35167#0" expanded="true" />
+            <element signature="e#35195#35196#0" expanded="true" />
+            <element signature="e#35239#35240#0" expanded="true" />
+            <element signature="e#35275#35276#0" expanded="true" />
+            <element signature="e#35379#35380#0" expanded="true" />
+            <element signature="e#35408#35409#0" expanded="true" />
+            <element signature="e#35452#35453#0" expanded="true" />
+            <element signature="e#35488#35489#0" expanded="true" />
+            <element signature="e#35592#35593#0" expanded="true" />
+            <element signature="e#35621#35622#0" expanded="true" />
+            <element signature="e#35665#35666#0" expanded="true" />
+            <element signature="e#35701#35702#0" expanded="true" />
+            <element signature="e#35805#35806#0" expanded="true" />
+            <element signature="e#35834#35835#0" expanded="true" />
+            <element signature="e#35878#35879#0" expanded="true" />
+            <element signature="e#35914#35915#0" expanded="true" />
+            <element signature="e#36018#36019#0" expanded="true" />
+            <element signature="e#36047#36048#0" expanded="true" />
+            <element signature="e#36091#36092#0" expanded="true" />
+            <element signature="e#36127#36128#0" expanded="true" />
+            <element signature="e#36231#36232#0" expanded="true" />
+            <element signature="e#36260#36261#0" expanded="true" />
+            <element signature="e#36304#36305#0" expanded="true" />
+            <element signature="e#36340#36341#0" expanded="true" />
+            <element signature="e#36444#36445#0" expanded="true" />
+            <element signature="e#36473#36474#0" expanded="true" />
+            <element signature="e#36517#36518#0" expanded="true" />
+            <element signature="e#36553#36554#0" expanded="true" />
+            <element signature="e#36657#36658#0" expanded="true" />
+            <element signature="e#36686#36687#0" expanded="true" />
+            <element signature="e#36730#36731#0" expanded="true" />
+            <element signature="e#36766#36767#0" expanded="true" />
+            <element signature="e#36870#36871#0" expanded="true" />
+            <element signature="e#36899#36900#0" expanded="true" />
+            <element signature="e#36943#36944#0" expanded="true" />
+            <element signature="e#36979#36980#0" expanded="true" />
+            <element signature="e#37083#37084#0" expanded="true" />
+            <element signature="e#37112#37113#0" expanded="true" />
+            <element signature="e#37156#37157#0" expanded="true" />
+            <element signature="e#37192#37193#0" expanded="true" />
+            <element signature="e#37296#37297#0" expanded="true" />
+            <element signature="e#37325#37326#0" expanded="true" />
+            <element signature="e#37369#37370#0" expanded="true" />
+            <element signature="e#37405#37406#0" expanded="true" />
+            <element signature="e#37509#37510#0" expanded="true" />
+            <element signature="e#37538#37539#0" expanded="true" />
+            <element signature="e#37582#37583#0" expanded="true" />
+            <element signature="e#37618#37619#0" expanded="true" />
+            <element signature="e#37722#37723#0" expanded="true" />
+            <element signature="e#37751#37752#0" expanded="true" />
+            <element signature="e#37795#37796#0" expanded="true" />
+            <element signature="e#37831#37832#0" expanded="true" />
+            <element signature="e#37935#37936#0" expanded="true" />
+            <element signature="e#37964#37965#0" expanded="true" />
+            <element signature="e#38008#38009#0" expanded="true" />
+            <element signature="e#38044#38045#0" expanded="true" />
+            <element signature="e#38148#38149#0" expanded="true" />
+            <element signature="e#38177#38178#0" expanded="true" />
+            <element signature="e#38221#38222#0" expanded="true" />
+            <element signature="e#38257#38258#0" expanded="true" />
+            <element signature="e#38361#38362#0" expanded="true" />
+            <element signature="e#38390#38391#0" expanded="true" />
+            <element signature="e#38434#38435#0" expanded="true" />
+            <element signature="e#38470#38471#0" expanded="true" />
+            <element signature="e#38574#38575#0" expanded="true" />
+            <element signature="e#38603#38604#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38683#38684#0" expanded="true" />
+            <element signature="e#38787#38788#0" expanded="true" />
+            <element signature="e#38816#38817#0" expanded="true" />
+            <element signature="e#38860#38861#0" expanded="true" />
+            <element signature="e#38896#38897#0" expanded="true" />
+            <element signature="e#39000#39001#0" expanded="true" />
+            <element signature="e#39029#39030#0" expanded="true" />
+            <element signature="e#39073#39074#0" expanded="true" />
+            <element signature="e#39109#39110#0" expanded="true" />
+            <element signature="e#39213#39214#0" expanded="true" />
+            <element signature="e#39242#39243#0" expanded="true" />
+            <element signature="e#39286#39287#0" expanded="true" />
+            <element signature="e#39322#39323#0" expanded="true" />
+            <element signature="e#39426#39427#0" expanded="true" />
+            <element signature="e#39455#39456#0" expanded="true" />
+            <element signature="e#39499#39500#0" expanded="true" />
+            <element signature="e#39535#39536#0" expanded="true" />
+            <element signature="e#39639#39640#0" expanded="true" />
+            <element signature="e#39668#39669#0" expanded="true" />
+            <element signature="e#39712#39713#0" expanded="true" />
+            <element signature="e#39748#39749#0" expanded="true" />
+            <element signature="e#39852#39853#0" expanded="true" />
+            <element signature="e#39881#39882#0" expanded="true" />
+            <element signature="e#39925#39926#0" expanded="true" />
+            <element signature="e#39961#39962#0" expanded="true" />
+            <element signature="e#40065#40066#0" expanded="true" />
+            <element signature="e#40094#40095#0" expanded="true" />
+            <element signature="e#40138#40139#0" expanded="true" />
+            <element signature="e#40174#40175#0" expanded="true" />
+            <element signature="e#40278#40279#0" expanded="true" />
+            <element signature="e#40307#40308#0" expanded="true" />
+            <element signature="e#40351#40352#0" expanded="true" />
+            <element signature="e#40387#40388#0" expanded="true" />
+            <element signature="e#40491#40492#0" expanded="true" />
+            <element signature="e#40520#40521#0" expanded="true" />
+            <element signature="e#40564#40565#0" expanded="true" />
+            <element signature="e#40600#40601#0" expanded="true" />
+            <element signature="e#40704#40705#0" expanded="true" />
+            <element signature="e#40733#40734#0" expanded="true" />
+            <element signature="e#40777#40778#0" expanded="true" />
+            <element signature="e#40813#40814#0" expanded="true" />
+            <element signature="e#40917#40918#0" expanded="true" />
+            <element signature="e#40946#40947#0" expanded="true" />
+            <element signature="e#40990#40991#0" expanded="true" />
+            <element signature="e#41026#41027#0" expanded="true" />
+            <element signature="e#41130#41131#0" expanded="true" />
+            <element signature="e#41159#41160#0" expanded="true" />
+            <element signature="e#41203#41204#0" expanded="true" />
+            <element signature="e#41239#41240#0" expanded="true" />
+            <element signature="e#41343#41344#0" expanded="true" />
+            <element signature="e#41372#41373#0" expanded="true" />
+            <element signature="e#41416#41417#0" expanded="true" />
+            <element signature="e#41452#41453#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41585#41586#0" expanded="true" />
+            <element signature="e#41629#41630#0" expanded="true" />
+            <element signature="e#41665#41666#0" expanded="true" />
+            <element signature="e#41769#41770#0" expanded="true" />
+            <element signature="e#41798#41799#0" expanded="true" />
+            <element signature="e#41842#41843#0" expanded="true" />
+            <element signature="e#41878#41879#0" expanded="true" />
+            <element signature="e#41982#41983#0" expanded="true" />
+            <element signature="e#42011#42012#0" expanded="true" />
+            <element signature="e#42055#42056#0" expanded="true" />
+            <element signature="e#42091#42092#0" expanded="true" />
+            <element signature="e#42195#42196#0" expanded="true" />
+            <element signature="e#42224#42225#0" expanded="true" />
+            <element signature="e#42268#42269#0" expanded="true" />
+            <element signature="e#42304#42305#0" expanded="true" />
+            <element signature="e#42408#42409#0" expanded="true" />
+            <element signature="e#42437#42438#0" expanded="true" />
+            <element signature="e#42481#42482#0" expanded="true" />
+            <element signature="e#42517#42518#0" expanded="true" />
+            <element signature="e#42621#42622#0" expanded="true" />
+            <element signature="e#42650#42651#0" expanded="true" />
+            <element signature="e#42694#42695#0" expanded="true" />
+            <element signature="e#42730#42731#0" expanded="true" />
+            <element signature="e#42834#42835#0" expanded="true" />
+            <element signature="e#42863#42864#0" expanded="true" />
+            <element signature="e#42907#42908#0" expanded="true" />
+            <element signature="e#42943#42944#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

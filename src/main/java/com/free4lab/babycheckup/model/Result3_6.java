@@ -145,7 +145,56 @@ public class Result3_6 {
     private String r7;
     private String r8;
 
-
+    private String desc1;
+    private String desc2;
+    private String desc3;
+    private String desc4;
+    private String desc5;
+    private String desc6;
+    private String desc7;
+    private String desc8;
+    private String desc9;
+    private String desc10;
+    private String desc11;
+    private String desc12;
+    private String desc13;
+    private String desc14;
+    private String desc15;
+    private String desc16;
+    private String desc17;
+    private String desc18;
+    private String desc19;
+    private String desc20;
+    private String desc21;
+    private String desc22;
+    private String desc23;
+    private String desc24;
+    private String desc25;
+    private String desc26;
+    private String desc27;
+    private String desc28;
+    private String desc29;
+    private String desc30;
+    private String desc31;
+    private String desc32;
+    private String desc33;
+    private String desc34;
+    private String desc35;
+    private String desc36;
+    private String desc37;
+    private String desc38;
+    private String desc39;
+    private String desc40;
+    private String desc41;
+    private String desc42;
+    private String desc43;
+    private String desc44;
+    private String desc45;
+    private String desc46;
+    private String desc47;
+    private String desc48;
+    private String desc49;
+    private String desc50;
 
 
     @Id
@@ -1467,6 +1516,459 @@ public class Result3_6 {
 
     public void setAnswerRelation(String answerRelation) {
         this.answerRelation = answerRelation;
+    }
+
+    @Basic
+    @Column(name = "desc_1", nullable = true, length = 255)
+    public String getDesc1() {
+        return desc1;
+    }
+
+    public void setDesc1(String desc1) {
+        this.desc1 = desc1;
+    }
+
+    @Basic
+    @Column(name = "desc_2", nullable = true, length = 255)
+    public String getDesc2() {
+        return desc2;
+    }
+
+    public void setDesc2(String desc2) {
+        this.desc2 = desc2;
+    }
+
+    @Basic
+    @Column(name = "desc_3", nullable = true, length = 255)
+    public String getDesc3() {
+        return desc3;
+    }
+
+    public void setDesc3(String desc3) {
+        this.desc3 = desc3;
+    }
+    @Basic
+    @Column(name = "desc_4", nullable = true, length = 255)
+    public String getDesc4() {
+        return desc4;
+    }
+
+    public void setDesc4(String desc4) {
+        this.desc4 = desc4;
+    }
+    @Basic
+    @Column(name = "desc_5", nullable = true, length = 255)
+    public String getDesc5() {
+        return desc5;
+    }
+
+    public void setDesc5(String desc5) {
+        this.desc5 = desc5;
+    }
+    @Basic
+    @Column(name = "desc_6", nullable = true, length = 255)
+    public String getDesc6() {
+        return desc6;
+    }
+
+    public void setDesc6(String desc6) {
+        this.desc6 = desc6;
+    }
+    @Basic
+    @Column(name = "desc_7", nullable = true, length = 255)
+    public String getDesc7() {
+        return desc7;
+    }
+
+    public void setDesc7(String desc7) {
+        this.desc7 = desc7;
+    }
+    @Basic
+    @Column(name = "desc_8", nullable = true, length = 255)
+    public String getDesc8() {
+        return desc8;
+    }
+
+    public void setDesc8(String desc8) {
+        this.desc8 = desc8;
+    }
+    @Basic
+    @Column(name = "desc_9", nullable = true, length = 255)
+    public String getDesc9() {
+        return desc9;
+    }
+
+    public void setDesc9(String desc9) {
+        this.desc9 = desc9;
+    }
+    @Basic
+    @Column(name = "desc_10", nullable = true, length = 255)
+    public String getDesc10() {
+        return desc10;
+    }
+
+    public void setDesc10(String desc10) {
+        this.desc10 = desc10;
+    }
+    @Basic
+    @Column(name = "desc_11", nullable = true, length = 255)
+    public String getDesc11() {
+        return desc11;
+    }
+
+    public void setDesc11(String desc11) {
+        this.desc11 = desc11;
+    }
+    @Basic
+    @Column(name = "desc_12", nullable = true, length = 255)
+    public String getDesc12() {
+        return desc12;
+    }
+
+    public void setDesc12(String desc12) {
+        this.desc12 = desc12;
+    }
+    @Basic
+    @Column(name = "desc_13", nullable = true, length = 255)
+    public String getDesc13() {
+        return desc13;
+    }
+
+    public void setDesc13(String desc13) {
+        this.desc13 = desc13;
+    }
+    @Basic
+    @Column(name = "desc_14", nullable = true, length = 255)
+    public String getDesc14() {
+        return desc14;
+    }
+
+    public void setDesc14(String desc14) {
+        this.desc14 = desc14;
+    }
+    @Basic
+    @Column(name = "desc_15", nullable = true, length = 255)
+    public String getDesc15() {
+        return desc15;
+    }
+
+    public void setDesc15(String desc15) {
+        this.desc15 = desc15;
+    }
+    @Basic
+    @Column(name = "desc_16", nullable = true, length = 255)
+    public String getDesc16() {
+        return desc16;
+    }
+
+    public void setDesc16(String desc16) {
+        this.desc16 = desc16;
+    }
+    @Basic
+    @Column(name = "desc_17", nullable = true, length = 255)
+    public String getDesc17() {
+        return desc17;
+    }
+
+    public void setDesc17(String desc17) {
+        this.desc17 = desc17;
+    }
+    @Basic
+    @Column(name = "desc_18", nullable = true, length = 255)
+    public String getDesc18() {
+        return desc18;
+    }
+
+    public void setDesc18(String desc18) {
+        this.desc18 = desc18;
+    }
+    @Basic
+    @Column(name = "desc_19", nullable = true, length = 255)
+    public String getDesc19() {
+        return desc19;
+    }
+
+    public void setDesc19(String desc19) {
+        this.desc19 = desc19;
+    }
+    @Basic
+    @Column(name = "desc_20", nullable = true, length = 255)
+    public String getDesc20() {
+        return desc20;
+    }
+
+    public void setDesc20(String desc20) {
+        this.desc20 = desc20;
+    }
+    @Basic
+    @Column(name = "desc_21", nullable = true, length = 255)
+    public String getDesc21() {
+        return desc21;
+    }
+
+    public void setDesc21(String desc21) {
+        this.desc21 = desc21;
+    }
+    @Basic
+    @Column(name = "desc_22", nullable = true, length = 255)
+    public String getDesc22() {
+        return desc22;
+    }
+
+    public void setDesc22(String desc22) {
+        this.desc22 = desc22;
+    }
+    @Basic
+    @Column(name = "desc_23", nullable = true, length = 255)
+    public String getDesc23() {
+        return desc23;
+    }
+
+    public void setDesc23(String desc23) {
+        this.desc23 = desc23;
+    }
+    @Basic
+    @Column(name = "desc_24", nullable = true, length = 255)
+    public String getDesc24() {
+        return desc24;
+    }
+
+    public void setDesc24(String desc24) {
+        this.desc24 = desc24;
+    }
+    @Basic
+    @Column(name = "desc_25", nullable = true, length = 255)
+    public String getDesc25() {
+        return desc25;
+    }
+
+    public void setDesc25(String desc25) {
+        this.desc25 = desc25;
+    }
+    @Basic
+    @Column(name = "desc_26", nullable = true, length = 255)
+    public String getDesc26() {
+        return desc26;
+    }
+
+    public void setDesc26(String desc26) {
+        this.desc26 = desc26;
+    }
+    @Basic
+    @Column(name = "desc_27", nullable = true, length = 255)
+    public String getDesc27() {
+        return desc27;
+    }
+
+    public void setDesc27(String desc27) {
+        this.desc27 = desc27;
+    }
+    @Basic
+    @Column(name = "desc_28", nullable = true, length = 255)
+    public String getDesc28() {
+        return desc28;
+    }
+
+    public void setDesc28(String desc28) {
+        this.desc28 = desc28;
+    }
+    @Basic
+    @Column(name = "desc_29", nullable = true, length = 255)
+    public String getDesc29() {
+        return desc29;
+    }
+
+    public void setDesc29(String desc29) {
+        this.desc29 = desc29;
+    }
+    @Basic
+    @Column(name = "desc_30", nullable = true, length = 255)
+    public String getDesc30() {
+        return desc30;
+    }
+
+    public void setDesc30(String desc30) {
+        this.desc30 = desc30;
+    }
+    @Basic
+    @Column(name = "desc_31", nullable = true, length = 255)
+    public String getDesc31() {
+        return desc31;
+    }
+
+    public void setDesc31(String desc31) {
+        this.desc31 = desc31;
+    }
+    @Basic
+    @Column(name = "desc_32", nullable = true, length = 255)
+    public String getDesc32() {
+        return desc32;
+    }
+
+    public void setDesc32(String desc32) {
+        this.desc32 = desc32;
+    }
+    @Basic
+    @Column(name = "desc_33", nullable = true, length = 255)
+    public String getDesc33() {
+        return desc33;
+    }
+
+    public void setDesc33(String desc33) {
+        this.desc33 = desc33;
+    }
+    @Basic
+    @Column(name = "desc_34", nullable = true, length = 255)
+    public String getDesc34() {
+        return desc34;
+    }
+
+    public void setDesc34(String desc34) {
+        this.desc34 = desc34;
+    }
+    @Basic
+    @Column(name = "desc_35", nullable = true, length = 255)
+    public String getDesc35() {
+        return desc35;
+    }
+
+    public void setDesc35(String desc35) {
+        this.desc35 = desc35;
+    }
+    @Basic
+    @Column(name = "desc_36", nullable = true, length = 255)
+    public String getDesc36() {
+        return desc36;
+    }
+
+    public void setDesc36(String desc36) {
+        this.desc36 = desc36;
+    }
+    @Basic
+    @Column(name = "desc_37", nullable = true, length = 255)
+    public String getDesc37() {
+        return desc37;
+    }
+
+    public void setDesc37(String desc37) {
+        this.desc37 = desc37;
+    }
+    @Basic
+    @Column(name = "desc_38", nullable = true, length = 255)
+    public String getDesc38() {
+        return desc38;
+    }
+
+    public void setDesc38(String desc38) {
+        this.desc38 = desc38;
+    }
+    @Basic
+    @Column(name = "desc_39", nullable = true, length = 255)
+    public String getDesc39() {
+        return desc39;
+    }
+
+    public void setDesc39(String desc39) {
+        this.desc39 = desc39;
+    }
+    @Basic
+    @Column(name = "desc_40", nullable = true, length = 255)
+    public String getDesc40() {
+        return desc40;
+    }
+
+    public void setDesc40(String desc40) {
+        this.desc40 = desc40;
+    }
+    @Basic
+    @Column(name = "desc_41", nullable = true, length = 255)
+    public String getDesc41() {
+        return desc41;
+    }
+
+    public void setDesc41(String desc41) {
+        this.desc41 = desc41;
+    }
+    @Basic
+    @Column(name = "desc_42", nullable = true, length = 255)
+    public String getDesc42() {
+        return desc42;
+    }
+
+    public void setDesc42(String desc42) {
+        this.desc42 = desc42;
+    }
+    @Basic
+    @Column(name = "desc_43", nullable = true, length = 255)
+    public String getDesc43() {
+        return desc43;
+    }
+
+    public void setDesc43(String desc43) {
+        this.desc43 = desc43;
+    }
+    @Basic
+    @Column(name = "desc_44", nullable = true, length = 255)
+    public String getDesc44() {
+        return desc44;
+    }
+
+    public void setDesc44(String desc44) {
+        this.desc44 = desc44;
+    }
+    @Basic
+    @Column(name = "desc_45", nullable = true, length = 255)
+    public String getDesc45() {
+        return desc45;
+    }
+
+    public void setDesc45(String desc45) {
+        this.desc45 = desc45;
+    }
+    @Basic
+    @Column(name = "desc_46", nullable = true, length = 255)
+    public String getDesc46() {
+        return desc46;
+    }
+
+    public void setDesc46(String desc46) {
+        this.desc46 = desc46;
+    }
+    @Basic
+    @Column(name = "desc_47", nullable = true, length = 255)
+    public String getDesc47() {
+        return desc47;
+    }
+
+    public void setDesc47(String desc47) {
+        this.desc47 = desc47;
+    }
+    @Basic
+    @Column(name = "desc_48", nullable = true, length = 255)
+    public String getDesc48() {
+        return desc48;
+    }
+
+    public void setDesc48(String desc48) {
+        this.desc48 = desc48;
+    }
+    @Basic
+    @Column(name = "desc_49", nullable = true, length = 255)
+    public String getDesc49() {
+        return desc49;
+    }
+
+    public void setDesc49(String desc49) {
+        this.desc49 = desc49;
+    }
+    @Basic
+    @Column(name = "desc_50", nullable = true, length = 255)
+    public String getDesc50() {
+        return desc50;
+    }
+
+    public void setDesc50(String desc50) {
+        this.desc50 = desc50;
     }
 
     @Override

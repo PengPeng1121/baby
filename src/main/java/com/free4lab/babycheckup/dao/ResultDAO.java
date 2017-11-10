@@ -6,7 +6,9 @@ import com.free4lab.utils.sql.IEntityManagerHelper;
 import com.free4lab.utils.sql.entitymanager.NoCacheEntityManagerHelper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/7/11.
@@ -43,7 +45,9 @@ public class ResultDAO extends AbstractDAO<Result> {
 
     public List<Result> findResultByBabyid(int bid){
         List<Result> resultList = new ArrayList<Result>();
-        resultList = findByProperty("babyid",bid);
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("babyid",bid);
+        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
         return resultList;
     }
     public Result findResultByid(int rid){
