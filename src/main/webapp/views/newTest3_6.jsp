@@ -282,7 +282,7 @@
 
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                            data += "'result3_6.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
 
@@ -292,7 +292,7 @@
                     }
 
                     for(var i = 0; i < questionSum; i++) {
-                        data += "'result.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+                        data += "'result3_6.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
                     }
 
 
