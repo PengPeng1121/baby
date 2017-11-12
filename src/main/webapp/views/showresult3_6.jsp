@@ -177,27 +177,39 @@
     var series = [{
         name: '',
         data:[],
-        color:'white'
+        color:'white',
+        borderWidth: 1,
+        borderColor: 'black'
     },{
         name: '',
         data:[],
-        color:'green'
+        color:'green',
+        borderWidth: 1,
+        borderColor: 'black'
     },{
         name: '',
         data:[],
-        color:'blue'
+        color:'blue',
+        borderWidth: 1,
+        borderColor: 'black'
     },{
         name: '',
         data:[],
-        color:'orange'
+        color:'orange',
+        borderWidth: 1,
+        borderColor: 'black'
     },{
         name: '',
         data:[],
-        color:'red'
+        color:'red',
+        borderWidth: 1,
+        borderColor: 'black'
     },{
         name: '',
         data:[],
-        color:'white'
+        color:'white',
+        borderWidth: 1,
+        borderColor: 'black'
     }]
     var pArr = [];
     var p1 = $('#p1').text();

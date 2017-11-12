@@ -18,6 +18,9 @@
         table > tbody > tr > td:first-child{
             width: 10%;
         }
+        .noanswer{
+            background-color: #ffeb3b;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -51,7 +54,27 @@
                     </div>
                     <div class="col-md-6">
                         <label class="col-md-3 front-label">被访者与儿童的关系：</label>
-                        <label class="col-md-3 front-label"><input id="answerRelation"></input></label>
+                        <label class="col-md-3 front-label">
+                            <select class="form-control" id="answerRelation">
+                                <option value="爸爸">爸爸</option>
+                                <option value="妈妈">妈妈</option>
+                                <option value="爷爷">爷爷</option>
+                                <option value="奶奶">奶奶</option>
+                                <option value="姥爷">姥爷</option>
+                                <option value="姥姥">姥姥</option>
+                                <option value="叔叔">叔叔</option>
+                                <option value="婶婶">婶婶</option>
+                                <option value="姑姑">姑姑</option>
+                                <option value="姑父">姑父</option>
+                                <option value="舅舅">舅舅</option>
+                                <option value="舅妈">舅妈</option>
+                                <option value="阿姨">阿姨</option>
+                                <option value="姨夫">姨夫</option>
+                                <option value="哥哥">哥哥</option>
+                                <option value="姐姐">姐姐</option>
+                                <option value="保姆">保姆</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -108,7 +131,7 @@
                         <s:iterator value="questionMonthList" id="month" status="status">
                             <s:iterator value="questionList" id="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
-                                    <tr>
+                                    <tr class="question">
                                         <td style="width:60%">
                                             <s:property value="#question.description"/>
                                         </td>
@@ -164,9 +187,17 @@
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0,0];
         var  temp;
+        $('.question').removeClass('noanswer');
+        // Todo: 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
             temp = $("input:radio[name="+ i +"]:checked").val();
             if (!temp) {
+                // Todo: 标注所有没有答的题
+                for (var j = i; j <= questionSum; j++) {
+                    if (!$("input:radio[name="+ j +"]:checked").val()) {
+                        $("input:radio[name="+ j +"]:checked").addClass('noanswer');
+                    }
+                }
                 $.tipModal('alert', 'warning', '有题目未完成！');
                 return false;
             }

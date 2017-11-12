@@ -5,6 +5,7 @@
     <form>
         <s:iterator value="#parameters.reasons[0].split(';') " id="reason">
             <input type="checkbox" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/><br>
+            <input type="text"  class="reason_desc">
         </s:iterator>
         <input type="checkbox" name="1" value="4">其他
         <input type="text"  id="other1" value="">
