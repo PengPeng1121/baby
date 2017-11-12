@@ -143,6 +143,7 @@
                                         <td>
                                             <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</ a>
                                             <input type="hidden" style="color:#000" id="reason<s:property value="#question.ordinal"/>" value="">
+                                            <input type="hidden" style="color:#000" id="desc<s:property value="#question.ordinal"/>" value="">
                                         </td>
                                     </tr>
                                 </s:if>
@@ -183,6 +184,7 @@
     var questionTypeSum = $('#questionTypeSum').val();
     var questionScore = [0,0,0,0,0,0,0,0,0];
     var questionReason = [questionSum];
+    var questionReasonDesc = [questionSum];
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0,0];
@@ -274,7 +276,6 @@
                     var data = "{";
 
                     //每个题的原因
-                    questionReason = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
                         questionReason[i] = $("#reason" + (i + 1)).val();
                     }
@@ -284,6 +285,17 @@
                             data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
+
+                    //每个题的详细原因
+                    for(var i = 0; i < questionSum; i++) {
+                        questionReasonDesc[i] = $("#desc" + (i + 1)).val();
+                    }
+
+                    for(var i = 0; i < questionSum; i++) {
+                        data += "'result.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+                    }
+
+
 
 
                     data += "'result3_6.a1':" + questionScore[1] + ",";
