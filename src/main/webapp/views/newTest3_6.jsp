@@ -195,7 +195,7 @@
                 // Todo: 标注所有没有答的题
                 for (var j = i; j <= questionSum; j++) {
                     if (!$("input:radio[name="+ j +"]:checked").val()) {
-                        $("input:radio[name="+ j +"]:checked").addClass('noanswer');
+                        $("input:radio[name="+ j +"]").parents('tr').addClass('noanswer');
                     }
                 }
                 $.tipModal('alert', 'warning', '有题目未完成！');
