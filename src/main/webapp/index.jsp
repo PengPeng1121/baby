@@ -124,7 +124,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/code.png" alt="">
+                                <img class="media-object" style="height: 100px;width: 100px;" src="statics/img/code.png" alt="">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 24px; color: #6dd2de">育儿技能评估</p>
