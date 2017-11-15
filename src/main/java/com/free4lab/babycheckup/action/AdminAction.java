@@ -87,7 +87,7 @@ public class AdminAction {
 
     public String uploadLogo() {
         relativePath = FileLocationUtil.getLocation(file.getName()) + filename;
-        String absolutePath = "/opt/nfs/" + relativePath;
+        String absolutePath = "../../../../opt/nfs/" + relativePath;
         saveFile(file, absolutePath);
         Hospital hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         if(position.equals("logoLanding")) {
