@@ -90,7 +90,7 @@
                                 <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
                             </div>
                             <div class="media-body">
-                                <p class="media-heading" style="font-size: 16px;">育儿技能评估</p>
+                                <p class="media-heading" style="font-size: 16px;">育儿技能评估（3-6岁)</p>
                                 <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult3_6"/></label>
@@ -116,10 +116,10 @@
                                 <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
                             </div>
                             <div class="media-body">
-                                <p class="media-heading" style="font-size: 16px;">0-2岁小儿神经心理发育检查表</p>
+                                <p class="media-heading" style="font-size: 16px;">育儿技能评估（0-2岁)</p>
                                 <div class="as-desc">
                                     <div style="display: inline-block; margin-top: 20px">
-                                        正在开发中
+                                        正在开发中。。。
                                     </div>
                                 </div>
                                 
@@ -141,7 +141,7 @@
                                 <p class="media-heading" style="font-size: 16px;">学龄前50项智力测查</p>
                                 <div class="as-desc">
                                     <div style="display: inline-block; margin-top: 20px">
-                                        正在开发中
+                                        正在开发中。。。
                                     </div>
                                 </div>
                                
