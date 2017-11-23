@@ -83,7 +83,7 @@
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
                         <span class="front-text-title" >
-                           育儿技能评估
+                           育儿技能评估（3-6岁)
                         </span>
                                         </h4>
                                         <div class="front-text-break">
