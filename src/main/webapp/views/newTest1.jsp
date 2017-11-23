@@ -171,26 +171,26 @@
     function prepare() {
         for (var type = 1; type <= questionTypeSum; type++) {
             var flag = 0;//连续通过的两行的第二个行
-//            for (var i = 0; i < questionMonthSum; i++) {
-//                var twoLineChecked = true;
-//                $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
-//                    if (!$(this).prop('checked')) {
-//                        twoLineChecked = false;
-//                    }
-//                });
-//                if(twoLineChecked){
-//                    $('input[name=checkbox-' + (i + 1) + '-' + type + ']').each(function () {
-//                        if (!$(this).prop('checked')) {
-//                            twoLineChecked = false;
-//                        }
-//                    });
-//                    if (twoLineChecked) {
-//                        flag = i + 1;
-//                    }
-//                    break;
-//                }
-//
-//            }
+            for (var i = 0; i < questionMonthSum; i++) {
+                var twoLineChecked = true;
+                $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
+                    if (!$(this).prop('checked')) {
+                        twoLineChecked = false;
+                    }
+                });
+                if(twoLineChecked){
+                    $('input[name=checkbox-' + (i + 1) + '-' + type + ']').each(function () {
+                        if (!$(this).prop('checked')) {
+                            twoLineChecked = false;
+                        }
+                    });
+                    if (twoLineChecked) {
+                        flag = i + 1;
+                    }
+                    break;
+                }
+
+            }
             if (flag == 0) {
                 if ($('#days').val() <= 6) {
                     questionScore[type] = 0;

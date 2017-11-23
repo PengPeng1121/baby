@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-                                   <%-- <a href="record/newbaby" class="sum_span_blank"><span class="glyphicon glyphicon-plus"></span>新建</a>--%>
+                                    <%-- <a href="record/newbaby" class="sum_span_blank"><span class="glyphicon glyphicon-plus"></span>新建</a>--%>
                                     <a href="record"><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                 </div>
                             </div>
@@ -55,6 +55,7 @@
                     <div class="text-left" style="margin-bottom: 7px;"><label style="font-weight:normal;"><h4>测评</h4></label></div>
                 </div>
             </div>
+            <!-- 0-6岁小儿神经心理发育检查表 -->
             <div class="col-md-4">
                 <div class="panel panel-default front-panel " style="height: 155px;">
                     <div class="panel-body">
@@ -80,6 +81,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 育儿技能评估 -->
             <div class="col-md-4">
                 <div class="panel panel-default front-panel " style="height: 155px;">
                     <div class="panel-body">
@@ -105,13 +107,58 @@
                     </div>
                 </div>
             </div>
+            <!-- 育儿技能评估（0-2岁） -->
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">0-2岁小儿神经心理发育检查表</p>
+                                <div class="as-desc">
+                                    <div style="display: inline-block; margin-top: 20px">
+                                        正在开发中
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 学龄前50项智力测查 -->
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">学龄前50项智力测查</p>
+                                <div class="as-desc">
+                                    <div style="display: inline-block; margin-top: 20px">
+                                        正在开发中
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-4" style="cursor:pointer">
                 <%--<a data-toggle="front-modal" data-title="添加新账户" data-href="" data-size="modal-md">--%>
-                    <div class="panel panel-default front-panel change-plus">
-                        <div class="panel-body" style="height: 156px;text-align: center;" >
-                            <span class="glyphicon glyphicon-plus" style="font-size: 30px;color: #e7e7e7;top: 50px;"></span>
-                        </div>
+                <div class="panel panel-default front-panel change-plus">
+                    <div class="panel-body" style="height: 156px;text-align: center;" >
+                        <span class="glyphicon glyphicon-plus" style="font-size: 30px;color: #e7e7e7;top: 50px;"></span>
                     </div>
+                </div>
                 <%--</a>--%>
             </div>
             <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
@@ -137,7 +184,7 @@
                                             扫一扫二维码，加入该群
                                         </label>
                                     </div>
-                                     
+
                                 </div>
                             </div>
                         </div>

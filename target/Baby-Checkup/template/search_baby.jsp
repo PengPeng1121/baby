@@ -64,10 +64,14 @@
 
 <script type="text/javascript">
     function selecttest(bid,birth){
-        if(birth >= 84){
-            $.tipModal('alert', 'info', '该儿童超出本系统测查年龄！');
-        }else {
-            window.location = "newtest?testid=1&babyid="+bid;
-        }
+//        if(birth >= 84){
+//            $.tipModal('alert', 'info', '该儿童超出本系统测查年龄！');
+//        }else {
+//            window.location = "newtest?testid=1&babyid="+bid;
+//        }
+
+        $.frontModal({size: 'modal-md', href: 'modals/modal_select_test.jsp'}).on('shown.bs.modal', function () {
+            $("#babyid").val(bid);
+        }).on('hide.bs.modal', function (){window.location.href = 'home';});
     }
 </script>

@@ -40,10 +40,11 @@ public class TestAction {
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30;
+        //紧急方案  都跳转到newtest0_6
         if(days<=24){
             redirectUrl = "/newtest0_6";
         }else {
-            redirectUrl = "/newtest3_6";
+            redirectUrl = "/newtest0_6";
         }
         return SUCCESS;
     }

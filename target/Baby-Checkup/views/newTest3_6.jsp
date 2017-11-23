@@ -18,6 +18,9 @@
         table > tbody > tr > td:first-child{
             width: 10%;
         }
+        .noanswer{
+            background-color: #ffeb3b;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -51,7 +54,27 @@
                     </div>
                     <div class="col-md-6">
                         <label class="col-md-3 front-label">被访者与儿童的关系：</label>
-                        <label class="col-md-3 front-label"><input id="answerRelation"></input></label>
+                        <label class="col-md-3 front-label">
+                            <select class="form-control" id="answerRelation">
+                                <option value="爸爸">爸爸</option>
+                                <option value="妈妈">妈妈</option>
+                                <option value="爷爷">爷爷</option>
+                                <option value="奶奶">奶奶</option>
+                                <option value="姥爷">姥爷</option>
+                                <option value="姥姥">姥姥</option>
+                                <option value="叔叔">叔叔</option>
+                                <option value="婶婶">婶婶</option>
+                                <option value="姑姑">姑姑</option>
+                                <option value="姑父">姑父</option>
+                                <option value="舅舅">舅舅</option>
+                                <option value="舅妈">舅妈</option>
+                                <option value="阿姨">阿姨</option>
+                                <option value="姨夫">姨夫</option>
+                                <option value="哥哥">哥哥</option>
+                                <option value="姐姐">姐姐</option>
+                                <option value="保姆">保姆</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -76,51 +99,39 @@
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
                     <s:iterator value="questionTypeList" id="type">
-                        <s:if test="#type == 11">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">育儿观念</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 12">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">关注和接纳</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 13">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">规矩或自我调控能力</td>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <s:if test="#type == 11">
+                                <td>育儿观念</td>
+                            </s:if>
+                            <s:if test="#type == 12">
+                                <td>关注和接纳</td>
+                            </s:if>
+                            <s:if test="#type == 13">
+                                <td>规矩或自我调控能力</td>
+                            </s:if>
+                            <s:if test="#type == 14">
+                                <td>养育关系和沟通</td>
+                            </s:if>
+                            <s:if test="#type == 15">
+                                <td>学习环境</td>
+                            </s:if>
+                            <s:if test="#type == 16">
+                                <td>语言环境</td>
+                            </s:if>
+                            <s:if test="#type == 17">
+                                <td>玩耍和娱乐</td>
+                            </s:if>
+                            <s:if test="#type == 18">
+                                <td>安全和居住环境</td>
+                            </s:if>
+                            <td>得分</td>
+                            <td>答题记录</td>
+                        </tr>
 
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 14">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">养育关系和沟通</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 15">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">学习环境</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 16">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">语言环境</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 17">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">玩耍和娱乐</td>
-                            </tr>
-                        </s:if>
-                        <s:if test="#type == 18">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td colspan="3">安全和居住环境</td>
-                            </tr>
-                        </s:if>
                         <s:iterator value="questionMonthList" id="month" status="status">
                             <s:iterator value="questionList" id="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
-                                    <tr>
+                                    <tr class="question">
                                         <td style="width:60%">
                                             <s:property value="#question.description"/>
                                         </td>
@@ -132,6 +143,7 @@
                                         <td>
                                             <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</ a>
                                             <input type="hidden" style="color:#000" id="reason<s:property value="#question.ordinal"/>" value="">
+                                            <input type="hidden" style="color:#000" id="desc<s:property value="#question.ordinal"/>" value="">
                                         </td>
                                     </tr>
                                 </s:if>
@@ -172,13 +184,22 @@
     var questionTypeSum = $('#questionTypeSum').val();
     var questionScore = [0,0,0,0,0,0,0,0,0];
     var questionReason = [questionSum];
+    var questionReasonDesc = [questionSum];
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0,0];
         var  temp;
+        $('.question').removeClass('noanswer');
+        // Todo: 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
             temp = $("input:radio[name="+ i +"]:checked").val();
             if (!temp) {
+                // Todo: 标注所有没有答的题
+                for (var j = i; j <= questionSum; j++) {
+                    if (!$("input:radio[name="+ j +"]:checked").val()) {
+                        $("input:radio[name="+ j +"]").parents('tr').addClass('noanswer');
+                    }
+                }
                 $.tipModal('alert', 'warning', '有题目未完成！');
                 return false;
             }
@@ -255,16 +276,26 @@
                     var data = "{";
 
                     //每个题的原因
-                    questionReason = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
                         questionReason[i] = $("#reason" + (i + 1)).val();
                     }
 
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                            data += "'result3_6.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
+
+                    //每个题的详细原因
+                    for(var i = 0; i < questionSum; i++) {
+                        questionReasonDesc[i] = $("#desc" + (i + 1)).val();
+                    }
+
+                    for(var i = 0; i < questionSum; i++) {
+                        data += "'result3_6.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+                    }
+
+
 
 
                     data += "'result3_6.a1':" + questionScore[1] + ",";

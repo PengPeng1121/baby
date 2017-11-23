@@ -4,7 +4,8 @@
 <div class="modal-body">
     <form>
         <s:iterator value="#parameters.reasons[0].split(';') " id="reason">
-            <input type="checkbox" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/><br>
+            <input type="checkbox" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/>
+            <input type="text"  class="reason_desc"><br>
         </s:iterator>
         <input type="checkbox" name="1" value="4">其他
         <input type="text"  id="other1" value="">
@@ -19,17 +20,17 @@
 
 <script type="text/javascript">
     function saveReason(){
-        var select = $("input:checkbox[name='1']:checked").val();
+        var select = $("input:checkbox[name='1']:checked").val(),
+            desc = $("input:checkbox[name='1']:checked").siblings('input').val();
         if(select == 4){
-            select = $("#other1").val() + $("#other2").val();
+            select = $("#other1").val();
+            desc = $("#other2").val();
         }
-        // if($("#other").val()){
-        //     select = 0;
-        // }
+
 
         var qid = $("#qid").val();
         $("#reason"+qid).val(select);
-//        $("#reason"+qid).show();
+        $("#desc"+qid).val(desc);
         $('#front-modal').modal('hide');
     }
 </script>
