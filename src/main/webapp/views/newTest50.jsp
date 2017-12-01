@@ -142,16 +142,27 @@
     ;(function () {
     })();
 
+    function failReasons(ordinal, reasons) {
+
+        $('#failMessage' + ordinal).css("color","#ff0049");
+
+        $.frontModal({
+            href: "modals/modal_question_reasons50.jsp?reasons=" + reasons + "&qid="+ordinal,
+            title: "请选择答案："
+        }).on('shown.bs.modal', function () {
+            $("#qid").val(ordinal);
+        });
+    }
 
     var questionSum = $('#questionSum').val();
     var questionMonthSum = $('#questionMonthSum').val();
     var questionTypeSum = $('#questionTypeSum').val();
-    var questionScore = [0,0,0,0,0,0,0];
+    var questionScore = [0,0,0,0,0,0,0,0];
     var questionReason = [questionSum];
     var questionReasonDesc = [questionSum];
 
     function prepare() {
-        questionScore = [0,0,0,0,0,0,0];
+        questionScore = [0,0,0,0,0,0,0,0];
         var  temp;
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
@@ -177,6 +188,7 @@
                 continue;
             }
             temp = parseInt(temp);
+
             if([1,2,3,4,5,9,12,15,18,26,31,36,39].indexOf(i)!= -1){
                 questionScore[1] += temp;
                 continue;
@@ -211,6 +223,19 @@
         }
     }
 
+    $(function(){
+        var s = $("input[type='checkbox']");
+        s.each(function(i) {
+//          alert(i);
+            $(this).click(function(){
+                if(this.checked==true){
+                    var id = this.id;
+                    var idNum = id.charAt(id.length-1);
+                    $("#failMessage" + idNum).css("color","#337ab7");
+                }
+            });
+        });
+    })
 
     function save() {
         if(prepare()) {
@@ -247,11 +272,10 @@
                     data += "'result50.a4':" + questionScore[4] + ",";
                     data += "'result50.a5':" + questionScore[5] + ",";
                     data += "'result50.a6':" + questionScore[6] + ",";
+                    
 
                     data += "'result50.babyId':" + $("#babyid").val() + ",";
-                    var answerRelation = $("#answerRelation").val();
-                    answerRelation= " ' "+ answerRelation +" ' ";
-                    data += "'result50.answerRelation':" + answerRelation + "}";
+                    
 
                     $.ajax({
                         url: 'saveresult50',
@@ -267,5 +291,6 @@
     }
 
 </script>
+
 </body>
 </html>
