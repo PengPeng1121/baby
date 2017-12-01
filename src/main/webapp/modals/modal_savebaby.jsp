@@ -16,7 +16,7 @@
         </div>
         <div style="margin-top: 10px;">
             <a type="button" class="btn  modal-box text-center" href="javascript:start3_6()"><h4
-                    style="color: white;font-size: small">开始<br/>育儿技能评估（3-6岁)</h4></a>
+                    style="color: white;font-size: small">开始3-6岁<br/>育儿技能评估</h4></a>
         </div>
     </div>
 </div>
