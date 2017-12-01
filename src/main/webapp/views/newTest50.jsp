@@ -193,23 +193,23 @@
                 questionScore[1] += temp;
                 continue;
             }
-            if(6,7,8,10,11,13,20,22,24,25,27,32,37].indexOf(i)!= -1){
+            if([6,7,8,10,11,13,20,22,24,25,27,32,37].indexOf(i)!= -1){
                 questionScore[2] += temp;
                 continue;
             }
-            if(16,21,46,48].indexOf(i)!= -1){
+            if([16,21,46,48].indexOf(i)!= -1){
                 questionScore[3] += temp;
                 continue;
             }
-            if(38,35,33,29,19,17].indexOf(i)!= -1){
+            if([38,35,33,29,19,17].indexOf(i)!= -1){
                 questionScore[4] += temp;
                 continue;
             }
-            if(30,34,42,43,44,45,47,49,50].indexOf(i)!= -1){
+            if([30,34,42,43,44,45,47,49,50].indexOf(i)!= -1){
                 questionScore[5] += temp;
                 continue;
             }
-            if(40,41,28,23,14].indexOf(i)!= -1){
+            if([40,41,28,23,14].indexOf(i)!= -1){
                 questionScore[6] += temp;
                 continue;
             }
