@@ -72,7 +72,29 @@ public class TestAction {
         return SUCCESS;
     }
 
+    public String newTest0_2() {
+        questionTypeList = QuestionManager.findTypeByTestid(16);
+        questionMonthList = QuestionManager.findMonthByTestid(16);
+        questionList = QuestionManager.findByTestid(16);
+        baby = BabyManager.findById(babyid);
+        testid = 16;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30;
+        return SUCCESS;
+    }
 
+    public String newTest50() {
+        questionTypeList = QuestionManager.findTypeByTestid(17);
+        questionMonthList = QuestionManager.findMonthByTestid(17);
+        questionList = QuestionManager.findByTestid(17);
+        baby = BabyManager.findById(babyid);
+        testid = 17;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30;
+        return SUCCESS;
+    }
 
     public String babyTest(){
         baby = BabyManager.findById(babyid);

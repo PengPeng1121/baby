@@ -9,6 +9,8 @@
         <class>com.free4lab.babycheckup.model.Question</class>
         <class>com.free4lab.babycheckup.model.Result</class>
         <class>com.free4lab.babycheckup.model.Result3_6</class>
+        <class>com.free4lab.babycheckup.model.Result0_2</class>
+        <class>com.free4lab.babycheckup.model.Result50</class>
         <class>com.free4lab.babycheckup.model.BabySchema</class>
         <class>com.free4lab.babycheckup.model.FamilyRelation</class>
         <class>com.free4lab.babycheckup.model.Parent</class>

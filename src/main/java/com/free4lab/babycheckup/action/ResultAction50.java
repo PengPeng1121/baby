@@ -30,7 +30,7 @@ public class ResultAction50 {
 
     private String exatAge;//
 
-    public String showResult3_6() {
+    public String showResult50() {
         result50 = ResultManager50.findResultByid(id);
         baby = BabyManager.findById(result50.getBabyId());
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result50.getTime());

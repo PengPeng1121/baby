@@ -28,6 +28,14 @@
         <action name="newtest3_6" method="newTest3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest3_6.jsp</result>
         </action>
+        <!--0-2岁测试-->
+        <action name="newtest0_2" method="newTest0_2" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTest0_2.jsp</result>
+        </action>
+        <!--50岁学龄测试-->
+        <action name="newtest50" method="newTest50" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTest50.jsp</result>
+        </action>
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -37,7 +45,14 @@
         <action name="showresult3_6" method="showResult3_6" class="com.free4lab.babycheckup.action.ResultAction3_6">
             <result name="success" >views/showresult3_6.jsp</result>
         </action>
-
+        <!--0-2岁结果-->
+        <action name="showreult0_2" method="showResult0_2" class="com.free4lab.babycheckup.action.ResultAction0_2">
+            <result name="success" >views/showresult0_2.jsp</result>
+        </action>
+        <!--50结果-->
+        <action name="showreult50" method="showResult50" class="com.free4lab.babycheckup.action.ResultAction50">
+            <result name="success" >views/showresult0_2.jsp</result>
+        </action>
         <action name="saveresult" method="saveResult" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">result,result.id</param>

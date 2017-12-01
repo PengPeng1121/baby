@@ -139,11 +139,18 @@
             <tbody>
             <tr>
                 <td style="text-align:center;">评定结果柱状图</td>
+                <td style="text-align:center;">评定结果网状图</td>
             </tr>
             <tr>
-                <td style="padding: 0px;width: 100%;">
+                <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
                         <div id="column"></div>
+                    </div>
+                    
+                </td>
+                <td style="padding: 0px;width: 50%;">
+                    <div style="border: 1px dashed #ddd">
+                        <div id="spider"></div>
                     </div>
                     
                 </td>
@@ -170,6 +177,17 @@
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
+
+    var a1 = $('#a1').text();
+    var a2 = $('#a2').text();
+    var a3 = $('#a3').text();
+    var a4 = $('#a4').text();
+    var a5 = $('#a5').text();
+    var a6 = $('#a6').text();
+    var a7 = $('#a7').text();
+    var a8 = $('#a8').text();
+
+    
 
 
     // 柱状图数据
@@ -340,6 +358,67 @@
                 enabled:false
             },
             series: series
+        });
+
+        $('#spider').highcharts({
+            chart: {
+                polar: true,
+                type: 'area'
+            },
+            title: {
+                text: '小儿测评结果网状图(3-6)',
+                x: -80
+            },
+            pane: {
+                size: '80%'
+            },
+            xAxis: {
+                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0
+            },
+            yAxis: {
+                max: 20,
+                min: 0,
+                gridLineInterpolation: 'polygon',
+                lineWidth: 0,
+                labels: {
+                    enabled: false
+                },
+                plotLines: [{
+                    color: 'rgb(144, 238, 126)',
+                    value: 0,
+                    width: 2,
+                    label: {
+                        text: '0',
+                        y: 30
+                    }
+                }, {
+                    color: 'rgb(144, 238, 126)',
+                    value: 10,
+                    width: 2,
+                    label: {
+                        text: '10',
+                        y: 10
+                    }
+                }, {
+                    color: 'rgb(144, 238, 126)',
+                    value: 20,
+                    width: 2,
+                    label: {
+                        text: '20',
+                        y: 10
+                    }
+                }],
+            },
+            tooltip: {
+                shared: true
+            },
+            series: [{
+                name: '发育商',
+                data: [a1, a2, a3, a4, a5, a6, a7, a8],
+                pointPlacement: 'on'
+            }]
         });
     });
 

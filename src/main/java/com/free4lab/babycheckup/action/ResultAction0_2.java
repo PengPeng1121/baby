@@ -30,7 +30,7 @@ public class ResultAction0_2 {
 
     private String r0;//评价
 
-    public String showResult3_6() {
+    public String showResult0_2() {
         result0_2 = ResultManager0_2.findResultByid(id);
         baby = BabyManager.findById(result0_2.getBabyId());
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result0_2.getTime());
