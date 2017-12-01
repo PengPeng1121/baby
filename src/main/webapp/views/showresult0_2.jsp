@@ -27,7 +27,7 @@
     <div class="container">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（3-6岁)</h1>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（0-2岁)</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -48,28 +48,26 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2">被访者与儿童的关系</td>
-                        <td class="col-md-2"><s:property value="result3_6.answerRelation"/></td>
+                        <td class="col-md-2"><s:property value="result0_2.answerRelation"/></td>
                     </tr>
                 </table>
             </div>
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="result3_6.id"/>">
+        <input type="hidden" id="resultID" value="<s:property value="result0_2.id"/>">
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-                        <th class="col-md-1">测试项目</th>
-                        <th class="col-md-1">育儿观念</th>
-                        <th class="col-md-1">关注和接纳</th>
-                        <th class="col-md-1">规矩或自我<br/>调控能力</th>
-                        <th class="col-md-1">养育关系<br/>和沟通</th>
-                        <th class="col-md-1">学习环境</th>
-                        <th class="col-md-1">语言环境</th>
-                        <th class="col-md-1">玩耍和娱乐</th>
-                        <th class="col-md-1">安全和<br/>居住环境</th>
-                        <th class="col-md-3">总和</th>
+
+                        <th class="col-md-2">关注度</th>
+                        <th class="col-md-2">接纳</th>
+                        <th class="col-md-2">养育环境</th>
+                        <th class="col-md-2">学习材料</th>
+                        <th class="col-md-2">参与</th>
+                        <th class="col-md-2">生活的丰<br/>富多样性</th>
+                        
 
                         <!-- 育儿观念 a1 p1 r1
                         关注和接纳
@@ -85,50 +83,42 @@
                     <tbody>
                     <tr>
                         <td>个人得分</td>
-                        <td id="a1"><s:property value="result3_6.a1"/></td>
-                        <td id="a2"><s:property value="result3_6.a2"/></td>
-                        <td id="a3"><s:property value="result3_6.a3"/></td>
-                        <td id="a4"><s:property value="result3_6.a4"/></td>
-                        <td id="a5"><s:property value="result3_6.a5"/></td>
-                        <td id="a6"><s:property value="result3_6.a6"/></td>
-                        <td id="a7"><s:property value="result3_6.a7"/></td>
-                        <td id="a8"><s:property value="result3_6.a8"/></td>
+                        <td id="a1"><s:property value="result0_2.a1"/></td>
+                        <td id="a2"><s:property value="result0_2.a2"/></td>
+                        <td id="a3"><s:property value="result0_2.a3"/></td>
+                        <td id="a4"><s:property value="result0_2.a4"/></td>
+                        <td id="a5"><s:property value="result0_2.a5"/></td>
+                        <td id="a6"><s:property value="result0_2.a6"/></td>
                         <td id="a0"><s:property value="a0"/></td>
                     </tr>
                     <tr>
                         <td>应得分</td>
-                        <td>12</td>
-                        <td>12</td>
-                        <td>12</td>
-                        <td>14</td>
-                        <td>12</td>
-                        <td>10</td>
-                        <td>16</td>
-                        <td>12</td>
-                        <td>100</td>
+                        <td>11</td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>9</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>45</td>
                     </tr>
                     <tr>
                         <td>百分位<br/>数范围</td>
-                        <td id="p1"><s:property value="result3_6.p1"/></td>
-                        <td id="p2"><s:property value="result3_6.p2"/></td>
-                        <td id="p3"><s:property value="result3_6.p3"/></td>
-                        <td id="p4"><s:property value="result3_6.p4"/></td>
-                        <td id="p5"><s:property value="result3_6.p5"/></td>
-                        <td id="p6"><s:property value="result3_6.p6"/></td>
-                        <td id="p7"><s:property value="result3_6.p7"/></td>
-                        <td id="p8"><s:property value="result3_6.p8"/></td>
+                        <td id="p1"><s:property value="result0_2.p1"/></td>
+                        <td id="p2"><s:property value="result0_2.p2"/></td>
+                        <td id="p3"><s:property value="result0_2.p3"/></td>
+                        <td id="p4"><s:property value="result0_2.p4"/></td>
+                        <td id="p5"><s:property value="result0_2.p5"/></td>
+                        <td id="p6"><s:property value="result0_2.p6"/></td>
                         <td id="p0"><s:property value="p0"/></td>
                     </tr>
                     <tr>
                         <td>评估意见</td>
-                        <td id="r1"><s:property value="result3_6.r1"/></td>
-                        <td id="r2"><s:property value="result3_6.r2"/></td>
-                        <td id="r3"><s:property value="result3_6.r3"/></td>
-                        <td id="r4"><s:property value="result3_6.r4"/></td>
-                        <td id="r5"><s:property value="result3_6.r5"/></td>
-                        <td id="r6"><s:property value="result3_6.r6"/></td>
-                        <td id="r7"><s:property value="result3_6.r7"/></td>
-                        <td id="r8"><s:property value="result3_6.r8"/></td>
+                        <td id="r1"><s:property value="result0_2.r1"/></td>
+                        <td id="r2"><s:property value="result0_2.r2"/></td>
+                        <td id="r3"><s:property value="result0_2.r3"/></td>
+                        <td id="r4"><s:property value="result0_2.r4"/></td>
+                        <td id="r5"><s:property value="result0_2.r5"/></td>
+                        <td id="r6"><s:property value="result0_2.r6"/></td>
                         <td id="r0"><s:property value="r0"/></td>
                     </tr>
                     </tbody>
@@ -184,11 +174,7 @@
     var a4 = $('#a4').text();
     var a5 = $('#a5').text();
     var a6 = $('#a6').text();
-    var a7 = $('#a7').text();
-    var a8 = $('#a8').text();
-
     
-
 
     // 柱状图数据
 
@@ -261,14 +247,6 @@
     p6_2 = p6.split('~')[1];
 
 
-    var p7 = $('#p7').text();
-    p7_1 = parseInt(p7.split('~')[0]);
-    p7_2 = p7.split('~')[1];
-
-
-    var p8 = $('#p8').text();
-    p8_1 = parseInt(p8.split('~')[0]);
-    p8_2 = p8.split('~')[1];
 
     var p0 = $('#p0').text();
     p0_1 = parseInt(p0.split('~')[0]);
@@ -281,8 +259,6 @@
     pArr.push(p4_1);
     pArr.push(p5_1);
     pArr.push(p6_1);
-    pArr.push(p7_1);
-    pArr.push(p8_1);
     pArr.push(p0_1);
 
 
@@ -337,7 +313,7 @@
                 text: ''
             },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境', '总和']
+                categories: ['关注度', '接纳', '养育环境', '学习材料', '参与', '生活的丰富多样性']
             },
             yAxis: {
                 min: 0,
@@ -373,7 +349,7 @@
                 size: '80%'
             },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境'],
+                categories: ['关注度', '接纳', '养育环境', '学习材料', '参与', '生活的丰富多样性'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
@@ -416,7 +392,7 @@
             },
             series: [{
                 name: '发育商',
-                data: [a1, a2, a3, a4, a5, a6, a7, a8],
+                data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
         });

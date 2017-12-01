@@ -27,7 +27,7 @@
     <div class="container">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（3-6岁)</h1>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">学前50项智力筛查</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -47,112 +47,93 @@
                         <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
-                        <td class="col-md-2">被访者与儿童的关系</td>
-                        <td class="col-md-2"><s:property value="result3_6.answerRelation"/></td>
+                        <td class="col-md-2">实足年龄</td>
+                        <td class="col-md-2"><s:property value="result50.exactAge"/></td>
                     </tr>
                 </table>
             </div>
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="result3_6.id"/>">
+        <input type="hidden" id="resultID" value="<s:property value="result50.id"/>">
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-                        <th class="col-md-1">测试项目</th>
-                        <th class="col-md-1">育儿观念</th>
-                        <th class="col-md-1">关注和接纳</th>
-                        <th class="col-md-1">规矩或自我<br/>调控能力</th>
-                        <th class="col-md-1">养育关系<br/>和沟通</th>
-                        <th class="col-md-1">学习环境</th>
-                        <th class="col-md-1">语言环境</th>
-                        <th class="col-md-1">玩耍和娱乐</th>
-                        <th class="col-md-1">安全和<br/>居住环境</th>
-                        <th class="col-md-3">总和</th>
-
-                        <!-- 育儿观念 a1 p1 r1
-                        关注和接纳
-                        规矩或自我调控能力
-                        养育关系和沟通
-                        学习环境
-                        语言环境
-                        玩耍和娱乐
-                        安全和居住环境
-                        总和 a0 p0 r0 -->
+                        <th class="col-md-1">领域</th>
+                        <th class="col-md-1">SC</th>
+                        <th class="col-md-1">L</th>
+                        <th class="col-md-1">M</th>
+                        <th class="col-md-1">E</th>
+                        <th class="col-md-1">T</th>
+                        <th class="col-md-1">GK</th>
+                        <th class="col-md-1">粗分</th>
+                        <th class="col-md-1">能力商</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>个人得分</td>
-                        <td id="a1"><s:property value="result3_6.a1"/></td>
-                        <td id="a2"><s:property value="result3_6.a2"/></td>
-                        <td id="a3"><s:property value="result3_6.a3"/></td>
-                        <td id="a4"><s:property value="result3_6.a4"/></td>
-                        <td id="a5"><s:property value="result3_6.a5"/></td>
-                        <td id="a6"><s:property value="result3_6.a6"/></td>
-                        <td id="a7"><s:property value="result3_6.a7"/></td>
-                        <td id="a8"><s:property value="result3_6.a8"/></td>
+                        <td>得分</td>
+                        <td id="a1"><s:property value="result50.a1"/></td>
+                        <td id="a2"><s:property value="result50.a2"/></td>
+                        <td id="a3"><s:property value="result50.a3"/></td>
+                        <td id="a4"><s:property value="result50.a4"/></td>
+                        <td id="a5"><s:property value="result50.a5"/></td>
+                        <td id="a6"><s:property value="result50.a6"/></td>
                         <td id="a0"><s:property value="a0"/></td>
-                    </tr>
-                    <tr>
-                        <td>应得分</td>
-                        <td>12</td>
-                        <td>12</td>
-                        <td>12</td>
-                        <td>14</td>
-                        <td>12</td>
-                        <td>10</td>
-                        <td>16</td>
-                        <td>12</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>百分位<br/>数范围</td>
-                        <td id="p1"><s:property value="result3_6.p1"/></td>
-                        <td id="p2"><s:property value="result3_6.p2"/></td>
-                        <td id="p3"><s:property value="result3_6.p3"/></td>
-                        <td id="p4"><s:property value="result3_6.p4"/></td>
-                        <td id="p5"><s:property value="result3_6.p5"/></td>
-                        <td id="p6"><s:property value="result3_6.p6"/></td>
-                        <td id="p7"><s:property value="result3_6.p7"/></td>
-                        <td id="p8"><s:property value="result3_6.p8"/></td>
-                        <td id="p0"><s:property value="p0"/></td>
-                    </tr>
-                    <tr>
-                        <td>评估意见</td>
-                        <td id="r1"><s:property value="result3_6.r1"/></td>
-                        <td id="r2"><s:property value="result3_6.r2"/></td>
-                        <td id="r3"><s:property value="result3_6.r3"/></td>
-                        <td id="r4"><s:property value="result3_6.r4"/></td>
-                        <td id="r5"><s:property value="result3_6.r5"/></td>
-                        <td id="r6"><s:property value="result3_6.r6"/></td>
-                        <td id="r7"><s:property value="result3_6.r7"/></td>
-                        <td id="r8"><s:property value="result3_6.r8"/></td>
-                        <td id="r0"><s:property value="r0"/></td>
+                        <td id="a8"><s:property value="talent"/></td>
                     </tr>
                     </tbody>
                 </table>
+                <table class="table table-striped front-table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>*</td>
+                        <td>SC(Self-Cognition)</td>
+                        <td>自我认识</td>
+                        <td>*</td>
+                        <td>E(Espial)</td>
+                        <td>观察</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>L(Locomotion)</td>
+                        <td>运动</td>
+                        <td>*</td>
+                        <td>T(Thought)</td>
+                        <td>思维</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>M(memory)</td>
+                        <td>记忆</td>
+                        <td>*</td>
+                        <td>GK(General-Knowledge)</td>
+                        <td>常识</td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
                 <td style="text-align:center;">评定结果柱状图</td>
-                <td style="text-align:center;">评定结果网状图</td>
+                <td style="text-align:center;">评定结果纬度图</td>
             </tr>
             <tr>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
                         <div id="column"></div>
                     </div>
-                    
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
                         <div id="spider"></div>
                     </div>
-                    
                 </td>
             </tr>
             </tbody>
@@ -184,11 +165,6 @@
     var a4 = $('#a4').text();
     var a5 = $('#a5').text();
     var a6 = $('#a6').text();
-    var a7 = $('#a7').text();
-    var a8 = $('#a8').text();
-
-    
-
 
     // 柱状图数据
 
@@ -360,6 +336,7 @@
             series: series
         });
 
+
         $('#spider').highcharts({
             chart: {
                 polar: true,
@@ -373,7 +350,7 @@
                 size: '80%'
             },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境'],
+                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境']
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
@@ -416,7 +393,7 @@
             },
             series: [{
                 name: '发育商',
-                data: [a1, a2, a3, a4, a5, a6, a7, a8],
+                data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
         });
