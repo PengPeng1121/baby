@@ -60,13 +60,14 @@
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-
-                        <th class="col-md-2">关注度</th>
-                        <th class="col-md-2">接纳</th>
-                        <th class="col-md-2">养育环境</th>
-                        <th class="col-md-2">学习材料</th>
-                        <th class="col-md-2">参与</th>
-                        <th class="col-md-2">生活的丰<br/>富多样性</th>
+                        <td class="col-md-2">项目</td>
+                        <th class="col-md-1">关注度</th>
+                        <th class="col-md-1">接纳</th>
+                        <th class="col-md-1">养育环境</th>
+                        <th class="col-md-1">学习材料</th>
+                        <th class="col-md-1">参与</th>
+                        <th class="col-md-1">生活的丰<br/>富多样性</th>
+                        <th class="col-md-2">总分</th>
                         
 
                         <!-- 育儿观念 a1 p1 r1
@@ -168,12 +169,12 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
-    var a1 = $('#a1').text();
-    var a2 = $('#a2').text();
-    var a3 = $('#a3').text();
-    var a4 = $('#a4').text();
-    var a5 = $('#a5').text();
-    var a6 = $('#a6').text();
+    var a1 = parseInt($('#a1').text());
+    var a2 = parseInt($('#a2').text());
+    var a3 = parseInt($('#a3').text());
+    var a4 = parseInt($('#a4').text());
+    var a5 = parseInt($('#a5').text());
+    var a6 = parseInt($('#a6').text());
     
 
     // 柱状图数据
