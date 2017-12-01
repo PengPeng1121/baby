@@ -218,49 +218,41 @@
     }]
     var pArr = [];
     var p1 = $('#p1').text();
-    p1_1 = parseInt(p1.split('~')[0]);
-    p1_2 = p1.split('~')[1];
+    
 
     var p2 = $('#p2').text();
-    p2_1 = parseInt(p2.split('~')[0]);
-    p2_2 = p2.split('~')[1];
+    
 
 
 
     var p3 = $('#p3').text();
-    p3_1 = parseInt(p3.split('~')[0]);
-    p3_2 = p3.split('~')[1];
+    
 
 
     var p4 = $('#p4').text();
-    p4_1 = parseInt(p4.split('~')[0]);
-    p4_2 = p4.split('~')[1];
+    
 
 
 
     var p5 = $('#p5').text();
-    p5_1 = parseInt(p5.split('~')[0]);
-    p5_2 = p5.split('~')[1];
+    
 
 
     var p6 = $('#p6').text();
-    p6_1 = parseInt(p6.split('~')[0]);
-    p6_2 = p6.split('~')[1];
-
+    
 
 
     var p0 = $('#p0').text();
-    p0_1 = parseInt(p0.split('~')[0]);
-    p0_2 = p0.split('~')[1];
+    
 
 
-    pArr.push(p1_1);
-    pArr.push(p2_1);
-    pArr.push(p3_1);
-    pArr.push(p4_1);
-    pArr.push(p5_1);
-    pArr.push(p6_1);
-    pArr.push(p0_1);
+    pArr.push(p1);
+    pArr.push(p2);
+    pArr.push(p3);
+    pArr.push(p4);
+    pArr.push(p5);
+    pArr.push(p6);
+    pArr.push(p0);
 
 
     // 填充series
