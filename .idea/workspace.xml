@@ -5,30 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b912aad9-1b5a-43a0-b810-1cf8f7069c5a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup.war" afterPath="$PROJECT_DIR$/target/Baby-Checkup.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/AccountAction.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/AccountAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/AccountDAO$AccountDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/AccountDAO$AccountDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/BabyDAO$BabyDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/BabyDAO$BabyDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/BabySchemaDAO$BabySchemaDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/BabySchemaDAO$BabySchemaDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/HospitalDAO$HospitalDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/HospitalDAO$HospitalDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ParentDAO$ParentDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ParentDAO$ParentDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO$ResultDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/ResultDAO3_6$ResultDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/TestDAO$TestDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/TestDAO$TestDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/UserDAO$UserDAOSingletonHolder.class" afterPath="$PROJECT_DIR$/target/classes/com/free4lab/babycheckup/dao/UserDAO$UserDAOSingletonHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/modals/modal_savebaby.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/modals/modal_select_test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/modals/modal_select_test.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/index.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/modals/modal_savebaby.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/modals/modal_savebaby.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/statics/head.html" afterPath="$PROJECT_DIR$/target/Baby-Checkup/statics/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/babyinfo.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/babyinfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/newTest3_6.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/newTest3_6.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/views/showresult3_6.jsp" afterPath="$PROJECT_DIR$/target/Baby-Checkup/views/showresult3_6.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction0_2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction50.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO0_2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/dao/ResultDAO50.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager0_2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/manager/ResultManager50.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result0_2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/model/Result50.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -901,40 +885,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
-                <element signature="e#1829#1830#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1880#1881#0" expanded="true" />
-                <element signature="e#1913#1914#0" expanded="true" />
-                <element signature="e#1941#1942#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2009#2010#0" expanded="true" />
-                <element signature="e#2059#2060#0" expanded="true" />
-                <element signature="e#2099#2100#0" expanded="true" />
-                <element signature="e#2133#2134#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-                <element signature="e#2209#2210#0" expanded="true" />
-                <element signature="e#2247#2248#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
-                <element signature="e#2307#2308#0" expanded="true" />
-                <element signature="e#2349#2350#0" expanded="true" />
-                <element signature="e#2383#2384#0" expanded="true" />
-                <element signature="e#2420#2421#0" expanded="true" />
-                <element signature="e#2451#2452#0" expanded="true" />
-                <element signature="e#2501#2502#0" expanded="true" />
-                <element signature="e#2541#2542#0" expanded="true" />
-                <element signature="e#2567#2568#0" expanded="true" />
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2625#2626#0" expanded="true" />
-                <element signature="e#2653#2654#0" expanded="true" />
-                <element signature="e#2686#2687#0" expanded="true" />
-                <element signature="e#2715#2716#0" expanded="true" />
-                <element signature="e#2759#2760#0" expanded="true" />
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2829#2830#0" expanded="true" />
-                <element signature="e#2859#2860#0" expanded="true" />
-                <element signature="e#2905#2906#0" expanded="true" />
-                <element signature="e#2943#2944#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1161,6 +1111,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2069,7 +2023,7 @@
       <workItem from="1512049261125" duration="1743000" />
       <workItem from="1512106388583" duration="606000" />
       <workItem from="1512116148124" duration="1170000" />
-      <workItem from="1512126037506" duration="33000" />
+      <workItem from="1512126037506" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;ADD&gt;增加管理页和测量结果显示页">
       <created>1498187544102</created>
@@ -2393,14 +2347,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511448702423</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="12.1  2期初始">
+      <created>1512126171572</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1512126171572</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="563820000" />
+    <option name="totallyTimeSpent" value="563996000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2427,7 +2388,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25037822" sideWeight="0.5549598" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27231467" sideWeight="0.44504023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22919819" sideWeight="0.44504023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2012894" sideWeight="0.51785713" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2458,7 +2419,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&lt;MOD&gt;增加管理员 病例设置页面及相应前后端交互逻辑" />
     <MESSAGE value="&lt;MOD&gt;修改新建用户后端逻辑，增加account的相关新建逻辑&#10;&lt;MOD&gt;增加新建用户和删除用户的前后端交互逻辑&#10;&lt;MOD&gt;增加管理页面病历查询功能" />
     <MESSAGE value="&lt;MOD&gt;修改新建用户页面，增加管理员相关功能&#10;&lt;MOD&gt;完善测评结果合规判断&#10;&lt;MOD&gt;完善页面细节" />
     <MESSAGE value="&lt;MOD&gt;修改测评结果显示页图表细节" />
@@ -2483,7 +2443,8 @@
     <MESSAGE value="11.10修改版本" />
     <MESSAGE value="11.15修改版本  修改不能上传图片问题" />
     <MESSAGE value="11.23  发布版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.23  发布版本" />
+    <MESSAGE value="12.1  2期初始" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.1  2期初始" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2606,6 +2567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2969,6 +2931,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3793,40 +3756,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-            <element signature="e#1880#1881#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-            <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#2099#2100#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="e#2209#2210#0" expanded="true" />
-            <element signature="e#2247#2248#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2349#2350#0" expanded="true" />
-            <element signature="e#2383#2384#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2451#2452#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#2567#2568#0" expanded="true" />
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2625#2626#0" expanded="true" />
-            <element signature="e#2653#2654#0" expanded="true" />
-            <element signature="e#2686#2687#0" expanded="true" />
-            <element signature="e#2715#2716#0" expanded="true" />
-            <element signature="e#2759#2760#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2829#2830#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
-            <element signature="e#2905#2906#0" expanded="true" />
-            <element signature="e#2943#2944#0" expanded="true" />
           </folding>
         </state>
       </provider>
