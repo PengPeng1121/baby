@@ -143,12 +143,35 @@ public class TestAction {
     public String saveResult0_2(){
         //这是算法  是不是很吊
 
-        result0_2.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
-        result0_2.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
-        result0_2.setTestId(16);
-        result0_2.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
-        result0_2.setState("finished");
-        ResultManager0_2.saveResult(result0_2);
+        try {
+            String p1 = String.valueOf(result0_2.getA1()*100/11);
+            String p2 = String.valueOf(result0_2.getA2()*100/8);
+            String p3 = String.valueOf(result0_2.getA3()*100/6);
+            String p4 = String.valueOf(result0_2.getA4()*100/9);
+            String p5 = String.valueOf(result0_2.getA5()*100/6);
+            String p6 = String.valueOf(result0_2.getA6()*100/5);
+            result0_2.setP1(p1);
+            result0_2.setP2(p2);
+            result0_2.setP3(p3);
+            result0_2.setP4(p4);
+            result0_2.setP5(p5);
+            result0_2.setP6(p6);
+            result0_2.setR1(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p1)));
+            result0_2.setR2(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p2)));
+            result0_2.setR3(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p3)));
+            result0_2.setR4(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p4)));
+            result0_2.setR5(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p5)));
+            result0_2.setR6(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p6)));
+
+            result0_2.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            result0_2.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            result0_2.setTestId(16);
+            result0_2.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            result0_2.setState("finished");
+            ResultManager0_2.saveResult(result0_2);
+        }catch (Exception e){
+
+        }
         return SUCCESS;
     }
 

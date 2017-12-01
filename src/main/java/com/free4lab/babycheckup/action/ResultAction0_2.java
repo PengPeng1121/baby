@@ -41,8 +41,8 @@ public class ResultAction0_2 {
         try{
             if (result0_2!=null) {
                 a0 = result0_2.getA1()+ result0_2.getA2()+ result0_2.getA3()+ result0_2.getA4()+ result0_2.getA5()+ result0_2.getA6();
-                p0 = AnswerValueEnum_Total.getIndex(a0);
-                r0 = AnswerValueEnum_R.getName(p0);
+                p0 = String.valueOf(a0*100/45);
+                r0 = AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p0));
             }
         }catch (Exception e){
 
