@@ -274,7 +274,7 @@
                     data += "'result50.a6':" + questionScore[6] + ",";
                     
 
-                    data += "'result50.babyId':" + $("#babyid").val() + ",";
+                    data += "'result50.babyId':" + $("#babyid").val() + "}";
                     
 
                     $.ajax({

@@ -159,12 +159,12 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
-    var a1 = $('#a1').text();
-    var a2 = $('#a2').text();
-    var a3 = $('#a3').text();
-    var a4 = $('#a4').text();
-    var a5 = $('#a5').text();
-    var a6 = $('#a6').text();
+    var a1 = parseInt($('#a1').text());
+    var a2 = parseInt($('#a2').text());
+    var a3 = parseInt($('#a3').text());
+    var a4 = parseInt($('#a4').text());
+    var a5 = parseInt($('#a5').text());
+    var a6 = parseInt($('#a6').text());
 
     // 柱状图数据
 
@@ -350,7 +350,7 @@
                 size: '80%'
             },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境']
+                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
