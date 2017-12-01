@@ -77,39 +77,42 @@
                         </tr>
                         <s:iterator value="questionList" id="question">
                             <tr class="question">
-                                <td>
+                                <td style="width:5%">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
-                                <s:if test="#question.type == 31">
-                                    <td>SC</td>
-                                </s:if>
-                                <s:if test="#question.type == 32">
-                                    <td>L</td>
-                                </s:if>
-                                <s:if test="#question.type == 33">
-                                    <td>M</td>
-                                </s:if>
-                                <s:if test="#question.type == 34">
-                                    <td>E</td>
-                                </s:if>
-                                <s:if test="#question.type == 35">
-                                    <td>T</td>
-                                </s:if>
-                                <s:if test="#question.type == 36">
-                                    <td>GK</td>
-                                </s:if>
+                                <td style="width:5%">
+                                    <s:if test="#question.type == 31">
+                                        SC
+                                    </s:if>
+                                    <s:if test="#question.type == 32">
+                                        L
+                                    </s:if>
+                                    <s:if test="#question.type == 33">
+                                        M
+                                    </s:if>
+                                    <s:if test="#question.type == 34">
+                                        E
+                                    </s:if>
+                                    <s:if test="#question.type == 35">
+                                        T
+                                    </s:if>
+                                    <s:if test="#question.type == 36">
+                                        GK
+                                    </s:if>
+                                </td>
+
                                 <td style="width:60%">
                                     <s:property value="#question.description"/>
                                 </td>
-                                <td>
+                                <td style="width:10%">
                                     <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />
                                 </td>
-                                <td>
+                                <td style="width:10%">
                                     <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />
                                 </td>
-                                <td>
-                                    <input type="radio" id="<s:property value="#question.ordinal"/>"/>
+                                <td style="width:20%">
+                                    <input  id="<s:property value="#question.ordinal"/>"/>
                                 </td>
                             </tr>
                             

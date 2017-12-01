@@ -48,7 +48,7 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2">实足年龄</td>
-                        <td class="col-md-2"><s:property value="result50.exactAge"/></td>
+                        <td class="col-md-2"><s:property value="exactAge"/></td>
                     </tr>
                 </table>
             </div>
