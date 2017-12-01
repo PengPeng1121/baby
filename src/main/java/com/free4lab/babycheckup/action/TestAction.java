@@ -1,14 +1,8 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.constant.*;
-import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.QuestionManager;
-import com.free4lab.babycheckup.manager.ResultManager;
-import com.free4lab.babycheckup.manager.ResultManager3_6;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Question;
-import com.free4lab.babycheckup.model.Result;
-import com.free4lab.babycheckup.model.Result3_6;
+import com.free4lab.babycheckup.manager.*;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 
 import java.sql.Date;
@@ -31,6 +25,8 @@ public class TestAction {
     private String SUCCESS = "success";
     private Result result;
     private Result3_6 result3_6;
+    private Result0_2 result0_2;
+    private Result50 result50;
     private int days;
 
     private String redirectUrl;
@@ -144,6 +140,30 @@ public class TestAction {
         return SUCCESS;
     }
 
+    public String saveResult0_2(){
+        //这是算法  是不是很吊
+
+        result0_2.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        result0_2.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+        result0_2.setTestId(16);
+        result0_2.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        result0_2.setState("finished");
+        ResultManager0_2.saveResult(result0_2);
+        return SUCCESS;
+    }
+
+    public String saveResult50(){
+        //这是算法  是不是很吊
+
+        result50.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        result50.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+        result50.setTestId(17);
+        result50.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        result50.setState("finished");
+        ResultManager50.saveResult(result50);
+        return SUCCESS;
+    }
+
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
@@ -233,5 +253,21 @@ public class TestAction {
 
     public void setResult3_6List(List<Result3_6> result3_6List) {
         this.result3_6List = result3_6List;
+    }
+
+    public Result0_2 getResult0_2() {
+        return result0_2;
+    }
+
+    public void setResult0_2(Result0_2 result0_2) {
+        this.result0_2 = result0_2;
+    }
+
+    public Result50 getResult50() {
+        return result50;
+    }
+
+    public void setResult50(Result50 result50) {
+        this.result50 = result50;
     }
 }

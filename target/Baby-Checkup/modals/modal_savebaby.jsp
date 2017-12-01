@@ -18,6 +18,14 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start3_6()"><h4
                     style="color: white;font-size: small">开始3-6岁<br/>育儿技能评估</h4></a>
         </div>
+        <div style="margin-top: 10px;">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start0_2()"><h4
+                    style="color: white;font-size: small">开始<br/>育儿技能评估（0-2岁)</h4></a>
+        </div>
+        <div style="margin-top: 10px;">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
+                    style="color: white;font-size: small">开始<br/>智力测试</h4></a>
+        </div>
     </div>
 </div>
 <script>
@@ -50,6 +58,46 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtest3_6?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童超出本系统测查年龄！'});
+                }
+            }
+
+        })
+
+    }
+
+
+    function start0_2() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtest0_2?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童超出本系统测查年龄！'});
+                }
+            }
+
+        })
+
+    }
+
+
+    function start50() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtest50?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童超出本系统测查年龄！'});
                 }

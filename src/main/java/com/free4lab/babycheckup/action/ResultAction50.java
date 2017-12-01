@@ -10,8 +10,10 @@ import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result50;
 import com.opensymphony.xwork2.ActionContext;
 
+import javax.management.StringValueExp;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by Administrator on 2017/6/29.
@@ -28,7 +30,7 @@ public class ResultAction50 {
 
     private String talent;//
 
-    private String exatAge;//
+    private String exactAge;//
 
     public String showResult50() {
         result50 = ResultManager50.findResultByid(id);
@@ -40,7 +42,16 @@ public class ResultAction50 {
         try{
             if (result50!=null) {
                 a0 = result50.getA1()+ result50.getA2()+ result50.getA3()+ result50.getA4()+ result50.getA5()+ result50.getA6();
+            }
 
+            Calendar calendarTestTime = Calendar.getInstance();
+            calendarTestTime.setTime(new java.util.Date());
+
+            Calendar calendarBirthday = Calendar.getInstance();
+            if(baby!=null){
+                calendarBirthday.setTime(baby.getBirthday());
+                int[] timeArray = getNatureAge(calendarBirthday,calendarTestTime);
+                exactAge = String.valueOf(timeArray[0])+"岁"+String.valueOf(timeArray[1])+"月"+String.valueOf(timeArray[2])+"日";
             }
         }catch (Exception e){
 
@@ -49,12 +60,62 @@ public class ResultAction50 {
         return SUCCESS;
     }
 
-
-
-    public int differentdays(Date d1, Date d2){
-        int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
-        return days;
+    public static int[] getNatureAge(Calendar calendarBirth, Calendar calendarNow) {
+        int diffYears = 0, diffMonths, diffDays;
+        int dayOfBirth = calendarBirth.get(Calendar.DAY_OF_MONTH);
+        int dayOfNow = calendarNow.get(Calendar.DAY_OF_MONTH);
+        if (dayOfBirth <= dayOfNow) {
+            diffMonths = getMonthsOfAge(calendarBirth, calendarNow);
+            diffDays = dayOfNow - dayOfBirth;
+            if (diffMonths == 0)
+                diffDays++;
+        } else {
+            if (isEndOfMonth(calendarBirth)) {
+                if (isEndOfMonth(calendarNow)) {
+                    diffMonths = getMonthsOfAge(calendarBirth, calendarNow);
+                    diffDays = 0;
+                } else {
+                    calendarNow.add(Calendar.MONTH, -1);
+                    diffMonths = getMonthsOfAge(calendarBirth, calendarNow);
+                    diffDays = dayOfNow + 1;
+                }
+            } else {
+                if (isEndOfMonth(calendarNow)) {
+                    diffMonths = getMonthsOfAge(calendarBirth, calendarNow);
+                    diffDays = 0;
+                } else {
+                    calendarNow.add(Calendar.MONTH, -1);// 上个月
+                    diffMonths = getMonthsOfAge(calendarBirth, calendarNow);
+// 获取上个月最大的一天
+                    int maxDayOfLastMonth = calendarNow         .getActualMaximum(Calendar.DAY_OF_MONTH);
+                    if (maxDayOfLastMonth > dayOfBirth) {
+                        diffDays = maxDayOfLastMonth - dayOfBirth + dayOfNow;
+                    } else {
+                        diffDays = dayOfNow;
+                    }
+                }
+            }
+        }
+// 计算月份时，没有考虑年
+        diffYears = diffMonths / 12;
+        diffMonths = diffMonths % 12;
+        return new int[] { diffYears, diffMonths, diffDays };
     }
+
+    public static boolean isEndOfMonth(Calendar calendar) {
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        if (dayOfMonth == calendar.getActualMaximum(Calendar.DAY_OF_MONTH))
+            return true;
+        return false;
+    }
+
+    public static int getMonthsOfAge(Calendar calendarBirth,
+                                     Calendar calendarNow) {
+        return (calendarNow.get(Calendar.YEAR) - calendarBirth
+                .get(Calendar.YEAR))* 12+ calendarNow.get(Calendar.MONTH)
+                - calendarBirth.get(Calendar.MONTH);
+    }
+
 
     public Baby getBaby() {
         return baby;
@@ -120,11 +181,11 @@ public class ResultAction50 {
         this.talent = talent;
     }
 
-    public String getExatAge() {
-        return exatAge;
+    public String getExactAge() {
+        return exactAge;
     }
 
-    public void setExatAge(String exatAge) {
-        this.exatAge = exatAge;
+    public void setExactAge(String exactAge) {
+        this.exactAge = exactAge;
     }
 }
