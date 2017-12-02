@@ -218,41 +218,49 @@
     }]
     var pArr = [];
     var p1 = $('#p1').text();
-    
+    p1_1 = parseInt(p1.split('~')[0]);
+    p1_2 = p1.split('~')[1];
 
     var p2 = $('#p2').text();
-    
+    p2_1 = parseInt(p2.split('~')[0]);
+    p2_2 = p2.split('~')[1];
 
 
 
     var p3 = $('#p3').text();
-    
+    p3_1 = parseInt(p3.split('~')[0]);
+    p3_2 = p3.split('~')[1];
 
 
     var p4 = $('#p4').text();
-    
+    p4_1 = parseInt(p4.split('~')[0]);
+    p4_2 = p4.split('~')[1];
 
 
 
     var p5 = $('#p5').text();
-    
+    p5_1 = parseInt(p5.split('~')[0]);
+    p5_2 = p5.split('~')[1];
 
 
     var p6 = $('#p6').text();
-    
+    p6_1 = parseInt(p6.split('~')[0]);
+    p6_2 = p6.split('~')[1];
+
 
 
     var p0 = $('#p0').text();
-    
+    p0_1 = parseInt(p0.split('~')[0]);
+    p0_2 = p0.split('~')[1];
 
 
-    pArr.push(p1);
-    pArr.push(p2);
-    pArr.push(p3);
-    pArr.push(p4);
-    pArr.push(p5);
-    pArr.push(p6);
-    pArr.push(p0);
+    pArr.push(p1_1);
+    pArr.push(p2_1);
+    pArr.push(p3_1);
+    pArr.push(p4_1);
+    pArr.push(p5_1);
+    pArr.push(p6_1);
+    pArr.push(p0_1);
 
 
     // 填充series
@@ -347,7 +355,7 @@
                 lineWidth: 0
             },
             yAxis: {
-                max: 20,
+                max: 11,
                 min: 0,
                 gridLineInterpolation: 'polygon',
                 lineWidth: 0,
@@ -364,18 +372,18 @@
                     }
                 }, {
                     color: 'rgb(144, 238, 126)',
-                    value: 10,
+                    value: 5,
                     width: 2,
                     label: {
-                        text: '10',
+                        text: '5',
                         y: 10
                     }
                 }, {
                     color: 'rgb(144, 238, 126)',
-                    value: 20,
+                    value: 11,
                     width: 2,
                     label: {
-                        text: '20',
+                        text: '11',
                         y: 10
                     }
                 }],
@@ -384,7 +392,7 @@
                 shared: true
             },
             series: [{
-                name: '发育商',
+                name: '得分',
                 data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
