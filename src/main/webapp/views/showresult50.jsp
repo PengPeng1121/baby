@@ -140,6 +140,12 @@
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+            <div class="panel-body front-no-padding">
+                评定结果: <s:property value="level"/>
+            </div>
+        </div>
+
+        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
@@ -252,7 +258,7 @@
                 size: '80%'
             },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境'],
+                categories: ['SC', 'L', 'M', 'E', 'T', 'GK'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
@@ -274,7 +280,7 @@
                     }
                 }, {
                     color: 'rgb(144, 238, 126)',
-                    value: 10,
+                    value: 6,
                     width: 2,
                     label: {
                         text: '10',
@@ -282,7 +288,7 @@
                     }
                 }, {
                     color: 'rgb(144, 238, 126)',
-                    value: 20,
+                    value: 13,
                     width: 2,
                     label: {
                         text: '20',

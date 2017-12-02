@@ -24,7 +24,7 @@
         </div>
         <div style="margin-top: 10px;width: 150px;display: inline-block;">
             <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
-                    style="color: white;font-size: small">开始<br/>智力测试</h4></a>
+                    style="color: white;font-size: small">开始学前50项<br/>智力筛查</h4></a>
         </div>
     </div>
 </div>
