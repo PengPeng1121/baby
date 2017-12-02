@@ -178,14 +178,14 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
-    var a1 = $('#a1').text();
-    var a2 = $('#a2').text();
-    var a3 = $('#a3').text();
-    var a4 = $('#a4').text();
-    var a5 = $('#a5').text();
-    var a6 = $('#a6').text();
-    var a7 = $('#a7').text();
-    var a8 = $('#a8').text();
+    var a1 = parseInt($('#a1').text());
+    var a2 = parseInt($('#a2').text());
+    var a3 = parseInt($('#a3').text());
+    var a4 = parseInt($('#a4').text());
+    var a5 = parseInt($('#a5').text());
+    var a6 = parseInt($('#a6').text());
+    var a7 = parseInt($('#a7').text());
+    var a8 = parseInt($('#a8').text());
 
     
 

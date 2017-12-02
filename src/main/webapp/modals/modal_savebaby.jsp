@@ -24,7 +24,7 @@
         </div>
         <div style="margin-top: 10px;width: 150px;display: inline-block;">
             <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
-                    style="color: white;font-size: small">开始<br/>智力测试</h4></a>
+                    style="color: white;font-size: small">开始学前50项<br/>智力筛查</h4></a>
         </div>
     </div>
 </div>
@@ -91,7 +91,7 @@
     function start50() {
         var babyid = $("#babyid").val();
         $.ajax({
-            url: "monthage",
+            url: "monthage50",
             type: "post",
             data: {
                 babyid: babyid
@@ -99,7 +99,7 @@
                 if (data.flag == true) {
                     location.href = "newtest50?babyid=" + babyid;
                 } else {
-                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童超出本系统测查年龄！'});
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
             }
 
