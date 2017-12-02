@@ -91,7 +91,7 @@
     function start50() {
         var babyid = $("#babyid").val();
         $.ajax({
-            url: "monthage",
+            url: "monthage50",
             type: "post",
             data: {
                 babyid: babyid
@@ -99,7 +99,7 @@
                 if (data.flag == true) {
                     location.href = "newtest50?babyid=" + babyid;
                 } else {
-                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童超出本系统测查年龄！'});
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
             }
 
