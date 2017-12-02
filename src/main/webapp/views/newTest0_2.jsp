@@ -262,7 +262,7 @@
 
                     //每个题的原因
                     for(var i = 0; i < questionSum; i++) {
-                        questionReason[i] = $("#reason" + (i + 1)).val();
+                        questionReason[i] = $("#reason" + (i + 1)).val()|| '';
                     }
 
                     for(var i = 0; i < questionSum; i++) {
@@ -273,7 +273,7 @@
 
                     //每个题的详细原因
                     for(var i = 0; i < questionSum; i++) {
-                        questionReasonDesc[i] = $("#desc" + (i + 1)).val();
+                        questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
                     }
 
                     for(var i = 0; i < questionSum; i++) {
