@@ -8,19 +8,19 @@
     </div>
     <input type="hidden" id="babyid" value="">
     <div class="modal-body">
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start0_6()"><h4
                     style="color: white;font-size: small">开始0-6岁小儿<br/>神经心理发育测评</h4></a>
         </div>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start3_6()"><h4
                     style="color: white;font-size: small">开始3-6岁<br/>育儿技能评估</h4></a>
         </div>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start0_2()"><h4
                     style="color: white;font-size: small">开始<br/>育儿技能评估（0-2岁)</h4></a>
         </div>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
                     style="color: white;font-size: small">开始<br/>智力测试</h4></a>
         </div>
