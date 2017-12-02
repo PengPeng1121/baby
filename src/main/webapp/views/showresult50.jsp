@@ -132,7 +132,7 @@
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider"></div>
+                        <div id="spider" style="height: 200px;"></div>
                     </div>
                 </td>
             </tr>
@@ -140,9 +140,7 @@
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-body front-no-padding">
-                评定结果: <s:property value="result50.level"/>
-            </div>
+            <div class="panel-heading">评定结果: <s:property value="result50.level"/></div>
         </div>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
