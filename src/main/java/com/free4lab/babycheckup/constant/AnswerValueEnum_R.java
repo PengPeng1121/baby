@@ -6,7 +6,7 @@ package com.free4lab.babycheckup.constant;
 public enum AnswerValueEnum_R {
     SCORE_A("需较多改进","0~50"),
 
-    SCORE_B("需改进","50~70"),
+    SCORE_B("需改进","50~75"),
 
     SCORE_C("好","75~90"),
 
@@ -42,6 +42,21 @@ public enum AnswerValueEnum_R {
         String name = "需较多改进";
         for (AnswerValueEnum_R o : AnswerValueEnum_R.values()) {
             if (index .equals( o.getIndex())) {
+                name = o.getName();
+                break;
+            }
+        }
+        return name;
+    }
+
+    //根据索引获取名称
+    public static String getNameByPercent(Integer index) {
+        String name = "需较多改进";
+        for (AnswerValueEnum_R o : AnswerValueEnum_R.values()) {
+            String arr[] = o.getIndex().split("~");
+            Integer begin = Integer.parseInt(arr[0]);
+            Integer end = Integer.parseInt(arr[1]);
+            if (begin<index && index <= end) {
                 name = o.getName();
                 break;
             }

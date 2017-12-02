@@ -1,8 +1,6 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.ResultManager;
-import com.free4lab.babycheckup.manager.ResultManager3_6;
+import com.free4lab.babycheckup.manager.*;
 import com.opensymphony.xwork2.ActionContext;
 
 public class HomeAction {
@@ -18,8 +16,8 @@ public class HomeAction {
         numberOfBaby = BabyManager.countBabyByHoid(hoid);
         numberOfResult0_6 = ResultManager.countResultByHosIdAndTestId(hoid,1);
         numberOfResult3_6 = ResultManager3_6.countResultByHosIdAndTestId(hoid,2);
-        numberOfResult0_2 = ResultManager.countResultByHosIdAndTestId(hoid,16);
-        numberOfResult50 = ResultManager3_6.countResultByHosIdAndTestId(hoid,17);
+        numberOfResult0_2 = ResultManager0_2.countResultByHosIdAndTestId(hoid,16);
+        numberOfResult50 = ResultManager50.countResultByHosIdAndTestId(hoid,17);
         return "success";
     }
 
