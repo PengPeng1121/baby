@@ -141,7 +141,7 @@
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-body front-no-padding">
-                评定结果: <s:property value="level"/>
+                评定结果: <s:property value="result50.level"/>
             </div>
         </div>
 
