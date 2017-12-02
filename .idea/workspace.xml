@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b912aad9-1b5a-43a0-b810-1cf8f7069c5a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup.war" afterPath="$PROJECT_DIR$/target/Baby-Checkup.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/HomeAction.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/HomeAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/TestAction.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/action/TestAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/constant/AnswerValueEnum_R.class" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/com/free4lab/babycheckup/constant/AnswerValueEnum_R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction0_2.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/ResultAction0_2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/action/TestAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_R.java" afterPath="$PROJECT_DIR$/src/main/java/com/free4lab/babycheckup/constant/AnswerValueEnum_R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/Baby-Checkup/WEB-INF/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,7 +61,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="209">
               <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
               <folding />
             </state>
@@ -1405,7 +1403,7 @@
       <workItem from="1512116148124" duration="1170000" />
       <workItem from="1512126037506" duration="10105000" />
       <workItem from="1512136311523" duration="818000" />
-      <workItem from="1512141082956" duration="994000" />
+      <workItem from="1512141082956" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;ADD&gt;增加管理页和测量结果显示页">
       <created>1498187544102</created>
@@ -1740,7 +1738,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="575704000" />
+    <option name="totallyTimeSpent" value="576414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1760,7 +1758,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3053173" sideWeight="0.49755502" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3053173" sideWeight="0.49755502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29845625" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2548,7 +2546,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="209">
           <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
           <folding />
         </state>
