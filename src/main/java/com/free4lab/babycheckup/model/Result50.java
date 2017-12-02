@@ -24,6 +24,8 @@ public class Result50 {
     private int a4;
     private int a5;
     private int a6;
+    private Integer talent;
+    private String level;
     private Byte score1;
     private String reason1;
     private Byte score2;
@@ -1769,6 +1771,24 @@ public class Result50 {
 
     public void setDesc50(String desc50) {
         this.desc50 = desc50;
+    }
+    @Basic
+    @Column(name = "talent", nullable = false)
+    public Integer getTalent() {
+        return talent;
+    }
+
+    public void setTalent(Integer talent) {
+        this.talent = talent;
+    }
+    @Basic
+    @Column(name = "level", nullable = false)
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     @Override

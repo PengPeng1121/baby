@@ -378,7 +378,7 @@
                 lineWidth: 0
             },
             yAxis: {
-                max: 20,
+                max: 16,
                 min: 0,
                 gridLineInterpolation: 'polygon',
                 lineWidth: 0,
@@ -403,10 +403,10 @@
                     }
                 }, {
                     color: 'rgb(144, 238, 126)',
-                    value: 20,
+                    value: 16,
                     width: 2,
                     label: {
-                        text: '20',
+                        text: '16',
                         y: 10
                     }
                 }],
@@ -415,7 +415,7 @@
                 shared: true
             },
             series: [{
-                name: '发育商',
+                name: '得分',
                 data: [a1, a2, a3, a4, a5, a6, a7, a8],
                 pointPlacement: 'on'
             }]

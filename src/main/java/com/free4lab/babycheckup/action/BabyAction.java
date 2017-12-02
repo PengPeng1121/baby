@@ -103,6 +103,20 @@ public class BabyAction {
         }
         return "success";
     }
+
+    public String testMonthAge50(){
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        Date d2 = new Date(new java.util.Date().getTime());
+        int monthage = (differentdays(d1,d2))/30;
+        if(monthage <= 84  && 48 <= monthage ){
+            flag = true;
+        }else {
+            flag = false;
+        }
+        return "success";
+    }
+
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;

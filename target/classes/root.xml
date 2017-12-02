@@ -102,6 +102,12 @@
                 <param name="includeProperties">babyid,flag</param>
             </result>
         </action>
+        <!--是不是能进行4-7的学龄测试-->
+        <action name="monthage50" method="testMonthAge50" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
         <action name="findhospital" method="findHospital" class="com.free4lab.babycheckup.action.HospitalAction">
             <result type="json" name="success">
                 <param name="includeProperties">name</param>

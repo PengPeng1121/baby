@@ -1,7 +1,6 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.constant.AnswerValueEnum_R;
-import com.free4lab.babycheckup.constant.AnswerValueEnum_Total;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager0_2;
@@ -10,7 +9,6 @@ import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result0_2;
 import com.opensymphony.xwork2.ActionContext;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 /**
@@ -41,8 +39,8 @@ public class ResultAction0_2 {
         try{
             if (result0_2!=null) {
                 a0 = result0_2.getA1()+ result0_2.getA2()+ result0_2.getA3()+ result0_2.getA4()+ result0_2.getA5()+ result0_2.getA6();
-                p0 = String.valueOf(a0*100/45);
-                r0 = AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p0));
+                p0 = calculateP(a0*100/45);
+                r0 = AnswerValueEnum_R.getName(p0);
             }
         }catch (Exception e){
 
@@ -51,11 +49,18 @@ public class ResultAction0_2 {
         return SUCCESS;
     }
 
-
-
-    public int differentdays(Date d1, Date d2){
-        int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
-        return days;
+    private String calculateP(Integer p){
+        String pStr = "0~50";
+        if(0<p && p<=50){
+            pStr = "0~50";
+        }else if(50<p && p<=75){
+            pStr = "50~75";
+        }else if(75<p && p<=90){
+            pStr = "75~90";
+        }else if(90<p && p<=100){
+            pStr = "90~100";
+        }
+        return pStr;
     }
 
     public Baby getBaby() {

@@ -20,6 +20,8 @@ public class TestAction {
     private List<Question> questionList;
     private List<Result> resultList = new ArrayList<Result>();
     private List<Result3_6> result3_6List = new ArrayList<Result3_6>();
+    private List<Result0_2> result0_2List = new ArrayList<Result0_2>();
+    private List<Result50> result50List = new ArrayList<Result50>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -96,6 +98,8 @@ public class TestAction {
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
         result3_6List = ResultManager3_6.findResultBybid(babyid);
+        result0_2List = ResultManager0_2.findResultBybid(babyid);
+        result50List = ResultManager50.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30;
@@ -141,27 +145,26 @@ public class TestAction {
     }
 
     public String saveResult0_2(){
-        //这是算法  是不是很吊
-
         try {
-            String p1 = String.valueOf(result0_2.getA1()*100/11);
-            String p2 = String.valueOf(result0_2.getA2()*100/8);
-            String p3 = String.valueOf(result0_2.getA3()*100/6);
-            String p4 = String.valueOf(result0_2.getA4()*100/9);
-            String p5 = String.valueOf(result0_2.getA5()*100/6);
-            String p6 = String.valueOf(result0_2.getA6()*100/5);
-            result0_2.setP1(p1);
-            result0_2.setP2(p2);
-            result0_2.setP3(p3);
-            result0_2.setP4(p4);
-            result0_2.setP5(p5);
-            result0_2.setP6(p6);
-            result0_2.setR1(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p1)));
-            result0_2.setR2(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p2)));
-            result0_2.setR3(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p3)));
-            result0_2.setR4(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p4)));
-            result0_2.setR5(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p5)));
-            result0_2.setR6(AnswerValueEnum_R.getNameByPercent(Integer.parseInt(p6)));
+            //这是算法  是不是很吊
+            Integer p1 = result0_2.getA1()*100/11;
+            Integer p2 = result0_2.getA2()*100/8;
+            Integer p3 = result0_2.getA3()*100/6;
+            Integer p4 = result0_2.getA4()*100/9;
+            Integer p5 = result0_2.getA5()*100/6;
+            Integer p6 = result0_2.getA6()*100/5;
+            result0_2.setP1(calculateP(p1));
+            result0_2.setP2(calculateP(p2));
+            result0_2.setP3(calculateP(p3));
+            result0_2.setP4(calculateP(p4));
+            result0_2.setP5(calculateP(p5));
+            result0_2.setP6(calculateP(p6));
+            result0_2.setR1(AnswerValueEnum_R.getNameByPercent(p1));
+            result0_2.setR2(AnswerValueEnum_R.getNameByPercent(p2));
+            result0_2.setR3(AnswerValueEnum_R.getNameByPercent(p3));
+            result0_2.setR4(AnswerValueEnum_R.getNameByPercent(p4));
+            result0_2.setR5(AnswerValueEnum_R.getNameByPercent(p5));
+            result0_2.setR6(AnswerValueEnum_R.getNameByPercent(p6));
 
             result0_2.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             result0_2.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
@@ -177,14 +180,65 @@ public class TestAction {
 
     public String saveResult50(){
         //这是算法  是不是很吊
+        baby = BabyManager.findById(result50.getBabyId());
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        Integer months = (differentdays(birth,today))/30;
+        try {
+            Integer total = result50.getA1()+result50.getA2()+result50.getA3()+result50.getA4()+result50.getA5()+result50.getA6();
+            if(48<=months && months <54){
+                result50.setTalent(Year4Enum.getIndex(total));
+            }else if(54<=months && months <60){
+                result50.setTalent(Year4HalfEnum.getIndex(total));
+            }else if(60<=months && months <66){
+                result50.setTalent(Year5Enum.getIndex(total));
+            }else if(66<=months && months <72){
+                result50.setTalent(Year5HalfEnum.getIndex(total));
+            }else if(72<=months && months <78){
+                result50.setTalent(Year6Enum.getIndex(total));
+            }else if(78<=months && months <84){
+                result50.setTalent(Year6HalfEnum.getIndex(total));
+            }else {
+                result50.setTalent(Year7Enum.getIndex(total));
+            }
+            Integer talent = result50.getTalent();
+            if(talent<70){
+                result50.setLevel("低智能");
+            }else if(talent<85 && 70<=talent){
+                result50.setLevel("中下智能");
+            }else if(talent<115 && 85<=talent){
+                result50.setLevel("中等智能");
+            }else if(talent<130 && 115<=talent){
+                result50.setLevel("中上智能");
+            }else if(talent<=130){
+                result50.setLevel("高智能");
+            }
 
-        result50.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
-        result50.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
-        result50.setTestId(17);
-        result50.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
-        result50.setState("finished");
-        ResultManager50.saveResult(result50);
+            result50.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            result50.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            result50.setTestId(17);
+            result50.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            result50.setState("finished");
+            ResultManager50.saveResult(result50);
+        }catch (Exception e){
+
+        }
         return SUCCESS;
+    }
+
+
+    private String calculateP(Integer p){
+        String pStr = "0~50";
+        if(0<p && p<=50){
+            pStr = "0~50";
+        }else if(50<p && p<=75){
+            pStr = "50~75";
+        }else if(75<p && p<=90){
+            pStr = "75~90";
+        }else if(90<p && p<=100){
+            pStr = "90~100";
+        }
+        return pStr;
     }
 
     public int differentdays(Date d1, Date d2){
@@ -293,4 +347,6 @@ public class TestAction {
     public void setResult50(Result50 result50) {
         this.result50 = result50;
     }
+
+
 }

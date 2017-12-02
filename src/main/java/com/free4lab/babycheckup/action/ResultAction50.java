@@ -45,7 +45,7 @@ public class ResultAction50 {
             }
 
             Calendar calendarTestTime = Calendar.getInstance();
-            calendarTestTime.setTime(new java.util.Date());
+            calendarTestTime.setTime(result50.getTime());//检测时间
 
             Calendar calendarBirthday = Calendar.getInstance();
             if(baby!=null){
@@ -53,6 +53,7 @@ public class ResultAction50 {
                 int[] timeArray = getNatureAge(calendarBirthday,calendarTestTime);
                 exactAge = String.valueOf(timeArray[0])+"岁"+String.valueOf(timeArray[1])+"月"+String.valueOf(timeArray[2])+"日";
             }
+            talent = String.valueOf(result50.getTalent());
         }catch (Exception e){
 
         }
