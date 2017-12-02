@@ -165,175 +165,77 @@
     var a4 = parseInt($('#a4').text());
     var a5 = parseInt($('#a5').text());
     var a6 = parseInt($('#a6').text());
+    var a8 = parseInt($('#a8').text());
 
     // 柱状图数据
 
-    var series = [{
-        name: '',
-        data:[],
-        color:'white',
-        borderWidth: 1,
-        borderColor: 'black'
-    },{
-        name: '',
-        data:[],
-        color:'green',
-        borderWidth: 1,
-        borderColor: 'black'
-    },{
-        name: '',
-        data:[],
-        color:'blue',
-        borderWidth: 1,
-        borderColor: 'black'
-    },{
-        name: '',
-        data:[],
-        color:'orange',
-        borderWidth: 1,
-        borderColor: 'black'
-    },{
-        name: '',
-        data:[],
-        color:'red',
-        borderWidth: 1,
-        borderColor: 'black'
-    },{
-        name: '',
-        data:[],
-        color:'white',
-        borderWidth: 1,
-        borderColor: 'black'
-    }]
-    var pArr = [];
-    var p1 = $('#p1').text();
-    p1_1 = parseInt(p1.split('~')[0]);
-    p1_2 = p1.split('~')[1];
-
-    var p2 = $('#p2').text();
-    p2_1 = parseInt(p2.split('~')[0]);
-    p2_2 = p2.split('~')[1];
-
-
-
-    var p3 = $('#p3').text();
-    p3_1 = parseInt(p3.split('~')[0]);
-    p3_2 = p3.split('~')[1];
-
-
-    var p4 = $('#p4').text();
-    p4_1 = parseInt(p4.split('~')[0]);
-    p4_2 = p4.split('~')[1];
-
-
-
-    var p5 = $('#p5').text();
-    p5_1 = parseInt(p5.split('~')[0]);
-    p5_2 = p5.split('~')[1];
-
-
-    var p6 = $('#p6').text();
-    p6_1 = parseInt(p6.split('~')[0]);
-    p6_2 = p6.split('~')[1];
-
-
-    var p7 = $('#p7').text();
-    p7_1 = parseInt(p7.split('~')[0]);
-    p7_2 = p7.split('~')[1];
-
-
-    var p8 = $('#p8').text();
-    p8_1 = parseInt(p8.split('~')[0]);
-    p8_2 = p8.split('~')[1];
-
-    var p0 = $('#p0').text();
-    p0_1 = parseInt(p0.split('~')[0]);
-    p0_2 = p0.split('~')[1];
-
-
-    pArr.push(p1_1);
-    pArr.push(p2_1);
-    pArr.push(p3_1);
-    pArr.push(p4_1);
-    pArr.push(p5_1);
-    pArr.push(p6_1);
-    pArr.push(p7_1);
-    pArr.push(p8_1);
-    pArr.push(p0_1);
-
-
-    // 填充series
-    for (var i = 0, len = pArr.length; i < len; i++) {
-        switch(pArr[i])
-        {
-            case 0:
-                series[0].data.push(50);
-                series[1].data.push(0);
-                series[2].data.push(0);
-                series[3].data.push(0);
-                series[4].data.push(50);
-                series[5].data.push(0);
-                break;
-            case 50:
-                series[0].data.push(25);
-                series[1].data.push(0);
-                series[2].data.push(0);
-                series[3].data.push(25);
-                series[4].data.push(0);
-                series[5].data.push(50);
-                break;
-            case 75:
-                series[0].data.push(10);
-                series[1].data.push(0);
-                series[2].data.push(15);
-                series[3].data.push(0);
-                series[4].data.push(0);
-                series[5].data.push(75);
-                break;
-            case 90:
-                series[0].data.push(0);
-                series[1].data.push(10);
-                series[2].data.push(0);
-                series[3].data.push(0);
-                series[4].data.push(0);
-                series[5].data.push(90);
-                break;
-            default:
-                console.log('');
-        }
-    }
+    
 
 
     $(function () {
         $('#column').highcharts({
             chart: {
-                type: 'column'
+                type: 'bar'
             },
             title: {
                 text: ''
             },
+            subtitle: {
+                text: ''
+            },
             xAxis: {
-                categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境', '总和']
+                categories: ['能力商'],
+                title: {
+                    text: null
+                }
             },
             yAxis: {
                 min: 0,
+                max: 150,
                 title: {
-                    text: '评分结果'
-                }
+                    text: null,
+                    align: 'high'
+                },
+                tickPositions: [0, 70, 85, 115, 130],
+                labels: {
+                },
+                plotLines: [{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 70
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 85
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 115
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 130
+                }]
             },
             tooltip: {
-                pointFormat: '',
-                shared: true
             },
             plotOptions: {
-                column: {
-                    stacking: 'percent'
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        allowOverlap: true
+                    }
                 }
             },
             legend: {
-                enabled:false
+                enabled: false
             },
-            series: series
+            credits: {
+                enabled: false
+            },
+            series: [{
+                data: [a8]
+            }]
         });
 
 
@@ -392,7 +294,7 @@
                 shared: true
             },
             series: [{
-                name: '发育商',
+                name: '得分',
                 data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
