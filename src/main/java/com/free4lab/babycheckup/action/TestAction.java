@@ -210,7 +210,7 @@ public class TestAction {
                 result50.setLevel("中等智能");
             }else if(talent<130 && 115<=talent){
                 result50.setLevel("中上智能");
-            }else if(talent<=130){
+            }else if(130<=talent){
                 result50.setLevel("高智能");
             }
 

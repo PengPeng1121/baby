@@ -104,6 +104,66 @@
                             </td>
                         </tr>
                     </s:iterator>
+
+
+                    <s:iterator value="result0_2List" id="re0_2">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           育儿技能评估（0-2岁)
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re0_2.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">被访者</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:property value="#re0_2.answerRelation" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresult3_6?id=<s:property value="#re0_2.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+                    <s:iterator value="result50List" id="re50">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           学前50项智力筛查
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re50.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">被访者</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:property value="#re50.answerRelation" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresult3_6?id=<s:property value="#re50.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
                     </tbody>
                 </table>
             </div>
