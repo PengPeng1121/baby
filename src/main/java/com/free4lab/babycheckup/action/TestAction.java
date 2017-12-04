@@ -340,12 +340,30 @@ public class TestAction {
         this.result0_2 = result0_2;
     }
 
+    public List<Result0_2> getResult0_2List() {
+        return result0_2List;
+    }
+
+    public void setResult0_2List(List<Result0_2> result0_2List) {
+        this.result0_2List = result0_2List;
+    }
+
+
+
     public Result50 getResult50() {
         return result50;
     }
 
     public void setResult50(Result50 result50) {
         this.result50 = result50;
+    }
+
+    public List<Result50> getResult50List() {
+        return result50List;
+    }
+
+    public void setResult50List(List<Result50> result50List) {
+        this.result50List = result50List;
     }
 
 

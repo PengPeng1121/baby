@@ -132,7 +132,7 @@
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider"></div>
+                        <div id="spider" style="height: 200px;"></div>
                     </div>
                 </td>
             </tr>
@@ -140,9 +140,7 @@
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-body front-no-padding">
-                评定结果: <s:property value="result50.level"/>
-            </div>
+            <div class="panel-heading">评定结果: <s:property value="result50.level"/></div>
         </div>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
@@ -165,12 +163,12 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
-    var a1 = parseInt($('#a1').text());
-    var a2 = parseInt($('#a2').text());
-    var a3 = parseInt($('#a3').text());
-    var a4 = parseInt($('#a4').text());
-    var a5 = parseInt($('#a5').text());
-    var a6 = parseInt($('#a6').text());
+    var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
+    var a2 = +(parseInt($('#a2').text()) / 13).toFixed(2);
+    var a3 = +(parseInt($('#a3').text()) / 4).toFixed(2);
+    var a4 = +(parseInt($('#a4').text()) / 6).toFixed(2);
+    var a5 = +(parseInt($('#a5').text()) / 9).toFixed(2);
+    var a6 = +(parseInt($('#a6').text()) / 5).toFixed(2);
     var a8 = parseInt($('#a8').text());
 
     // 柱状图数据
@@ -263,7 +261,7 @@
                 lineWidth: 0
             },
             yAxis: {
-                max: 20,
+                max:  1,
                 min: 0,
                 gridLineInterpolation: 'polygon',
                 lineWidth: 0,
@@ -271,30 +269,38 @@
                     enabled: false
                 },
                 plotLines: [{
-                    color: 'rgb(144, 238, 126)',
-                    value: 0,
+                    color: 'red',
+                    value: 0.5,
                     width: 2,
                     label: {
-                        text: '0',
+                        text: '50%',
                         y: 30
                     }
                 }, {
-                    color: 'rgb(144, 238, 126)',
-                    value: 6,
+                    color: 'orange',
+                    value: 0.75,
                     width: 2,
                     label: {
-                        text: '10',
+                        text: '75%',
                         y: 10
                     }
                 }, {
-                    color: 'rgb(144, 238, 126)',
-                    value: 13,
+                    color: 'blue',
+                    value: 0.9,
                     width: 2,
                     label: {
-                        text: '20',
+                        text: '90%',
                         y: 10
                     }
-                }],
+                },{
+                    color: 'green',
+                    value: 1,
+                    width: 2,
+                    label: {
+                        text: '100%',
+                        y: 10
+                    }
+                }]
             },
             tooltip: {
                 shared: true
