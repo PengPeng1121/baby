@@ -127,12 +127,12 @@
             <tr>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="column"></div>
+                        <div id="column" style="height: 200px;"></div>
                     </div>
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider" style="height: 200px;"></div>
+                        <div id="spider"></div>
                     </div>
                 </td>
             </tr>
@@ -249,7 +249,7 @@
                 type: 'area'
             },
             title: {
-                text: '小儿测评结果网状图(3-6)',
+                text: '学前50项智力测试结果网状图',
                 x: -80
             },
             pane: {
