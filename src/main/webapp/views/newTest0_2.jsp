@@ -130,8 +130,8 @@
                                             <s:property value="#question.description"/>
                                         </td>
                                         <td>
-                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />A<br>
-                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />B<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />A<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />B<br>
                                         </td>
                                         <td>
                                             <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</ a>
