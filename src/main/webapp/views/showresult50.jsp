@@ -261,7 +261,7 @@
                 lineWidth: 0
             },
             yAxis: {
-                max: 20,
+                max:  1,
                 min: 0,
                 gridLineInterpolation: 'polygon',
                 lineWidth: 0,
