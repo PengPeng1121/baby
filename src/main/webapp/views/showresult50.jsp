@@ -127,7 +127,7 @@
             <tr>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="column" style="height: 200px;"></div>
+                        <div id="column"></div>
                     </div>
                 </td>
                 <td style="padding: 0px;width: 50%;">
