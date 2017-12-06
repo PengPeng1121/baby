@@ -155,7 +155,7 @@
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
