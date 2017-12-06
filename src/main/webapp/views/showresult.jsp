@@ -181,6 +181,9 @@
             chart: {
                 type: 'column'
             },
+            credits: {
+                enabled: false
+            },
             title: {
                 text: '小儿测评结果柱状图'
             },
@@ -249,6 +252,9 @@
             chart: {
                 polar: true,
                 type: 'area'
+            },
+            credits: {
+                enabled: false
             },
             title: {
                 text: '小儿测评结果网状图',

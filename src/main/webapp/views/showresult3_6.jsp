@@ -337,6 +337,9 @@
             title: {
                 text: ''
             },
+            credits: {
+                enabled: false
+            },
             xAxis: {
                 categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境', '总和']
             },
@@ -365,6 +368,9 @@
             chart: {
                 polar: true,
                 type: 'area'
+            },
+            credits: {
+                enabled: false
             },
             title: {
                 text: '育儿测评结果网状图(3-6)',

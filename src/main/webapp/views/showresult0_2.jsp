@@ -310,6 +310,9 @@
             chart: {
                 type: 'column'
             },
+            credits: {
+                enabled: false
+            },
             title: {
                 text: ''
             },
@@ -341,6 +344,9 @@
             chart: {
                 polar: true,
                 type: 'area'
+            },
+            credits: {
+                enabled: false
             },
             title: {
                 text: '育儿测评结果网状图(0-2)',

@@ -181,6 +181,9 @@
             chart: {
                 type: 'bar'
             },
+            credits: {
+                enabled: false
+            },
             title: {
                 text: ''
             },
@@ -247,6 +250,9 @@
             chart: {
                 polar: true,
                 type: 'area'
+            },
+            credits: {
+                enabled: false
             },
             title: {
                 text: '学前50项智力测试结果网状图',
