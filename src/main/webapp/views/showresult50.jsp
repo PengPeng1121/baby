@@ -132,7 +132,7 @@
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider" style="height: 200px;"></div>
+                        <div id="spider"></div>
                     </div>
                 </td>
             </tr>
@@ -155,7 +155,7 @@
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
@@ -180,6 +180,9 @@
         $('#column').highcharts({
             chart: {
                 type: 'bar'
+            },
+            credits: {
+                enabled: false
             },
             title: {
                 text: ''
@@ -248,8 +251,11 @@
                 polar: true,
                 type: 'area'
             },
+            credits: {
+                enabled: false
+            },
             title: {
-                text: '小儿测评结果网状图(3-6)',
+                text: '学前50项智力测试结果网状图',
                 x: -80
             },
             pane: {

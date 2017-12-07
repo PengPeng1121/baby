@@ -117,16 +117,18 @@
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">育儿技能评估（0-2岁)</p>
-                                <div class="as-desc">
+                                <!-- <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult0_2"/></label>
                                         <label style="font-weight:normal;">个</label>
                                     </div>
+                                </div> -->
+                                <div class="as-desc">
+                                    正式上线时间：2018年1月
                                 </div>
-                                <div class="text-right">
-                                    <%--<a href="#"><span class="glyphicon glyphicon-plus"></span>新建</a>--%>
+                                <!-- <div class="text-right">
                                     <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                </div>
+                                </div> -->
                                 
                             </div>
                         </div>
@@ -144,16 +146,76 @@
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">学前50项智力筛查</p>
-                                <div class="as-desc">
+                                <!-- <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult50"/></label>
                                         <label style="font-weight:normal;">个</label>
                                     </div>
+                                </div> -->
+                                <div class="as-desc">
+                                    正式上线时间：2018年2月
                                 </div>
-                                <div class="text-right">
-                                    <%--<a href="#"><span class="glyphicon glyphicon-plus"></span>新建</a>--%>
+                                <!-- <div class="text-right">
                                     <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                </div> -->
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 婴幼儿认知测定量表 -->
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">婴幼儿认知测定量表</p>
+                                <!-- <div class="as-desc">
+                                    <div style="display: inline-block;">
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult50"/></label>
+                                        <label style="font-weight:normal;">个</label>
+                                    </div>
+                                </div> -->
+                                <div class="as-desc">
+                                    正在开发中…
                                 </div>
+                                <!-- <div class="text-right">
+                                    <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                </div> -->
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 婴儿-初中学生生活能力量表 -->
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">婴儿-初中学生生活能力量表</p>
+                                <!-- <div class="as-desc">
+                                    <div style="display: inline-block;">
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult50"/></label>
+                                        <label style="font-weight:normal;">个</label>
+                                    </div>
+                                </div> -->
+                                <div class="as-desc">
+                                    正在开发中…
+                                </div>
+                                <!-- <div class="text-right">
+                                    <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                </div> -->
                                
                             </div>
                         </div>
@@ -205,7 +267,7 @@
         </div>
     </div>
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
     </footer>
 </div>
 <s:include value="statics/tail.html"/>

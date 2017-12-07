@@ -170,7 +170,7 @@
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
@@ -337,6 +337,9 @@
             title: {
                 text: ''
             },
+            credits: {
+                enabled: false
+            },
             xAxis: {
                 categories: ['育儿观念', '关注和接纳', '规矩或自我调控能力', '养育关系和沟通', '学习环境', '语言环境', '玩耍和娱乐', '安全和居住环境', '总和']
             },
@@ -366,8 +369,11 @@
                 polar: true,
                 type: 'area'
             },
+            credits: {
+                enabled: false
+            },
             title: {
-                text: '小儿测评结果网状图(3-6)',
+                text: '育儿测评结果网状图(3-6)',
                 x: -80
             },
             pane: {
