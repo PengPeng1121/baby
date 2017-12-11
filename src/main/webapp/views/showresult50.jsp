@@ -232,6 +232,9 @@
                         enabled: true,
                         allowOverlap: true
                     }
+                },
+                series: {
+                    pointPadding:0.4
                 }
             },
             legend: {
