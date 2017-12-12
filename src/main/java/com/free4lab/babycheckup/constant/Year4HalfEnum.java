@@ -24,18 +24,18 @@ public enum Year4HalfEnum {
     SCORE_18(18,68),
     SCORE_19(19,70),
     SCORE_20(20,72),
-    SCORE_21(21,37),//
-    SCORE_22(22,32),//
-    SCORE_23(23,35),//
-    SCORE_24(24,37),//
-    SCORE_25(25,32),//
-    SCORE_26(26,35),//
-    SCORE_27(27,37),//
-    SCORE_28(28,32),//
+    SCORE_21(21,74),
+    SCORE_22(22,77),
+    SCORE_23(23,79),
+    SCORE_24(24,81),
+    SCORE_25(25,83),
+    SCORE_26(26,86),
+    SCORE_27(27,88),
+    SCORE_28(28,90),
     SCORE_29(29,93),
     SCORE_30(30,95),
     SCORE_31(31,97),
-    SCORE_32(32,35),//
+    SCORE_32(32,99),
     SCORE_33(33,102),
     SCORE_34(34,104),
     SCORE_35(35,106),

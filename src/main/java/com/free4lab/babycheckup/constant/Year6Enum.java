@@ -24,18 +24,18 @@ public enum Year6Enum {
     SCORE_18(18,27),
     SCORE_19(19,30),
     SCORE_20(20,33),
-    SCORE_21(21,37),//
-    SCORE_22(22,32),//
-    SCORE_23(23,35),//
-    SCORE_24(24,37),//
-    SCORE_25(25,32),//
-    SCORE_26(26,35),//
-    SCORE_27(27,37),//
-    SCORE_28(28,32),//
+    SCORE_21(21,36),
+    SCORE_22(22,40),
+    SCORE_23(23,43),
+    SCORE_24(24,46),
+    SCORE_25(25,49),
+    SCORE_26(26,52),
+    SCORE_27(27,55),
+    SCORE_28(28,58),
     SCORE_29(29,61),
     SCORE_30(30,65),
     SCORE_31(31,67),
-    SCORE_32(32,35),//
+    SCORE_32(32,70),
     SCORE_33(33,73),
     SCORE_34(34,76),
     SCORE_35(35,80),
