@@ -211,15 +211,15 @@
                     width: 2,
                     value: 70
                 },{
-                    color: '#FF0000',
+                    color: 'orange',
                     width: 2,
                     value: 85
                 },{
-                    color: '#FF0000',
+                    color: 'blue',
                     width: 2,
                     value: 115
                 },{
-                    color: '#FF0000',
+                    color: 'green',
                     width: 2,
                     value: 130
                 }]
@@ -232,6 +232,9 @@
                         enabled: true,
                         allowOverlap: true
                     }
+                },
+                series: {
+                    pointPadding:0.4
                 }
             },
             legend: {
