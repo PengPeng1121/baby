@@ -105,13 +105,13 @@
                                 <td style="width:60%">
                                     <s:property value="#question.description"/>
                                 </td>
-                                <td style="width:10%">
-                                    <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />
+                                <td>
+                                    <input type="radio" style="width: 50px;" name="<s:property value="#question.ordinal"/>" value="1" />
                                 </td>
-                                <td style="width:10%">
-                                    <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />
+                                <td>
+                                    <input type="radio" style="width: 50px;" name="<s:property value="#question.ordinal"/>" value="0"  />
                                 </td>
-                                <td style="width:20%">
+                                <td>
                                     <input  id="<s:property value="#question.ordinal"/>"/>
                                 </td>
                             </tr>
@@ -120,7 +120,7 @@
                         
                     </tbody>
                 </table>
-                <p>
+                <p style="text-indent: 2em">
                     公鸡和免子、鸭子、松鼠住在一起，有一天早上，兔子来找公鸡说:“我要上街买萝卜,借一只篮子给我用吧”! 公鸡说:“我自己要用，不借”。
                     中午，鸭子来找公鸡说:“公鸡哥哥，你嘴巴尖尖的，帮我解一下衣服上的扣子吧!”公鸡说:“我要吃饭了，没有空”。
                     到了晚上，松鼠米找公鸡说:“我明天早上要上山砍柴，你早一些叫我起床吧”。公鸡说:“我没有力气，不高兴叫”。
