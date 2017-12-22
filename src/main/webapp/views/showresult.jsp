@@ -231,13 +231,13 @@
             },
             series: [{
                 name: '发育商',
-                color: 'rgb(169, 255, 150)',
+                color: '#004e90',
                 data: [a1, a2, a3, a4, a5],
                 pointPadding: 0.3,
                 pointPlacement: -0.2
             }, {
                 name: '智龄',
-                color: 'rgba(0,0,0)',
+                color: '#ff9800',
                 data: [b1, b2, b3, b4, b5],
                 tooltip: {
                     valuePrefix: '$',
