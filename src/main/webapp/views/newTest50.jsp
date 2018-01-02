@@ -21,6 +21,12 @@
         .noanswer{
             background-color: #ffeb3b;
         }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -68,20 +74,20 @@
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>No.</td>
-                            <td>项目</td>
-                            <td>测试题目</td>
-                            <td>符合</td>
-                            <td>不符合</td>
-                            <td>儿童回答答案</td>
+                            <td style="width:30px">No.</td>
+                            <td style="width:30px">项目</td>
+                            <td style="width:300px">测试题目</td>
+                            <td style="width:30px">符合</td>
+                            <td style="width:30px">不符</td>
+                            <td style="width:100px">儿童回答答案</td>
                         </tr>
                         <s:iterator value="questionList" id="question">
                             <tr class="question">
-                                <td style="width:5%">
+                                <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
-                                <td style="width:5%">
+                                <td style="width:30px">
                                     <s:if test="#question.type == 31">
                                         SC
                                     </s:if>
@@ -102,16 +108,21 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:60%">
+                                <td style="width:300px">
                                     <s:property value="#question.description"/>
                                 </td>
-                                <td>
-                                    <input type="radio" style="width: 50px;" name="<s:property value="#question.ordinal"/>" value="1" />
+
+                                <td style="width:30px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide" style="top: 4px; color: green;">
+                                        A
+                                    </span>
                                 </td>
-                                <td>
-                                    <input type="radio" style="width: 50px;" name="<s:property value="#question.ordinal"/>" value="0"  />
+                                <td style="width:30px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide" style="top: 4px; color: red;">
+                                        B
+                                    </span>
                                 </td>
-                                <td>
+                                <td style="width:100px">
                                     <input  id="<s:property value="#question.ordinal"/>"/>
                                 </td>
                             </tr>
@@ -167,12 +178,12 @@
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
-            temp = $("input:radio[name="+ i +"]:checked").val();
-            if (!temp) {
+            temp = $.trim($('.' + i + '.show').text());
+            if (temp != 'A' && temp != 'B') {
                 // Todo: 标注所有没有答的题
                 for (var j = i; j <= questionSum; j++) {
-                    if (!$("input:radio[name="+ j +"]:checked").val()) {
-                        $("input:radio[name="+ j +"]").parents('tr').addClass('noanswer');
+                    if (!$('.' + j + '.show').text()) {
+                        $('.' + j).parents('tr').addClass('noanswer');
                     }
                 }
                 $.tipModal('alert', 'warning', '有题目未完成！');
@@ -183,11 +194,15 @@
 
 
         for (var i = 1; i <= questionSum; i++) {
-            temp = $("input:radio[name="+ i +"]:checked").val();
+            temp = $.trim($('.' + i + '.show').text());
             if(temp==""||temp==undefined){
                 continue;
             }
-            temp = parseInt(temp);
+            if (temp == 'A') {
+                temp = 1;
+            } else {
+                temp = 0;
+            }
 
             if([1,2,3,4,5,9,12,15,18,26,31,36,39].indexOf(i)!= -1){
                 questionScore[1] += temp;
@@ -288,6 +303,11 @@
                 }
             });
         }
+    }
+    function select(target) {
+        $(target).parent().find('.a').addClass('hide').removeClass('show');
+        $(target).parent().find('.b').addClass('hide').removeClass('show');
+        $(target).find('span').removeClass('hide').addClass('show');
     }
 
 </script>

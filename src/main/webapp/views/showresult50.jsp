@@ -161,6 +161,8 @@
 <s:include value="/statics/tail.html"/>
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
+<script src="statics/highcharts/solid-gauge.js"></script>
+
 <script type="text/javascript">
 
     var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
@@ -177,76 +179,174 @@
 
 
     $(function () {
+        
+
+
+        // $('#column').highcharts({
+        //     chart: {
+        //         type: 'bar'
+        //     },
+        //     credits: {
+        //         enabled: false
+        //     },
+        //     title: {
+        //         text: ''
+        //     },
+        //     subtitle: {
+        //         text: ''
+        //     },
+        //     xAxis: {
+        //         categories: ['能力商'],
+        //         title: {
+        //             text: null
+        //         }
+        //     },
+        //     yAxis: {
+        //         min: 0,
+        //         max: 150,
+        //         title: {
+        //             text: null,
+        //             align: 'high'
+        //         },
+        //         tickPositions: [0, 70, 85, 115, 130],
+        //         labels: {
+        //         },
+        //         plotLines: [{
+        //             color: '#FF0000',
+        //             width: 2,
+        //             value: 70
+        //         },{
+        //             color: 'orange',
+        //             width: 2,
+        //             value: 85
+        //         },{
+        //             color: 'blue',
+        //             width: 2,
+        //             value: 115
+        //         },{
+        //             color: 'green',
+        //             width: 2,
+        //             value: 130
+        //         }]
+        //     },
+        //     tooltip: {
+        //     },
+        //     plotOptions: {
+        //         bar: {
+        //             dataLabels: {
+        //                 enabled: true,
+        //                 allowOverlap: true
+        //             }
+        //         },
+        //         series: {
+        //             pointPadding:0.4
+        //         }
+        //     },
+        //     legend: {
+        //         enabled: false
+        //     },
+        //     credits: {
+        //         enabled: false
+        //     },
+        //     series: [{
+        //         data: [a8]
+        //     }]
+        // });
+        
         $('#column').highcharts({
             chart: {
-                type: 'bar'
+                type: 'solidgauge'
             },
-            credits: {
-                enabled: false
-            },
-            title: {
-                text: ''
-            },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                categories: ['能力商'],
-                title: {
-                    text: null
+            title: null,
+            pane: {
+                center: ['50%', '80%'],
+                size: '100%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor:'#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
                 }
+            },
+            tooltip: {
+                enabled: false
             },
             yAxis: {
                 min: 0,
                 max: 150,
+                stops: [
+                    [0.47, 'red'], // red
+                    [0.57, 'orange'], // orange
+                    [0.77, 'blue'], // blue
+                    [0.87, 'green'] // green
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                tickPixelInterval: 150,
+                tickWidth: 1,
+                tickLength:50,
+                tickColor: '#ddd',
+                tickPositions: [0,70,85,115,130,150],
                 title: {
-                    text: null,
-                    align: 'high'
+                    y: -70
                 },
-                tickPositions: [0, 70, 85, 115, 130],
                 labels: {
-                },
-                plotLines: [{
-                    color: '#FF0000',
-                    width: 2,
-                    value: 70
-                },{
-                    color: 'orange',
-                    width: 2,
-                    value: 85
-                },{
-                    color: 'blue',
-                    width: 2,
-                    value: 115
-                },{
-                    color: 'green',
-                    width: 2,
-                    value: 130
-                }]
-            },
-            tooltip: {
-            },
-            plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true,
-                        allowOverlap: true
+                    y: 10,
+                    useHTML: true,
+                    formatter: function () {
+                        if(this.value == 70){
+                            return '<span style="color:red;position: absolute;top: -40px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 85){
+                            return '<span style="color:orange;position: absolute;top: -40px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 115){
+                            return '<span style="color:blue;position: absolute;top: -45px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 130){
+                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 0){
+                            return '<span style="color:#ddd">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 150){
+                            return '<span style="color:#ddd">' +
+                                this.value + '</span>';
+                        }
                     }
-                },
-                series: {
-                    pointPadding:0.4
                 }
             },
-            legend: {
-                enabled: false
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
             },
             credits: {
                 enabled: false
             },
             series: [{
-                data: [a8]
+                name: '能力商',
+                data: [a8],
+                dataLabels: {
+                    format: '<div style="text-align:center;z-index:100;background-color:#fff"><span style="font-size:25px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+                    '<span style="font-size:12px;color:silver">能力商</span></div>'
+                }
             }]
         });
+
+        
 
 
         $('#spider').highcharts({
@@ -320,6 +420,8 @@
                 pointPlacement: 'on'
             }]
         });
+
+
     });
 
 </script>
