@@ -113,13 +113,11 @@
                                 </td>
 
                                 <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide" style="top: 4px; color: green;">
-                                        A
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
                                     </span>
                                 </td>
                                 <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide" style="top: 4px; color: red;">
-                                        B
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -178,11 +176,12 @@
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
-            temp = $.trim($('.' + i + '.show').text());
-            if (temp != 'A' && temp != 'B') {
+            temp = $('.' + i + '.show').attr('class');
+            if (!temp) {
                 // Todo: 标注所有没有答的题
                 for (var j = i; j <= questionSum; j++) {
-                    if (!$('.' + j + '.show').text()) {
+                    t = $('.' + j + '.show').attr('class');
+                    if (!t) {
                         $('.' + j).parents('tr').addClass('noanswer');
                     }
                 }
@@ -194,11 +193,11 @@
 
 
         for (var i = 1; i <= questionSum; i++) {
-            temp = $.trim($('.' + i + '.show').text());
+            temp = $('.' + i + '.show').attr('class');
             if(temp==""||temp==undefined){
                 continue;
             }
-            if (temp == 'A') {
+            if (temp.indexOf('a') != -1) {
                 temp = 1;
             } else {
                 temp = 0;

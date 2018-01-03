@@ -124,7 +124,7 @@
                                     </div>
                                 </div> -->
                                 <div class="as-desc">
-                                    正式上线时间：2018年1月
+                                    正式上线时间：2018年2月
                                 </div>
                                 <!-- <div class="text-right">
                                     <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
@@ -146,18 +146,15 @@
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">学前50项智力筛查</p>
-                                <!-- <div class="as-desc">
+                                <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult50"/></label>
                                         <label style="font-weight:normal;">个</label>
                                     </div>
-                                </div> -->
-                                <div class="as-desc">
-                                    正式上线时间：2018年2月
                                 </div>
-                                <!-- <div class="text-right">
+                                <div class="text-right">
                                     <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                </div> -->
+                                </div>
                                
                             </div>
                         </div>
