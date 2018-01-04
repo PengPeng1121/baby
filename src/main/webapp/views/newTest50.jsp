@@ -113,11 +113,11 @@
                                 </td>
 
                                 <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align: center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
