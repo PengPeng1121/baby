@@ -24,6 +24,11 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
                     style="color: white;font-size: small">开始学前50项<br/>智力筛查</h4></a>
         </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start132()"><h4
+                    style="color: white;font-size: small">婴儿-初中学生<br/>生活能力量表</h4></a>
+        </div>
     </div>
 </div>
 <script>
@@ -102,4 +107,25 @@
         })
 
     }
+
+
+    function start132() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage132",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtest132?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围内！'});
+                }
+            }
+
+        })
+
+    }
+
 </script>
