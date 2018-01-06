@@ -83,7 +83,7 @@
                         <td id="a5"><s:property value="result132.a5"/></td>
                         <td id="a6"><s:property value="result132.a6"/></td>
                         <td id="a0"><s:property value="a0"/></td>
-                        <td id="a8"><s:property value="talent"/></td>
+                        <td id="a8"><s:property value="normal"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -123,7 +123,7 @@
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果柱状图</td>
+                <td style="text-align:center;">评定结果扇形图</td>
                 <td style="text-align:center;">评定结果纬度图</td>
             </tr>
             <tr>
