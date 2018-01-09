@@ -12,12 +12,7 @@
         p{
             margin:0;
         }
-        table > tbody > tr > td{
-            width:18%;
-        }
-        table > tbody > tr > td:first-child{
-            width: 10%;
-        }
+        
         .noanswer{
             background-color: #ffeb3b;
         }
@@ -68,20 +63,20 @@
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>No.</td>
-                            <td>项目</td>
-                            <td>测试题目</td>
-                            <td>符合</td>
-                            <td>不符合</td>
-                            <td>儿童回答答案</td>
+                            <td style="width:30px">No.</td>
+                            <td style="width:30px">项目</td>
+                            <td style="width:400px">测试题目</td>
+                            <td style="width:50px">符合</td>
+                            <td style="width:50px">不符合</td>
+                            <td style="width:100px">儿童回答答案</td>
                         </tr>
                         <tr>
-                            <td class="month6">
+                            <td id="month6" colspan="6" style="background-color: #ddd;">
                                6月-1岁11月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st < 20"> 
+                            <s:if test="#question.ordinal < 20"> 
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -108,16 +103,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -128,12 +123,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month24">
+                            <td id="month24" colspan="6" style="background-color: #ddd;">
                                2岁-3岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 19 && #st < 42"> 
+                            <s:if test="#question.ordinal > 19 && #question.ordinal < 42"> 
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -160,16 +155,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -180,12 +175,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month42">
+                            <td id="month42" colspan="6" style="background-color: #ddd;">
                                3岁6月-4岁11月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 41 && #st < 64"> 
+                            <s:if test="#question.ordinal > 41 && #question.ordinal < 64"> 
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -212,16 +207,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -232,12 +227,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month60">
+                            <td id="month60" colspan="6" style="background-color: #ddd;">
                                5岁-6岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 63 && #st < 81"> 
+                            <s:if test="#question.ordinal > 63 && #question.ordinal < 81"> 
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -264,16 +259,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -284,12 +279,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month78">
+                            <td id="month78" colspan="6" style="background-color: #ddd;">
                                6岁6月-8岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 80 && #st < 97"> 
+                            <s:if test="#question.ordinal > 80 && #question.ordinal < 97"> 
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -316,16 +311,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -336,12 +331,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month98">
+                            <td id="month98" colspan="6" style="background-color: #ddd;">
                                8岁6月-10岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 96 && #st < 114">  
+                            <s:if test="#question.ordinal > 96 && #question.ordinal < 114">  
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -368,16 +363,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -388,12 +383,12 @@
                             
                         </s:iterator>
                         <tr>
-                            <td class="month126">
-                               10岁6月- 
+                            <td id="month126" colspan="6" style="background-color: #ddd;">
+                               10岁6月- 17岁
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
-                            <s:if test="#st > 113 && #st < 133">  
+                            <s:if test="#question.ordinal > 113 && #question.ordinal < 133">  
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
@@ -420,16 +415,16 @@
                                     </s:if>
                                 </td>
 
-                                <td style="width:300px">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
 
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                     </span>
                                 </td>
-                                <td style="width:30px" onclick="select(this)">
-                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red;">
+                                <td style="width:50px" onclick="select(this)">
+                                    <span class="<s:property value="#question.ordinal"/> b hide  glyphicon glyphicon-remove" style="top: 4px; color: red; text-align:center">
                                     </span>
                                 </td>
                                 <td style="width:100px">
@@ -481,11 +476,13 @@
         var  temp;
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
-        for(var i = 1; i <= questionSum; i++) {
+        // 获取当前答题范围
+        var range = getRange();
+        for(var i = range.start; i <= range.end; i++) {
             temp = $('.' + i + '.show').attr('class');
             if (!temp) {
                 // Todo: 标注所有没有答的题
-                for (var j = i; j <= questionSum; j++) {
+                for (var j = i; j <= range.end; j++) {
                     t = $('.' + j + '.show').attr('class');
                     if (!t) {
                         $('.' + j).parents('tr').addClass('noanswer');
@@ -498,7 +495,7 @@
         }
 
 
-        for (var i = 1; i <= questionSum; i++) {
+        for (var i = range.start; i <= range.end; i++) {
             temp = $('.' + i + '.show').attr('class');
             if(temp==""||temp==undefined){
                 continue;
@@ -537,6 +534,36 @@
         return true;
     }
 
+    function getRange() {
+        var days = parseInt($('#days').val()),
+            range = {
+                start: 0,
+                end: 0
+            };
+        if (days< 24) {
+            range.start = 1;
+            range.end = 19;
+        } else if (days < 42) {
+            range.start = 20;
+            range.end = 41;
+        } else if (days < 60) {
+            range.start = 42;
+            range.end = 63;
+        } else if (days < 78) {
+            range.start = 64;
+            range.end = 80;
+        } else if (days < 102) {
+            range.start = 81;
+            range.end = 96;
+        } else if (days < 126) {
+            range.start = 97;
+            range.end = 113;
+        } else {
+            range.start = 114;
+            range.end = 132;
+        }
+        return range;
+    }
     function preview() {
         if(prepare()) {
             $.frontModal({size: 'modal-md', title: '预览', href: 'modals/model_preview_result132.jsp'});
@@ -557,23 +584,46 @@
         });
 
         //定位到当前月龄对应的答题区域
-        var days = $('#days').val();
-
+        var days = parseInt($('#days').val());
+        var top = 0;
         if (days< 24) {
-            $('#month6').focus();
-        } else if (23 < days < 42) {
-            $('#month24').focus();
-        } else if (41 < days < 60) {
-            $('#month42').focus();
-        } else if (59 < days < 78) {
-            $('#month60').focus();
-        } else if (77 < days < 102) {
-            $('#month78').focus();
-        } else if (101 < days < 126) {
-            $('#month102').focus();
+            top = $('#month6').offset().top;
+            $('#month6').css({
+                "background-color": "red"
+            });
+        } else if (days < 42) {
+            top = $('#month24').offset().top;
+            $('#month24').css({
+                "background-color": "red"
+            });
+        } else if (days < 60) {
+            top = $('#month42').offset().top;
+            $('#month42').css({
+                "background-color": "red"
+            });
+        } else if (days < 78) {
+            top = $('#month60').offset().top;
+            $('#month60').css({
+                "background-color": "red"
+            });
+        } else if (days < 102) {
+            top = $('#month78').offset().top;
+            $('#month78').css({
+                "background-color": "red"
+            });
+        } else if (days < 126) {
+            top = $('#month102').offset().top;
+            $('#month102').css({
+                "background-color": "red"
+            });
         } else {
-            $('#month126').focus();
+            top = $('#month126').offset().top;
+            $('#month126').css({
+                "background-color": "red"
+            });
         }
+
+        $("body").scrollTop(top - 300);
         
     })
 
@@ -628,6 +678,13 @@
                 }
             });
         }
+    }
+
+
+    function select(target) {
+        $(target).parent().find('.a').addClass('hide').removeClass('show');
+        $(target).parent().find('.b').addClass('hide').removeClass('show');
+        $(target).find('span').removeClass('hide').addClass('show');
     }
 
 </script>

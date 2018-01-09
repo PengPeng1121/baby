@@ -47,8 +47,8 @@
                         <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
-                        <td class="col-md-2">实足年龄</td>
-                        <td class="col-md-2"><s:property value="exactAge"/></td>
+                        <td class="col-md-2">月龄</td>
+                        <td class="col-md-2"><s:property value="days"/></td>
                     </tr>
                 </table>
             </div>
@@ -70,7 +70,7 @@
                         <th class="col-md-1">S</th>
                         <th class="col-md-1">SD</th>
                         <th class="col-md-1">粗分</th>
-                        <th class="col-md-1">能力商</th>
+                        <th class="col-md-1">标准分</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -163,6 +163,7 @@
 <s:include value="/statics/tail.html"/>
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
+<script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
     var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
