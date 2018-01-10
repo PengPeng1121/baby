@@ -3,14 +3,14 @@ package com.free4lab.babycheckup.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "question", schema = "babycheckup", catalog = "")
+@Table(name = "question", schema = "babycheckup")
 public class Question {
     private int qid;
     private int ordinal;
     private String description;
-    private int month;
-    private int type;
-    private int testid;
+    private Integer month;
+    private Integer type;
+    private Integer testid;
     private String reasons;
     private Double extend1;
     private String extend2;
@@ -47,22 +47,22 @@ public class Question {
     }
 
     @Basic
-    @Column(name = "month", nullable = false)
-    public int getMonth() {
+    @Column(name = "month")
+    public Integer getMonth() {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(Integer month) {
         this.month = month;
     }
 
     @Basic
-    @Column(name = "type", nullable = false)
+    @Column(name = "type")
     public int getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
@@ -106,38 +106,4 @@ public class Question {
         this.extend2 = extend2;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Question question = (Question) o;
-
-        if (qid != question.qid) return false;
-        if (ordinal != question.ordinal) return false;
-        if (month != question.month) return false;
-        if (type != question.type) return false;
-        if (testid != question.testid) return false;
-        if (description != null ? !description.equals(question.description) : question.description != null)
-            return false;
-        if (reasons != null ? !reasons.equals(question.reasons) : question.reasons != null) return false;
-        if (extend1 != null ? !extend1.equals(question.extend1) : question.extend1 != null) return false;
-        if (extend2 != null ? !extend2.equals(question.extend2) : question.extend2 != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = qid;
-        result = 31 * result + ordinal;
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + month;
-        result = 31 * result + type;
-        result = 31 * result + testid;
-        result = 31 * result + (reasons != null ? reasons.hashCode() : 0);
-        result = 31 * result + (extend1 != null ? extend1.hashCode() : 0);
-        result = 31 * result + (extend2 != null ? extend2.hashCode() : 0);
-        return result;
-    }
 }

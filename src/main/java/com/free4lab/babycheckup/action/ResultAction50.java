@@ -1,7 +1,5 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.constant.AnswerValueEnum_R;
-import com.free4lab.babycheckup.constant.AnswerValueEnum_Total;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager50;
@@ -10,8 +8,6 @@ import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result50;
 import com.opensymphony.xwork2.ActionContext;
 
-import javax.management.StringValueExp;
-import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 

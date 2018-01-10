@@ -28,8 +28,11 @@ public class TestAction {
     private Result result;
     private Result3_6 result3_6;
     private Result0_2 result0_2;
+    private Result132 result132;
     private Result50 result50;
+    private ResultCognize resultCognize;
     private int days;
+    private int day;
 
     private String redirectUrl;
     public String newTestChoice() {
@@ -91,6 +94,28 @@ public class TestAction {
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30;
+        return SUCCESS;
+    }
+
+    public String newTest132() {
+        questionTypeList = QuestionManager.findTypeByTestid(18);
+        questionMonthList = QuestionManager.findMonthByTestid(18);
+        questionList = QuestionManager.findByTestid(18);
+        baby = BabyManager.findById(babyid);
+        testid = 18;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30;
+        return SUCCESS;
+    }
+
+    public String newTestCognize() {
+        questionList = QuestionManager.findByTestid(19);
+        baby = BabyManager.findById(babyid);
+        testid = 19;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        day = (differentdays(birth,today));
         return SUCCESS;
     }
 
@@ -178,6 +203,103 @@ public class TestAction {
         return SUCCESS;
     }
 
+    public String saveResultCognize(){
+        //这是算法  是不是很吊
+        baby = BabyManager.findById(resultCognize.getBabyId());
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        Integer months = (differentdays(birth,today))/30;
+        try {
+//            Integer total = result132.getA1()+result132.getA2()+result132.getA3()+result132.getA4()+result132.getA5()+result132.getA6();
+//            if(48<=months && months <54){
+//                result50.setTalent(Year4Enum.getIndex(total));
+//            }else if(54<=months && months <60){
+//                result50.setTalent(Year4HalfEnum.getIndex(total));
+//            }else if(60<=months && months <66){
+//                result50.setTalent(Year5Enum.getIndex(total));
+//            }else if(66<=months && months <72){
+//                result50.setTalent(Year5HalfEnum.getIndex(total));
+//            }else if(72<=months && months <78){
+//                result50.setTalent(Year6Enum.getIndex(total));
+//            }else if(78<=months && months <84){
+//                result50.setTalent(Year6HalfEnum.getIndex(total));
+//            }else {
+//                result50.setTalent(Year7Enum.getIndex(total));
+//            }
+//            Integer talent = result50.getTalent();
+//            if(talent<70){
+//                result50.setLevel("低智能");
+//            }else if(talent<85 && 70<=talent){
+//                result50.setLevel("中下智能");
+//            }else if(talent<115 && 85<=talent){
+//                result50.setLevel("中等智能");
+//            }else if(talent<130 && 115<=talent){
+//                result50.setLevel("中上智能");
+//            }else if(130<=talent){
+//                result50.setLevel("高智能");
+//            }
+
+            resultCognize.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            resultCognize.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            resultCognize.setTestId(17);
+            resultCognize.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            resultCognize.setState("finished");
+            ResultCognizeManager.saveResult(resultCognize);
+        }catch (Exception e){
+
+        }
+        return SUCCESS;
+    }
+
+    public String saveResult132(){
+        //这是算法  是不是很吊
+        baby = BabyManager.findById(result132.getBabyId());
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        Integer months = (differentdays(birth,today))/30;
+        try {
+//            Integer total = result132.getA1()+result132.getA2()+result132.getA3()+result132.getA4()+result132.getA5()+result132.getA6();
+//            if(48<=months && months <54){
+//                result50.setTalent(Year4Enum.getIndex(total));
+//            }else if(54<=months && months <60){
+//                result50.setTalent(Year4HalfEnum.getIndex(total));
+//            }else if(60<=months && months <66){
+//                result50.setTalent(Year5Enum.getIndex(total));
+//            }else if(66<=months && months <72){
+//                result50.setTalent(Year5HalfEnum.getIndex(total));
+//            }else if(72<=months && months <78){
+//                result50.setTalent(Year6Enum.getIndex(total));
+//            }else if(78<=months && months <84){
+//                result50.setTalent(Year6HalfEnum.getIndex(total));
+//            }else {
+//                result50.setTalent(Year7Enum.getIndex(total));
+//            }
+//            Integer talent = result50.getTalent();
+//            if(talent<70){
+//                result50.setLevel("低智能");
+//            }else if(talent<85 && 70<=talent){
+//                result50.setLevel("中下智能");
+//            }else if(talent<115 && 85<=talent){
+//                result50.setLevel("中等智能");
+//            }else if(talent<130 && 115<=talent){
+//                result50.setLevel("中上智能");
+//            }else if(130<=talent){
+//                result50.setLevel("高智能");
+//            }
+
+            result132.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            result132.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            result132.setTestId(17);
+            result132.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            result132.setState("finished");
+            ResultManager132.saveResult(result132);
+        }catch (Exception e){
+
+        }
+        return SUCCESS;
+    }
+
+
     public String saveResult50(){
         //这是算法  是不是很吊
         baby = BabyManager.findById(result50.getBabyId());
@@ -225,6 +347,7 @@ public class TestAction {
         }
         return SUCCESS;
     }
+
 
 
     private String calculateP(Integer p){
@@ -366,5 +489,27 @@ public class TestAction {
         this.result50List = result50List;
     }
 
+    public Result132 getResult132() {
+        return result132;
+    }
 
+    public void setResult132(Result132 result132) {
+        this.result132 = result132;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public ResultCognize getResultCognize() {
+        return resultCognize;
+    }
+
+    public void setResultCognize(ResultCognize resultCognize) {
+        this.resultCognize = resultCognize;
+    }
 }

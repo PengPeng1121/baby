@@ -9,10 +9,11 @@ import com.free4lab.babycheckup.model.User;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 
-import java.sql.Date;
+import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -117,9 +118,58 @@ public class BabyAction {
         return "success";
     }
 
+    public String testMonthAge132(){
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        Date d2 = new Date(new java.util.Date().getTime());
+        int monthage = (differentdays(d1,d2))/30;
+        if( 6 <= monthage &&  monthage <= 204){
+            flag = true;
+        }else {
+            flag = false;
+        }
+        return "success";
+    }
+
+    public String testMonthAgeCognize(){
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        Date d2 = new Date(new java.util.Date().getTime());
+        int day = (differentdays(d1,d2));
+        if( 16 <= day  &&  compareDate(d1)){
+            flag = true;
+        }else {
+            flag = false;
+        }
+        return "success";
+    }
+
+
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    //比较出生日期和前42个月零15天
+    //生日大于前 满足
+    private boolean compareDate(Date birthday){
+        int day = (int)((birthday.getTime()-getDate().getTime())/(1000*3600*24));
+        if(day>=0){
+            return true;
+        }
+        return false;
+    }
+
+    //获取前42个月零15天
+    public Date getDate(){
+        Date today = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(today);
+        calendar.add(Calendar.YEAR, -3);
+        calendar.add(Calendar.MONTH, -6);
+        calendar.add(Calendar.DATE, -15);
+        Date date = calendar.getTime();
+        return date;
     }
 
     public List<Baby> calculateMonthage(List<Baby> babyList){
