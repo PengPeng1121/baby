@@ -166,182 +166,136 @@
 <script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
-    var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
-    var a2 = +(parseInt($('#a2').text()) / 13).toFixed(2);
-    var a3 = +(parseInt($('#a3').text()) / 4).toFixed(2);
-    var a4 = +(parseInt($('#a4').text()) / 6).toFixed(2);
-    var a5 = +(parseInt($('#a5').text()) / 9).toFixed(2);
-    var a6 = +(parseInt($('#a6').text()) / 5).toFixed(2);
+    var a1 = +(parseInt($('#a1').text()) / 23).toFixed(2);
+    var a2 = +(parseInt($('#a2').text()) / 20).toFixed(2);
+    var a3 = +(parseInt($('#a3').text()) / 22).toFixed(2);
+    var a4 = +(parseInt($('#a4').text()) / 31).toFixed(2);
+    var a5 = +(parseInt($('#a5').text()) / 18).toFixed(2);
+    var a6 = +(parseInt($('#a6').text()) / 18).toFixed(2);
     var a8 = parseInt($('#a8').text());
+
+    var b1 = parseInt($('#a1').text())
+    var b2 = parseInt($('#a2').text())
+    var b3 = parseInt($('#a3').text())
+    var b4 = parseInt($('#a4').text())
+    var b5 = parseInt($('#a5').text())
+    var b6 = parseInt($('#a6').text())
+    var b8 = parseInt($('#a8').text());
     // 柱状图数据
     
     $('#column').highcharts({
-            chart: {
-                type: 'solidgauge'
-            },
-            title: null,
-            pane: {
-                center: ['50%', '80%'],
-                size: '100%',
-                startAngle: -90,
-                endAngle: 90,
-                background: {
-                    backgroundColor:'#EEE',
-                    innerRadius: '60%',
-                    outerRadius: '100%',
-                    shape: 'arc'
-                }
-            },
-            tooltip: {
-                enabled: false
-            },
-            yAxis: {
-                min: 0,
-                max: 150,
-                stops: [
-                    [0.47, 'red'], // red
-                    [0.57, 'orange'], // orange
-                    [0.77, 'blue'], // blue
-                    [0.87, 'green'] // green
-                ],
-                lineWidth: 0,
-                minorTickInterval: null,
-                tickPixelInterval: 150,
-                tickWidth: 1,
-                tickLength:50,
-                tickColor: '#ddd',
-                tickPositions: [0,70,85,115,130,150],
-                title: {
-                    y: -70
-                },
-                labels: {
-                    y: 10,
-                    useHTML: true,
-                    formatter: function () {
-                        if(this.value == 70){
-                            return '<span style="color:red;position: absolute;top: -40px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 85){
-                            return '<span style="color:orange;position: absolute;top: -40px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 115){
-                            return '<span style="color:blue;position: absolute;top: -45px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 130){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 0){
-                            return '<span style="color:#ddd">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 150){
-                            return '<span style="color:#ddd">' +
-                                this.value + '</span>';
-                        }
-                    }
-                }
-            },
-            plotOptions: {
-                solidgauge: {
-                    dataLabels: {
-                        y: 5,
-                        borderWidth: 0,
-                        useHTML: true
-                    }
-                }
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                name: '能力商',
-                data: [a8],
-                dataLabels: {
-                    format: '<div style="text-align:center;z-index:100;background-color:#fff"><span style="font-size:25px;color:' +
-                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                    '<span style="font-size:12px;color:silver">能力商</span></div>'
-                }
-            }]
-        });
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: null
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            categories: [
+                'SH',
+                'L',
+                'O',
+                'C',
+                'S',
+                'SD',
+                '总分'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '得分'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '总分',
+            data: [23, 20, 22, 31, 18, 18, 132]
+        }, {
+            name: '得分',
+            data: [b1, b2, b3, b4, b5, b6, b8]
+        }]
+    });
+
+    
 
         
 
 
-        $('#spider').highcharts({
-            chart: {
-                polar: true,
-                type: 'area'
-            },
-            credits: {
+    $('#spider').highcharts({
+        chart: {
+            polar: true,
+            type: 'area'
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: '',
+            x: -80
+        },
+        pane: {
+            size: '80%'
+        },
+        xAxis: {
+            categories: ['SH', 'L', 'O', 'C', 'S', 'SD'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0
+        },
+        yAxis: {
+            max:  1,
+            min: 0,
+            gridLineInterpolation: 'polygon',
+            lineWidth: 0,
+            labels: {
                 enabled: false
             },
-            title: {
-                text: '',
-                x: -80
-            },
-            pane: {
-                size: '80%'
-            },
-            xAxis: {
-                categories: ['SH', 'L', 'O', 'C', 'S', 'SD'],
-                tickmarkPlacement: 'on',
-                lineWidth: 0
-            },
-            yAxis: {
-                max:  1,
-                min: 0,
-                gridLineInterpolation: 'polygon',
-                lineWidth: 0,
-                labels: {
-                    enabled: false
-                },
-                plotLines: [{
-                    color: 'red',
-                    value: 0.5,
-                    width: 2,
-                    label: {
-                        text: '50%',
-                        y: 30
-                    }
-                }, {
-                    color: 'orange',
-                    value: 0.75,
-                    width: 2,
-                    label: {
-                        text: '75%',
-                        y: 10
-                    }
-                }, {
-                    color: 'blue',
-                    value: 0.9,
-                    width: 2,
-                    label: {
-                        text: '90%',
-                        y: 10
-                    }
-                },{
-                    color: 'green',
-                    value: 1,
-                    width: 2,
-                    label: {
-                        text: '100%',
-                        y: 10
-                    }
-                }]
-            },
-            tooltip: {
-                shared: true
-            },
-            series: [{
-                name: '得分',
-                data: [a1, a2, a3, a4, a5, a6],
-                pointPlacement: 'on'
+            plotLines: [{
+                color: 'red',
+                value: 0.5,
+                width: 2
+            }, {
+                color: 'orange',
+                value: 0.75,
+                width: 2
+            }, {
+                color: 'blue',
+                value: 0.9,
+                width: 2
+            },{
+                color: 'green',
+                value: 1,
+                width: 2
             }]
-        });
+        },
+        tooltip: {
+            shared: true
+        },
+        series: [{
+            name: '得分',
+            data: [a1, a2, a3, a4, a5, a6],
+            pointPlacement: 'on'
+        }]
+    });
 
 </script>
 </body>
