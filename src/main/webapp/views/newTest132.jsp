@@ -78,7 +78,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal < 20"> 
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -130,7 +130,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 19 && #question.ordinal < 42"> 
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -182,7 +182,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 41 && #question.ordinal < 64"> 
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -234,7 +234,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 63 && #question.ordinal < 81"> 
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -286,7 +286,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 80 && #question.ordinal < 97"> 
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -338,7 +338,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 96 && #question.ordinal < 114">  
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -390,7 +390,7 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 113 && #question.ordinal < 133">  
                             <tr class="question">
-                                <td style="width:30px">
+                                <td style="width:30px" class="order">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -451,6 +451,9 @@
     ;(function () {
     })();
 
+
+    var trueCount = 0;
+    var falseCount = 0;
     function failReasons(ordinal, reasons) {
 
         $('#failMessage' + ordinal).css("color","#ff0049");
@@ -478,11 +481,11 @@
         // Todo: 去掉所有没有答的题的样式
         // 获取当前答题范围
         var range = getRange();
-        for(var i = range.start; i <= range.end; i++) {
+        for(var i = 0; i <= questionSum; i++) {
             temp = $('.' + i + '.show').attr('class');
             if (!temp) {
                 // Todo: 标注所有没有答的题
-                for (var j = i; j <= range.end; j++) {
+                for (var j = i; j <= questionSum; j++) {
                     t = $('.' + j + '.show').attr('class');
                     if (!t) {
                         $('.' + j).parents('tr').addClass('noanswer');
@@ -495,7 +498,7 @@
         }
 
 
-        for (var i = range.start; i <= range.end; i++) {
+        for (var i = 0; i <= questionSum; i++) {
             temp = $('.' + i + '.show').attr('class');
             if(temp==""||temp==undefined){
                 continue;
@@ -682,9 +685,20 @@
 
 
     function select(target) {
+        var $target = $(target);
         $(target).parent().find('.a').addClass('hide').removeClass('show');
         $(target).parent().find('.b').addClass('hide').removeClass('show');
         $(target).find('span').removeClass('hide').addClass('show');
+        //获取当前题目的序号
+        //判断当前是对还是错
+        //如果对
+        trueCount += 1;
+        if (trueCount == 10) {
+            //改题之前的全部设为“对”
+        }
+
+        // 如果错 向前走一个 trueCount不变
+        // falseCount
     }
 
 </script>

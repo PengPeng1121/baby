@@ -126,7 +126,7 @@
     function start_cognize() {
         var babyid = $("#babyid").val();
         $.ajax({
-            url: "monthage_cognize",
+            url: "monthagecognize",
             type: "post",
             data: {
                 babyid: babyid
