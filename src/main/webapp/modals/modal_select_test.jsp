@@ -141,7 +141,7 @@
                 babyid: babyid
             }, success: function (data) {
                 if (data.flag == true) {
-                    location.href = "newtest_cognize?babyid=" + babyid;
+                    location.href = "newtestCognize?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
