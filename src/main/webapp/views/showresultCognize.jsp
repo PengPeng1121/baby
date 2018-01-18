@@ -48,7 +48,7 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2">实足年龄</td>
-                        <td class="col-md-2"><s:property value="day"/></td>
+                        <td class="col-md-2"><s:property value="exactAge"/></td>
                     </tr>
                 </table>
             </div>
@@ -219,9 +219,9 @@
                 }
             }]
         });
+        var chart1;
 
-
-        var chart1 = $('#spider').highcharts({
+        $('#spider').highcharts({
             chart: {
                 type: 'column'
             },
@@ -274,6 +274,8 @@
                 }
             },
             series: []
+        }, function(c) {
+            chart1 = c;
         });
 
         var data = [{
@@ -310,7 +312,7 @@
             data[0]['data'][1] = percent;
         }
 
-        chart1.series[0].setData(data);
+        chart1.series.setData(data);
 
     });
 
