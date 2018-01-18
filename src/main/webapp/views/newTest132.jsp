@@ -481,21 +481,21 @@
         // Todo: 去掉所有没有答的题的样式
         // 获取当前答题范围
         var range = getRange();
-        for(var i = 0; i <= questionSum; i++) {
-            temp = $('.' + i + '.show').attr('class');
-            if (!temp) {
-                // Todo: 标注所有没有答的题
-                for (var j = i; j <= questionSum; j++) {
-                    t = $('.' + j + '.show').attr('class');
-                    if (!t) {
-                        $('.' + j).parents('tr').addClass('noanswer');
-                    }
-                }
-                $.tipModal('alert', 'warning', '有题目未完成！');
-                return false;
-            }
+        // for(var i = 0; i <= questionSum; i++) {
+        //     temp = $('.' + i + '.show').attr('class');
+        //     if (!temp) {
+        //         // Todo: 标注所有没有答的题
+        //         for (var j = i; j <= questionSum; j++) {
+        //             t = $('.' + j + '.show').attr('class');
+        //             if (!t) {
+        //                 $('.' + j).parents('tr').addClass('noanswer');
+        //             }
+        //         }
+        //         $.tipModal('alert', 'warning', '有题目未完成！');
+        //         return false;
+        //     }
 
-        }
+        // }
 
 
         for (var i = 0; i <= questionSum; i++) {

@@ -219,6 +219,99 @@
                 }
             }]
         });
+
+
+        var chart1 = $('#spider').highcharts({
+            chart: {
+                type: 'column'
+            },
+            tooltip: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '百分位'
+            },
+            xAxis: {
+                categories: ['', '孩子得分']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: ''
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            },
+            legend: {
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            textShadow: '0 0 3px black'
+                        }
+                    }
+                }
+            },
+            series: []
+        });
+
+        var data = [{
+            name: 'a',
+            data: [5, 0]
+        }, {
+            name: 'b',
+            data: [20, 0]
+        }, {
+            name: 'c',
+            data: [25, 0]
+        }, {
+            name: 'd',
+            data: [25, 0]
+        }, {
+            name: 'e',
+            data: [20, 0]
+        }, {
+            name: 'f',
+            data: [5, 0]
+        }];
+
+        if (percent < 5) {
+            data[5]['data'][1] = percent;
+        } else if(percent < 25) {
+            data[4]['data'][1] = percent;
+        } else if(percent < 50) {
+            data[3]['data'][1] = percent;
+        } else if(percent < 75) {
+            data[2]['data'][1] = percent;
+        } else if(percent < 95) {
+            data[1]['data'][1] = percent;
+        } else {
+            data[0]['data'][1] = percent;
+        }
+        
+        chart1.series[0].setData(data);
+
     });
 
 </script>

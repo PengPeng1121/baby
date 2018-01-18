@@ -301,7 +301,7 @@
                     
 
                     $.ajax({
-                        url: 'saveresult_cognize',
+                        url: 'saveresultcognize',
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
