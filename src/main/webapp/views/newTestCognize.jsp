@@ -283,18 +283,18 @@
                     }
 
                     //每个题的详细原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
-                    }
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
+                    // }
 
-                    for(var i = 0; i < questionSum; i++) {
-                        data += "'result_cognize.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
-                    }
-
-
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     data += "'result_cognize.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+                    // }
 
 
-                    data += "'result_cognize.a0':" + questionScore[1] + ",";
+
+
+                    data += "'result_cognize.score':" + questionScore[1] + ",";
                     
 
                     data += "'result_cognize.babyId':" + $("#babyid").val() + "}";
