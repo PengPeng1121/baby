@@ -45,8 +45,8 @@
                         <label class="col-md-3 front-label"><s:date name="baby.birthday" format="yyyy-MM-dd"/></label>
                     </div>
                     <div class="col-md-6">
-                        <label class="col-md-3 front-label">月龄</label>
-                        <label class="col-md-3 front-label"><s:property value="days"/></label>
+                        <label class="col-md-3 front-label">实足年龄</label>
+                        <label class="col-md-3 front-label"><s:property value="day"/></label>
                     </div>
                     <div class="col-md-6">
                         <label class="col-md-3 front-label">检查日期</label>
