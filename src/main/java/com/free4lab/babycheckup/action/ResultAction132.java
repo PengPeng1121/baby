@@ -22,8 +22,8 @@ public class ResultAction132 {
     private String stime;//检查日期
     private Hospital hospital;
     private int days;
-    private int a0;//总数
-
+    private int a0;//总数`
+    private String level;//等级
     private String normal;//标准分
 
     public String showResult132() {
@@ -35,10 +35,10 @@ public class ResultAction132 {
         days = (differentdays(baby.getBirthday(),new Date()))/30;
         try{
             if (result132!=null) {
-                a0 = result132.getA1()+ result132.getA2()+ result132.getA3()+ result132.getA4()+ result132.getA5()+ result132.getA6();
+                a0 = Integer.parseInt(result132.getRough());
             }
             normal = result132.getNorm();
-
+            level = result132.getLevel();
         }catch (Exception e){
 
         }
@@ -121,5 +121,13 @@ public class ResultAction132 {
 
     public void setDays(int days) {
         this.days = days;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }

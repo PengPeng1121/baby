@@ -4,6 +4,11 @@ import com.free4lab.babycheckup.constant.*;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
+import com.pp.common.constant.result132.GetStandardUtil;
+import com.pp.common.constant.result132.Level;
+import com.pp.common.constant.resultCognize.GetScaleUtil;
+import com.pp.common.constant.resultCognize.Talent;
+import org.apache.commons.lang.StringUtils;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -206,39 +211,29 @@ public class TestAction {
     public String saveResultCognize(){
         //这是算法  是不是很吊
         baby = BabyManager.findById(resultCognize.getBabyId());
-        Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        Integer months = (differentdays(birth,today))/30;
         try {
-//            Integer total = result132.getA1()+result132.getA2()+result132.getA3()+result132.getA4()+result132.getA5()+result132.getA6();
-//            if(48<=months && months <54){
-//                result50.setTalent(Year4Enum.getIndex(total));
-//            }else if(54<=months && months <60){
-//                result50.setTalent(Year4HalfEnum.getIndex(total));
-//            }else if(60<=months && months <66){
-//                result50.setTalent(Year5Enum.getIndex(total));
-//            }else if(66<=months && months <72){
-//                result50.setTalent(Year5HalfEnum.getIndex(total));
-//            }else if(72<=months && months <78){
-//                result50.setTalent(Year6Enum.getIndex(total));
-//            }else if(78<=months && months <84){
-//                result50.setTalent(Year6HalfEnum.getIndex(total));
-//            }else {
-//                result50.setTalent(Year7Enum.getIndex(total));
-//            }
-//            Integer talent = result50.getTalent();
-//            if(talent<70){
-//                result50.setLevel("低智能");
-//            }else if(talent<85 && 70<=talent){
-//                result50.setLevel("中下智能");
-//            }else if(talent<115 && 85<=talent){
-//                result50.setLevel("中等智能");
-//            }else if(talent<130 && 115<=talent){
-//                result50.setLevel("中上智能");
-//            }else if(130<=talent){
-//                result50.setLevel("高智能");
-//            }
-
+            Integer score = -1;
+            if(!StringUtils.isEmpty(resultCognize.getScore())){
+                score = Integer.parseInt(resultCognize.getScore());
+            }else {
+                throw new IllegalArgumentException("没有找到对应量表结果，请重新测试");
+            }
+            String scale = GetScaleUtil.getScale(birth,score);
+            resultCognize.setScale(scale);
+            String resultStr = Talent.getTalent(scale);
+            if(StringUtils.isEmpty(resultStr)){
+                throw new IllegalArgumentException("没有找到对应量表结果，请重新测试");
+            }
+            String arr[] = resultStr.split("~");
+            String talent = arr[0];
+            String percent = arr[1];
+            String section90 = arr[2];
+            String section95 = arr[3];
+            resultCognize.setTalent(talent);
+            resultCognize.setPercent(percent);
+            resultCognize.setSection90(section90);
+            resultCognize.setSection95(section95);
             resultCognize.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             resultCognize.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
             resultCognize.setTestId(17);
@@ -254,39 +249,15 @@ public class TestAction {
     public String saveResult132(){
         //这是算法  是不是很吊
         baby = BabyManager.findById(result132.getBabyId());
-        Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        Integer months = (differentdays(birth,today))/30;
         try {
-//            Integer total = result132.getA1()+result132.getA2()+result132.getA3()+result132.getA4()+result132.getA5()+result132.getA6();
-//            if(48<=months && months <54){
-//                result50.setTalent(Year4Enum.getIndex(total));
-//            }else if(54<=months && months <60){
-//                result50.setTalent(Year4HalfEnum.getIndex(total));
-//            }else if(60<=months && months <66){
-//                result50.setTalent(Year5Enum.getIndex(total));
-//            }else if(66<=months && months <72){
-//                result50.setTalent(Year5HalfEnum.getIndex(total));
-//            }else if(72<=months && months <78){
-//                result50.setTalent(Year6Enum.getIndex(total));
-//            }else if(78<=months && months <84){
-//                result50.setTalent(Year6HalfEnum.getIndex(total));
-//            }else {
-//                result50.setTalent(Year7Enum.getIndex(total));
-//            }
-//            Integer talent = result50.getTalent();
-//            if(talent<70){
-//                result50.setLevel("低智能");
-//            }else if(talent<85 && 70<=talent){
-//                result50.setLevel("中下智能");
-//            }else if(talent<115 && 85<=talent){
-//                result50.setLevel("中等智能");
-//            }else if(talent<130 && 115<=talent){
-//                result50.setLevel("中上智能");
-//            }else if(130<=talent){
-//                result50.setLevel("高智能");
-//            }
-
+            Integer total = result132.getA1()+result132.getA2()+result132.getA3()+result132.getA4()+result132.getA5()+result132.getA6();
+            String normal = GetStandardUtil.getStandardScore(birth,total);
+            result132.setNorm(normal);
+            result132.setLevel(Level.getLevelByStandardScore(normal));
+            if(total!=null){
+                result132.setRough(total.toString());
+            }
             result132.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             result132.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
             result132.setTestId(17);

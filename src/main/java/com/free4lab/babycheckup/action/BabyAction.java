@@ -105,6 +105,7 @@ public class BabyAction {
         return "success";
     }
 
+    //是否可以进行学龄测试-
     public String testMonthAge50(){
         baby = BabyManager.findById(babyid);
         Date d1 = baby.getBirthday();
@@ -118,6 +119,7 @@ public class BabyAction {
         return "success";
     }
 
+    //是否可以进行婴儿-初中学生生活能力测试
     public String testMonthAge132(){
         baby = BabyManager.findById(babyid);
         Date d1 = baby.getBirthday();
@@ -131,6 +133,7 @@ public class BabyAction {
         return "success";
     }
 
+    //是否可以进行认知测试
     public String testMonthAgeCognize(){
         baby = BabyManager.findById(babyid);
         Date d1 = baby.getBirthday();

@@ -21,16 +21,20 @@ public class ResultCognizeAction {
     private String stime;//检查日期
     private Hospital hospital;
     private String talent;//
-
+    private String scale;//
     private String percent;//
-
+    private String section90 ;
+    private String section95 ;
     public String showResultCognize() {
         resultCognize = ResultCognizeManager.findResultByid(id);
         baby = BabyManager.findById(resultCognize.getBabyId());
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultCognize.getTime());
         try{
-
             talent = String.valueOf(resultCognize.getTalent());
+            scale = resultCognize.getScale();
+            percent = resultCognize.getPercent();
+            section90 = resultCognize.getSection90();
+            section95 = resultCognize.getSection95();
         }catch (Exception e){
 
         }
@@ -100,5 +104,29 @@ public class ResultCognizeAction {
 
     public void setPercent(String percent) {
         this.percent = percent;
+    }
+
+    public String getScale() {
+        return scale;
+    }
+
+    public void setScale(String scale) {
+        this.scale = scale;
+    }
+
+    public String getSection90() {
+        return section90;
+    }
+
+    public void setSection90(String section90) {
+        this.section90 = section90;
+    }
+
+    public String getSection95() {
+        return section95;
+    }
+
+    public void setSection95(String section95) {
+        this.section95 = section95;
     }
 }

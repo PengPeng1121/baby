@@ -18,14 +18,13 @@ public class ResultCognize {
     private int userId;
     private String state;
     private String answerRelation;//答题者与儿童关系
-    private int a1;
-    private int a2;
-    private int a3;
-    private int a4;
-    private int a5;
-    private int a6;
+
     private String talent;
     private String percent;
+    private String score;//题目得分
+    private String scale;//量表分
+    private String section90;
+    private String section95;
 
     private String reason1;
     private String reason2;
@@ -197,66 +196,6 @@ public class ResultCognize {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    @Basic
-    @Column(name = "a1", nullable = false)
-    public int getA1() {
-        return a1;
-    }
-
-    public void setA1(int a1) {
-        this.a1 = a1;
-    }
-
-    @Basic
-    @Column(name = "a2", nullable = false)
-    public int getA2() {
-        return a2;
-    }
-
-    public void setA2(int a2) {
-        this.a2 = a2;
-    }
-
-    @Basic
-    @Column(name = "a3", nullable = false)
-    public int getA3() {
-        return a3;
-    }
-
-    public void setA3(int a3) {
-        this.a3 = a3;
-    }
-
-    @Basic
-    @Column(name = "a4", nullable = false)
-    public int getA4() {
-        return a4;
-    }
-
-    public void setA4(int a4) {
-        this.a4 = a4;
-    }
-
-    @Basic
-    @Column(name = "a5", nullable = false)
-    public int getA5() {
-        return a5;
-    }
-
-    public void setA5(int a5) {
-        this.a5 = a5;
-    }
-
-    @Basic
-    @Column(name = "a6", nullable = false)
-    public int getA6() {
-        return a6;
-    }
-
-    public void setA6(int a6) {
-        this.a6 = a6;
     }
 
     @Basic
@@ -1200,5 +1139,45 @@ public class ResultCognize {
 
     public void setPercent(String percent) {
         this.percent = percent;
+    }
+
+    @Basic
+    @Column(name = "score", nullable = true, length = 20)
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    @Basic
+    @Column(name = "scale", nullable = true, length = 20)
+    public String getScale() {
+        return scale;
+    }
+
+    public void setScale(String scale) {
+        this.scale = scale;
+    }
+
+    @Basic
+    @Column(name = "section90", nullable = true, length = 20)
+    public String getSection90() {
+        return section90;
+    }
+
+    public void setSection90(String section90) {
+        this.section90 = section90;
+    }
+
+    @Basic
+    @Column(name = "section95", nullable = true, length = 20)
+    public String getSection95() {
+        return section95;
+    }
+
+    public void setSection95(String section95) {
+        this.section95 = section95;
     }
 }

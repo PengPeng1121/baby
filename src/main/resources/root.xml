@@ -64,7 +64,7 @@
         </action>
         <!--婴幼儿认知测定-->
         <action name="showresultcognize" method="showResultCognize" class="com.free4lab.babycheckup.action.ResultCognizeAction">
-            <result name="success" >views/showResultCognize.jsp</result>
+            <result name="success" >views/showresultCognize.jsp</result>
         </action>
         <!--婴儿-初中学生生活能力量表结果-->
         <action name="showresult132" method="showResult132" class="com.free4lab.babycheckup.action.ResultAction132">
