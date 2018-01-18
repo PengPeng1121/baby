@@ -27,7 +27,7 @@
     <div class="container">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">学前50项智力筛查</h1>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">婴幼儿认知测定</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -53,76 +53,16 @@
                 </table>
             </div>
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="result50.id"/>">
-        <div class="panel panel-default front-panel" id="allbaby">
-            <div class="panel-heading" style="text-align: center;">评定结果</div>
-            <div class="panel-body front-no-padding">
-                <table class="table table-striped front-table">
-                    <thead>
-                    <tr>
-                        <th class="col-md-1">领域</th>
-                        <th class="col-md-1">SC</th>
-                        <th class="col-md-1">L</th>
-                        <th class="col-md-1">M</th>
-                        <th class="col-md-1">E</th>
-                        <th class="col-md-1">T</th>
-                        <th class="col-md-1">GK</th>
-                        <th class="col-md-1">粗分</th>
-                        <th class="col-md-1">能力商</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>得分</td>
-                        <td id="a1"><s:property value="result50.a1"/></td>
-                        <td id="a2"><s:property value="result50.a2"/></td>
-                        <td id="a3"><s:property value="result50.a3"/></td>
-                        <td id="a4"><s:property value="result50.a4"/></td>
-                        <td id="a5"><s:property value="result50.a5"/></td>
-                        <td id="a6"><s:property value="result50.a6"/></td>
-                        <td id="a0"><s:property value="a0"/></td>
-                        <td id="a8"><s:property value="talent"/></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table class="table table-striped front-table">
-                    <thead>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>*</td>
-                        <td>SC(Self-Cognition)</td>
-                        <td>自我认识</td>
-                        <td>*</td>
-                        <td>E(Espial)</td>
-                        <td>观察</td>
-                    </tr>
-                    <tr>
-                        <td>*</td>
-                        <td>L(Locomotion)</td>
-                        <td>运动</td>
-                        <td>*</td>
-                        <td>T(Thought)</td>
-                        <td>思维</td>
-                    </tr>
-                    <tr>
-                        <td>*</td>
-                        <td>M(memory)</td>
-                        <td>记忆</td>
-                        <td>*</td>
-                        <td>GK(General-Knowledge)</td>
-                        <td>常识</td>
-                    </tr>
-                    </tbody>
-                </table>
+        <input type="hidden" id="resultID" value="<s:property value="result_cognize.id"/>">
+        <input type="hidden" id="scale" value="<s:property value="scale"/>">
+        <input type="hidden" id="percent" value="<s:property value="percent"/>">
+        <input type="hidden" id="talent" value="<s:property value="talent"/>">
 
-            </div>
-        </div>
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
+                <td style="text-align:center;">评定结果扇形图</td>
                 <td style="text-align:center;">评定结果柱状图</td>
-                <td style="text-align:center;">评定结果纬度图</td>
             </tr>
             <tr>
                 <td style="padding: 0px;width: 50%;">
@@ -140,8 +80,10 @@
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading">评定结果: <s:property value="result50.level"/></div>
+            <div class="panel-heading">评定结果: <s:property value="result_cognize.level"/></div>
         </div>
+
+
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
@@ -161,31 +103,26 @@
 <s:include value="/statics/tail.html"/>
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
+<script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
-    var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
-    var a2 = +(parseInt($('#a2').text()) / 13).toFixed(2);
-    var a3 = +(parseInt($('#a3').text()) / 4).toFixed(2);
-    var a4 = +(parseInt($('#a4').text()) / 6).toFixed(2);
-    var a5 = +(parseInt($('#a5').text()) / 9).toFixed(2);
-    var a6 = +(parseInt($('#a6').text()) / 5).toFixed(2);
-    var a8 = parseInt($('#a8').text());
-
+    var scale = parseInt($('#scale').text());
+    var percent = parseInt($('#percent').text());
+    var talent = parseInt($('#talent').text());
     // 柱状图数据
 
     
 
 
     $(function () {
-        
-        Highcharts.setOptions({
+        $('#column').highcharts({
             chart: {
                 type: 'solidgauge'
             },
             title: null,
             pane: {
                 center: ['50%', '80%'],
-                size: '140%',
+                size: '100%',
                 startAngle: -90,
                 endAngle: 90,
                 background: {
@@ -199,21 +136,65 @@
                 enabled: false
             },
             yAxis: {
+                min: 0,
+                max: 150,
                 stops: [
-                    [0.35, '#FF0000'], // green
-                    [0.425, 'orange'], // yellow
-                    [0.575, 'blue'], // red
-                    [0.65, 'green'] // red
+                    [0.37, 'red'], // red
+                    [0.5, 'orange'], // orange
+                    [0.6, 'blue'], // blue
+                    [0.73, 'green'] // green
                 ],
                 lineWidth: 0,
                 minorTickInterval: null,
-                tickPixelInterval: 400,
-                tickWidth: 0,
+                tickPixelInterval: 150,
+                tickWidth: 1,
+                tickLength:50,
+                tickColor: '#ddd',
+                tickPositions: [0,55,75,90,100,110,125,145],
                 title: {
                     y: -70
                 },
                 labels: {
-                    y: 16
+                    y: 10,
+                    useHTML: true,
+                    formatter: function () {
+                        if(this.value == 55){
+                            return '<span style="color:red;position: absolute;top: -40px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 75){
+                            return '<span style="color:orange;position: absolute;top: -40px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 90){
+                            return '<span style="color:blue;position: absolute;top: -45px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 100){
+                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 110){
+                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 125){
+                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 145){
+                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 0){
+                            return '<span style="color:#ddd">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 150){
+                            return '<span style="color:#ddd">' +
+                                this.value + '</span>';
+                        }
+                    }
                 }
             },
             plotOptions: {
@@ -224,173 +205,18 @@
                         useHTML: true
                     }
                 }
-            }
-        });
-        // 速度仪表
-        var chart1 = Highcharts.chart('container-speed', {
-            yAxis: {
-                min: 0,
-                max: 200,
-                title: {
-                    text: ''
-                }
             },
             credits: {
                 enabled: false
             },
             series: [{
                 name: '能力商',
-                data: [50],
+                data: [talent],
                 dataLabels: {
-                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                    format: '<div style="text-align:center;z-index:100;background-color:#fff"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
                     '<span style="font-size:12px;color:silver">能力商</span></div>'
                 }
-            }]
-        });
-
-
-        $('#column').highcharts({
-            chart: {
-                type: 'bar'
-            },
-            credits: {
-                enabled: false
-            },
-            title: {
-                text: ''
-            },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                categories: ['能力商'],
-                title: {
-                    text: null
-                }
-            },
-            yAxis: {
-                min: 0,
-                max: 150,
-                title: {
-                    text: null,
-                    align: 'high'
-                },
-                tickPositions: [0, 70, 85, 115, 130],
-                labels: {
-                },
-                plotLines: [{
-                    color: '#FF0000',
-                    width: 2,
-                    value: 70
-                },{
-                    color: 'orange',
-                    width: 2,
-                    value: 85
-                },{
-                    color: 'blue',
-                    width: 2,
-                    value: 115
-                },{
-                    color: 'green',
-                    width: 2,
-                    value: 130
-                }]
-            },
-            tooltip: {
-            },
-            plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true,
-                        allowOverlap: true
-                    }
-                },
-                series: {
-                    pointPadding:0.4
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                data: [a8]
-            }]
-        });
-
-
-        $('#spider').highcharts({
-            chart: {
-                polar: true,
-                type: 'area'
-            },
-            credits: {
-                enabled: false
-            },
-            title: {
-                text: '学前50项智力测试结果网状图',
-                x: -80
-            },
-            pane: {
-                size: '80%'
-            },
-            xAxis: {
-                categories: ['SC', 'L', 'M', 'E', 'T', 'GK'],
-                tickmarkPlacement: 'on',
-                lineWidth: 0
-            },
-            yAxis: {
-                max:  1,
-                min: 0,
-                gridLineInterpolation: 'polygon',
-                lineWidth: 0,
-                labels: {
-                    enabled: false
-                },
-                plotLines: [{
-                    color: 'red',
-                    value: 0.5,
-                    width: 2,
-                    label: {
-                        text: '50%',
-                        y: 30
-                    }
-                }, {
-                    color: 'orange',
-                    value: 0.75,
-                    width: 2,
-                    label: {
-                        text: '75%',
-                        y: 10
-                    }
-                }, {
-                    color: 'blue',
-                    value: 0.9,
-                    width: 2,
-                    label: {
-                        text: '90%',
-                        y: 10
-                    }
-                },{
-                    color: 'green',
-                    value: 1,
-                    width: 2,
-                    label: {
-                        text: '100%',
-                        y: 10
-                    }
-                }]
-            },
-            tooltip: {
-                shared: true
-            },
-            series: [{
-                name: '得分',
-                data: [a1, a2, a3, a4, a5, a6],
-                pointPlacement: 'on'
             }]
         });
     });

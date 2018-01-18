@@ -61,7 +61,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/0_6.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">0-6岁小儿神经心理发育检查表</p>
@@ -87,7 +87,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/3_6.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">父母育儿评估量表（3-6岁）</p>
@@ -113,7 +113,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/0_2.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">父母育儿评估量表（0-2岁）</p>
@@ -142,7 +142,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/50.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">学前50项智力筛查</p>
@@ -168,7 +168,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/cognize.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">婴幼儿认知测定量表</p>
@@ -197,7 +197,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/test.png" alt="Logo">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/sm.png" alt="Logo">
                             </div>
                             <div class="media-body">
                                 <p class="media-heading" style="font-size: 16px;">婴儿-初中学生生活能力量表</p>

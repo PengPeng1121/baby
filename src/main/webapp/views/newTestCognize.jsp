@@ -76,86 +76,86 @@
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <tr class="question">
-                                <s:if test="#st = 1"> 
-                                    <td style="width:5%" rowspan="2">
+                                <s:if test="#question.ordinal == 1">
+                                    <td style="width:30px" rowspan="2">
                                         A
                                     </td>
                                 </s:if>
-                                <s:elseif test="#st = 3">
-                                    <td style="width:5%" rowspan="4">
+                                <s:if test="#question.ordinal == 3">
+                                    <td style="width:30px" rowspan="4">
                                         BC
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 7">
-                                    <td style="width:5%" rowspan="9">
+                                </s:if>
+                                <s:if test="#question.ordinal == 7">
+                                    <td style="width:30px" rowspan="9">
                                         D
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 16">
-                                    <td style="width:5%" rowspan="3">
+                                </s:if>
+                                <s:if test="#question.ordinal == 16">
+                                    <td style="width:30px" rowspan="3">
                                         E
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 19">
-                                    <td style="width:5%" rowspan="3">
+                                </s:if>
+                                <s:if test="#question.ordinal == 19">
+                                    <td style="width:30px" rowspan="3">
                                         F
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 22">
-                                    <td style="width:5%" rowspan="3">
+                                </s:if>
+                                <s:if test="#question.ordinal == 22">
+                                    <td style="width:30px" rowspan="3">
                                         G
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 25">
-                                    <td style="width:5%" rowspan="9">
+                                </s:if>
+
+                                <s:if test="#question.ordinal == 25">
+                                    <td style="width:30px" rowspan="9">
                                         H
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 34">
-                                    <td style="width:5%" rowspan="6">
+                                </s:if>
+
+                                <s:if test="#question.ordinal == 34">
+                                    <td style="width:30px" rowspan="6">
                                         I
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 40">
-                                    <td style="width:5%" rowspan="5">
+                                </s:if>
+                                <s:if test="#question.ordinal == 40">
+                                    <td style="width:30px" rowspan="5">
                                         K
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 45">
-                                    <td style="width:5%" rowspan="11">
+                                </s:if>
+                                <s:if test="#question.ordinal == 45">
+                                    <td style="width:30px" rowspan="11">
                                         LM
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 56">
-                                    <td style="width:5%" rowspan="4">
+                                </s:if>
+                                <s:if test="#question.ordinal == 56">
+                                    <td style="width:30px" rowspan="4">
                                         N
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 60">
-                                    <td style="width:5%" rowspan="3">
+                                </s:if>
+                                <s:if test="#question.ordinal == 60">
+                                    <td style="width:30px" rowspan="3">
                                         O
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 63">
-                                    <td style="width:5%" rowspan="4">
+                                </s:if>
+                                <s:if test="#question.ordinal == 63">
+                                    <td style="width:30px" rowspan="4">
                                         P
                                     </td>
-                                </s:elseif>
-                                <s:elseif test="#st = 67">
-                                    <td style="width:5%" rowspan="24">
+                                </s:if>
+
+                                <s:if test="#question.ordinal == 67">
+                                    <td style="width:30px" rowspan="25">
                                         Q
                                     </td>
-                                </s:elseif>
-                                <s:else>
-                                    
-                                </s:else>
+                                </s:if>
 
 
-                                <td style="width:5%">
+                                <td style="width:30px">
                                     <s:property value="#question.ordinal"/>
                                 </td>
 
-                                <td style="width:60%">
+                                <td style="width:400px">
                                     <s:property value="#question.description"/>
                                 </td>
                                 <td style="width:30px" onclick="select(this)">
@@ -168,7 +168,7 @@
                                         0
                                     </span>
                                 </td>
-                                <td>
+                                <td style="width:10px">
                                     <input  id="<s:property value="#question.ordinal"/>"/>
                                 </td>
 
@@ -218,29 +218,29 @@
         var  temp;
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
-        for(var i = 1; i <= questionSum; i++) {
-            temp = $('.' + i + '.show').attr('class');
-            if (!temp) {
-                // Todo: 标注所有没有答的题
-                for (var j = i; j <= questionSum; j++) {
-                    t = $('.' + j + '.show').attr('class');
-                    if (!t) {
-                        $('.' + j).parents('tr').addClass('noanswer');
-                    }
-                }
-                $.tipModal('alert', 'warning', '有题目未完成！');
-                return false;
-            }
+        // for(var i = 1; i <= questionSum; i++) {
+        //     temp = $('.' + i + '.show').attr('class');
+        //     if (!temp) {
+        //         // Todo: 标注所有没有答的题
+        //         for (var j = i; j <= questionSum; j++) {
+        //             t = $('.' + j + '.show').attr('class');
+        //             if (!t) {
+        //                 $('.' + j).parents('tr').addClass('noanswer');
+        //             }
+        //         }
+        //         $.tipModal('alert', 'warning', '有题目未完成！');
+        //         return false;
+        //     }
 
-        }
+        // }
 
 
         for (var i = 1; i <= questionSum; i++) {
-            temp = parseInt($.trim($('.' + i + '.show').text('class')));
-            if(temp==""||temp==undefined){
-                continue;
+            temp = $.trim($('.' + i + '.show').text());
+            if (temp != '') {
+               temp = parseInt(temp);
+               questionScore[1] += temp;
             }
-            questionScore[1] += temp;
         }
         return true;
     }
