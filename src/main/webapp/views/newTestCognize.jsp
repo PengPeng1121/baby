@@ -278,7 +278,7 @@
 
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result_cognize.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                            data += "'resultCognize.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
 
@@ -294,10 +294,10 @@
 
 
 
-                    data += "'result_cognize.score':" + questionScore[1] + ",";
+                    data += "'resultCognize.score':" + questionScore[1] + ",";
                     
 
-                    data += "'result_cognize.babyId':" + $("#babyid").val() + "}";
+                    data += "'resultCognize.babyId':" + $("#babyid").val() + "}";
                     
 
                     $.ajax({
@@ -305,7 +305,7 @@
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
-                            window.location = "showresult_cognize?id=" + json.result_cognize.id;
+                            window.location = "showresultcognize?id=" + json.resultCognize.id;
                         }
                     })
                 }
