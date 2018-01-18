@@ -48,7 +48,7 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2">实足年龄</td>
-                        <td class="col-md-2"><s:property value="exactAge"/></td>
+                        <td class="col-md-2"><s:property value="day"/></td>
                     </tr>
                 </table>
             </div>
@@ -309,7 +309,7 @@
         } else {
             data[0]['data'][1] = percent;
         }
-        
+
         chart1.series[0].setData(data);
 
     });
