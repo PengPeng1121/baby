@@ -106,9 +106,9 @@
 <script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
-    var scale = parseInt($('#scale').text());
-    var percent = parseInt($('#percent').text());
-    var talent = parseInt($('#talent').text());
+    var scale = parseInt($('#scale').val());
+    var percent = parseInt($('#percent').val());
+    var talent = parseInt($('#talent').val());
     // 柱状图数据
 
     
@@ -150,7 +150,7 @@
                 tickWidth: 1,
                 tickLength:50,
                 tickColor: '#ddd',
-                tickPositions: [0,55,75,90,100,110,125,145],
+                tickPositions: [0,55,75,90,100,110,125,145,150],
                 title: {
                     y: -70
                 },
@@ -159,31 +159,31 @@
                     useHTML: true,
                     formatter: function () {
                         if(this.value == 55){
-                            return '<span style="color:red;position: absolute;top: -40px;">' +
+                            return '<span style="color:red;position: absolute;top: -50px; right:10px">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 75){
-                            return '<span style="color:orange;position: absolute;top: -40px;">' +
+                            return '<span style="color:orange;position: absolute;top: -45px;">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 90){
-                            return '<span style="color:blue;position: absolute;top: -45px;">' +
+                            return '<span style="color:blue;position: absolute;top: -50px;">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 100){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                            return '<span style="color:green;position: absolute;top: -50px;right:-30px">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 110){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                            return '<span style="color:green;position: absolute;top: -30px;right:-50px">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 125){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                            return '<span style="color:green;position: absolute;top: -20px;right:-55px">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 145){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
+                            return '<span style="color:green;position: absolute;right: -55px;top:-10px">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 0){
@@ -220,6 +220,31 @@
             }]
         });
         var chart1;
+        var data = [{
+            name: 'a',
+            data: [5, 0],
+            color: 'green'
+        }, {
+            name: 'b',
+            data: [20, 0],
+            color: 'green'
+        }, {
+            name: 'c',
+            data: [25, 0],
+            color: 'blue'
+        }, {
+            name: 'd',
+            data: [25, 0],
+            color: 'yellow'
+        }, {
+            name: 'e',
+            data: [20, 0],
+            color: 'orange'
+        }, {
+            name: 'f',
+            data: [5, 0],
+            color: 'red'
+        }];
 
         $('#spider').highcharts({
             chart: {
@@ -251,15 +276,7 @@
                 }
             },
             legend: {
-                align: 'right',
-                x: -30,
-                verticalAlign: 'top',
-                y: 25,
-                floating: true,
-                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-                borderColor: '#CCC',
-                borderWidth: 1,
-                shadow: false
+                enabled: false
             },
             plotOptions: {
                 column: {
@@ -273,46 +290,34 @@
                     }
                 }
             },
-            series: []
+            series: data
         }, function(c) {
             chart1 = c;
         });
 
-        var data = [{
-            name: 'a',
-            data: [5, 0]
-        }, {
-            name: 'b',
-            data: [20, 0]
-        }, {
-            name: 'c',
-            data: [25, 0]
-        }, {
-            name: 'd',
-            data: [25, 0]
-        }, {
-            name: 'e',
-            data: [20, 0]
-        }, {
-            name: 'f',
-            data: [5, 0]
-        }];
 
         if (percent < 5) {
-            data[5]['data'][1] = percent;
+            chart1.series[5].setData([5, percent]);
         } else if(percent < 25) {
-            data[4]['data'][1] = percent;
+            chart1.series[4].setData([20, percent]);
         } else if(percent < 50) {
-            data[3]['data'][1] = percent;
+            chart1.series[3].setData([25, percent]);
         } else if(percent < 75) {
-            data[2]['data'][1] = percent;
+            chart1.series[2].setData([25, percent]);
         } else if(percent < 95) {
-            data[1]['data'][1] = percent;
+            chart1.series[1].setData([20, percent]);
         } else {
-            data[0]['data'][1] = percent;
+            chart1.series[0].setData([5, percent]);
         }
 
-        chart1.series.setData(data);
+
+        var tspan = $('tspan');
+        var tlen = tspan.length;
+        for (i = 0; i < tlen; i++) {
+            if ($($('tspan')[i]).text() == 0) {
+                $($('tspan')[i]).hide();
+            }
+        }
 
     });
 
