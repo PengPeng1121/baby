@@ -689,16 +689,24 @@
         $(target).parent().find('.a').addClass('hide').removeClass('show');
         $(target).parent().find('.b').addClass('hide').removeClass('show');
         $(target).find('span').removeClass('hide').addClass('show');
+
         //获取当前题目的序号
-        //判断当前是对还是错
-        //如果对
-        trueCount += 1;
-        if (trueCount == 10) {
-            //改题之前的全部设为“对”
+        var index = $.trim($target.parent().find('.order').text());
+        var value = $(target).find('span').attr('class');
+
+        if (value.indexOf('a') != -1) {
+           trueCount += 1;
+        } else {
+           falseCount += 1;
         }
 
-        // 如果错 向前走一个 trueCount不变
-        // falseCount
+        if (trueCount == 10) {
+            //改题之前的全部设为“对”
+            for (var i = 0; i < index; i++) {
+                $('.' + i + '.a').removeClass('hide').addClass('show');
+            }
+        } 
+        
     }
 
 </script>

@@ -14,6 +14,10 @@
         }
     </style>
     <style type="text/css" media="print">
+        body
+        {
+            transform: scale(0.9);
+        }
         @page
         {
             size:  auto;   /* auto is the initial value */
