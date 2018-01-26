@@ -4,9 +4,9 @@ import com.free4lab.babycheckup.constant.*;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
-import com.pp.common.constant.result132.GetStandardUtil;
+import com.pp.common.constant.util.GetStandardUtil;
 import com.pp.common.constant.result132.Level;
-import com.pp.common.constant.resultCognize.GetScaleUtil;
+import com.pp.common.constant.util.GetScaleUtil;
 import com.pp.common.constant.resultCognize.Talent;
 import org.apache.commons.lang.StringUtils;
 
@@ -121,6 +121,7 @@ public class TestAction {
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         day = (differentdays(birth,today));
+        days = (differentdays(birth,today))/30;
         return SUCCESS;
     }
 

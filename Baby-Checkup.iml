@@ -105,5 +105,6 @@
     <orderEntry type="library" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:6.0" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.9" level="project" />
+    <orderEntry type="library" name="Maven: com.pp:result-util:0.0.1-SNAPSHOT" level="project" />
   </component>
 </module>

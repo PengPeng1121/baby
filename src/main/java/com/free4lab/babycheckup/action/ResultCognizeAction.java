@@ -7,8 +7,10 @@ import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultCognize;
 import com.opensymphony.xwork2.ActionContext;
+import com.pp.common.constant.util.ExactAgeUtil;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by Administrator on 2017/6/29.
@@ -25,6 +27,7 @@ public class ResultCognizeAction {
     private String percent;//
     private String section90 ;
     private String section95 ;
+    private String exactAge;//实足年龄
     public String showResultCognize() {
         resultCognize = ResultCognizeManager.findResultByid(id);
         baby = BabyManager.findById(resultCognize.getBabyId());
@@ -35,6 +38,16 @@ public class ResultCognizeAction {
             percent = resultCognize.getPercent();
             section90 = resultCognize.getSection90();
             section95 = resultCognize.getSection95();
+
+            Calendar calendarTestTime = Calendar.getInstance();
+            calendarTestTime.setTime(resultCognize.getTime());//检测时间
+
+            Calendar calendarBirthday = Calendar.getInstance();
+            if(baby!=null){
+                calendarBirthday.setTime(baby.getBirthday());
+                int[] timeArray = ExactAgeUtil.getNatureAge(calendarBirthday,calendarTestTime);
+                exactAge = String.valueOf(timeArray[0])+"岁"+String.valueOf(timeArray[1])+"月"+String.valueOf(timeArray[2])+"日";
+            }
         }catch (Exception e){
 
         }
@@ -128,5 +141,13 @@ public class ResultCognizeAction {
 
     public void setSection95(String section95) {
         this.section95 = section95;
+    }
+
+    public String getExactAge() {
+        return exactAge;
+    }
+
+    public void setExactAge(String exactAge) {
+        this.exactAge = exactAge;
     }
 }
