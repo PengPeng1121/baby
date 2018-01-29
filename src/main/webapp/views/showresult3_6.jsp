@@ -12,12 +12,14 @@
                 display: none
             }
         }
-    </style>
-    <style type="text/css" media="print">
-        body
+
+        .transform
         {
             transform: scale(0.9);
         }
+    </style>
+    <style type="text/css" media="print">
+        
         @page
         {
             size:  auto;   /* auto is the initial value */
@@ -25,13 +27,13 @@
         }
     </style>
 </head>
-<body class="front-body">
+<body class="front-body" style="background-color: #fff">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
-    <div class="container">
+    <div class="container" id="renderPdf">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
-        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（3-6岁)</h1>
+        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name" id="hospital"/> </h2>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;" id="title">育儿技能评估（3-6岁)</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -148,13 +150,13 @@
             <tr>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="column"></div>
+                        <div id="column" style="background-color: #fff"></div>
                     </div>
                     
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider"></div>
+                        <div id="spider" style="background-color: #fff"></div>
                     </div>
                     
                 </td>
@@ -170,7 +172,8 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" onclick='javascript:window.print()'>打印结果</a></div>
+            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" id="print" >打印结果</a></div>
+            <div ><a type="button" class="btn btn-primary" style="margin:50px 10px 20px 0px;" id="preview" >预览</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
@@ -192,6 +195,9 @@
     var a6 = +(parseInt($('#a6').text()) / 10).toFixed(2);
     var a7 = +(parseInt($('#a7').text()) / 16).toFixed(2);
     var a8 = +(parseInt($('#a8').text()) / 12).toFixed(2);
+
+    var chart1;
+    var chart2;
     
 
 
@@ -336,7 +342,7 @@
     $(function () {
         $('#column').highcharts({
             chart: {
-                type: 'column'
+                type: 'column',
             },
             title: {
                 text: ''
@@ -366,6 +372,8 @@
                 enabled:false
             },
             series: series
+        }, function(c) {
+            chart1 = c;
         });
 
         $('#spider').highcharts({
@@ -438,8 +446,46 @@
                 data: [a1, a2, a3, a4, a5, a6, a7, a8],
                 pointPlacement: 'on'
             }]
+        }, function(c) {
+            chart2 = c;
         });
     });
+
+    $("#print").click(function() {
+        html2canvas(document.getElementById("renderPdf"), {
+            onrendered: function(canvas) {
+
+                document.body.appendChild(canvas);
+
+                //通过html2canvas将html渲染成canvas，然后获取图片数据
+                var imgData = canvas.toDataURL('image/jpeg');
+
+                //初始化pdf，设置相应格式
+                var doc = new jsPDF("p", "mm", "a4");
+
+                //这里设置的是a4纸张尺寸
+                doc.addImage(imgData, 'JPEG', 0, 0,210,297);
+
+                //输出保存命名为content的pdf
+                doc.save('content.pdf');
+            }
+        });
+    })
+    $("#preview").click(function() {
+        $('nav').remove();
+        $('.front-inner').css('padding-top', '20px');
+        $('.front-inner').css('font-size', '12px');
+        $('.front-inner').css('background-color', '#fff');
+        $('.front-panel').css('margin-bottom', '2px');
+        $('table').css('margin-bottom', '2px');
+        $('#hospital').css('font-size', '18px');
+        $('#title').css('font-size', '20px');
+        $('#renderPdf').css('background-color', '#fff');
+        $('.btn').hide();
+        chart1.setSize(400,250,false);
+        chart2.setSize(400,250,false);
+    });
+
 
 </script>
 </body>
