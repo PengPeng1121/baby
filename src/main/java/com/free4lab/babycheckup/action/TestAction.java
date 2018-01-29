@@ -27,6 +27,8 @@ public class TestAction {
     private List<Result3_6> result3_6List = new ArrayList<Result3_6>();
     private List<Result0_2> result0_2List = new ArrayList<Result0_2>();
     private List<Result50> result50List = new ArrayList<Result50>();
+    private List<Result132> result132List = new ArrayList<Result132>();
+    private List<ResultCognize> resultCognizeList = new ArrayList<ResultCognize>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -131,6 +133,8 @@ public class TestAction {
         result3_6List = ResultManager3_6.findResultBybid(babyid);
         result0_2List = ResultManager0_2.findResultBybid(babyid);
         result50List = ResultManager50.findResultBybid(babyid);
+        resultCognizeList = ResultCognizeManager.findResultBybid(babyid);
+        result132List = ResultManager132.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30;
@@ -484,4 +488,6 @@ public class TestAction {
     public void setResultCognize(ResultCognize resultCognize) {
         this.resultCognize = resultCognize;
     }
+
+
 }
