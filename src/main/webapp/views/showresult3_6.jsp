@@ -32,7 +32,7 @@
 <div class="front-inner front-inner-media">
     <div class="container" id="renderPdf">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
-        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name" id="hospital"/> </h2>
+        <h2 style="padding-left:100px;text-align: center;margin: 0px;" id="hospital"><s:property value="hospital.name"/> </h2>
         <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;" id="title">育儿技能评估（3-6岁)</h1>
 
         <div class="panel panel-default front-panel" id="info">
@@ -481,7 +481,6 @@
         $('#hospital').css('font-size', '18px');
         $('#title').css('font-size', '20px');
         $('#renderPdf').css('background-color', '#fff');
-        $('.btn').hide();
         chart1.setSize(400,250,false);
         chart2.setSize(400,250,false);
     });
