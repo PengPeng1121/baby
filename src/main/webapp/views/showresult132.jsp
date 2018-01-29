@@ -215,7 +215,7 @@
             }
         },
         tooltip: {
-            enabled: false
+            // enabled: false
         },
         plotOptions: {
             column: {
@@ -224,9 +224,11 @@
         },
         series: [{
             name: '总分',
+            color: '#004e90',
             data: [23, 20, 22, 31, 18, 18, 132]
         }, {
             name: '得分',
+            color: '#ff9800',
             data: [b1, b2, b3, b4, b5, b6, b8]
         }]
     });
@@ -283,7 +285,7 @@
             }]
         },
         tooltip: {
-            enabled: false
+            // enabled: false
         },
         series: [{
             name: '得分',
