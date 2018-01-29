@@ -208,7 +208,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultCognize?id=<s:property value="#reCognize.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultcognize?id=<s:property value="#reCognize.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>
