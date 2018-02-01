@@ -166,11 +166,11 @@
 <script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
-    var a1 = +(parseInt($('#a1').text()) / 23).toFixed(2);
-    var a2 = +(parseInt($('#a2').text()) / 20).toFixed(2);
-    var a3 = +(parseInt($('#a3').text()) / 22).toFixed(2);
-    var a4 = +(parseInt($('#a4').text()) / 31).toFixed(2);
-    var a5 = +(parseInt($('#a5').text()) / 18).toFixed(2);
+    var a1 = +(parseInt($('#a1').text()) / 31).toFixed(2);
+    var a2 = +(parseInt($('#a2').text()) / 18).toFixed(2);
+    var a3 = +(parseInt($('#a3').text()) / 20).toFixed(2);
+    var a4 = +(parseInt($('#a4').text()) / 23).toFixed(2);
+    var a5 = +(parseInt($('#a5').text()) / 22).toFixed(2);
     var a6 = +(parseInt($('#a6').text()) / 18).toFixed(2);
     var a8 = parseInt($('#a8').text());
 
@@ -180,7 +180,7 @@
     var b4 = parseInt($('#a4').text())
     var b5 = parseInt($('#a5').text())
     var b6 = parseInt($('#a6').text())
-    var b8 = parseInt($('#a8').text());
+    var b8 = parseInt($('#a0').text());
     // 柱状图数据
     
     $('#column').highcharts({
@@ -288,7 +288,7 @@
             // enabled: false
         },
         series: [{
-            name: '得分',
+            name: '得分占比',
             data: [a1, a2, a3, a4, a5, a6],
             pointPlacement: 'on'
         }]

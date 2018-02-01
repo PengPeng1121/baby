@@ -702,8 +702,13 @@
 
         if (trueCount == 10) {
             //改题之前的全部设为“对”
+            
+            var selectFalse;
             for (var i = 0; i < index; i++) {
-                $('.' + i + '.a').removeClass('hide').addClass('show');
+                selectFalse = $('.' + i + '.b').attr('class');
+                if (selectFalse.indexOf('show') != -1) {
+                    $('.' + i + '.a').removeClass('hide').addClass('show');
+                }
             }
         } 
         
