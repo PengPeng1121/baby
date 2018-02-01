@@ -28,6 +28,7 @@ public class ResultCognizeAction {
     private String section90 ;
     private String section95 ;
     private String exactAge;//实足年龄
+    private String evaluation;
     public String showResultCognize() {
         resultCognize = ResultCognizeManager.findResultByid(id);
         baby = BabyManager.findById(resultCognize.getBabyId());
@@ -38,7 +39,7 @@ public class ResultCognizeAction {
             percent = resultCognize.getPercent();
             section90 = resultCognize.getSection90();
             section95 = resultCognize.getSection95();
-
+            evaluation = resultCognize.getEvaluation();
             Calendar calendarTestTime = Calendar.getInstance();
             calendarTestTime.setTime(resultCognize.getTime());//检测时间
 
@@ -149,5 +150,13 @@ public class ResultCognizeAction {
 
     public void setExactAge(String exactAge) {
         this.exactAge = exactAge;
+    }
+
+    public String getEvaluation() {
+        return evaluation;
+    }
+
+    public void setEvaluation(String evaluation) {
+        this.evaluation = evaluation;
     }
 }

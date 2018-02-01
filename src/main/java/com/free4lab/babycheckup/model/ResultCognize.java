@@ -23,6 +23,7 @@ public class ResultCognize {
     private String percent;
     private String score;//题目得分
     private String scale;//量表分
+    private String evaluation;//评定结果
     private String section90;
     private String section95;
 
@@ -1179,5 +1180,15 @@ public class ResultCognize {
 
     public void setSection95(String section95) {
         this.section95 = section95;
+    }
+
+    @Basic
+    @Column(name = "evaluation", nullable = true, length = 20)
+    public String getEvaluation() {
+        return evaluation;
+    }
+
+    public void setEvaluation(String evaluation) {
+        this.evaluation = evaluation;
     }
 }

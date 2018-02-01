@@ -4,6 +4,7 @@ import com.free4lab.babycheckup.constant.*;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
+import com.pp.common.constant.resultCognize.Evaluation;
 import com.pp.common.constant.util.GetStandardUtil;
 import com.pp.common.constant.result132.Level;
 import com.pp.common.constant.util.GetScaleUtil;
@@ -235,10 +236,13 @@ public class TestAction {
             String percent = arr[1];
             String section90 = arr[2];
             String section95 = arr[3];
+            String evaluation = "";
+            evaluation = Evaluation.getEvaluation(Double.parseDouble(percent));
             resultCognize.setTalent(talent);
             resultCognize.setPercent(percent);
             resultCognize.setSection90(section90);
             resultCognize.setSection95(section95);
+            resultCognize.setEvaluation(evaluation);
             resultCognize.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             resultCognize.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
             resultCognize.setTestId(17);
@@ -489,5 +493,19 @@ public class TestAction {
         this.resultCognize = resultCognize;
     }
 
+    public List<Result132> getResult132List() {
+        return result132List;
+    }
 
+    public void setResult132List(List<Result132> result132List) {
+        this.result132List = result132List;
+    }
+
+    public List<ResultCognize> getResultCognizeList() {
+        return resultCognizeList;
+    }
+
+    public void setResultCognizeList(List<ResultCognize> resultCognizeList) {
+        this.resultCognizeList = resultCognizeList;
+    }
 }
