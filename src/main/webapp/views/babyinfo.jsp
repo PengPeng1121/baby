@@ -216,6 +216,36 @@
                     </s:iterator>
 
 
+                    <s:iterator value="result0_3List" id="re0_3">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           育儿技能评估（0-3岁)
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re0_3.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">被访者</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:property value="#re0_3.answerRelation" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresult0_3?id=<s:property value="#re0_3.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
                     </tbody>
                 </table>
             </div>

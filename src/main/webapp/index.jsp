@@ -136,6 +136,38 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 育儿技能评估（0-3岁） -->
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/0_2.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">父母育儿评估量表（0-3岁）</p>
+                                <div class="as-desc">
+                                    <div style="display: inline-block;">
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult0_3"/></label>
+                                        <label style="font-weight:normal;">个</label>
+                                    </div>
+                                </div>
+                                <!-- <div class="as-desc">
+                                    正式上线时间：2018年2月
+                                </div> -->
+                                <div class="text-right">
+                                    <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
             <!-- 学龄前50项智力测查 -->
             <div class="col-md-4">
                 <div class="panel panel-default front-panel " style="height: 155px;">
