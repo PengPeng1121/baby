@@ -158,7 +158,7 @@
                                 </s:if>
 
 
-                                <td style="width:30px"  class="order" id="<s:property value="#question.ordinal"/>">
+                                <td style="width:30px"  class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
 
@@ -176,7 +176,7 @@
                                     </span>
                                 </td>
                                 <td style="width:10px">
-                                    <input  id="<s:property value="#question.ordinal"/>"/>
+                                    <input  id="desc<s:property value="#question.ordinal"/>"/>
                                 </td>
 
 
@@ -218,7 +218,19 @@
         'O': '60',
         'P': '63',
         'Q': '67'
-    }
+    };
+    var questionSum = $('#questionSum').val();
+    var questionMonthSum = $('#questionMonthSum').val();
+    var questionTypeSum = $('#questionTypeSum').val();
+    var questionScore = [0,0,0,0,0,0,0,0];
+    var questionReason = [questionSum];
+    var questionReasonDesc = [questionSum];
+    var days = $('#days').val();
+    var start = $('#start').val() || 'E';
+    var startNow = 0;
+    var flag = 1;
+
+
     function failReasons(ordinal, reasons) {
 
         $('#failMessage' + ordinal).css("color","#ff0049");
@@ -230,17 +242,6 @@
             $("#qid").val(ordinal);
         });
     }
-
-    var questionSum = $('#questionSum').val();
-    var questionMonthSum = $('#questionMonthSum').val();
-    var questionTypeSum = $('#questionTypeSum').val();
-    var questionScore = [0,0,0,0,0,0,0,0];
-    var questionReason = [questionSum];
-    var questionReasonDesc = [questionSum];
-    var days = $('#days').val();
-    var start = $('#start').val() || 'E';
-    var startNow = 0;
-    var flag = 1;
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0];
@@ -276,7 +277,7 @@
 
         //根据月龄判断跳转到起点
         startNow = parseInt(starts[start]);
-        var offset = $('#' + startNow).offset();
+        var offset = $('#order' + startNow).offset();
         var y = offset.top - 50;
         setTimeout(function() {
             window.scrollTo(0,y);
@@ -308,7 +309,7 @@
             }
         }
 
-        //每个题的详细原因
+        // 每个题的详细原因
         // for(var i = 0; i < questionSum; i++) {
         //     questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
         // }
@@ -359,7 +360,7 @@
                 var startIndex = start.charCodeAt();
                 start = String.fromCharCode(startIndex - 1);
                 startNow = parseInt(starts[start]);
-                var offset = $('#' + startNow).offset();
+                var offset = $('#order' + startNow).offset();
                 var y = offset.top - 50;
                 window.scrollTo(0,y);
                 flag = 0;
