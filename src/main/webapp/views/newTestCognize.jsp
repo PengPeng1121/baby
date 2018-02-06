@@ -58,6 +58,8 @@
             
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
+                <!-- 起点 -->
+                <input id="start" type="hidden" value="<s:property value="start"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
                 <!-- 问题列表 -->
                 <input id="questionSum" type="hidden" value="<s:property value="questionList.size()"/>">
@@ -72,7 +74,7 @@
                             <td>No.</td>
                             <td>项目</td>
                             <td colspan="2">得分</td>
-                            <td>儿童回答答案</td>
+                            <td>备注</td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <tr class="question">
@@ -108,14 +110,19 @@
                                 </s:if>
 
                                 <s:if test="#question.ordinal == 25">
-                                    <td style="width:30px" rowspan="9">
+                                    <td style="width:30px" rowspan="6">
                                         H
                                     </td>
                                 </s:if>
 
+                                <s:if test="#question.ordinal == 31">
+                                    <td style="width:30px" rowspan="3">
+                                        I
+                                    </td>
+                                </s:if>
                                 <s:if test="#question.ordinal == 34">
                                     <td style="width:30px" rowspan="6">
-                                        I
+                                        J
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 40">
@@ -151,7 +158,7 @@
                                 </s:if>
 
 
-                                <td style="width:30px">
+                                <td style="width:30px"  class="order" id="<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
 
@@ -160,12 +167,12 @@
                                 </td>
                                 <td style="width:30px" onclick="select(this)">
                                     <span class="<s:property value="#question.ordinal"/> a hide" style="top: 4px; color: green;text-align:center">
-                                        1
+                                        A
                                     </span>
                                 </td>
                                 <td style="width:30px" onclick="select(this)">
                                     <span class="<s:property value="#question.ordinal"/> b hide" style="top: 4px; color: red; text-align: center">
-                                        0
+                                        B
                                     </span>
                                 </td>
                                 <td style="width:10px">
@@ -193,7 +200,25 @@
 
     ;(function () {
     })();
-
+    var starts = {
+        'A': '1',
+        'B': '3',
+        'C': '3',
+        'D': '7',
+        'E': '16',
+        'F': '19',
+        'G': '22',
+        'H': '25',
+        'I': '31',
+        'J': '34',
+        'K': '40',
+        'L': '45',
+        'M': '45',
+        'N': '56',
+        'O': '60',
+        'P': '63',
+        'Q': '67'
+    }
     function failReasons(ordinal, reasons) {
 
         $('#failMessage' + ordinal).css("color","#ff0049");
@@ -212,34 +237,19 @@
     var questionScore = [0,0,0,0,0,0,0,0];
     var questionReason = [questionSum];
     var questionReasonDesc = [questionSum];
+    var days = $('#days').val();
+    var start = $('#start').val() || 'E';
+    var startNow = 0;
+    var flag = 1;
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0];
         var  temp;
         $('.question').removeClass('noanswer');
-        // Todo: 去掉所有没有答的题的样式
-        // for(var i = 1; i <= questionSum; i++) {
-        //     temp = $('.' + i + '.show').attr('class');
-        //     if (!temp) {
-        //         // Todo: 标注所有没有答的题
-        //         for (var j = i; j <= questionSum; j++) {
-        //             t = $('.' + j + '.show').attr('class');
-        //             if (!t) {
-        //                 $('.' + j).parents('tr').addClass('noanswer');
-        //             }
-        //         }
-        //         $.tipModal('alert', 'warning', '有题目未完成！');
-        //         return false;
-        //     }
-
-        // }
-
-
         for (var i = 1; i <= questionSum; i++) {
             temp = $.trim($('.' + i + '.show').text());
-            if (temp != '') {
-               temp = parseInt(temp);
-               questionScore[1] += temp;
+            if (temp == 'A') {
+               questionScore[1] += 1;
             }
         }
         return true;
@@ -263,59 +273,113 @@
                 }
             });
         });
+
+        //根据月龄判断跳转到起点
+        startNow = parseInt(starts[start]);
+        var offset = $('#' + startNow).offset();
+        var y = offset.top - 50;
+        setTimeout(function() {
+            window.scrollTo(0,y);
+        }, 500)
+        
     })
 
     function save() {
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
-                    var data = "{";
-
-                    //每个题的原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReason[i] = $("#reason" + (i + 1)).val() || '';
-                    }
-
-                    for(var i = 0; i < questionSum; i++) {
-                        if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'resultCognize.reason" + (i + 1) + "':'" + questionReason[i] + "',"
-                        }
-                    }
-
-                    //每个题的详细原因
-                    // for(var i = 0; i < questionSum; i++) {
-                    //     questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
-                    // }
-
-                    // for(var i = 0; i < questionSum; i++) {
-                    //     data += "'result_cognize.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
-                    // }
-
-
-
-
-                    data += "'resultCognize.score':" + questionScore[1] + ",";
-                    
-
-                    data += "'resultCognize.babyId':" + $("#babyid").val() + "}";
-                    
-
-                    $.ajax({
-                        url: 'saveresultcognize',
-                        type: 'post',
-                        data: eval('(' + data + ')'),
-                        success:function (json) {
-                            window.location = "showresultcognize?id=" + json.resultCognize.id;
-                        }
-                    })
+                    score();
                 }
             });
         }
     }
+
+    function score() {
+        var data = "{";
+
+        //每个题的原因
+        for(var i = 0; i < questionSum; i++) {
+            questionReason[i] = $("#reason" + (i + 1)).val() || '';
+        }
+
+        for(var i = 0; i < questionSum; i++) {
+            if((questionReason[i] != null)&&(questionReason[i] != '')){
+                data += "'resultCognize.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+            }
+        }
+
+        //每个题的详细原因
+        // for(var i = 0; i < questionSum; i++) {
+        //     questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
+        // }
+
+        // for(var i = 0; i < questionSum; i++) {
+        //     data += "'result_cognize.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+        // }
+
+
+
+
+        data += "'resultCognize.score':" + questionScore[1] + ",";
+        
+
+        data += "'resultCognize.babyId':" + $("#babyid").val() + "}";
+        
+
+        $.ajax({
+            url: 'saveresultcognize',
+            type: 'post',
+            data: eval('(' + data + ')'),
+            success:function (json) {
+                window.location = "showresultcognize?id=" + json.resultCognize.id;
+            }
+        })
+    }
+    var countTrue = 0;
+    var countFalse = 0;
     function select(target) {
+        var $target = $(target);
+        //获取当前题目的序号
+        var index = $.trim($target.parent().find('.order').text());
         $(target).parent().find('.a').addClass('hide').removeClass('show');
         $(target).parent().find('.b').addClass('hide').removeClass('show');
         $(target).find('span').removeClass('hide').addClass('show');
+
+
+
+        var value = $(target).find('span').attr('class');
+        if (value.indexOf('a') != -1) {
+            countTrue += 1;
+            countFalse = 0;
+        } else {
+            countFalse += 1;
+            //判断是不是在前三
+            if (parseInt(index) < (startNow + 3) && flag) {
+            //跳转到上一级
+                var startIndex = start.charCodeAt();
+                start = String.fromCharCode(startIndex - 1);
+                startNow = parseInt(starts[start]);
+                var offset = $('#' + startNow).offset();
+                var y = offset.top - 50;
+                window.scrollTo(0,y);
+                flag = 0;
+                countFalse = 0;
+            }
+            if (countFalse == 5) {
+                setTimeout(function(){
+                    alert('测试结束');
+                    for (var i = 1; i <= questionSum; i++) {
+                        temp = $.trim($('.' + i + '.show').text());
+                        if (temp == 'A') {
+                           questionScore[1] += 1;
+                        }
+                    }
+                    score();
+                }, 300);
+            }
+        }
+
+
     }
 
 </script>

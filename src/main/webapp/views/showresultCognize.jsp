@@ -223,7 +223,7 @@
         var data = [{
             name: 'a',
             data: [5, 0],
-            color: 'green'
+            color: '#8BC34A'
         }, {
             name: 'b',
             data: [20, 0],
@@ -257,7 +257,7 @@
                 enabled: false
             },
             title: {
-                text: '百分位'
+                text: '百分位:' + percent
             },
             xAxis: {
                 categories: ['', '孩子得分']
