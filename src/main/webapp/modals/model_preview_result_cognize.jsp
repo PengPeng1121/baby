@@ -3,6 +3,10 @@
 
 <div class="modal-body" style="text-align: center">
     <div class="row">
+        <label class="col-md-6">姓名</label>
+        <span class="col-md-6" id="previewName"></span>
+        <label class="col-md-6">月龄</label>
+        <span class="col-md-6" id="previewAge"></span>
         <label class="col-md-6">得分</label>
         <span class="col-md-6" id="questionScore1"></span>
     </div>
@@ -13,6 +17,8 @@
 </div>
 <script>
     ;(function () {
-        $('#questionScore1').html(questionScore[1])
+        $('#previewName').html(name);
+        $('#previewAge').html(days);
+        $('#questionScore1').html(questionScore[1]);
     })();
 </script>

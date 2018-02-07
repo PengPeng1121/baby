@@ -60,6 +60,7 @@
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <!-- 起点 -->
                 <input id="start" type="hidden" value="<s:property value="start"/>">
+                <input id="name" type="hidden" value="<s:property value="baby.name"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
                 <!-- 问题列表 -->
                 <input id="questionSum" type="hidden" value="<s:property value="questionList.size()"/>">
@@ -225,6 +226,7 @@
     var questionScore = [0,0,0,0,0,0,0,0];
     var questionReason = [questionSum];
     var questionReasonDesc = [questionSum];
+    var name = $('#name').val();
     var days = $('#days').val();
     var start = $('#start').val() || 'E';
     var startNow = 0;
