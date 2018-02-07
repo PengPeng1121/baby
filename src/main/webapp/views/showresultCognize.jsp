@@ -163,7 +163,7 @@
                                 this.value + '</span>';
                         }
                         if(this.value == 75){
-                            return '<span style="color:orange;position: absolute;top: -45px;">' +
+                            return '<span style="color:orange;position: absolute;top: -48px;">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 90){

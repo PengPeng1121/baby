@@ -71,14 +71,14 @@
                             <td style="width:100px">儿童回答答案</td>
                         </tr>
                         <tr>
-                            <td id="month6" colspan="6" style="background-color: #ddd;">
+                            <td id="month6" class="month" colspan="6" style="background-color: #ddd;">
                                6月-1岁11月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal < 20"> 
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -123,14 +123,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month24" colspan="6" style="background-color: #ddd;">
+                            <td id="month24" class="month" colspan="6" style="background-color: #ddd;">
                                2岁-3岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 19 && #question.ordinal < 42"> 
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -175,14 +175,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month42" colspan="6" style="background-color: #ddd;">
+                            <td id="month42" class="month" colspan="6" style="background-color: #ddd;">
                                3岁6月-4岁11月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 41 && #question.ordinal < 64"> 
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -227,14 +227,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month60" colspan="6" style="background-color: #ddd;">
+                            <td id="month60" class="month" colspan="6" style="background-color: #ddd;">
                                5岁-6岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 63 && #question.ordinal < 81"> 
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -279,14 +279,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month78" colspan="6" style="background-color: #ddd;">
+                            <td id="month78" class="month" colspan="6" style="background-color: #ddd;">
                                6岁6月-8岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 80 && #question.ordinal < 97"> 
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -331,14 +331,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month98" colspan="6" style="background-color: #ddd;">
+                            <td id="month98" class="month" colspan="6" style="background-color: #ddd;">
                                8岁6月-10岁5月 
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 96 && #question.ordinal < 114">  
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -383,14 +383,14 @@
                             
                         </s:iterator>
                         <tr>
-                            <td id="month126" colspan="6" style="background-color: #ddd;">
+                            <td id="month126" class="month" colspan="6" style="background-color: #ddd;">
                                10岁6月- 17岁
                             </td>
                         </tr>
                         <s:iterator value="questionList" id="question" status='st'>
                             <s:if test="#question.ordinal > 113 && #question.ordinal < 133">  
                             <tr class="question">
-                                <td style="width:30px" class="order">
+                                <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
                                     <s:property value="#question.ordinal"/>
                                 </td>
                                 <!-- 项目类型 -->
@@ -454,6 +454,20 @@
 
     var trueCount = 0;
     var falseCount = 0;
+    var questionSum = $('#questionSum').val();
+    var questionMonthSum = $('#questionMonthSum').val();
+    var questionTypeSum = $('#questionTypeSum').val();
+    var questionScore = [0,0,0,0,0,0,0,0];
+    var questionReason = [questionSum];
+    var questionReasonDesc = [questionSum];
+    var map = [1, 20, 42, 64, 81, 97, 114];
+    var ageLine = [6, 24, 42, 60, 78, 102, 126];
+    var startNow = 0;
+    var ageNow = 0;
+    // 当前开始题目
+    // 当前高亮年龄段
+
+
     function failReasons(ordinal, reasons) {
 
         $('#failMessage' + ordinal).css("color","#ff0049");
@@ -465,14 +479,6 @@
             $("#qid").val(ordinal);
         });
     }
-
-    //月龄
-    var questionSum = $('#questionSum').val();
-    var questionMonthSum = $('#questionMonthSum').val();
-    var questionTypeSum = $('#questionTypeSum').val();
-    var questionScore = [0,0,0,0,0,0,0,0];
-    var questionReason = [questionSum];
-    var questionReasonDesc = [questionSum];
 
     function prepare() {
         questionScore = [0,0,0,0,0,0,0,0];
@@ -496,8 +502,11 @@
         //     }
 
         // }
+        count();
+        return true;
+    }
 
-
+    function count() {
         for (var i = 0; i <= questionSum; i++) {
             temp = $('.' + i + '.show').attr('class');
             if(temp==""||temp==undefined){
@@ -534,7 +543,6 @@
                 continue;
             }
         }
-        return true;
     }
 
     function getRange() {
@@ -576,7 +584,6 @@
     $(function(){
         var s = $("input[type='checkbox']");
         s.each(function(i) {
-//          alert(i);
             $(this).click(function(){
                 if(this.checked==true){
                     var id = this.id;
@@ -590,43 +597,59 @@
         var days = parseInt($('#days').val());
         var top = 0;
         if (days< 24) {
+            startNow = 1;
+            ageNow = 6;
             top = $('#month6').offset().top;
             $('#month6').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else if (days < 42) {
+            startNow = 20;
+            ageNow = 24;
             top = $('#month24').offset().top;
             $('#month24').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else if (days < 60) {
+            startNow = 42;
+            ageNow = 42;
             top = $('#month42').offset().top;
             $('#month42').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else if (days < 78) {
+            startNow = 64;
+            ageNow = 60;
             top = $('#month60').offset().top;
             $('#month60').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else if (days < 102) {
+            startNow = 81;
+            ageNow = 78;
             top = $('#month78').offset().top;
             $('#month78').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else if (days < 126) {
+            startNow = 97;
+            ageNow = 102;
             top = $('#month102').offset().top;
             $('#month102').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         } else {
+            startNow = 114;
+            ageNow = 126;
             top = $('#month126').offset().top;
             $('#month126').css({
-                "background-color": "red"
+                "background-color": "green"
             });
         }
-
-        $("body").scrollTop(top - 300);
+        setTimeout(function() {
+            window.scrollTo(0,top-50);
+        }, 300)
+        
         
     })
 
@@ -634,84 +657,137 @@
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
-                    var data = "{";
-
-                    //每个题的原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReason[i] = $("#reason" + (i + 1)).val() || '';
-                    }
-
-                    for(var i = 0; i < questionSum; i++) {
-                        if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result132.reason" + (i + 1) + "':'" + questionReason[i] + "',"
-                        }
-                    }
-
-                    //每个题的详细原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
-                    }
-
-                    for(var i = 0; i < questionSum; i++) {
-                        data += "'result132.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
-                    }
-
-
-
-
-                    data += "'result132.a1':" + questionScore[1] + ",";
-                    data += "'result132.a2':" + questionScore[2] + ",";
-                    data += "'result132.a3':" + questionScore[3] + ",";
-                    data += "'result132.a4':" + questionScore[4] + ",";
-                    data += "'result132.a5':" + questionScore[5] + ",";
-                    data += "'result132.a6':" + questionScore[6] + ",";
-                    
-
-                    data += "'result132.babyId':" + $("#babyid").val() + "}";
-                    
-
-                    $.ajax({
-                        url: 'saveresult132',
-                        type: 'post',
-                        data: eval('(' + data + ')'),
-                        success:function (json) {
-                            window.location = "showresult132?id=" + json.result132.id;
-                        }
-                    })
+                    score();
                 }
             });
         }
+    }
+    function score() {
+        count();
+
+        var data = "{";
+
+        //每个题的原因
+        for(var i = 0; i < questionSum; i++) {
+            questionReason[i] = $("#reason" + (i + 1)).val() || '';
+        }
+
+        for(var i = 0; i < questionSum; i++) {
+            if((questionReason[i] != null)&&(questionReason[i] != '')){
+                data += "'result132.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+            }
+        }
+
+        //每个题的详细原因
+        for(var i = 0; i < questionSum; i++) {
+            questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
+        }
+
+        for(var i = 0; i < questionSum; i++) {
+            data += "'result132.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+        }
+
+
+
+
+        data += "'result132.a1':" + questionScore[1] + ",";
+        data += "'result132.a2':" + questionScore[2] + ",";
+        data += "'result132.a3':" + questionScore[3] + ",";
+        data += "'result132.a4':" + questionScore[4] + ",";
+        data += "'result132.a5':" + questionScore[5] + ",";
+        data += "'result132.a6':" + questionScore[6] + ",";
+        
+
+        data += "'result132.babyId':" + $("#babyid").val() + "}";
+        
+
+        $.ajax({
+            url: 'saveresult132',
+            type: 'post',
+            data: eval('(' + data + ')'),
+            success:function (json) {
+                window.location = "showresult132?id=" + json.result132.id;
+            }
+        })
     }
 
 
     function select(target) {
         var $target = $(target);
+        var index = 0;
+        var top = 0;
         $(target).parent().find('.a').addClass('hide').removeClass('show');
         $(target).parent().find('.b').addClass('hide').removeClass('show');
         $(target).find('span').removeClass('hide').addClass('show');
 
         //获取当前题目的序号
-        var index = $.trim($target.parent().find('.order').text());
+        var orderIndex = parseInt($.trim($target.parent().find('.order').text()));
         var value = $(target).find('span').attr('class');
+        var prevClass1 = '';
+        var prevClass2 = '';
+
+        trueCount = 0;
+        falseCount = 0;
 
         if (value.indexOf('a') != -1) {
            trueCount += 1;
         } else {
-           falseCount += 1;
+            if (orderIndex < (startNow + 10)) {
+                //跳转到上一级
+                index = getIndex();
+                top = $('#month' + ageLine[index-1]).offset().top;
+                $('.month').css({
+                    "background-color": "#ddd"
+                });
+                $('#month' + ageLine[index-1]).css({
+                    "background-color": "green"
+                });
+                window.scrollTo(0,top-50);
+                startNow = map[index-1];
+                ageNow = ageLine[index-1];
+                // trueCount = 0;
+                // falseCount = 0;
+            }
+            falseCount += 1;
+            // trueCount = 0;
+        }
+        var prev = 0;
+        for (var i = 1; i < 10; i++) {
+            prev = orderIndex - i ;
+            prevClass1 = $('.' + prev + '.a').attr('class');
+            prevClass2 = $('.' + prev + '.b').attr('class');
+            if ( prevClass1.indexOf('show') != -1){
+                trueCount += 1;
+            } 
+            if ( prevClass2.indexOf('show') != -1){
+                falseCount += 1;
+            }
         }
 
-        if (trueCount == 10) {
-            //改题之前的全部设为“对”
-            
+        if (trueCount == 10 && (orderIndex < (startNow + 10)) ) {
+            //该题之前的全部设为“对” 并且是前10个项目
             var selectFalse;
-            for (var i = 0; i < index; i++) {
-                selectFalse = $('.' + i + '.b').attr('class');
-                if (selectFalse.indexOf('show') != -1) {
-                    $('.' + i + '.a').removeClass('hide').addClass('show');
-                }
+            for (var i = 0; i < orderIndex; i++) {
+                $('.' + i + '.a').removeClass('hide').addClass('show');
+                $('.' + i + '.b').removeClass('show').addClass('hide');
             }
         } 
+
+        if (falseCount == 10) {
+            setTimeout(function(){
+                alert('测试结束');
+                score();
+            }, 300);
+        } 
         
+    }
+
+    function getIndex() {
+        for (var i = 0, len = map.length; i < len; i++) {
+            if (map[i] == startNow) {
+                return i;
+            }
+        }
     }
 
 </script>

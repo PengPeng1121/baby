@@ -229,6 +229,8 @@
     var start = $('#start').val() || 'E';
     var startNow = 0;
     var flag = 1;
+    var countTrue = 0;
+    var countFalse = 0;
 
 
     function failReasons(ordinal, reasons) {
@@ -336,12 +338,11 @@
             }
         })
     }
-    var countTrue = 0;
-    var countFalse = 0;
+
     function select(target) {
         var $target = $(target);
         //获取当前题目的序号
-        var index = $.trim($target.parent().find('.order').text());
+        var orderIndex = parseInt($.trim($target.parent().find('.order').text()));
         $(target).parent().find('.a').addClass('hide').removeClass('show');
         $(target).parent().find('.b').addClass('hide').removeClass('show');
         $(target).find('span').removeClass('hide').addClass('show');
@@ -349,13 +350,21 @@
 
 
         var value = $(target).find('span').attr('class');
+
+
+        var prevClass1 = '';
+        var prevClass2 = '';
+
+        countTrue = 0;
+        countFalse = 0;
+
+
         if (value.indexOf('a') != -1) {
             countTrue += 1;
-            countFalse = 0;
         } else {
             countFalse += 1;
             //判断是不是在前三
-            if (parseInt(index) < (startNow + 3) && flag) {
+            if (orderIndex < (startNow + 3) && flag) {
             //跳转到上一级
                 var startIndex = start.charCodeAt();
                 start = String.fromCharCode(startIndex - 1);
@@ -364,20 +373,33 @@
                 var y = offset.top - 50;
                 window.scrollTo(0,y);
                 flag = 0;
-                countFalse = 0;
             }
-            if (countFalse == 5) {
-                setTimeout(function(){
-                    alert('测试结束');
-                    for (var i = 1; i <= questionSum; i++) {
-                        temp = $.trim($('.' + i + '.show').text());
-                        if (temp == 'A') {
-                           questionScore[1] += 1;
-                        }
+        }
+
+        for (var i = 1; i < 5; i++) {
+            prev = orderIndex - i ;
+            prevClass1 = $('.' + prev + '.a').attr('class');
+            prevClass2 = $('.' + prev + '.b').attr('class');
+            if ( prevClass1.indexOf('show') != -1){
+                countTrue += 1;
+            } 
+            if ( prevClass2.indexOf('show') != -1){
+                countFalse += 1;
+            }
+        }
+
+
+        if (countFalse == 5) {
+            setTimeout(function(){
+                alert('测试结束');
+                for (var i = 1; i <= questionSum; i++) {
+                    temp = $.trim($('.' + i + '.show').text());
+                    if (temp == 'A') {
+                       questionScore[1] += 1;
                     }
-                    score();
-                }, 300);
-            }
+                }
+                score();
+            }, 300);
         }
 
 
