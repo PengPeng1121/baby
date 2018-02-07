@@ -52,10 +52,12 @@
                     </tr>
 
                     <tr>
+                        <td class="col-md-2">月龄</td>
+                        <td class="col-md-2"><s:property value="days"/></td>
+                        <td class="col-md-2"></td>
+                        <td class="col-md-2"></td>
                         <td class="col-md-2">早产天数</td>
-                        <td class="col-md-2"><s:date value="preDelivery"/></td>
-                        <td class="col-md-2"></td>
-                        <td class="col-md-2"></td>
+                        <td class="col-md-2"><s:property value="preDelivery"/></td>
                     </tr>
                 </table>
             </div>
@@ -114,7 +116,7 @@
 <script type="text/javascript">
 
     var scale = parseInt($('#scale').val());
-    var percent = parseInt($('#percent').val());
+    var percent = parseFloat($('#percent').val());
     var talent = parseInt($('#talent').val());
     // 柱状图数据
 
