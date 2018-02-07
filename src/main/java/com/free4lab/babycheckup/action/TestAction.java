@@ -4,15 +4,17 @@ import com.free4lab.babycheckup.constant.*;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
-import com.pp.common.constant.resultCognize.Evaluation;
-import com.pp.common.constant.util.GetStandardUtil;
 import com.pp.common.constant.result132.Level;
-import com.pp.common.constant.util.GetScaleUtil;
+import com.pp.common.constant.resultCognize.Evaluation;
 import com.pp.common.constant.resultCognize.Talent;
+import com.pp.common.constant.util.ExactAgeUtil;
+import com.pp.common.constant.util.GetScaleUtil;
+import com.pp.common.constant.util.GetStandardUtil;
 import org.apache.commons.lang.StringUtils;
 
-import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -39,18 +41,22 @@ public class TestAction {
     private Result132 result132;
     private Result50 result50;
     private ResultCognize resultCognize;
-    private int days;
+    private String days;
     private int day;
-
+    //早产天数
+    private Integer preDelivery;
+    private String start;
     private String redirectUrl;
+
     public String newTestChoice() {
         baby = BabyManager.findById(babyid);
         babyid =baby.getBabyid();
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         //紧急方案  都跳转到newtest0_6
-        if(days<=24){
+        Integer month = Integer.parseInt(days.trim());
+        if(month<=24){
             redirectUrl = "/newtest0_6";
         }else {
             redirectUrl = "/newtest0_6";
@@ -65,7 +71,7 @@ public class TestAction {
         baby = BabyManager.findById(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
@@ -77,7 +83,7 @@ public class TestAction {
         testid = 2;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
@@ -89,7 +95,7 @@ public class TestAction {
         testid = 16;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
@@ -101,7 +107,7 @@ public class TestAction {
         testid = 17;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
@@ -113,18 +119,49 @@ public class TestAction {
         testid = 18;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTestCognize() {
-        questionList = QuestionManager.findByTestid(19);
-        baby = BabyManager.findById(babyid);
-        testid = 19;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        day = (differentdays(birth,today));
-        days = (differentdays(birth,today))/30;
+        try{
+            questionList = QuestionManager.findByTestid(19);
+            baby = BabyManager.findById(babyid);
+            testid = 19;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            //获取早产天数
+            int preDeliveryDay = 0;
+            if (baby.getPreDelivery()==null){
+                 preDeliveryDay = 0;
+            }else {
+                 preDeliveryDay = baby.getPreDelivery();
+            }
+            preDelivery = preDeliveryDay;
+            day = (differentdays(birth,today));
+            days = (differentdays(birth,today))/30+"";
+            //如果早产要计算实足年龄
+            if(preDelivery!=0){
+                Calendar calendarTestTime = Calendar.getInstance();
+                calendarTestTime.setTime(new Date());//检测时间
+                Calendar calendarBirthday = Calendar.getInstance();
+                calendarBirthday.setTime(baby.getBirthday());
+                int[] timeArray = ExactAgeUtil.getNatureAge(calendarBirthday,calendarTestTime);
+                Integer exactAge = timeArray[0]*365+timeArray[1]*30+timeArray[2];
+                //矫正年龄
+                Integer adjustAge = exactAge-preDelivery;
+                Calendar calendarBefore = Calendar.getInstance(); //得到日历
+                calendarBefore.setTime(new Date());//把当前时间赋给日历
+                calendarBefore.add(Calendar.DAY_OF_MONTH, -adjustAge);  //设置为前多少天
+                int[] preDeliveryTimeArray = ExactAgeUtil.getNatureAge(calendarBefore,calendarTestTime);
+                days = String.valueOf(preDeliveryTimeArray[0])+"岁"+String.valueOf(preDeliveryTimeArray[1])+"月"+String.valueOf(preDeliveryTimeArray[2])+"日";
+            }
+            //起点
+            start = GetScaleUtil.getStart(baby.getBirthday());
+
+        }catch (Exception e){
+
+        }
         return SUCCESS;
     }
 
@@ -138,7 +175,7 @@ public class TestAction {
         result132List = ResultManager132.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30;
+        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
@@ -344,8 +381,8 @@ public class TestAction {
         return pStr;
     }
 
-    public int differentdays(Date d1, Date d2){
-        int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
+    public Integer differentdays(Date d1, Date d2){
+        Integer days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
     }
 
@@ -403,11 +440,11 @@ public class TestAction {
         this.result = result;
     }
 
-    public int getDays() {
+    public String getDays() {
         return days;
     }
 
-    public void setDays(int days) {
+    public void setDays(String days) {
         this.days = days;
     }
 
@@ -507,5 +544,21 @@ public class TestAction {
 
     public void setResultCognizeList(List<ResultCognize> resultCognizeList) {
         this.resultCognizeList = resultCognizeList;
+    }
+
+    public Integer getPreDelivery() {
+        return preDelivery;
+    }
+
+    public void setPreDelivery(Integer preDelivery) {
+        this.preDelivery = preDelivery;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
     }
 }
