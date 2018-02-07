@@ -214,6 +214,32 @@
                 title: {
                     text: '发育商（DQ）'
                 },
+                labels: {
+                    useHTML: true,
+                    formatter: function () {
+                        if(this.value == 70){
+                            return '<span style="color:red">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 85){
+                            return '<span style="color:orange;">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 115){
+                            return '<span style="color:blue">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 130){
+                            return '<span style="color:green">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 0){
+                            return '<span style="color:#ddd">' +
+                                this.value + '</span>';
+                        }
+                    }
+                },
+                tickPositions: [0, 70, 85, 115, 130],
                 opposite: true
             }],
             legend: {
@@ -239,10 +265,6 @@
                 name: '发育商',
                 color: '#ff9800',
                 data: [b1, b2, b3, b4, b5],
-                tooltip: {
-                    valuePrefix: '$',
-                    valueSuffix: ' M'
-                },
                 pointPadding: 0.3,
                 pointPlacement: 0.2,
                 yAxis: 1
