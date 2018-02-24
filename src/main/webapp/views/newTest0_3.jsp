@@ -241,7 +241,7 @@
                 questionScore[7] += temp;
                 continue;
             }
-            if(i < 40){
+            if(i < 41){
                 questionScore[8] += temp;
                 continue;
             }

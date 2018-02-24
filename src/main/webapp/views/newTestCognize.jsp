@@ -21,6 +21,12 @@
         .noanswer{
             background-color: #ffeb3b;
         }
+        .start{
+            background-color: #79eef7;
+        }
+        .startLetter{
+            background-color: #fff !important;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -84,80 +90,80 @@
                         <s:iterator value="questionList" id="question" status='st'>
                             <tr class="question">
                                 <s:if test="#question.ordinal == 1">
-                                    <td style="width:30px" rowspan="2">
+                                    <td style="width:30px" rowspan="2" class="startLetter">
                                         A
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 3">
-                                    <td style="width:30px" rowspan="4">
+                                    <td style="width:30px" rowspan="4" class="startLetter">
                                         BC
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 7">
-                                    <td style="width:30px" rowspan="9">
+                                    <td style="width:30px" rowspan="9" class="startLetter">
                                         D
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 16">
-                                    <td style="width:30px" rowspan="3">
+                                    <td style="width:30px" rowspan="3" class="startLetter">
                                         E
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 19">
-                                    <td style="width:30px" rowspan="3">
+                                    <td style="width:30px" rowspan="3" class="startLetter">
                                         F
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 22">
-                                    <td style="width:30px" rowspan="3">
+                                    <td style="width:30px" rowspan="3" class="startLetter">
                                         G
                                     </td>
                                 </s:if>
 
                                 <s:if test="#question.ordinal == 25">
-                                    <td style="width:30px" rowspan="6">
+                                    <td style="width:30px" rowspan="6" class="startLetter">
                                         H
                                     </td>
                                 </s:if>
 
                                 <s:if test="#question.ordinal == 31">
-                                    <td style="width:30px" rowspan="3">
+                                    <td style="width:30px" rowspan="3" class="startLetter">
                                         I
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 34">
-                                    <td style="width:30px" rowspan="6">
+                                    <td style="width:30px" rowspan="6" class="startLetter">
                                         J
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 40">
-                                    <td style="width:30px" rowspan="5">
+                                    <td style="width:30px" rowspan="5" class="startLetter">
                                         K
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 45">
-                                    <td style="width:30px" rowspan="11">
+                                    <td style="width:30px" rowspan="11" class="startLetter">
                                         LM
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 56">
-                                    <td style="width:30px" rowspan="4">
+                                    <td style="width:30px" rowspan="4" class="startLetter">
                                         N
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 60">
-                                    <td style="width:30px" rowspan="3">
+                                    <td style="width:30px" rowspan="3" class="startLetter">
                                         O
                                     </td>
                                 </s:if>
                                 <s:if test="#question.ordinal == 63">
-                                    <td style="width:30px" rowspan="4">
+                                    <td style="width:30px" rowspan="4" class="startLetter">
                                         P
                                     </td>
                                 </s:if>
 
                                 <s:if test="#question.ordinal == 67">
-                                    <td style="width:30px" rowspan="25">
+                                    <td style="width:30px" rowspan="25" class="startLetter">
                                         Q
                                     </td>
                                 </s:if>
@@ -289,6 +295,8 @@
         var y = offset.top - 50;
         setTimeout(function() {
             window.scrollTo(0,y);
+            $('.question').removeClass('start');
+            $('#order' + startNow).parent().addClass('start');
         }, 500)
         
     })
@@ -375,6 +383,9 @@
                 var startIndex = start.charCodeAt();
                 start = String.fromCharCode(startIndex - 1);
                 startNow = parseInt(starts[start]);
+
+                $('.question').removeClass('start');
+                $('#order' + startNow).parent().addClass('start');
                 var offset = $('#order' + startNow).offset();
                 var y = offset.top - 50;
                 window.scrollTo(0,y);
