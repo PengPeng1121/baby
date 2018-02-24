@@ -16,6 +16,12 @@
         .noanswer{
             background-color: #ffeb3b;
         }
+
+        .start{
+            background-color: #79eef7;
+        }
+
+
     </style>
 </head>
 <body class="front-body">
@@ -600,51 +606,51 @@
             startNow = 1;
             ageNow = 6;
             top = $('#month6').offset().top;
-            $('#month6').css({
-                "background-color": "green"
-            });
+            // $('#month6').css({
+            //     "background-color": "green"
+            // });
         } else if (days < 42) {
             startNow = 20;
             ageNow = 24;
             top = $('#month24').offset().top;
-            $('#month24').css({
-                "background-color": "green"
-            });
+            // $('#month24').css({
+            //     "background-color": "green"
+            // });
         } else if (days < 60) {
             startNow = 42;
             ageNow = 42;
             top = $('#month42').offset().top;
-            $('#month42').css({
-                "background-color": "green"
-            });
+            // $('#month42').css({
+            //     "background-color": "green"
+            // });
         } else if (days < 78) {
             startNow = 64;
             ageNow = 60;
             top = $('#month60').offset().top;
-            $('#month60').css({
-                "background-color": "green"
-            });
+            // $('#month60').css({
+            //     "background-color": "green"
+            // });
         } else if (days < 102) {
             startNow = 81;
             ageNow = 78;
             top = $('#month78').offset().top;
-            $('#month78').css({
-                "background-color": "green"
-            });
+            // $('#month78').css({
+            //     "background-color": "green"
+            // });
         } else if (days < 126) {
             startNow = 97;
             ageNow = 102;
             top = $('#month102').offset().top;
-            $('#month102').css({
-                "background-color": "green"
-            });
+            // $('#month102').css({
+            //     "background-color": "green"
+            // });
         } else {
             startNow = 114;
             ageNow = 126;
             top = $('#month126').offset().top;
-            $('#month126').css({
-                "background-color": "green"
-            });
+            // $('#month126').css({
+            //     "background-color": "green"
+            // });
         }
         setTimeout(function() {
             window.scrollTo(0,top-50);
@@ -735,15 +741,24 @@
             if (orderIndex < (startNow + 10)) {
                 //跳转到上一级
                 index = getIndex();
-                top = $('#month' + ageLine[index-1]).offset().top;
-                $('.month').css({
-                    "background-color": "#ddd"
-                });
-                $('#month' + ageLine[index-1]).css({
-                    "background-color": "green"
-                });
+                if (index!= 0) {
+                    // top = $('#month' + ageLine[index-1]).offset().top;
+                    // window.scrollTo(0,top-50);
+                }
+                // $('.month').css({
+                //     "background-color": "#ddd"
+                // });
+                // $('#month' + ageLine[index-1]).css({
+                //     "background-color": "green"
+                // });
+                if (orderIndex - 10 > 0) {
+                    startNow = orderIndex - 10;
+                }
+                top = $('#order' + startNow).parent().offset().top;
                 window.scrollTo(0,top-50);
-                startNow = map[index-1];
+                $('.order').parent().removeClass('start');
+                $('#order' + startNow).parent().addClass('start');
+                
                 ageNow = ageLine[index-1];
                 // trueCount = 0;
                 // falseCount = 0;
