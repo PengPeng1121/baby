@@ -276,13 +276,15 @@
                     var data = "{";
 
                     //每个题的原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReason[i] = $("#reason" + (i + 1)).val()|| '';
+                    for(var i = 1; i <= questionSum; i++) {
+                        var reason = $("input:radio[name="+ i +"]:checked").val();
+                        reason = parseInt(reason);
+                        questionReason[i] = reason;
                     }
 
-                    for(var i = 0; i < questionSum; i++) {
+                    for(var i = 1; i <= questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result0_3.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                            data += "'result0_3.reason" + i + "':'" + questionReason[i] + "',"
                         }
                     }
 
