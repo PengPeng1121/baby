@@ -606,52 +606,40 @@
             startNow = 1;
             ageNow = 6;
             top = $('#month6').offset().top;
-            // $('#month6').css({
-            //     "background-color": "green"
-            // });
+            
         } else if (days < 42) {
             startNow = 20;
             ageNow = 24;
             top = $('#month24').offset().top;
-            // $('#month24').css({
-            //     "background-color": "green"
-            // });
+            
         } else if (days < 60) {
             startNow = 42;
             ageNow = 42;
             top = $('#month42').offset().top;
-            // $('#month42').css({
-            //     "background-color": "green"
-            // });
+            
         } else if (days < 78) {
             startNow = 64;
             ageNow = 60;
             top = $('#month60').offset().top;
-            // $('#month60').css({
-            //     "background-color": "green"
-            // });
+            
         } else if (days < 102) {
             startNow = 81;
             ageNow = 78;
             top = $('#month78').offset().top;
-            // $('#month78').css({
-            //     "background-color": "green"
-            // });
+            
         } else if (days < 126) {
             startNow = 97;
             ageNow = 102;
             top = $('#month102').offset().top;
-            // $('#month102').css({
-            //     "background-color": "green"
-            // });
+            
         } else {
             startNow = 114;
             ageNow = 126;
             top = $('#month126').offset().top;
-            // $('#month126').css({
-            //     "background-color": "green"
-            // });
+            
         }
+
+        $('#order' + startNow).parent().addClass('start');
         setTimeout(function() {
             window.scrollTo(0,top-50);
         }, 300)
