@@ -29,6 +29,7 @@ public class TestAction {
     private List<Result> resultList = new ArrayList<Result>();
     private List<Result3_6> result3_6List = new ArrayList<Result3_6>();
     private List<Result0_2> result0_2List = new ArrayList<Result0_2>();
+    private List<Result0_3> result0_3List = new ArrayList<Result0_3>();
     private List<Result50> result50List = new ArrayList<Result50>();
     private List<Result132> result132List = new ArrayList<Result132>();
     private List<ResultCognize> resultCognizeList = new ArrayList<ResultCognize>();
@@ -38,6 +39,7 @@ public class TestAction {
     private Result result;
     private Result3_6 result3_6;
     private Result0_2 result0_2;
+    private Result0_3 result0_3;
     private Result132 result132;
     private Result50 result50;
     private ResultCognize resultCognize;
@@ -93,6 +95,18 @@ public class TestAction {
         questionList = QuestionManager.findByTestid(16);
         baby = BabyManager.findById(babyid);
         testid = 16;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30+"";
+        return SUCCESS;
+    }
+
+    public String newTest0_3() {
+        questionTypeList = QuestionManager.findTypeByTestid(20);
+        questionMonthList = QuestionManager.findMonthByTestid(20);
+        questionList = QuestionManager.findByTestid(20);
+        baby = BabyManager.findById(babyid);
+        testid = 20;
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -173,6 +187,7 @@ public class TestAction {
         result50List = ResultManager50.findResultBybid(babyid);
         resultCognizeList = ResultCognizeManager.findResultBybid(babyid);
         result132List = ResultManager132.findResultBybid(babyid);
+        result0_3List = ResultManager0_3.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -282,7 +297,7 @@ public class TestAction {
             resultCognize.setEvaluation(evaluation);
             resultCognize.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             resultCognize.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
-            resultCognize.setTestId(17);
+            resultCognize.setTestId(19);
             resultCognize.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             resultCognize.setState("finished");
             ResultCognizeManager.saveResult(resultCognize);
@@ -306,7 +321,7 @@ public class TestAction {
             }
             result132.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
             result132.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
-            result132.setTestId(17);
+            result132.setTestId(18);
             result132.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             result132.setState("finished");
             ResultManager132.saveResult(result132);
@@ -365,7 +380,45 @@ public class TestAction {
         return SUCCESS;
     }
 
+    public String saveResult0_3(){
+        try {
+            //这是算法  是不是很吊
+            Integer p1 = result0_3.getA1()*100/5;
+            Integer p2 = result0_3.getA2()*100/5;
+            Integer p3 = result0_3.getA3()*100/5;
+            Integer p4 = result0_3.getA4()*100/5;
+            Integer p5 = result0_3.getA5()*100/5;
+            Integer p6 = result0_3.getA6()*100/5;
+            Integer p7 = result0_3.getA7()*100/5;
+            Integer p8 = result0_3.getA8()*100/5;
+            result0_3.setP1(calculateP(p1));
+            result0_3.setP2(calculateP(p2));
+            result0_3.setP3(calculateP(p3));
+            result0_3.setP4(calculateP(p4));
+            result0_3.setP5(calculateP(p5));
+            result0_3.setP6(calculateP(p6));
+            result0_3.setP7(calculateP(p7));
+            result0_3.setP8(calculateP(p8));
+            result0_3.setR1(AnswerValueEnum_R.getNameByPercent(p1));
+            result0_3.setR2(AnswerValueEnum_R.getNameByPercent(p2));
+            result0_3.setR3(AnswerValueEnum_R.getNameByPercent(p3));
+            result0_3.setR4(AnswerValueEnum_R.getNameByPercent(p4));
+            result0_3.setR5(AnswerValueEnum_R.getNameByPercent(p5));
+            result0_3.setR6(AnswerValueEnum_R.getNameByPercent(p6));
+            result0_3.setR7(AnswerValueEnum_R.getNameByPercent(p7));
+            result0_3.setR8(AnswerValueEnum_R.getNameByPercent(p8));
 
+            result0_3.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            result0_3.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            result0_3.setTestId(20);
+            result0_3.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            result0_3.setState("finished");
+            ResultManager0_3.saveResult(result0_3);
+        }catch (Exception e){
+
+        }
+        return SUCCESS;
+    }
 
     private String calculateP(Integer p){
         String pStr = "0~50";
@@ -560,5 +613,21 @@ public class TestAction {
 
     public void setStart(String start) {
         this.start = start;
+    }
+
+    public List<Result0_3> getResult0_3List() {
+        return result0_3List;
+    }
+
+    public void setResult0_3List(List<Result0_3> result0_3List) {
+        this.result0_3List = result0_3List;
+    }
+
+    public Result0_3 getResult0_3() {
+        return result0_3;
+    }
+
+    public void setResult0_3(Result0_3 result0_3) {
+        this.result0_3 = result0_3;
     }
 }
