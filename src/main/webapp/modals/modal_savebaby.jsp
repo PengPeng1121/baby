@@ -18,8 +18,8 @@
         <br/>
         <a type="button" class="btn  modal-box text-center" href="javascript:start0_2()" style="margin-top: 10px"><h4
                     style="color: white;font-size: small">开始家庭养育<br/>评估（0-2岁）</h4></a>
-        <a type="button" class="btn  modal-box text-center" href="javascript:start0_3()" style="margin-top: 10px"><h4
-                    style="color: white;font-size: small">开始育儿技能<br/>评估（0-3岁)</h4></a>
+        <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start0_3()" style="margin-top: 10px"><h4
+                    style="color: white;font-size: small">开始育儿技能<br/>评估（0-3岁)</h4></a> -->
 
 
         <a type="button" class="btn  modal-box text-center" href="javascript:start50()" style="margin-top: 10px"><h4

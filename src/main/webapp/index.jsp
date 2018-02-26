@@ -154,7 +154,7 @@
                                     </div>
                                 </div> -->
                                 <div class="as-desc">
-                                    正式上线时间：2018年2月
+                                    即将上线 完成父母育儿评估量表（3-6岁）课程者优先试用！
                                 </div>
                                 <!-- <div class="text-right">
                                     <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
