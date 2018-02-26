@@ -113,7 +113,7 @@
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
                         <span class="front-text-title" >
-                           育儿技能评估（0-2岁)
+                           家庭养育（0-2岁)
                         </span>
                                         </h4>
                                         <div class="front-text-break">

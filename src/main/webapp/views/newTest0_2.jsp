@@ -27,7 +27,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">育儿技能评估（0-2岁)</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">家庭养育（0-2岁)</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>

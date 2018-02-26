@@ -116,7 +116,7 @@
                                 <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/0_2.png" alt="Logo">
                             </div>
                             <div class="media-body">
-                                <p class="media-heading" style="font-size: 16px;">父母育儿评估量表（0-2岁）</p>
+                                <p class="media-heading" style="font-size: 16px;">家庭养育（0-2岁）</p>
                                 <!-- <div class="as-desc">
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult0_2"/></label>
