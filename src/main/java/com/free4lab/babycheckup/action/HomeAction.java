@@ -12,6 +12,7 @@ public class HomeAction {
     private long numberOfResult50;
     private long numberOfResult132;
     private long numberOfResultCognize;
+    private long numberOfResult0_3;
 
     public String execute() throws Exception {
         int hoid = (Integer) ActionContext.getContext().getSession().get("hoid");
@@ -22,6 +23,7 @@ public class HomeAction {
         numberOfResult50 = ResultManager50.countResultByHosIdAndTestId(hoid,17);
         numberOfResult132 = ResultManager132.countResultByHosIdAndTestId(hoid,18);
         numberOfResultCognize = ResultCognizeManager.countResultByHosIdAndTestId(hoid,19);
+        numberOfResult0_3 = ResultManager0_3.countResultByHosIdAndTestId(hoid,20);
         return "success";
     }
 
@@ -78,5 +80,13 @@ public class HomeAction {
 
     public void setNumberOfResultCognize(long numberOfResultCognize) {
         this.numberOfResultCognize = numberOfResultCognize;
+    }
+
+    public long getNumberOfResult0_3() {
+        return numberOfResult0_3;
+    }
+
+    public void setNumberOfResult0_3(long numberOfResult0_3) {
+        this.numberOfResult0_3 = numberOfResult0_3;
     }
 }

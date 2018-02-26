@@ -44,7 +44,10 @@
         <action name="newtest132" method="newTest132" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest132.jsp</result>
         </action>
-
+        <!--婴儿-初中学生生活能力量表测试-->
+        <action name="newtest0_3" method="newTest0_3" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTest0_3.jsp</result>
+        </action>
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -69,6 +72,11 @@
         <!--婴儿-初中学生生活能力量表结果-->
         <action name="showresult132" method="showResult132" class="com.free4lab.babycheckup.action.ResultAction132">
             <result name="success" >views/showresult132.jsp</result>
+        </action>
+
+        <!--父母育儿0-3结果-->
+        <action name="showresult0_3" method="showResult0_3" class="com.free4lab.babycheckup.action.ResultAction0_3">
+            <result name="success" >views/showresult0_3.jsp</result>
         </action>
 
         <action name="saveresult" method="saveResult" class="com.free4lab.babycheckup.action.TestAction">
@@ -108,6 +116,13 @@
         <action name="saveresultcognize" method="saveResultCognize" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultCognize,resultCognize.id</param>
+            </result>
+        </action>
+
+        <!--父母育儿评估量表结果-->
+        <action name="saveresult0_3" method="saveResult0_3" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">result0_3,result0_3.id</param>
             </result>
         </action>
 
