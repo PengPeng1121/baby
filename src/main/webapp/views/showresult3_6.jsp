@@ -172,8 +172,7 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" id="print" >打印结果</a></div>
-            <div ><a type="button" class="btn btn-primary" style="margin:50px 10px 20px 0px;" id="preview" >预览</a></div>
+            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" onclick='javascript:window.print()'>打印结果</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
@@ -451,40 +450,7 @@
         });
     });
 
-    $("#print").click(function() {
-        html2canvas(document.getElementById("renderPdf"), {
-            onrendered: function(canvas) {
-
-                document.body.appendChild(canvas);
-
-                //通过html2canvas将html渲染成canvas，然后获取图片数据
-                var imgData = canvas.toDataURL('image/jpeg');
-
-                //初始化pdf，设置相应格式
-                var doc = new jsPDF("p", "mm", "a4");
-
-                //这里设置的是a4纸张尺寸
-                doc.addImage(imgData, 'JPEG', 0, 0,210,297);
-
-                //输出保存命名为content的pdf
-                doc.save('content.pdf');
-            }
-        });
-    })
-    $("#preview").click(function() {
-        $('nav').remove();
-        $('.front-inner').css('padding-top', '20px');
-        $('.front-inner').css('font-size', '12px');
-        $('.front-inner').css('background-color', '#fff');
-        $('.front-panel').css('margin-bottom', '2px');
-        $('table').css('margin-bottom', '2px');
-        $('#hospital').css('font-size', '18px');
-        $('#title').css('font-size', '20px');
-        $('#renderPdf').css('background-color', '#fff');
-        chart1.setSize(400,250,false);
-        chart2.setSize(400,250,false);
-    });
-
+    
 
 </script>
 </body>
