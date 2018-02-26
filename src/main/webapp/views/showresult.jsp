@@ -16,7 +16,7 @@
     <style type="text/css" media="print">
         @page
         {
-            size:  auto;   /* auto is the initial value */
+            size:  auto portrait;   /* auto is the initial value */
             margin: 5mm;  /* this affects the margin in the printer settings */
         }
     </style>
@@ -130,7 +130,7 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" onclick='javascript:window.print()'>打印结果</a></div>
+            <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
@@ -177,6 +177,33 @@
         max = 200;
     }
     $(function () {
+        var chart1,
+            chart2;
+        $('.print').click(function(){
+            $('.front-inner').css({
+                padding: '0px'
+            });
+            $('.panel').css({
+                margin: '0px'
+            });
+            $('h1').css({
+                'font-size': '20px'
+            });
+            $('h2').css({
+                'font-size': '15px'
+            });
+            $('#column').css({
+                width: '300px',
+                height: '300px'
+            });
+            $('#spider').css({
+                width: '300px',
+                height: '300px'
+            });
+            chart1.reflow();
+            chart2.reflow();
+            window.print();
+        })
         $('#column').highcharts({
             chart: {
                 type: 'column'
@@ -185,7 +212,7 @@
                 enabled: false
             },
             title: {
-                text: '小儿测评结果柱状图'
+                text: ''
             },
             xAxis: {
                 categories: [
@@ -269,6 +296,8 @@
                 pointPlacement: 0.2,
                 yAxis: 1
             }]
+        }, function(c){
+            chart1 = c;
         });
         $('#spider').highcharts({
             chart: {
@@ -279,7 +308,7 @@
                 enabled: false
             },
             title: {
-                text: '小儿测评结果网状图',
+                text: '',
                 x: -80
             },
             pane: {
@@ -336,6 +365,8 @@
                 data: [b1, b2, b3, b4, b5],
                 pointPlacement: 'on'
             }]
+        }, function(c){
+            chart2 = c;
         });
     });
 </script>
