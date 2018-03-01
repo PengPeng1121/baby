@@ -196,8 +196,8 @@
             </div>
             <!-- 婴幼儿认知测定量表 -->
             <div class="col-md-4">
-                <div class="panel panel-default front-panel " style="height: 155px;">
-                    <div class="panel-body">
+                <div class="panel panel-default front-panel " style="height: 155px;background-color: #03a9f442;">
+                    <div class="panel-body" style="background-color: transparent;">
                         <div class="media">
                             <div class="media-left">
                                 <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/cognize.png" alt="Logo">
