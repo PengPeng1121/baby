@@ -467,6 +467,7 @@
     var questionReason = [questionSum];
     var questionReasonDesc = [questionSum];
     var map = [1, 20, 42, 64, 81, 97, 114];
+    var ends = [19, 41, 63, 80, 96, 113];
     var ageLine = [6, 24, 42, 60, 78, 102, 126];
     var startNow = 0;
     var ageNow = 0;
@@ -719,6 +720,8 @@
         var value = $(target).find('span').attr('class');
         var prevClass1 = '';
         var prevClass2 = '';
+        var backClass1 = '';
+        var backClass2 = '';
 
         trueCount = 0;
         falseCount = 0;
@@ -729,16 +732,6 @@
             if (orderIndex < (startNow + 10)) {
                 //跳转到上一级
                 index = getIndex();
-                if (index!= 0) {
-                    // top = $('#month' + ageLine[index-1]).offset().top;
-                    // window.scrollTo(0,top-50);
-                }
-                // $('.month').css({
-                //     "background-color": "#ddd"
-                // });
-                // $('#month' + ageLine[index-1]).css({
-                //     "background-color": "green"
-                // });
                 if (orderIndex - 10 > 0) {
                     startNow = orderIndex - 10;
                 }
@@ -748,35 +741,73 @@
                 $('#order' + startNow).parent().addClass('start');
                 
                 ageNow = ageLine[index-1];
-                // trueCount = 0;
-                // falseCount = 0;
             }
             falseCount += 1;
-            // trueCount = 0;
         }
         var prev = 0;
-        for (var i = 1; i < 10; i++) {
-            prev = orderIndex - i ;
-            prevClass1 = $('.' + prev + '.a').attr('class');
-            prevClass2 = $('.' + prev + '.b').attr('class');
-            if ( prevClass1.indexOf('show') != -1){
-                trueCount += 1;
-            } 
-            if ( prevClass2.indexOf('show') != -1){
-                falseCount += 1;
+            back = 0;
+        if (value.indexOf('a') != -1) {
+            for (var i = 1; i < 10; i++) {
+                prev = orderIndex - i ;
+                prevClass1 = $('.' + prev + '.a').attr('class');
+                prevClass2 = $('.' + prev + '.b').attr('class');
+
+                if ( prevClass1.indexOf('show') != -1){
+                    trueCount += 1;
+                } 
+                if ( prevClass2.indexOf('show') != -1){
+                    break;
+                }
+            }
+            for (var j = 1; j < 10; j++) {
+                back = orderIndex + j ;
+                backClass1 = $('.' + back + '.a').attr('class');
+                backClass2 = $('.' + back + '.b').attr('class');
+
+                if ( backClass1.indexOf('show') != -1){
+                    trueCount += 1;
+                } 
+                if ( backClass2.indexOf('show') != -1){
+                    break;
+                }
+            }
+        } else {
+            for (var i = 1; i < 10; i++) {
+                prev = orderIndex - i ;
+                prevClass1 = $('.' + prev + '.a').attr('class');
+                prevClass2 = $('.' + prev + '.b').attr('class');
+
+                if ( prevClass1.indexOf('show') != -1){
+                    break
+                } 
+                if ( prevClass2.indexOf('show') != -1){
+                    falseCount += 1;
+                }
+            }
+            for (var j = 1; j < 10; j++) {
+                back = orderIndex + j ;
+                backClass1 = $('.' + back + '.a').attr('class');
+                backClass2 = $('.' + back + '.b').attr('class');
+
+                if ( backClass1.indexOf('show') != -1){
+                    break
+                } 
+                if ( backClass2.indexOf('show') != -1){
+                    falseCount += 1;
+                }
             }
         }
 
-        if (trueCount == 10 && (orderIndex < (startNow + 10)) ) {
-            //该题之前的全部设为“对” 并且是前10个项目
+        if (trueCount >= 10) {
+            //该题之前的全部设为“对”
             var selectFalse;
-            for (var i = 0; i < orderIndex; i++) {
-                $('.' + i + '.a').removeClass('hide').addClass('show');
-                $('.' + i + '.b').removeClass('show').addClass('hide');
+            for (var k = 0; k < orderIndex; k++) {
+                $('.' + k + '.a').removeClass('hide').addClass('show');
+                $('.' + k + '.b').removeClass('show').addClass('hide');
             }
         } 
 
-        if (falseCount == 10) {
+        if (falseCount >= 10) {
             setTimeout(function(){
                 alert('测试结束');
                 score();
