@@ -6,6 +6,8 @@
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <title>病历查询-儿童发育评测平台</title>
     <s:include value="/statics/head.html"/>
+    <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
+    <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
 
 </head>
 <body class="front-body">
@@ -23,6 +25,14 @@
                         <label class="col-md-1 control-label front-label" for="baby-name">姓名</label>
                         <div class="col-md-5">
                             <input id="baby-name" onkeydown="EnterPress(event)" type="text" class="form-control front-no-box-shadow">
+                        </div>
+                        <label class="col-md-1 control-label front-label" for="baby-birth">出生日期</label>
+                        <div class="col-md-5">
+                            
+
+                            <input id="baby-birth" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+
+
                         </div>
                     </div>
                     <div class="form-group">
@@ -58,9 +68,12 @@
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
+<script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
+
 <script type="text/javascript">
     function searchbaby(){
         var babyName = $("#baby-name").val().trim();
+        var babyBirth = $("#baby-birth").val().trim();
         var parentName = $("#parent-name").val().trim();
         var parentTel = $("#parent-tel").val().trim();
         if(babyName.length == 0 && parentName.length == 0 && parentTel.length == 0){
@@ -73,6 +86,7 @@
                     babyName:babyName,
                     parentName:parentName,
                     parentTel:parentTel,
+                    babyBirth:babyBirth
                 },
                 success:function(html){
                     $("#search_result").html(html);
@@ -82,6 +96,7 @@
     }
     function cancelSearch() {
         $("#baby-name").val("");
+        $("#baby-birth").val("");
         $("#parent-name").val("");
         $("#parent-tel").val("");
     }
@@ -91,6 +106,8 @@
             document.getElementById("enter").focus();
         }
     }
+
+    $('#baby-birth').cxCalendar();
 </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 <li id="home" class="${param.act == "home" ? "front-active" : ""}"><a href="home">首页</a></li>
                 <li id="record" class="${param.act == "record" ? "front-active" : ""}"><a href="record">病历</a></li>
-                <li id="test" class="${param.act == "test" ? "front-active" : ""}"><a href="record">测评</a></li>
+                <!-- <li id="test" class="${param.act == "test" ? "front-active" : ""}"><a href="record">测评</a></li> -->
                 <s:if test="#session.authority == 1">
                     <li id="admin" class="${param.act == "admin" ? "front-active" : ""}"><a href="admin">管理</a></li>
                 </s:if>
