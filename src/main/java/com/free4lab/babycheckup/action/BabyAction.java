@@ -9,6 +9,7 @@ import com.free4lab.babycheckup.model.User;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 
+import java.text.ParsePosition;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -43,6 +44,7 @@ public class BabyAction {
     private int pageNum;//用于分页
     private int page;//用于分页
     private int babyNumber;
+    private String babyBirth;
 
     public String newBaby(){
         userlist = AccountManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
@@ -81,14 +83,52 @@ public class BabyAction {
     }
 
     public String searchBaby(){
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel, 0);
+        int hoid = (Integer) ActionContext.getContext().getSession().get("hoid");
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        Date babyBirthDay= null;
+        if(!StringUtils.isEmpty(babyBirth)){
+            try {
+                babyBirthDay = simpleDateFormat.parse(babyBirth);
+            } catch (Exception e) {
+
+            }
+        }
+        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        if(babyList!=null && babyList.size()>0){
+            //默认显示5条
+            if(babyList.size()>5){
+                for (int i = 5; i < babyList.size(); i++) {
+                    //移除
+                    babyList.remove(i);
+                }
+            }
+        }
         babyList = calculateMonthage(babyList);
         return "success";
     }
 
     public String searchBabyByHoid(){
         int hoid = (Integer) ActionContext.getContext().getSession().get("hoid");
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel, hoid);
+        Date babyBirthDay= null;
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd ");
+        if(!StringUtils.isEmpty(babyBirth)){
+            try {
+                ParsePosition pos = new ParsePosition(0);
+                babyBirthDay = simpleDateFormat.parse(babyBirth,pos);
+            } catch (Exception e) {
+
+            }
+        }
+        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        if(babyList!=null && babyList.size()>0){
+            //默认显示5条
+            if(babyList.size()>5){
+                for (int i = 5; i < babyList.size(); i++) {
+                    //移除
+                    babyList.remove(i);
+                }
+            }
+        }
         babyList = calculateMonthage(babyList);
         return "success";
     }
@@ -336,5 +376,13 @@ public class BabyAction {
 
     public void setBabyNumber(int babyNumber) {
         this.babyNumber = babyNumber;
+    }
+
+    public String getBabyBirth() {
+        return babyBirth;
+    }
+
+    public void setBabyBirth(String babyBirth) {
+        this.babyBirth = babyBirth;
     }
 }

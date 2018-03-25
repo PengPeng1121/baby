@@ -12,6 +12,7 @@
         </action>
         <action name="home" class="com.free4lab.babycheckup.action.HomeAction">
             <result name="success">index.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <action name="record">
             <result>views/babyadmin.jsp</result>
@@ -23,30 +24,37 @@
         <!--0-6岁测试-->
         <action name="newtest0_6" method="newTest0_6" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest1.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--3-6岁测试-->
         <action name="newtest3_6" method="newTest3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest3_6.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--0-2岁测试-->
         <action name="newtest0_2" method="newTest0_2" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest0_2.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--50岁学龄测试-->
         <action name="newtest50" method="newTest50" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest50.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--婴幼儿认知能力测试-->
         <action name="newtestcognize" method="newTestCognize" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestCognize.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--婴儿-初中学生生活能力量表测试-->
         <action name="newtest132" method="newTest132" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest132.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--婴儿-初中学生生活能力量表测试-->
         <action name="newtest0_3" method="newTest0_3" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest0_3.jsp</result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
@@ -83,12 +91,14 @@
             <result type="json" name="success">
                 <param name="includeProperties">result,result.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
         <!--3-6岁结果-->
         <action name="saveresult3_6" method="saveResult3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">result3_6,result3_6.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <!--0-2岁结果-->
@@ -96,6 +106,7 @@
             <result type="json" name="success">
                 <param name="includeProperties">result0_2,result0_2.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <!--0-2岁结果-->
@@ -103,6 +114,7 @@
             <result type="json" name="success">
                 <param name="includeProperties">result50,result50.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <!--婴儿-初中学生生活能力量表结果-->
@@ -110,6 +122,7 @@
             <result type="json" name="success">
                 <param name="includeProperties">result132,result132.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <!--婴幼儿认知测定结果-->
@@ -117,6 +130,7 @@
             <result type="json" name="success">
                 <param name="includeProperties">resultCognize,resultCognize.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <!--父母育儿评估量表结果-->
@@ -124,6 +138,7 @@
             <result type="json" name="success">
                 <param name="includeProperties">result0_3,result0_3.id</param>
             </result>
+            <result name="fail">error.jsp</result>
         </action>
 
         <action name="admin" method="indexAdmin" class="com.free4lab.babycheckup.action.AdminAction">

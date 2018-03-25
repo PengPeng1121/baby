@@ -50,6 +50,9 @@ public class TestAction {
     private String start;
     private String redirectUrl;
 
+    //全部卡片配置
+    private final static Integer CONFIG_TPYE = 1;
+
     public String newTestChoice() {
         baby = BabyManager.findById(babyid);
         babyid =baby.getBabyid();
@@ -67,6 +70,9 @@ public class TestAction {
     }
 
     public String newTest0_6() {
+        if(!canTest(1)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(testid);
         questionMonthList = QuestionManager.findMonthByTestid(testid);
         questionList = QuestionManager.findByTestid(testid);
@@ -78,6 +84,9 @@ public class TestAction {
     }
 
     public String newTest3_6() {
+        if(!canTest(2)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(2);
         questionMonthList = QuestionManager.findMonthByTestid(2);
         questionList = QuestionManager.findByTestid(2);
@@ -90,6 +99,9 @@ public class TestAction {
     }
 
     public String newTest0_2() {
+        if(!canTest(16)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(16);
         questionMonthList = QuestionManager.findMonthByTestid(16);
         questionList = QuestionManager.findByTestid(16);
@@ -102,6 +114,9 @@ public class TestAction {
     }
 
     public String newTest0_3() {
+        if(!canTest(20)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(20);
         questionMonthList = QuestionManager.findMonthByTestid(20);
         questionList = QuestionManager.findByTestid(20);
@@ -114,6 +129,9 @@ public class TestAction {
     }
 
     public String newTest50() {
+        if(!canTest(17)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(17);
         questionMonthList = QuestionManager.findMonthByTestid(17);
         questionList = QuestionManager.findByTestid(17);
@@ -126,6 +144,9 @@ public class TestAction {
     }
 
     public String newTest132() {
+        if(!canTest(18)){
+            return "fail";
+        }
         questionTypeList = QuestionManager.findTypeByTestid(18);
         questionMonthList = QuestionManager.findMonthByTestid(18);
         questionList = QuestionManager.findByTestid(18);
@@ -138,6 +159,9 @@ public class TestAction {
     }
 
     public String newTestCognize() {
+        if(!canTest(19)){
+            return "fail";
+        }
         try{
             questionList = QuestionManager.findByTestid(19);
             baby = BabyManager.findById(babyid);
@@ -195,6 +219,9 @@ public class TestAction {
     }
 
     public String saveResult(){
+        if(!subTestTimes(1)){
+            return "fail";
+        }
         result.setHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         result.setUserid((Integer) ActionContext.getContext().getSession().get("userid"));
         result.setTestid(1);
@@ -228,6 +255,9 @@ public class TestAction {
         result3_6.setTestId(2);
         result3_6.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
         result3_6.setState("finished");
+        if(!subTestTimes(2)){
+            return "fail";
+        }
         ResultManager3_6.saveResult(result3_6);
         return SUCCESS;
     }
@@ -259,6 +289,9 @@ public class TestAction {
             result0_2.setTestId(16);
             result0_2.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             result0_2.setState("finished");
+            if(!subTestTimes(16)){
+                return "fail";
+            }
             ResultManager0_2.saveResult(result0_2);
         }catch (Exception e){
 
@@ -300,6 +333,9 @@ public class TestAction {
             resultCognize.setTestId(19);
             resultCognize.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             resultCognize.setState("finished");
+            if(!subTestTimes(19)){
+                return "fail";
+            }
             ResultCognizeManager.saveResult(resultCognize);
         }catch (Exception e){
 
@@ -324,6 +360,9 @@ public class TestAction {
             result132.setTestId(18);
             result132.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             result132.setState("finished");
+            if(!subTestTimes(18)){
+                return "fail";
+            }
             ResultManager132.saveResult(result132);
         }catch (Exception e){
 
@@ -373,6 +412,9 @@ public class TestAction {
             result50.setTestId(17);
             result50.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             result50.setState("finished");
+            if(!subTestTimes(17)){
+                return "fail";
+            }
             ResultManager50.saveResult(result50);
         }catch (Exception e){
 
@@ -413,6 +455,9 @@ public class TestAction {
             result0_3.setTestId(20);
             result0_3.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
             result0_3.setState("finished");
+            if(!subTestTimes(20)){
+                return "fail";
+            }
             ResultManager0_3.saveResult(result0_3);
         }catch (Exception e){
 
@@ -437,6 +482,46 @@ public class TestAction {
     public Integer differentdays(Date d1, Date d2){
         Integer days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    //判断可不可以进行测试
+    private Boolean canTest(Integer testId){
+        Integer hospitalId = (Integer) ActionContext.getContext().getSession().get("hoid");
+        HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hospitalId);
+        if(config==null){
+            return false;
+        }
+        if(config.getConfigType().equals(CONFIG_TPYE)){
+            return HospitalTestTimesManager.haveTimesByHospitalId(hospitalId);
+        }else {
+            return HospitalTestTimesManager.haveTimes(hospitalId,testId);
+        }
+    }
+
+    //对当前卡片可以使用次数减一
+    private Boolean subTestTimes(Integer testId){
+        Integer hospitalId = (Integer) ActionContext.getContext().getSession().get("hoid");
+        HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hospitalId);
+        if(config==null){
+            return false;
+        }
+        HospitalTestTimes hospitalTestTimes = new HospitalTestTimes();
+        String userId = (String) ActionContext.getContext().getSession().get("userid");
+        if(config.getConfigType().equals(CONFIG_TPYE)){
+            hospitalTestTimes.setHospitalId(hospitalId);
+            hospitalTestTimes.setUpdateUser(userId);
+            hospitalTestTimes = HospitalTestTimesManager.subTimesByHospitalId(hospitalTestTimes);
+        }else {
+            hospitalTestTimes.setHospitalId(hospitalId);
+            hospitalTestTimes.setUpdateUser(userId);
+            hospitalTestTimes.setTestId(testId);
+            hospitalTestTimes = HospitalTestTimesManager.subTimesByHospitalId(hospitalTestTimes);
+        }
+        if(hospitalTestTimes==null){
+            return false;
+        }else {
+            return true;
+        }
     }
 
     public int getTestid() {

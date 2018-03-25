@@ -9,6 +9,7 @@ import com.free4lab.babycheckup.model.BabySchema;
 import com.free4lab.babycheckup.model.FamilyRelation;
 import com.free4lab.babycheckup.model.Parent;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,10 +75,13 @@ public class BabyManager {
         return baby;
     }
 
-    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, int hoid){
+    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
+        }
+        if(birthday != null ) {
+            babyParams.put("birthday", birthday);
         }
         Map<String, Object> parentParams = new HashMap<String, Object>();
         if(parentName != null && !parentName.equals("")) {
