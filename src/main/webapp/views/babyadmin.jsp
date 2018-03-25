@@ -108,6 +108,21 @@
     }
 
     $('#baby-birth').cxCalendar();
+
+    //首次请求
+    $.ajax({
+        url:"record/searchBaby",
+        type:"post",
+        data:{
+            babyName:'',
+            parentName:'',
+            parentTel:'',
+            babyBirth:''
+        },
+        success:function(html){
+            $("#search_result").html(html);
+        }
+    })
 </script>
 </body>
 </html>
