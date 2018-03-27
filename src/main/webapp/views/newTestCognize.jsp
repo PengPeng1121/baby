@@ -381,7 +381,11 @@
             if (orderIndex < (startNow + 3) && flag) {
             //跳转到上一级
                 var startIndex = start.charCodeAt();
-                start = String.fromCharCode(startIndex - 1);
+                if (start == 'M' || start == 'C') {
+                    start = String.fromCharCode(startIndex - 2);
+                } else {
+                    start = String.fromCharCode(startIndex - 1);
+                }
                 startNow = parseInt(starts[start]);
 
                 $('.question').removeClass('start');
