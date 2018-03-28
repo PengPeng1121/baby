@@ -23,6 +23,6 @@
     ;(function () {
         $('#previewName').html(name);
         $('#previewAge').html(days);
-        $('#questionScore1').html(questionScore[1]);
+        $('#questionScore1').html(finalScore);
     })();
 </script>

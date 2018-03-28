@@ -79,7 +79,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=1" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=2" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=16" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                                 
@@ -178,7 +178,7 @@
                                     即将上线 完成父母育儿评估量表（3-6岁）课程者优先试用！
                                 </div>
                                 <!-- <div class="text-right">
-                                    <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                    <a href="record?testId=20" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                 </div> -->
                                 
                             </div>
@@ -213,7 +213,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=17" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                                
@@ -249,7 +249,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=19" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                                
@@ -285,7 +285,7 @@
                                         <span>请购买</span>
                                     </s:if>
                                     <s:else>
-                                        <a href="record" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        <a href="record?testId=18" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                     </s:else>
                                 </div>
                                

@@ -243,6 +243,7 @@
     var flag = 1;
     var countTrue = 0;
     var countFalse = 0;
+    var finalScore = 0;
 
 
     function failReasons(ordinal, reasons) {
@@ -267,6 +268,9 @@
                questionScore[1] += 1;
             }
         }
+
+        finalScore = startNow + questionScore[1] - 1;
+
         return true;
     }
 
@@ -334,10 +338,9 @@
         //     data += "'result_cognize.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
         // }
 
+        finalScore = startNow + questionScore[1] - 1;
 
-
-
-        data += "'resultCognize.score':" + questionScore[1] + ",";
+        data += "'resultCognize.score':" + finalScore + ",";
         
 
         data += "'resultCognize.babyId':" + $("#babyid").val() + "}";
@@ -381,7 +384,11 @@
             if (orderIndex < (startNow + 3) && flag) {
             //跳转到上一级
                 var startIndex = start.charCodeAt();
-                start = String.fromCharCode(startIndex - 1);
+                if (start == 'M' || start == 'C') {
+                    start = String.fromCharCode(startIndex - 2);
+                } else {
+                    start = String.fromCharCode(startIndex - 1);
+                }
                 startNow = parseInt(starts[start]);
 
                 $('.question').removeClass('start');
