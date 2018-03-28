@@ -248,7 +248,7 @@
                     return false;
                 }
             } else {
-                questionScore[type] = parseFloat($('td[name=month' + flag + ']').html());
+                questionScore[type] = parseFloat($('div[name=month' + flag + ']').text());
                 for (var i = flag + 1; i < questionMonthSum; i++) {
                     $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
                         if ($(this).prop('checked')) {
@@ -302,13 +302,12 @@
                     for(var i = 0; i < questionSum; i++) {
                         questionReason[i] = $("#reason" + (i + 1)).val();
                     }
-                    debugger;
+
                     for(var i = 0; i < questionSum; i++) {
                         if((questionReason[i] != null)&&(questionReason[i] != '')){
                             data += "'result.reason" + (i + 1) + "':'" + questionReason[i] + "',"
                         }
                     }
-                    debugger;
                     data += "'result.scoreSport':" + questionScore[1] + ",";
                     data += "'result.scoreAct':" + questionScore[2] + ",";
                     data += "'result.scoreAdapt':" + questionScore[3] + ",";
