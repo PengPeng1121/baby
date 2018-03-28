@@ -18,6 +18,30 @@
         table > tbody > tr > td:first-child{
             width: 10%;
         }
+        .line{
+            display: flex;
+            align-content: center;
+        }
+        .nav-line{
+            height: 30px;
+        }
+        .item{
+            width: 18%;
+            display: inline-block;
+            border-top: solid 1px;
+            border-right: solid 1px;
+            padding-top: 5px;
+        }
+        .item-first{
+            width: 10% !important;
+            border-left: solid 1px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .item-nav{
+            border-bottom: 1px solid;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -57,33 +81,34 @@
                 <input id="questionSum" type="hidden" value="<s:property value="questionList.size()"/>">
                 <input id="questionMonthSum" type="hidden" value="<s:property value="questionMonthList.size()"/>">
                 <input id="questionTypeSum" type="hidden" value="<s:property value="questionTypeList.size()"/>">
-                <table id="table-navbar" border="1px solid" style="margin: 0; position: fixed; background-color: white">
-                    <tbody style="width: 100%">
-                    <tr>
-                        <td>月龄 \ 项目</td>
-                        <s:if test="questionTypeList.contains(1)"><td>大运动</td></s:if>
-                        <s:if test="questionTypeList.contains(2)"><td>精细动作</td></s:if>
-                        <s:if test="questionTypeList.contains(3)"><td>适应能力</td></s:if>
-                        <s:if test="questionTypeList.contains(4)"><td>语言</td></s:if>
-                        <s:if test="questionTypeList.contains(5)"><td>社交行为</td></s:if>
-                    </tr>
-                    </tbody>
-                </table>
-                <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
-                    <tbody style="width: 100%">
-                    <tr>
-                        <td>月龄 \ 项目</td>
-                        <s:if test="questionTypeList.contains(1)"><td>大运动</td></s:if>
-                        <s:if test="questionTypeList.contains(2)"><td>精细动作</td></s:if>
-                        <s:if test="questionTypeList.contains(3)"><td>适应能力</td></s:if>
-                        <s:if test="questionTypeList.contains(4)"><td>语言</td></s:if>
-                        <s:if test="questionTypeList.contains(5)"><td>社交行为</td></s:if>
-                    </tr>
+                <div id="table-navbar" style="margin: 0; position: fixed; background-color: white;width: 100%;display: none; text-align: left">
+                    <div class="line nav-line">
+                        <div class="item item-first item-nav">月龄 \ 项目</div>
+                        <div class="item item-nav">大运动</div>
+                        <div class="item item-nav">精细动作</div>
+                        <div class="item item-nav">适应能力</div>
+                        <div class="item item-nav">语言</div>
+                        <div class="item item-nav item-end">社交行为</div>
+                    </div>
+                </div>
+                <div id="table-main" style="margin: 0;width: 100%; text-align: left">
+                    <div class="line nav-line">
+                        <div class="item item-first">月龄 \ 项目</div>
+                        <div class="item">大运动</div>
+                        <div class="item">精细动作</div>
+                        <div class="item">适应能力</div>
+                        <div class="item">语言</div>
+                        <div class="item">社交行为</div>
+                    </div>
                     <s:iterator value="questionMonthList" id="month" status="status">
-                    <tr id="month<s:property value="#month"/>">
-                        <td name="month<s:property value="#status.index"/>"><s:property value="#month"/></td>
+                    <div class="line" id="month<s:property value="#month"/>">
+                        <div class="item item-first" name="month<s:property value="#status.index"/>">
+                            <div style="padding: 20px;">
+                                <s:property value="#month"/>
+                            </div>
+                        </div>
                         <s:iterator value="questionTypeList" id="type">
-                            <td>
+                            <div class="item">
                             <s:iterator value="questionList" id="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
                                     <p>
@@ -94,12 +119,12 @@
                                     </p>
                                 </s:if>
                             </s:iterator>
-                            </td>
+                            </div>
                         </s:iterator>
-                    </tr>
+                    </div>
                     </s:iterator>
                     </tbody>
-                </table>
+                </div>
             </div>
             <div style="margin-bottom: 73px;">
                 <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a>
@@ -111,12 +136,11 @@
 </div>
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
-
     ;(function () {
         var $tableNavbar = $('#table-navbar');
         var $tableMain = $('#table-main');
         $tableNavbar.width($('.panel').width());
-        $tableNavbar.css('top', $('.nav').height() + 1);
+        $tableNavbar.css('top', $('.navbar').height() + 1);
         $tableNavbar.hide();
         var pos = $tableMain.offset().top - $('nav').height();
         $(document).scroll(function () {
