@@ -16,14 +16,14 @@ public class HomeAction {
     private long numberOfResultCognize;
     private long numberOfResult0_3;
 
-    private Integer result0_6Times;
-    private Integer result3_6Times;
-    private Integer result0_2Times;
-    private Integer result50Times;
-    private Integer result132Times;
-    private Integer resultCognizeTimes;
-    private Integer result0_3Times;
-    private Integer totalTimes;
+    private Integer result0_6LeftTimes;
+    private Integer result3_6LeftTimes;
+    private Integer result0_2LeftTimes;
+    private Integer result50LeftTimes;
+    private Integer result132LeftTimes;
+    private Integer resultCognizeLeftTimes;
+    private Integer result0_3LeftTimes;
+    private Integer totalLeftTimes;
 
     //全部卡片配置
     private final static Integer CONFIG_TPYE = 1;
@@ -48,7 +48,7 @@ public class HomeAction {
             if(times==null){
                 return "fail";
             }
-            totalTimes = times.getLeftTimes();
+            totalLeftTimes = times.getLeftTimes();
         }else {
             HospitalTestTimes times0_6 = HospitalTestTimesManager.findTimes(hoid,1);
             HospitalTestTimes times3_6 = HospitalTestTimesManager.findTimes(hoid,2);
@@ -58,25 +58,25 @@ public class HomeAction {
             HospitalTestTimes timesCognize = HospitalTestTimesManager.findTimes(hoid,19);
             HospitalTestTimes times0_3 = HospitalTestTimesManager.findTimes(hoid,20);
             if(times0_6!=null){
-                result0_6Times=times0_6.getLeftTimes();
+                result0_6LeftTimes=times0_6.getLeftTimes();
             }
             if(times3_6!=null){
-                result3_6Times=times3_6.getLeftTimes();
+                result3_6LeftTimes=times3_6.getLeftTimes();
             }
             if(times0_2!=null){
-                result0_2Times=times0_2.getLeftTimes();
+                result0_2LeftTimes=times0_2.getLeftTimes();
             }
             if(times50!=null){
-                result50Times=times50.getLeftTimes();
+                result50LeftTimes=times50.getLeftTimes();
             }
             if(times132!=null){
-                result132Times=times132.getLeftTimes();
+                result132LeftTimes=times132.getLeftTimes();
             }
             if(timesCognize!=null){
-                resultCognizeTimes=timesCognize.getLeftTimes();
+                resultCognizeLeftTimes=timesCognize.getLeftTimes();
             }
             if(times0_3!=null){
-                result0_3Times=times0_3.getLeftTimes();
+                result0_3LeftTimes=times0_3.getLeftTimes();
             }
         }
         return "success";
@@ -145,68 +145,68 @@ public class HomeAction {
         this.numberOfResult0_3 = numberOfResult0_3;
     }
 
-    public Integer getResult0_6Times() {
-        return result0_6Times;
+    public Integer getResult0_6LeftTimes() {
+        return result0_6LeftTimes;
     }
 
-    public void setResult0_6Times(Integer result0_6Times) {
-        this.result0_6Times = result0_6Times;
+    public void setResult0_6LeftTimes(Integer result0_6LeftTimes) {
+        this.result0_6LeftTimes = result0_6LeftTimes;
     }
 
-    public Integer getResult3_6Times() {
-        return result3_6Times;
+    public Integer getResult3_6LeftTimes() {
+        return result3_6LeftTimes;
     }
 
-    public void setResult3_6Times(Integer result3_6Times) {
-        this.result3_6Times = result3_6Times;
+    public void setResult3_6LeftTimes(Integer result3_6LeftTimes) {
+        this.result3_6LeftTimes = result3_6LeftTimes;
     }
 
-    public Integer getResult0_2Times() {
-        return result0_2Times;
+    public Integer getResult0_2LeftTimes() {
+        return result0_2LeftTimes;
     }
 
-    public void setResult0_2Times(Integer result0_2Times) {
-        this.result0_2Times = result0_2Times;
+    public void setResult0_2LeftTimes(Integer result0_2LeftTimes) {
+        this.result0_2LeftTimes = result0_2LeftTimes;
     }
 
-    public Integer getResult50Times() {
-        return result50Times;
+    public Integer getResult50LeftTimes() {
+        return result50LeftTimes;
     }
 
-    public void setResult50Times(Integer result50Times) {
-        this.result50Times = result50Times;
+    public void setResult50LeftTimes(Integer result50LeftTimes) {
+        this.result50LeftTimes = result50LeftTimes;
     }
 
-    public Integer getResult132Times() {
-        return result132Times;
+    public Integer getResult132LeftTimes() {
+        return result132LeftTimes;
     }
 
-    public void setResult132Times(Integer result132Times) {
-        this.result132Times = result132Times;
+    public void setResult132LeftTimes(Integer result132LeftTimes) {
+        this.result132LeftTimes = result132LeftTimes;
     }
 
-    public Integer getResultCognizeTimes() {
-        return resultCognizeTimes;
+    public Integer getResultCognizeLeftTimes() {
+        return resultCognizeLeftTimes;
     }
 
-    public void setResultCognizeTimes(Integer resultCognizeTimes) {
-        this.resultCognizeTimes = resultCognizeTimes;
+    public void setResultCognizeLeftTimes(Integer resultCognizeLeftTimes) {
+        this.resultCognizeLeftTimes = resultCognizeLeftTimes;
     }
 
-    public Integer getResult0_3Times() {
-        return result0_3Times;
+    public Integer getResult0_3LeftTimes() {
+        return result0_3LeftTimes;
     }
 
-    public void setResult0_3Times(Integer result0_3Times) {
-        this.result0_3Times = result0_3Times;
+    public void setResult0_3LeftTimes(Integer result0_3LeftTimes) {
+        this.result0_3LeftTimes = result0_3LeftTimes;
     }
 
-    public Integer getTotalTimes() {
-        return totalTimes;
+    public Integer getTotalLeftTimes() {
+        return totalLeftTimes;
     }
 
-    public void setTotalTimes(Integer totalTimes) {
-        this.totalTimes = totalTimes;
+    public void setTotalLeftTimes(Integer totalLeftTimes) {
+        this.totalLeftTimes = totalLeftTimes;
     }
 
     public static Integer getConfigTpye() {

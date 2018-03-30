@@ -45,6 +45,7 @@ public class BabyAction {
     private int page;//用于分页
     private int babyNumber;
     private String babyBirth;
+    private Integer testId;
 
     public String newBaby(){
         userlist = AccountManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
@@ -93,14 +94,12 @@ public class BabyAction {
 
             }
         }
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
         if(babyList!=null && babyList.size()>0){
             //默认显示5条
             if(babyList.size()>5){
-                for (int i = 5; i < babyList.size(); i++) {
-                    //移除
-                    babyList.remove(i);
-                }
+                //移除
+                babyList= babyList.subList(0,5);
             }
         }
         babyList = calculateMonthage(babyList);
@@ -119,14 +118,11 @@ public class BabyAction {
 
             }
         }
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
         if(babyList!=null && babyList.size()>0){
             //默认显示5条
             if(babyList.size()>5){
-                for (int i = 5; i < babyList.size(); i++) {
-                    //移除
-                    babyList.remove(i);
-                }
+                babyList =  babyList.subList(0,5);
             }
         }
         babyList = calculateMonthage(babyList);
@@ -384,5 +380,13 @@ public class BabyAction {
 
     public void setBabyBirth(String babyBirth) {
         this.babyBirth = babyBirth;
+    }
+
+    public Integer getTestId() {
+        return testId;
+    }
+
+    public void setTestId(Integer testId) {
+        this.testId = testId;
     }
 }

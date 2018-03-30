@@ -55,11 +55,30 @@ public class BabyDAO extends AbstractDAO<Baby> {
         String hoid="hoid";
         return super.countByProperty(hoid,Hoid);}
 
-    public List<Baby> findBabyListBySearch(Map<String, Object> babyParams, Map<String, Object> parentParams, int hoid) {
+    public List<Baby> findBabyListBySearch(Map<String, Object> babyParams, Map<String, Object> parentParams, int hoid, Integer testId) {
         try {
-            String queryString = "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
+            String queryString = "";
+            if(testId==1){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyid";
+            }else if(testId==2){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result3_6 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==16){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result0_2 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==17){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result50 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==18){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result132 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==19){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultCognize result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==20){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result0_3 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else {
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
+            }
+
             if (hoid != 0) {
                 queryString += " AND baby.hoid = " + hoid;
+                queryString += " AND result.hosId = " + hoid;
             }
             if (babyParams != null && babyParams.size() > 0) {
                 for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
@@ -70,6 +89,12 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 for (Map.Entry<String, Object> entry : parentParams.entrySet()) {
                     queryString += " AND parent." + entry.getKey() + " = :parent" + entry.getKey();
                 }
+            }
+            //如果testid 为空 不查询测试表
+            if(testId!=null){
+                queryString += " order by  result.time desc";
+            }else {
+                queryString += " order by  baby.id";
             }
             Query query = this.getEntityManager().createQuery(queryString);
             if (babyParams != null && babyParams.size() > 0) {

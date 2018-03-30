@@ -506,16 +506,21 @@ public class TestAction {
             return false;
         }
         HospitalTestTimes hospitalTestTimes = new HospitalTestTimes();
-        String userId = (String) ActionContext.getContext().getSession().get("userid");
+        Integer userId = null;
+        try {
+             userId = (Integer) ActionContext.getContext().getSession().get("userid");
+        }catch (Exception e){
+
+        }
         if(config.getConfigType().equals(CONFIG_TPYE)){
             hospitalTestTimes.setHospitalId(hospitalId);
-            hospitalTestTimes.setUpdateUser(userId);
+            hospitalTestTimes.setUpdateUser(userId.toString());
             hospitalTestTimes = HospitalTestTimesManager.subTimesByHospitalId(hospitalTestTimes);
         }else {
             hospitalTestTimes.setHospitalId(hospitalId);
-            hospitalTestTimes.setUpdateUser(userId);
+            hospitalTestTimes.setUpdateUser(userId.toString());
             hospitalTestTimes.setTestId(testId);
-            hospitalTestTimes = HospitalTestTimesManager.subTimesByHospitalId(hospitalTestTimes);
+            hospitalTestTimes = HospitalTestTimesManager.subTimes(hospitalTestTimes);
         }
         if(hospitalTestTimes==null){
             return false;

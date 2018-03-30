@@ -23,7 +23,7 @@
             <property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/babycheckup?characterEncoding=UTF-8"/>
             <!--<property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/babycheckup"/>-->
             <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="123654@Xsx"/>
+            <property name="hibernate.connection.password" value="root"/>
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.archive.autodetection" value="class"/>

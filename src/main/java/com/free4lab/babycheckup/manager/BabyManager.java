@@ -75,7 +75,7 @@ public class BabyManager {
         return baby;
     }
 
-    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid){
+    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
@@ -90,7 +90,7 @@ public class BabyManager {
         if(parentTel != null && !parentTel.equals("")) {
             parentParams.put("tel", parentTel);
         }
-        List<Baby> babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid);
+        List<Baby> babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
         for(Baby baby : babyList) {
             baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
             baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
