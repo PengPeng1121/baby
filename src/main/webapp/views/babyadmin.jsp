@@ -71,6 +71,16 @@
 <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
 
 <script type="text/javascript">
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    })(jQuery);
+    var testId = 0;
+    //获取url参数
+    testId = $.getUrlParam('testId');
     function searchbaby(){
         var babyName = $("#baby-name").val().trim();
         var babyBirth = $("#baby-birth").val().trim();
@@ -86,7 +96,8 @@
                     babyName:babyName,
                     parentName:parentName,
                     parentTel:parentTel,
-                    babyBirth:babyBirth
+                    babyBirth:babyBirth,
+                    testId: testId
                 },
                 success:function(html){
                     $("#search_result").html(html);
@@ -117,7 +128,8 @@
             babyName:'',
             parentName:'',
             parentTel:'',
-            babyBirth:''
+            babyBirth:'',
+            testId: testId
         },
         success:function(html){
             $("#search_result").html(html);
