@@ -70,8 +70,8 @@
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult0_6"/></label>
                                         <label style="font-weight:normal;">个</label>
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result0_6LeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result0_6LeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -102,8 +102,8 @@
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult3_6"/></label>
                                         <label style="font-weight:normal;">个</label>
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result3_6LeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result3_6LeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -135,8 +135,8 @@
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult0_2"/></label>
                                         <label style="font-weight:normal;">个</label>
 
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result0_2LeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result0_2LeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <!-- <div class="as-desc">
@@ -204,8 +204,8 @@
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult50"/></label>
                                         <label style="font-weight:normal;">个</label>
 
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result50LeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result50LeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -237,8 +237,8 @@
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultCognize"/></label>
                                         <label style="font-weight:normal;">个</label>
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="resultCognizeLeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="resultCognizeLeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <!-- <div class="as-desc">
@@ -273,8 +273,8 @@
                                     <div style="display: inline-block;">
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult132"/></label>
                                         <label style="font-weight:normal;">个</label>
-                                        <label style="font-weight:normal;">剩余次数：</label>
-                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result132LeftTimes"/>次</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result132LeftTimes"/>次</label> -->
                                     </div>
                                 </div>
                                 <!-- <div class="as-desc">
