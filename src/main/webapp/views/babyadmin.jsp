@@ -96,7 +96,8 @@
                     babyName:babyName,
                     parentName:parentName,
                     parentTel:parentTel,
-                    babyBirth:babyBirth
+                    babyBirth:babyBirth,
+                    testId: 0
                 },
                 success:function(html){
                     $("#search_result").html(html);
