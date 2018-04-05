@@ -78,7 +78,12 @@ public class BabyDAO extends AbstractDAO<Baby> {
 
             if (hoid != 0) {
                 queryString += " AND baby.hoid = " + hoid;
-                queryString += " AND result.hosId = " + hoid;
+                if(testId==1){
+                    queryString += " AND result.hoid = " + hoid;
+                }else if(testId!=0){
+                    queryString += " AND result.hosId = " + hoid;
+                }
+
             }
             if (babyParams != null && babyParams.size() > 0) {
                 for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
@@ -91,10 +96,44 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 }
             }
             //如果testid 为空 不查询测试表
-            if(testId!=null){
+            if(testId!=null && testId!=0){
                 queryString += " order by  result.time desc";
             }else {
                 queryString += " order by  baby.id";
+            }
+            Query query = this.getEntityManager().createQuery(queryString);
+            if (babyParams != null && babyParams.size() > 0) {
+                for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
+                    query.setParameter("baby" + entry.getKey(), entry.getValue());
+                }
+            }
+            if (parentParams != null && parentParams.size() > 0) {
+                for (Map.Entry<String, Object> entry : parentParams.entrySet()) {
+                    query.setParameter("parent" + entry.getKey(), entry.getValue());
+                }
+            }
+            return query.getResultList();
+        } catch (Exception e) {
+            this.log("find baby list by search failed", Level.SEVERE, e);
+            return null;
+        }
+    }
+
+    public List<Baby> findBabyList(Map<String, Object> babyParams, Map<String, Object> parentParams, int hoid) {
+        try {
+            String queryString = "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
+            if (hoid != 0) {
+                queryString += " AND baby.hoid = " + hoid;
+            }
+            if (babyParams != null && babyParams.size() > 0) {
+                for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
+                    queryString += " AND baby." + entry.getKey() + " = :baby" + entry.getKey();
+                }
+            }
+            if (parentParams != null && parentParams.size() > 0) {
+                for (Map.Entry<String, Object> entry : parentParams.entrySet()) {
+                    queryString += " AND parent." + entry.getKey() + " = :parent" + entry.getKey();
+                }
             }
             Query query = this.getEntityManager().createQuery(queryString);
             if (babyParams != null && babyParams.size() > 0) {

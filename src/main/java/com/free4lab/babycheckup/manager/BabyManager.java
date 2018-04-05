@@ -9,10 +9,7 @@ import com.free4lab.babycheckup.model.BabySchema;
 import com.free4lab.babycheckup.model.FamilyRelation;
 import com.free4lab.babycheckup.model.Parent;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by yph on 17-6-23.
@@ -90,7 +87,12 @@ public class BabyManager {
         if(parentTel != null && !parentTel.equals("")) {
             parentParams.put("tel", parentTel);
         }
-        List<Baby> babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
+        List<Baby> babyList = new ArrayList<Baby>();
+        if(testId==null){
+            getBabyDAOInstance().findBabyList(babyParams, parentParams, hoid);
+        }else {
+            babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
+        }
         for(Baby baby : babyList) {
             baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
             baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
