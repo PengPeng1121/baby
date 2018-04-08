@@ -56,8 +56,8 @@ public class BabyDAO extends AbstractDAO<Baby> {
         return super.countByProperty(hoid,Hoid);}
 
     public List<Baby> findBabyListBySearch(Map<String, Object> babyParams, Map<String, Object> parentParams, int hoid, Integer testId) {
+        String queryString = "";
         try {
-            String queryString = "";
             if(testId==1){
                 queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyid";
             }else if(testId==2){
@@ -96,10 +96,10 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 }
             }
             //如果testid 为空 不查询测试表
-            if(testId!=null && testId!=0){
-                queryString += " order by  result.time desc";
-            }else {
-                queryString += " order by  baby.id";
+            if(testId!=null){
+                if(testId!=0){
+                    queryString += " order by  result.time desc";
+                }
             }
             Query query = this.getEntityManager().createQuery(queryString);
             if (babyParams != null && babyParams.size() > 0) {
@@ -114,6 +114,8 @@ public class BabyDAO extends AbstractDAO<Baby> {
             }
             return query.getResultList();
         } catch (Exception e) {
+            this.log("sql 语句"+queryString, Level.SEVERE,e);
+            this.log("testId   是   ---------："+ testId, Level.SEVERE,e);
             this.log("find baby list by search failed", Level.SEVERE, e);
             return null;
         }

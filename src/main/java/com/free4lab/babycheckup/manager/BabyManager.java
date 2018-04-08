@@ -72,7 +72,7 @@ public class BabyManager {
         return baby;
     }
 
-    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId){
+    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
@@ -88,11 +88,31 @@ public class BabyManager {
             parentParams.put("tel", parentTel);
         }
         List<Baby> babyList = new ArrayList<Baby>();
-        if(testId==null){
-            getBabyDAOInstance().findBabyList(babyParams, parentParams, hoid);
-        }else {
-            babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
+        babyList = getBabyDAOInstance().findBabyList(babyParams, parentParams, hoid);
+        for(Baby baby : babyList) {
+            baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
+            baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
         }
+        return babyList;
+    }
+
+    public static List<Baby> findBySearchWithTestId(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId){
+        Map<String, Object> babyParams = new HashMap<String, Object>();
+        if(babyName != null && !babyName.equals("")) {
+            babyParams.put("name", babyName);
+        }
+        if(birthday != null ) {
+            babyParams.put("birthday", birthday);
+        }
+        Map<String, Object> parentParams = new HashMap<String, Object>();
+        if(parentName != null && !parentName.equals("")) {
+            parentParams.put("name", parentName);
+        }
+        if(parentTel != null && !parentTel.equals("")) {
+            parentParams.put("tel", parentTel);
+        }
+        List<Baby> babyList = new ArrayList<Baby>();
+        babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
         for(Baby baby : babyList) {
             baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
             baby.setMother(getParentByBabyAndRelation(baby, "母亲"));

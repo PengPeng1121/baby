@@ -94,7 +94,12 @@ public class BabyAction {
 
             }
         }
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        if(testId==null || testId == 0){
+            babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        }else if(testId != null){
+            babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        }
+
         if(babyList!=null && babyList.size()>0){
             //默认显示5条
             if(babyList.size()>5){
@@ -118,7 +123,11 @@ public class BabyAction {
 
             }
         }
-        babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        if(testId==null || testId == 0){
+            babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
+        }else if(testId != null){
+            babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        }
         if(babyList!=null && babyList.size()>0){
             //默认显示5条
             if(babyList.size()>5){
