@@ -166,12 +166,12 @@
 <script src="statics/highcharts/solid-gauge.js"></script>
 <script type="text/javascript">
 
-    var a1 = +(parseInt($('#a1').text()) / 31).toFixed(2);
+    var a1 = +(parseInt($('#a1').text()) / 30).toFixed(2);
     var a2 = +(parseInt($('#a2').text()) / 18).toFixed(2);
-    var a3 = +(parseInt($('#a3').text()) / 20).toFixed(2);
-    var a4 = +(parseInt($('#a4').text()) / 23).toFixed(2);
-    var a5 = +(parseInt($('#a5').text()) / 22).toFixed(2);
-    var a6 = +(parseInt($('#a6').text()) / 18).toFixed(2);
+    var a3 = +(parseInt($('#a3').text()) / 19).toFixed(2);
+    var a4 = +(parseInt($('#a4').text()) / 22).toFixed(2);
+    var a5 = +(parseInt($('#a5').text()) / 24).toFixed(2);
+    var a6 = +(parseInt($('#a6').text()) / 19).toFixed(2);
     var a8 = parseInt($('#a8').text());
 
     var b1 = parseInt($('#a1').text())
@@ -251,7 +251,7 @@
         series: [{
             name: '总分',
             color: '#004e90',
-            data: [23, 20, 22, 31, 18, 18, 132]
+            data: [30, 18, 19, 22, 24, 19, 132]
         }, {
             name: '得分',
             color: '#ff9800',

@@ -652,6 +652,7 @@
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
+                    questionScore = [0,0,0,0,0,0,0,0];
                     score();
                 }
             });
