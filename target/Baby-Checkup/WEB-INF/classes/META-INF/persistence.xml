@@ -15,6 +15,10 @@
         <class>com.free4lab.babycheckup.model.FamilyRelation</class>
         <class>com.free4lab.babycheckup.model.Parent</class>
         <class>com.free4lab.babycheckup.model.Test</class>
+        <class>com.free4lab.babycheckup.model.Result132</class>
+        <class>com.free4lab.babycheckup.model.ResultCognize</class>
+        <class>com.free4lab.babycheckup.model.Result0_3</class>
+        <class>com.free4lab.babycheckup.model.ResultDDST</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/babycheckup?characterEncoding=UTF-8"/>
