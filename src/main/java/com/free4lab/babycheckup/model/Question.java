@@ -12,7 +12,7 @@ public class Question {
     private Integer type;
     private Integer testid;
     private String reasons;
-    private Double extend1;
+    private String extend1;
     private String extend2;
 
     @Id
@@ -88,11 +88,11 @@ public class Question {
 
     @Basic
     @Column(name = "extend1", nullable = true, precision = 0)
-    public Double getExtend1() {
+    public String getExtend1() {
         return extend1;
     }
 
-    public void setExtend1(Double extend1) {
+    public void setExtend1(String extend1) {
         this.extend1 = extend1;
     }
 

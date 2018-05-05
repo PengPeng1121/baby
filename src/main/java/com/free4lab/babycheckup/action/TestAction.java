@@ -33,10 +33,12 @@ public class TestAction {
     private List<Result50> result50List = new ArrayList<Result50>();
     private List<Result132> result132List = new ArrayList<Result132>();
     private List<ResultCognize> resultCognizeList = new ArrayList<ResultCognize>();
+    private List<ResultDDST> resultDDSTList = new ArrayList<ResultDDST>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
     private Result result;
+    private ResultDDST resultDDST;
     private Result3_6 result3_6;
     private Result0_2 result0_2;
     private Result0_3 result0_3;
@@ -212,6 +214,7 @@ public class TestAction {
         resultCognizeList = ResultCognizeManager.findResultBybid(babyid);
         result132List = ResultManager132.findResultBybid(babyid);
         result0_3List = ResultManager0_3.findResultBybid(babyid);
+        resultDDSTList = ResultDDSTManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -462,6 +465,43 @@ public class TestAction {
         }catch (Exception e){
 
         }
+        return SUCCESS;
+    }
+
+    public String newTestDDST() {
+        if(!canTest(21)){
+            return "fail";
+        }
+        questionTypeList = QuestionManager.findTypeByTestid(21);
+
+        questionList = QuestionManager.findByTestid(21);
+        baby = BabyManager.findById(babyid);
+        testid = 21;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30+"";
+        if(StringUtils.isNotEmpty(days)){
+            List<Integer> monthList = new ArrayList<Integer>();
+            for (int i=0;i<Integer.parseInt(days);i++){
+                monthList.add(i);
+            }
+            questionMonthList = monthList;
+        }else {
+            questionMonthList = null;
+        }
+        return SUCCESS;
+    }
+
+    public String saveResultDDST(){
+        if(!subTestTimes(21)){
+            return "fail";
+        }
+        resultDDST.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultDDST.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+        resultDDST.setTestId(21);
+        resultDDST.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultDDST.setState("finished");
+        ResultDDSTManager.saveResult(resultDDST);
         return SUCCESS;
     }
 
@@ -719,5 +759,21 @@ public class TestAction {
 
     public void setResult0_3(Result0_3 result0_3) {
         this.result0_3 = result0_3;
+    }
+
+    public ResultDDST getResultDDST() {
+        return resultDDST;
+    }
+
+    public void setResultDDST(ResultDDST resultDDST) {
+        this.resultDDST = resultDDST;
+    }
+
+    public List<ResultDDST> getResultDDSTList() {
+        return resultDDSTList;
+    }
+
+    public void setResultDDSTList(List<ResultDDST> resultDDSTList) {
+        this.resultDDSTList = resultDDSTList;
     }
 }

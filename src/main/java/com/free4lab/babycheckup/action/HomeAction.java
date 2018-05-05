@@ -3,6 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
+import com.free4lab.babycheckup.model.ResultDDST;
 import com.opensymphony.xwork2.ActionContext;
 
 public class HomeAction {
@@ -15,6 +16,7 @@ public class HomeAction {
     private long numberOfResult132;
     private long numberOfResultCognize;
     private long numberOfResult0_3;
+    private long numberOfResultDDST;
 
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
@@ -23,6 +25,7 @@ public class HomeAction {
     private Integer result132LeftTimes;
     private Integer resultCognizeLeftTimes;
     private Integer result0_3LeftTimes;
+    private Integer resultDDSTLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -38,6 +41,7 @@ public class HomeAction {
         numberOfResult132 = ResultManager132.countResultByHosIdAndTestId(hoid,18);
         numberOfResultCognize = ResultCognizeManager.countResultByHosIdAndTestId(hoid,19);
         numberOfResult0_3 = ResultManager0_3.countResultByHosIdAndTestId(hoid,20);
+        numberOfResultDDST = ResultDDSTManager.countResultByHosIdAndTestId(hoid,21);
 
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
@@ -57,6 +61,7 @@ public class HomeAction {
             HospitalTestTimes times132 = HospitalTestTimesManager.findTimes(hoid,18);
             HospitalTestTimes timesCognize = HospitalTestTimesManager.findTimes(hoid,19);
             HospitalTestTimes times0_3 = HospitalTestTimesManager.findTimes(hoid,20);
+            HospitalTestTimes timesDDST = HospitalTestTimesManager.findTimes(hoid,21);
             if(times0_6!=null){
                 result0_6LeftTimes=times0_6.getLeftTimes();
             }
@@ -77,6 +82,9 @@ public class HomeAction {
             }
             if(times0_3!=null){
                 result0_3LeftTimes=times0_3.getLeftTimes();
+            }
+            if(timesDDST!=null){
+                resultDDSTLeftTimes=timesDDST.getLeftTimes();
             }
         }
         return "success";
@@ -211,5 +219,21 @@ public class HomeAction {
 
     public static Integer getConfigTpye() {
         return CONFIG_TPYE;
+    }
+
+    public long getNumberOfResultDDST() {
+        return numberOfResultDDST;
+    }
+
+    public void setNumberOfResultDDST(long numberOfResultDDST) {
+        this.numberOfResultDDST = numberOfResultDDST;
+    }
+
+    public Integer getResultDDSTLeftTimes() {
+        return resultDDSTLeftTimes;
+    }
+
+    public void setResultDDSTLeftTimes(Integer resultDDSTLeftTimes) {
+        this.resultDDSTLeftTimes = resultDDSTLeftTimes;
     }
 }

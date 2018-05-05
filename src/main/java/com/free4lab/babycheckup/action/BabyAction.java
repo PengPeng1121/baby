@@ -150,6 +150,17 @@ public class BabyAction {
         return "success";
     }
 
+    public String testMonthAgeDDST(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthage = (differentdays(d1,d2))/30;
+        if(monthage < 84){
+            flag = true;
+        }
+        return "success";
+    }
+
     //是否可以进行学龄测试-
     public String testMonthAge50(){
         baby = BabyManager.findById(babyid);

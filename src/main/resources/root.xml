@@ -26,6 +26,13 @@
             <result name="success" >views/newTest1.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
+
+        <!--小儿智能发育筛查测试-->
+        <action name="newtestDDST" method="newTestDDST" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestDDST.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--3-6岁测试-->
         <action name="newtest3_6" method="newTest3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest3_6.jsp</result>
@@ -82,6 +89,11 @@
             <result name="success" >views/showresult132.jsp</result>
         </action>
 
+        <!--小儿智能发育筛查-->
+        <action name="showresultDDST" method="showResultDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
+            <result name="success" >views/showresultDDST.jsp</result>
+        </action>
+
         <!--父母育儿0-3结果-->
         <action name="showresult0_3" method="showResult0_3" class="com.free4lab.babycheckup.action.ResultAction0_3">
             <result name="success" >views/showresult0_3.jsp</result>
@@ -133,6 +145,14 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--小儿智能发育筛查-->
+        <action name="saveresultDDST" method="saveResultDDST" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultDDST,resultDDST.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--父母育儿评估量表结果-->
         <action name="saveresult0_3" method="saveResult0_3" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
@@ -171,7 +191,12 @@
                 <param name="includeProperties">babyid,flag</param>
             </result>
         </action>
-
+        <!--是不是能进行4-7的学龄测试-->
+        <action name="monthageDDST" method="testMonthAgeDDST" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
         <!--是不是能进行婴儿-初中学生生活能力量表龄测试-->
         <action name="monthage132" method="testMonthAge132" class="com.free4lab.babycheckup.action.BabyAction">
             <result type="json" name="success">
