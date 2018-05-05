@@ -92,6 +92,8 @@ public class HospitalTestTimesDAO extends AbstractDAO<HospitalTestTimes> {
                 //减一
                 times.setUpdateTime(new Date());
                 times.setLeftTimes(times.getLeftTimes()-1);
+                //已经使用+1
+                times.setUseTimes(times.getUseTimes()+1);
                 times.setUpdateUser(hospitalTestTimes.getUpdateUser());
                 super.update(times);
             }
@@ -108,6 +110,8 @@ public class HospitalTestTimesDAO extends AbstractDAO<HospitalTestTimes> {
             if(times.getLeftTimes()>0){
                 //减一
                 times.setLeftTimes(times.getLeftTimes()-1);
+                //已经使用+1
+                times.setUseTimes(times.getUseTimes()+1);
                 times.setUpdateTime(new Date());
                 times.setUpdateUser(hospitalTestTimes.getUpdateUser());
                 super.update(times);

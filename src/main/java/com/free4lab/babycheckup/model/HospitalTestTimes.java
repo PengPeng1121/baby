@@ -14,6 +14,7 @@ public class HospitalTestTimes {
     private Integer totalTimes;
     private Integer leftTimes;
 
+    private Integer useTimes;
     // 备注
     private String remark;
 
@@ -102,6 +103,16 @@ public class HospitalTestTimes {
 
     public void setLeftTimes(Integer leftTimes) {
         this.leftTimes = leftTimes;
+    }
+
+    @Basic
+    @Column(name = "use_times", nullable = false)
+    public Integer getUseTimes() {
+        return useTimes;
+    }
+
+    public void setUseTimes(Integer useTimes) {
+        this.useTimes = useTimes;
     }
 
     @Basic

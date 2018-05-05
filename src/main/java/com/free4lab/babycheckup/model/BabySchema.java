@@ -43,7 +43,7 @@ public class BabySchema {
     private Byte marriage;//家庭婚姻状况
     private Byte sit;//小儿坐高
     private Byte bust;//胸围
-    private Byte bmi;
+    private Byte bmi;//身体质量指数
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
