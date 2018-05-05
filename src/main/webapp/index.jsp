@@ -296,6 +296,47 @@
                 </div>
             </div>
 
+
+
+            <!-- 小儿智能发育筛查 -->
+
+
+            <div class="col-md-4">
+                <div class="panel panel-default front-panel " style="height: 155px;">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object img-circle" style="height: 100px;width: 100px;" src="statics/img/sm.png" alt="Logo">
+                            </div>
+                            <div class="media-body">
+                                <p class="media-heading" style="font-size: 16px;">小儿智能发育筛查</p>
+                                <div class="as-desc">
+                                    <div style="display: inline-block;">
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultDDST"/></label>
+                                        <label style="font-weight:normal;">个</label>
+                                        <!-- <label style="font-weight:normal;">剩余次数：</label>
+                                        <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result132LeftTimes"/>次</label> -->
+                                    </div>
+                                </div>
+                                <!-- <div class="as-desc">
+                                    正在开发中…
+                                </div> -->
+                                <div class="text-right">
+                                    <s:if test="resultDDSTLeftTimes == 0">
+                                        <span>请购买</span>
+                                    </s:if>
+                                    <s:else>
+                                        <a href="record?testId=21" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                    </s:else>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-4" style="cursor:pointer">
                 <%--<a data-toggle="front-modal" data-title="添加新账户" data-href="" data-size="modal-md">--%>
                     <div class="panel panel-default front-panel change-plus">

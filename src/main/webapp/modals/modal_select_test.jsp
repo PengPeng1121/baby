@@ -40,6 +40,10 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
         </div>
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_ddst()"><h4
+                    style="color: white;font-size: small">小儿智能发育筛查</h4></a>
+        </div>
     </div>
 </div>
 <script>
@@ -169,6 +173,26 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestcognize?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+
+    }
+
+
+    function start_ddst() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthageDDST",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestDDST?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
