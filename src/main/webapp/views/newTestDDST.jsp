@@ -261,7 +261,7 @@
                         }
                     }
                     for(var j = 0; j < questionSum; j++) {
-                        data += "'result.score" + (j + 1) + "':" + questionSelect[j] + ","
+                        data += "'resultDDST.score" + (j + 1) + "':" + questionSelect[j] + ","
                     }
 
                     data += "'resultDDST.a1':" + questionScore[1] + ",";
