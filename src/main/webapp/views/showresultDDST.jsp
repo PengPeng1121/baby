@@ -76,10 +76,10 @@
                     </tr>
                     <tr>
                         <td>应得分</td>
-                        <td>11</td>
-                        <td>8</td>
-                        <td>6</td>
-                        <td>9</td>
+                        <td id="b1"><s:property value="result0_2.b1"/></td>
+                        <td id="b2"><s:property value="result0_2.b2"/></td>
+                        <td id="b3"><s:property value="result0_2.b3"/></td>
+                        <td id="b4"><s:property value="result0_2.b4"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -134,10 +134,10 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
-    var a1 = +(parseInt($('#a1').text()))
-    var a2 = +(parseInt($('#a2').text()))
-    var a3 = +(parseInt($('#a3').text()))
-    var a4 = +(parseInt($('#a4').text()))
+    var p1 = +(parseInt($('#a1').text()) / parseInt($('#b1').text()))
+    var p2 = +(parseInt($('#a2').text()) / parseInt($('#b2').text()))
+    var p3 = +(parseInt($('#a3').text()) / parseInt($('#b3').text()))
+    var p4 = +(parseInt($('#a4').text()) / parseInt($('#b4').text()))
     
 
     // 柱状图数据
