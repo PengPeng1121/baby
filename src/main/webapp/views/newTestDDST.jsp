@@ -73,21 +73,20 @@
                     <s:iterator value="questionTypeList" id="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <s:if test="#type == 61">
-                                <td>个人-社会</td>
+                                <td colspan="3">个人-社会</td>
                             </s:if>
                             <s:if test="#type == 62">
-                                <td>精细动作-适应性</td>
+                                <td colspan="3">精细动作-适应性</td>
                             </s:if>
                             <s:if test="#type == 63">
-                                <td>语言</td>
+                                <td colspan="3">语言</td>
                             </s:if>
                             <s:if test="#type == 64">
-                                <td>大运动</td>
+                                <td colspan="3">大运动</td>
                             </s:if>
                         </tr>
                         <tr>
-                            <td>R</td>
-                            <td>R值</td>
+                            <td>序号</td>
                             <td>问题</td>
                             <td>答题情况</td>
                         </tr>
@@ -96,21 +95,23 @@
                                 <s:if test="#question.month == #month && #question.type == #type">
                                     <tr class="question <s:property value="#question.ordinal"/>  ">
                                         <td>
-                                            <s:property value="#question.extend1"/>
-                                        </td>
-                                        <td>
-                                            <s:property value="#question.extend2"/>
-                                        </td>
-
+                                            <s:property value="#question.ordinal"/>
+                                        </td> 
                                         <td style="width:60%">
+                                            <s:property value="#question.extend1"/>
+                                            <s:property value="#question.extend2"/>
+                                            &nbsp;
                                             <s:property value="#question.description"/>
                                         </td>
                                         
                                         <td>
-                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />P<br>
-                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />F<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />P
+                                            &nbsp;
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />F
+                                            &nbsp;
                                             <!-- 不合作 -->
-                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="3" />R<br>
+                                            <input type="radio" name="<s:property value="#question.ordinal"/>" value="3" />R
+                                            &nbsp;
                                         </td>
                                     </tr>
                                 </s:if>
@@ -184,12 +185,12 @@
         $('.question').removeClass('noanswer');
         // Todo: 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
-            if (!$(".question." + i).html()) {
+            if ($(".question." + i).html()) {
                 temp = $("input:radio[name="+ i +"]:checked").val();
                 if (temp == undefined) {
                     // Todo: 标注所有没有答的题
                     for (var j = i; j <= questionSum; j++) {
-                        if (!$(".question." + j).html()) {
+                        if ($(".question." + j).html()) {
                             if ($("input:radio[name="+ j +"]:checked").val() == undefined) {
                                 $("input:radio[name="+ j +"]").parents('tr').addClass('noanswer');
                             }
@@ -207,24 +208,26 @@
         for (var q = 1; q <= questionSum; q++) {
             
 
-            if (!$(".question." + q).html()) {
+            if ($(".question." + q).html()) {
                 temp = $("input:radio[name="+ q +"]:checked").val();
                 temp = parseInt(temp);
-                if(q < 24){
-                    questionScore[1] += temp;
-                    continue;
-                }
-                if(q < 54){
-                    questionScore[2] += temp;
-                    continue;
-                }
-                if(q < 74){
-                    questionScore[3] += temp;
-                    continue;
-                }
-                if(q < 105){
-                    questionScore[4] += temp;
-                    continue;
+                if (temp === 0) {
+                    if(q < 24){
+                        questionScore[1] += 1;
+                        continue;
+                    }
+                    if(q < 54){
+                        questionScore[2] += 1;
+                        continue;
+                    }
+                    if(q < 74){
+                        questionScore[3] += 1;
+                        continue;
+                    }
+                    if(q < 105){
+                        questionScore[4] += 1;
+                        continue;
+                    }
                 }
             }
         }
@@ -245,14 +248,14 @@
 
                     var questionSelect = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
-                        if (!$(".question." + i).html()) {
+                        if ($(".question." + i).html()) {
                             temp = $("input:radio[name="+ i +"]:checked").val();
                             if (temp == 1) {
                                 if (map[days].indexOf(i) == -1 ){
                                     temp = 2
                                 }
                             }
-                            questionSelect[i] = temp;
+                            questionSelect[i] = parseInt(temp);
                         } else {
                             questionSelect[i] = 4;
                         }
@@ -267,10 +270,8 @@
                     data += "'resultDDST.a4':" + questionScore[4] + ",";
                     
 
-                    data += "'resultDDST.babyId':" + $("#babyid").val() + ",";
-                    var answerRelation = $("#answerRelation").val();
-                    answerRelation= " ' "+ answerRelation +" ' ";
-                    data += "'resultDDST.answerRelation':" + answerRelation + "}";
+                    data += "'resultDDST.babyId':" + $("#babyid").val() + "}";
+                    
 
                     $.ajax({
                         url: 'saveresultDDST',
