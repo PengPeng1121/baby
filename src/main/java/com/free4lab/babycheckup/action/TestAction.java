@@ -7,6 +7,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.pp.common.constant.result132.Level;
 import com.pp.common.constant.resultCognize.Evaluation;
 import com.pp.common.constant.resultCognize.Talent;
+import com.pp.common.constant.util.DDSTUtil;
 import com.pp.common.constant.util.ExactAgeUtil;
 import com.pp.common.constant.util.GetScaleUtil;
 import com.pp.common.constant.util.GetStandardUtil;
@@ -482,7 +483,7 @@ public class TestAction {
         days = (differentdays(birth,today))/30+"";
         if(StringUtils.isNotEmpty(days)){
             List<Integer> monthList = new ArrayList<Integer>();
-            for (int i=0;i<Integer.parseInt(days);i++){
+            for (int i=1;i<=Integer.parseInt(days);i++){
                 monthList.add(i);
             }
             questionMonthList = monthList;
@@ -501,6 +502,123 @@ public class TestAction {
         resultDDST.setTestId(21);
         resultDDST.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
         resultDDST.setState("finished");
+        List<Integer> scoreList = new ArrayList<Integer>();
+        scoreList.add(resultDDST.getScore1());
+        scoreList.add(resultDDST.getScore2());
+        scoreList.add(resultDDST.getScore3());
+        scoreList.add(resultDDST.getScore4());
+        scoreList.add(resultDDST.getScore5());
+        scoreList.add(resultDDST.getScore6());
+        scoreList.add(resultDDST.getScore7());
+        scoreList.add(resultDDST.getScore8());
+        scoreList.add(resultDDST.getScore9());
+        scoreList.add(resultDDST.getScore10());
+
+        scoreList.add(resultDDST.getScore11());
+        scoreList.add(resultDDST.getScore12());
+        scoreList.add(resultDDST.getScore13());
+        scoreList.add(resultDDST.getScore14());
+        scoreList.add(resultDDST.getScore15());
+        scoreList.add(resultDDST.getScore16());
+        scoreList.add(resultDDST.getScore17());
+        scoreList.add(resultDDST.getScore18());
+        scoreList.add(resultDDST.getScore19());
+        scoreList.add(resultDDST.getScore20());
+
+        scoreList.add(resultDDST.getScore21());
+        scoreList.add(resultDDST.getScore22());
+        scoreList.add(resultDDST.getScore23());
+        scoreList.add(resultDDST.getScore24());
+        scoreList.add(resultDDST.getScore25());
+        scoreList.add(resultDDST.getScore26());
+        scoreList.add(resultDDST.getScore27());
+        scoreList.add(resultDDST.getScore28());
+        scoreList.add(resultDDST.getScore29());
+        scoreList.add(resultDDST.getScore30());
+
+        scoreList.add(resultDDST.getScore31());
+        scoreList.add(resultDDST.getScore32());
+        scoreList.add(resultDDST.getScore33());
+        scoreList.add(resultDDST.getScore34());
+        scoreList.add(resultDDST.getScore35());
+        scoreList.add(resultDDST.getScore36());
+        scoreList.add(resultDDST.getScore37());
+        scoreList.add(resultDDST.getScore38());
+        scoreList.add(resultDDST.getScore39());
+        scoreList.add(resultDDST.getScore40());
+
+        scoreList.add(resultDDST.getScore41());
+        scoreList.add(resultDDST.getScore42());
+        scoreList.add(resultDDST.getScore43());
+        scoreList.add(resultDDST.getScore44());
+        scoreList.add(resultDDST.getScore45());
+        scoreList.add(resultDDST.getScore46());
+        scoreList.add(resultDDST.getScore47());
+        scoreList.add(resultDDST.getScore48());
+        scoreList.add(resultDDST.getScore49());
+        scoreList.add(resultDDST.getScore50());
+
+        scoreList.add(resultDDST.getScore51());
+        scoreList.add(resultDDST.getScore52());
+        scoreList.add(resultDDST.getScore53());
+        scoreList.add(resultDDST.getScore54());
+        scoreList.add(resultDDST.getScore55());
+        scoreList.add(resultDDST.getScore56());
+        scoreList.add(resultDDST.getScore57());
+        scoreList.add(resultDDST.getScore58());
+        scoreList.add(resultDDST.getScore59());
+        scoreList.add(resultDDST.getScore60());
+
+        scoreList.add(resultDDST.getScore61());
+        scoreList.add(resultDDST.getScore62());
+        scoreList.add(resultDDST.getScore63());
+        scoreList.add(resultDDST.getScore64());
+        scoreList.add(resultDDST.getScore65());
+        scoreList.add(resultDDST.getScore66());
+        scoreList.add(resultDDST.getScore67());
+        scoreList.add(resultDDST.getScore68());
+        scoreList.add(resultDDST.getScore69());
+        scoreList.add(resultDDST.getScore70());
+
+        scoreList.add(resultDDST.getScore71());
+        scoreList.add(resultDDST.getScore72());
+        scoreList.add(resultDDST.getScore73());
+        scoreList.add(resultDDST.getScore74());
+        scoreList.add(resultDDST.getScore75());
+        scoreList.add(resultDDST.getScore76());
+        scoreList.add(resultDDST.getScore77());
+        scoreList.add(resultDDST.getScore78());
+        scoreList.add(resultDDST.getScore79());
+        scoreList.add(resultDDST.getScore80());
+
+        scoreList.add(resultDDST.getScore81());
+        scoreList.add(resultDDST.getScore82());
+        scoreList.add(resultDDST.getScore83());
+        scoreList.add(resultDDST.getScore84());
+        scoreList.add(resultDDST.getScore85());
+        scoreList.add(resultDDST.getScore86());
+        scoreList.add(resultDDST.getScore87());
+        scoreList.add(resultDDST.getScore88());
+        scoreList.add(resultDDST.getScore89());
+        scoreList.add(resultDDST.getScore90());
+
+        scoreList.add(resultDDST.getScore91());
+        scoreList.add(resultDDST.getScore92());
+        scoreList.add(resultDDST.getScore93());
+        scoreList.add(resultDDST.getScore94());
+        scoreList.add(resultDDST.getScore95());
+        scoreList.add(resultDDST.getScore96());
+        scoreList.add(resultDDST.getScore97());
+        scoreList.add(resultDDST.getScore98());
+        scoreList.add(resultDDST.getScore99());
+        scoreList.add(resultDDST.getScore100());
+
+        scoreList.add(resultDDST.getScore101());
+        scoreList.add(resultDDST.getScore102());
+        scoreList.add(resultDDST.getScore103());
+        scoreList.add(resultDDST.getScore104());
+        String resultMag = DDSTUtil.getResult(scoreList);
+        resultDDST.setResult(resultMag);
         ResultDDSTManager.saveResult(resultDDST);
         return SUCCESS;
     }
