@@ -1,6 +1,7 @@
 package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultDDSTDAO;
+import com.free4lab.babycheckup.model.Question;
 import com.free4lab.babycheckup.model.ResultDDST;
 
 import java.util.List;
@@ -25,4 +26,7 @@ public class ResultDDSTManager {
     }
     public static long countResultByHoid(int hoid) {return getResultDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+    public static Integer findQuestions(int testId, int testType, int monthAge){
+        return getResultDAOInstance().findQuestions(testId,testType,monthAge);
+    }
 }

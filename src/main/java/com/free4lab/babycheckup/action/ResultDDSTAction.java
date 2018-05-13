@@ -21,6 +21,10 @@ public class ResultDDSTAction {
     private String SUCCESS = "success";
     private String stime;//检查日期
     private Hospital hospital;
+    private int b1;
+    private int b2;
+    private int b3;
+    private int b4;
 
     private int days;
 
@@ -31,7 +35,10 @@ public class ResultDDSTAction {
         try{
 
             days = (differentdays(baby.getBirthday(),new Date()))/30;
-
+            b1 = ResultDDSTManager.findQuestions(21,61,days);
+            b2 = ResultDDSTManager.findQuestions(21,62,days);
+            b3 = ResultDDSTManager.findQuestions(21,63,days);
+            b4 = ResultDDSTManager.findQuestions(21,64,days);
         }catch (Exception e){
 
         }
@@ -98,5 +105,37 @@ public class ResultDDSTAction {
 
     public void setDays(int days) {
         this.days = days;
+    }
+
+    public int getB1() {
+        return b1;
+    }
+
+    public void setB1(int b1) {
+        this.b1 = b1;
+    }
+
+    public int getB2() {
+        return b2;
+    }
+
+    public void setB2(int b2) {
+        this.b2 = b2;
+    }
+
+    public int getB3() {
+        return b3;
+    }
+
+    public void setB3(int b3) {
+        this.b3 = b3;
+    }
+
+    public int getB4() {
+        return b4;
+    }
+
+    public void setB4(int b4) {
+        this.b4 = b4;
     }
 }

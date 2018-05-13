@@ -1,14 +1,17 @@
 package com.free4lab.babycheckup.dao;
 
+import com.free4lab.babycheckup.model.Question;
 import com.free4lab.babycheckup.model.ResultDDST;
 import com.free4lab.utils.sql.AbstractDAO;
 import com.free4lab.utils.sql.IEntityManagerHelper;
 import com.free4lab.utils.sql.entitymanager.NoCacheEntityManagerHelper;
 
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 
 /**
  * Created by Administrator on 2017/7/11.
@@ -63,5 +66,24 @@ public class ResultDDSTDAO extends AbstractDAO<ResultDDST> {
         String hoid="hosId";
         String testid="testId";
         return super.countByProperty(hoid,hosid,testid,testId);
+    }
+
+
+    public Integer findQuestions(int testId, int testType, int monthAge){
+        List<Question> questions = new ArrayList<Question>();
+        try{
+            final String queryString = "SELECT model FROM Question model WHERE model.testid = :testId and model.type = :testType and model.month <= :monthAge";
+            Query query = getEntityManager().createQuery(queryString);
+            query.setParameter("testId", testId);
+            query.setParameter("testType", testType);
+            query.setParameter("monthAge", monthAge);
+            questions = query.getResultList();
+            if(questions!=null){
+                return questions.size();
+            }
+        } catch (Exception e) {
+            this.log(e.getMessage(), Level.SEVERE, e);
+        }
+        return 0;
     }
 }
