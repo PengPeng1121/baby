@@ -69,17 +69,17 @@
                     <tbody>
                     <tr>
                         <td>个人得分</td>
-                        <td id="a1"><s:property value="result0_2.a1"/></td>
-                        <td id="a2"><s:property value="result0_2.a2"/></td>
-                        <td id="a3"><s:property value="result0_2.a3"/></td>
-                        <td id="a4"><s:property value="result0_2.a4"/></td>
+                        <td id="a1"><s:property value="resultDDST.a1"/></td>
+                        <td id="a2"><s:property value="resultDDST.a2"/></td>
+                        <td id="a3"><s:property value="resultDDST.a3"/></td>
+                        <td id="a4"><s:property value="resultDDST.a4"/></td>
                     </tr>
                     <tr>
                         <td>应得分</td>
-                        <td id="b1"><s:property value="result0_2.b1"/></td>
-                        <td id="b2"><s:property value="result0_2.b2"/></td>
-                        <td id="b3"><s:property value="result0_2.b3"/></td>
-                        <td id="b4"><s:property value="result0_2.b4"/></td>
+                        <td id="b1"><s:property value="b1"/></td>
+                        <td id="b2"><s:property value="b2"/></td>
+                        <td id="b3"><s:property value="b3"/></td>
+                        <td id="b4"><s:property value="b4"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -87,7 +87,7 @@
         </div>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading">评定结果: <s:property value="result"/></div>
+            <div class="panel-heading">评定结果: <s:property value="resultDDST.result"/></div>
         </div>
 
 
@@ -195,7 +195,7 @@
                 enabled:false
             },
             series: [{
-                data: [a1, a2, a3, a4]
+                data: [p1, p2, p3, p4]
             }]
         }, function(c){
             chart1 = c;
@@ -225,14 +225,16 @@
                 
                 labels: {
                     enabled: false
-                }
+                },
+                max:1,
+                min:0
             },
             tooltip: {
                 shared: true
             },
             series: [{
                 name: '得分',
-                data: [a1, a2, a3, a4],
+                data: [p1, p2, p3, p4],
                 pointPlacement: 'on'
             }]
         }, function(c){

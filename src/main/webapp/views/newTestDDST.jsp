@@ -247,7 +247,7 @@
                     var data = "{";
 
                     var questionSelect = [questionSum];
-                    for(var i = 0; i < questionSum; i++) {
+                    for(var i = 1; i <= questionSum; i++) {
                         if ($(".question." + i).html()) {
                             temp = $("input:radio[name="+ i +"]:checked").val();
                             if (temp == 1) {
@@ -260,8 +260,8 @@
                             questionSelect[i] = 4;
                         }
                     }
-                    for(var j = 0; j < questionSum; j++) {
-                        data += "'resultDDST.score" + (j + 1) + "':" + questionSelect[j] + ","
+                    for(var j = 1; j <= questionSum; j++) {
+                        data += "'resultDDST.score" + (j) + "':" + questionSelect[j] + ","
                     }
 
                     data += "'resultDDST.a1':" + questionScore[1] + ",";
