@@ -47,10 +47,16 @@
                         <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
                         <td class="col-md-2"></td>
                         <td class="col-md-2"></td>
+                        <td class="col-md-2">月龄</td>
+                        <td class="col-md-2"><s:property value="days"/></td>
+                    </div>
                         
                     </tr>
                 </table>
             </div>
+
+            <input id="days" type="hidden" value="<s:property value="days"/>">
+
         </div>
         <input type="hidden" id="resultID" value="<s:property value="result0_2.id"/>">
         <div class="panel panel-default front-panel" id="allbaby">
@@ -76,10 +82,10 @@
                     </tr>
                     <tr>
                         <td>应得分</td>
-                        <td id="b1"><s:property value="b1"/></td>
-                        <td id="b2"><s:property value="b2"/></td>
-                        <td id="b3"><s:property value="b3"/></td>
-                        <td id="b4"><s:property value="b4"/></td>
+                        <td id="b1"></td>
+                        <td id="b2"></td>
+                        <td id="b3"></td>
+                        <td id="b4"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -134,10 +140,138 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
 
+    var days = parseInt($('#days').val());
+    if (days>24) {
+        days = parseInt(days / 3) * 3;
+    }
+
+
+    var map1 = {
+        1: [4, 32, 57, 74],
+        2: [7, 36, 40, 44, 60, 63, 86],
+        3: [7, 13, 36, 40, 44, 48, 60, 63, 82, 86, 90, 98],
+        4: [10, 13, 44, 48, 51, 63, 82, 86, 90, 94, 98],
+        5: [10, 13, 22, 25, 51, 66, 94, 98, 102],
+        6: [10, 13, 16, 19, 22, 25, 29, 33, 37, 66, 68, 75, 79, 102],
+        7: [13, 16, 19, 22, 29, 33, 41, 45, 66, 68, 70, 75, 79],
+        8: [2, 19, 22, 33, 41, 45, 49, 68, 70, 79, 83, 87],
+        9: [2, 22, 41, 45, 49, 68, 70, 83, 87, 91],
+        10: [2, 5, 11, 45, 49, 70, 72, 83, 87, 91, 95],
+        11: [2, 5, 8, 11, 45, 49, 70, 72, 91, 95, 99],
+        12: [5, 8, 11, 30, 52, 72, 91, 95, 99, 103],
+        13: [5, 8, 11, 14, 26, 30, 52, 55, 72, 76, 99, 103],
+        14: [8, 11, 14, 17, 26, 30, 38, 52, 55, 58, 76, 80, 103],
+        15: [8, 11, 14, 17, 26, 30, 38, 52, 55, 58, 61, 80, 84],
+        16: [11, 14, 17, 20, 23, 26, 30, 34, 38, 52, 55, 58, 61, 67, 80, 84, 88, 96],
+        17: [11, 14, 17, 20, 23, 26, 30, 34, 38, 52, 55, 58, 61, 67, 80, 84, 88, 96],
+        18: [3, 6, 17, 20, 23, 26, 30, 34, 38, 55, 58, 61, 67, 80, 84, 88, 96],
+        19: [3, 6, 17, 20, 23, 26, 30, 34, 38, 55, 58, 61, 64, 67, 84, 88, 96],
+        20: [3, 6, 17, 20, 23, 34, 38, 55, 58, 61, 64, 67, 84, 88, 96],
+        21: [3, 6, 12, 17, 20, 23, 34, 38, 58, 61, 64, 67, 88, 96],
+        22: [3, 6, 9, 20, 23, 34, 38, 42, 53, 61, 64, 67, 77, 92, 96],
+        23: [3, 6, 9, 12, 20, 23, 38, 42, 53, 64, 67, 77, 92, 96, 100],
+        24: [3, 6, 9, 12, 20, 23, 38, 42, 53, 64, 67, 77, 92, 96, 100],
+        30: [3, 6, 9, 12, 15, 18, 42, 46, 50, 53, 69, 77, 92, 96, 100, 104],
+        
+        33:[15,18,21,27,31,50,53,56,71,73,81,85,89],
+        
+        36: [15, 18, 21, 27, 31, 46, 50, 53, 71, 73, 81, 85],
+        
+        39: [15,18,21,27,31,50,53,56,71,73,81,85,89],
+        42: [18, 21, 27, 31, 35, 50, 53, 56, 59, 71, 73, 81, 85, 89],
+        
+        45:[21,27,31,35,39,56,59,62,65,71,73,81,85,89,97],
+
+        48: [21, 31, 35, 39, 43, 47, 56, 59, 62, 65, 71, 73, 81, 85, 89, 93, 97],
+        
+        51:[31,35,39,43,47,56,59,62,65,71,73,85,89,93,97,101],
+        54: [35, 39, 43, 47, 59, 62, 65, 89, 93, 97, 101],
+        57:[35,39,43,47,59,62,65,89,93,97,101],
+
+        60: [35, 39, 43, 47, 59, 62, 65, 93, 97, 101],
+        66: [47, 59, 62, 65, 93, 97, 101],
+        72: []
+
+    }
+
+
+    var arr = []
+    var result = {}
+    for (var m in map1) {
+        arr = map1[m]
+        result[m] = {
+                a: 0,
+                b: 0,
+                c: 0,
+                d: 0
+            }
+        for (var i = 0, len = arr.length; i < len; i++) {
+            if (arr[i] >0 && arr[i] <24) {
+                result[m]['a']++;
+            }
+            if (arr[i] >23 && arr[i] <54) {
+                result[m]['b']++;
+            }
+            if (arr[i] >53 && arr[i] <74) {
+                result[m]['c']++;
+            }
+            if (arr[i] >73 && arr[i] <104) {
+                result[m]['d']++;
+            }
+        }
+        switch(days)
+        {
+        case 1:
+          result[m]['a']+= 1;
+          result[m]['b']+= 1;
+          result[m]['c']+= 1;
+          result[m]['d']+= 1;
+          break;
+        case 2:
+          result[m]['a']+= 1;
+          result[m]['b']+= 3;
+          result[m]['c']+= 2;
+          result[m]['d']+= 1;
+          break;
+        case 3:
+          result[m]['a']+= 2;
+          result[m]['b']+= 3;
+          result[m]['c']+= 2;
+          result[m]['d']+= 1;
+          break;
+        case 4:
+          result[m]['a']+= 2;
+          result[m]['b']+= 3;
+          result[m]['c']+= 3;
+          result[m]['d']+= 2;
+          break;
+        default:
+          result[m]['a']+= 3;
+          result[m]['b']+= 3;
+          result[m]['c']+= 3;
+          result[m]['d']+= 3;
+        }
+    }
+
+
+
+    $('#b1').text(result[days]['a'])
+    $('#b2').text(result[days]['b'])
+    $('#b3').text(result[days]['c'])
+    $('#b4').text(result[days]['d'])
+
+
+
+
     var p1 = +(parseInt($('#a1').text()) / parseInt($('#b1').text()))
     var p2 = +(parseInt($('#a2').text()) / parseInt($('#b2').text()))
     var p3 = +(parseInt($('#a3').text()) / parseInt($('#b3').text()))
     var p4 = +(parseInt($('#a4').text()) / parseInt($('#b4').text()))
+
+    // var p1 = parseInt($('#a1').text())
+    // var p2 = parseInt($('#a2').text())
+    // var p3 = parseInt($('#a3').text())
+    // var p4 = parseInt($('#a4').text())
     
 
     // 柱状图数据
@@ -226,8 +360,8 @@
                 labels: {
                     enabled: false
                 },
-                max:1,
-                min:0
+                min: 0,
+                max: 1
             },
             tooltip: {
                 shared: true
@@ -241,8 +375,6 @@
             chart2 = c;
         });
     });
-
-
 </script>
 </body>
 </html>
