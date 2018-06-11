@@ -59,7 +59,7 @@
 
         </div>
         <input type="hidden" id="resultID" value="<s:property value="result0_2.id"/>">
-        <div class="panel panel-default front-panel" id="allbaby">
+        <div class="panel panel-default front-panel" id="allbaby" style="display: none">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
