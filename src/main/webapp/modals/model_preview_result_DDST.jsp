@@ -1,3 +1,5 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <div class="modal-body" style="text-align: center">
     <div class="row">
         <label class="col-md-6">个人-社会</label>
