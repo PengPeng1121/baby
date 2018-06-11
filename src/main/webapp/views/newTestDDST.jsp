@@ -100,57 +100,64 @@
                         </tr>
                         <s:iterator value="DDSTList" id="question">
                             <s:if test="#question.type == #type">
-                                <tr class="question <s:property value="#question.leftCode_1"/>  ">
-                                    <td style="width:60%">
-                                        <s:property value="#question.leftName_1"/>
-                                    </td>
-                                    
-                                    <td style="width:40%">
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="0" />P通过
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="1" />F不能通过
-                                        &nbsp;
-                                        <!-- 不合作 -->
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="5" />NO无机会完成
-                                        &nbsp;
-                                    </td>
-                                </tr>
-                                <tr class="question <s:property value="#question.leftCode_2"/>  ">
-                                    <td style="width:60%">
-                                        <s:property value="#question.leftName_2"/>
-                                    </td>
-                                    
-                                    <td style="width:40%">
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="0" />P通过
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="1" />F不能通过
-                                        &nbsp;
-                                        <!-- 不合作 -->
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="5" />NO无机会完成
-                                        &nbsp;
-                                    </td>
-                                </tr>
-                                <tr class="question <s:property value="#question.leftCode_3"/>  ">
-                                    <td style="width:60%">
-                                        <s:property value="#question.leftName_3"/>
-                                    </td>
-                                    
-                                    <td style="width:40%">
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="0" />P通过
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="1" />F不能通过
-                                        &nbsp;
-                                        <!-- 不合作 -->
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="5" />NO无机会完成
-                                        &nbsp;
-                                    </td>
-                                </tr>
+                                <s:if test="#question.leftCode_1!=''">
+                                    <tr class="question <s:property value="#question.leftCode_1"/>  ">
+                                        <td style="width:60%">
+                                            <s:property value="#question.leftName_1"/>
+                                        </td>
+                                        
+                                        <td style="width:40%">
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="0" />P通过
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="1" />F不能通过
+                                            &nbsp;
+                                            <!-- 不合作 -->
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="3" />R不合作
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="5" />NO无机会完成
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </s:if>
+                                <s:if test="#question.leftCode_2!=''">
+                                    <tr class="question <s:property value="#question.leftCode_2"/>  ">
+                                        <td style="width:60%">
+                                            <s:property value="#question.leftName_2"/>
+                                        </td>
+                                        
+                                        <td style="width:40%">
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="0" />P通过
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="1" />F不能通过
+                                            &nbsp;
+                                            <!-- 不合作 -->
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="3" />R不合作
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="5" />NO无机会完成
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </s:if>
+                                <s:if test="#question.leftCode_3!=''">
+                                    <tr class="question <s:property value="#question.leftCode_3"/>  ">
+                                        <td style="width:60%">
+                                            <s:property value="#question.leftName_3"/>
+                                        </td>
+                                        
+                                        <td style="width:40%">
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="0" />P通过
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="1" />F不能通过
+                                            &nbsp;
+                                            <!-- 不合作 -->
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="3" />R不合作
+                                            &nbsp;
+                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="5" />NO无机会完成
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_1!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_1"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_1"/>
@@ -168,6 +175,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_2!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_2"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_2"/>
@@ -185,6 +194,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_3!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_3"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_3"/>
@@ -202,6 +213,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_4!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_4"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_4"/>
@@ -219,6 +232,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_5!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_5"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_5"/>
@@ -236,6 +251,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_6!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_6"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_6"/>
@@ -253,6 +270,8 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
+                                <s:if test="#question.throughCode_7!=''">
                                 <tr class="question cross <s:property value="#question.throughCode_7"/>  ">
                                     <td style="width:60%">
                                         <s:property value="#question.throughName_7"/>
@@ -270,6 +289,7 @@
                                         &nbsp;
                                     </td>
                                 </tr>
+                                </s:if>
                             </s:if>
                         </s:iterator>
                     </s:iterator>
@@ -367,7 +387,7 @@
                         if ($(".question." + i).html()) {
                             temp = $("input:radio[name="+ i +"]:checked").val();
                             if (temp == 1) {
-                                if (map[days].indexOf(i) == -1 ){
+                                if ($(".question." + i).attr('class').indexOf('cross')== -1) {
                                     temp = 2
                                 }
                             } 
