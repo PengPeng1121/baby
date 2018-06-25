@@ -27,6 +27,7 @@ public class TestAction {
     private List<Integer> questionTypeList;
     private List<Integer> questionMonthList;
     private List<Question> questionList;
+    private List<DDSTQuestion> DDSTList;
     private List<Result> resultList = new ArrayList<Result>();
     private List<Result3_6> result3_6List = new ArrayList<Result3_6>();
     private List<Result0_2> result0_2List = new ArrayList<Result0_2>();
@@ -473,9 +474,9 @@ public class TestAction {
         if(!canTest(21)){
             return "fail";
         }
-        questionTypeList = QuestionManager.findTypeByTestid(21);
+       questionTypeList = QuestionManager.findTypeByTestid(21);
 
-        questionList = QuestionManager.findByTestid(21);
+//        questionList = QuestionManager.findByTestid(21);
         baby = BabyManager.findById(babyid);
         testid = 21;
         Date today = new Date(new java.util.Date().getTime());
@@ -490,6 +491,7 @@ public class TestAction {
         }else {
             questionMonthList = null;
         }
+        DDSTList = DDSTQuestionManager.findQuestions(days);
         return SUCCESS;
     }
 
@@ -897,5 +899,13 @@ public class TestAction {
 
     public void setResultDDSTList(List<ResultDDST> resultDDSTList) {
         this.resultDDSTList = resultDDSTList;
+    }
+
+    public List<DDSTQuestion> getDDSTList() {
+        return DDSTList;
+    }
+
+    public void setDDSTList(List<DDSTQuestion> DDSTList) {
+        this.DDSTList = DDSTList;
     }
 }
