@@ -317,8 +317,6 @@
                                         <!-- <label style="font-weight:normal;">剩余次数：</label>
                                         <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="result132LeftTimes"/>次</label> -->
                                     </div>
-                                </div>
-                                <div class="as-desc">
                                     正在后台测试中…
                                 </div>
                                 <!-- <div class="text-right">
