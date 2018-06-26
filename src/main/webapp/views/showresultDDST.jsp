@@ -31,7 +31,7 @@
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
-            <div class="panel-body front-no-padding" style="padding: 15px;">
+            <tbody class="panel-body front-no-padding" style="padding: 15px;">
                 <table>
                     <tbody>
                     <tr>
@@ -49,9 +49,8 @@
                         <td class="col-md-2"></td>
                         <td class="col-md-2">月龄</td>
                         <td class="col-md-2"><s:property value="days"/></td>
-                    </div>
-                        
                     </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -92,7 +91,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+        <div class="panel panel-default front-panel col-md-12" style="padding: 0px;">
             <div class="panel-heading">评定结果: <s:property value="resultDDST.result"/></div>
         </div>
 

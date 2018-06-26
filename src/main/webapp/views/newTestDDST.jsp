@@ -78,7 +78,7 @@
                             请先测试年龄线左侧项目（白色）再测试切年龄线项目（蓝色）
                             </td>
                         </tr>
-                    <s:iterator value="questionTypeList" id="type">
+                    <s:iterator value="questionTypeList" var="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <s:if test="#type == 61">
                                 <td colspan="3">个人-社会</td>
@@ -98,7 +98,7 @@
                             <td>问题</td>
                             <td>答题情况</td>
                         </tr>
-                        <s:iterator value="DDSTList" id="question">
+                        <s:iterator value="DDSTList" var="question">
                             <s:if test="#question.type == #type">
                                 <s:if test="#question.leftCode_1!=''">
                                     <tr class="question <s:property value="#question.leftCode_1"/>  ">

@@ -57,22 +57,6 @@ public class TestAction {
     //全部卡片配置
     private final static Integer CONFIG_TPYE = 1;
 
-    public String newTestChoice() {
-        baby = BabyManager.findById(babyid);
-        babyid =baby.getBabyid();
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
-        //紧急方案  都跳转到newtest0_6
-        Integer month = Integer.parseInt(days.trim());
-        if(month<=24){
-            redirectUrl = "/newtest0_6";
-        }else {
-            redirectUrl = "/newtest0_6";
-        }
-        return SUCCESS;
-    }
-
     public String newTest0_6() {
         if(!canTest(1)){
             return "fail";

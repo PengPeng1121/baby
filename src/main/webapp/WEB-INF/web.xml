@@ -1,7 +1,4 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
@@ -21,15 +18,12 @@
 
   <filter>
     <filter-name>struts2</filter-name>
-    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
   </filter>
 
   <filter-mapping>
     <filter-name>struts2</filter-name>
     <url-pattern>/*</url-pattern>
-    <!-- 后两句以保证在error_page的struts2能正常工作,包括tomcat在内的一些容器需要加上这两句,jetty是正常的。 -->
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>ERROR</dispatcher>
   </filter-mapping>
 
   <welcome-file-list>

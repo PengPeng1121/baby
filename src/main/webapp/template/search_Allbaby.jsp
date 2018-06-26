@@ -13,7 +13,7 @@
         <div class="panel-body" style="padding: 0;">
             <table class="table table-striped front-table" style="margin-bottom: 0px">
                 <tbody>
-                <s:iterator value="babyList" id="baby">
+                <s:iterator value="babyList" var="baby">
                     <tr>
                         <td>
                             <div class="media front-overflow-visible">

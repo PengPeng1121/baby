@@ -81,7 +81,7 @@
                                6月-1岁11月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal < 20"> 
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -133,7 +133,7 @@
                                2岁-3岁5月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 19 && #question.ordinal < 42"> 
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -185,7 +185,7 @@
                                3岁6月-4岁11月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 41 && #question.ordinal < 64"> 
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -237,7 +237,7 @@
                                5岁-6岁5月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 63 && #question.ordinal < 81"> 
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -289,7 +289,7 @@
                                6岁6月-8岁5月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 80 && #question.ordinal < 97"> 
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -341,7 +341,7 @@
                                8岁6月-10岁5月 
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 96 && #question.ordinal < 114">  
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">
@@ -393,7 +393,7 @@
                                10岁6月- 17岁
                             </td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <s:if test="#question.ordinal > 113 && #question.ordinal < 133">  
                             <tr class="question">
                                 <td style="width:30px" class="order" id="order<s:property value="#question.ordinal"/>">

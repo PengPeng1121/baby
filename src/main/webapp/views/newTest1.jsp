@@ -100,16 +100,16 @@
                         <div class="item">语言</div>
                         <div class="item">社交行为</div>
                     </div>
-                    <s:iterator value="questionMonthList" id="month" status="status">
+                    <s:iterator value="questionMonthList" var="month" status="status">
                     <div class="line" id="month<s:property value="#month"/>">
                         <div class="item item-first" name="month<s:property value="#status.index"/>">
                             <div style="padding: 20px;">
                                 <s:property value="#month"/>
                             </div>
                         </div>
-                        <s:iterator value="questionTypeList" id="type">
+                        <s:iterator value="questionTypeList" var="type">
                             <div class="item">
-                            <s:iterator value="questionList" id="question">
+                            <s:iterator value="questionList" var="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
                                     <p>
                                         <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>">

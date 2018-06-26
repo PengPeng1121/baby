@@ -526,7 +526,7 @@
                 <div class="col-md-4">
                     <span class="control-label front-label">
 					<select id="doctor" class="form-control front-no-radius front-no-box-shadow">
-                        <s:iterator value="userlist" id="user">
+                        <s:iterator value="userlist" var="user">
                         <option value="<s:property value="#user.userid"/>"><s:property value="#user.name"/></option>
                         </s:iterator>
                     </select></span>

@@ -139,7 +139,7 @@
             </tbody>
         </table>
 
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+        <div class="panel panel-default front-panel col-md-12" style="padding: 0px;">
             <div class="panel-heading">评定结果: <s:property value="result50.level"/></div>
         </div>
 

@@ -51,7 +51,7 @@
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
-                    <s:iterator value="resultList" id="re">
+                    <s:iterator value="resultList" var="re">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -76,7 +76,7 @@
                         </tr>
                     </s:iterator>
 
-                    <s:iterator value="result3_6List" id="re3_6">
+                    <s:iterator value="result3_6List" var="re3_6">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -106,7 +106,7 @@
                     </s:iterator>
 
 
-                    <s:iterator value="result0_2List" id="re0_2">
+                    <s:iterator value="result0_2List" var="re0_2">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -136,7 +136,7 @@
                     </s:iterator>
 
 
-                    <s:iterator value="result0_3List" id="re0_3">
+                    <s:iterator value="result0_3List" var="re0_3">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -166,7 +166,7 @@
                     </s:iterator>
 
 
-                    <s:iterator value="result50List" id="re50">
+                    <s:iterator value="result50List" var="re50">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -193,7 +193,7 @@
 
 
 
-                    <s:iterator value="result132List" id="re132">
+                    <s:iterator value="result132List" var="re132">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -220,7 +220,7 @@
 
 
 
-                    <s:iterator value="resultCognizeList" id="reCognize">
+                    <s:iterator value="resultCognizeList" var="reCognize">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -246,7 +246,7 @@
                     </s:iterator>
 
 
-                    <s:iterator value="result0_3List" id="re0_3">
+                    <s:iterator value="result0_3List" var="re0_3">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -275,7 +275,7 @@
                         </tr>
                     </s:iterator>
 
-                    <s:iterator value="resultDDSTList" id="resultDDST">
+                    <s:iterator value="resultDDSTList" var="resultDDST">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">

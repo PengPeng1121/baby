@@ -17,10 +17,10 @@
         <action name="record">
             <result>views/babyadmin.jsp</result>
         </action>
-        <!--测试类型判断-->
-        <action name="newtest" method="newTestChoice" class="com.free4lab.babycheckup.action.TestAction">
-            <result name="success" type="redirect">${redirectUrl}?testid=${testid}&amp;babyid=${babyid}</result>
-        </action>
+        <!--&lt;!&ndash;测试类型判断&ndash;&gt;-->
+        <!--<action name="newtest" method="newTestChoice" class="com.free4lab.babycheckup.action.TestAction">-->
+            <!--<result name="success" type="redirect">${redirectUrl}?testid=${testid}&amp;babyid=${babyid}</result>-->
+        <!--</action>-->
         <!--0-6岁测试-->
         <action name="newtest0_6" method="newTest0_6" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTest1.jsp</result>

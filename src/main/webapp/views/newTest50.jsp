@@ -81,7 +81,7 @@
                             <td style="width:30px">不符</td>
                             <td style="width:100px">儿童回答答案</td>
                         </tr>
-                        <s:iterator value="questionList" id="question">
+                        <s:iterator value="questionList" var="question">
                             <tr class="question">
                                 <td style="width:30px">
                                     <s:property value="#question.ordinal"/>

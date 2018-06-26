@@ -98,7 +98,7 @@
                 <input id="questionTypeSum" type="hidden" value="<s:property value="questionTypeList.size()"/>">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                    <s:iterator value="questionTypeList" id="type">
+                    <s:iterator value="questionTypeList" var="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <s:if test="#type == 21">
                                 <td>关注度</td>
@@ -122,8 +122,8 @@
                             <td>答题记录</td>
                         </tr>
 
-                        <s:iterator value="questionMonthList" id="month" status="status">
-                            <s:iterator value="questionList" id="question">
+                        <s:iterator value="questionMonthList" var="month" status="status">
+                            <s:iterator value="questionList" var="question">
                                 <s:if test="#question.month == #month && #question.type == #type">
                                     <tr class="question">
                                         <td style="width:60%">
@@ -134,7 +134,7 @@
                                             <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />B<br>
                                         </td>
                                         <td>
-                                            <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</ a>
+                                            <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</a>
                                             <input type="hidden" style="color:#000" id="reason<s:property value="#question.ordinal"/>" value="">
                                             <input type="hidden" style="color:#000" id="desc<s:property value="#question.ordinal"/>" value="">
                                         </td>

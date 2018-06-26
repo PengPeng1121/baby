@@ -87,7 +87,7 @@
                             <td colspan="2">得分</td>
                             <td>备注</td>
                         </tr>
-                        <s:iterator value="questionList" id="question" status='st'>
+                        <s:iterator value="questionList" var="question" status='st'>
                             <tr class="question">
                                 <s:if test="#question.ordinal == 1">
                                     <td style="width:30px" rowspan="2" class="startLetter">

@@ -3,7 +3,7 @@
 
 <div class="modal-body">
     <form>
-        <s:iterator value="#parameters.reasons[0].split(';')" id="reason">
+        <s:iterator value="#parameters.reasons[0].split(';')" var="reason">
         <input type="radio" name="1" value="<s:property value="#reason"/>"><s:property value="#reason"/><br>
         </s:iterator>
         <input type="radio" name="1" value="4">其他
