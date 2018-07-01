@@ -31,7 +31,7 @@
                                 <td><strong>手机号</strong></td>
                                 <td colspan="4"><strong>操作</strong></td>
                             </tr>
-                            <s:iterator value="userList" id="user">
+                            <s:iterator value="userList" var="user">
                                 <tr>
                                     <td><s:property value="#user.name"/></td>
                                     <td><s:property value="#user.tel"/></td>
