@@ -319,7 +319,7 @@
                         dq += questionScore[i];
                     }
                     dq /= questionTypeSum;
-                    var growth = ( dq / parseInt($("#days").val()) ) * 100;
+                    var growth = ( dq / parseFloat($("#days").val()) ) * 100;
                     data += "'result.dq':" + dq + ",";
                     data += "'result.growth':" + growth + ",";
                     data += "'result.babyid':" + $("#babyid").val() + "}";

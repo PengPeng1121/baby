@@ -22,13 +22,14 @@
         <class>com.free4lab.babycheckup.model.DDSTQuestion</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/babycheckup?characterEncoding=UTF-8"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://47.94.202.106:3306/babycheckup?characterEncoding=UTF-8"/>
 
             <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="123654@Xsx"/>
+            <property name="hibernate.connection.password" value="root"/>
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <!--<property name="hibernate.hbm2ddl.auto" value="update"/>-->
             <!-- 不使用缓存 -->
             <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>

@@ -13,6 +13,7 @@ import com.pp.common.constant.util.GetScaleUtil;
 import com.pp.common.constant.util.GetStandardUtil;
 import org.apache.commons.lang.StringUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -58,99 +59,131 @@ public class TestAction {
     private final static Integer CONFIG_TPYE = 1;
 
     public String newTest0_6() {
-        if(!canTest(1)){
-            return "fail";
+        try{
+            if(!canTest(1)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(testid);
+            questionMonthList = QuestionManager.findMonthByTestid(testid);
+            questionList = QuestionManager.findByTestid(testid);
+            baby = BabyManager.findById(babyid);
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = diffDays(birth,today);
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(testid);
-        questionMonthList = QuestionManager.findMonthByTestid(testid);
-        questionList = QuestionManager.findByTestid(testid);
-        baby = BabyManager.findById(babyid);
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTest3_6() {
-        if(!canTest(2)){
-            return "fail";
+
+        try{
+            if(!canTest(1)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(2);
+            questionMonthList = QuestionManager.findMonthByTestid(2);
+            questionList = QuestionManager.findByTestid(2);
+            baby = BabyManager.findById(babyid);
+            testid = 2;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = (differentdays(birth,today))/30+"";
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(2);
-        questionMonthList = QuestionManager.findMonthByTestid(2);
-        questionList = QuestionManager.findByTestid(2);
-        baby = BabyManager.findById(babyid);
-        testid = 2;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTest0_2() {
-        if(!canTest(16)){
-            return "fail";
+
+        try{
+            if(!canTest(16)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(16);
+            questionMonthList = QuestionManager.findMonthByTestid(16);
+            questionList = QuestionManager.findByTestid(16);
+            baby = BabyManager.findById(babyid);
+            testid = 16;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = (differentdays(birth,today))/30+"";
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(16);
-        questionMonthList = QuestionManager.findMonthByTestid(16);
-        questionList = QuestionManager.findByTestid(16);
-        baby = BabyManager.findById(babyid);
-        testid = 16;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTest0_3() {
-        if(!canTest(20)){
-            return "fail";
+        try{
+            if(!canTest(20)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(20);
+            questionMonthList = QuestionManager.findMonthByTestid(20);
+            questionList = QuestionManager.findByTestid(20);
+            baby = BabyManager.findById(babyid);
+            testid = 20;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = (differentdays(birth,today))/30+"";
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(20);
-        questionMonthList = QuestionManager.findMonthByTestid(20);
-        questionList = QuestionManager.findByTestid(20);
-        baby = BabyManager.findById(babyid);
-        testid = 20;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTest50() {
-        if(!canTest(17)){
-            return "fail";
+        try {
+            if(!canTest(17)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(17);
+            questionMonthList = QuestionManager.findMonthByTestid(17);
+            questionList = QuestionManager.findByTestid(17);
+            baby = BabyManager.findById(babyid);
+            testid = 17;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = (differentdays(birth,today))/30+"";
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(17);
-        questionMonthList = QuestionManager.findMonthByTestid(17);
-        questionList = QuestionManager.findByTestid(17);
-        baby = BabyManager.findById(babyid);
-        testid = 17;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTest132() {
-        if(!canTest(18)){
-            return "fail";
+        try{
+            if(!canTest(18)){
+                return "fail";
+            }
+            questionTypeList = QuestionManager.findTypeByTestid(18);
+            questionMonthList = QuestionManager.findMonthByTestid(18);
+            questionList = QuestionManager.findByTestid(18);
+            baby = BabyManager.findById(babyid);
+            testid = 18;
+            Date today = new Date(new java.util.Date().getTime());
+            Date birth = baby.getBirthday();
+            days = (differentdays(birth,today))/30+"";
+        }catch (Exception e){
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
-        questionTypeList = QuestionManager.findTypeByTestid(18);
-        questionMonthList = QuestionManager.findMonthByTestid(18);
-        questionList = QuestionManager.findByTestid(18);
-        baby = BabyManager.findById(babyid);
-        testid = 18;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
 
     public String newTestCognize() {
-        if(!canTest(19)){
-            return "fail";
-        }
         try{
+            if(!canTest(19)){
+                return "fail";
+            }
             questionList = QuestionManager.findByTestid(19);
             baby = BabyManager.findById(babyid);
             testid = 19;
@@ -159,9 +192,9 @@ public class TestAction {
             //获取早产天数
             int preDeliveryDay = 0;
             if (baby.getPreDelivery()==null){
-                 preDeliveryDay = 0;
+                preDeliveryDay = 0;
             }else {
-                 preDeliveryDay = baby.getPreDelivery();
+                preDeliveryDay = baby.getPreDelivery();
             }
             preDelivery = preDeliveryDay;
             day = (differentdays(birth,today));
@@ -186,7 +219,8 @@ public class TestAction {
             start = GetScaleUtil.getStart(baby.getBirthday());
 
         }catch (Exception e){
-
+            System.out.println("错误信息:"+e.getMessage());
+            e.printStackTrace();
         }
         return SUCCESS;
     }
@@ -333,7 +367,7 @@ public class TestAction {
     }
 
     public String saveResult132(){
-        //这是算法  是不是很吊
+
         baby = BabyManager.findById(result132.getBabyId());
         Date birth = baby.getBirthday();
         try {
@@ -458,7 +492,7 @@ public class TestAction {
         if(!canTest(21)){
             return "fail";
         }
-       questionTypeList = QuestionManager.findTypeByTestid(21);
+        questionTypeList = QuestionManager.findTypeByTestid(21);
 
 //        questionList = QuestionManager.findByTestid(21);
         baby = BabyManager.findById(babyid);
@@ -632,11 +666,18 @@ public class TestAction {
         return days;
     }
 
+    public String diffDays(Date d1, Date d2){
+        DecimalFormat df=new DecimalFormat("0.0");
+
+        return df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30);
+    }
+
     //判断可不可以进行测试
     private Boolean canTest(Integer testId){
         Integer hospitalId = (Integer) ActionContext.getContext().getSession().get("hoid");
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hospitalId);
         if(config==null){
+            System.out.println("配置为空-----hospitalId:"+hospitalId);
             return false;
         }
         if(config.getConfigType().equals(CONFIG_TPYE)){
@@ -656,7 +697,7 @@ public class TestAction {
         HospitalTestTimes hospitalTestTimes = new HospitalTestTimes();
         Integer userId = null;
         try {
-             userId = (Integer) ActionContext.getContext().getSession().get("userid");
+            userId = (Integer) ActionContext.getContext().getSession().get("userid");
         }catch (Exception e){
 
         }

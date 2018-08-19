@@ -8,6 +8,7 @@ import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result;
 import com.opensymphony.xwork2.ActionContext;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.sql.Date;
 
@@ -20,13 +21,13 @@ public class ResultAction {
     private int id;
     private Result result;
     private String SUCCESS = "success";
-    private int monthage;
+    private Double monthage;
     private String stime;//检查日期
-    private int scoreSport;
-    private int scoreAct;
-    private int scoreAdapt;
-    private int scoreLanguage;
-    private int scoreSocial;
+    private Double scoreSport;
+    private Double scoreAct;
+    private Double scoreAdapt;
+    private Double scoreLanguage;
+    private Double scoreSocial;
     private Hospital hospital;
 
     public String showResult() {
@@ -35,21 +36,20 @@ public class ResultAction {
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result.getTime());
         Date d2 = Date.valueOf(stime);
-        monthage = (differentdays(d1,d2))/30;
+        monthage = diffDays(d1,d2);
         //这是算法  是不是很吊
-        scoreSport = (int)result.getScoreSport()*100/monthage;
-        scoreAct = (int)result.getScoreAct()*100/monthage;
-        scoreAdapt = (int)result.getScoreAdapt()*100/monthage;
-        scoreLanguage = (int)result.getScoreLanguage()*100/monthage;
-        scoreSocial = (int)result.getScoreSocial()*100/monthage;
+        scoreSport = result.getScoreSport()*100/monthage;
+        scoreAct = result.getScoreAct()*100/monthage;
+        scoreAdapt = result.getScoreAdapt()*100/monthage;
+        scoreLanguage = result.getScoreLanguage()*100/monthage;
+        scoreSocial = result.getScoreSocial()*100/monthage;
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         return SUCCESS;
     }
 
-
-    public int differentdays(Date d1, Date d2){
-        int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
-        return days;
+    public Double diffDays(java.util.Date d1, java.util.Date d2){
+        DecimalFormat df=new DecimalFormat("0.0");
+        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30));
     }
 
     public Baby getBaby() {
@@ -76,60 +76,12 @@ public class ResultAction {
         this.result = result;
     }
 
-    public int getMonthage() {
-        return monthage;
-    }
-
-    public void setMonthage(int monthage) {
-        this.monthage = monthage;
-    }
-
     public String getStime() {
         return stime;
     }
 
     public void setStime(String stime) {
         this.stime = stime;
-    }
-
-    public int getScoreSport() {
-        return scoreSport;
-    }
-
-    public void setScoreSport(int scoreSport) {
-        this.scoreSport = scoreSport;
-    }
-
-    public int getScoreAct() {
-        return scoreAct;
-    }
-
-    public void setScoreAct(int scoreAct) {
-        this.scoreAct = scoreAct;
-    }
-
-    public int getScoreAdapt() {
-        return scoreAdapt;
-    }
-
-    public void setScoreAdapt(int scoreAdapt) {
-        this.scoreAdapt = scoreAdapt;
-    }
-
-    public int getScoreLanguage() {
-        return scoreLanguage;
-    }
-
-    public void setScoreLanguage(int scoreLanguage) {
-        this.scoreLanguage = scoreLanguage;
-    }
-
-    public int getScoreSocial() {
-        return scoreSocial;
-    }
-
-    public void setScoreSocial(int scoreSocial) {
-        this.scoreSocial = scoreSocial;
     }
 
     public Hospital getHospital() {
@@ -140,6 +92,53 @@ public class ResultAction {
         this.hospital = hospital;
     }
 
+    public Double getMonthage() {
+        return monthage;
+    }
+
+    public void setMonthage(Double monthage) {
+        this.monthage = monthage;
+    }
+
+    public Double getScoreSport() {
+        return scoreSport;
+    }
+
+    public void setScoreSport(Double scoreSport) {
+        this.scoreSport = scoreSport;
+    }
+
+    public Double getScoreAct() {
+        return scoreAct;
+    }
+
+    public void setScoreAct(Double scoreAct) {
+        this.scoreAct = scoreAct;
+    }
+
+    public Double getScoreAdapt() {
+        return scoreAdapt;
+    }
+
+    public void setScoreAdapt(Double scoreAdapt) {
+        this.scoreAdapt = scoreAdapt;
+    }
+
+    public Double getScoreLanguage() {
+        return scoreLanguage;
+    }
+
+    public void setScoreLanguage(Double scoreLanguage) {
+        this.scoreLanguage = scoreLanguage;
+    }
+
+    public Double getScoreSocial() {
+        return scoreSocial;
+    }
+
+    public void setScoreSocial(Double scoreSocial) {
+        this.scoreSocial = scoreSocial;
+    }
 
     public int getResultid() {
         return resultid;
