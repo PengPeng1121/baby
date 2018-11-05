@@ -49,19 +49,19 @@
             <div class="form-group" style="margin-bottom: 0px;">
                 <label class="col-lg-1 col-md-2 control-label required">父-姓名</label>
                 <div class="col-md-2">
-                    <input id="father_name" class="form-control front-no-radius front-no-box-shadow"  type="text">
+                    <input id="father_name" class="form-control front-no-radius front-no-box-shadow"  type="text" value="父亲">
                 </div>
                 <label class="col-lg-1 col-md-2 control-label required">手机号</label>
                 <div class="col-md-2">
-                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text">
+                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="13212312311">
                 </div>
                 <label class="col-lg-1 col-md-2 control-label required">母-姓名</label>
                 <div class="col-md-2">
-                    <input id="mother_name" class="form-control front-no-radius front-no-box-shadow"  type="text">
+                    <input id="mother_name" class="form-control front-no-radius front-no-box-shadow"  type="text"  value="母亲">
                 </div>
-                <label class="col-lg-1 col-md-2 control-label required">手机号</label>
+                <label class="col-lg-1 col-md-2 control-label required" >手机号</label>
                 <div class="col-md-2">
-                    <input id="m_tel" class="form-control front-no-radius front-no-box-shadow"  type="text">
+                    <input id="m_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="13212312311">
                 </div>
             </div>
             <div class="col-md-12" style="margin-top: 10px;margin-bottom: 10px;height: 1px;background-color: #ddd;"></div>
@@ -543,7 +543,7 @@
         </form>
     </div>
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>

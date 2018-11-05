@@ -16,7 +16,7 @@
     <style type="text/css" media="print">
         @page
         {
-            size:  auto portrait;  /* auto is the initial value */
+            size:  auto;   /* auto is the initial value */
             margin: 5mm;  /* this affects the margin in the printer settings */
         }
     </style>
@@ -121,7 +121,7 @@
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果扇形图</td>
+                <td style="text-align:center;">评定结果柱状图</td>
                 <td style="text-align:center;">评定结果纬度图</td>
             </tr>
             <tr>
@@ -132,14 +132,14 @@
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="spider"></div>
+                        <div id="spider" style="height: 200px;"></div>
                     </div>
                 </td>
             </tr>
             </tbody>
         </table>
 
-        <div class="panel panel-default front-panel col-md-12" style="padding: 0px;">
+        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading">评定结果: <s:property value="result50.level"/></div>
         </div>
 
@@ -151,18 +151,16 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
+            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" onclick='javascript:window.print()'>打印结果</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
-<script src="statics/highcharts/solid-gauge.js"></script>
-
 <script type="text/javascript">
 
     var a1 = +(parseInt($('#a1').text()) / 13).toFixed(2);
@@ -179,202 +177,70 @@
 
 
     $(function () {
-        
-
-        var chart1,
-            chart2;
-        $('.print').click(function(){
-            $('.front-inner').css({
-                padding: '0px'
-            });
-            $('.panel').css({
-                margin: '0px'
-            });
-            $('h1').css({
-                'font-size': '20px'
-            });
-            $('h2').css({
-                'font-size': '15px'
-            });
-            $('#column').css({
-                width: '300px',
-                height: '300px'
-            });
-            $('#spider').css({
-                width: '300px',
-                height: '300px'
-            });
-            chart1.reflow();
-            chart2.reflow();
-            window.print();
-        })
-        // $('#column').highcharts({
-        //     chart: {
-        //         type: 'bar'
-        //     },
-        //     credits: {
-        //         enabled: false
-        //     },
-        //     title: {
-        //         text: ''
-        //     },
-        //     subtitle: {
-        //         text: ''
-        //     },
-        //     xAxis: {
-        //         categories: ['能力商'],
-        //         title: {
-        //             text: null
-        //         }
-        //     },
-        //     yAxis: {
-        //         min: 0,
-        //         max: 150,
-        //         title: {
-        //             text: null,
-        //             align: 'high'
-        //         },
-        //         tickPositions: [0, 70, 85, 115, 130],
-        //         labels: {
-        //         },
-        //         plotLines: [{
-        //             color: '#FF0000',
-        //             width: 2,
-        //             value: 70
-        //         },{
-        //             color: 'orange',
-        //             width: 2,
-        //             value: 85
-        //         },{
-        //             color: 'blue',
-        //             width: 2,
-        //             value: 115
-        //         },{
-        //             color: 'green',
-        //             width: 2,
-        //             value: 130
-        //         }]
-        //     },
-        //     tooltip: {
-        //     },
-        //     plotOptions: {
-        //         bar: {
-        //             dataLabels: {
-        //                 enabled: true,
-        //                 allowOverlap: true
-        //             }
-        //         },
-        //         series: {
-        //             pointPadding:0.4
-        //         }
-        //     },
-        //     legend: {
-        //         enabled: false
-        //     },
-        //     credits: {
-        //         enabled: false
-        //     },
-        //     series: [{
-        //         data: [a8]
-        //     }]
-        // });
-        
         $('#column').highcharts({
             chart: {
-                type: 'solidgauge'
+                type: 'bar'
             },
-            title: null,
-            pane: {
-                center: ['50%', '80%'],
-                size: '100%',
-                startAngle: -90,
-                endAngle: 90,
-                background: {
-                    backgroundColor:'#EEE',
-                    innerRadius: '60%',
-                    outerRadius: '100%',
-                    shape: 'arc'
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['能力商'],
+                title: {
+                    text: null
                 }
-            },
-            tooltip: {
-                enabled: false
             },
             yAxis: {
                 min: 0,
                 max: 150,
-                stops: [
-                    [0.47, 'red'], // red
-                    [0.57, 'orange'], // orange
-                    [0.77, 'blue'], // blue
-                    [0.87, 'green'] // green
-                ],
-                lineWidth: 0,
-                minorTickInterval: null,
-                tickPixelInterval: 150,
-                tickWidth: 1,
-                tickLength:50,
-                tickColor: '#ddd',
-                tickPositions: [0,70,85,115,130,150],
                 title: {
-                    y: -70
+                    text: null,
+                    align: 'high'
                 },
+                tickPositions: [0, 70, 85, 115, 130],
                 labels: {
-                    y: 10,
-                    useHTML: true,
-                    formatter: function () {
-                        if(this.value == 70){
-                            return '<span style="color:red;position: absolute;top: -40px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 85){
-                            return '<span style="color:orange;position: absolute;top: -40px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 115){
-                            return '<span style="color:blue;position: absolute;top: -45px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 130){
-                            return '<span style="color:green;position: absolute;top: -55px;">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 0){
-                            return '<span style="color:#ddd">' +
-                                this.value + '</span>';
-                        }
-                        if(this.value == 150){
-                            return '<span style="color:#ddd">' +
-                                this.value + '</span>';
-                        }
+                },
+                plotLines: [{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 70
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 85
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 115
+                },{
+                    color: '#FF0000',
+                    width: 2,
+                    value: 130
+                }]
+            },
+            tooltip: {
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        allowOverlap: true
                     }
                 }
             },
-            plotOptions: {
-                solidgauge: {
-                    dataLabels: {
-                        y: 5,
-                        borderWidth: 0,
-                        useHTML: true
-                    }
-                }
+            legend: {
+                enabled: false
             },
             credits: {
                 enabled: false
             },
             series: [{
-                name: '能力商',
-                data: [a8],
-                dataLabels: {
-                    format: '<div style="text-align:center;z-index:100;background-color:#fff"><span style="font-size:25px;color:' +
-                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                    '<span style="font-size:12px;color:silver">能力商</span></div>'
-                }
+                data: [a8]
             }]
-        }, function(c){
-            chart1 = c;
         });
-
-        
 
 
         $('#spider').highcharts({
@@ -382,11 +248,8 @@
                 polar: true,
                 type: 'area'
             },
-            credits: {
-                enabled: false
-            },
             title: {
-                text: '',
+                text: '小儿测评结果网状图(3-6)',
                 x: -80
             },
             pane: {
@@ -447,11 +310,7 @@
                 data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
-        }, function(c){
-            chart2 = c;
         });
-
-
     });
 
 </script>
