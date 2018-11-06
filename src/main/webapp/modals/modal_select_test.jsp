@@ -78,7 +78,7 @@
                     orderId:orderId
                 },
                 success:function(data){
-                    if (data) {
+                    if (data.payFlag == "1") {
                         openTest(window.testId)
                     }
                 }
