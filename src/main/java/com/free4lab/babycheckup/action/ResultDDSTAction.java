@@ -3,10 +3,13 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultDDSTManager;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultDDST;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
+import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +30,7 @@ public class ResultDDSTAction {
     private int b4;
 
     private int days;
-
+    private TestResultRecord resultRecord;
     public String showResultDDST() {
         resultDDST = ResultDDSTManager.findResultByid(id);
         baby = BabyManager.findById(resultDDST.getBabyId());
@@ -49,6 +52,23 @@ public class ResultDDSTAction {
     public Integer differentdays(Date d1, Date d2){
         Integer days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    //保存记录，没有新增，有修改
+    public String saveRecordDDST(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
     }
 
     public Baby getBaby() {
@@ -137,5 +157,13 @@ public class ResultDDSTAction {
 
     public void setB4(int b4) {
         this.b4 = b4;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }

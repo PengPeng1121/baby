@@ -54,7 +54,7 @@ public class TestAction {
     private Integer preDelivery;
     private String start;
     private String redirectUrl;
-
+    private String orderNo;
     //全部卡片配置
     private final static Integer CONFIG_TPYE = 1;
 
@@ -251,6 +251,7 @@ public class TestAction {
         result.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
         result.setState("finished");
         ResultManager.saveResult(result);
+        _updateOrder(1,result.getId(),orderNo);
         return SUCCESS;
     }
 
@@ -282,6 +283,7 @@ public class TestAction {
             return "fail";
         }
         ResultManager3_6.saveResult(result3_6);
+        _updateOrder(2,result3_6.getId(),orderNo);
         return SUCCESS;
     }
 
@@ -316,6 +318,7 @@ public class TestAction {
                 return "fail";
             }
             ResultManager0_2.saveResult(result0_2);
+            _updateOrder(16,result0_2.getId(),orderNo);
         }catch (Exception e){
 
         }
@@ -360,6 +363,7 @@ public class TestAction {
                 return "fail";
             }
             ResultCognizeManager.saveResult(resultCognize);
+            _updateOrder(19,resultCognize.getId(),orderNo);
         }catch (Exception e){
 
         }
@@ -387,6 +391,7 @@ public class TestAction {
                 return "fail";
             }
             ResultManager132.saveResult(result132);
+            _updateOrder(18,result132.getId(),orderNo);
         }catch (Exception e){
 
         }
@@ -439,6 +444,7 @@ public class TestAction {
                 return "fail";
             }
             ResultManager50.saveResult(result50);
+            _updateOrder(17,result50.getId(),orderNo);
         }catch (Exception e){
 
         }
@@ -482,6 +488,7 @@ public class TestAction {
                 return "fail";
             }
             ResultManager0_3.saveResult(result0_3);
+            _updateOrder(20,result0_3.getId(),orderNo);
         }catch (Exception e){
 
         }
@@ -644,6 +651,7 @@ public class TestAction {
         String resultMag = DDSTUtil.getResult(score1List,score2List,score3List,score4List);
         resultDDST.setResult(resultMag);
         ResultDDSTManager.saveResult(resultDDST);
+        _updateOrder(21,resultDDST.getId(),orderNo);
         return SUCCESS;
     }
 
@@ -716,6 +724,19 @@ public class TestAction {
         }else {
             return true;
         }
+    }
+
+    //将测试信息写入订单信息表
+    private void  _updateOrder(Integer testId,Integer resultId,String orderNo){
+       OrderInfo updateOrder = OrderInfoManager.findByOrderNo(orderNo);
+       if(updateOrder!=null){
+           updateOrder.setTestId(testId);
+           updateOrder.setResultId(resultId);
+           updateOrder.setUpdateUser((String)ActionContext.getContext().getSession().get("userid"));
+           updateOrder.setCreateUser((String)ActionContext.getContext().getSession().get("hoid"));
+           updateOrder.setUpdateTime(new Date());
+           OrderInfoManager.update(updateOrder);
+       }
     }
 
     public int getTestid() {
@@ -932,5 +953,13 @@ public class TestAction {
 
     public void setDDSTList(List<DDSTQuestion> DDSTList) {
         this.DDSTList = DDSTList;
+    }
+
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 }

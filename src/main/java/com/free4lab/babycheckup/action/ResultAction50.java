@@ -3,11 +3,14 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager50;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result50;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
 import com.pp.common.constant.util.ExactAgeUtil;
+import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,7 +31,7 @@ public class ResultAction50 {
     private String talent;//
 
     private String exactAge;//
-
+    private TestResultRecord resultRecord;
     public String showResult50() {
         result50 = ResultManager50.findResultByid(id);
         baby = BabyManager.findById(result50.getBabyId());
@@ -58,7 +61,22 @@ public class ResultAction50 {
         return SUCCESS;
     }
 
-
+    //保存记录，没有新增，有修改
+    public String saveRecord50(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
+    }
 
 
     public Baby getBaby() {
@@ -131,5 +149,13 @@ public class ResultAction50 {
 
     public void setExactAge(String exactAge) {
         this.exactAge = exactAge;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }

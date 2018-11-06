@@ -48,8 +48,12 @@ public class BabyAction {
     private Integer testId;
 
     public String newBaby(){
-        userlist = AccountManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
-        bs = BabyManager.findBsByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        try{
+            userlist = AccountManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+            bs = BabyManager.findBsByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return "success";
     }
 

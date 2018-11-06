@@ -20,6 +20,8 @@
         <class>com.free4lab.babycheckup.model.Result0_3</class>
         <class>com.free4lab.babycheckup.model.ResultDDST</class>
         <class>com.free4lab.babycheckup.model.DDSTQuestion</class>
+        <class>com.free4lab.babycheckup.model.TestResultRecord</class>
+        <class>com.free4lab.babycheckup.model.OrderInfo</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://47.94.202.106:3306/babycheckup?characterEncoding=UTF-8"/>
