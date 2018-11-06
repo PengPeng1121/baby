@@ -344,7 +344,7 @@
                     </div>
                 <%--</a>--%>
             </div>
-            <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
+            <!-- <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
                 <div class="col-md-2" style="display: inline-block;padding-left: 0">
                     <div class="text-left" style="margin-bottom: 5px;"><label style="font-weight:normal;"><h4>培训</h4></label></div>
                 </div>
@@ -374,7 +374,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
