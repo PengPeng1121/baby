@@ -7,30 +7,32 @@ import org.apache.commons.lang.StringUtils;
 
 public class OrderInfoAction {
 
-    private String flag;
+    private String payFlag;
     private String orderId;
 
 
     public String isOrderPayed() {
         if(StringUtils.isBlank(orderId)){
-            flag = "0";//失败
+            payFlag = "0";//失败
         }else {
             OrderInfo updateOrder = OrderInfoManager.findByOrderNo(orderId);
             if(updateOrder==null){
-                flag = "0";//失败
+                payFlag = "0";//失败
             }else if(OrderStatusEnum.ALREADY_PAY.getIndex().equals(updateOrder.getOrderStatus())){
-                flag = "1";//成功
+                payFlag = "1";//成功
+            }else {
+                payFlag = "0";//成功
             }
         }
         return "success";
     }
 
-    public String getFlag() {
-        return flag;
+    public String getPayFlag() {
+        return payFlag;
     }
 
-    public void setFlag(String flag) {
-        this.flag = flag;
+    public void setPayFlag(String payFlag) {
+        this.payFlag = payFlag;
     }
 
     public String getOrderId() {

@@ -288,7 +288,7 @@
 
         <action name="isOrderPayed" method="isOrderPayed" class="com.free4lab.babycheckup.action.OrderInfoAction">
             <result type="json" name="success">
-                <param name="includeProperties">order,flag</param>
+                <param name="includeProperties">order,payFlag</param>
             </result>
         </action>
     </package>

@@ -7,7 +7,7 @@ import java.util.Date;
 @Table(name = "order_info", schema = "babycheckup", catalog = "")
 public class OrderInfo {
     private int id;
-    private int resultId;
+    private Integer resultId;
     private Integer testId;
     //订单号
     private String orderNo;
@@ -55,11 +55,11 @@ public class OrderInfo {
 
     @Basic
     @Column(name = "result_id", nullable = false)
-    public int getResultId() {
+    public Integer getResultId() {
         return resultId;
     }
 
-    public void setResultId(int resultId) {
+    public void setResultId(Integer resultId) {
         this.resultId = resultId;
     }
 
