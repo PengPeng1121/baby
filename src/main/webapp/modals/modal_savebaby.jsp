@@ -22,7 +22,7 @@
                     style="color: white;font-size: small">婴儿-初中学生<br/>生活能力量表</h4></a>
         <a type="button" class="btn  modal-box text-center" href="javascript:change(19)" style="margin-top: 10px"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
-        <a type="button" class="btn  modal-box text-center" href="javascript:change(20)" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center" href="javascript:change(21)" style="margin-top: 10px"><h4
                     style="color: white;font-size: small">小儿智能发育筛查</h4></a>
     </div>
     <div class="modal-body code">
@@ -49,8 +49,8 @@
 
     function showCode(type) {
         // 请求二维码图片
-        orderId = $.now()
-        window.openTest('http://localhost:8010/pay/orderInfo/payIndex?testId='+ testId + '&type=' + type + "&orderId=" + orderId)
+        orderId = "WX_"+$.now()
+        window.openTest('http://localhost:8010/pay/index?testId='+ testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功

@@ -36,7 +36,7 @@
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
         </div>
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change(20)"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(21)"><h4
                     style="color: white;font-size: small">小儿智能发育筛查</h4></a>
         </div>
     </div>
@@ -64,8 +64,8 @@
 
     function showCode(type) {
         // 请求二维码图片
-        orderId = $.now()
-        window.openTest('http://localhost:8010/pay/orderInfo/payIndex?testId='+ testId + '&type=' + type + "&orderId=" + orderId)
+        orderId = "WX_"+$.now()
+        window.openTest('http://localhost:8010/pay/index?testId='+ testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功
