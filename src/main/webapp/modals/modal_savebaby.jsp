@@ -37,20 +37,20 @@
 
 </div>
 <script>
-    var testId = 0;
+    window.testId = 0;
     var orderId = 0;
     $('.code').hide()
 
     function change(testId) {
         $('.code').show()
         $('.test').hide()
-        testId = testId
+        window.testId = testId
     }
 
     function showCode(type) {
         // 请求二维码图片
         orderId = "WX_"+$.now()
-        window.openTest('http://localhost:8010/pay/index?testId='+ testId + '&type=' + type + "&orderId=" + orderId)
+        window.openTest('http://localhost:8010/pay/index?window.testId='+ testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功
@@ -64,7 +64,7 @@
                 },
                 success:function(data){
                     if (data) {
-                        openTest(testId)
+                        openTest(window.testId)
                     }
                 }
             })
