@@ -50,7 +50,7 @@
     function showCode(type) {
         // 请求二维码图片
         orderId = "WX_"+$.now()
-        window.openTest('http://localhost:8010/pay/index?window.testId='+ testId + '&type=' + type + "&orderId=" + orderId)
+        window.openTest('http://localhost:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功
