@@ -161,6 +161,70 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--保存0-6测试评语和测评人-->
+        <action name="saverecord" method="saveRecord" class="com.free4lab.babycheckup.action.ResultAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存0_2测试评语和测评人-->
+        <action name="saverecord0_2" method="saveRecord0_2" class="com.free4lab.babycheckup.action.ResultAction0_2">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存0_3测试评语和测评人-->
+        <action name="saverecord0_3" method="saveRecord0_3" class="com.free4lab.babycheckup.action.ResultAction0_3">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存3_6测试评语和测评人-->
+        <action name="saverecord3_6" method="saveRecord3_6" class="com.free4lab.babycheckup.action.ResultAction3_6">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存50测试评语和测评人-->
+        <action name="saverecord50" method="saveRecord50" class="com.free4lab.babycheckup.action.ResultAction50">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存132测试评语和测评人-->
+        <action name="saverecord132" method="saveRecord132" class="com.free4lab.babycheckup.action.ResultAction132">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存cognize测试评语和测评人-->
+        <action name="saverecordcognize" method="saveRecordCognize" class="com.free4lab.babycheckup.action.ResultCognizeAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--保存ddst测试评语和测评人-->
+        <action name="saverecordddst" method="saveRecordDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <action name="admin" method="indexAdmin" class="com.free4lab.babycheckup.action.AdminAction">
             <result name="success">views/index_admin.jsp</result>
         </action>
@@ -219,6 +283,12 @@
         <action name="updatehospital" method="updateHospital" class="com.free4lab.babycheckup.action.HospitalAction">
             <result type="json" name="success">
                 <param name="includeProperties">name,flag</param>
+            </result>
+        </action>
+
+        <action name="isOrderPayed" method="isOrderPayed" class="com.free4lab.babycheckup.action.OrderInfoAction">
+            <result type="json" name="success">
+                <param name="includeProperties">order,flag</param>
             </result>
         </action>
     </package>

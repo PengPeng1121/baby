@@ -5,10 +5,13 @@ import com.free4lab.babycheckup.constant.AnswerValueEnum_Total;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager3_6;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result3_6;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
+import org.springframework.beans.BeanUtils;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -29,7 +32,7 @@ public class ResultAction3_6 {
     private String p0;//例如 50~70
 
     private String r0;//评价
-
+    private TestResultRecord resultRecord;
     public String showResult3_6() {
         result3_6 = ResultManager3_6.findResultByid(id);
         baby = BabyManager.findById(result3_6.getBabyId());
@@ -56,6 +59,23 @@ public class ResultAction3_6 {
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    //保存记录，没有新增，有修改
+    public String saveRecord3_6(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
     }
 
     public Baby getBaby() {
@@ -120,5 +140,13 @@ public class ResultAction3_6 {
 
     public void setResult3_6(Result3_6 result3_6) {
         this.result3_6 = result3_6;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }

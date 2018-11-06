@@ -3,12 +3,15 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultCognizeManager;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultCognize;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
 import com.pp.common.constant.util.ExactAgeUtil;
 import com.pp.common.constant.util.GetScaleUtil;
+import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -34,7 +37,7 @@ public class ResultCognizeAction {
     private String days;
     //早产天数
     private Integer preDelivery;
-
+    private TestResultRecord resultRecord;
     public String showResultCognize() {
         resultCognize = ResultCognizeManager.findResultByid(id);
         baby = BabyManager.findById(resultCognize.getBabyId());
@@ -87,6 +90,23 @@ public class ResultCognizeAction {
     public Integer differentdays(Date d1, Date d2){
         Integer days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    //保存记录，没有新增，有修改
+    public String saveRecordCognize(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
     }
 
     public Baby getBaby() {
@@ -207,5 +227,13 @@ public class ResultCognizeAction {
 
     public void setPreDelivery(Integer preDelivery) {
         this.preDelivery = preDelivery;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }

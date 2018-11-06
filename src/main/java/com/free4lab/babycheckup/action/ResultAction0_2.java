@@ -4,10 +4,13 @@ import com.free4lab.babycheckup.constant.AnswerValueEnum_R;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager0_2;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result0_2;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
+import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 
@@ -27,6 +30,7 @@ public class ResultAction0_2 {
     private String p0;//例如 50~70
 
     private String r0;//评价
+    private TestResultRecord resultRecord;
 
     public String showResult0_2() {
         result0_2 = ResultManager0_2.findResultByid(id);
@@ -61,6 +65,23 @@ public class ResultAction0_2 {
             pStr = "90~100";
         }
         return pStr;
+    }
+
+    //保存记录，没有新增，有修改
+    public String saveRecord0_2(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
     }
 
     public Baby getBaby() {
@@ -133,5 +154,13 @@ public class ResultAction0_2 {
 
     public void setR0(String r0) {
         this.r0 = r0;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }

@@ -3,10 +3,13 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultManager;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.Result;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
+import org.springframework.beans.BeanUtils;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -29,6 +32,7 @@ public class ResultAction {
     private Double scoreLanguage;
     private Double scoreSocial;
     private Hospital hospital;
+    private TestResultRecord resultRecord;
 
     public String showResult() {
         result = ResultManager.findResultByid(id);
@@ -44,8 +48,27 @@ public class ResultAction {
         scoreLanguage = result.getScoreLanguage()*100/monthage;
         scoreSocial = result.getScoreSocial()*100/monthage;
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultRecord = TestResultRecordManager.find(1,id);
         return SUCCESS;
     }
+
+    //保存记录，没有新增，有修改
+    public String saveRecord(){
+        TestResultRecord record = TestResultRecordManager.find(1,id);
+        if(record==null){
+            //保存
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            TestResultRecordManager.update(updateRecord);
+        }
+        return SUCCESS;
+    }
+
 
     public Double diffDays(java.util.Date d1, java.util.Date d2){
         DecimalFormat df=new DecimalFormat("0.0");
@@ -146,5 +169,13 @@ public class ResultAction {
 
     public void setResultid(int resultid) {
         this.resultid = resultid;
+    }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
     }
 }
