@@ -10,33 +10,33 @@
     <input type="hidden" id="babyid" value="">
     <div class="modal-body test">
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(1)"><h4
                     style="color: white;font-size: small">开始0-6岁小儿<br/>神经心理发育测评</h4></a>
         </div>
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(2)"><h4
                     style="color: white;font-size: small">开始3-6岁<br/>育儿技能评估</h4></a>
         </div>
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(16)"><h4
                     style="color: white;font-size: small">开始家庭养育<br/>评估（0-2岁)</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(17)"><h4
                     style="color: white;font-size: small">开始学前50项<br/>智力筛查</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(18)"><h4
                     style="color: white;font-size: small">婴儿-初中学生<br/>生活能力量表</h4></a>
         </div>
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize(19)"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
         </div>
         <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:change()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:change(20)"><h4
                     style="color: white;font-size: small">小儿智能发育筛查</h4></a>
         </div>
     </div>
