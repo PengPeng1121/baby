@@ -45,7 +45,7 @@
         <div style="margin-top: 10px; display: inline-block; width: 550px">
             
 
-            <a type="button" class="btn  modal-box text-center" href="javascript:showCode(1)" style="margin-left:30px"><h4 style="color: white;font-size: xx-large">免费</h4></a>
+            <a type="button" class="btn  modal-box text-center" href="javascript:openTest()" style="margin-left:30px"><h4 style="color: white;font-size: xx-large">免费</h4></a>
             <a type="button" class="btn  modal-box text-center" href="javascript:showCode(2)" style="margin-left:30px"><h4 style="color: white;font-size: xx-large">打折</h4></a>
             <a type="button" class="btn  modal-box text-center" style="margin-left:30px" href="javascript:showCode(3)"><h4 style="color: white;font-size: xx-large">原价</h4></a>
         </div>
@@ -88,6 +88,9 @@
     }
 
     function openTest(testId) {
+        if (!testId) {
+            testId = window.testId
+        }
         clearInterval(window.inter) 
         switch (testId){
             case 1:
