@@ -50,12 +50,12 @@
     function showCode(type) {
         // 请求二维码图片
         orderId = "WX_"+$.now()
-        window.openTest('http://localhost:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
+        window.open('http://localhost:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功
         
-        setInterval(function(){
+        window.inter = setInterval(function(){
             $.ajax({
                 url:"isOrderPayed",
                 type:"post",
@@ -73,6 +73,7 @@
     }
 
     function openTest(testId) {
+        clearInterval(window.inter) 
         switch (testId){
             case 1:
                 start0_6();
