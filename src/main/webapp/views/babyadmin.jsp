@@ -64,7 +64,7 @@
         <div id="search_result"></div>
     </div>
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>

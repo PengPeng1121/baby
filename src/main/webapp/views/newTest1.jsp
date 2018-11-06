@@ -192,60 +192,87 @@
     var questionTypeSum = $('#questionTypeSum').val();
     var questionScore = [questionTypeSum + 1];
 
+    // function prepare() {
+    //     for (var type = 1; type <= questionTypeSum; type++) {
+    //         var flag = 0;//连续通过的两行的第二个行
+    //         for (var i = 0; i < questionMonthSum; i++) {
+    //             var twoLineChecked = true;
+    //             $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
+    //                 if (!$(this).prop('checked')) {
+    //                     twoLineChecked = false;
+    //                 }
+    //             });
+    //             if(twoLineChecked){
+    //                 $('input[name=checkbox-' + (i + 1) + '-' + type + ']').each(function () {
+    //                     if (!$(this).prop('checked')) {
+    //                         twoLineChecked = false;
+    //                     }
+    //                 });
+    //                 if (twoLineChecked) {
+    //                     flag = i + 1;
+    //                 }
+    //                 break;
+    //             }
+
+    //         }
+    //         if (flag == 0) {
+    //             if ($('#days').val() <= 6) {
+    //                 questionScore[type] = 0;
+    //                 for (var i = 0; i < questionMonthSum; i++) {
+    //                     $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
+    //                         if ($(this).prop('checked')) {
+    //                             questionScore[type] += parseFloat($(this).val());
+    //                         }
+    //                     });
+    //                 }
+    //             } else {
+    //                 var typeName = "";
+    //                 switch (type) {
+    //                     case 1:
+    //                         typeName = "大运动";
+    //                         break;
+    //                     case 2:
+    //                         typeName = "精细动作";
+    //                         break;
+    //                     case 3:
+    //                         typeName = "适应能力";
+    //                         break;
+    //                     case 4:
+    //                         typeName = "语言";
+    //                         break;
+    //                     case 5:
+    //                         typeName = "社交行为";
+    //                         break;
+    //                 }
+    //                 $.tipModal('alert', 'warning', typeName + '的题目未完成！');
+    //                 return false;
+    //             }
+    //         } else {
+    //             questionScore[type] = parseFloat($('div[name=month' + flag + ']').text());
+    //             for (var i = flag + 1; i < questionMonthSum; i++) {
+    //                 $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
+    //                     if ($(this).prop('checked')) {
+    //                         questionScore[type] += parseFloat($(this).val());
+    //                     }
+    //                 });
+    //             }
+    //         }
+    //     }
+    //     return true;
+    // }
+
+
+
     function prepare() {
         for (var type = 1; type <= questionTypeSum; type++) {
-            var flag = 0;//连续通过的两行的第二个行
-            for (var i = 0; i < questionMonthSum; i++) {
-                var twoLineChecked = true;
-                $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
-                    if (!$(this).prop('checked')) {
-                        twoLineChecked = false;
-                    }
-                });
-                if(twoLineChecked){
-                    $('input[name=checkbox-' + (i + 1) + '-' + type + ']').each(function () {
-                        if (!$(this).prop('checked')) {
-                            twoLineChecked = false;
+            if ($('#days').val() <= 6) {
+                questionScore[type] = 0;
+                for (var i = 0; i < questionMonthSum; i++) {
+                    $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
+                        if ($(this).prop('checked')) {
+                            questionScore[type] += parseFloat($(this).val());
                         }
                     });
-                    if (twoLineChecked) {
-                        flag = i + 1;
-                    }
-                    break;
-                }
-
-            }
-            if (flag == 0) {
-                if ($('#days').val() <= 6) {
-                    questionScore[type] = 0;
-                    for (var i = 0; i < questionMonthSum; i++) {
-                        $('input[name=checkbox-' + i + '-' + type + ']').each(function () {
-                            if ($(this).prop('checked')) {
-                                questionScore[type] += parseFloat($(this).val());
-                            }
-                        });
-                    }
-                } else {
-                    var typeName = "";
-                    switch (type) {
-                        case 1:
-                            typeName = "大运动";
-                            break;
-                        case 2:
-                            typeName = "精细动作";
-                            break;
-                        case 3:
-                            typeName = "适应能力";
-                            break;
-                        case 4:
-                            typeName = "语言";
-                            break;
-                        case 5:
-                            typeName = "社交行为";
-                            break;
-                    }
-                    $.tipModal('alert', 'warning', typeName + '的题目未完成！');
-                    return false;
                 }
             } else {
                 questionScore[type] = parseFloat($('div[name=month' + flag + ']').text());
@@ -260,6 +287,8 @@
         }
         return true;
     }
+
+
 
     function preview() {
         if(prepare()) {

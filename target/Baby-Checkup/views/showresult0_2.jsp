@@ -16,7 +16,7 @@
     <style type="text/css" media="print">
         @page
         {
-            size:  auto portrait;   /* auto is the initial value */
+            size:  auto;   /* auto is the initial value */
             margin: 5mm;  /* this affects the margin in the printer settings */
         }
     </style>
@@ -27,7 +27,7 @@
     <div class="container">
         <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">家庭养育(0-2岁)</h1>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（0-2岁)</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -157,11 +157,11 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
+            <div ><a type="button" class="btn btn-primary noprint pull-right" style="margin:50px 10px 20px 0px;" onclick='javascript:window.print()'>打印结果</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by <a href="http://freeabout.free4inno.com/" target="blank">自邮之翼</a>(2017)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
@@ -306,39 +306,9 @@
 
 
     $(function () {
-        var chart1,
-            chart2;
-        $('.print').click(function(){
-            $('.front-inner').css({
-                padding: '0px'
-            });
-            $('.panel').css({
-                margin: '0px'
-            });
-            $('h1').css({
-                'font-size': '20px'
-            });
-            $('h2').css({
-                'font-size': '15px'
-            });
-            $('#column').css({
-                width: '300px',
-                height: '300px'
-            });
-            $('#spider').css({
-                width: '300px',
-                height: '300px'
-            });
-            chart1.reflow();
-            chart2.reflow();
-            window.print();
-        })
         $('#column').highcharts({
             chart: {
                 type: 'column'
-            },
-            credits: {
-                enabled: false
             },
             title: {
                 text: ''
@@ -365,8 +335,6 @@
                 enabled:false
             },
             series: series
-        }, function(c){
-            chart1 = c;
         });
 
         $('#spider').highcharts({
@@ -374,11 +342,8 @@
                 polar: true,
                 type: 'area'
             },
-            credits: {
-                enabled: false
-            },
             title: {
-                text: '',
+                text: '小儿测评结果网状图(3-6)',
                 x: -80
             },
             pane: {
@@ -439,11 +404,8 @@
                 data: [a1, a2, a3, a4, a5, a6],
                 pointPlacement: 'on'
             }]
-        }, function(c){
-            chart2 = c;
         });
     });
-
 
 </script>
 </body>

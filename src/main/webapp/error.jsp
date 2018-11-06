@@ -24,7 +24,7 @@
 
 
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2018)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2018)</div>
     </footer>
 </div>
 </body>

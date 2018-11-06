@@ -175,7 +175,7 @@
                                     </div>
                                 </div> -->
                                 <div class="as-desc">
-                                    即将上线 完成父母育儿评估量表（3-6岁）课程者优先试用！
+                                    即将上线 完成父母育儿评估量表（3-6岁）课程者优先试用！！！
                                 </div>
                                 <!-- <div class="text-right">
                                     <a href="record?testId=20" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
@@ -344,7 +344,7 @@
                     </div>
                 <%--</a>--%>
             </div>
-            <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
+            <!-- <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
                 <div class="col-md-2" style="display: inline-block;padding-left: 0">
                     <div class="text-left" style="margin-bottom: 5px;"><label style="font-weight:normal;"><h4>培训</h4></label></div>
                 </div>
@@ -374,13 +374,13 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
 
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 协顺祥(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
     </footer>
 </div>
 <s:include value="statics/tail.html"/>
