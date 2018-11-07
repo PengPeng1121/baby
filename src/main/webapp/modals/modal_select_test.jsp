@@ -62,9 +62,16 @@
         window.testId = testId
     }
 
+    function RndNum(n){
+        var rnd="";
+        for(var i=0;i<n;i++)
+            rnd+=Math.floor(Math.random()*10);
+        return rnd;
+    }
+
     function showCode(type) {
         // 请求二维码图片
-        orderId = "WX_"+$.now()
+        orderId = "WX_"+window.testId+"_"+$.now()+"_"+RndNum(3);
         window.open('http://localhost:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
 
 

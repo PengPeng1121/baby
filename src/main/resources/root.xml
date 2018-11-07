@@ -101,14 +101,14 @@
 
         <action name="saveresult" method="saveResult" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result,result.id</param>
+                <param name="includeProperties">result,result.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
         <!--3-6岁结果-->
         <action name="saveresult3_6" method="saveResult3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result3_6,result3_6.id</param>
+                <param name="includeProperties">result3_6,result3_6.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -116,7 +116,7 @@
         <!--0-2岁结果-->
         <action name="saveresult0_2" method="saveResult0_2" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result0_2,result0_2.id</param>
+                <param name="includeProperties">result0_2,result0_2.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -124,7 +124,7 @@
         <!--0-2岁结果-->
         <action name="saveresult50" method="saveResult50" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result50,result50.id</param>
+                <param name="includeProperties">result50,result50.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -132,7 +132,7 @@
         <!--婴儿-初中学生生活能力量表结果-->
         <action name="saveresult132" method="saveResult132" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result132,result132.id</param>
+                <param name="includeProperties">result132,result132.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -140,7 +140,7 @@
         <!--婴幼儿认知测定结果-->
         <action name="saveresultcognize" method="saveResultCognize" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">resultCognize,resultCognize.id</param>
+                <param name="includeProperties">resultCognize,resultCognize.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -148,7 +148,7 @@
         <!--小儿智能发育筛查-->
         <action name="saveresultDDST" method="saveResultDDST" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">resultDDST,resultDDST.id</param>
+                <param name="includeProperties">resultDDST,resultDDST.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -156,7 +156,7 @@
         <!--父母育儿评估量表结果-->
         <action name="saveresult0_3" method="saveResult0_3" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result0_3,result0_3.id</param>
+                <param name="includeProperties">result0_3,result0_3.id,orderId</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
