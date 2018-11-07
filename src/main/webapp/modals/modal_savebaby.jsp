@@ -57,7 +57,7 @@
     function showCode(type) {
         // 请求二维码图片
         orderId = "WX_"+window.testId+"_"+$.now()+RndNum(3)+"_"+RndNum(3);
-        window.open('http://localhost:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
+        window.open('http://47.94.202.106:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
 
 
         //判断是否付款成功
