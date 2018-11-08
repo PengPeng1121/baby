@@ -71,7 +71,7 @@
 
     function showCode(type) {
         // 请求二维码图片
-        orderId = "WX_"+window.testId+"_"+$.now()+"_"+RndNum(3);
+        orderId = "WX_NATIVE_"+window.testId+"_"+$.now()+"_"+RndNum(3);
         window.open('http://47.94.202.106:8010/pay/index?testId='+ window.testId + '&type=' + type + "&orderId=" + orderId)
 
 
