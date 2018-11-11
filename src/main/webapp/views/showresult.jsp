@@ -125,11 +125,14 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark"></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
-            <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
+            <div >
+                <span style="margin-top: 50px;font-size: 16px;">医生:</span>
+                <input style="margin-top: 50px;font-size: 16px;" id="doctor">
+            </div>
             <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
         </div>　
     </div>
@@ -180,29 +183,46 @@
         var chart1,
             chart2;
         $('.print').click(function(){
-            $('.front-inner').css({
-                padding: '0px'
-            });
-            $('.panel').css({
-                margin: '0px'
-            });
-            $('h1').css({
-                'font-size': '20px'
-            });
-            $('h2').css({
-                'font-size': '15px'
-            });
-            $('#column').css({
-                width: '300px',
-                height: '300px'
-            });
-            $('#spider').css({
-                width: '300px',
-                height: '300px'
-            });
-            chart1.reflow();
-            chart2.reflow();
-            window.print();
+            //发送请求
+            var remark = $('#remark').val()
+            var tester_name = $('#doctor').val()
+            var resultID = $('#resultID').val()
+            $.ajax({
+                url: 'saveRecord',
+                type: 'post',
+                data: {
+                    remark:remark,
+                    tester_name: tester_name,
+                    result_id: resultID
+                },
+                success:function (json) {
+                    $('.front-inner').css({
+                        padding: '0px'
+                    });
+                    $('.panel').css({
+                        margin: '0px'
+                    });
+                    $('h1').css({
+                        'font-size': '20px'
+                    });
+                    $('h2').css({
+                        'font-size': '15px'
+                    });
+                    $('#column').css({
+                        width: '300px',
+                        height: '300px'
+                    });
+                    $('#spider').css({
+                        width: '300px',
+                        height: '300px'
+                    });
+                    chart1.reflow();
+                    chart2.reflow();
+                    window.print();
+                }
+            })
+
+            
         })
         $('#column').highcharts({
             chart: {
