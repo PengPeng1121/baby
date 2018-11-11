@@ -126,7 +126,7 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark" value="<s:property value="resultRecord.remark"/>"></textarea>
+                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark"><s:property value="resultRecord.remark"/></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
