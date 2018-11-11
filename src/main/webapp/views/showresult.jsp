@@ -192,16 +192,15 @@
             var remark = $('#remark').val()
             var tester_name = $('#doctor').val()
             var resultID = $('#resultID').val()
+            var data = "{";
+            data += "'resultRecord.remark':" + remark + ",";
+            data += "'resultRecord.tester_name':" + tester_name + ",";
+            data += "'resultRecord.resultID':" + resultID + ",";
+            data += "}";
             $.ajax({
                 url: 'saverecord',
                 type: 'post',
-                data: {
-                    resultRecord: {
-                        remark:remark,
-                        testerName: tester_name,
-                        resultId: resultID
-                    }
-                },
+                data: eval('(' + data + ')'),
                 success:function (json) {
                     $('.front-inner').css({
                         padding: '0px'
