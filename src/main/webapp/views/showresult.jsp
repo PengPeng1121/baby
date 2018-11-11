@@ -70,6 +70,7 @@
             </div>
         </div>
         <input type="hidden" id="resultID" value="<s:property value="result.id"/>">
+        
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
@@ -125,13 +126,13 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark"></textarea>
+                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark" value="<s:property value="resultRecord.remark"/>"></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
             <div >
                 <span style="margin-top: 50px;font-size: 16px;">医生:</span>
-                <input style="margin-top: 50px;font-size: 16px;" id="doctor">
+                <input style="margin-top: 50px;font-size: 16px;" id="doctor"  value="<s:property value="resultRecord.testerName"/>">
             </div>
             <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
         </div>　
@@ -146,12 +147,9 @@
 <script type="text/javascript">
     var dq_fix = <s:property value="result.dq"/>;
     var growth_fix = <s:property value="result.growth"/>;
-    var remark = <s:property value="resultRecord.remark"/>;
-    var doctor = <s:property value="resultRecord.testerName"/>;
+
     $("#DQ").html(dq_fix.toFixed(1));
     $("#growth").html(growth_fix.toFixed(1));
-    $("#remark").val(remark)
-    $("#doctor").val(doctor)
 
     var a1 = 0;
     a1 = <s:property value="result.scoreSport"/>;//智龄
