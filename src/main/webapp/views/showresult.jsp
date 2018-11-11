@@ -146,8 +146,13 @@
 <script type="text/javascript">
     var dq_fix = <s:property value="result.dq"/>;
     var growth_fix = <s:property value="result.growth"/>;
+    var remark = <s:property value="resultRecord.remark"/>;
+    var doctor = <s:property value="resultRecord.testerName"/>;
     $("#DQ").html(dq_fix.toFixed(1));
     $("#growth").html(growth_fix.toFixed(1));
+    $("#remark").val(remark)
+    $("#growth").val(doctor)
+
     var a1 = 0;
     a1 = <s:property value="result.scoreSport"/>;//智龄
     var a2 = 0;
@@ -192,8 +197,8 @@
                 type: 'post',
                 data: {
                     remark:remark,
-                    tester_name: tester_name,
-                    result_id: resultID
+                    testerName: tester_name,
+                    resultId: resultID
                 },
                 success:function (json) {
                     $('.front-inner').css({
