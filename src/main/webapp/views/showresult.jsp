@@ -194,8 +194,8 @@
             var resultID = $('#resultID').val()
             var data = "{";
             data += "'resultRecord.remark':'" + remark + "',";
-            data += "'resultRecord.tester_name':'" + tester_name + "',";
-            data += "'resultRecord.resultID':'" + resultID + "',";
+            data += "'resultRecord.testerName':'" + tester_name + "',";
+            data += "'resultRecord.resultId':'" + resultID + "',";
             data += "}";
             $.ajax({
                 url: 'saverecord',
