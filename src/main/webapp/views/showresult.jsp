@@ -193,9 +193,9 @@
             var tester_name = $('#doctor').val()
             var resultID = $('#resultID').val()
             var data = "{";
-            data += "'resultRecord.remark':" + remark + ",";
-            data += "'resultRecord.tester_name':" + tester_name + ",";
-            data += "'resultRecord.resultID':" + resultID + ",";
+            data += "'resultRecord.remark':'" + remark + "',";
+            data += "'resultRecord.tester_name':'" + tester_name + "',";
+            data += "'resultRecord.resultID':'" + resultID + "',";
             data += "}";
             $.ajax({
                 url: 'saverecord',
