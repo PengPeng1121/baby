@@ -151,7 +151,7 @@
     $("#DQ").html(dq_fix.toFixed(1));
     $("#growth").html(growth_fix.toFixed(1));
     $("#remark").val(remark)
-    $("#growth").val(doctor)
+    $("#doctor").val(doctor)
 
     var a1 = 0;
     a1 = <s:property value="result.scoreSport"/>;//智龄
