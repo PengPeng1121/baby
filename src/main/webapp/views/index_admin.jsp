@@ -17,7 +17,7 @@
                 <div class="panel panel-default front-panel ">
                     <div class="panel-heading">修改首页Logo</div>
                         <div class="panel-body" style="height: 100px;">
-                            <div class="col-md-6 col-sm-6"><img id="logoLandingImg" src="http://123.56.19.0/image/<s:property value="hospital.logoLanding"/>" style="height: 30px;width: 250px;"></div>
+                            <div class="col-md-6 col-sm-6"><img id="logoLandingImg" src="http://47.94.202.106/image/<s:property value="hospital.logoLanding"/>" style="height: 30px;width: 250px;"></div>
                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                                 <span class="visible-md visible-lg visible-sm" style="height: 50px"></span>
                                 <span class="visible-xs" style="height: 25px"></span>
@@ -28,7 +28,7 @@
                 <div class="panel panel-default front-panel ">
                     <div class="panel-heading">修改首页Banner</div>
                         <div class="panel-body visible-md visible-lg visible-sm" style="height: 100px;">
-                            <div class="col-md-6 col-sm-6"><img id="bannerLandingImg" src="http://123.56.19.0/image/<s:property value="hospital.bannerLanding"/>" style="height: 80px;width: 250px;"></div>
+                            <div class="col-md-6 col-sm-6"><img id="bannerLandingImg" src="http://47.94.202.106/image/<s:property value="hospital.bannerLanding"/>" style="height: 80px;width: 250px;"></div>
                             <div class="col-md-6 col-lg-6 col-sm-6">
                                 <span class="visible-md visible-lg visible-sm" style="height: 50px"></span>
                             </div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     <div class="panel-body visible-xs" style="height: 150px;">
-                        <div><img id="bannerLandingImg1" src="http://123.56.19.0/image/<s:property value="hospital.bannerLanding"/>" style="height: 80px;width: 250px;"></div>
+                        <div><img id="bannerLandingImg1" src="http://47.94.202.106/image/<s:property value="hospital.bannerLanding"/>" style="height: 80px;width: 250px;"></div>
                         <div class="col-xs-12">
                             <span class="visible-xs" style="height: 25px"></span>
                         </div>
@@ -49,7 +49,7 @@
                 <div class="panel panel-default front-panel ">
                     <div class="panel-heading">修改内页Logo</div>
                         <div class="panel-body" style="height: 100px;">
-                            <div class="col-md-6 col-sm-6"><img id="logoImg" src="http://123.56.19.0/image/<s:property value="hospital.logo"/>" style="height: 30px;width: 250px;"></div>
+                            <div class="col-md-6 col-sm-6"><img id="logoImg" src="http://47.94.202.106/image/<s:property value="hospital.logo"/>" style="height: 30px;width: 250px;"></div>
                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                                 <span class="visible-md visible-lg visible-sm" style="height: 50px"></span>
                                 <span class="visible-xs" style="height: 25px"></span>
@@ -170,7 +170,7 @@
             dataType: "json",
             success: function (json) {
                 $.showLoading('reset');
-                $('#' + position + 'Img').attr("src", "http://123.56.19.0/image/" + json.relativePath);
+                $('#' + position + 'Img').attr("src", "http://47.94.202.106/image/" + json.relativePath);
             }
         });
     })

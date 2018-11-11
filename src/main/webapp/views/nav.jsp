@@ -7,7 +7,7 @@
             <!-- 左侧栏移动端触发：可选  -->
             <%--<img class="nav-toggle-left" id="front-nav-toggle-left" alt="SidebarToggle"/>--%>
             <!-- 品牌图片大小为150 * 30：宽度不定，高度固定30px -->
-            <div class="nav-brand"><a href="home"><img class="img-responsive" src="http://123.56.19.0/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/></a></div>
+            <div class="nav-brand"><a href="home"><img class="img-responsive" src="http://47.94.202.106/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/></a></div>
         </div>
         <!-- 导航栏菜单 -->
         <div class="nav-collapse collapse" id="nav-collapse-demo">
