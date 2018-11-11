@@ -193,7 +193,7 @@
             var tester_name = $('#doctor').val()
             var resultID = $('#resultID').val()
             $.ajax({
-                url: 'saveRecord',
+                url: 'saverecord',
                 type: 'post',
                 data: {
                     remark:remark,
