@@ -196,9 +196,11 @@
                 url: 'saverecord',
                 type: 'post',
                 data: {
-                    remark:remark,
-                    testerName: tester_name,
-                    resultId: resultID
+                    resultRecord: {
+                        remark:remark,
+                        testerName: tester_name,
+                        resultId: resultID
+                    }
                 },
                 success:function (json) {
                     $('.front-inner').css({
