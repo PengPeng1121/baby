@@ -49,6 +49,7 @@ public class ResultAction0_2 {
         }catch (Exception e){
 
         }
+        resultRecord = TestResultRecordManager.find(16,id);
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         return SUCCESS;
     }
@@ -69,16 +70,29 @@ public class ResultAction0_2 {
 
     //保存记录，没有新增，有修改
     public String saveRecord0_2(){
-        TestResultRecord record = TestResultRecordManager.find(1,id);
+        TestResultRecord record = TestResultRecordManager.find(16,resultRecord.getResultId());
         if(record==null){
             //保存
+            resultRecord.setTestId(16);
+            resultRecord.setVersion("1");
+            resultRecord.setHospitalId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            resultRecord.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            resultRecord.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+            resultRecord.setCreateUser((String) ActionContext.getContext().getSession().get("username"));
+            resultRecord.setUpdateTime(new java.util.Date());
+            resultRecord.setCreateTime(new java.util.Date());
             TestResultRecordManager.save(resultRecord);
         }else {
             //修改
             TestResultRecord updateRecord = new TestResultRecord();
             BeanUtils.copyProperties(record,updateRecord);
+            Integer version = Integer.parseInt(record.getVersion());
+            version = version +1;//升版本
+            updateRecord.setVersion(version.toString());
             updateRecord.setRemark(resultRecord.getRemark());
             updateRecord.setTesterName(resultRecord.getTesterName());
+            updateRecord.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+            updateRecord.setUpdateTime(new java.util.Date());
             TestResultRecordManager.update(updateRecord);
         }
         return SUCCESS;

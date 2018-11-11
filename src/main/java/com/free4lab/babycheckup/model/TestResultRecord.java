@@ -7,7 +7,9 @@ import java.util.Date;
 @Table(name = "test_result_record", schema = "babycheckup", catalog = "")
 public class TestResultRecord {
     private int id;
-    private int resultId;
+    private Integer resultId;
+    private Integer hospitalId;
+    private Integer userId;
     private Integer testId;
     private String testerName;
     // 备注
@@ -40,6 +42,27 @@ public class TestResultRecord {
         this.id = id;
     }
 
+
+    @Basic
+    @Column(name = "hospital_id", nullable = false)
+    public Integer getHospitalId() {
+        return hospitalId;
+    }
+
+    public void setHospitalId(Integer hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+
+    @Basic
+    @Column(name = "user_id", nullable = false)
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     @Basic
     @Column(name = "test_id", nullable = false)
     public Integer getTestId() {
@@ -52,11 +75,11 @@ public class TestResultRecord {
 
     @Basic
     @Column(name = "result_id", nullable = false)
-    public int getResultId() {
+    public Integer getResultId() {
         return resultId;
     }
 
-    public void setResultId(int resultId) {
+    public void setResultId(Integer resultId) {
         this.resultId = resultId;
     }
 
