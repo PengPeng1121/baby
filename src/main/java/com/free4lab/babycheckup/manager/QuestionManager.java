@@ -36,4 +36,7 @@ public class QuestionManager {
         }
     }
 
+    public static List<Question> findQuestionListByTestIdAndMonth(int testId,int month) {
+        return getQuestionDAOInstance().findQuestionListByTestIdAndMonth(testId,month);
+    }
 }

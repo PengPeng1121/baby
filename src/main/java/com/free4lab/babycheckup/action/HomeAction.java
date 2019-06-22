@@ -3,7 +3,6 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
-import com.free4lab.babycheckup.model.ResultDDST;
 import com.opensymphony.xwork2.ActionContext;
 
 public class HomeAction {
@@ -17,7 +16,10 @@ public class HomeAction {
     private long numberOfResultCognize;
     private long numberOfResult0_3;
     private long numberOfResultDDST;
-
+    private long numberOfResultNei;
+    private long numberOfResultGroup;
+    private long numberOfResultQiZhi;
+    private long numberOfResultFeel;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -26,10 +28,14 @@ public class HomeAction {
     private Integer resultCognizeLeftTimes;
     private Integer result0_3LeftTimes;
     private Integer resultDDSTLeftTimes;
+    private Integer resultNeiLeftTimes;
+    private Integer resultGroupLeftTimes;
+    private Integer resultQiZhiLeftTimes;
+    private Integer resultFeelLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
-    private final static Integer CONFIG_TPYE = 1;
+    private final static Integer CONFIG_TYPE = 1;
 
     public String execute() throws Exception {
         int hoid = (Integer) ActionContext.getContext().getSession().get("hoid");
@@ -42,12 +48,15 @@ public class HomeAction {
         numberOfResultCognize = ResultCognizeManager.countResultByHosIdAndTestId(hoid,19);
         numberOfResult0_3 = ResultManager0_3.countResultByHosIdAndTestId(hoid,20);
         numberOfResultDDST = ResultDDSTManager.countResultByHosIdAndTestId(hoid,21);
-
+        numberOfResultNei = ResultNeiManager.countResultByHosIdAndTestId(hoid,22);
+        numberOfResultGroup = ResultGroupManager.countResultByHosIdAndTestId(hoid,23);
+        numberOfResultQiZhi = ResultQiZhiManager.countResultByHosIdAndTestId(hoid,24);
+        numberOfResultFeel = ResultFeelManager.countResultByHosIdAndTestId(hoid,25);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
         }
-        if(config.getConfigType().equals(CONFIG_TPYE)){
+        if(config.getConfigType().equals(CONFIG_TYPE)){
             HospitalTestTimes times = HospitalTestTimesManager.findTimesByHospitalId(hoid);
             if(times==null){
                 return "fail";
@@ -62,6 +71,10 @@ public class HomeAction {
             HospitalTestTimes timesCognize = HospitalTestTimesManager.findTimes(hoid,19);
             HospitalTestTimes times0_3 = HospitalTestTimesManager.findTimes(hoid,20);
             HospitalTestTimes timesDDST = HospitalTestTimesManager.findTimes(hoid,21);
+            HospitalTestTimes timesNei = HospitalTestTimesManager.findTimes(hoid,22);
+            HospitalTestTimes timesGroup = HospitalTestTimesManager.findTimes(hoid,23);
+            HospitalTestTimes timesQiZhi = HospitalTestTimesManager.findTimes(hoid,24);
+            HospitalTestTimes timesFeel = HospitalTestTimesManager.findTimes(hoid,25);
             if(times0_6!=null){
                 result0_6LeftTimes=times0_6.getLeftTimes();
             }
@@ -85,6 +98,18 @@ public class HomeAction {
             }
             if(timesDDST!=null){
                 resultDDSTLeftTimes=timesDDST.getLeftTimes();
+            }
+            if(timesNei!=null){
+                resultNeiLeftTimes=timesNei.getLeftTimes();
+            }
+            if(timesGroup!=null){
+                resultGroupLeftTimes=timesGroup.getLeftTimes();
+            }
+            if(timesQiZhi!=null){
+                resultQiZhiLeftTimes=timesQiZhi.getLeftTimes();
+            }
+            if(timesFeel!=null){
+                resultFeelLeftTimes=timesFeel.getLeftTimes();
             }
         }
         return "success";
@@ -217,10 +242,6 @@ public class HomeAction {
         this.totalLeftTimes = totalLeftTimes;
     }
 
-    public static Integer getConfigTpye() {
-        return CONFIG_TPYE;
-    }
-
     public long getNumberOfResultDDST() {
         return numberOfResultDDST;
     }
@@ -235,5 +256,69 @@ public class HomeAction {
 
     public void setResultDDSTLeftTimes(Integer resultDDSTLeftTimes) {
         this.resultDDSTLeftTimes = resultDDSTLeftTimes;
+    }
+
+    public long getNumberOfResultNei() {
+        return numberOfResultNei;
+    }
+
+    public void setNumberOfResultNei(long numberOfResultNei) {
+        this.numberOfResultNei = numberOfResultNei;
+    }
+
+    public Integer getResultNeiLeftTimes() {
+        return resultNeiLeftTimes;
+    }
+
+    public void setResultNeiLeftTimes(Integer resultNeiLeftTimes) {
+        this.resultNeiLeftTimes = resultNeiLeftTimes;
+    }
+
+    public long getNumberOfResultGroup() {
+        return numberOfResultGroup;
+    }
+
+    public void setNumberOfResultGroup(long numberOfResultGroup) {
+        this.numberOfResultGroup = numberOfResultGroup;
+    }
+
+    public Integer getResultGroupLeftTimes() {
+        return resultGroupLeftTimes;
+    }
+
+    public void setResultGroupLeftTimes(Integer resultGroupLeftTimes) {
+        this.resultGroupLeftTimes = resultGroupLeftTimes;
+    }
+
+    public long getNumberOfResultQiZhi() {
+        return numberOfResultQiZhi;
+    }
+
+    public void setNumberOfResultQiZhi(long numberOfResultQiZhi) {
+        this.numberOfResultQiZhi = numberOfResultQiZhi;
+    }
+
+    public long getNumberOfResultFeel() {
+        return numberOfResultFeel;
+    }
+
+    public void setNumberOfResultFeel(long numberOfResultFeel) {
+        this.numberOfResultFeel = numberOfResultFeel;
+    }
+
+    public Integer getResultQiZhiLeftTimes() {
+        return resultQiZhiLeftTimes;
+    }
+
+    public void setResultQiZhiLeftTimes(Integer resultQiZhiLeftTimes) {
+        this.resultQiZhiLeftTimes = resultQiZhiLeftTimes;
+    }
+
+    public Integer getResultFeelLeftTimes() {
+        return resultFeelLeftTimes;
+    }
+
+    public void setResultFeelLeftTimes(Integer resultFeelLeftTimes) {
+        this.resultFeelLeftTimes = resultFeelLeftTimes;
     }
 }

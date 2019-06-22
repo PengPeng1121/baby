@@ -207,6 +207,52 @@ public class BabyAction {
         return "success";
     }
 
+    public String testMonthAgeNei(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (differentdays(d1,d2))/30;
+        if(monthAge <= 216 && 12 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
+    //0~18岁
+    public String testMonthAgeGroup(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge <= 216 && 0 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
+    //0~12岁
+    public String testMonthAgeQiZhi(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge < 156 && 0 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
+    //3~12岁
+    public String testMonthAgeFeel(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge < 156 && 36 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
 
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));

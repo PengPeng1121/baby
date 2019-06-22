@@ -67,4 +67,7 @@ public class QuestionDAO extends AbstractDAO<Question> {
         }
     }
 
+    public List<Question> findQuestionListByTestIdAndMonth(int testId,int month) {
+        return super.findByProperty2("testid", testId,"month",month);
+    }
 }
