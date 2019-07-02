@@ -14,6 +14,7 @@ html, body {
   background-color: #e7e7e7; }
 
 .front-inner {
+  background-color: #e7f2f8;
   padding-top: 70px;
   padding-bottom: 40px;
   position: relative;
@@ -335,11 +336,11 @@ select[multiple].input-lg, textarea.input-lg {
 
 /* 组件 */
 .navbar-default {
-  border-color: #e7e7e7;
-  background-color: #f8f8f8;
+  border-color: #298bc8;
+  background-color: #298bc8;
   /*background-image: url("");*/ }
   .navbar-default .navbar-nav > li > a {
-    color: #777; }
+    color: #FFF; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
@@ -484,7 +485,7 @@ select[multiple].input-lg, textarea.input-lg {
   .nav-right .area {
     /* 导航栏右侧按钮通用样式 */
     float: left;
-    color: #777;
+    color: #FFF;
     cursor: pointer;
     top: 0;
     /* 清除glyphicon top: 1px*/ }
@@ -660,7 +661,9 @@ select[multiple].input-lg, textarea.input-lg {
   bottom: 0; }
 
 .footer-default {
-  background-color: #f8f8f8;
+  /*background-color: #f8f8f8;*/
+  background-color: #254168;
+  color: #FFF;
   /*background-image: url('');*/ }
 
 .footer-default > div, .footer-inverse > div {

@@ -25,13 +25,13 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
+        <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
         <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">小儿智能发育筛查</h1>
 
         <div class="panel panel-default front-panel" id="info">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
-            <tbody class="panel-body front-no-padding" style="padding: 15px;">
+            <div class="panel-body front-no-padding" style="padding: 15px;">
                 <table>
                     <tbody>
                     <tr>
@@ -57,7 +57,6 @@
             <input id="days" type="hidden" value="<s:property value="days"/>">
 
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="result0_2.id"/>">
         <div class="panel panel-default front-panel" id="allbaby" style="display: none">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
@@ -92,7 +91,9 @@
         </div>
 
         <div class="panel panel-default front-panel col-md-12" style="padding: 0px;">
-            <div class="panel-heading">评定结果: <s:property value="resultDDST.result"/></div>
+            <div class="panel-heading">
+                评定结果: <s:property value="resultDDST.result"/>
+            </div>
         </div>
 
 
@@ -131,7 +132,7 @@
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>

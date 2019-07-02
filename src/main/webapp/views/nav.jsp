@@ -7,7 +7,12 @@
             <!-- 左侧栏移动端触发：可选  -->
             <%--<img class="nav-toggle-left" id="front-nav-toggle-left" alt="SidebarToggle"/>--%>
             <!-- 品牌图片大小为150 * 30：宽度不定，高度固定30px -->
-            <div class="nav-brand"><a href="home"><img class="img-responsive" src="http://47.94.202.106/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/></a></div>
+            <div class="nav-brand">
+                <a href="home" style="color:#fff;font-size: 20px">
+                    儿童发育评测平台
+                    <!-- <img class="img-responsive" src="http://47.94.16.189/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/> -->
+                </a>
+            </div>
         </div>
         <!-- 导航栏菜单 -->
         <div class="nav-collapse collapse" id="nav-collapse-demo">
@@ -36,8 +41,8 @@
             <div class="area area-media"><span style="font-size: 14px;">
                 <span id="hname"></span>
                 <s:property value="#session.username" />，您好！
-            <a data-toggle="front-modal" data-title="修改密码" data-href="modals/modal_changepassword.jsp">修改密码</a>
-            <a href="account/logout">退出</a>
+            <a data-toggle="front-modal" data-title="修改密码" data-href="modals/modal_changepassword.jsp" style="color: #FFF">修改密码</a>
+            <a href="account/logout" style="color: #FFF">退出</a>
             </span></div>
             <div class="area visible-xs visible-sm nav-toggle-down" data-toggle="collapse" data-target="#nav-collapse-demo" aria-expanded="false">
                 <span class="glyphicon glyphicon-menu-hamburger" id="front-nav-toggle-down-demo"></span>

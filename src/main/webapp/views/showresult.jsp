@@ -25,7 +25,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
+        <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
         <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">0-6岁小儿神经心理检查报告单</h1>
 
@@ -70,7 +70,6 @@
             </div>
         </div>
         <input type="hidden" id="resultID" value="<s:property value="result.id"/>">
-        
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
@@ -126,19 +125,16 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark"><s:property value="resultRecord.remark"/></textarea>
+                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
-            <div >
-                <span style="margin-top: 50px;font-size: 16px;">医生:</span>
-                <input style="margin-top: 50px;font-size: 16px;" id="doctor"  value="<s:property value="resultRecord.testerName"/>">
-            </div>
+            <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
             <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
@@ -147,10 +143,8 @@
 <script type="text/javascript">
     var dq_fix = <s:property value="result.dq"/>;
     var growth_fix = <s:property value="result.growth"/>;
-
     $("#DQ").html(dq_fix.toFixed(1));
     $("#growth").html(growth_fix.toFixed(1));
-
     var a1 = 0;
     a1 = <s:property value="result.scoreSport"/>;//智龄
     var a2 = 0;
@@ -186,47 +180,29 @@
         var chart1,
             chart2;
         $('.print').click(function(){
-            //发送请求
-            var remark = $('#remark').val()
-            var tester_name = $('#doctor').val()
-            var resultID = $('#resultID').val()
-            var data = "{";
-            data += "'resultRecord.remark':'" + remark + "',";
-            data += "'resultRecord.testerName':'" + tester_name + "',";
-            data += "'resultRecord.resultId':'" + resultID + "',";
-            data += "}";
-            $.ajax({
-                url: 'saverecord',
-                type: 'post',
-                data: eval('(' + data + ')'),
-                success:function (json) {
-                    $('.front-inner').css({
-                        padding: '0px'
-                    });
-                    $('.panel').css({
-                        margin: '0px'
-                    });
-                    $('h1').css({
-                        'font-size': '20px'
-                    });
-                    $('h2').css({
-                        'font-size': '15px'
-                    });
-                    $('#column').css({
-                        width: '300px',
-                        height: '300px'
-                    });
-                    $('#spider').css({
-                        width: '300px',
-                        height: '300px'
-                    });
-                    chart1.reflow();
-                    chart2.reflow();
-                    window.print();
-                }
-            })
-
-            
+            $('.front-inner').css({
+                padding: '0px'
+            });
+            $('.panel').css({
+                margin: '0px'
+            });
+            $('h1').css({
+                'font-size': '20px'
+            });
+            $('h2').css({
+                'font-size': '15px'
+            });
+            $('#column').css({
+                width: '300px',
+                height: '300px'
+            });
+            $('#spider').css({
+                width: '300px',
+                height: '300px'
+            });
+            chart1.reflow();
+            chart2.reflow();
+            window.print();
         })
         $('#column').highcharts({
             chart: {

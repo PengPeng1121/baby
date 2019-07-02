@@ -25,7 +25,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo">
+        <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
         <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">育儿技能评估（0-3岁)</h1>
 
@@ -160,7 +160,7 @@
         </div>　
     </div>
     <footer class="footer-default noprint">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>

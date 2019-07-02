@@ -750,6 +750,9 @@
         if (value.indexOf('a') != -1) {
             for (var i = 1; i < 10; i++) {
                 prev = orderIndex - i ;
+                if (back < 0) {
+                    break
+                }
                 prevClass1 = $('.' + prev + '.a').attr('class');
                 prevClass2 = $('.' + prev + '.b').attr('class');
 
@@ -762,6 +765,9 @@
             }
             for (var j = 1; j < 10; j++) {
                 back = orderIndex + j ;
+                if (back > 132) {
+                    break
+                }
                 backClass1 = $('.' + back + '.a').attr('class');
                 backClass2 = $('.' + back + '.b').attr('class');
 
@@ -775,6 +781,9 @@
         } else {
             for (var i = 1; i < 10; i++) {
                 prev = orderIndex - i ;
+                if (back < 0) {
+                    break
+                }
                 prevClass1 = $('.' + prev + '.a').attr('class');
                 prevClass2 = $('.' + prev + '.b').attr('class');
 
@@ -787,6 +796,9 @@
             }
             for (var j = 1; j < 10; j++) {
                 back = orderIndex + j ;
+                if (back > 132) {
+                    break
+                }
                 backClass1 = $('.' + back + '.a').attr('class');
                 backClass2 = $('.' + back + '.b').attr('class');
 

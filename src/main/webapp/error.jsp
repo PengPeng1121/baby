@@ -17,14 +17,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                error
+                该测评未开通，请联系经销商010-83539579！
             </div>
         </div>
     </div>   
 
 
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2018)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
 </div>
 </body>

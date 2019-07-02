@@ -300,6 +300,112 @@
                         </tr>
                     </s:iterator>
 
+                    <s:iterator value="resultNeiList" var="resultNei">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           中国比内测验
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultNei.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultNei?id=<s:property value="#resultNei.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultGroupList" var="resultGroup">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           生长发育测验
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultGroup.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultGroup?id=<s:property value="#resultGroup.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+
+                    <s:iterator value="resultQiZhiList" var="resultQiZhi">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           气质测评
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultQiZhi.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultQiZhi?id=<s:property value="#resultQiZhi.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+                    <s:iterator value="resultFeelList" var="resultFeel">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           感觉统合能力
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultFeel.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultFeel?id=<s:property value="#resultFeel.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+
+
                     </tbody>
                 </table>
             </div>

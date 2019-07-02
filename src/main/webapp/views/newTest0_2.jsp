@@ -119,7 +119,7 @@
                                 <td>生活的丰富多样性</td>
                             </s:if>
                             <td>得分</td>
-                            <td>答题记录</td>
+                            <!-- <td>答题记录</td> -->
                         </tr>
 
                         <s:iterator value="questionMonthList" var="month" status="status">
@@ -133,11 +133,11 @@
                                             <input type="radio" name="<s:property value="#question.ordinal"/>" value="1" />A<br>
                                             <input type="radio" name="<s:property value="#question.ordinal"/>" value="0" />B<br>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">请选择答案</a>
                                             <input type="hidden" style="color:#000" id="reason<s:property value="#question.ordinal"/>" value="">
                                             <input type="hidden" style="color:#000" id="desc<s:property value="#question.ordinal"/>" value="">
-                                        </td>
+                                        </td> -->
                                     </tr>
                                 </s:if>
                             </s:iterator>
@@ -261,24 +261,24 @@
                     var data = "{";
 
                     //每个题的原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReason[i] = $("#reason" + (i + 1)).val()|| '';
-                    }
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     questionReason[i] = $("#reason" + (i + 1)).val()|| '';
+                    // }
 
-                    for(var i = 0; i < questionSum; i++) {
-                        if((questionReason[i] != null)&&(questionReason[i] != '')){
-                            data += "'result0_2.reason" + (i + 1) + "':'" + questionReason[i] + "',"
-                        }
-                    }
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     if((questionReason[i] != null)&&(questionReason[i] != '')){
+                    //         data += "'result0_2.reason" + (i + 1) + "':'" + questionReason[i] + "',"
+                    //     }
+                    // }
 
                     //每个题的详细原因
-                    for(var i = 0; i < questionSum; i++) {
-                        questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
-                    }
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     questionReasonDesc[i] = $("#desc" + (i + 1)).val() || '';
+                    // }
 
-                    for(var i = 0; i < questionSum; i++) {
-                        data += "'result0_2.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
-                    }
+                    // for(var i = 0; i < questionSum; i++) {
+                    //     data += "'result0_2.desc" + (i + 1) + "':'" + questionReasonDesc[i] + "',"
+                    // }
 
 
 

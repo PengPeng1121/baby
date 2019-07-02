@@ -101,27 +101,27 @@
                         <div class="item">社交行为</div>
                     </div>
                     <s:iterator value="questionMonthList" var="month" status="status">
-                    <div class="line" id="month<s:property value="#month"/>">
-                        <div class="item item-first" name="month<s:property value="#status.index"/>">
-                            <div style="padding: 20px;">
-                                <s:property value="#month"/>
+                        <div class="line" id="month<s:property value="#month"/>">
+                            <div class="item item-first" name="month<s:property value="#status.index"/>">
+                                <div style="padding: 20px;">
+                                    <s:property value="#month"/>
+                                </div>
                             </div>
-                        </div>
-                        <s:iterator value="questionTypeList" var="type">
-                            <div class="item">
-                            <s:iterator value="questionList" var="question">
-                                <s:if test="#question.month == #month && #question.type == #type">
-                                    <p>
-                                        <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>">
-                                        <label for="checkbox<s:property value="#question.ordinal"/>"><s:property value="#question.ordinal"/>、<s:property value="#question.description"/><br></label>
-                                        <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">不通过</a>
-                                        <input type="hidden" id="reason<s:property value="#question.ordinal"/>" value="">
-                                    </p>
-                                </s:if>
+                            <s:iterator value="questionTypeList" var="type">
+                                <div class="item">
+                                    <s:iterator value="questionList" var="question">
+                                        <s:if test="#question.month == #month && #question.type == #type">
+                                            <p>
+                                                <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>">
+                                                <label for="checkbox<s:property value="#question.ordinal"/>"><s:property value="#question.ordinal"/>、<s:property value="#question.description"/><br></label>
+                                                <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">不通过</a>
+                                                <input type="hidden" id="reason<s:property value="#question.ordinal"/>" value="">
+                                            </p>
+                                        </s:if>
+                                    </s:iterator>
+                                </div>
                             </s:iterator>
-                            </div>
-                        </s:iterator>
-                    </div>
+                        </div>
                     </s:iterator>
                     </tbody>
                 </div>
@@ -319,7 +319,7 @@
                         dq += questionScore[i];
                     }
                     dq /= questionTypeSum;
-                    var growth = ( dq / parseFloat($("#days").val()) ) * 100;
+                    var growth = ( dq / parseInt($("#days").val()) ) * 100;
                     data += "'result.dq':" + dq + ",";
                     data += "'result.growth':" + growth + ",";
                     data += "'result.babyid':" + $("#babyid").val() + "}";

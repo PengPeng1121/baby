@@ -543,7 +543,7 @@
         </form>
     </div>
     <footer class="footer-default">
-        <div class="text-center">Copyright © All Right Reserved by 睿为悦科技有限公司(2017)</div>
+        <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
 </div>
 <s:include value="/statics/tail.html"/>
