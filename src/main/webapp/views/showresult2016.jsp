@@ -66,6 +66,7 @@
             </div>
         </div>
         <input type="hidden" id="resultID" value="<s:property value="result2016.id"/>">
+        <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
@@ -364,6 +365,19 @@
         }, function(c){
             chart2 = c;
         });
+        var babyID = $('#babyID').val()
+        $.ajax({
+            url: 'getRemark',
+            type: 'post',
+            data: {
+                'babyID': babyID
+            }
+            success:function (json) {
+                console.log(json)
+            }
+        })
+
+
     });
 </script>
 </body>

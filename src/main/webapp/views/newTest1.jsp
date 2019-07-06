@@ -337,6 +337,9 @@
         }
     }
 
+
+    // res = [{type:1, desc: ''},{type:1, desc: 'asdfasdf'},{},]
+
 </script>
 </body>
 </html>
