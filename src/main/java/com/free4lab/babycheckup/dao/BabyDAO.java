@@ -82,13 +82,15 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultQiZhi result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
             }else if(testId==25){
                 queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultFeel result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==26){
+                queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family,Result2016 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyid";
             }else {
                 queryString= "SELECT DISTINCT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
             }
 
             if (hoid != 0) {
                 queryString += " AND baby.hoid = " + hoid;
-                if(testId==1){
+                if(testId==1 || testId==26 ){
                     queryString += " AND result.hoid = " + hoid;
                 }else if(testId!=0){
                     queryString += " AND result.hosId = " + hoid;

@@ -365,13 +365,13 @@
         }, function(c){
             chart2 = c;
         });
-        var babyID = $('#babyID').val()
+        var resultID = $('#resultID').val()
         $.ajax({
             url: 'getRemark',
             type: 'post',
             data: {
-                'babyID': babyID
-            }
+                'resultID': resultID
+            },
             success:function (json) {
                 console.log(json)
             }

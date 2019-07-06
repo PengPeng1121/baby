@@ -42,6 +42,7 @@ public class TestAction {
     private List<ResultGroup> resultGroupList = new ArrayList<ResultGroup>();
     private List<ResultQiZhi> resultQiZhiList = new ArrayList<ResultQiZhi>();
     private List<ResultFeel> resultFeelList = new ArrayList<ResultFeel>();
+    private List<Result2016> result2016List = new ArrayList<Result2016>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -57,6 +58,7 @@ public class TestAction {
     private Result50 result50;
     private ResultQiZhi resultQiZhi;
     private ResultCognize resultCognize;
+    private Result2016 result2016;
     private String days;
     private int day;
     //早产天数
@@ -80,6 +82,22 @@ public class TestAction {
         days = (differentdays(birth,today))/30+"";
         return SUCCESS;
     }
+
+    //0-6测评 2016版
+    public String newTest2016() {
+        if(!canTest(26)){
+            return "fail";
+        }
+        questionTypeList = QuestionManager.findTypeByTestid(26);
+        questionMonthList = QuestionManager.findMonthByTestid(26);
+        questionList = QuestionManager.findByTestid(26);
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30+"";
+        return SUCCESS;
+    }
+
 
     public String newTest3_6() {
         if(!canTest(2)){
@@ -248,6 +266,7 @@ public class TestAction {
         resultGroupList = ResultGroupManager.findResultBybid(babyid);
         resultQiZhiList = ResultQiZhiManager.findResultBybid(babyid);
         resultFeelList = ResultFeelManager.findResultBybid(babyid);
+        result2016List = ResultManager2016.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -264,6 +283,20 @@ public class TestAction {
         result.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
         result.setState("finished");
         ResultManager.saveResult(result);
+        return SUCCESS;
+    }
+
+    //0-6测评
+    public String saveResult2016(){
+        if(!subTestTimes(26)){
+            return "fail";
+        }
+        result2016.setHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        result2016.setUserid((Integer) ActionContext.getContext().getSession().get("userid"));
+        result2016.setTestid(26);
+        result2016.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        result2016.setState("finished");
+        ResultManager2016.saveResult(result2016);
         return SUCCESS;
     }
 
@@ -1236,5 +1269,21 @@ public class TestAction {
 
     public void setResultFeel(ResultFeel resultFeel) {
         this.resultFeel = resultFeel;
+    }
+
+    public List<Result2016> getResult2016List() {
+        return result2016List;
+    }
+
+    public void setResult2016List(List<Result2016> result2016List) {
+        this.result2016List = result2016List;
+    }
+
+    public Result2016 getResult2016() {
+        return result2016;
+    }
+
+    public void setResult2016(Result2016 result2016) {
+        this.result2016 = result2016;
     }
 }

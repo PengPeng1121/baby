@@ -27,6 +27,12 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--0-6岁测试（2016版）-->
+        <action name="newtest2016" method="newTest2016" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTest2016.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--小儿智能发育筛查测试-->
         <action name="newtestDDST" method="newTestDDST" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestDDST.jsp</result>
@@ -92,7 +98,10 @@
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
         </action>
-
+        <!--0-6岁结果 （2016版）-->
+        <action name="showreult2016" method="showResult2016" class="com.free4lab.babycheckup.action.ResultAction2016">
+            <result name="success" >views/showresult2016.jsp</result>
+        </action>
         <!--3-6岁结果-->
         <action name="showresult3_6" method="showResult3_6" class="com.free4lab.babycheckup.action.ResultAction3_6">
             <result name="success" >views/showresult3_6.jsp</result>
@@ -153,13 +162,25 @@
             <result name="fail">error.jsp</result>
         </action>
 
-
-        <action name="saveresult" method="saveResult" class="com.free4lab.babycheckup.action.TestAction">
+        <!-- 0-6 (2016)版 -->
+        <action name="saveresult2016" method="saveResult2016" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
-                <param name="includeProperties">result,result.id</param>
+                <param name="includeProperties">result2016,result2016.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
+
+        <!-- 0-6 (2016)版 指导语-->
+        <action name="getRemark" method="getRemark" class="com.free4lab.babycheckup.action.ResultAction2016">
+            <result type="json" name="success">
+                <param name="includeProperties">
+                    instructions\[\d+\]\.type,instructions\[\d+\]\.content
+                </param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+
         <!--3-6岁结果-->
         <action name="saveresult3_6" method="saveResult3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">

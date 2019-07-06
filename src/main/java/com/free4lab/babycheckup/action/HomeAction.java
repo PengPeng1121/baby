@@ -20,6 +20,7 @@ public class HomeAction {
     private long numberOfResultGroup;
     private long numberOfResultQiZhi;
     private long numberOfResultFeel;
+    private long numberOfResult2016;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -32,6 +33,7 @@ public class HomeAction {
     private Integer resultGroupLeftTimes;
     private Integer resultQiZhiLeftTimes;
     private Integer resultFeelLeftTimes;
+    private Integer result2016LeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -52,6 +54,7 @@ public class HomeAction {
         numberOfResultGroup = ResultGroupManager.countResultByHosIdAndTestId(hoid,23);
         numberOfResultQiZhi = ResultQiZhiManager.countResultByHosIdAndTestId(hoid,24);
         numberOfResultFeel = ResultFeelManager.countResultByHosIdAndTestId(hoid,25);
+        numberOfResult2016 = ResultManager2016.countResultByHosIdAndTestId(hoid,26);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -75,6 +78,7 @@ public class HomeAction {
             HospitalTestTimes timesGroup = HospitalTestTimesManager.findTimes(hoid,23);
             HospitalTestTimes timesQiZhi = HospitalTestTimesManager.findTimes(hoid,24);
             HospitalTestTimes timesFeel = HospitalTestTimesManager.findTimes(hoid,25);
+            HospitalTestTimes times2016 = HospitalTestTimesManager.findTimes(hoid,26);
             if(times0_6!=null){
                 result0_6LeftTimes=times0_6.getLeftTimes();
             }
@@ -110,6 +114,9 @@ public class HomeAction {
             }
             if(timesFeel!=null){
                 resultFeelLeftTimes=timesFeel.getLeftTimes();
+            }
+            if(times2016!=null){
+                result2016LeftTimes=times2016.getLeftTimes();
             }
         }
         return "success";
@@ -320,5 +327,21 @@ public class HomeAction {
 
     public void setResultFeelLeftTimes(Integer resultFeelLeftTimes) {
         this.resultFeelLeftTimes = resultFeelLeftTimes;
+    }
+
+    public long getNumberOfResult2016() {
+        return numberOfResult2016;
+    }
+
+    public void setNumberOfResult2016(long numberOfResult2016) {
+        this.numberOfResult2016 = numberOfResult2016;
+    }
+
+    public Integer getResult2016LeftTimes() {
+        return result2016LeftTimes;
+    }
+
+    public void setResult2016LeftTimes(Integer result2016LeftTimes) {
+        this.result2016LeftTimes = result2016LeftTimes;
     }
 }

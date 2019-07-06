@@ -13,12 +13,12 @@ import java.util.List;
  * Created by Administrator on 2018/3/18.
  */
 public class OrderInfoDAO extends AbstractDAO<OrderInfo> {
-    private static class BabySchemaDAOSingletonHolder {
+    private static class OrderInfoDAOSingletonHolder {
         static OrderInfoDAO instance = new OrderInfoDAO();
     }
 
     public static OrderInfoDAO getInstance() {
-        return OrderInfoDAO.BabySchemaDAOSingletonHolder.instance;
+        return OrderInfoDAO.OrderInfoDAOSingletonHolder.instance;
     }
 
     @Override
