@@ -179,12 +179,12 @@
             $('#failMessage' + ordinal).css("color","#337ab7");
             $('#checkbox' + ordinal).attr("value",0);
         }再次点击变回默认颜色*/
-        $.frontModal({
-            href: "modals/modal_question_reasons.jsp?reasons=" + reasons + "&qid="+ordinal,
-            title: "请选择不通过原因："
-        }).on('shown.bs.modal', function () {
-            $("#qid").val(ordinal);
-        });
+        // $.frontModal({
+        //     href: "modals/modal_question_reasons.jsp?reasons=" + reasons + "&qid="+ordinal,
+        //     title: "请选择不通过原因："
+        // }).on('shown.bs.modal', function () {
+        //     $("#qid").val(ordinal);
+        // });
     }
 
     var questionSum = $('#questionSum').val();

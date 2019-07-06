@@ -113,8 +113,12 @@
                                         <s:if test="#question.month == #month && #question.type == #type">
                                             <p>
                                                 <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>">
+
                                                 <label for="checkbox<s:property value="#question.ordinal"/>"><s:property value="#question.ordinal"/>、<s:property value="#question.description"/><br></label>
+
+
                                                 <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">不通过</a>
+                                                
                                                 <input type="hidden" id="reason<s:property value="#question.ordinal"/>" value="">
                                             </p>
                                         </s:if>
@@ -179,12 +183,12 @@
             $('#failMessage' + ordinal).css("color","#337ab7");
             $('#checkbox' + ordinal).attr("value",0);
         }再次点击变回默认颜色*/
-        $.frontModal({
-            href: "modals/modal_question_reasons.jsp?reasons=" + reasons + "&qid="+ordinal,
-            title: "请选择不通过原因："
-        }).on('shown.bs.modal', function () {
-            $("#qid").val(ordinal);
-        });
+        // $.frontModal({
+        //     href: "modals/modal_question_reasons.jsp?reasons=" + reasons + "&qid="+ordinal,
+        //     title: "请选择不通过原因："
+        // }).on('shown.bs.modal', function () {
+        //     $("#qid").val(ordinal);
+        // });
     }
 
     var questionSum = $('#questionSum').val();
@@ -325,7 +329,7 @@
                     data += "'result2016.babyid':" + $("#babyid").val() + "}";
 
                     $.ajax({
-                        url: 'saveresult',
+                        url: 'saveresult2016',
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
