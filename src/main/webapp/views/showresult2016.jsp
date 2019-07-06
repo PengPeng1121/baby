@@ -58,10 +58,14 @@
                         <td class="col-md-2">发育商DQ</td>
                         <td class="col-md-2" id="growth"></td>
                     </tr>
+                    <tr>
+                        <td class="col-md-2">分娩方式</td>
+                        <td class="col-md-2"><s:property value="baby.delivery"/></td>
+                    </tr>
                 </table>
             </div>
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="result.id"/>">
+        <input type="hidden" id="resultID" value="<s:property value="result2016.id"/>">
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center;">评定结果</div>
             <div class="panel-body front-no-padding">
@@ -79,11 +83,11 @@
                     <tbody>
                     <tr>
                         <td>智龄（月）</td>
-                        <td id="scoreSport"><s:property value="result.scoreSport"/></td>
-                        <td id="scoreAct"><s:property value="result.scoreAct"/></td>
-                        <td id="scoreAdapt"><s:property value="result.scoreAdapt"/></td>
-                        <td id="scoreLanguage"><s:property value="result.scoreLanguage"/></td>
-                        <td id="scoreSocial"><s:property value="result.scoreSocial"/></td>
+                        <td id="scoreSport"><s:property value="result2016.scoreSport"/></td>
+                        <td id="scoreAct"><s:property value="result2016.scoreAct"/></td>
+                        <td id="scoreAdapt"><s:property value="result2016.scoreAdapt"/></td>
+                        <td id="scoreLanguage"><s:property value="result2016.scoreLanguage"/></td>
+                        <td id="scoreSocial"><s:property value="result2016.scoreSocial"/></td>
                     </tr>
                     <tr>
                         <td>单项发育商（DQ）</td>
@@ -133,20 +137,20 @@
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
-    var dq_fix = <s:property value="result.dq"/>;
-    var growth_fix = <s:property value="result.growth"/>;
+    var dq_fix = <s:property value="result2016.dq"/>;
+    var growth_fix = <s:property value="result2016.growth"/>;
     $("#DQ").html(dq_fix.toFixed(1));
     $("#growth").html(growth_fix.toFixed(1));
     var a1 = 0;
-    a1 = <s:property value="result.scoreSport"/>;//智龄
+    a1 = <s:property value="result2016.scoreSport"/>;//智龄
     var a2 = 0;
-    a2 = <s:property value="result.scoreAct"/>;
+    a2 = <s:property value="result2016.scoreAct"/>;
     var a3 = 0;
-    a3 = <s:property value="result.scoreAdapt"/>;
+    a3 = <s:property value="result2016.scoreAdapt"/>;
     var a4 = 0;
-    a4 = <s:property value="result.scoreLanguage"/>;
+    a4 = <s:property value="result2016.scoreLanguage"/>;
     var a5 = 0;
-    a5 = <s:property value="result.scoreSocial"/>;
+    a5 = <s:property value="result2016.scoreSocial"/>;
     var b1 = 0;
     b1 = <s:property value="scoreSport"/>;//发育商
     var b2 = 0;
