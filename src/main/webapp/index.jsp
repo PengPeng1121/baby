@@ -67,6 +67,9 @@
                     </div>
                 </div>
             </div>
+
+            <input type="hidden" id="hoid" value="<s:property value="#session.hoid"/>">
+
             <div class="col-md-12" style="background-color: #FFF;margin-top: 20px">
                 <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
                     <div class="col-md-2" style="display: inline-block;padding-left: 0">
@@ -75,7 +78,7 @@
                 </div>
 
                 <!-- 0-6岁小儿神经心理发育检查表 -->
-                <div class="col-md-3">
+                <div class="col-md-3 old-test">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -100,6 +103,35 @@
                         </div>
                     </div>
                 </div>
+                
+
+                <!-- 0-6岁小儿神经心理发育检查表 2016-->
+                <div class="col-md-3 new-test">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">0-6岁小儿神经心理发育检查表(2016)</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult2016"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="result2016LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=26" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
@@ -458,6 +490,15 @@
 <s:include value="statics/tail.html"/>
 <script>
     $("#home").addClass("front-active");
+    var hoid = $("#hoid").val();
+    console.log(hoid)
+
+
+    if (hoid == 3) {
+        $('.old-test').hide();
+    } else {
+        $('.new-test').hide();
+    }
 </script>
 </body>
 </html>
