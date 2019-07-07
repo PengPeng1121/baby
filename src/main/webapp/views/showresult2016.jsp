@@ -119,6 +119,75 @@
             </tbody>
         </table>
 
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+            <tbody>
+                <tr>
+                    <td>
+                        大运动
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark1"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+            <tbody>
+                <tr>
+                    <td>
+                        精细运动
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+            <tbody>
+                <tr>
+                    <td>
+                        适应能力
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark3"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+            <tbody>
+                <tr>
+                    <td>
+                        语言
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark4"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+            <tbody>
+                <tr>
+                    <td>
+                        社交能力
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark5"></td>
+                </tr>
+            </tbody>
+        </table>
+
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
@@ -366,6 +435,12 @@
             chart2 = c;
         });
         var resultID = $('#resultID').val()
+        var instructions = [];
+        var str1 = '';
+        var str2 = '';
+        var str3 = '';
+        var str4 = '';
+        var str5 = '';
         $.ajax({
             url: 'getRemark',
             type: 'post',
@@ -373,7 +448,39 @@
                 'resultID': resultID
             },
             success:function (json) {
-                console.log(json)
+                instructions = json.instructions
+                item = {}
+                for (var i = 0, len = instructions.length; i < len ; i++) {
+                    item = instructions[i];
+                    switch (item['type']) {
+                        case 1:
+                            str1 += item['content'];
+                            str1 += '<br/>';
+                            break;
+                        case 2:
+                            str2 += item['content'];
+                            str2 += '<br/>';
+                            break;
+                        case 3:
+                            str3 += item['content'];
+                            str3 += '<br/>';
+                            break;
+                        case 4:
+                            str4 += item['content'];
+                            str4 += '<br/>';
+                            break;
+                        case 5:
+                            str5 += item['content'];
+                            str5 += '<br/>';
+                            break;
+                    } 
+                }
+                $('#remark1').html(str1)
+                $('#remark2').html(str2)
+                $('#remark3').html(str3)
+                $('#remark4').html(str4)
+                $('#remark5').html(str5)
+
             }
         })
 
