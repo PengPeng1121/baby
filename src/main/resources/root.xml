@@ -162,6 +162,14 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!-- 0-6  -->
+        <action name="saveresult" method="saveResult" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">result,result.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!-- 0-6 (2016)版 -->
         <action name="saveresult2016" method="saveResult2016" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
