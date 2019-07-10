@@ -113,8 +113,12 @@
                                         <s:if test="#question.month == #month && #question.type == #type">
                                             <p>
                                                 <input type="checkbox" id="checkbox<s:property value="#question.ordinal"/>" name="checkbox-<s:property value="#status.index"/>-<s:property value="#type"/>" value="<s:property value="#question.extend1"/>">
+
                                                 <label for="checkbox<s:property value="#question.ordinal"/>"><s:property value="#question.ordinal"/>、<s:property value="#question.description"/><br></label>
+
+
                                                 <a id="failMessage<s:property value="#question.ordinal"/>" href="javascript:void(0);" onclick="failReasons(<s:property value="#question.ordinal"/>, '<s:property value="#question.reasons"/>')">不通过</a>
+                                                
                                                 <input type="hidden" id="reason<s:property value="#question.ordinal"/>" value="">
                                             </p>
                                         </s:if>
@@ -274,7 +278,7 @@
             $(this).click(function(){
                 if(this.checked==true){
                     var id = this.id;
-                    var idNum = id.charAt(id.length-1);
+                    var idNum = id.split('checkbox')[1];
                     $("#failMessage" + idNum).css("color","#337ab7");
                 }
             });
@@ -336,9 +340,6 @@
             });
         }
     }
-
-
-    // res = [{type:1, desc: ''},{type:1, desc: 'asdfasdf'},{},]
 
 </script>
 </body>

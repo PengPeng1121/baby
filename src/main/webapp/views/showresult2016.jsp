@@ -25,42 +25,34 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
-        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">0-6岁小儿神经心理检查报告单</h1>
+        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/ruiweiyue.png" alt="Logo">
+        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hema.png" alt="Logo">
 
-        <div class="panel panel-default front-panel" id="info">
-            <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
+        <!-- <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">0-6岁小儿神经心理检查报告单</h1> -->
+
+        <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
+            <!-- <div class="panel-heading" style="text-align: center;">小儿基本资料</div> -->
             <div class="panel-body front-no-padding" style="padding: 15px;">
-                <table>
+                <table style="width: 100%">
                     <tbody>
                     <tr>
                         <td class="col-md-2">姓名</td>
                         <td class="col-md-2"><s:property value="baby.name"/></td>
-                        <td class="col-md-2"></td>
-                        <td class="col-md-2"></td>
                         <td class="col-md-2">性别</td>
                         <td class="col-md-2"><s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
-                    </tr>
-                    <tr>
                         <td class="col-md-2">出生日期</td>
                         <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-                        <td class="col-md-2"></td>
-                        <td class="col-md-2"></td>
+                    </tr>
+                    <tr>
                         <td class="col-md-2">检查日期</td>
                         <td class="col-md-2"><s:property value="stime"/></td>
-                    </tr>
-                    <tr>
                         <td class="col-md-2">智龄</td>
                         <td class="col-md-2" id="DQ"></td>
-                        <td class="col-md-2"></td>
-                        <td class="col-md-2"></td>
                         <td class="col-md-2">发育商DQ</td>
                         <td class="col-md-2" id="growth"></td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-2">分娩方式</td>
-                        <td class="col-md-2"><s:property value="baby.delivery"/></td>
+                        <!-- <td class="col-md-2">分娩方式</td>
+                        <td class="col-md-2"><s:property value="baby.delivery"/></td> -->
                     </tr>
                 </table>
             </div>
@@ -68,7 +60,7 @@
         <input type="hidden" id="resultID" value="<s:property value="result2016.id"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
         <div class="panel panel-default front-panel" id="allbaby">
-            <div class="panel-heading" style="text-align: center;">评定结果</div>
+            <!-- <div class="panel-heading" style="text-align: center;">评定结果</div> -->
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
                     <thead>
@@ -96,100 +88,61 @@
                         <td><s:property value="scoreAct"/></td>
                         <td><s:property value="scoreAdapt"/></td>
                         <td><s:property value="scoreLanguage"/></td>
-                        <td><s:property value="scoreSocial"/></td>
+                        <td id="last"><s:property value="scoreSocial"/></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+        <table class="table table-striped  table-bordered front-table">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果柱状图</td>
-                <td style="text-align:center;">评定结果网状图</td>
-            </tr>
-            <tr>
-                <td style="padding: 0px;width: 50%;">
-                    <div id="column"></div>
-                </td>
-                <td style="padding: 0px;width: 50%;">
-                    <div id="spider"></div>
+                <td style="padding: 0px;width: 100%;">
+                    <div id="column" style="height: 200px"></div>
                 </td>
             </tr>
             </tbody>
         </table>
 
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+        <table class="table table-striped  table-bordered front-table">
             <tbody>
                 <tr>
-                    <td>
+                    <td style="width: 50%">
                         大运动
                     </td>
-                </tr>
-                <tr>
-                    <td id="remark1"></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
-            <tbody>
-                <tr>
-                    <td>
+                    <td style="width: 50%">
                         精细运动
                     </td>
                 </tr>
                 <tr>
+                    <td id="remark1"></td>
                     <td id="remark2"></td>
                 </tr>
             </tbody>
         </table>
-
-
-
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+        <table class="table table-striped  table-bordered front-table">
             <tbody>
                 <tr>
-                    <td>
+                    <td style="width: 33%">
                         适应能力
                     </td>
-                </tr>
-                <tr>
-                    <td id="remark3"></td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
-            <tbody>
-                <tr>
-                    <td>
+                    <td style="width: 33%">
                         语言
                     </td>
-                </tr>
-                <tr>
-                    <td id="remark4"></td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
-            <tbody>
-                <tr>
-                    <td>
+                    <td style="width: 33%"> 
                         社交能力
                     </td>
                 </tr>
                 <tr>
+                    <td id="remark3"></td>
+                    <td id="remark4"></td>
                     <td id="remark5"></td>
                 </tr>
             </tbody>
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
+            <div class="panel-heading" style="text-align: left;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
             </div>
@@ -259,22 +212,39 @@
                 'font-size': '15px'
             });
             $('#column').css({
-                width: '300px',
-                height: '300px'
+                width: '720px',
+                height: '120px'
             });
-            $('#spider').css({
-                width: '300px',
-                height: '300px'
-            });
+            // $('#spider').css({
+            //     width: '300px',
+            //     height: '300px'
+            // });
             chart1.reflow();
-            chart2.reflow();
+            // chart2.reflow();
+            $('#hema').css({
+                'height': '60px',
+                'width': '360px'
+            })
+            $('#ruiweiyue').css({
+                'height': '60px',
+                'width': '60px'
+            })
+            $('#info').css({
+                'margin-top': '60px'
+            });
+            $('#last').css({
+                'border': '0px'
+            });
             window.print();
         })
         $('#column').highcharts({
             chart: {
-                type: 'column'
+                type: ''
             },
             credits: {
+                enabled: false
+            },
+            legend: {
                 enabled: false
             },
             title: {
@@ -289,24 +259,12 @@
                     '社交行为'
                 ]
             },
-            yAxis: [{
-                min: 0,
-                plotLines: [{
-                    color: 'blue',
-                    value: monthage,
-                    width: 2,
-                    /*label:{
-                     text:'实足年龄',
-                     align:'left'
-                     }*/
-                }],
+            yAxis: [ {
                 title: {
-                    text: '智龄'
-                }
-            }, {
-                title: {
-                    text: '发育商（DQ）'
+                    text: '发育商'
                 },
+                min: 50,
+                max: 150,
                 labels: {
                     useHTML: true,
                     formatter: function () {
@@ -326,18 +284,11 @@
                             return '<span style="color:green">' +
                                 this.value + '</span>';
                         }
-                        if(this.value == 0){
-                            return '<span style="color:#ddd">' +
-                                this.value + '</span>';
-                        }
                     }
                 },
-                tickPositions: [0, 70, 85, 115, 130],
+                tickPositions: [50, 70, 85, 115, 130],
                 opposite: true
             }],
-            legend: {
-                shadow: false
-            },
             tooltip: {
                 shared: true
             },
@@ -349,18 +300,12 @@
                 }
             },
             series: [{
-                name: '智龄',
-                color: '#004e90',
-                data: [a1, a2, a3, a4, a5],
-                pointPadding: 0.3,
-                pointPlacement: -0.2
-            }, {
                 name: '发育商',
-                color: '#ff9800',
+                color: '#000000',
                 data: [b1, b2, b3, b4, b5],
                 pointPadding: 0.3,
                 pointPlacement: 0.2,
-                yAxis: 1
+                yAxis: 0
             }]
         }, function(c){
             chart1 = c;

@@ -278,7 +278,7 @@
             $(this).click(function(){
                 if(this.checked==true){
                     var id = this.id;
-                    var idNum = id.charAt(id.length-1);
+                    var idNum = id.split('checkbox')[1];
                     $("#failMessage" + idNum).css("color","#337ab7");
                 }
             });
