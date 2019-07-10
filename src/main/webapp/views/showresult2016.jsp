@@ -199,6 +199,7 @@
         var chart1,
             chart2;
         $('.print').click(function(){
+            $("title").html('2019');
             $('.front-inner').css({
                 padding: '0px'
             });
