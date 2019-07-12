@@ -23,7 +23,7 @@
 </head>
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
-<div class="front-inner front-inner-media">
+<div class="front-inner front-inner-media pdf">
     <div class="container">
         <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/ruiweiyue.png" alt="Logo">
         <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hema.png" alt="Logo">
@@ -149,7 +149,10 @@
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
-            <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
+            <div >
+                <a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a>
+                <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
+            </div>
         </div>　
     </div>
     <footer class="footer-default noprint">
@@ -159,6 +162,8 @@
 <s:include value="/statics/tail.html"/>
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<script src="https://cdn.bootcss.com/jspdf/1.3.4/jspdf.debug.js"></script>
 <script type="text/javascript">
     var dq_fix = <s:property value="result2016.dq"/>;
     var growth_fix = <s:property value="result2016.growth"/>;
@@ -198,46 +203,95 @@
     $(function () {
         var chart1,
             chart2;
+        $.windowbox = { 
+            //定义一个方法aa 
+            redraw: function(){ 
+                $("title").html('2019');
+                $(".navbar").hide();
+                $('.front-inner').css({
+                    padding: '0px'
+                });
+                $('.panel').css({
+                    margin: '0px'
+                });
+                $('h1').css({
+                    'font-size': '20px'
+                });
+                $('h2').css({
+                    'font-size': '15px'
+                });
+                $('#column').css({
+                    width: '720px',
+                    height: '120px'
+                });
+                chart1.reflow();
+                $('#hema').css({
+                    'height': '60px',
+                    'width': '360px'
+                })
+                $('#ruiweiyue').css({
+                    'height': '60px',
+                    'width': '60px'
+                })
+                $('#info').css({
+                    'margin-top': '60px'
+                });
+                $('#last').css({
+                    'border': '0px'
+                });
+
+                window.scrollTo(0,0);
+            }
+        }  
         $('.print').click(function(){
-            $("title").html('2019');
-            $('.front-inner').css({
-                padding: '0px'
-            });
-            $('.panel').css({
-                margin: '0px'
-            });
-            $('h1').css({
-                'font-size': '20px'
-            });
-            $('h2').css({
-                'font-size': '15px'
-            });
-            $('#column').css({
-                width: '720px',
-                height: '120px'
-            });
-            // $('#spider').css({
-            //     width: '300px',
-            //     height: '300px'
-            // });
-            chart1.reflow();
-            // chart2.reflow();
-            $('#hema').css({
-                'height': '60px',
-                'width': '360px'
-            })
-            $('#ruiweiyue').css({
-                'height': '60px',
-                'width': '60px'
-            })
-            $('#info').css({
-                'margin-top': '60px'
-            });
-            $('#last').css({
-                'border': '0px'
-            });
+            $.windowbox.redraw();
             window.print();
         })
+
+        $('.download').click(function(){
+            $.windowbox.redraw();
+            var target = document.getElementsByClassName("pdf")[0];
+            target.style.background = "#FFFFFF";
+            html2canvas(target, {
+                onrendered:function(canvas) {
+                    var contentWidth = canvas.width;
+                    var contentHeight = canvas.height;
+
+                    //一页pdf显示html页面生成的canvas高度;
+                    var pageHeight = contentWidth / 592.28 * 841.89;
+                    //未生成pdf的html页面高度
+                    var leftHeight = contentHeight;
+                    //页面偏移
+                    var position = 0;
+                    //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+                    var imgWidth = 595.28;
+                    var imgHeight = 592.28/contentWidth * contentHeight;
+
+                    var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+                    var pdf = new jsPDF('', 'pt', 'a4');
+
+                    //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+                    //当内容未超过pdf一页显示的范围，无需分页
+                    if (leftHeight < pageHeight) {
+                        pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight );
+                    } else {
+                        while(leftHeight > 0) {
+                            pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+                            leftHeight -= pageHeight;
+                            position -= 841.89;
+                            //避免添加空白页
+                            if(leftHeight > 0) {
+                              pdf.addPage();
+                            }
+                        }
+                    }
+                    pdf.save("测评结果.pdf");
+                }
+            })
+        })
+
+
         $('#column').highcharts({
             chart: {
                 type: ''
