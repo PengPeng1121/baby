@@ -178,7 +178,7 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!-- 0-6 (2016)版 指导语-->
+        <!-- 0-6 版 指导语-->
         <action name="getRemark" method="getRemark" class="com.free4lab.babycheckup.action.ResultAction2016">
             <result type="json" name="success">
                 <param name="includeProperties">
@@ -188,6 +188,16 @@
             <result name="fail">error.jsp</result>
         </action>
 
+
+        <!-- 0-6 (2016)版 指导语-->
+        <action name="getRemarkHeMa" method="getRemarkHeMa" class="com.free4lab.babycheckup.action.ResultAction2016">
+            <result type="json" name="success">
+                <param name="includeProperties">
+                    instructions\[\d+\]\.type,instructions\[\d+\]\.content
+                </param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
 
         <!--3-6岁结果-->
         <action name="saveresult3_6" method="saveResult3_6" class="com.free4lab.babycheckup.action.TestAction">

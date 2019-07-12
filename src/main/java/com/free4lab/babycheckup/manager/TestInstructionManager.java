@@ -14,7 +14,7 @@ public class TestInstructionManager {
     private static TestInstructionDAO getTestInstructionConfigDAOInstance() {
         return TestInstructionDAO.getInstance();
     }
-    public static List<TestInstruction> findInstructionByHospitalId(Integer hospitalId,Integer monthAge){
+    public static List<TestInstruction> findInstructionByTestIdAndMonthAge(Integer testId,Integer monthAge){
         if(monthAge>12){
             if(monthAge<15){
                 monthAge = 12;
@@ -46,7 +46,7 @@ public class TestInstructionManager {
                 monthAge = 84;
             }
         }
-        return getTestInstructionConfigDAOInstance().findInstructionByHospitalId(hospitalId,monthAge);
+        return getTestInstructionConfigDAOInstance().findInstructionByTestIdAndMonthAge(testId,monthAge);
     }
 
 }

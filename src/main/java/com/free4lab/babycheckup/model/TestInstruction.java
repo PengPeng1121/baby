@@ -13,14 +13,6 @@ public class TestInstruction {
     /**
      * 医院id
      */
-    private Integer hospitalId;
-    /**
-     * 医院名称
-     */
-    private String hospitalName;
-    /**
-     * 医院id
-     */
     private Integer testId;
     /**
      * 医院名称
@@ -66,26 +58,6 @@ public class TestInstruction {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "hospital_id", nullable = false)
-    public Integer getHospitalId() {
-        return hospitalId;
-    }
-
-    public void setHospitalId(Integer hospitalId) {
-        this.hospitalId = hospitalId;
-    }
-
-    @Basic
-    @Column(name = "hospital_name", nullable = false)
-    public String getHospitalName() {
-        return hospitalName;
-    }
-
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
     }
 
     @Basic

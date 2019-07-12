@@ -37,8 +37,8 @@ public class TestInstructionDAO extends AbstractDAO<TestInstruction> {
     }
 
 
-    public List<TestInstruction> findInstructionByHospitalId(Integer hospitalId,Integer monthAge){
-        List<TestInstruction> list = findByProperty2("hospitalId",hospitalId,"monthAge",monthAge);
+    public List<TestInstruction> findInstructionByTestIdAndMonthAge(Integer testId,Integer monthAge){
+        List<TestInstruction> list = findByProperty2("testId",testId,"monthAge",monthAge);
        return list;
     }
 }

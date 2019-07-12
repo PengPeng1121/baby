@@ -21,11 +21,11 @@ public class ResultAction2016 {
     private String SUCCESS = "success";
     private Double monthage;
     private String stime;//检查日期
-    private Double scoreSport;
-    private Double scoreAct;
-    private Double scoreAdapt;
-    private Double scoreLanguage;
-    private Double scoreSocial;
+    private Long scoreSport;
+    private Long scoreAct;
+    private Long scoreAdapt;
+    private Long scoreLanguage;
+    private Long scoreSocial;
     private Hospital hospital;
     private TestResultRecord resultRecord;
     private List<TestInstruction> instructions;
@@ -38,11 +38,11 @@ public class ResultAction2016 {
         Date d2 = Date.valueOf(stime);
         monthage = diffDays(d1,d2);
         //这是算法  是不是很吊
-        scoreAdapt = result2016.getScoreAdapt()*100/monthage;
-        scoreLanguage = result2016.getScoreLanguage()*100/monthage;
-        scoreSocial = result2016.getScoreSocial()*100/monthage;
-        scoreSport = result2016.getScoreSport()*100/monthage;
-        scoreAct = result2016.getScoreAct()*100/monthage;
+        scoreAdapt = Math.round(result2016.getScoreAdapt()*100/monthage);
+        scoreLanguage = Math.round(result2016.getScoreLanguage()*100/monthage);
+        scoreSocial = Math.round(result2016.getScoreSocial()*100/monthage);
+        scoreSport = Math.round(result2016.getScoreSport()*100/monthage);
+        scoreAct = Math.round(result2016.getScoreAct()*100/monthage);
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         resultRecord = TestResultRecordManager.find(1,id);
         if(resultRecord == null){
@@ -92,7 +92,20 @@ public class ResultAction2016 {
         Date d2 = Date.valueOf(stime);
         monthage = diffDays(d1,d2);
         Integer monthAge = monthage.intValue();
-        instructions = TestInstructionManager.findInstructionByHospitalId((Integer) ActionContext.getContext().getSession().get("hoid"),monthAge);
+        instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(1,monthAge);
+        return SUCCESS;
+    }
+
+    //获得指导语
+    public String getRemarkHeMa(){
+        result2016 = ResultManager2016.findResultByid(resultID);
+        stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
+        baby = BabyManager.findById(result2016.getBabyid());
+        Date d1 = baby.getBirthday();
+        Date d2 = Date.valueOf(stime);
+        monthage = diffDays(d1,d2);
+        Integer monthAge = monthage.intValue();
+        instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(26,monthAge);
         return SUCCESS;
     }
 
@@ -149,43 +162,43 @@ public class ResultAction2016 {
         this.monthage = monthage;
     }
 
-    public Double getScoreSport() {
+    public Long getScoreSport() {
         return scoreSport;
     }
 
-    public void setScoreSport(Double scoreSport) {
+    public void setScoreSport(Long scoreSport) {
         this.scoreSport = scoreSport;
     }
 
-    public Double getScoreAct() {
+    public Long getScoreAct() {
         return scoreAct;
     }
 
-    public void setScoreAct(Double scoreAct) {
+    public void setScoreAct(Long scoreAct) {
         this.scoreAct = scoreAct;
     }
 
-    public Double getScoreAdapt() {
+    public Long getScoreAdapt() {
         return scoreAdapt;
     }
 
-    public void setScoreAdapt(Double scoreAdapt) {
+    public void setScoreAdapt(Long scoreAdapt) {
         this.scoreAdapt = scoreAdapt;
     }
 
-    public Double getScoreLanguage() {
+    public Long getScoreLanguage() {
         return scoreLanguage;
     }
 
-    public void setScoreLanguage(Double scoreLanguage) {
+    public void setScoreLanguage(Long scoreLanguage) {
         this.scoreLanguage = scoreLanguage;
     }
 
-    public Double getScoreSocial() {
+    public Long getScoreSocial() {
         return scoreSocial;
     }
 
-    public void setScoreSocial(Double scoreSocial) {
+    public void setScoreSocial(Long scoreSocial) {
         this.scoreSocial = scoreSocial;
     }
 
