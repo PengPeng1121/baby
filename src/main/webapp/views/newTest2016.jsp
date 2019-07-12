@@ -324,6 +324,10 @@
                     }
                     dq /= questionTypeSum;
                     var growth = ( dq / parseInt($("#days").val()) ) * 100;
+
+                    dq = Math.round(dq)
+                    growth = Math.round(growth)
+
                     data += "'result2016.dq':" + dq + ",";
                     data += "'result2016.growth':" + growth + ",";
                     data += "'result2016.babyid':" + $("#babyid").val() + "}";

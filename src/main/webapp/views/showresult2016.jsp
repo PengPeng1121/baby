@@ -144,7 +144,7 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: left;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
@@ -167,8 +167,8 @@
 <script type="text/javascript">
     var dq_fix = <s:property value="result2016.dq"/>;
     var growth_fix = <s:property value="result2016.growth"/>;
-    $("#DQ").html(dq_fix.toFixed(1));
-    $("#growth").html(growth_fix.toFixed(1));
+    $("#DQ").html(dq_fix);
+    $("#growth").html(growth_fix);
     var a1 = 0;
     a1 = <s:property value="result2016.scoreSport"/>;//智龄
     var a2 = 0;
@@ -480,6 +480,37 @@
                 $('#remark3').html(str3)
                 $('#remark4').html(str4)
                 $('#remark5').html(str5)
+
+            }
+        })
+        str6 = "语言、社交、适应能力:"
+        str7 = "运动发育:"
+        // 宋佳医生建议
+        $.ajax({
+            url: 'getRemarkHeMa',
+            type: 'post',
+            data: {
+                'resultID': resultID
+            },
+            success:function (json) {
+                instructions = json.instructions
+                item = {}
+                for (var i = 0, len = instructions.length; i < len ; i++) {
+                    item = instructions[i];
+                    switch (item['type']) {
+                        case 6:
+                            
+                            str6 += '<br/>';
+                            str6 += item['content'];
+                            break;
+                        case 7:
+                            
+                            str7 += '<br/>';
+                            str7 += item['content'];
+                            break;
+                    } 
+                }
+                $('#doctorRemark').html(str6 + '<br/>' + str7)
 
             }
         })
