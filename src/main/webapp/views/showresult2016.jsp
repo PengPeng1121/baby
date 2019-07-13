@@ -12,6 +12,9 @@
                 display: none
             }
         }
+        #remark1, #remark2, #remark3, #remark4, #remark5, #doctorRemark{
+            font-size: 10px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -62,7 +65,7 @@
         <div class="panel panel-default front-panel" id="allbaby">
             <!-- <div class="panel-heading" style="text-align: center;">评定结果</div> -->
             <div class="panel-body front-no-padding">
-                <table class="table table-striped front-table">
+                <table class="table table-striped table-bordered front-table">
                     <thead>
                     <tr>
                         <th class="col-md-2">测试项目</th>
@@ -107,48 +110,39 @@
         <table class="table table-striped  table-bordered front-table">
             <tbody>
                 <tr>
-                    <td style="width: 50%">
+                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
                         大运动
                     </td>
-                    <td style="width: 50%">
+                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
                         精细运动
+                    </td>
+                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                        适应能力
+                    </td>
+                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                        语言
+                    </td>
+                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;"> 
+                        社交能力
                     </td>
                 </tr>
                 <tr>
                     <td id="remark1"></td>
                     <td id="remark2"></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-striped  table-bordered front-table">
-            <tbody>
-                <tr>
-                    <td style="width: 33%">
-                        适应能力
-                    </td>
-                    <td style="width: 33%">
-                        语言
-                    </td>
-                    <td style="width: 33%"> 
-                        社交能力
-                    </td>
-                </tr>
-                <tr>
                     <td id="remark3"></td>
                     <td id="remark4"></td>
                     <td id="remark5"></td>
                 </tr>
             </tbody>
         </table>
-
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading" style="text-align: left;">医师评价及建议</div>
+            <div class="panel-heading" style="text-align: left; padding: 5px 8px; font-weight: bold;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="10" style="border: 0;width: 100%;height: 100%"></textarea>
             </div>
         </div>
         <div style="width:270px;float: right">
-            <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
+            <div ><p style="margin-top: 20px;font-size: 16px;">测评者： _______________</p></div>
             <div >
                 <a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a>
                 <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
@@ -222,7 +216,7 @@
                 });
                 $('#column').css({
                     width: '720px',
-                    height: '120px'
+                    height: '180px'
                 });
                 chart1.reflow();
                 $('#hema').css({
@@ -241,6 +235,21 @@
                 });
 
                 window.scrollTo(0,0);
+            },
+            funcDownload: function(content, filename) {
+                $.windowbox.redraw();
+                // 创建隐藏的可下载链接
+                var eleLink = document.createElement('a');
+                eleLink.download = filename;
+                eleLink.style.display = 'none';
+                // 字符内容转变成blob地址
+                var blob = new Blob([content]);
+                eleLink.href = URL.createObjectURL(blob);
+                // 触发点击
+                document.body.appendChild(eleLink);
+                eleLink.click();
+                // 然后移除
+                document.body.removeChild(eleLink);
             }
         }  
         $('.print').click(function(){
@@ -248,47 +257,52 @@
             window.print();
         })
 
+        // $('.download').click(function(){
+        //     $.windowbox.redraw();
+        //     var target = document.getElementsByClassName("pdf")[0];
+        //     target.style.background = "#FFFFFF";
+        //     html2canvas(target, {
+        //         onrendered:function(canvas) {
+        //             var contentWidth = canvas.width;
+        //             var contentHeight = canvas.height;
+
+        //             //一页pdf显示html页面生成的canvas高度;
+        //             var pageHeight = contentWidth / 592.28 * 841.89;
+        //             //未生成pdf的html页面高度
+        //             var leftHeight = contentHeight;
+        //             //页面偏移
+        //             var position = 0;
+        //             //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+        //             var imgWidth = 595.28;
+        //             var imgHeight = 592.28/contentWidth * contentHeight;
+
+        //             var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+        //             var pdf = new jsPDF('', 'pt', 'a4');
+
+        //             //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+        //             //当内容未超过pdf一页显示的范围，无需分页
+        //             if (leftHeight < pageHeight) {
+        //                 pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight );
+        //             } else {
+        //                 while(leftHeight > 0) {
+        //                     pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+        //                     leftHeight -= pageHeight;
+        //                     position -= 841.89;
+        //                     //避免添加空白页
+        //                     if(leftHeight > 0) {
+        //                       pdf.addPage();
+        //                     }
+        //                 }
+        //             }
+        //             pdf.save("测评结果.pdf");
+        //         }
+        //     })
+        // })
+
         $('.download').click(function(){
-            $.windowbox.redraw();
-            var target = document.getElementsByClassName("pdf")[0];
-            target.style.background = "#FFFFFF";
-            html2canvas(target, {
-                onrendered:function(canvas) {
-                    var contentWidth = canvas.width;
-                    var contentHeight = canvas.height;
-
-                    //一页pdf显示html页面生成的canvas高度;
-                    var pageHeight = contentWidth / 592.28 * 841.89;
-                    //未生成pdf的html页面高度
-                    var leftHeight = contentHeight;
-                    //页面偏移
-                    var position = 0;
-                    //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
-                    var imgWidth = 595.28;
-                    var imgHeight = 592.28/contentWidth * contentHeight;
-
-                    var pageData = canvas.toDataURL('image/jpeg', 1.0);
-
-                    var pdf = new jsPDF('', 'pt', 'a4');
-
-                    //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
-                    //当内容未超过pdf一页显示的范围，无需分页
-                    if (leftHeight < pageHeight) {
-                        pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight );
-                    } else {
-                        while(leftHeight > 0) {
-                            pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
-                            leftHeight -= pageHeight;
-                            position -= 841.89;
-                            //避免添加空白页
-                            if(leftHeight > 0) {
-                              pdf.addPage();
-                            }
-                        }
-                    }
-                    pdf.save("测评结果.pdf");
-                }
-            })
+            var ss = document.querySelector('html').outerHTML;
+            $.windowbox.funcDownload(ss, 'ceshi.html')
         })
 
 
@@ -318,8 +332,8 @@
                 title: {
                     text: '发育商'
                 },
-                min: 50,
-                max: 150,
+                min: 60,
+                max: 200,
                 labels: {
                     useHTML: true,
                     formatter: function () {
@@ -327,21 +341,25 @@
                             return '<span style="color:red">' +
                                 this.value + '</span>';
                         }
-                        if(this.value == 85){
+                        if(this.value == 80){
                             return '<span style="color:orange;">' +
                                 this.value + '</span>';
                         }
-                        if(this.value == 115){
-                            return '<span style="color:blue">' +
+                        if(this.value == 110){
+                            return '<span style="color:#5029c8">' +
                                 this.value + '</span>';
                         }
                         if(this.value == 130){
+                            return '<span style="color:blue">' +
+                                this.value + '</span>';
+                        }
+                        if(this.value == 180){
                             return '<span style="color:green">' +
                                 this.value + '</span>';
                         }
                     }
                 },
-                tickPositions: [50, 70, 85, 115, 130],
+                tickPositions: [50, 70, 80, 110, 130, 180],
                 opposite: true
             }],
             tooltip: {
@@ -500,17 +518,19 @@
                     switch (item['type']) {
                         case 6:
                             
-                            str6 += '<br/>';
+                            str6 += '\n';
+                            str6 += '&nbsp;&nbsp;';
                             str6 += item['content'];
                             break;
                         case 7:
                             
-                            str7 += '<br/>';
+                            str7 += '\n';
+                            str7 += '&nbsp;&nbsp;';
                             str7 += item['content'];
                             break;
                     } 
                 }
-                $('#doctorRemark').html(str6 + '<br/>' + str7)
+                $('#doctorRemark').html(str6 + '\n' + str7)
 
             }
         })
