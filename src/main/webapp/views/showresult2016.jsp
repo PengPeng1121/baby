@@ -28,7 +28,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media pdf">
     <div class="container">
-        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/ruiweiyue.png" alt="Logo">
+        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
         <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hema.png" alt="Logo">
 
         <!-- <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
@@ -138,13 +138,14 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: left; padding: 5px 8px; font-weight: bold;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark" rows="10" style="border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="10" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <div id="doctorRemarkText" style="display: none;"></div>
             </div>
         </div>
         <div style="width:270px;float: right">
             <div ><p style="margin-top: 20px;font-size: 16px;">测评者： _______________</p></div>
             <div >
-                <a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a>
+                <a type="button" class="btn btn-primary noprint pull-right print" style="margin:20px 10px 20px 0px;">打印结果</a>
                 <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
             </div>
         </div>　
@@ -233,7 +234,12 @@
                 $('#last').css({
                     'border': '0px'
                 });
-
+                var remark = $('#doctorRemark').val();
+                var realRemark = '';
+                realRemark = remark.replace(/\n/g, "<br/>");
+                $('#doctorRemarkText').html(realRemark);
+                $('#doctorRemarkText').show();
+                $('#doctorRemark').hide();
                 window.scrollTo(0,0);
             },
             funcDownload: function(content, filename) {
