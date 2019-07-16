@@ -8,7 +8,7 @@
     <s:include value="/statics/head.html"/>
     <style>
         @media print {
-            input, .noprint {
+            .noprint {
                 display: none
             }
         }
@@ -274,12 +274,13 @@
             var remark = $('#doctorRemarkText').html() + '';
             var data = "{";
             data += "'resultRecord.testerName':" + testerName + ",";
-            data += "'resultRecord.resultID':" + resultID + ",";
-            data += "'resultRecord.remark':" + remark + "}";
+            data += "'resultRecord.resultID':" + resultID + "}";
+            data = eval('(' + data + ')');
+            data['resultRecord.remark'] = remark;
             $.ajax({
                 url: 'saveRecord2016',
                 type: 'post',
-                data: eval('(' + data + ')'),
+                data: data,
                 success:function (json) {
                      window.print();
                 }
