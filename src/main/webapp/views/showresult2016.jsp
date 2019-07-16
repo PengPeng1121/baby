@@ -535,7 +535,7 @@
 
                 var testerNameOld = $("#testerNameOld").val();
                 if (testerNameOld && testerNameOld!= 'null') {
-                    $('#testerName').html(testerNameOld);
+                    $('#testerName').val(testerNameOld);
                 }
                 clearInterval(inter);
             }
