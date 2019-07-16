@@ -60,7 +60,10 @@
                 </table>
             </div>
         </div>
+
         <input type="hidden" id="resultID" value="<s:property value="result2016.id"/>">
+        <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
+        <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
         <div class="panel panel-default front-panel" id="allbaby">
             <!-- <div class="panel-heading" style="text-align: center;">评定结果</div> -->
@@ -143,7 +146,7 @@
             </div>
         </div>
         <div style="width:270px;float: right">
-            <div ><p style="margin-top: 20px;font-size: 16px;">测评者： _______________</p></div>
+            <div ><p style="margin-top: 20px;font-size: 16px;">测评者： <input  id="testerName"/> </p></div>
             <div >
                 <a type="button" class="btn btn-primary noprint pull-right print" style="margin:20px 10px 20px 0px;">打印结果</a>
                 <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
@@ -195,7 +198,12 @@
     } else if (max < 200) {
         max = 200;
     }
+
+
+
+
     $(function () {
+        window.flag = 0;
         var chart1,
             chart2;
         $.windowbox = { 
@@ -259,52 +267,25 @@
             }
         }  
         $('.print').click(function(){
+            // 保存评价
             $.windowbox.redraw();
-            window.print();
+            var  resultRecord = {};
+            var testerName = $("#testerName").val();
+            var remark = $('#doctorRemarkText').html();
+            var data = "{";
+            data += "'resultRecord.testerName':" + testerName + ",";
+            data += "'resultRecord.remark':" + remark + "}";
+            $.ajax({
+                url: 'saveRecord2016',
+                type: 'post',
+                data: eval('(' + data + ')'),
+                success:function (json) {
+                     window.print();
+                }
+            })
         })
 
-        // $('.download').click(function(){
-        //     $.windowbox.redraw();
-        //     var target = document.getElementsByClassName("pdf")[0];
-        //     target.style.background = "#FFFFFF";
-        //     html2canvas(target, {
-        //         onrendered:function(canvas) {
-        //             var contentWidth = canvas.width;
-        //             var contentHeight = canvas.height;
 
-        //             //一页pdf显示html页面生成的canvas高度;
-        //             var pageHeight = contentWidth / 592.28 * 841.89;
-        //             //未生成pdf的html页面高度
-        //             var leftHeight = contentHeight;
-        //             //页面偏移
-        //             var position = 0;
-        //             //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
-        //             var imgWidth = 595.28;
-        //             var imgHeight = 592.28/contentWidth * contentHeight;
-
-        //             var pageData = canvas.toDataURL('image/jpeg', 1.0);
-
-        //             var pdf = new jsPDF('', 'pt', 'a4');
-
-        //             //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
-        //             //当内容未超过pdf一页显示的范围，无需分页
-        //             if (leftHeight < pageHeight) {
-        //                 pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight );
-        //             } else {
-        //                 while(leftHeight > 0) {
-        //                     pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
-        //                     leftHeight -= pageHeight;
-        //                     position -= 841.89;
-        //                     //避免添加空白页
-        //                     if(leftHeight > 0) {
-        //                       pdf.addPage();
-        //                     }
-        //                 }
-        //             }
-        //             pdf.save("测评结果.pdf");
-        //         }
-        //     })
-        // })
 
         $('.download').click(function(){
             var ss = document.querySelector('html').outerHTML;
@@ -504,6 +485,7 @@
                 $('#remark3').html(str3)
                 $('#remark4').html(str4)
                 $('#remark5').html(str5)
+                window.flag += 1
 
             }
         })
@@ -537,9 +519,25 @@
                     } 
                 }
                 $('#doctorRemark').html(str6 + '\n' + str7)
-
+                window.flag += 1
             }
         })
+
+
+        var inter = setInterval(function() {
+            if (window.flag === 2) {
+                var remarkOld = $("#remarkOld").val();
+                if (remarkOld && remarkOld!= 'null') {
+                    $('#doctorRemark').html(remarkOld);
+                }
+
+                var testerNameOld = $("#testerNameOld").val();
+                if (testerNameOld && testerNameOld!= 'null') {
+                    $('#testerName').html(testerNameOld);
+                }
+                clearInterval(inter);
+            }
+        }, 200)
 
 
     });
