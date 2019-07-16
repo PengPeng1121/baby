@@ -271,9 +271,10 @@
             $.windowbox.redraw();
             var  resultRecord = {};
             var testerName = $("#testerName").val();
-            var remark = $('#doctorRemarkText').html();
+            var remark = $('#doctorRemarkText').html() + '';
             var data = "{";
             data += "'resultRecord.testerName':" + testerName + ",";
+            data += "'resultRecord.resultID':" + resultID + ",";
             data += "'resultRecord.remark':" + remark + "}";
             $.ajax({
                 url: 'saveRecord2016',

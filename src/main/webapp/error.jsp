@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                该测评未开通，请联系经销商010-83539579！
+                该测评未开通，请联系经销商15142070576！
             </div>
         </div>
     </div>   
