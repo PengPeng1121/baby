@@ -44,7 +44,10 @@
                     <label class="col-md-3 control-label front-label">检查日期</label>
                     <label class="col-md-3 control-label front-label"><%=new SimpleDateFormat("yyyy-MM-dd").format(new Date())%></label>
                 </div>
+                <button class="btn btn-default pull-right" onclick="editbaby(<s:property value="baby.babyid" />)"><span class="glyphicon glyphicon-plus"></span> 编辑病例</button>
+
                 <button class="btn btn-default pull-right" onclick="selecttest(<s:property value="baby.babyid" />,<s:property value="days" />)"><span class="glyphicon glyphicon-plus"></span> 新建测评</button>
+
             </div>
         </div>
         <div class="panel panel-default front-panel" id="test">
@@ -451,6 +454,13 @@
             $("#babyid").val(bid);
         }).on('hide.bs.modal', function (){window.location.href = 'home';});
     }
+
+
+    function editbaby(bid){
+        window.location = "editbabyinfo?babyid=" + bid;
+    }
+
+
 
 </script>
 </body>
