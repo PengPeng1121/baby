@@ -457,7 +457,7 @@
 
 
     function editbaby(bid){
-        window.location = "editbabyinfo?babyid=" + bid;
+        window.location = "record/editbabyinfo?babyid=" + bid;
     }
 
 
