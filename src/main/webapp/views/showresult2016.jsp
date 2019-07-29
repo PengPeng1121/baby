@@ -468,11 +468,11 @@
                             str2 += item['content'];
                             str2 += '<br/>';
                             break;
-                        case 3:
+                        case 4:
                             str3 += item['content'];
                             str3 += '<br/>';
                             break;
-                        case 4:
+                        case 3:
                             str4 += item['content'];
                             str4 += '<br/>';
                             break;
@@ -530,6 +530,8 @@
             if (window.flag === 2) {
                 var remarkOld = $("#remarkOld").val();
                 if (remarkOld && remarkOld!= 'null') {
+                    var reg = new RegExp("<br>","g");//g,表示全部替换。
+                    remarkOld = remarkOld.replace(reg,"\n");
                     $('#doctorRemark').html(remarkOld);
                 }
 
