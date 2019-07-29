@@ -14,6 +14,19 @@
                 <param name="includeProperties">baby,babyid,father_birth,mother_birth,frontalSuture1,frontalSuture2</param>
             </result>
         </action>
+
+        <!-- 跳转到婴儿编辑页面 -->
+        <action name="editbabyinfo" method="editBabyInfo" class="com.free4lab.babycheckup.action.BabyAction">
+            <result name="success">/views/editbabyinfo.jsp</result>
+        </action>
+
+        <!-- 获取婴儿信息 -->
+        <action name="getBaby" method="getBabyById" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="root">dataMap</param>
+            </result>
+        </action>
+
         <action name="searchBaby" class="com.free4lab.babycheckup.action.BabyAction" method="searchBaby">
             <result name="success">/template/search_baby.jsp</result>
         </action>

@@ -199,6 +199,15 @@
             <result name="fail">error.jsp</result>
         </action>
 
+
+        <!--2016的测评医生评价-->
+        <action name="saveRecord2016" method="saveRecord" class="com.free4lab.babycheckup.action.ResultAction2016">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--3-6岁结果-->
         <action name="saveresult3_6" method="saveResult3_6" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">

@@ -10,12 +10,9 @@ import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 
 import java.text.ParsePosition;
-import java.util.Date;
+import java.util.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/6/26.
@@ -24,7 +21,8 @@ public class BabyAction {
 
     private List<User> userlist = new ArrayList<User>();
     private BabySchema bs = new BabySchema();
-
+    //返回的数组
+    private Map<String,Object> dataMap;
 
     private Baby baby;
     private String birthday;
@@ -32,6 +30,7 @@ public class BabyAction {
     private Parent mother;
     private String father_birth;
     private String mother_birth;
+    private String baby_birth;
     private String frontalSuture1;
     private String frontalSuture2;
     private int babyid;
@@ -142,6 +141,43 @@ public class BabyAction {
         return "success";
     }
 
+    public String getBabyById(){
+        baby = BabyManager.findById(babyid);
+        if(baby != null){
+            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd ");
+            if(baby.getFather().getBirth()!=null){
+                father_birth = simpleDateFormat.format(baby.getFather().getBirth());
+            }
+            if(baby.getMother().getBirth()!=null){
+                mother_birth = simpleDateFormat.format(baby.getMother().getBirth());
+            }
+            if(baby.getBirthday()!=null){
+                baby_birth = simpleDateFormat.format(baby.getBirthday());
+            }
+        }
+
+        dataMap = new HashMap<String, Object>();
+        dataMap.put("baby", baby);
+        dataMap.put("baby_birth", baby_birth);
+        dataMap.put("father_birth", father_birth);
+        dataMap.put("mother_birth", mother_birth);
+
+        return "success";
+    }
+
+    public String editBabyInfo(){
+        baby = BabyManager.findById(babyid);
+        if(baby != null){
+            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd ");
+            if(baby.getFather().getBirth()!=null){
+                father_birth = simpleDateFormat.format(baby.getFather().getBirth());
+            }
+            if(baby.getMother().getBirth()!=null){
+                mother_birth = simpleDateFormat.format(baby.getMother().getBirth());
+            }
+        }
+        return "success";
+    }
 
     public String testMonthage(){
         baby = BabyManager.findById(babyid);
@@ -458,5 +494,21 @@ public class BabyAction {
 
     public void setTestId(Integer testId) {
         this.testId = testId;
+    }
+
+    public Map<String, Object> getDataMap() {
+        return dataMap;
+    }
+
+    public void setDataMap(Map<String, Object> dataMap) {
+        this.dataMap = dataMap;
+    }
+
+    public String getBaby_birth() {
+        return baby_birth;
+    }
+
+    public void setBaby_birth(String baby_birth) {
+        this.baby_birth = baby_birth;
     }
 }

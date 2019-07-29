@@ -15,6 +15,7 @@ import com.pp.common.constant.util.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -94,7 +95,9 @@ public class TestAction {
         baby = BabyManager.findById(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
+
+        DecimalFormat df=new DecimalFormat("0.0");
+        days =  Double.parseDouble(df.format((float)(today.getTime()-birth.getTime())/(1000*3600*24)/30))+"";
         return SUCCESS;
     }
 

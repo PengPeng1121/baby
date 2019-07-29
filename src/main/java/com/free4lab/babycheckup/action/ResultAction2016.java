@@ -44,7 +44,7 @@ public class ResultAction2016 {
         scoreSport = Math.round(result2016.getScoreSport()*100/monthage);
         scoreAct = Math.round(result2016.getScoreAct()*100/monthage);
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
-        resultRecord = TestResultRecordManager.find(1,id);
+        resultRecord = TestResultRecordManager.find(26,id);
         if(resultRecord == null){
             resultRecord = new TestResultRecord();
             resultRecord.setTesterName("null");
@@ -55,7 +55,7 @@ public class ResultAction2016 {
 
     //保存记录，没有新增，有修改
     public String saveRecord(){
-        TestResultRecord record = TestResultRecordManager.find(1,resultRecord.getResultId());
+        TestResultRecord record = TestResultRecordManager.find(26,resultRecord.getResultId());
         if(record==null){
             //保存
             resultRecord.setTestId(26);
@@ -109,9 +109,9 @@ public class ResultAction2016 {
         return SUCCESS;
     }
 
-    public Double diffDays(java.util.Date d1, java.util.Date d2){
+    public Double diffDays(Date d1, Date d2){
         DecimalFormat df=new DecimalFormat("0.0");
-        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30.4));
+        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30));
     }
 
     public Baby getBaby() {
