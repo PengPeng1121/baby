@@ -1,7 +1,7 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.dto.GroupBabyInfo;
-import com.free4lab.babycheckup.dto.GroupBasicInfo;
+import com.free4lab.babycheckup.vo.GroupBabyInfo;
+import com.free4lab.babycheckup.vo.GroupBasicInfo;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;

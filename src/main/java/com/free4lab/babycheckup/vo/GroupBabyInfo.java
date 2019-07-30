@@ -1,4 +1,4 @@
-package com.free4lab.babycheckup.dto;
+package com.free4lab.babycheckup.vo;
 
 //儿童成长发育测试历史信息
 public class GroupBabyInfo {

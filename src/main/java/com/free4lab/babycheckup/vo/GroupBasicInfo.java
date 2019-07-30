@@ -1,4 +1,4 @@
-package com.free4lab.babycheckup.dto;
+package com.free4lab.babycheckup.vo;
 
 //儿童成长发育基础信息
 public class GroupBasicInfo {

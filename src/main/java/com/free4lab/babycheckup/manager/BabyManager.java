@@ -141,4 +141,15 @@ public class BabyManager {
         List<Baby> babyList = getBabyDAOInstance().findAllBabyByHoid(hoid);
         return babyList.size();
     }
+
+    public static void update(Baby baby, Parent father, Parent mother) {
+        getBabyDAOInstance().update(baby);
+        if(father!=null){
+            getParentDAOInstance().update(father);
+        }
+        if(mother!=null){
+            getParentDAOInstance().update(mother);
+        }
+
+    }
 }

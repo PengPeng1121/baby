@@ -584,12 +584,12 @@
                 $("#f_email").val(data.baby.father.email);
                 
                 $("#mother_name").val(data.baby.mother.name);
-                $("#mother_career").val(data.baby.mother.carrer);
+                $("#mother_career").val(data.baby.mother.career);
                 $("#education-m").val(data.baby.mother.education);
                 $("#m_tel").val(data.baby.mother.tel);
                 $("#m_worktime").val(data.baby.mother.worktime);
                 $("#m_birthday").val(data.mother_birth);
-                $("#m_email").val(data.baby.email);
+                $("#m_email").val(data.baby.mother.email);
 
                 $("#birth-way").val(data.baby.delivery);
 
@@ -723,36 +723,34 @@
                 $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '请填写母亲格式正确的手机号！'});
         }else {
             $.ajax({
-                url : 'record/saveBaby',
+                url : 'record/editBaby',
                 type : 'post',
                 data : {
-                    "babyid": window.bid,
-                    "baby.gender": $("#gender").val(),
-                    "baby.name": $("#baby_name").val().trim(),
-                    "baby.userid": $("#doctor").val(),
-                    "birthday": $("#birthday").val(),
-                    "baby.nation": $("#nation").val(),
-                    
-                    
-                    "father.name":$("#father_name").val().trim(),
-                    "father.career":$("#father_career").val().trim(),
-                    "father.tel":$("#f_tel").val().trim(),
-                    "father.education":$("#education-f").val(),
-                    "father.worktime":$("#f_worktime").val(),
-                    "father_birth":$("#f_birthday").val(),
-                    "father.email":$("#f_email").val(),
-                    
-                    "mother.name":$("#mother_name").val().trim(),
-                    "mother.carrer":$("#mother_career").val().trim(),
-                    "mother.education":$("#education-m").val(),
-                    "mother.tel":$("#f_tel").val().trim(),
-                    "mother.worktime":$("#m_worktime").val(),
-                    "mother_birth":$("#m_birthday").val(),
-                    "mother.email":$("#m_email").val(),
+                    "babyUpdate.babyId": window.bid,
+                    "babyUpdate.babyGender": $("#gender").val(),
+                    "babyUpdate.babyName": $("#baby_name").val(),
+                    "babyUpdate.doctorId": $("#doctor").val(),
+                    "babyUpdate.babyNation": $("#nation").val(),
+                    "babyUpdate.babyDelivery": $("#birth-way").val(),
+                    "babyUpdate.babyBirth": $("#birthday").val(),
 
-                    "baby.delivery": $("#birth-way").val(),
+
+                    "babyUpdate.fatherName":$("#father_name").val(),
+                    "babyUpdate.fatherCareer":$("#father_career").val(),
+                    "babyUpdate.fatherTel":$("#f_tel").val(),
+                    "babyUpdate.fatherEducation":$("#education-f").val(),
+                    "babyUpdate.fatherWorkTime":$("#f_worktime").val(),
+                    "babyUpdate.fatherBirth":$("#f_birthday").val(),
+                    "babyUpdate.fatherEmail":$("#f_email").val(),
                     
-                    
+                    "babyUpdate.motherName":$("#mother_name").val(),
+                    "babyUpdate.motherCarrer":$("#mother_career").val(),
+                    "babyUpdate.motherEducation":$("#education-m").val(),
+                    "babyUpdate.motherTel":$("#m_tel").val(),
+                    "babyUpdate.motherWorkTime":$("#m_worktime").val(),
+                    "babyUpdate.motherBirth":$("#m_birthday").val(),
+                    "babyUpdate.motherEmail":$("#m_email").val(),
+
                     // "baby.relation":$("#relation").val(),
                     // "baby.bloodtype":$("#blood").val(),
                     // "baby.postcode":$("#postcode").val(),
@@ -790,12 +788,12 @@
                 },
                 success : function(data) {
                     if(data.babyid != 0 &&data.babyid != null) {
-                        $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'新建资料成功！'});
+                        $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'编辑资料成功！'});
                         $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
                             $("#babyid").val(data.babyid);
                         }).on('hide.bs.modal', function (){window.location.href = 'home';});
                     } else {
-                        $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'保存失败！'});
+                        $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'编辑失败！'});
                     }
                 }
             });

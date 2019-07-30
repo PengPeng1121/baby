@@ -15,6 +15,12 @@
             </result>
         </action>
 
+        <action name="editBaby" method="editBaby" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">baby,babyid,father_birth,mother_birth,frontalSuture1,frontalSuture2</param>
+            </result>
+        </action>
+
         <!-- 跳转到婴儿编辑页面 -->
         <action name="editbabyinfo" method="editBabyInfo" class="com.free4lab.babycheckup.action.BabyAction">
             <result name="success">/views/editbabyinfo.jsp</result>

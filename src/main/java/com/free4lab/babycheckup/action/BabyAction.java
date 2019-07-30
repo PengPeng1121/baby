@@ -1,5 +1,6 @@
 package com.free4lab.babycheckup.action;
 
+import com.free4lab.babycheckup.dto.BabyUpdateDto;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.AccountManager;
 import com.free4lab.babycheckup.model.Baby;
@@ -45,6 +46,8 @@ public class BabyAction {
     private int babyNumber;
     private String babyBirth;
     private Integer testId;
+
+    private BabyUpdateDto babyUpdate;
 
     public String newBaby(){
         try{
@@ -141,6 +144,7 @@ public class BabyAction {
         return "success";
     }
 
+    //回显baby信息
     public String getBabyById(){
         baby = BabyManager.findById(babyid);
         if(baby != null){
@@ -165,17 +169,99 @@ public class BabyAction {
         return "success";
     }
 
+    //跳转到病例编辑页
     public String editBabyInfo(){
-        baby = BabyManager.findById(babyid);
-        if(baby != null){
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd ");
-            if(baby.getFather().getBirth()!=null){
-                father_birth = simpleDateFormat.format(baby.getFather().getBirth());
+        userlist = AccountManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        return "success";
+    }
+
+    //编辑病例
+    public String editBaby(){
+        System.out.println("--------------------start-----------");
+
+        System.out.println(babyUpdate.toString());
+
+        //需要修改的信息
+        Baby updateBaby = BabyManager.findById(babyUpdate.getBabyId());
+
+        if(updateBaby!=null){
+            //生日
+            updateBaby.setBirthday(babyUpdate.getBabyBirth());
+
+            // 孩子的性别
+            if(babyUpdate.getBabyGender()!=null){
+                updateBaby.setGender(babyUpdate.getBabyGender().byteValue());
             }
-            if(baby.getMother().getBirth()!=null){
-                mother_birth = simpleDateFormat.format(baby.getMother().getBirth());
+
+            //孩子的名字
+            updateBaby.setName(babyUpdate.getBabyName());
+
+            //页面选择的提交医生
+            if(babyUpdate.getDoctorId()!=null){
+                updateBaby.setUserid(babyUpdate.getDoctorId());
             }
+            //孩子民族
+            updateBaby.setNation(babyUpdate.getBabyNation());
+
+            //分娩方式
+            if(StringUtils.isNotEmpty(babyUpdate.getBabyDelivery())){
+                updateBaby.setDelivery(babyUpdate.getBabyDelivery());
+            }
+
+            //孩子出生日期
+            updateBaby.setBirthday(babyUpdate.getBabyBirth());
+
+            //孩子父亲信息
+            Parent updateBabyFather = updateBaby.getFather();
+            if(updateBabyFather != null){
+                //孩子父亲名称
+                updateBabyFather.setName(babyUpdate.getFatherName());
+                //孩子父亲职业
+                updateBabyFather.setCareer(babyUpdate.getFatherCareer());
+                //孩子父亲生日
+                updateBabyFather.setBirth(babyUpdate.getFatherBirth());
+                //孩子父亲电话
+                updateBabyFather.setTel(babyUpdate.getFatherTel());
+                //孩子父亲受教育程度
+                updateBabyFather.setEducation(babyUpdate.getFatherEducation());
+                //孩子父亲工作时间
+                if(babyUpdate.getFatherWorkTime()!=null){
+                    updateBabyFather.setWorktime(babyUpdate.getFatherWorkTime().byteValue());
+                }
+                //孩子父亲邮箱
+                updateBabyFather.setEmail(babyUpdate.getFatherEmail());
+            }else {
+                System.out.println("----------------------没有找到孩子父亲的信息---，babyId("+ babyUpdate.getBabyId() +")------");
+            }
+
+            //孩子母亲信息
+            Parent updateBabyMother = updateBaby.getMother();
+            if(updateBabyMother != null){
+                //孩子母亲名称
+                updateBabyMother.setName(babyUpdate.getMotherName());
+                //孩子母亲职业
+                updateBabyMother.setCareer(babyUpdate.getMotherCarrer());
+                //孩子母亲生日
+                updateBabyMother.setBirth(babyUpdate.getMotherBirth());
+                //孩子母亲电话
+                updateBabyMother.setTel(babyUpdate.getMotherTel());
+                //孩子母亲受教育程度
+                updateBabyMother.setEducation(babyUpdate.getMotherEducation());
+                //孩子母亲工作时间
+                if(babyUpdate.getMotherWorkTime()!=null){
+                    updateBabyMother.setWorktime(babyUpdate.getMotherWorkTime().byteValue());
+                }
+                //孩子母亲邮箱
+                updateBabyMother.setEmail(babyUpdate.getMotherEmail());
+            }else {
+                System.out.println("----------------------没有找到孩子母亲的信息---，babyId("+ babyUpdate.getBabyId() +")------");
+            }
+
+            //修改
+            BabyManager.update(updateBaby,updateBabyFather,updateBabyMother);
         }
+        babyid = babyUpdate.getBabyId();
+        System.out.println("----------------------end---------");
         return "success";
     }
 
@@ -510,5 +596,13 @@ public class BabyAction {
 
     public void setBaby_birth(String baby_birth) {
         this.baby_birth = baby_birth;
+    }
+
+    public BabyUpdateDto getBabyUpdate() {
+        return babyUpdate;
+    }
+
+    public void setBabyUpdate(BabyUpdateDto babyUpdate) {
+        this.babyUpdate = babyUpdate;
     }
 }
