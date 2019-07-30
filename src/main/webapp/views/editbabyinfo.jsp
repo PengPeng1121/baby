@@ -573,20 +573,16 @@
                 $("#doctor").val(data.baby.userid);
                 $("#birthday").val(data.baby_birth);
                 $("#nation").val(data.baby.nation);
-                $("#relation").val(data.baby.relation);
-                $("#blood").val(data.baby.bloodtype);
-                $("#postcode").val(data.baby.postcode);
-                $("#account").val(data.baby.account);
-                $("#province").val(data.baby.province);
-                $("#city").val(data.baby.city);
-                $("#address").val(data.baby.address);
+                
+                
                 $("#father_name").val(data.baby.father.name);
                 $("#father_career").val(data.baby.father.career);
                 $("#f_tel").val(data.baby.father.tel);
-                $("#education-f").val(data.baby.father.worktime);
+                $("#education-f").val(data.baby.father.education);
                 $("#f_worktime").val(data.baby.father.worktime);
                 $("#f_birthday").val(data.father_birth);
                 $("#f_email").val(data.baby.father.email);
+                
                 $("#mother_name").val(data.baby.mother.name);
                 $("#mother_career").val(data.baby.mother.carrer);
                 $("#education-m").val(data.baby.mother.education);
@@ -594,34 +590,43 @@
                 $("#m_worktime").val(data.baby.mother.worktime);
                 $("#m_birthday").val(data.mother_birth);
                 $("#m_email").val(data.baby.email);
-                $("#mother_illness").val(data.baby.motherIllness);
-                $("#pregnant").val(data.baby.parity);
-                $("#duration").val(data.baby.pregnancy);
+
                 $("#birth-way").val(data.baby.delivery);
-                $("#education").val(data.baby.education);
-                $("#pre_delivery").val(data.baby.preDelivery);
-                $("#deformity").val(data.baby.deformity);
-                $("#only_child").val(data.baby.onlyChild);
-                $("#frontal_suture1").val(data.frontalSuture1);
-                $("#frontal_suture2").val(data.frontalSuture2);
-                $("#mother_birthage").val(data.baby.motherBirthage);
-                $("#marriage").val(data.baby.marriage);
-                $("#choke").val(data.baby.asphyxia);
-                $("#birth_weight").val(data.baby.birthWeight);
-                $("#jaundice").val(data.baby.jaundice);
-                $("#pumping").val(data.baby.havePumping);
-                $("#pumping-times").val(data.baby.pumpingTimes);
-                $("#pumping-begin").val(data.baby.pumpingBegin);
-                $("#family_history").val(data.baby.familyHistory);
-                $("#illness_history").val(data.baby.illnessHistory);
-                $("#height").val(data.baby.height);
-                $("#weight").val(data.baby.weight);
-                $("#head").val(data.baby.head);
-                $("#reason").val(data.baby.reason);
-                $("#overview").val(data.baby.overview);
-                $("#evaluation").val(data.baby.evaluation);
-                $("#diagnosis").val(data.baby.diagnosis);
-                $("#remark").val(data.baby.remarks);
+
+                // $("#relation").val(data.baby.relation);
+                // $("#blood").val(data.baby.bloodtype);
+                // $("#postcode").val(data.baby.postcode);
+                // $("#account").val(data.baby.account);
+                // $("#province").val(data.baby.province);
+                // $("#city").val(data.baby.city);
+                // $("#address").val(data.baby.address);
+                // $("#mother_illness").val(data.baby.motherIllness);
+                // $("#pregnant").val(data.baby.parity);
+                // $("#duration").val(data.baby.pregnancy);
+                // $("#education").val(data.baby.education);
+                // $("#pre_delivery").val(data.baby.preDelivery);
+                // $("#deformity").val(data.baby.deformity);
+                // $("#only_child").val(data.baby.onlyChild);
+                // $("#frontal_suture1").val(data.frontalSuture1);
+                // $("#frontal_suture2").val(data.frontalSuture2);
+                // $("#mother_birthage").val(data.baby.motherBirthage);
+                // $("#marriage").val(data.baby.marriage);
+                // $("#choke").val(data.baby.asphyxia);
+                // $("#birth_weight").val(data.baby.birthWeight);
+                // $("#jaundice").val(data.baby.jaundice);
+                // $("#pumping").val(data.baby.havePumping);
+                // $("#pumping-times").val(data.baby.pumpingTimes);
+                // $("#pumping-begin").val(data.baby.pumpingBegin);
+                // $("#family_history").val(data.baby.familyHistory);
+                // $("#illness_history").val(data.baby.illnessHistory);
+                // $("#height").val(data.baby.height);
+                // $("#weight").val(data.baby.weight);
+                // $("#head").val(data.baby.head);
+                // $("#reason").val(data.baby.reason);
+                // $("#overview").val(data.baby.overview);
+                // $("#evaluation").val(data.baby.evaluation);
+                // $("#diagnosis").val(data.baby.diagnosis);
+                // $("#remark").val(data.baby.remarks);
             }
         })
     });
@@ -725,57 +730,63 @@
                     "baby.gender": $("#gender").val(),
                     "baby.name": $("#baby_name").val().trim(),
                     "baby.userid": $("#doctor").val(),
-                    birthday: $("#birthday").val(),
+                    "birthday": $("#birthday").val(),
                     "baby.nation": $("#nation").val(),
-                    "baby.relation":$("#relation").val(),
-                    "baby.bloodtype":$("#blood").val(),
-                    "baby.postcode":$("#postcode").val(),
-                    "baby.account":$("#account").val(),
-                    "baby.province":$("#province").val(),
-                    "baby.city":$("#city").val(),
-                    "baby.address":$("#address").val(),
+                    
+                    
                     "father.name":$("#father_name").val().trim(),
                     "father.career":$("#father_career").val().trim(),
                     "father.tel":$("#f_tel").val().trim(),
                     "father.education":$("#education-f").val(),
                     "father.worktime":$("#f_worktime").val(),
-                    father_birth:$("#f_birthday").val(),
+                    "father_birth":$("#f_birthday").val(),
                     "father.email":$("#f_email").val(),
+                    
                     "mother.name":$("#mother_name").val().trim(),
                     "mother.carrer":$("#mother_career").val().trim(),
                     "mother.education":$("#education-m").val(),
                     "mother.tel":$("#f_tel").val().trim(),
                     "mother.worktime":$("#m_worktime").val(),
-                    mother_birth:$("#m_birthday").val(),
+                    "mother_birth":$("#m_birthday").val(),
                     "mother.email":$("#m_email").val(),
-                    "baby.motherIllness": $("#mother_illness").val(),
-                    "baby.parity": $("#pregnant").val(),
-                    "baby.pregnancy": $("#duration").val(),
+
                     "baby.delivery": $("#birth-way").val(),
-                    "baby.education": $("#education").val(),
-                    "baby.preDelivery": $("#pre_delivery").val(),
-                    "baby.deformity": $("#deformity").val(),
-                    "baby.onlyChild": $("#only_child").val(),
-                    frontalSuture1:$("#frontal_suture1").val(),
-                    frontalSuture2:$("#frontal_suture2").val(),
-                    "baby.motherBirthage": $("#mother_birthage").val(),
-                    "baby.marriage": $("#marriage").val(),
-                    "baby.asphyxia": $("#choke").val(),
-                    "baby.birthWeight": $("#birth_weight").val(),
-                    "baby.jaundice": $("#jaundice").val(),
-                    "baby.havePumping": $("#pumping").val(),
-                    "baby.pumpingTimes": $("#pumping-times").val(),
-                    "baby.pumpingBegin": $("#pumping-begin").val(),
-                    "baby.familyHistory": $("#family_history").val(),
-                    "baby.illnessHistory": $("#illness_history").val(),
-                    "baby.height": $("#height").val(),
-                    "baby.weight": $("#weight").val(),
-                    "baby.head": $("#head").val(),
-                    "baby.reason": $("#reason").val(),
-                    "baby.overview": $("#overview").val(),
-                    "baby.evaluation": $("#evaluation").val(),
-                    "baby.diagnosis": $("#diagnosis").val(),
-                    "baby.remarks": $("#remark").val()
+                    
+                    
+                    // "baby.relation":$("#relation").val(),
+                    // "baby.bloodtype":$("#blood").val(),
+                    // "baby.postcode":$("#postcode").val(),
+                    // "baby.account":$("#account").val(),
+                    // "baby.province":$("#province").val(),
+                    // "baby.city":$("#city").val(),
+                    // "baby.address":$("#address").val(),
+                    // "baby.motherIllness": $("#mother_illness").val(),
+                    // "baby.parity": $("#pregnant").val(),
+                    // "baby.pregnancy": $("#duration").val(),
+                    // "baby.education": $("#education").val(),
+                    // "baby.preDelivery": $("#pre_delivery").val(),
+                    // "baby.deformity": $("#deformity").val(),
+                    // "baby.onlyChild": $("#only_child").val(),
+                    // frontalSuture1:$("#frontal_suture1").val(),
+                    // frontalSuture2:$("#frontal_suture2").val(),
+                    // "baby.motherBirthage": $("#mother_birthage").val(),
+                    // "baby.marriage": $("#marriage").val(),
+                    // "baby.asphyxia": $("#choke").val(),
+                    // "baby.birthWeight": $("#birth_weight").val(),
+                    // "baby.jaundice": $("#jaundice").val(),
+                    // "baby.havePumping": $("#pumping").val(),
+                    // "baby.pumpingTimes": $("#pumping-times").val(),
+                    // "baby.pumpingBegin": $("#pumping-begin").val(),
+                    // "baby.familyHistory": $("#family_history").val(),
+                    // "baby.illnessHistory": $("#illness_history").val(),
+                    // "baby.height": $("#height").val(),
+                    // "baby.weight": $("#weight").val(),
+                    // "baby.head": $("#head").val(),
+                    // "baby.reason": $("#reason").val(),
+                    // "baby.overview": $("#overview").val(),
+                    // "baby.evaluation": $("#evaluation").val(),
+                    // "baby.diagnosis": $("#diagnosis").val(),
+                    // "baby.remarks": $("#remark").val()
                 },
                 success : function(data) {
                     if(data.babyid != 0 &&data.babyid != null) {
