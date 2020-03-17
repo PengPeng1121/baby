@@ -80,8 +80,13 @@ public class TestAction {
         baby = BabyManager.findById(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
+        days = (differentDayDouble(birth,today))+"";
         return SUCCESS;
+    }
+
+    public Double differentDayDouble(Date d1, Date d2){
+        DecimalFormat df=new DecimalFormat("0.0");
+        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30));
     }
 
     //0-6测评 2016版

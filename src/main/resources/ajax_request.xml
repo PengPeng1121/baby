@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- ajax请求 / -->
+    <package name="ajaxRequest" namespace="/" extends="json-default">
+        <!-- 查询儿童程长发育测试历史 / -->
+        <action name="groupBabyInfo" method="groupBabyInfo" class="com.free4lab.babycheckup.action.ResultGroupAction">
+            <result name="fail"></result>
+            <!-- 返回json类型数据 -->
+            <result type="json">
+                <param name="root">groupBabyInfo</param>
+            </result>
+        </action>
+
+        <!-- 查询儿童程长发育测试基础数据 / -->
+        <action name="groupBasicInfo" method="groupBasicInfo" class="com.free4lab.babycheckup.action.ResultGroupAction">
+            <result name="fail"></result>
+            <!-- 返回json类型数据 -->
+            <result type="json">
+                <param name="root">groupBasicInfo</param>
+            </result>
+        </action>
+    </package>
+</struts>

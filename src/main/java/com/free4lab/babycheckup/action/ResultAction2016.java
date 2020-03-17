@@ -5,7 +5,9 @@ import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.BeanUtils;
 
+import java.math.BigDecimal;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -21,11 +23,11 @@ public class ResultAction2016 {
     private String SUCCESS = "success";
     private Double monthage;
     private String stime;//检查日期
-    private Long scoreSport;
-    private Long scoreAct;
-    private Long scoreAdapt;
-    private Long scoreLanguage;
-    private Long scoreSocial;
+    private Double scoreSport;
+    private Double scoreAct;
+    private Double scoreAdapt;
+    private Double scoreLanguage;
+    private Double scoreSocial;
     private Hospital hospital;
     private TestResultRecord resultRecord;
     private List<TestInstruction> instructions;
@@ -35,14 +37,29 @@ public class ResultAction2016 {
         baby = BabyManager.findById(result2016.getBabyid());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
-        Date d2 = Date.valueOf(stime);
-        monthage = diffDays(d1,d2);
+        monthage = diffDays(d1,result2016.getTime());
         //这是算法  是不是很吊
-        scoreAdapt = Math.round(result2016.getScoreAdapt()*100/monthage);
-        scoreLanguage = Math.round(result2016.getScoreLanguage()*100/monthage);
-        scoreSocial = Math.round(result2016.getScoreSocial()*100/monthage);
-        scoreSport = Math.round(result2016.getScoreSport()*100/monthage);
-        scoreAct = Math.round(result2016.getScoreAct()*100/monthage);
+//        scoreAdapt = Math.round(result2016.getScoreAdapt()*100/monthage);
+//        scoreLanguage = Math.round(result2016.getScoreLanguage()*100/monthage);
+//        scoreSocial = Math.round(result2016.getScoreSocial()*100/monthage);
+//        scoreSport = Math.round(result2016.getScoreSport()*100/monthage);
+//        scoreAct = Math.round(result2016.getScoreAct()*100/monthage);
+
+        BigDecimal bigDecimalScoreSport = new BigDecimal(result2016.getScoreSport()*100/monthage);
+        scoreSport = bigDecimalScoreSport.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        BigDecimal bigDecimalScoreAct = new BigDecimal(result2016.getScoreAct()*100/monthage);
+        scoreAct = bigDecimalScoreAct.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        BigDecimal bigDecimalScoreAdapt = new BigDecimal(result2016.getScoreAdapt()*100/monthage);
+        scoreAdapt = bigDecimalScoreAdapt.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        BigDecimal bigDecimalScoreLanguage = new BigDecimal(result2016.getScoreLanguage()*100/monthage);
+        scoreLanguage = bigDecimalScoreLanguage.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+
+        BigDecimal bigDecimalScoreSocial = new BigDecimal(result2016.getScoreSocial()*100/monthage);
+        scoreSocial = bigDecimalScoreSocial.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         resultRecord = TestResultRecordManager.find(26,id);
         if(resultRecord == null){
@@ -89,8 +106,7 @@ public class ResultAction2016 {
         baby = BabyManager.findById(result2016.getBabyid());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
-        Date d2 = Date.valueOf(stime);
-        monthage = diffDays(d1,d2);
+        monthage = diffDays(d1,result2016.getTime());
         Integer monthAge = monthage.intValue();
         instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(1,monthAge);
         return SUCCESS;
@@ -102,14 +118,13 @@ public class ResultAction2016 {
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
         baby = BabyManager.findById(result2016.getBabyid());
         Date d1 = baby.getBirthday();
-        Date d2 = Date.valueOf(stime);
-        monthage = diffDays(d1,d2);
+        monthage = diffDays(d1,result2016.getTime());
         Integer monthAge = monthage.intValue();
         instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(26,monthAge);
         return SUCCESS;
     }
 
-    public Double diffDays(Date d1, Date d2){
+    public Double diffDays(Date d1, Timestamp d2){
         DecimalFormat df=new DecimalFormat("0.0");
         return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30));
     }
@@ -162,43 +177,43 @@ public class ResultAction2016 {
         this.monthage = monthage;
     }
 
-    public Long getScoreSport() {
+    public Double getScoreSport() {
         return scoreSport;
     }
 
-    public void setScoreSport(Long scoreSport) {
+    public void setScoreSport(Double scoreSport) {
         this.scoreSport = scoreSport;
     }
 
-    public Long getScoreAct() {
+    public Double getScoreAct() {
         return scoreAct;
     }
 
-    public void setScoreAct(Long scoreAct) {
+    public void setScoreAct(Double scoreAct) {
         this.scoreAct = scoreAct;
     }
 
-    public Long getScoreAdapt() {
+    public Double getScoreAdapt() {
         return scoreAdapt;
     }
 
-    public void setScoreAdapt(Long scoreAdapt) {
+    public void setScoreAdapt(Double scoreAdapt) {
         this.scoreAdapt = scoreAdapt;
     }
 
-    public Long getScoreLanguage() {
+    public Double getScoreLanguage() {
         return scoreLanguage;
     }
 
-    public void setScoreLanguage(Long scoreLanguage) {
+    public void setScoreLanguage(Double scoreLanguage) {
         this.scoreLanguage = scoreLanguage;
     }
 
-    public Long getScoreSocial() {
+    public Double getScoreSocial() {
         return scoreSocial;
     }
 
-    public void setScoreSocial(Long scoreSocial) {
+    public void setScoreSocial(Double scoreSocial) {
         this.scoreSocial = scoreSocial;
     }
 

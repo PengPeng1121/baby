@@ -47,5 +47,5 @@
     <include file="record.xml" />
     <include file="account.xml" />
     <include file="admin.xml" />
-
+    <include file="ajax_request.xml" />
 </struts>
