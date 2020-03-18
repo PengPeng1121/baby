@@ -294,7 +294,7 @@
                     </div>
                 </div>
                 <!-- 小儿智能发育筛查 -->
-                <!-- <div class="col-md-3">
+                <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -320,7 +320,7 @@
 
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- 比内 -->
                 <!-- <div class="col-md-3">

@@ -33,8 +33,8 @@
                 style="color: white;font-size: small">婴儿-初中学生<br/>生活能力量表</h4></a>
         <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()" style="margin-top: 10px"><h4
                 style="color: white;font-size: small">婴幼儿认知测定</h4></a> -->
-        <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_ddst()" style="margin-top: 10px"><h4
-                style="color: white;font-size: small">小儿智能发育筛查</h4></a> -->
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_ddst()" style="margin-top: 10px"><h4
+                style="color: white;font-size: small">小儿智能发育筛查</h4></a>
         <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_nei()" style="margin-top: 10px"><h4
                 style="color: white;font-size: small">中国比内测验</h4></a> -->
         <a type="button" class="btn  modal-box text-center" href="javascript:start_group()" style="margin-top: 10px"><h4

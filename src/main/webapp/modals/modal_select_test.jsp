@@ -48,10 +48,10 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
         </div> -->
-        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_ddst()"><h4
                     style="color: white;font-size: small">小儿智能发育筛查</h4></a>
-        </div> -->
+        </div>
         <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_nei()"><h4
                     style="color: white;font-size: small">中国比内测验</h4></a>

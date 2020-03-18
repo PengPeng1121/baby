@@ -323,7 +323,7 @@
                         dq += questionScore[i];
                     }
                     dq /= questionTypeSum;
-                    var growth = ( dq / parseInt($("#days").val()) ) * 100;
+                    var growth = ( dq / parseFloat($("#days").val()) ) * 100;
 
                     dq = Math.round(dq)
                     growth = Math.round(growth)
