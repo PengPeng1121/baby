@@ -1,18 +1,13 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.HospitalManager;
-import com.free4lab.babycheckup.manager.ResultDDSTManager;
-import com.free4lab.babycheckup.manager.TestResultRecordManager;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.ResultDDST;
-import com.free4lab.babycheckup.model.TestResultRecord;
+import com.free4lab.babycheckup.manager.*;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/6/29.
@@ -31,6 +26,9 @@ public class ResultDDSTAction {
 
     private int days;
     private TestResultRecord resultRecord;
+
+    private List<TestInstruction> instructions;
+
     public String showResultDDST() {
         resultDDST = ResultDDSTManager.findResultByid(id);
         baby = BabyManager.findById(resultDDST.getBabyId());
@@ -47,6 +45,11 @@ public class ResultDDSTAction {
         }
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         resultRecord = TestResultRecordManager.find(21,id);
+        if(resultRecord == null){
+            resultRecord = new TestResultRecord();
+            resultRecord.setTesterName("null");
+            resultRecord.setRemark("null");
+        }
         return SUCCESS;
     }
 
@@ -82,6 +85,15 @@ public class ResultDDSTAction {
             updateRecord.setUpdateTime(new java.util.Date());
             TestResultRecordManager.update(updateRecord);
         }
+        return SUCCESS;
+    }
+
+    //获得指导语
+    public String getRemarkDDST(){
+        resultDDST = ResultDDSTManager.findResultByid(id);
+        baby = BabyManager.findById(resultDDST.getBabyId());
+        Integer monthAge  = (differentdays(baby.getBirthday(),new Date()))/30;
+        instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(21,monthAge);
         return SUCCESS;
     }
 
@@ -179,5 +191,13 @@ public class ResultDDSTAction {
 
     public void setResultRecord(TestResultRecord resultRecord) {
         this.resultRecord = resultRecord;
+    }
+
+    public List<TestInstruction> getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(List<TestInstruction> instructions) {
+        this.instructions = instructions;
     }
 }

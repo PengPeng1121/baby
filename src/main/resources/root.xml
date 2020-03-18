@@ -128,6 +128,25 @@
             <result name="success" >views/showresultDDST.jsp</result>
         </action>
 
+        <!--小儿智能发育筛查的测评医生评价-->
+        <action name="saveRecordDDST" method="saveRecordDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 小儿智能发育筛查的 指导语-->
+        <action name="getRemarkDDST" method="getRemarkDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
+            <result type="json" name="success">
+                <param name="includeProperties">
+                    instructions\[\d+\]\.type,instructions\[\d+\]\.content
+                </param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+
 
         <!--比内结果展示-->
         <action name="showresultNei" method="showResultNei" class="com.free4lab.babycheckup.action.ResultNeiAction">

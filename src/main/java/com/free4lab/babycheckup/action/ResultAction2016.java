@@ -105,7 +105,6 @@ public class ResultAction2016 {
         result2016 = ResultManager2016.findResultByid(resultID);
         baby = BabyManager.findById(result2016.getBabyid());
         Date d1 = baby.getBirthday();
-        stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
         monthage = diffDays(d1,result2016.getTime());
         Integer monthAge = monthage.intValue();
         instructions = TestInstructionManager.findInstructionByTestIdAndMonthAge(1,monthAge);
@@ -115,7 +114,6 @@ public class ResultAction2016 {
     //获得指导语
     public String getRemarkHeMa(){
         result2016 = ResultManager2016.findResultByid(resultID);
-        stime = new  SimpleDateFormat("yyyy-MM-dd").format(result2016.getTime());
         baby = BabyManager.findById(result2016.getBabyid());
         Date d1 = baby.getBirthday();
         monthage = diffDays(d1,result2016.getTime());
