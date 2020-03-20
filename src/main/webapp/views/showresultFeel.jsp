@@ -63,7 +63,7 @@
                         <td class="col-md-3">评定项目</td>
                         <td class="col-md-1">得分</td>
                         <td class="col-md-2">评定结果</td>
-                        <td class="col-md-6">建议</td>
+                        <!-- <td class="col-md-6">建议</td> -->
                     </tr>
                     </thead>
                     <tbody>
@@ -71,9 +71,9 @@
                         <td>1.前庭失衡</td>
                         <td id="a1"><s:property value="resultFeel.b1"/></td>
                         <td id="r1"><s:property value="resultFeel.z1"/></td>
-                        <td rowspan="5">
+                        <!-- <td rowspan="5">
                             <textarea id="s1" style="height: 160px" ></textarea>
-                        </td>
+                        </td> -->
                     </tr>
 
                     <tr>
@@ -268,7 +268,8 @@
                 }
             }],
             legend: {
-                shadow: false
+                shadow: false,
+                enabled: false 
             },
             tooltip: {
                 shared: true
@@ -343,6 +344,10 @@
             },
             tooltip: {
                 shared: true
+            },
+            legend: {
+                shadow: false,
+                enabled: false 
             },
             series: [{
                 name: '得分',

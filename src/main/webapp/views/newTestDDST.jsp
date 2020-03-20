@@ -84,10 +84,10 @@
                                 <td colspan="3">个人-社会</td>
                             </s:if>
                             <s:if test="#type == 62">
-                                <td colspan="3">精细动作-适应性</td>
+                                <td colspan="3">语言</td>
                             </s:if>
                             <s:if test="#type == 63">
-                                <td colspan="3">语言</td>
+                                <td colspan="3">精细动作-适应性</td>
                             </s:if>
                             <s:if test="#type == 64">
                                 <td colspan="3">大运动</td>
@@ -113,9 +113,6 @@
                                             &nbsp;
                                             <!-- 不合作 -->
                                             <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="3" />R不合作
-                                            &nbsp;
-                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_1"/>" value="5" />NO无机会完成
-                                            &nbsp;
                                         </td>
                                     </tr>
                                 </s:if>
@@ -132,9 +129,7 @@
                                             &nbsp;
                                             <!-- 不合作 -->
                                             <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="3" />R不合作
-                                            &nbsp;
-                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_2"/>" value="5" />NO无机会完成
-                                            &nbsp;
+                                            
                                         </td>
                                     </tr>
                                 </s:if>
@@ -151,9 +146,7 @@
                                             &nbsp;
                                             <!-- 不合作 -->
                                             <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="3" />R不合作
-                                            &nbsp;
-                                            <input style="width: 30px" type="radio" name="<s:property value="#question.leftCode_3"/>" value="5" />NO无机会完成
-                                            &nbsp;
+                                            
                                         </td>
                                     </tr>
                                 </s:if>
@@ -170,9 +163,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_1"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_1"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -189,9 +180,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_2"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_2"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -209,8 +198,7 @@
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_3"/>" value="3" />R不合作
                                         &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_3"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -227,9 +215,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_4"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_4"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -246,9 +232,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_5"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_5"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -265,9 +249,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_6"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_6"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -284,9 +266,7 @@
                                         &nbsp;
                                         <!-- 不合作 -->
                                         <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_7"/>" value="3" />R不合作
-                                        &nbsp;
-                                        <input style="width: 30px" type="radio" name="<s:property value="#question.throughCode_7"/>" value="5" />NO无机会完成
-                                        &nbsp;
+                                        
                                     </td>
                                 </tr>
                                 </s:if>
@@ -353,11 +333,11 @@
                         continue;
                     }
                     if(q < 54){
-                        questionScore[2] += 1;
+                        questionScore[3] += 1;
                         continue;
                     }
                     if(q < 74){
-                        questionScore[3] += 1;
+                        questionScore[2] += 1;
                         continue;
                     }
                     if(q < 105){

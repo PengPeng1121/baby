@@ -41,8 +41,10 @@
                 style="color: white;font-size: small">生长发育测验</h4></a>
         <a type="button" class="btn  modal-box text-center" href="javascript:start_QiZhi()" style="margin-top: 10px"><h4
                 style="color: white;font-size: small">气质测试</h4></a>
-        <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_Feel()" style="margin-top: 10px"><h4
-                style="color: white;font-size: small">感觉统合能力</h4></a> -->
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_Feel()" style="margin-top: 10px"><h4
+                style="color: white;font-size: small">感觉统合能力</h4></a>
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_ADHD()" style="margin-top: 10px"><h4
+                style="color: white;font-size: small">多动症筛查</h4></a>
     </div>
 </div>
 <script>
@@ -296,6 +298,23 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestFeel?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+    function start_ADHD() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthageGroup",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestADHD?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
