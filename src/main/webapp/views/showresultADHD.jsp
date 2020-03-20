@@ -30,13 +30,10 @@
     <div class="container">
 
 
-        <input type="hidden" id="resultID" value="<s:property value="resultDDST.id"/>">
+        <input type="hidden" id="resultID" value="<s:property value="resultADHD.id"/>">
         <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
         <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
-
-        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
-        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaDDST.png" alt="Logo">
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
@@ -63,44 +60,28 @@
                     <thead>
                     <tr>
                         <td class="col-md-2">项目</td>
-                        <th class="col-md-1">个人-社会</th>
-                        <th class="col-md-1">精细动作-适应性</th>
-                        <th class="col-md-1">语言</th>
-                        <th class="col-md-1">大运动</th>
+                        <th class="col-md-1">注意力不集中组</th>
+                        <th class="col-md-1">多动/冲动组</th>
+                        <th class="col-md-1">对立违抗性障碍组</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>个人得分</td>
-                        <td id="a1"><s:property value="resultDDST.a1"/></td>
-                        <td id="a2"><s:property value="resultDDST.a2"/></td>
-                        <td id="a3"><s:property value="resultDDST.a3"/></td>
-                        <td id="a4"><s:property value="resultDDST.a4"/></td>
-                    </tr>
-                    <tr>
-                        <td>应得分</td>
-                        <td id="b1"></td>
-                        <td id="b2"></td>
-                        <td id="b3"></td>
-                        <td id="b4"></td>
+                        <td id="a1"><s:property value="resultADHD.a1"/></td>
+                        <td id="a2"><s:property value="resultADHD.a2"/></td>
+                        <td id="a3"><s:property value="resultADHD.a3"/></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- <div class="panel panel-default front-panel col-md-12" style="padding: 0px;">
-            <div class="panel-heading">
-                评定结果: <s:property value="resultDDST.result"/>
-            </div>
-        </div> -->
-
-
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table1">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果点状图</td>
                 <td style="text-align:center;">评定结果柱状图</td>
+                <td style="text-align:center;">评价</td>
             </tr>
             <tr>
                 <td style="padding: 0px;width: 50%;">
@@ -111,45 +92,28 @@
                 </td>
                 <td style="padding: 0px;width: 50%;">
                     <div style="border: 1px dashed #ddd">
-                        <div id="column2"></div>
+                        <!-- 评价 -->
+                        <table class="table table-striped  table-bordered front-table">
+                            <tr>
+                                <td id="r1">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="r2">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="r3">
+                                    
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     
                 </td>
             </tr>
-            </tbody>
-        </table>
-
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
-            <tbody>
-                <tr>
-                    <td colspan="2" style="font-weight: bold;">
-                        指导建议
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;"> 
-                        个人-社交
-                    </td>
-                    <td id="remark1"></td>
-                </tr>
-                <tr>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        语言
-                    </td>
-                    <td id="remark2"></td>
-                </tr>
-                <tr>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        精细运动-适应性
-                    </td>
-                    <td id="remark3"></td>
-                </tr>
-                <tr>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        大运动
-                    </td>
-                    <td id="remark4"></td>
-                </tr>
             </tbody>
         </table>
 
@@ -184,137 +148,53 @@
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
-    window.flag = 0;
-    var days = parseInt($('#days').val());
-    if (days>24) {
-        days = parseInt(days / 3) * 3;
-    }
-
-    var result = {
-        1: {'a':3,  'b':2,  'c':3,  'd': 1},
-        2: {'a':4,  'b':4,  'c':6,  'd': 3},
-        3: {'a':4,  'b':4,  'c':7,  'd': 6},
-        4: {'a':5,  'b':4,  'c':8,  'd': 7},
-        5: {'a':7,  'b':4,  'c':6,  'd': 6},
-        6: {'a':8,  'b':5,  'c':7,  'd': 6},
-        7: {'a':7,  'b':6,  'c':8,  'd': 5},
-        8: {'a':6,  'b':6,  'c':7,  'd': 6},
-        9: {'a':5,  'b':5,  'c':6,  'd': 6},
-        10: {'a':6,  'b':5,  'c':5,  'd': 7},
-        11: {'a':7,  'b':5,  'c':5,  'd': 6},
-        12: {'a':6,  'b':4,  'c':5,  'd': 7},
-        13: {'a':7,  'b':5,  'c':6,  'd': 6},
-        14: {'a':7,  'b':5,  'c':7,  'd': 6},
-        15: {'a':7,  'b':6,  'c':7,  'd': 6},
-        16: {'a':7,  'b':6,  'c':8,  'd': 7},
-        17: {'a':8,  'b':7,  'c':8,  'd': 7},
-        18: {'a':9,  'b':7,  'c':8,  'd': 7},
-        19: {'a':8,  'b':8,  'c':7,  'd': 6},
-        20: {'a':8,  'b':8,  'c':5,  'd': 6},
-        21: {'a':9,  'b':8,  'c':5,  'd': 5},
-        22: {'a':9,  'b':6,  'c':7,  'd': 6},
-        23: {'a':9,  'b':6,  'c':6,  'd': 6},
-        24: {'a':9,  'b':5,  'c':6,  'd': 7},
-        27: {'a':8,  'b':6,  'c':7,  'd': 7},
-        30: {'a':9,  'b':5,  'c':7,  'd': 8},
-        33: {'a':9,  'b':5,  'c':8,  'd': 6},
-        36: {'a':7,  'b':6,  'c':8,  'd': 7},
-        39: {'a':6,  'b':6,  'c':7,  'd': 6},
-        42: {'a':5,  'b':8,  'c':8,  'd': 6},
-        45: {'a':4,  'b':9,  'c':9,  'd': 7},
-        48: {'a':4,  'b':9,  'c':7,  'd': 8},
-        51: {'a':3,  'b':9,  'c':8,  'd': 8},
-        54: {'a':3,  'b':8,  'c':7,  'd': 7},
-        57: {'a':3,  'b':6,  'c':7,  'd': 7},
-        60: {'a':3,  'b':6,  'c':7,  'd': 7},
-        66: {'a':3,  'b':6,  'c':5,  'd': 6},
-        72: {'a':3,  'b':4,  'c':4,  'd': 3},
-    };
-
-
-
-    $('#b1').text(result[days]['a'])
-    $('#b2').text(result[days]['b'])
-    $('#b3').text(result[days]['c'])
-    $('#b4').text(result[days]['d'])
-
-
-    var p1 = +(parseInt($('#a1').text()) / parseInt($('#b1').text())).toFixed(1)
-    var p2 = +(parseInt($('#a2').text()) / parseInt($('#b2').text())).toFixed(1)
-    var p3 = +(parseInt($('#a3').text()) / parseInt($('#b3').text())).toFixed(1)
-    var p4 = +(parseInt($('#a4').text()) / parseInt($('#b4').text())).toFixed(1)
-
+    window.flag = 1;
     
-
     var a1 = parseInt($('#a1').text());
     var a2 = parseInt($('#a2').text());
     var a3 = parseInt($('#a3').text());
-    var a4 = parseInt($('#a4').text());
+    var r1 = '注意力不集中组:';
+    var r2 = '多动/冲动组：';
+    var r3 = '对立违抗性障碍组：';
+    if (r1 < 13) {
+        r1 = r1 + '症状在临床上不显著'
+    } else if (r1 < 18) {
+        r1 = r1 + '轻微症状'
+    } else if (r1 < 23) {
+        r1 = r1 + '中度症状'
+    } else {
+        r1 = r1 + '严重症状'
+    }
+
+
+    if (r2 < 13) {
+        r2 = r2 + '症状在临床上不显著'
+    } else if (r2 < 18) {
+        r2 = r2 + '轻微症状'
+    } else if (r2 < 23) {
+        r2 = r2 + '中度症状'
+    } else {
+        r2 = r2 + '严重症状'
+    }
+
+
+    if (r3 < 8) {
+        r3 = r3 + '症状在临床上不显著'
+    } else if (r3 < 14) {
+        r3 = r3 + '轻微症状'
+    } else if (r3 < 19) {
+        r3 = r3 + '中度症状'
+    } else {
+        r3 = r3 + '严重症状'
+    }
+
+    $('#r1').text(r1);
+    $('#r2').text(r2);
+    $('#r3').text(r3);
+
 
 
     var resultID = $('#resultID').val();
-    var instructions = [];
-    var str1 = '';
-    var str2 = '';
-    var str3 = '';
-    var str4 = '';
-    $.ajax({
-        url: 'getRemarkDDST',
-        type: 'post',
-        data: {
-            'id': resultID
-        },
-        success:function (json) {
-            instructions = json.instructions
-            item = {}
-            str1Times = 0
-            str2Times = 0
-            str3Times = 0
-            str4Times = 0
-            for (var i = 0, len = instructions.length; i < len ; i++) {
-                item = instructions[i];
-                switch (item['type']) {
-                    // 社交
-                    case 1:
-                        if (str1Times < 4) {
-                            str1 += item['content'];
-                            str1 += '<br/>';
-                            str1Times++;
-                        }
-                        break;
-                    // 语言
-                    case 2:
-                        if (str2Times < 4) {
-                            str2 += item['content'];
-                            str2 += '<br/>';
-                            str2Times++;
-                        }
-                        break;
-                    // 精细动作-适应性
-                    case 3:
-                        if (str3Times < 4) {
-                            str3 += item['content'];
-                            str3 += '<br/>';
-                            str3Times++;
-                        }
-                        break;
-                    // 大运动
-                    case 4:
-                        if (str4Times < 4) {
-                            str4 += item['content'];
-                            str4 += '<br/>';
-                            str4Times++;
-                        }
-                        break;
-                } 
-            }
-            $('#remark1').html(str1)
-            $('#remark2').html(str2)
-            $('#remark3').html(str3)
-            $('#remark4').html(str4)
-            window.flag += 1
-        }
-    })
 
     var inter = setInterval(function() {
         if (window.flag === 1) {
@@ -336,46 +216,10 @@
 
     // 柱状图数据
     $(function () {
-        var chart1,
-            chart2;
-        var categories =  ['个人-社交', '语言', '精细运动-适应性', '大运动'];
-        var result =  [p1, p2, p3, p4];
-
+        var chart1;
+        var categories =  ['注意力不集中组', '多动/冲动组', '对立违抗性障碍组'];
+        var result =  [a1, a2, a3];
         $('#column1').highcharts({
-            credits: {
-                enabled: false
-            },
-            title: {
-                text: ''
-            },
-            xAxis: {
-                categories: categories
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: '评分结果'
-                }
-            },
-            tooltip: {
-                pointFormat: '',
-                shared: true
-            },
-            plotOptions: {
-            },
-            legend: {
-                enabled:false
-            },
-            series: [{
-                data: result
-            }]
-        }, function(c){
-            chart1 = c;
-        });
-
-
-
-        $('#column2').highcharts({
             chart: {
                 type: 'column'
             },
@@ -427,7 +271,7 @@
                 data: result
             }]
         }, function(c){
-            chart2 = c;
+            chart1 = c;
         });
 
         $.windowbox = { 
@@ -451,20 +295,7 @@
                     width: '300px',
                     height: '300px'
                 });
-                $('#column2').css({
-                    width: '300px',
-                    height: '300px'
-                });
                 chart1.reflow();
-                chart2.reflow();
-                $('#hema').css({
-                    'height': '60px',
-                    'width': '360px'
-                })
-                $('#ruiweiyue').css({
-                    'height': '60px',
-                    'width': '60px'
-                })
                 $('#info').css({
                     'margin-top': '60px'
                 });
@@ -506,7 +337,7 @@
             data['resultRecord.testerName'] = testerName;
             data['resultRecord.remark'] = remark;
             $.ajax({
-                url: 'saveRecordDDST',
+                url: 'saveRecordADHD',
                 type: 'post',
                 data: data,
                 success:function (json) {
