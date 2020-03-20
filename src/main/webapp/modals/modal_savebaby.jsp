@@ -307,19 +307,20 @@
     }
     function start_ADHD() {
         var babyid = $("#babyid").val();
-        $.ajax({
-            url: "monthageGroup",
-            type: "post",
-            data: {
-                babyid: babyid
-            }, success: function (data) {
-                if (data.flag == true) {
-                    location.href = "newtestADHD?babyid=" + babyid;
-                } else {
-                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
-                }
-            }
+        location.href = "newtestADHD?babyid=" + babyid;
+        // $.ajax({
+        //     url: "monthageGroup",
+        //     type: "post",
+        //     data: {
+        //         babyid: babyid
+        //     }, success: function (data) {
+        //         if (data.flag == true) {
+        //             location.href = "newtestADHD?babyid=" + babyid;
+        //         } else {
+        //             $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+        //         }
+        //     }
 
-        })
+        // })
     }
 </script>

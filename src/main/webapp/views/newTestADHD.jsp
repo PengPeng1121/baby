@@ -109,19 +109,19 @@
                                         <s:property value="#question.description"/>
                                     </td>
                                     <td style="width:50px" onclick="select(this)">
-                                        <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
+                                        <span class="answer-<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
                                     <td style="width:50px" onclick="select(this)">
-                                        <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
+                                        <span class="answer-<s:property value="#question.ordinal"/> b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
                                     <td style="width:50px" onclick="select(this)">
-                                        <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
+                                        <span class="answer-<s:property value="#question.ordinal"/> c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
                                     <td style="width:50px" onclick="select(this)">
-                                        <span class="<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
+                                        <span class="answer-<s:property value="#question.ordinal"/> d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
                                 </tr>
@@ -146,7 +146,7 @@
 
     var questionSum = 26;
     var questionScore = [0,0,0,0];
-    var result = 
+    var result = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 
 
@@ -177,25 +177,18 @@
 
 
         for (var q = 1; q <= questionSum; q++) {
-            
 
-            if ($(".question." + q).html()) {
-                temp = $("input:radio[name="+ q +"]:checked").val();
-                temp = parseInt(temp);
-                if (temp === 0) {
-                    if(q < 10){
-                        questionScore[1] += 1;
-                        continue;
-                    }
-                    if(q < 20){
-                        questionScore[2] += 1;
-                        continue;
-                    }
-                    if(q < 26){
-                        questionScore[3] += 1;
-                        continue;
-                    }
-                }
+            if(q < 10){
+                questionScore[1] += result[q-1];
+                continue;
+            }
+            if(q < 20){
+                questionScore[2] += result[q-1];
+                continue;
+            }
+            if(q < 26){
+                questionScore[3] += result[q-1];
+                continue;
             }
         }
         return true;
@@ -234,6 +227,24 @@
 
     function select(target) {
         var $target = $(target);
+        var $span = $target.find('span');
+        var $parent = $target.parent();
+        var $span1 = $($parent.find('span')[0]);
+        var $span2 = $($parent.find('span')[1]);
+        var $span3 = $($parent.find('span')[2]);
+        var $span4 = $($parent.find('span')[3]);
+        
+        // 去掉原有选项
+        $span1.addClass('hide').removeClass('show');
+        $span2.addClass('hide').removeClass('show');
+        $span3.addClass('hide').removeClass('show');
+        $span4.addClass('hide').removeClass('show');
+        
+        $span.addClass('show').removeClass('hide');
+        var questionIndex = $span.attr('class').split(' ')[0].replace('answer-', '');
+        var value = resultMap[$span.attr('class').split(' ')[1]]
+        result [questionIndex-1] = value
+        console.log(result)
     }
 
 </script>
