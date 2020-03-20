@@ -35,8 +35,14 @@
         <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
 
-        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
-        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaDDST.png" alt="Logo">
+        <s:if test="hospital.name == '河马儿科'">
+            <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
+            <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaDDST.png" alt="Logo">
+        </s:if>
+        <s:else>
+            <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
+            <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">DDST筛查</h1>
+        </s:else>
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>

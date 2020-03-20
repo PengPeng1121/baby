@@ -32,10 +32,19 @@
     
     <div class="container">
         <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
-        <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">感觉统合</h1>
+        
+        <s:if test="hospital.name == '河马儿科'">
+            <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
+            <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
+        </s:if>
+        <s:else>
+            <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
+            <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">感觉统合</h1>
+        </s:else>
 
-        <div class="panel panel-default front-panel" id="info">
+
+
+        <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
             <div class="panel-body front-no-padding" style="padding: 15px;">
                 <table style="width: 100%">
@@ -51,6 +60,9 @@
             </div>
         </div>
         <input type="hidden" id="resultID" value="<s:property value="resultFeel.id"/>">
+        <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
+        <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
+         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
 
         <input type="hidden" id="days" value="<s:property value="days"/>">
 
@@ -133,15 +145,28 @@
         </table>
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
+            <div class="panel-heading" id="headRemark">医师评价及建议</div>
+            <!-- <div class="panel-body front-no-padding">
+                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+            </div> -->
             <div class="panel-body front-no-padding">
-                <textarea rows="4" style="resize:none;border: 0;width: 100%;height: 100%" id="doctorRemark"></textarea>
+                <textarea id="doctorRemark" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <div id="doctorRemarkText" style="display: none;"></div>
             </div>
         </div>
-        <div style="width:270px;float: right">
-            <div ><p style="margin-top: 50px;font-size: 16px;" id="tester">测评者： _______________</p></div>
+        <!-- <div style="width:270px;float: right">
+            <div ><p style="margin-top: 50px;font-size: 16px;">测评者： _______________</p></div>
             <div ><a type="button" class="btn btn-primary noprint pull-right print" style="margin:50px 10px 20px 0px;">打印结果</a></div>
+        </div>　 -->
+        <div style="width:270px;float: right">
+            <div id="tester"><p style="margin-top: 20px;font-size: 16px;">测评者： <input  id="testerName"/> </p></div>
+            <div id="testerPrint" style="display: none"><p style="margin-top: 20px;font-size: 16px;"  id="testerPrintName"></p></div>
+            <div >
+                <a type="button" class="btn btn-primary noprint pull-right print" style="margin:20px 10px 20px 0px;">打印结果</a>
+                <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
+            </div>
         </div>　
+
     </div>
     <footer class="footer-default noprint">
         <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
@@ -164,67 +189,10 @@
     }
 
 
-    
-    
-    
-
     // 柱状图数据
-
-
-
-
     $(function () {
         var chart1,
             chart2;
-        $('.print').click(function(){
-            var s1 = $('#s1').val();
-            var doctorRemark = $('#doctorRemark').val();
-            var resultID = +$('#resultID').val();
-            var data = "{";
-            data += "'resultAdvice':'" + s1 + "',";
-            data += "'doctorAdvice':'" + doctorRemark + "',";
-            data += "'id':'" + resultID + "'}";
-            
-
-            $.ajax({
-                url: 'saveAdvice',
-                type: 'post',
-                data: eval('(' + data + ')'),
-                success:function () {
-                    $('.front-inner').css({
-                        padding: '0px'
-                    });
-                    $('.panel').css({
-                        margin: '0px'
-                    });
-                    $('h1').css({
-                        'font-size': '20px'
-                    });
-                    $('h2').css({
-                        'font-size': '15px'
-                    });
-                    $('#column').css({
-                        width: '300px',
-                        height: '300px',
-                        marginLeft: '20px'
-                    });
-                    $('#spider').css({
-                        width: '400px',
-                        height: '300px',
-                        marginLeft: '10px'
-                    });
-                    $('#tester').css({
-                        marginTop: '5px'
-                    })
-                    
-                    chart1.reflow();
-                    chart2.reflow();
-                    window.print();
-                }
-            })
-
-            
-        })
 
         var categories =  ['前庭失衡', '触觉过分<br/>防御', '本体感失调', '学习能力<br/>发展不足'];
         var result =  [a1, a2, a3, a4];
@@ -357,6 +325,86 @@
         }, function(c){
             chart2 = c;
         });
+
+
+        $.windowbox = { 
+            //定义一个方法aa 
+            redraw: function(){ 
+                $("title").html('2020');
+                $(".navbar").hide();
+                $('.front-inner').css({
+                    padding: '0px'
+                });
+
+                $('h1').css({
+                    'font-size': '20px'
+                });
+                $('h2').css({
+                    'font-size': '15px'
+                });
+                $('#column').css({
+                    width: '300px',
+                    height: '300px'
+                });
+                $('#spider').css({
+                    width: '300px',
+                    height: '300px'
+                });
+                chart1.reflow();
+                chart2.reflow();
+                $('#hema').css({
+                    'height': '60px',
+                    'width': '360px'
+                })
+                $('#ruiweiyue').css({
+                    'height': '60px',
+                    'width': '60px'
+                })
+                $('#info').css({
+                    'margin-top': '60px'
+                });
+
+                $('#headRemark').css({
+                    'padding': '5px'
+                });
+                
+                var remark = $('#doctorRemark').val();
+                var realRemark = '';
+                realRemark = remark.replace(/\n/g, "<br/>");
+                $('#doctorRemarkText').html(realRemark);
+                $('#doctorRemarkText').show();
+                $('#doctorRemark').hide();
+                var testerName = $('#testerName').val();
+                $('#testerPrintName').text('测评者:' + testerName);
+                $('#testerPrint').show();
+                $('#tester').hide();
+                window.scrollTo(0,0);
+            }
+        }  
+        $('.print').click(function(){
+            // 保存评价
+            $.windowbox.redraw();
+            var resultID = +$('#resultID').val();
+            var data = "{";
+            var  resultRecord = {};
+            var testerName = $("#testerName").val();
+            var remark = $('#doctorRemarkText').html() + '';
+            var data = "{";
+            data += "'resultRecord.id':" + resultID + "}";
+            data = eval('(' + data + ')');
+            data['resultRecord.testerName'] = testerName;
+            data['resultRecord.remark'] = remark;
+            $.ajax({
+                url: 'saveRecordFeel',
+                type: 'post',
+                data: data,
+                success:function (json) {
+                     window.print();
+                }
+            })
+        })
+
+
     });
 
 
