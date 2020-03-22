@@ -3,12 +3,15 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultFeelManager;
+import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultFeel;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
 import com.pp.common.constant.util.ExactAgeUtil;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.BeanUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -25,10 +28,12 @@ public class ResultFeelAction {
     private String stime;//检查日期
     private Hospital hospital;
 
-    private String resultAdvice;
-    private String doctorAdvice;
+//    private String resultAdvice;
+//    private String doctorAdvice;
     private String days;
     private String exactAge;
+    private TestResultRecord resultRecord;
+
     public String showResultFeel() {
         resultFeel = ResultFeelManager.findResultByid(id);
         //实足年龄
@@ -42,28 +47,64 @@ public class ResultFeelAction {
         days = Math.round((differentDays(baby.getBirthday(),new Date()))/30.4)+"";
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultFeel.getTime());
         hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultRecord = TestResultRecordManager.find(25,id);
+        if(resultRecord == null){
+            resultRecord = new TestResultRecord();
+            resultRecord.setTesterName("null");
+            resultRecord.setRemark("null");
+        }
         return SUCCESS;
     }
 
-    public String saveAdvice() {
-        if(StringUtils.isBlank(resultAdvice) && StringUtils.isBlank(doctorAdvice)){
-            return SUCCESS;
-        }else if(StringUtils.isNotEmpty(resultAdvice) && resultAdvice.length()>300){
-            return "fail";
-        }else if(StringUtils.isNotEmpty(doctorAdvice) && doctorAdvice.length()>300){
-            return "fail";
+//    public String saveAdvice() {
+//        if(StringUtils.isBlank(resultAdvice) && StringUtils.isBlank(doctorAdvice)){
+//            return SUCCESS;
+//        }else if(StringUtils.isNotEmpty(resultAdvice) && resultAdvice.length()>300){
+//            return "fail";
+//        }else if(StringUtils.isNotEmpty(doctorAdvice) && doctorAdvice.length()>300){
+//            return "fail";
+//        }
+//        resultFeel = ResultFeelManager.findResultByid(id);
+//        if(resultFeel==null){
+//            return "fail";
+//        }
+//        if(StringUtils.isNotEmpty(resultAdvice)){
+//            resultFeel.setResultAdvice(resultAdvice);
+//        }
+//        if(StringUtils.isNotEmpty(doctorAdvice)){
+//            resultFeel.setDoctorAdvice(doctorAdvice);
+//        }
+//        ResultFeelManager.saveAdvice(resultFeel);
+//        return SUCCESS;
+//    }
+
+    //保存记录，没有新增，有修改
+    public String saveRecordFeel(){
+        TestResultRecord record = TestResultRecordManager.find(25,resultRecord.getResultId());
+        if(record==null){
+            //保存
+            resultRecord.setTestId(25);
+            resultRecord.setVersion("1");
+            resultRecord.setHospitalId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            resultRecord.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            resultRecord.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+            resultRecord.setCreateUser((String) ActionContext.getContext().getSession().get("username"));
+            resultRecord.setUpdateTime(new java.util.Date());
+            resultRecord.setCreateTime(new java.util.Date());
+            TestResultRecordManager.save(resultRecord);
+        }else {
+            //修改
+            TestResultRecord updateRecord = new TestResultRecord();
+            BeanUtils.copyProperties(record,updateRecord);
+            Integer version = Integer.parseInt(record.getVersion());
+            version = version +1;//升版本
+            updateRecord.setTesterName(resultRecord.getTesterName());
+            updateRecord.setVersion(version.toString());
+            updateRecord.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+            updateRecord.setRemark(resultRecord.getRemark());
+            updateRecord.setUpdateTime(new java.util.Date());
+            TestResultRecordManager.update(updateRecord);
         }
-        resultFeel = ResultFeelManager.findResultByid(id);
-        if(resultFeel==null){
-            return "fail";
-        }
-        if(StringUtils.isNotEmpty(resultAdvice)){
-            resultFeel.setResultAdvice(resultAdvice);
-        }
-        if(StringUtils.isNotEmpty(doctorAdvice)){
-            resultFeel.setDoctorAdvice(doctorAdvice);
-        }
-        ResultFeelManager.saveAdvice(resultFeel);
         return SUCCESS;
     }
 
@@ -120,21 +161,21 @@ public class ResultFeelAction {
         this.resultFeel = resultFeel;
     }
 
-    public String getResultAdvice() {
-        return resultAdvice;
-    }
-
-    public void setResultAdvice(String resultAdvice) {
-        this.resultAdvice = resultAdvice;
-    }
-
-    public String getDoctorAdvice() {
-        return doctorAdvice;
-    }
-
-    public void setDoctorAdvice(String doctorAdvice) {
-        this.doctorAdvice = doctorAdvice;
-    }
+//    public String getResultAdvice() {
+//        return resultAdvice;
+//    }
+//
+//    public void setResultAdvice(String resultAdvice) {
+//        this.resultAdvice = resultAdvice;
+//    }
+//
+//    public String getDoctorAdvice() {
+//        return doctorAdvice;
+//    }
+//
+//    public void setDoctorAdvice(String doctorAdvice) {
+//        this.doctorAdvice = doctorAdvice;
+//    }
 
     public String getDays() {
         return days;
@@ -151,4 +192,14 @@ public class ResultFeelAction {
     public void setExactAge(String exactAge) {
         this.exactAge = exactAge;
     }
+
+    public TestResultRecord getResultRecord() {
+        return resultRecord;
+    }
+
+    public void setResultRecord(TestResultRecord resultRecord) {
+        this.resultRecord = resultRecord;
+    }
+
+
 }
