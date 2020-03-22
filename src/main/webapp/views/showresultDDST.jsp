@@ -507,7 +507,7 @@
             var testerName = $("#testerName").val();
             var remark = $('#doctorRemarkText').html() + '';
             var data = "{";
-            data += "'resultRecord.id':" + resultID + "}";
+            data += "'resultRecord.resultId':" + resultID + "}";
             data = eval('(' + data + ')');
             data['resultRecord.testerName'] = testerName;
             data['resultRecord.remark'] = remark;
