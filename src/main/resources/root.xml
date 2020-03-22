@@ -94,6 +94,12 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--多动症测试-->
+        <action name="newtestADHD" method="newTestADHD" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestADHD.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -126,6 +132,11 @@
         <!--小儿智能发育筛查-->
         <action name="showresultDDST" method="showResultDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
             <result name="success" >views/showresultDDST.jsp</result>
+        </action>
+
+        <!--多动症结果-->
+        <action name="showresultADHD" method="showResultADHD" class="com.free4lab.babycheckup.action.ResultADHDAction">
+            <result name="success" >views/showresultADHD.jsp</result>
         </action>
 
         <!--小儿智能发育筛查的测评医生评价-->
@@ -193,6 +204,22 @@
         <action name="saveresult2016" method="saveResult2016" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">result2016,result2016.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 0-6 (2016)版 -->
+        <action name="saveresultADHD" method="saveResultADHD" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultADHD,resultADHD.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--多动症 评语-->
+        <action name="saveRecordADHD" method="saveRecordADHD" class="com.free4lab.babycheckup.action.ResultADHDAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>

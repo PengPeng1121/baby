@@ -44,6 +44,7 @@ public class TestAction {
     private List<ResultQiZhi> resultQiZhiList = new ArrayList<ResultQiZhi>();
     private List<ResultFeel> resultFeelList = new ArrayList<ResultFeel>();
     private List<Result2016> result2016List = new ArrayList<Result2016>();
+    private List<ResultADHD> resultADHDList = new ArrayList<ResultADHD>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -60,6 +61,7 @@ public class TestAction {
     private ResultQiZhi resultQiZhi;
     private ResultCognize resultCognize;
     private Result2016 result2016;
+    private ResultADHD resultADHD;
     private String days;
     private int day;
     //早产天数
@@ -275,6 +277,7 @@ public class TestAction {
         resultQiZhiList = ResultQiZhiManager.findResultBybid(babyid);
         resultFeelList = ResultFeelManager.findResultBybid(babyid);
         result2016List = ResultManager2016.findResultBybid(babyid);
+        resultADHDList = ResultADHDManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -926,6 +929,42 @@ public class TestAction {
         }
         return SUCCESS;
     }
+
+    // 多动症
+    public String newTestADHD(){
+
+        if(!canTest(27)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 27;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(27);
+        questionList = QuestionManager.findByTestid(27);
+
+        return SUCCESS;
+    }
+
+    // 多动症
+    public String saveResultADHD(){
+        try {
+            resultADHD.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            resultADHD.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            resultADHD.setTestId(27);
+            resultADHD.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            resultADHD.setState("finished");
+            if(!subTestTimes(27)){
+                return "fail";
+            }
+            ResultADHDManager.saveResult(resultADHD);
+        }catch (Exception e){
+
+        }
+        return SUCCESS;
+    }
+
 
     private String calculateP(Integer p){
         String pStr = "0~50";
