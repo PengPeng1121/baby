@@ -29,6 +29,8 @@
 <div class="front-inner front-inner-media">
     <div class="container">
 
+        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
+        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">多动症筛查</h1>
 
         <input type="hidden" id="resultID" value="<s:property value="resultADHD.id"/>">
         <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
