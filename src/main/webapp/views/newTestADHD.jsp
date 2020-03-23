@@ -143,10 +143,10 @@
     var questionScore = [0,0,0,0];
     var result = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     var resultMap = {
-        a: 1,
-        b: 2,
-        c: 3,
-        d: 4
+        a: 0,
+        b: 1,
+        c: 2,
+        d: 3
     }
 
 
@@ -175,20 +175,18 @@
         //     }
         // }
 
-
+        questionScore = [0,0,0,0];
         for (var q = 1; q <= questionSum; q++) {
 
             if(q < 10){
                 questionScore[1] += result[q-1];
-                continue;
-            }
-            if(q < 20){
+
+            } else if (q < 19){
                 questionScore[2] += result[q-1];
-                continue;
-            }
-            if(q < 26){
+
+            } else {
                 questionScore[3] += result[q-1];
-                continue;
+
             }
         }
         return true;
