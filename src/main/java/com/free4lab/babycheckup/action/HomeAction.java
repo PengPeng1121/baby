@@ -3,6 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
+import com.free4lab.babycheckup.model.ResultADHD;
 import com.opensymphony.xwork2.ActionContext;
 
 public class HomeAction {
@@ -57,7 +58,7 @@ public class HomeAction {
         numberOfResultQiZhi = ResultQiZhiManager.countResultByHosIdAndTestId(hoid,24);
         numberOfResultFeel = ResultFeelManager.countResultByHosIdAndTestId(hoid,25);
         numberOfResult2016 = ResultManager2016.countResultByHosIdAndTestId(hoid,26);
-        numberOfResultADHD = ResultManager2016.countResultByHosIdAndTestId(hoid,27);
+        numberOfResultADHD = ResultADHDManager.countResultByHosIdAndTestId(hoid,27);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
