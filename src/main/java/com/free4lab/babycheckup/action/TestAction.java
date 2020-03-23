@@ -1333,4 +1333,20 @@ public class TestAction {
     public void setResult2016(Result2016 result2016) {
         this.result2016 = result2016;
     }
+
+    public List<ResultADHD> getResultADHDList() {
+        return resultADHDList;
+    }
+
+    public void setResultADHDList(List<ResultADHD> resultADHDList) {
+        this.resultADHDList = resultADHDList;
+    }
+
+    public ResultADHD getResultADHD() {
+        return resultADHD;
+    }
+
+    public void setResultADHD(ResultADHD resultADHD) {
+        this.resultADHD = resultADHD;
+    }
 }

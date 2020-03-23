@@ -21,6 +21,7 @@ public class HomeAction {
     private long numberOfResultQiZhi;
     private long numberOfResultFeel;
     private long numberOfResult2016;
+    private long numberOfResultADHD;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -34,6 +35,7 @@ public class HomeAction {
     private Integer resultQiZhiLeftTimes;
     private Integer resultFeelLeftTimes;
     private Integer result2016LeftTimes;
+    private Integer resultADHDLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -55,6 +57,7 @@ public class HomeAction {
         numberOfResultQiZhi = ResultQiZhiManager.countResultByHosIdAndTestId(hoid,24);
         numberOfResultFeel = ResultFeelManager.countResultByHosIdAndTestId(hoid,25);
         numberOfResult2016 = ResultManager2016.countResultByHosIdAndTestId(hoid,26);
+        numberOfResultADHD = ResultManager2016.countResultByHosIdAndTestId(hoid,27);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -79,6 +82,7 @@ public class HomeAction {
             HospitalTestTimes timesQiZhi = HospitalTestTimesManager.findTimes(hoid,24);
             HospitalTestTimes timesFeel = HospitalTestTimesManager.findTimes(hoid,25);
             HospitalTestTimes times2016 = HospitalTestTimesManager.findTimes(hoid,26);
+            HospitalTestTimes timesADHD = HospitalTestTimesManager.findTimes(hoid,27);
             if(times0_6!=null){
                 result0_6LeftTimes=times0_6.getLeftTimes();
             }
@@ -117,6 +121,9 @@ public class HomeAction {
             }
             if(times2016!=null){
                 result2016LeftTimes=times2016.getLeftTimes();
+            }
+            if(timesADHD!=null){
+                resultADHDLeftTimes=timesADHD.getLeftTimes();
             }
         }
         return "success";
@@ -343,5 +350,21 @@ public class HomeAction {
 
     public void setResult2016LeftTimes(Integer result2016LeftTimes) {
         this.result2016LeftTimes = result2016LeftTimes;
+    }
+
+    public long getNumberOfResultADHD() {
+        return numberOfResultADHD;
+    }
+
+    public void setNumberOfResultADHD(long numberOfResultADHD) {
+        this.numberOfResultADHD = numberOfResultADHD;
+    }
+
+    public Integer getResultADHDLeftTimes() {
+        return resultADHDLeftTimes;
+    }
+
+    public void setResultADHDLeftTimes(Integer resultADHDLeftTimes) {
+        this.resultADHDLeftTimes = resultADHDLeftTimes;
     }
 }
