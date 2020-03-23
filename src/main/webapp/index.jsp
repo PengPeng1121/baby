@@ -458,7 +458,7 @@
                                             <span>请购买</span>
                                         </s:if>
                                         <s:else>
-                                            <a href="record?testId=26" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                            <a href="record?testId=27" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                         </s:else>
                                     </div>
                                 </div>
