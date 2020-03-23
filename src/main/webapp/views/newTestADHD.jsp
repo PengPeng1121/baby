@@ -68,59 +68,54 @@
                 <input id="questionTypeSum" type="hidden" value="<s:property value="questionTypeList.size()"/>">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                    <tr>
-                        <td>
+                    <tr style="text-align: center;">
+                        <td style="width: 500px">
                             
                         </td>
-                        <td>
+                        <td style="width: 50px">
                             从不或者很少<br>(从不)
                         </td>
-                        <td>
+                        <td style="width: 50px">
                             有时<br>(轻度)
                         </td>
-                        <td>
+                        <td style="width: 50px">
                             经常<br>(中度)
                         </td>
-                        <td>
+                        <td style="width: 50px">
                             非常常见<br>(严重)
                         </td>
                     </tr>
                     <s:iterator value="questionTypeList" var="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <s:if test="#type == 101">
-                                <td colspan="3">注意力不集中组</td>
+                                <td colspan="5">注意力不集中组</td>
                             </s:if>
                             <s:if test="#type == 102">
-                                <td colspan="3">多动/冲动组</td>
+                                <td colspan="5">多动/冲动组</td>
                             </s:if>
                             <s:if test="#type == 103">
-                                <td colspan="3">对立违抗性障碍组</td>
+                                <td colspan="5">对立违抗性障碍组</td>
                             </s:if>
-                        </tr>
-                        <tr>
-                            <td style="display: none">序号</td>
-                            <td>问题</td>
-                            <td>答题情况</td>
                         </tr>
                         <s:iterator value="questionList" var="question">
                             <s:if test="#question.type == #type">
                                 <tr class="question">
-                                    <td style="width:60%">
+                                    <td style="width: 60%"> 
                                         <s:property value="#question.description"/>
                                     </td>
-                                    <td style="width:50px" onclick="select(this)">
+                                    <td style="width: 10%" onclick="select(this)">
                                         <span class="answer-<s:property value="#question.ordinal"/> a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
-                                    <td style="width:50px" onclick="select(this)">
+                                    <td style="width: 10%" onclick="select(this)">
                                         <span class="answer-<s:property value="#question.ordinal"/> b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
-                                    <td style="width:50px" onclick="select(this)">
+                                    <td style="width: 10%" onclick="select(this)">
                                         <span class="answer-<s:property value="#question.ordinal"/> c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
-                                    <td style="width:50px" onclick="select(this)">
+                                    <td style="width: 10%" onclick="select(this)">
                                         <span class="answer-<s:property value="#question.ordinal"/> d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                         </span>
                                     </td>
@@ -147,7 +142,12 @@
     var questionSum = 26;
     var questionScore = [0,0,0,0];
     var result = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-
+    var resultMap = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4
+    }
 
 
     function prepare() {
