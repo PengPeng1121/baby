@@ -176,7 +176,7 @@
 <script src="statics/highcharts/highcharts.js"></script>
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
-
+    window.flag = 0;
     var a1 = +$('#a1').text();
     var a2 = +$('#a2').text();
     var a3 = +$('#a3').text();
@@ -325,6 +325,25 @@
         }, function(c){
             chart2 = c;
         });
+
+
+        var inter = setInterval(function() {
+            if (window.flag === 0) {
+                var remarkOld = $("#remarkOld").val();
+                if (remarkOld && remarkOld!= 'null') {
+                    var reg = new RegExp("<br>","g");//g,表示全部替换。
+                    remarkOld = remarkOld.replace(reg,"\n");
+                    $('#doctorRemark').html(remarkOld);
+                }
+
+                var testerNameOld = $("#testerNameOld").val();
+                if (testerNameOld && testerNameOld!= 'null') {
+                    $('#testerName').val(testerNameOld);
+                }
+                clearInterval(inter);
+            }
+        }, 200)
+
 
 
         $.windowbox = { 
