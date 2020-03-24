@@ -37,7 +37,7 @@ public class HospitalTestTimesDAO extends AbstractDAO<HospitalTestTimes> {
         return new NoCacheEntityManagerHelper();
     }
 
-
+   // 全部卡片配置总次数
     public HospitalTestTimes findTimesByHospitalId(Integer hospitalId){
         List<HospitalTestTimes> list = findByProperty("hospitalId",hospitalId);
         if(list.size() == 1){
@@ -47,6 +47,12 @@ public class HospitalTestTimesDAO extends AbstractDAO<HospitalTestTimes> {
             return null;
         }
     }
+
+    // 卡片独立配置次数
+    public List<HospitalTestTimes> findTimesListByHospitalId(Integer hospitalId){
+        return findByProperty("hospitalId",hospitalId);
+    }
+
 
     public HospitalTestTimes findTimes(Integer hospitalId,Integer testId){
         List<HospitalTestTimes> list = findByProperty2("hospitalId",hospitalId,"testId",testId);

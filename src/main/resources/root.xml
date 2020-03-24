@@ -100,6 +100,12 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--感统2020-->
+        <action name="newtestFeel2020" method="newTestFeel2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestFeel2020.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -183,6 +189,10 @@
             <result name="success" >views/showresultFeel.jsp</result>
         </action>
 
+        <!--儿童感受2020 -->
+        <action name="showresultFeel2020" method="showResultFeel2020" class="com.free4lab.babycheckup.action.ResultFeel2020Action">
+            <result name="success" >views/showresultFeel2020.jsp</result>
+        </action>
 
         <!--儿童感受 评语-->
         <action name="saveRecordFeel" method="saveRecordFeel" class="com.free4lab.babycheckup.action.ResultFeelAction">
@@ -208,7 +218,7 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!-- 0-6 (2016)版 -->
+        <!--多动症 -->
         <action name="saveresultADHD" method="saveResultADHD" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultADHD,resultADHD.id</param>
@@ -216,8 +226,24 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--多动症 -->
+        <action name="saveresultFeel2020" method="saveResultFeel2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultFeel2020,resultFeel2020.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--多动症 评语-->
         <action name="saveRecordADHD" method="saveRecordADHD" class="com.free4lab.babycheckup.action.ResultADHDAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--feel2020 评语-->
+        <action name="saveRecordFeel2020" method="saveRecordFeel2020" class="com.free4lab.babycheckup.action.ResultFeel2020Action">
             <result type="json" name="success">
                 <param name="includeProperties">resultRecord</param>
             </result>

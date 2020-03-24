@@ -8,7 +8,6 @@ import com.pp.common.constant.result132.Level;
 import com.pp.common.constant.resultCognize.Evaluation;
 import com.pp.common.constant.resultCognize.Talent;
 import com.pp.common.constant.resultFeel.FeelUtil;
-import com.pp.common.constant.resultQiZhi.Month1_4;
 import com.pp.common.constant.resultQiZhi.QiZhiDTO;
 import com.pp.common.constant.resultQiZhi.QiZhiVO;
 import com.pp.common.constant.util.*;
@@ -45,6 +44,7 @@ public class TestAction {
     private List<ResultFeel> resultFeelList = new ArrayList<ResultFeel>();
     private List<Result2016> result2016List = new ArrayList<Result2016>();
     private List<ResultADHD> resultADHDList = new ArrayList<ResultADHD>();
+    private List<ResultFeel2020> resultFeel2020List = new ArrayList<ResultFeel2020>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -62,6 +62,7 @@ public class TestAction {
     private ResultCognize resultCognize;
     private Result2016 result2016;
     private ResultADHD resultADHD;
+    private ResultFeel2020 resultFeel2020;
     private String days;
     private int day;
     //早产天数
@@ -278,6 +279,7 @@ public class TestAction {
         resultFeelList = ResultFeelManager.findResultBybid(babyid);
         result2016List = ResultManager2016.findResultBybid(babyid);
         resultADHDList = ResultADHDManager.findResultBybid(babyid);
+        resultFeel2020List = ResultFeel2020Manager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -965,6 +967,40 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // feel2020
+    public String newTestFeel2020(){
+
+        if(!canTest(28)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 28;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(28);
+        questionList = QuestionManager.findByTestid(28);
+
+        return SUCCESS;
+    }
+
+    // feel2020
+    public String saveResultFeel2020(){
+        try {
+            resultFeel2020.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+            resultFeel2020.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+            resultFeel2020.setTestId(28);
+            resultFeel2020.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+            resultFeel2020.setState("finished");
+            if(!subTestTimes(28)){
+                return "fail";
+            }
+            ResultFeel2020Manager.saveResult(resultFeel2020);
+        }catch (Exception e){
+
+        }
+        return SUCCESS;
+    }
 
     private String calculateP(Integer p){
         String pStr = "0~50";
@@ -1348,5 +1384,21 @@ public class TestAction {
 
     public void setResultADHD(ResultADHD resultADHD) {
         this.resultADHD = resultADHD;
+    }
+
+    public List<ResultFeel2020> getResultFeel2020List() {
+        return resultFeel2020List;
+    }
+
+    public void setResultFeel2020List(List<ResultFeel2020> resultFeel2020List) {
+        this.resultFeel2020List = resultFeel2020List;
+    }
+
+    public ResultFeel2020 getResultFeel2020() {
+        return resultFeel2020;
+    }
+
+    public void setResultFeel2020(ResultFeel2020 resultFeel2020) {
+        this.resultFeel2020 = resultFeel2020;
     }
 }

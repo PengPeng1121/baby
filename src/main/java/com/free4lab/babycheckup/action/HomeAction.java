@@ -3,8 +3,10 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
-import com.free4lab.babycheckup.model.ResultADHD;
 import com.opensymphony.xwork2.ActionContext;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 
 public class HomeAction {
 
@@ -23,6 +25,7 @@ public class HomeAction {
     private long numberOfResultFeel;
     private long numberOfResult2016;
     private long numberOfResultADHD;
+    private long numberOfResultFeel2020;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -37,6 +40,7 @@ public class HomeAction {
     private Integer resultFeelLeftTimes;
     private Integer result2016LeftTimes;
     private Integer resultADHDLeftTimes;
+    private Integer resultFeel2020LeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -70,61 +74,57 @@ public class HomeAction {
             }
             totalLeftTimes = times.getLeftTimes();
         }else {
-            HospitalTestTimes times0_6 = HospitalTestTimesManager.findTimes(hoid,1);
-            HospitalTestTimes times3_6 = HospitalTestTimesManager.findTimes(hoid,2);
-            HospitalTestTimes times0_2 = HospitalTestTimesManager.findTimes(hoid,16);
-            HospitalTestTimes times50 = HospitalTestTimesManager.findTimes(hoid,17);
-            HospitalTestTimes times132 = HospitalTestTimesManager.findTimes(hoid,18);
-            HospitalTestTimes timesCognize = HospitalTestTimesManager.findTimes(hoid,19);
-            HospitalTestTimes times0_3 = HospitalTestTimesManager.findTimes(hoid,20);
-            HospitalTestTimes timesDDST = HospitalTestTimesManager.findTimes(hoid,21);
-            HospitalTestTimes timesNei = HospitalTestTimesManager.findTimes(hoid,22);
-            HospitalTestTimes timesGroup = HospitalTestTimesManager.findTimes(hoid,23);
-            HospitalTestTimes timesQiZhi = HospitalTestTimesManager.findTimes(hoid,24);
-            HospitalTestTimes timesFeel = HospitalTestTimesManager.findTimes(hoid,25);
-            HospitalTestTimes times2016 = HospitalTestTimesManager.findTimes(hoid,26);
-            HospitalTestTimes timesADHD = HospitalTestTimesManager.findTimes(hoid,27);
-            if(times0_6!=null){
-                result0_6LeftTimes=times0_6.getLeftTimes();
-            }
-            if(times3_6!=null){
-                result3_6LeftTimes=times3_6.getLeftTimes();
-            }
-            if(times0_2!=null){
-                result0_2LeftTimes=times0_2.getLeftTimes();
-            }
-            if(times50!=null){
-                result50LeftTimes=times50.getLeftTimes();
-            }
-            if(times132!=null){
-                result132LeftTimes=times132.getLeftTimes();
-            }
-            if(timesCognize!=null){
-                resultCognizeLeftTimes=timesCognize.getLeftTimes();
-            }
-            if(times0_3!=null){
-                result0_3LeftTimes=times0_3.getLeftTimes();
-            }
-            if(timesDDST!=null){
-                resultDDSTLeftTimes=timesDDST.getLeftTimes();
-            }
-            if(timesNei!=null){
-                resultNeiLeftTimes=timesNei.getLeftTimes();
-            }
-            if(timesGroup!=null){
-                resultGroupLeftTimes=timesGroup.getLeftTimes();
-            }
-            if(timesQiZhi!=null){
-                resultQiZhiLeftTimes=timesQiZhi.getLeftTimes();
-            }
-            if(timesFeel!=null){
-                resultFeelLeftTimes=timesFeel.getLeftTimes();
-            }
-            if(times2016!=null){
-                result2016LeftTimes=times2016.getLeftTimes();
-            }
-            if(timesADHD!=null){
-                resultADHDLeftTimes=timesADHD.getLeftTimes();
+            List<HospitalTestTimes> hospitalTestTimesList = HospitalTestTimesManager.findTimesListByHospitalId(hoid);
+            if (!CollectionUtils.isEmpty(hospitalTestTimesList)) {
+                for (HospitalTestTimes hospitalTestTimes : hospitalTestTimesList) {
+                    switch (hospitalTestTimes.getTestId()) {
+                        case 1:
+                            result0_6LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 2:
+                            result3_6LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 16:
+                            result0_2LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 17:
+                            result50LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 18:
+                            result132LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 19:
+                            resultCognizeLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 20:
+                            result0_3LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 21:
+                            resultDDSTLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 22:
+                            resultNeiLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 23:
+                            resultGroupLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 24:
+                            resultQiZhiLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 25:
+                            resultFeelLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 26:
+                            result2016LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 27:
+                            resultADHDLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 28:
+                            resultFeel2020LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                    }
+                }
             }
         }
         return "success";
@@ -367,5 +367,21 @@ public class HomeAction {
 
     public void setResultADHDLeftTimes(Integer resultADHDLeftTimes) {
         this.resultADHDLeftTimes = resultADHDLeftTimes;
+    }
+
+    public long getNumberOfResultFeel2020() {
+        return numberOfResultFeel2020;
+    }
+
+    public void setNumberOfResultFeel2020(long numberOfResultFeel2020) {
+        this.numberOfResultFeel2020 = numberOfResultFeel2020;
+    }
+
+    public Integer getResultFeel2020LeftTimes() {
+        return resultFeel2020LeftTimes;
+    }
+
+    public void setResultFeel2020LeftTimes(Integer resultFeel2020LeftTimes) {
+        this.resultFeel2020LeftTimes = resultFeel2020LeftTimes;
     }
 }
