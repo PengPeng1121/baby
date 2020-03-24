@@ -29,15 +29,13 @@
 <div class="front-inner front-inner-media">
     <div class="container">
 
-        <h2 style="padding-left:100px;text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
-        <h1 style="padding-left:100px;margin-top: 20px;margin-bottom: 20px;text-align: center;">多动症筛查</h1>
 
         <input type="hidden" id="resultID" value="<s:property value="resultADHD.id"/>">
         <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
         <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
 
-        <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
+        <div class="panel panel-default front-panel" id="info" style="margin-top: 20px">
             <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
             <div class="panel-body front-no-padding" style="padding: 15px;" id="headBasic">
                 <table style="width: 100%">
@@ -97,13 +95,28 @@
                         <!-- 评价 -->
                         <table class="table table-striped  table-bordered front-table">
                             <tr>
+                                <td style="font-weight: bold;font-size: 16px">
+                                    注意力不集中组
+                                </td>
+                            </tr>
+                            <tr>
                                 <td id="r1">
                                     
                                 </td>
                             </tr>
                             <tr>
+                                <td style="font-weight: bold;font-size: 16px">
+                                    多动/冲动组
+                                </td>
+                            </tr>
+                            <tr>
                                 <td id="r2">
                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;font-size: 16px">
+                                    对立违抗性障碍组
                                 </td>
                             </tr>
                             <tr>
@@ -155,9 +168,9 @@
     var a1 = parseInt($('#a1').text());
     var a2 = parseInt($('#a2').text());
     var a3 = parseInt($('#a3').text());
-    var r1 = '注意力不集中组:';
-    var r2 = '多动/冲动组：';
-    var r3 = '对立违抗性障碍组：';
+    var r1 = '结论:';
+    var r2 = '结论:';
+    var r3 = '结论:';
     if (a1 < 13) {
         r1 = r1 + '症状在临床上不显著'
     } else if (a1 < 18) {
@@ -334,7 +347,7 @@
             var testerName = $("#testerName").val();
             var remark = $('#doctorRemarkText').html() + '';
             var data = "{";
-            data += "'resultRecord.resultId':" + resultID + "}";
+            data += "'resultRecord.id':" + resultID + "}";
             data = eval('(' + data + ')');
             data['resultRecord.testerName'] = testerName;
             data['resultRecord.remark'] = remark;
