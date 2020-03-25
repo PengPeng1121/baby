@@ -257,23 +257,23 @@
                     var data = "{";
 
 
-                    data += "'resultFeel.a1':" + questionScore[1] + ",";
-                    data += "'resultFeel.a2':" + questionScore[2] + ",";
-                    data += "'resultFeel.a3':" + questionScore[3] + ",";
-                    data += "'resultFeel.a4':" + questionScore[4] + ",";
-                    data += "'resultFeel.a5':" + questionScore[5] + ",";
-                    data += "'resultFeel.a6':" + questionScore[6] + ",";
+                    data += "'resultFeel2020.a1':" + questionScore[1] + ",";
+                    data += "'resultFeel2020.a2':" + questionScore[2] + ",";
+                    data += "'resultFeel2020.a3':" + questionScore[3] + ",";
+                    data += "'resultFeel2020.a4':" + questionScore[4] + ",";
+                    data += "'resultFeel2020.a5':" + questionScore[5] + ",";
+                    data += "'resultFeel2020.a6':" + questionScore[6] + ",";
                     
                     
 
-                    data += "'resultFeel.babyId':" + $("#babyid").val() + "}";
+                    data += "'resultFeel2020.babyId':" + $("#babyid").val() + "}";
 
                     $.ajax({
                         url: 'saveresultFeel2020',
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
-                            window.location = "showresultFeel2020?id=" + json.resultFeel.id;
+                            window.location = "showresultFeel2020?id=" + json.resultFeel2020.id;
                         }
                     })
                 }

@@ -59,7 +59,7 @@
                 </table>
             </div>
         </div>
-        <input type="hidden" id="resultID" value="<s:property value="resultFeel.id"/>">
+        <input type="hidden" id="resultID" value="<s:property value="resultFeel2020.id"/>">
         <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
         <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
@@ -192,12 +192,12 @@
 <script src="statics/highcharts/highcharts-more.js"></script>
 <script type="text/javascript">
     window.flag = 0;
-    var a1 = +$('#a1').text();
-    var a2 = +$('#a2').text();
-    var a3 = +$('#a3').text();
-    var a4 = +$('#a4').text();
-    var a5 = +$('#a5').text();
-    var a6 = +$('#a6').text();
+    var a1 = +$('#a1').val();
+    var a2 = +$('#a2').val();
+    var a3 = +$('#a3').val();
+    var a4 = +$('#a4').val();
+    var a5 = +$('#a5').val();
+    var a6 = +$('#a6').val();
 
     var b1 = 20 + 15 * parseInt((a1-50)/ 10)
     var b2 = 20 + 15 * parseInt((a2-50)/ 10)
