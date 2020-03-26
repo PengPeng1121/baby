@@ -1,12 +1,15 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.manager.BabyManager;
+import com.free4lab.babycheckup.manager.HospitalManager;
 import com.free4lab.babycheckup.manager.ResultFeel2020Manager;
 import com.free4lab.babycheckup.manager.TestResultRecordManager;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
+import com.pp.common.constant.util.ExactAgeUtil;
 import org.springframework.beans.BeanUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,6 +24,7 @@ public class ResultFeel2020Action {
     private String stime;//检查日期
     private Hospital hospital;
     private String days;
+    private String exactAge;
     private TestResultRecord resultRecord;
 
     public String showResultFeel2020() {
@@ -29,7 +33,14 @@ public class ResultFeel2020Action {
         Calendar calendarTestTime = Calendar.getInstance();
         calendarTestTime.setTime(resultFeel2020.getTime());//检测时间
         baby = BabyManager.findById(resultFeel2020.getBabyId());
+
+        Calendar calendarBirthday = Calendar.getInstance();
+        calendarBirthday.setTime(baby.getBirthday());
+        int[] timeArray = ExactAgeUtil.getNatureAge(calendarBirthday,calendarTestTime);
+        exactAge = String.valueOf(timeArray[0])+"岁"+String.valueOf(timeArray[1])+"月"+String.valueOf(timeArray[2])+"日";
         days = Math.round((differentDays(baby.getBirthday(),new Date()))/30.4)+"";
+        stime = new SimpleDateFormat("yyyy-MM-dd").format(resultFeel2020.getTime());
+        hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         resultRecord = TestResultRecordManager.find(28,id);
         if(resultRecord == null){
             resultRecord = new TestResultRecord();
@@ -132,6 +143,13 @@ public class ResultFeel2020Action {
         this.days = days;
     }
 
+    public String getExactAge() {
+        return exactAge;
+    }
+
+    public void setExactAge(String exactAge) {
+        this.exactAge = exactAge;
+    }
 
     public TestResultRecord getResultRecord() {
         return resultRecord;
