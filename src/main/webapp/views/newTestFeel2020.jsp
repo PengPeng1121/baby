@@ -89,27 +89,29 @@
                                 【输入提示：根据儿童的情况选择“5从不”、“4很少”、“3有时候”、“2常常”、“1总是如此”。题中若包括多项，只要有一项符合就算。】
                             </td>
                         </tr>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <td>
+                               前脑平衡和大脑双侧分化 
+                            </td>
+                            <td style="font-weight: normal; font-size: 14px">总是、常常、有时候、很少、从不</td>
+                        </tr>
                     <s:iterator value="questionTypeList" var="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <s:if test="#type == 101">
-                                <td>前脑平衡和大脑双侧分化</td>
+                            <s:if test="#type == 112">
+                                <td colspan="2">脑神经心理抑制困难</td>
                             </s:if>
-                            <s:if test="#type == 102">
-                                <td>脑神经心理抑制困难</td>
+                            <s:if test="#type == 113">
+                                <td colspan="2">触觉防御过多及反应不足</td>
                             </s:if>
-                            <s:if test="#type == 103">
-                                <td>触觉防御过多及反应不足</td>
+                            <s:if test="#type == 114">
+                                <td colspan="2">发育期运动障碍</td>
                             </s:if>
-                            <s:if test="#type == 103">
-                                <td>发育期运动障碍</td>
+                            <s:if test="#type == 115">
+                                <td colspan="2">视觉空间，形态</td>
                             </s:if>
-                            <s:if test="#type == 103">
-                                <td>视觉空间，形态</td>
+                            <s:if test="#type == 116">
+                                <td colspan="2">本体觉（重力不安症）</td>
                             </s:if>
-                            <s:if test="#type == 106">
-                                <td>本体觉（重力不安症）</td>
-                            </s:if>
-                            <td>得分</td>
                         </tr>
                         <s:iterator value="questionList" var="question">
                             <s:if test="#question.type == #type">
@@ -118,11 +120,21 @@
                                         <s:property value="#question.description"/>
                                     </td>
                                     <td>
-                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="1" id="<s:property value="#question.ordinal"/>-1" /> <label for="<s:property value="#question.ordinal"/>-1">1</label>
-                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="2" id="<s:property value="#question.ordinal"/>-2" /> <label for="<s:property value="#question.ordinal"/>-2">2</label>
-                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="3" id="<s:property value="#question.ordinal"/>-3" /> <label for="<s:property value="#question.ordinal"/>-3">3</label>
-                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="4" id="<s:property value="#question.ordinal"/>-4" /> <label for="<s:property value="#question.ordinal"/>-4">4</label>
-                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="5" id="<s:property value="#question.ordinal"/>-5" /> <label for="<s:property value="#question.ordinal"/>-5">5</label>
+                                        <label for="<s:property value="#question.ordinal"/>-1">1</label>
+                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="1" id="<s:property value="#question.ordinal"/>-1" />
+
+                                        <label for="<s:property value="#question.ordinal"/>-2">2</label>
+                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="2" id="<s:property value="#question.ordinal"/>-2" /> 
+
+                                        <label for="<s:property value="#question.ordinal"/>-3">3</label>
+                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="3" id="<s:property value="#question.ordinal"/>-3" /> 
+
+                                        <label for="<s:property value="#question.ordinal"/>-4">4</label>
+                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="4" id="<s:property value="#question.ordinal"/>-4" /> 
+
+                                        <label for="<s:property value="#question.ordinal"/>-5">5</label>
+                                        <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="5" id="<s:property value="#question.ordinal"/>-5" /> 
+
                                     </td>
                                 </tr>
                             </s:if>
@@ -232,7 +244,7 @@
 
     function preview() {
         if(prepare()) {
-            $.frontModal({size: 'modal-md', title: '预览', href: 'modals/model_preview_resultFeel.jsp'});
+            $.frontModal({size: 'modal-md', title: '预览', href: 'modals/model_preview_resultFeel2020.jsp'});
         }
     }
 

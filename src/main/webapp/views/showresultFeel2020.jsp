@@ -81,15 +81,17 @@
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-                        <td class="col-md-3">评定项目</td>
-                        <td class="col-md-1">得分</td>
-                        <td class="col-md-2">评定结果</td>
+                        <td class="col-md-4">评定项目</td>
+                        <td class="col-md-3">原始分</td>
+                        <td class="col-md-3">T值</td>
+                        <td class="col-md-4">评定结果</td>
                         <!-- <td class="col-md-6">建议</td> -->
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>1.前脑平衡和大脑双侧分化</td>
+                        <td><s:property value="resultFeel2020.a1"/></td>
                         <td id="b1"></td>
                         <td id="r1"></td>
                         <!-- <td rowspan="5">
@@ -99,6 +101,7 @@
 
                     <tr>
                         <td>2.脑神经心理抑制困难</td>
+                        <td><s:property value="resultFeel2020.a2"/></td>
                         <td id="b2"></td>
                         <td id="r2"></td>
                         
@@ -107,6 +110,7 @@
 
                     <tr>
                         <td>3.触觉防御过多及反应不足</td>
+                        <td><s:property value="resultFeel2020.a3"/></td>
                         <td id="b3"></td>
                         <td id="r3"></td>
                         
@@ -115,12 +119,14 @@
 
                     <tr>
                         <td>4.发育期运动障碍</td>
+                        <td><s:property value="resultFeel2020.a4"/></td>
                         <td id="b4"></td>
                         <td id="r4"></td>
                         
                     </tr>
                     <tr>
                         <td>5.视觉空间，形态</td>
+                        <td><s:property value="resultFeel2020.a5"/></td>
                         <td id="b5"></td>
                         <td id="r5"></td>
                         
@@ -128,6 +134,7 @@
 
                     <tr>
                         <td>6.本体觉（重力不安症）</td>
+                        <td><s:property value="resultFeel2020.a6"/></td>
                         <td id="b6"></td>
                         <td id="r6"></td>
                         
@@ -206,12 +213,52 @@
     var b5 = 20 + 15 * parseInt((a5-50)/ 10)
     var b6 = 20 + 15 * parseInt((a6-50)/ 10)
 
-    $('#b1').text(b1)
-    $('#b2').text(b2)
-    $('#b3').text(b3)
-    $('#b4').text(b4)
-    $('#b5').text(b5)
-    $('#b6').text(b6)
+    var resultAll = [
+        {a:a1 ,b:0, c:''},
+        {a:a2 ,b:0, c:''},
+        {a:a3 ,b:0, c:''},
+        {a:a4 ,b:0, c:''},
+        {a:a5 ,b:0, c:''},
+        {a:a6 ,b:0, c:''}
+    ]
+    var r1,r2,r3,r4,r5,r6;
+
+    var lll = resultAll.length;
+    var a = 0;
+    var b = 0;
+    var c = '';
+    for (var i = 0; i < lll; i++) {
+        a = resultAll[i]['a'];
+        b = 20 + 15 * parseInt((a-50)/ 10);
+        resultAll[i]['b'] = b;
+        if ( b < 30 ) {
+            c = '重度失常'
+        } else if ( b < 40) {
+            c = '中度失常'
+        } else if ( b < 50) {
+            c = '轻度失常'
+        } else {
+            c = '正常'
+        }
+        resultAll[i]['c'] = c;
+
+    }
+
+    $('#b1').text(resultAll[0]['b'])
+    $('#b2').text(resultAll[1]['b'])
+    $('#b3').text(resultAll[2]['b'])
+    $('#b4').text(resultAll[3]['b'])
+    $('#b5').text(resultAll[4]['b'])
+    $('#b6').text(resultAll[5]['b'])
+
+    $('#r1').text(resultAll[0]['c'])
+    $('#r2').text(resultAll[1]['c'])
+    $('#r3').text(resultAll[2]['c'])
+    $('#r4').text(resultAll[3]['c'])
+    $('#r5').text(resultAll[4]['c'])
+    $('#r6').text(resultAll[5]['c'])
+
+
 
 
     // 柱状图数据
