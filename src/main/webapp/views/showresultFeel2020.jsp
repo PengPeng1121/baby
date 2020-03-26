@@ -16,6 +16,9 @@
             width: 100%;
             height: 30px;
         }
+        #remark1, #remark2, #remark3, #remark4, #remark5, #remark6, #doctorRemark{
+            font-size: 10px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -33,15 +36,17 @@
     <div class="container">
         <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         
-        <s:if test="hospital.name == '河马儿科'">
+        <!-- <s:if test="hospital.name == '河马儿科'">
             <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
             <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
         </s:if>
         <s:else>
             <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
             <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">感觉统合2020</h1>
-        </s:else>
+        </s:else> -->
 
+        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
+        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
 
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
@@ -144,7 +149,7 @@
                 </table>
             </div>
         </div>
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table1">
             <tbody>
             <tr>
                 <td style="text-align:center; font-weight: bold;">评定结果柱状图</td>
@@ -165,6 +170,59 @@
             </tr>
             </tbody>
         </table>
+
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
+            <tbody>
+                <tr>
+                    <td colspan="6" style="font-weight: bold;">
+                        指导建议
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        视觉集中训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        视觉追踪训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        听觉统合训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        触觉训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        平衡感觉训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        本体感觉训练
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark1">
+                        1.抱住孩子的头，叫孩子的名字，并深情看孩子让孩子做出反应。<br/>2.准备玩具，和孩子相对而坐。孩子会东张西望，这时候拿出准备好的玩具，放到孩子眼前，吸引孩子目光，让孩子的视线随着玩具移到目前的任务上。
+                    </td>
+                    <td id="remark2">
+                        1.让孩子在运动中踢球，让孩子学会按住滚动的球。<br/>2.让孩子用球扔向另一正在滚动的球。<br/>3.准备好一间房间，一只手电筒。把窗关上，使屋内黑暗，打开电筒的开关，照向墙壁，叫孩子去抓墙上的光。
+                    </td>
+                    <td id="remark3">
+                        1.找寻声音。(3-5分钟)<br/>2.模仿自然界的声音。(7-8分钟)<br/>3.听动训练。(5-10分钟)<br/>4.辨别声音。(5-10分钟)
+                    </td>
+                    <td id="remark4">
+                        1.通过不同的刷子、不同布质的毛巾，给予孩子适当的刺激，可于洗澡时进行。<br/>2.让孩子触摸不同的物件，让其辨别物件的大小、形状和质地等。<br/>3.三温暖治疗。让孩子辨别不同的水温。
+                    </td>
+                    <td id="remark5">
+                        1.荡秋千。<br/>2.攀爬不平稳平面。<br/>3.滑车训练。(此项可训练5-10分钟)<br/>4.倒立走。此项对上肢大肌肉的训练也相当有帮助。(此项训练5-15分钟)
+                    </td>
+                    <td id="remark6">
+                        1.沿直线行走。可适当增加难度，如让孩子端水。<br/>2.攀爬。<br/>3.跳圈游戏。在地上排列两列圆圈若干个，距离左右上下10CM，让孩子双脚跨在不同圆圈上往前跳，可增加圆圈的个数和距离。也可训练平衡感觉。
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
 
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px; font-weight: bold;">
             <div class="panel-heading" id="headRemark">医师评价及建议</div>
@@ -445,6 +503,7 @@
             27:  33,
             28:  32,
             29:  30,
+            30:  30,
             31:  29,
             32:  26,
             33:  25,
@@ -681,6 +740,28 @@
                     padding: '0px'
                 });
 
+                $('.panel').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('#table1').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('#table2').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('.panel-heading').css({
+                    'padding-top': '5px',
+                    'padding-bottom': '5px'
+                });
+
+                $('.panel-body').css({
+                    'padding-top': '5px',
+                    'padding-bottom': '5px'
+                });
+
                 $('h1').css({
                     'font-size': '20px'
                 });
@@ -689,7 +770,7 @@
                 });
                 $('#column').css({
                     width: '700px',
-                    height: '300px'
+                    height: '200px'
                 });
                 // $('#spider').css({
                 //     width: '300px',
