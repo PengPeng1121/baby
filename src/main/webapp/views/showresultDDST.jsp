@@ -128,6 +128,34 @@
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
             <tbody>
                 <tr>
+                    <td colspan="4" style="font-weight: bold;">
+                        指导建议
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        个人-社交
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        语言
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        精细运动-适应性
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        大运动
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark1"></td>
+                    <td id="remark2"></td>
+                    <td id="remark3"></td>
+                    <td id="remark4"></td>
+                </tr>
+
+
+
+                <!-- <tr>
                     <td colspan="2" style="font-weight: bold;">
                         指导建议
                     </td>
@@ -155,7 +183,7 @@
                         大运动
                     </td>
                     <td id="remark4"></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
