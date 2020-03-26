@@ -77,7 +77,7 @@
                 <table id="table-navbar" style="margin: 0; position: fixed; background-color: white;width: 100%;display: none; text-align: left">
                     <tr class="line nav-line">
                         <td>
-                                【输入提示：根据儿童的情况选择“5从不”、“4很少”、“3有时候”、“2常常”、“1总是如此”。题中若包括多项，只要有一项符合就算。】
+                                【输入提示：根据儿童的情况选择“1从不”、“2很少”、“3有时候”、“4常常”、“5总是如此”。题中若包括多项，只要有一项符合就算。】
                         </td>
                     </tr>
                 </table>
@@ -86,14 +86,14 @@
                     <tbody style="width: 100%">
                         <tr id="tr-title">
                             <td colspan="3">
-                                【输入提示：根据儿童的情况选择“5从不”、“4很少”、“3有时候”、“2常常”、“1总是如此”。题中若包括多项，只要有一项符合就算。】
+                                【输入提示：根据儿童的情况选择“1从不”、“2很少”、“3有时候”、“4常常”、“5总是如此”。题中若包括多项，只要有一项符合就算。】
                             </td>
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>
                                前脑平衡和大脑双侧分化 
                             </td>
-                            <td style="font-weight: normal; font-size: 14px">总是、常常、有时候、很少、从不</td>
+                            <td style="font-weight: normal; font-size: 14px">从不、很少、有时候、常常、总是</td>
                         </tr>
                     <s:iterator value="questionTypeList" var="type">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">

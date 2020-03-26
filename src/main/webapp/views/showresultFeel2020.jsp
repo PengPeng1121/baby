@@ -45,7 +45,7 @@
 
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
-            <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
+            <div class="panel-heading" style="text-align: center; font-weight: bold;">小儿基本资料</div>
             <div class="panel-body front-no-padding" style="padding: 15px;">
                 <table style="width: 100%">
                     <tbody>
@@ -76,15 +76,15 @@
 
 
         <div class="panel panel-default front-panel" id="allbaby">
-            <div class="panel-heading" style="text-align: center;">评定结果</div>
+            <div class="panel-heading" style="text-align: center; font-weight: bold;">评定结果</div>
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-                        <td class="col-md-4">评定项目</td>
-                        <td class="col-md-3">原始分</td>
-                        <td class="col-md-3">T值</td>
-                        <td class="col-md-4">评定结果</td>
+                        <td class="col-md-4" style="font-weight: bold;">评定项目</td>
+                        <td class="col-md-3" style="font-weight: bold;">原始分</td>
+                        <td class="col-md-3" style="font-weight: bold;">T值</td>
+                        <td class="col-md-4" style="font-weight: bold;">评定结果</td>
                         <!-- <td class="col-md-6">建议</td> -->
                     </tr>
                     </thead>
@@ -147,7 +147,7 @@
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果柱状图</td>
+                <td style="text-align:center; font-weight: bold;">评定结果柱状图</td>
             </tr>
             <tr>
                 <td style="padding: 0px;width: 50%;">
@@ -166,7 +166,7 @@
             </tbody>
         </table>
 
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px; font-weight: bold;">
             <div class="panel-heading" id="headRemark">医师评价及建议</div>
             <!-- <div class="panel-body front-no-padding">
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
@@ -206,12 +206,269 @@
     var a5 = +$('#a5').val();
     var a6 = +$('#a6').val();
 
-    var b1 = 20 + 15 * parseInt((a1-50)/ 10)
-    var b2 = 20 + 15 * parseInt((a2-50)/ 10)
-    var b3 = 20 + 15 * parseInt((a3-50)/ 10)
-    var b4 = 20 + 15 * parseInt((a4-50)/ 10)
-    var b5 = 20 + 15 * parseInt((a5-50)/ 10)
-    var b6 = 20 + 15 * parseInt((a6-50)/ 10)
+
+
+    var map = {
+        1:{
+            11:  70,
+            12:  64,
+            13:  60,
+            14:  57,
+            15:  54,
+            16:  52,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  43,
+            21:  41,
+            22:  39,
+            23:  37,
+            24:  36,
+            25:  34,
+            26:  32,
+            27:  31,
+            28:  29,
+            29:  28,
+            30:  27,
+            31:  26,
+            32:  25,
+            33:  25,
+            34:  23,
+            35:  20,
+            36:  16,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        2:{
+            9:   73,
+            10:  69,
+            11:  67,
+            12:  64,
+            13:  62,
+            14:  60,
+            15:  58,
+            16:  55,
+            17:  53,
+            18:  51,
+            19:  49,
+            20:  48,
+            21:  46,
+            22:  44,
+            23:  42,
+            24:  40,
+            25:  39,
+            26:  37,
+            27:  36,
+            28:  34,
+            29:  32,
+            30:  30,
+            31:  28,
+            32:  26,
+            33:  25,
+            34:  23,
+            35:  22,
+            36:  20,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16
+        },
+        3:{
+            14:  70,
+            15:  65,
+            16:  63,
+            17:  61,
+            18:  59,
+            19:  57,
+            20:  55,
+            21:  53,
+            22:  51,
+            23:  50,
+            24:  48,
+            25:  47,
+            26:  45,
+            27:  44,
+            28:  42,
+            29:  41,
+            30:  40,
+            31:  38,
+            32:  37,
+            33:  36,
+            34:  34,
+            35:  33,
+            36:  32,
+            37:  31,
+            38:  29,
+            39:  28,
+            40:  26,
+            41:  26,
+            42:  25,
+            43:  24,
+            44:  22,
+            45:  22,
+            46:  22,
+            47:  21,
+            48:  21,
+            49:  21,
+            50:  21,
+            51:  20,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16,
+            56:  16,
+            57:  16,
+            58:  16,
+            59:  16,
+            60:  16,
+            61:  16,
+            62:  16,
+            63:  16,
+            64:  16,
+            65:  16,
+            66:  16,
+            67:  16,
+            68:  16,
+            69:  16,
+            70:  16
+        },
+        4:{
+            11:  65,
+            12:  59,
+            13:  57,
+            14:  55,
+            15:  53,
+            16:  51,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  44,
+            21:  42,
+            22:  40,
+            23:  39,
+            24:  38,
+            25:  36,
+            26:  35,
+            27:  34,
+            28:  33,
+            29:  32,
+            30:  31,
+            31:  29,
+            32:  28,
+            33:  28,
+            34:  26,
+            35:  25,
+            36:  24,
+            37:  23,
+            38:  22,
+            39:  21,
+            40:  20,
+            41:  20,
+            42:  20,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        5:{
+            5:   61,
+            6:   54,
+            7:   50,
+            8:   48,
+            9:   45,
+            10:  41,
+            11:  38,
+            12:  35,
+            13:  32,
+            14:  30,
+            15:  27,
+            16:  25,
+            17:  23,
+            18:  22,
+            19:  20,
+            20:  16,
+            21:  16,
+            22:  16,
+            23:  16,
+            24:  16,
+            25:  16
+        },
+        6:{
+            10:  64,
+            11:  59,
+            12:  56,
+            13:  54,
+            14:  52,
+            15:  51,
+            16:  49,
+            17:  48,
+            18:  46,
+            19:  45,
+            20:  43,
+            21:  42,
+            22:  40,
+            23:  38,
+            24:  37,
+            25:  35,
+            26:  34,
+            27:  33,
+            28:  32,
+            29:  30,
+            31:  29,
+            32:  26,
+            33:  25,
+            34:  23,
+            36:  22,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16
+        }
+    }
+    function getScore (a,i) {
+        i = i + 1;
+        return map[i][a];
+    }
+
+
 
     var resultAll = [
         {a:a1 ,b:0, c:''},
@@ -222,6 +479,7 @@
         {a:a6 ,b:0, c:''}
     ]
     var r1,r2,r3,r4,r5,r6;
+    var bArr = [];
 
     var lll = resultAll.length;
     var a = 0;
@@ -229,7 +487,8 @@
     var c = '';
     for (var i = 0; i < lll; i++) {
         a = resultAll[i]['a'];
-        b = 20 + 15 * parseInt((a-50)/ 10);
+        b = getScore(a,i);
+        bArr[i] = b;
         resultAll[i]['b'] = b;
         if ( b < 30 ) {
             c = '重度失常'
@@ -267,7 +526,7 @@
             chart2;
 
         var categories =  ['前脑平衡和大脑双侧分化', '脑神经心理抑制困难', '触觉防御过多及反应不足', '发育期运动障碍', '视觉空间，形态', '本体觉（重力不安症）'];
-        var result =  [b1, b2, b3, b4, b5, b6];
+        var result =  [bArr[0], bArr[1], bArr[2], bArr[3], bArr[4], bArr[5]];
 
 
         $('#column').highcharts({
@@ -429,7 +688,7 @@
                     'font-size': '15px'
                 });
                 $('#column').css({
-                    width: '300px',
+                    width: '700px',
                     height: '300px'
                 });
                 // $('#spider').css({
