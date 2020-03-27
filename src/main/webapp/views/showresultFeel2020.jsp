@@ -36,17 +36,17 @@
     <div class="container">
         <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         
-        <!-- <s:if test="hospital.name == '河马儿科'">
+        <s:if test="hospital.name == '河马儿科'">
             <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
             <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
         </s:if>
         <s:else>
             <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
             <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">感觉统合2020</h1>
-        </s:else> -->
+        </s:else>
 
-        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
-        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
+        <!-- <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
+        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo"> -->
 
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
