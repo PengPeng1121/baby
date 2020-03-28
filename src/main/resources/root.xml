@@ -157,7 +157,8 @@
         <action name="getRemarkDDST" method="getRemarkDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
             <result type="json" name="success">
                 <param name="includeProperties">
-                    instructions\[\d+\]\.type,instructions\[\d+\]\.content
+                    instructions\[\d+\]\.type,instructions\[\d+\]\.content,instructions\[\d+\]\.contentDetail1
+                    ,instructions\[\d+\]\.contentDetail2,instructions\[\d+\]\.contentDetail3,instructions\[\d+\]\.contentDetail4
                 </param>
             </result>
             <result name="fail">error.jsp</result>
