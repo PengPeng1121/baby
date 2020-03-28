@@ -59,7 +59,7 @@
                         <td class="col-md-1">性别:&nbsp;<s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
                         <td class="col-md-3">年龄:&nbsp;<s:property value="exactAge"/></td>
                         <td class="col-md-3">出生日期:&nbsp;<s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-                        <td class="col-md-3">测查日期:&nbsp;<s:property value="stime"/></td>
+                        <td class="col-md-3">测评日期:&nbsp;<s:property value="stime"/></td>
                     </tr>
                 </table>
             </div>
