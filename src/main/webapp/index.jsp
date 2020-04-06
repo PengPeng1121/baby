@@ -111,7 +111,7 @@
                         <div class="panel-body">
                             <div class="media">
                                 <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">0-6岁小儿神经心理发育检查表</p>
+                                    <p class="media-heading" style="font-size: 16px;">0-6岁小儿神经心理发育检查表(2016)</p>
                                     <div class="as-desc">
                                         <div style="display: inline-block;">
                                             <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResult2016"/></label>
@@ -549,11 +549,11 @@
 <s:include value="statics/tail.html"/>
 <script>
     $("#home").addClass("front-active");
-    var hoid = $("#hoid").val();
+    var hoid = parseInt($("#hoid").val());
     console.log(hoid)
 
 
-    if (hoid == 3) {
+    if (hoid != 2) {
         $('.old-test').hide();
     } else {
         $('.new-test').hide();

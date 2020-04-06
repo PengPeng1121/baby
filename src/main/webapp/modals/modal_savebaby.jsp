@@ -52,11 +52,11 @@
 <script>
 
 
-    var hoid = $("#hoid").val();
+    var hoid = parseInt($("#hoid").val());
     console.log(hoid)
 
 
-    if (hoid == 3) {
+    if (hoid != 2) {
         $('.old-test').hide();
     } else {
         $('.new-test').hide();

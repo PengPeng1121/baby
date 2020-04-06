@@ -35,7 +35,9 @@
         <input type="hidden" id="testerNameOld" value="<s:property value="resultRecord.testerName"/>">
         <input type="hidden" id="babyID" value="<s:property value="baby.babyid"/>">
 
-        <s:if test="hospital.name == '河马儿科'">
+        <input type="hidden" id="hname" value="<s:property value="hospital.name"/>">
+
+        <s:if test="hospital.name == '河马儿科（盛京店）' ||  hospital.name == '河马儿科（奥体店）' ||  hospital.name == '河马儿科（汪河路店）'">
             <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
             <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaDDST.png" alt="Logo">
         </s:if>
