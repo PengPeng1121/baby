@@ -63,6 +63,7 @@ public class HomeAction {
         numberOfResultFeel = ResultFeelManager.countResultByHosIdAndTestId(hoid,25);
         numberOfResult2016 = ResultManager2016.countResultByHosIdAndTestId(hoid,26);
         numberOfResultADHD = ResultADHDManager.countResultByHosIdAndTestId(hoid,27);
+        numberOfResultFeel2020 = ResultFeel2020Manager.countResultByHosIdAndTestId(hoid,28);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";

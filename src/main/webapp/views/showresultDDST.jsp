@@ -52,10 +52,11 @@
                 <table style="width: 100%">
                     <tbody>
                     <tr>
-                        <td class="col-md-3">姓名:<s:property value="baby.name"/></td>
-                        <td class="col-md-3">性别:<s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
+                        <td class="col-md-2">姓名:<s:property value="baby.name"/></td>
+                        <td class="col-md-2">性别:<s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
                         <td class="col-md-3">出生日期:<s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-                        <td class="col-md-3">月龄:<s:property value="days"/></td>
+                        <td class="col-md-2">月龄:<s:property value="days"/></td>
+                        <td class="col-md-3">测评日期:&nbsp;<s:property value="stime"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -130,6 +131,34 @@
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
             <tbody>
                 <tr>
+                    <td colspan="4" style="font-weight: bold;">
+                        指导建议
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        个人-社交
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        语言
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        精细运动-适应性
+                    </td>
+                    <td style="width: 25%; font-weight: bold; padding: 5px 8px;">
+                        大运动
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark1"></td>
+                    <td id="remark2"></td>
+                    <td id="remark3"></td>
+                    <td id="remark4"></td>
+                </tr>
+
+
+
+                <!-- <tr>
                     <td colspan="2" style="font-weight: bold;">
                         指导建议
                     </td>
@@ -157,7 +186,7 @@
                         大运动
                     </td>
                     <td id="remark4"></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
@@ -283,34 +312,82 @@
                 item = instructions[i];
                 switch (item['type']) {
                     // 社交
-                    case 1:
+                    case 4:
                         if (str1Times < 4) {
                             str1 += item['content'];
                             str1 += '<br/>';
+                            if (item['contentDetail1']) {
+                                str1 += item['contentDetail1'];
+                                str1 += '<br/>';
+                            }
+                            if (item['contentDetail2']) {
+                                str1 += item['contentDetail2'];
+                                str1 += '<br/>';
+                            }
+                            if (item['contentDetail3']) {
+                                str1 += item['contentDetail3'];
+                                str1 += '<br/>';
+                            }
                             str1Times++;
                         }
                         break;
                     // 语言
-                    case 2:
+                    case 3:
                         if (str2Times < 4) {
                             str2 += item['content'];
                             str2 += '<br/>';
+                            if (item['contentDetail1']) {
+                                str2 += item['contentDetail1'];
+                                str2 += '<br/>';
+                            }
+                            if (item['contentDetail2']) {
+                                str2 += item['contentDetail2'];
+                                str2 += '<br/>';
+                            }
+                            if (item['contentDetail3']) {
+                                str2 += item['contentDetail3'];
+                                str2 += '<br/>';
+                            }
                             str2Times++;
                         }
                         break;
                     // 精细动作-适应性
-                    case 3:
+                    case 2:
                         if (str3Times < 4) {
                             str3 += item['content'];
                             str3 += '<br/>';
+                            if (item['contentDetail1']) {
+                                str3 += item['contentDetail1'];
+                                str3 += '<br/>';
+                            }
+                            if (item['contentDetail2']) {
+                                str3 += item['contentDetail2'];
+                                str3 += '<br/>';
+                            }
+                            if (item['contentDetail3']) {
+                                str3 += item['contentDetail3'];
+                                str3 += '<br/>';
+                            }
                             str3Times++;
                         }
                         break;
                     // 大运动
-                    case 4:
+                    case 1:
                         if (str4Times < 4) {
                             str4 += item['content'];
                             str4 += '<br/>';
+                            if (item['contentDetail1']) {
+                                str4 += item['contentDetail1'];
+                                str4 += '<br/>';
+                            }
+                            if (item['contentDetail2']) {
+                                str4 += item['contentDetail2'];
+                                str4 += '<br/>';
+                            }
+                            if (item['contentDetail3']) {
+                                str4 += item['contentDetail3'];
+                                str4 += '<br/>';
+                            }
                             str4Times++;
                         }
                         break;
@@ -477,10 +554,10 @@
                     'margin-top': '60px'
                 });
                 $('#table1').css({
-                    'margin-bottom': '5px'
+                    'margin-bottom': '1px'
                 });
                 $('#table2').css({
-                    'margin-bottom': '5px'
+                    'margin-bottom': '1px'
                 });
                 $('#headRemark').css({
                     'padding': '5px'

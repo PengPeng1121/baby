@@ -27,6 +27,22 @@ public class TestInstruction {
      */
     private String content;
     /**
+     * 指导语内容
+     */
+    private String contentDetail1;
+    /**
+     * 指导语内容
+     */
+    private String contentDetail2;
+    /**
+     * 指导语内容
+     */
+    private String contentDetail3;
+    /**
+     * 指导语内容
+     */
+    private String contentDetail4;
+    /**
      * 月龄
      */
     private Integer monthAge;
@@ -98,6 +114,46 @@ public class TestInstruction {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Basic
+    @Column(name = "content_detail_1", nullable = false)
+    public String getContentDetail1() {
+        return contentDetail1;
+    }
+
+    public void setContentDetail1(String contentDetail1) {
+        this.contentDetail1 = contentDetail1;
+    }
+
+    @Basic
+    @Column(name = "content_detail_2", nullable = false)
+    public String getContentDetail2() {
+        return contentDetail2;
+    }
+
+    public void setContentDetail2(String contentDetail2) {
+        this.contentDetail2 = contentDetail2;
+    }
+
+    @Basic
+    @Column(name = "content_detail_3", nullable = false)
+    public String getContentDetail3() {
+        return contentDetail3;
+    }
+
+    public void setContentDetail3(String contentDetail3) {
+        this.contentDetail3 = contentDetail3;
+    }
+
+    @Basic
+    @Column(name = "content_detail_4", nullable = false)
+    public String getContentDetail4() {
+        return contentDetail4;
+    }
+
+    public void setContentDetail4(String contentDetail4) {
+        this.contentDetail4 = contentDetail4;
     }
 
     @Basic

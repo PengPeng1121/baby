@@ -16,6 +16,9 @@
             width: 100%;
             height: 30px;
         }
+        #remark1, #remark2, #remark3, #remark4, #remark5, #remark6, #doctorRemark{
+            font-size: 10px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -42,10 +45,12 @@
             <h1 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">感觉统合2020</h1>
         </s:else>
 
+        <!-- <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
+        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo"> -->
 
 
         <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
-            <div class="panel-heading" style="text-align: center;">小儿基本资料</div>
+            <div class="panel-heading" style="text-align: center; font-weight: bold;">小儿基本资料</div>
             <div class="panel-body front-no-padding" style="padding: 15px;">
                 <table style="width: 100%">
                     <tbody>
@@ -54,7 +59,7 @@
                         <td class="col-md-1">性别:&nbsp;<s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
                         <td class="col-md-3">年龄:&nbsp;<s:property value="exactAge"/></td>
                         <td class="col-md-3">出生日期:&nbsp;<s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-                        <td class="col-md-3">测查日期:&nbsp;<s:property value="stime"/></td>
+                        <td class="col-md-3">测评日期:&nbsp;<s:property value="stime"/></td>
                     </tr>
                 </table>
             </div>
@@ -76,20 +81,22 @@
 
 
         <div class="panel panel-default front-panel" id="allbaby">
-            <div class="panel-heading" style="text-align: center;">评定结果</div>
+            <div class="panel-heading" style="text-align: center; font-weight: bold;">评定结果</div>
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table">
                     <thead>
                     <tr>
-                        <td class="col-md-3">评定项目</td>
-                        <td class="col-md-1">得分</td>
-                        <td class="col-md-2">评定结果</td>
+                        <td class="col-md-4" style="font-weight: bold;">评定项目</td>
+                        <td class="col-md-3" style="font-weight: bold;">原始分</td>
+                        <td class="col-md-3" style="font-weight: bold;">T值</td>
+                        <td class="col-md-4" style="font-weight: bold;">评定结果</td>
                         <!-- <td class="col-md-6">建议</td> -->
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>1.前脑平衡和大脑双侧分化</td>
+                        <td><s:property value="resultFeel2020.a1"/></td>
                         <td id="b1"></td>
                         <td id="r1"></td>
                         <!-- <td rowspan="5">
@@ -99,6 +106,7 @@
 
                     <tr>
                         <td>2.脑神经心理抑制困难</td>
+                        <td><s:property value="resultFeel2020.a2"/></td>
                         <td id="b2"></td>
                         <td id="r2"></td>
                         
@@ -107,6 +115,7 @@
 
                     <tr>
                         <td>3.触觉防御过多及反应不足</td>
+                        <td><s:property value="resultFeel2020.a3"/></td>
                         <td id="b3"></td>
                         <td id="r3"></td>
                         
@@ -115,12 +124,14 @@
 
                     <tr>
                         <td>4.发育期运动障碍</td>
+                        <td><s:property value="resultFeel2020.a4"/></td>
                         <td id="b4"></td>
                         <td id="r4"></td>
                         
                     </tr>
                     <tr>
                         <td>5.视觉空间，形态</td>
+                        <td><s:property value="resultFeel2020.a5"/></td>
                         <td id="b5"></td>
                         <td id="r5"></td>
                         
@@ -128,6 +139,7 @@
 
                     <tr>
                         <td>6.本体觉（重力不安症）</td>
+                        <td><s:property value="resultFeel2020.a6"/></td>
                         <td id="b6"></td>
                         <td id="r6"></td>
                         
@@ -137,10 +149,10 @@
                 </table>
             </div>
         </div>
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table1">
             <tbody>
             <tr>
-                <td style="text-align:center;">评定结果柱状图</td>
+                <td style="text-align:center; font-weight: bold;">评定结果柱状图</td>
             </tr>
             <tr>
                 <td style="padding: 0px;width: 50%;">
@@ -159,7 +171,60 @@
             </tbody>
         </table>
 
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+
+        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
+            <tbody>
+                <tr>
+                    <td colspan="6" style="font-weight: bold;">
+                        指导建议
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        视觉集中训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        视觉追踪训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        听觉统合训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        触觉训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        平衡感觉训练
+                    </td>
+                    <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                        本体感觉训练
+                    </td>
+                </tr>
+                <tr>
+                    <td id="remark1">
+                        1.抱住孩子的头，叫孩子的名字，并深情看孩子让孩子做出反应。<br/>2.准备玩具，和孩子相对而坐。孩子会东张西望，这时候拿出准备好的玩具，放到孩子眼前，吸引孩子目光，让孩子的视线随着玩具移到目前的任务上。
+                    </td>
+                    <td id="remark2">
+                        1.让孩子在运动中踢球，让孩子学会按住滚动的球。<br/>2.让孩子用球扔向另一正在滚动的球。<br/>3.准备好一间房间，一只手电筒。把窗关上，使屋内黑暗，打开电筒的开关，照向墙壁，叫孩子去抓墙上的光。
+                    </td>
+                    <td id="remark3">
+                        1.找寻声音。(3-5分钟)<br/>2.模仿自然界的声音。(7-8分钟)<br/>3.听动训练。(5-10分钟)<br/>4.辨别声音。(5-10分钟)
+                    </td>
+                    <td id="remark4">
+                        1.通过不同的刷子、不同布质的毛巾，给予孩子适当的刺激，可于洗澡时进行。<br/>2.让孩子触摸不同的物件，让其辨别物件的大小、形状和质地等。<br/>3.三温暖治疗。让孩子辨别不同的水温。
+                    </td>
+                    <td id="remark5">
+                        1.荡秋千。<br/>2.攀爬不平稳平面。<br/>3.滑车训练。(此项可训练5-10分钟)<br/>4.倒立走。此项对上肢大肌肉的训练也相当有帮助。(此项训练5-15分钟)
+                    </td>
+                    <td id="remark6">
+                        1.沿直线行走。可适当增加难度，如让孩子端水。<br/>2.攀爬。<br/>3.跳圈游戏。在地上排列两列圆圈若干个，距离左右上下10CM，让孩子双脚跨在不同圆圈上往前跳，可增加圆圈的个数和距离。也可训练平衡感觉。
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px; font-weight: bold;">
             <div class="panel-heading" id="headRemark">医师评价及建议</div>
             <!-- <div class="panel-body front-no-padding">
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
@@ -199,19 +264,319 @@
     var a5 = +$('#a5').val();
     var a6 = +$('#a6').val();
 
-    var b1 = 20 + 15 * parseInt((a1-50)/ 10)
-    var b2 = 20 + 15 * parseInt((a2-50)/ 10)
-    var b3 = 20 + 15 * parseInt((a3-50)/ 10)
-    var b4 = 20 + 15 * parseInt((a4-50)/ 10)
-    var b5 = 20 + 15 * parseInt((a5-50)/ 10)
-    var b6 = 20 + 15 * parseInt((a6-50)/ 10)
 
-    $('#b1').text(b1)
-    $('#b2').text(b2)
-    $('#b3').text(b3)
-    $('#b4').text(b4)
-    $('#b5').text(b5)
-    $('#b6').text(b6)
+
+    var map = {
+        1:{
+            11:  70,
+            12:  64,
+            13:  60,
+            14:  57,
+            15:  54,
+            16:  52,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  43,
+            21:  41,
+            22:  39,
+            23:  37,
+            24:  36,
+            25:  34,
+            26:  32,
+            27:  31,
+            28:  29,
+            29:  28,
+            30:  27,
+            31:  26,
+            32:  25,
+            33:  25,
+            34:  23,
+            35:  20,
+            36:  16,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        2:{
+            9:   73,
+            10:  69,
+            11:  67,
+            12:  64,
+            13:  62,
+            14:  60,
+            15:  58,
+            16:  55,
+            17:  53,
+            18:  51,
+            19:  49,
+            20:  48,
+            21:  46,
+            22:  44,
+            23:  42,
+            24:  40,
+            25:  39,
+            26:  37,
+            27:  36,
+            28:  34,
+            29:  32,
+            30:  30,
+            31:  28,
+            32:  26,
+            33:  25,
+            34:  23,
+            35:  22,
+            36:  20,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16
+        },
+        3:{
+            14:  70,
+            15:  65,
+            16:  63,
+            17:  61,
+            18:  59,
+            19:  57,
+            20:  55,
+            21:  53,
+            22:  51,
+            23:  50,
+            24:  48,
+            25:  47,
+            26:  45,
+            27:  44,
+            28:  42,
+            29:  41,
+            30:  40,
+            31:  38,
+            32:  37,
+            33:  36,
+            34:  34,
+            35:  33,
+            36:  32,
+            37:  31,
+            38:  29,
+            39:  28,
+            40:  26,
+            41:  26,
+            42:  25,
+            43:  24,
+            44:  22,
+            45:  22,
+            46:  22,
+            47:  21,
+            48:  21,
+            49:  21,
+            50:  21,
+            51:  20,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16,
+            56:  16,
+            57:  16,
+            58:  16,
+            59:  16,
+            60:  16,
+            61:  16,
+            62:  16,
+            63:  16,
+            64:  16,
+            65:  16,
+            66:  16,
+            67:  16,
+            68:  16,
+            69:  16,
+            70:  16
+        },
+        4:{
+            11:  65,
+            12:  59,
+            13:  57,
+            14:  55,
+            15:  53,
+            16:  51,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  44,
+            21:  42,
+            22:  40,
+            23:  39,
+            24:  38,
+            25:  36,
+            26:  35,
+            27:  34,
+            28:  33,
+            29:  32,
+            30:  31,
+            31:  29,
+            32:  28,
+            33:  28,
+            34:  26,
+            35:  25,
+            36:  24,
+            37:  23,
+            38:  22,
+            39:  21,
+            40:  20,
+            41:  20,
+            42:  20,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        5:{
+            5:   61,
+            6:   54,
+            7:   50,
+            8:   48,
+            9:   45,
+            10:  41,
+            11:  38,
+            12:  35,
+            13:  32,
+            14:  30,
+            15:  27,
+            16:  25,
+            17:  23,
+            18:  22,
+            19:  20,
+            20:  16,
+            21:  16,
+            22:  16,
+            23:  16,
+            24:  16,
+            25:  16
+        },
+        6:{
+            10:  64,
+            11:  59,
+            12:  56,
+            13:  54,
+            14:  52,
+            15:  51,
+            16:  49,
+            17:  48,
+            18:  46,
+            19:  45,
+            20:  43,
+            21:  42,
+            22:  40,
+            23:  38,
+            24:  37,
+            25:  35,
+            26:  34,
+            27:  33,
+            28:  32,
+            29:  30,
+            30:  30,
+            31:  29,
+            32:  26,
+            33:  25,
+            34:  23,
+            36:  22,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16
+        }
+    }
+    function getScore (a,i) {
+        i = i + 1;
+        return map[i][a];
+    }
+
+
+
+    var resultAll = [
+        {a:a1 ,b:0, c:''},
+        {a:a2 ,b:0, c:''},
+        {a:a3 ,b:0, c:''},
+        {a:a4 ,b:0, c:''},
+        {a:a5 ,b:0, c:''},
+        {a:a6 ,b:0, c:''}
+    ]
+    var r1,r2,r3,r4,r5,r6;
+    var bArr = [];
+
+    var lll = resultAll.length;
+    var a = 0;
+    var b = 0;
+    var c = '';
+    for (var i = 0; i < lll; i++) {
+        a = resultAll[i]['a'];
+        b = getScore(a,i);
+        bArr[i] = b;
+        resultAll[i]['b'] = b;
+        if ( b < 30 ) {
+            c = '重度失常'
+        } else if ( b < 40) {
+            c = '中度失常'
+        } else if ( b < 50) {
+            c = '轻度失常'
+        } else {
+            c = '正常'
+        }
+        resultAll[i]['c'] = c;
+
+    }
+
+    $('#b1').text(resultAll[0]['b'])
+    $('#b2').text(resultAll[1]['b'])
+    $('#b3').text(resultAll[2]['b'])
+    $('#b4').text(resultAll[3]['b'])
+    $('#b5').text(resultAll[4]['b'])
+    $('#b6').text(resultAll[5]['b'])
+
+    $('#r1').text(resultAll[0]['c'])
+    $('#r2').text(resultAll[1]['c'])
+    $('#r3').text(resultAll[2]['c'])
+    $('#r4').text(resultAll[3]['c'])
+    $('#r5').text(resultAll[4]['c'])
+    $('#r6').text(resultAll[5]['c'])
+
+
 
 
     // 柱状图数据
@@ -220,7 +585,7 @@
             chart2;
 
         var categories =  ['前脑平衡和大脑双侧分化', '脑神经心理抑制困难', '触觉防御过多及反应不足', '发育期运动障碍', '视觉空间，形态', '本体觉（重力不安症）'];
-        var result =  [b1, b2, b3, b4, b5, b6];
+        var result =  [bArr[0], bArr[1], bArr[2], bArr[3], bArr[4], bArr[5]];
 
 
         $('#column').highcharts({
@@ -375,6 +740,28 @@
                     padding: '0px'
                 });
 
+                $('.panel').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('#table1').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('#table2').css({
+                    'margin-bottom': '0px'
+                });
+
+                $('.panel-heading').css({
+                    'padding-top': '5px',
+                    'padding-bottom': '5px'
+                });
+
+                $('.panel-body').css({
+                    'padding-top': '5px',
+                    'padding-bottom': '5px'
+                });
+
                 $('h1').css({
                     'font-size': '20px'
                 });
@@ -382,8 +769,8 @@
                     'font-size': '15px'
                 });
                 $('#column').css({
-                    width: '300px',
-                    height: '300px'
+                    width: '700px',
+                    height: '200px'
                 });
                 // $('#spider').css({
                 //     width: '300px',
