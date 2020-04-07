@@ -472,7 +472,7 @@
 
 
                 <!-- 多动症 -->
-                <div class="col-md-3">
+                <div class="col-md-3 adhd">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -557,6 +557,11 @@
         $('.old-test').hide();
     } else {
         $('.new-test').hide();
+    }
+    if (hoid == 2) {
+        $('.adhd').show();
+    } else {
+        $('.adhd').hide();
     }
 </script>
 </body>
