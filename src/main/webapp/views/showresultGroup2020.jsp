@@ -36,7 +36,7 @@
 
         <!-- <img class="pull-right" style="height: 100px;width: 100px;" src="statics/img/QRcode.jpg" alt="Logo"> -->
         <h4 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h4>
-        <h3 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">生长发育测验</h3>
+        <h3 style="margin-top: 20px;margin-bottom: 20px;text-align: center;">生长发育测验2020</h3>
 
         <div class="panel panel-default front-panel" id="info" style="border-top: 1px solid;border-left: 0px;border-right: 0px;border-bottom: 0px;">
             <!-- <div class="panel-heading" >小儿基本资料</div> -->

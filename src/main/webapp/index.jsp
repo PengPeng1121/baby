@@ -392,7 +392,7 @@
                         <div class="panel-body">
                             <div class="media">
                                 <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">生长发育测验</p>
+                                    <p class="media-heading" style="font-size: 16px;">生长发育测验2020</p>
                                     <div class="as-desc">
                                         <div style="display: inline-block;">
                                             <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultGroup2020"/></label>
