@@ -88,7 +88,7 @@
                                 <div id="column3" class="column-body"></div>
                             </td>
                             <td class="col-md-4 content-2">
-                                <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;position: relative;top: -200px;left: -15px">
+                                <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;position: relative;top: -280px;left: -15px">
                                     <div class="panel-body front-no-padding" style="padding: 5px;border:0;background-color: transparent">
                                         <table style="width: 100%;border:0;font-size: 16px;font-weight: bold; ">
                                             <tr style="height: 40px">
@@ -136,7 +136,6 @@
     var babyid = $('#babyid').val();
     var resultid = $('#resultid').val();
     var days = $('#days').val();
-    var height = $('#height').val();
     var gender = $('#gender').val();
     
 
@@ -147,37 +146,35 @@
 
     var babyHA,
         babyWA,
-        babyWH,
-        babyBMI,
-        babyWHO,
         babyHead,
+        basicHA1,
+        basicHA2,
         basicHA3,
-        basicHA50,
-        basicHA97,
+        basicHA4,
+        basicHA5,
+        basicHA6,
+        basicHA7,
+        basicWA1,
+        basicWA2,
         basicWA3,
-        basicWA50,
-        basicWA97,
-        basicWH3,
-        basicWH50,
-        basicWH97,
-        basicBMI3,
-        basicBMI50,
-        basicBMI97,
-        basicNormal,
-        basicOverWeight,
-        basicLittle,
-        basicMiddle,
-        basicSerious,
+        basicWA4,
+        basicWA5,
+        basicWA6,
+        basicWA7,
+        basicHead1,
+        basicHead2,
         basicHead3,
-        basicHead50,
-        basicHead97,
+        basicHead4,
+        basicHead5,
+        basicHead6,
+        basicHead7,
         flag = 0;
     var data = "{";
         data += "'babyId':" + babyid+ ",";
         data += "'resultId':" + resultid+ ",";
         data += "}";
     $.ajax({
-        url: 'groupBabyInfo',
+        url: 'group2020BabyInfo',
         type: 'post',
         data: eval('(' + data + ')'),
         success:function (json) {
@@ -189,19 +186,34 @@
     })
 
     $.ajax({
-        url: 'groupBasicInfo',
+        url: 'group2020BasicInfo',
         type: 'post',
         data: eval('(' + data + ')'),
         success:function (json) {
+            basicHA1 = json.basicHA1;
+            basicHA2 = json.basicHA2;
             basicHA3 = json.basicHA3;
-            basicHA50 = json.basicHA50;
-            basicHA97 = json.basicHA97;
+            basicHA4 = json.basicHA4;
+            basicHA5 = json.basicHA5;
+            basicHA6 = json.basicHA6;
+            basicHA7 = json.basicHA7;
+
+            basicWA1 = json.basicWA1;
+            basicWA2 = json.basicWA2;
             basicWA3 = json.basicWA3;
-            basicWA50 = json.basicWA50;
-            basicWA97 = json.basicWA97;
+            basicWA4 = json.basicWA4;
+            basicWA5 = json.basicWA5;
+            basicWA6 = json.basicWA6;
+            basicWA7 = json.basicWA7;
+
+            basicHead1 = json.basicHead1;
+            basicHead2 = json.basicHead2;
             basicHead3 = json.basicHead3;
-            basicHead50 = json.basicHead50;
-            basicHead97 = json.basicHead97;
+            basicHead4 = json.basicHead4;
+            basicHead5 = json.basicHead5;
+            basicHead6 = json.basicHead6;
+            basicHead7 = json.basicHead7;
+
             flag += 1;
         }
     })
@@ -217,8 +229,8 @@
     function draw() {
         
         var chartData1 =  [{
-            name: '3%',
-            data: basicHA3,
+            name: '1',
+            data: basicHA1,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -226,8 +238,8 @@
             },
             color: 'green'
         },{
-            name: '50%',
-            data: basicHA50,
+            name: '4',
+            data: basicHA4,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -235,8 +247,8 @@
             },
             color: 'red'
         },{
-            name: '97%',
-            data: basicHA97,
+            name: '7',
+            data: basicHA7,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -255,8 +267,8 @@
         }];
 
         var chartData2 =  [{
-            name: '3%',
-            data: basicWA3,
+            name: '1',
+            data: basicWA1,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -264,8 +276,8 @@
             },
             color: 'green'
         },{
-            name: '50%',
-            data: basicWA50,
+            name: '4',
+            data: basicWA4,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -273,8 +285,8 @@
             },
             color: 'red'
         },{
-            name: '97%',
-            data: basicWA97,
+            name: '7',
+            data: basicWA7,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -294,8 +306,8 @@
 
 
         var chartData3 =  [{
-            name: '3%',
-            data: basicHead3,
+            name: '1',
+            data: basicHead1,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -303,8 +315,8 @@
             },
             color: 'green'
         },{
-            name: '50%',
-            data: basicHead50,
+            name: '4',
+            data: basicHead4,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -312,8 +324,8 @@
             },
             color: 'red'
         },{
-            name: '97%',
-            data: basicHead97,
+            name: '7',
+            data: basicHead7,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
                 radius:2,
@@ -331,9 +343,9 @@
             color: 'black'
         }];
         $('#column1').highcharts({
-            // chart: {
-            //     backgroundColor:"blue"
-            // },
+            chart: {
+                backgroundColor:"transparent"
+            },
             title: {
                 text: '身高/月龄',
                 style: {
@@ -368,6 +380,9 @@
         });
 
         $('#column2').highcharts({
+            chart: {
+                backgroundColor:"transparent"
+            },
             title: {
                 text: '体重/月龄',
                 style: {
@@ -401,6 +416,9 @@
             chart2 = c;
         });
         $('#column3').highcharts({
+            chart: {
+                backgroundColor:"transparent"
+            },
             title: {
                 text: '头围',
                 style: {
@@ -438,44 +456,7 @@
         chart2.reflow();
         chart3.reflow();
     }
-
-
-
-
     $('.print').click(function(){
-        // $('.front-inner').css({
-        //     padding: '1px'
-        // });
-        // $('.info').css({
-        //     padding: '1px'
-        // });
-        // $('.panel').css({
-        //     margin: '1px'
-        // });
-        // $('.panel-heading').css({
-        //     padding: '0px'
-        // });
-
-        // $('#head').css({
-        //     border: '0px'
-        // });
-        // $('#tr-2-td-1').css({
-        //     border: '0px'
-        // });
-        
-        // $('.column-body').css({
-        //     width: '64%',
-        //     height: '245px'
-        // });
-
-        // chart1.reflow();
-        // chart2.reflow();
-        // chart3.reflow();
-        
-
-
-
-
         window.print();
     });
 </script>
