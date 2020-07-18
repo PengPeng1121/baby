@@ -16,13 +16,8 @@
             /*width: 800px;*/
         }
         .column-body{
-            width: 500px;
-            height: 240px;
-            margin-left: 50px;
-            margin-top: 10px;
-        }
-        body, table, tbody, tr, td {
-            background-color: transparent;
+            width: 200px;
+            height: 200px;
         }
     </style>
     <style type="text/css" media="print">
@@ -34,78 +29,96 @@
         input, .noprint {
             display: none
         }
-        div{
+        div {
             padding: 0px !important;
             margin: 0px !important;
-        }
-        .column-body{
-            width: 500px !important;
-            height: 240px !important;
-            margin-left: 50px !important;
-            margin-top: 10px !important;
-        }
-        .content-1{
-            padding-right: 0px !important;
-        }
-        .content-2{
-            padding: 0px !important;
-        }
-        .item {
-           padding: 0px !important; 
-        }
-        #content-table {
-            position: absolute !important;
-            top: 240px !important;
-        }
-        body, div, table, tbody, tr, td {
-            background-color: transparent;
-            color: transparent;
-        }
-        #info {
-            left: -25px !important;
         }
     </style>
 </head>
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
-
+    <div>
         <input id="babyid" type="hidden" value="<s:property value="resultGroup2020.babyid"/>">
         <input id="resultid" type="hidden" value="<s:property value="resultGroup2020.id"/>">
         <input id="height" type="hidden" value="<s:property value="resultGroup2020.height"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
+        <input id="showBMI" type="hidden" value="<s:property value="showBMI"/>">
+        <input id="showHead" type="hidden" value="<s:property value="showHead"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
-        <div class="container" id="hemaFront">
-            <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
-                <div class="panel-body front-no-padding" style="height:1125px;border:0;background-color: transparent">
+        
+        <!-- 顶部 -->
+        <!-- <div class="container" style="padding-top: 70px;white-space: nowrap;">
+            <div class="row">
+                <div class="col-md-2">
+                    <s:if test="baby.gender == 1">
+                        <img style="width: 31px;" src="statics/img/hemaBBoy.png">
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                        <img style="width: 31px;" src="statics/img/hemaBGirl.png">
+                    </s:if>
+                </div>
+                <div class="col-md-4 col-md-offset-6" style="text-align: right;">
+                    <img style="width: 176px;" src="statics/img/hemaGroupRight.png">
+                </div>
+            </div>
+        </div> -->
+        <!-- 标题 -->
+        <!-- <div class="container" style="padding-top: 10px">
+            <div class="row">
+                <div class="col-md-3">
+                    <img style="width: 100px;" src="statics/img/hemaTitleLeft.png">
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <s:if test="baby.gender == 1">
+                        <img style="width: 584px;" src="statics/img/hemaGroupTitleBoy.png">
+                        <p>
+                            0~5 year old boy WEIGHT/AGE (HEIGHT)/AGE HC/AGE percentile standard curve
+                        </p>
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                        <img style="width: 584px;" src="statics/img/hemaGroupTitleGirl.png">
+                        <p>
+                            0~5 year old girl WEIGHT/AGE (HEIGHT)/AGE HC/AGE percentile standard curve
+                        </p>
+                    </s:if>
+                    
+                </div>
+                <div class="col-md-3" style="text-align: right;">
+                    <img style="width: 100px;" src="statics/img/hemaTitleRight.png">
+                </div>
+        </div> -->
+        <div class="container" style="padding-top: 10px" id="hemaFront">
+            <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;">
+                <div class="panel-body front-no-padding info" style="height:1130px;padding: 5px;border:0;background-color: transparent">
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1120px;" src="statics/img/hemaGroupBgBoy.png">
-                    <table style="width: 800px; height:1120px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 140px;" id="content-table">
+                    <table style="width: 800px; height:1120px;border:0;font-size: 16px;font-weight: bold; ">
                         <tr>
-                            <td class="col-md-8 content-1">
+                            <td class="col-md-8">
                                 <div id="column1" class="column-body"></div>
                                 <div id="column2" class="column-body"></div>
                                 <div id="column3" class="column-body"></div>
                             </td>
-                            <td class="col-md-4 content-2">
-                                <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;position: relative;top: -200px;left: -15px">
-                                    <div class="panel-body front-no-padding" style="padding: 5px;border:0;background-color: transparent">
+                            <td class="col-md-4">
+                                <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;position: relative;top: -200px;">
+                                    <div class="panel-body front-no-padding info" style="padding: 5px;border:0;background-color: transparent">
                                         <table style="width: 100%;border:0;font-size: 16px;font-weight: bold; ">
                                             <tr style="height: 40px">
-                                                <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">姓名:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="baby.name"/></td>
+                                                <td class="col-md-5" style="letter-spacing: 8px;">姓名:</td>
+                                                <td class="col-md-7"><s:property value="baby.name"/></td>
                                             </tr>
                                             <tr style="height: 40px">
-                                                <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">体重:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.weight"/>kg</td>
+                                                <td class="col-md-5" style="letter-spacing: 8px;">体重:</td>
+                                                <td class="col-md-7"><s:property value="resultGroup2020.weight"/>kg</td>
                                             </tr>
                                             <tr style="height: 40px">
-                                                <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">身高:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.height"/>cm</td>
+                                                <td class="col-md-5" style="letter-spacing: 8px;">身高:</td>
+                                                <td class="col-md-7"><s:property value="resultGroup2020.height"/>cm</td>
                                             </tr>
                                             <tr style="height: 40px">
-                                                <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">头围:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.head"/>cm</td>
+                                                <td class="col-md-5" style="letter-spacing: 8px;">头围:</td>
+                                                <td class="col-md-7"><s:property value="resultGroup2020.head"/>cm</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -121,6 +134,10 @@
                 <div ><a type="button" class="btn btn-primary noprint pull-right print" style="">打印结果</a></div>
             </div>　
         </div>
+
+
+        
+    </div>
     <footer class="footer-default noprint">
         <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
@@ -137,85 +154,106 @@
     var resultid = $('#resultid').val();
     var days = $('#days').val();
     var height = $('#height').val();
+    var showBMI = $('#showBMI').val();
+    var showHead = $('#showHead').val();
     var gender = $('#gender').val();
     
 
     var chart1;
     var chart2;
     var chart3;
+    var chart4;
+    var chart5;
+    var chart6;
 
 
     var babyHA,
         babyWA,
-        babyWH,
-        babyBMI,
-        babyWHO,
         babyHead,
+        basicHA1,
+        basicHA2,
         basicHA3,
-        basicHA50,
-        basicHA97,
+        basicHA4,
+        basicHA5,
+        basicHA6,
+        basicHA7,
+        basicWA1,
+        basicWA2,
         basicWA3,
-        basicWA50,
-        basicWA97,
-        basicWH3,
-        basicWH50,
-        basicWH97,
-        basicBMI3,
-        basicBMI50,
-        basicBMI97,
-        basicNormal,
-        basicOverWeight,
-        basicLittle,
-        basicMiddle,
-        basicSerious,
+        basicWA4,
+        basicWA5,
+        basicWA6,
+        basicWA7,
+        basicHead1,
+        basicHead2,
         basicHead3,
-        basicHead50,
-        basicHead97,
+        basicHead4,
+        basicHead5,
+        basicHead6,
+        basicHead7,
         flag = 0;
     var data = "{";
         data += "'babyId':" + babyid+ ",";
         data += "'resultId':" + resultid+ ",";
         data += "}";
-    $.ajax({
-        url: 'groupBabyInfo',
-        type: 'post',
-        data: eval('(' + data + ')'),
-        success:function (json) {
-            babyHA = json.babyHA;
-            babyWA = json.babyWA;
-            babyHead = json.babyHead;
-            flag += 1;
-        }
-    })
+    // $.ajax({
+    //     url: 'group2020BabyInfo',
+    //     type: 'post',
+    //     data: eval('(' + data + ')'),
+    //     success:function (json) {
+    //         babyHA = json.babyHA;
+    //         babyWA = json.babyWA;
+    //         babyHead = json.babyHead;
+    //         flag += 1;
+    //     }
+    // })
 
-    $.ajax({
-        url: 'groupBasicInfo',
-        type: 'post',
-        data: eval('(' + data + ')'),
-        success:function (json) {
-            basicHA3 = json.basicHA3;
-            basicHA50 = json.basicHA50;
-            basicHA97 = json.basicHA97;
-            basicWA3 = json.basicWA3;
-            basicWA50 = json.basicWA50;
-            basicWA97 = json.basicWA97;
-            basicHead3 = json.basicHead3;
-            basicHead50 = json.basicHead50;
-            basicHead97 = json.basicHead97;
-            flag += 1;
-        }
-    })
+    // $.ajax({
+    //     url: 'group2020BasicInfo',
+    //     type: 'post',
+    //     data: eval('(' + data + ')'),
+    //     success:function (json) {
+    //         basicHA1 = json.basicHA1;
+    //         basicHA2 = json.basicHA2;
+    //         basicHA3 = json.basicHA3;
+    //         basicHA4 = json.basicHA4;
+    //         basicHA5 = json.basicHA5;
+    //         basicHA6 = json.basicHA6;
+    //         basicHA7 = json.basicHA7;
 
+    //         basicWA1 = json.basicWA1;
+    //         basicWA2 = json.basicWA2;
+    //         basicWA3 = json.basicWA3;
+    //         basicWA4 = json.basicWA4;
+    //         basicWA5 = json.basicWA5;
+    //         basicWA6 = json.basicWA6;
+    //         basicWA7 = json.basicWA7;
+
+    //         basicHead1 = json.basicHead1;
+    //         basicHead2 = json.basicHead2;
+    //         basicHead3 = json.basicHead3;
+    //         basicHead4 = json.basicHead4;
+    //         basicHead5 = json.basicHead5;
+    //         basicHead6 = json.basicHead6;
+    //         basicHead7 = json.basicHead7;
+
+    //         flag += 1;
+    //     }
+    // })
+
+
+
+
+    
 
     setInterval(function() {
         if (flag === 2) {
-            draw();
+            // draw();
             flag = 0;
         }
     }, 1000)
  
     function draw() {
-        
         var chartData1 =  [{
             name: '3%',
             data: basicHA3,
@@ -433,10 +471,14 @@
         }, function(c){
             chart3 = c;
         });
+
+
+
         
-        chart1.reflow();
-        chart2.reflow();
-        chart3.reflow();
+        // chart1.reflow();
+        // chart2.reflow();
+        // chart4.reflow();
+        // chart5.reflow();
     }
 
 

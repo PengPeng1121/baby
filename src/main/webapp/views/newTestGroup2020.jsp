@@ -67,25 +67,25 @@
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
                 <div class="panel-heading">测查数据:</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
-                    <div class="col-md-4" style="padding-bottom: 10px">
+                    <div class="col-md-6" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">身高:</label>
                         <div class="col-md-9">
                            <input id="height" />cm
                         </div>
                     </div>
-                    <div class="col-md-4" style="padding-bottom: 10px">
+                    <div class="col-md-6" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">体重:</label>
                         <div class="col-md-9">
                            <input id="weight" />kg 
                         </div>
                     </div>
-                    <div class="col-md-4" style="padding-bottom: 10px">
+                    <div class="col-md-6" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">BMI:</label>
                         <div class="col-md-9">
-                           <input onclick="calculate()" id="BMI" />
+                           <input onclick="calculate()" id="BMI" />(自动计算)
                         </div>
                     </div>
-                    <div class="col-md-4" style="padding-bottom: 10px">
+                    <div class="col-md-6" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">头围:</label>
                         <div class="col-md-9">
                            <input id="head" />CM
@@ -95,7 +95,7 @@
             </div>
 
             <div style="margin-bottom: 73px;">
-                <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a>
+                <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 <a type="button" class="btn btn-primary pull-right" onclick="save()" >保存</a>
             </div>
         </form>
