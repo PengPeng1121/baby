@@ -38,7 +38,7 @@
         
         <s:if test="hospital.name == '河马儿科（盛京店）' ||  hospital.name == '河马儿科（奥体店）' ||  hospital.name == '河马儿科（汪河路店）'">
             <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
-            <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel.png" alt="Logo">
+            <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hemaFeel2020.png" alt="Logo">
         </s:if>
         <s:else>
             <h2 style="text-align: center;margin: 0px;"><s:property value="hospital.name"/> </h2>
