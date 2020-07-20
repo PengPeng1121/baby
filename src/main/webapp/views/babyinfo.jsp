@@ -478,7 +478,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultFeel2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>

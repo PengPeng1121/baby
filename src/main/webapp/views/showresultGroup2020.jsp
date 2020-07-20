@@ -19,7 +19,7 @@
             width: 500px;
             height: 240px;
             margin-left: 50px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         body, table, tbody, tr, td {
             background-color: transparent;
@@ -42,7 +42,7 @@
             width: 500px !important;
             height: 240px !important;
             margin-left: 50px !important;
-            margin-top: 10px !important;
+            margin-top: 5px !important;
         }
         .content-1{
             padding-right: 0px !important;
@@ -55,14 +55,14 @@
         }
         #content-table {
             position: absolute !important;
-            top: 240px !important;
+            top: 220px !important;
         }
         body, div, table, tbody, tr, td {
             background-color: transparent;
             color: transparent;
         }
         #info {
-            left: -25px !important;
+            left: -40px !important;
         }
     </style>
 </head>
@@ -78,9 +78,9 @@
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
-                <div class="panel-body front-no-padding" style="height:1125px;border:0;background-color: transparent">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1120px;" src="statics/img/hemaGroupBgBoy.png">
-                    <table style="width: 800px; height:1120px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 140px;" id="content-table">
+                <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaGroupBgBoy.png">
+                    <table style="width: 800px; height:1060px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 130px;" id="content-table">
                         <tr>
                             <td class="col-md-8 content-1">
                                 <div id="column1" class="column-body"></div>
@@ -93,19 +93,20 @@
                                         <table style="width: 100%;border:0;font-size: 16px;font-weight: bold; ">
                                             <tr style="height: 40px">
                                                 <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">姓名:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="baby.name"/></td>
+                                                <td class="col-md-6" style="padding-left: 0px"><span style="text-decoration: underline;"><s:property value="baby.name"/></span></td>
                                             </tr>
                                             <tr style="height: 40px">
                                                 <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">体重:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.weight"/>kg</td>
+                                                <td class="col-md-6" style="padding-left: 0px"><span style="text-decoration: underline;"><s:property value="resultGroup2020.weight"/></span> kg</td>
                                             </tr>
                                             <tr style="height: 40px">
                                                 <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">身高:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.height"/>cm</td>
+                                                <td class="col-md-6" style="padding-left: 0px"> <span style="text-decoration: underline;"><s:property value="resultGroup2020.height"/></span> cm</td>
                                             </tr>
                                             <tr style="height: 40px">
                                                 <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">头围:</td>
-                                                <td class="col-md-6" style="padding-left: 0px"><s:property value="resultGroup2020.head"/>cm</td>
+                                                <td class="col-md-6" style="padding-left: 0px">
+                                                    <span style="text-decoration: underline;"><s:property value="resultGroup2020.head"/></span> cm</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -229,125 +230,212 @@
     function draw() {
         
         var chartData1 =  [{
-            name: '1',
-            data: basicHA1,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'green'
-        },{
-            name: '4',
-            data: basicHA4,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
+            name: '97th',
+            data: basicHA2,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
             color: 'red'
         },{
-            name: '7',
-            data: basicHA7,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'blue'
+            name: '85th',
+            data: basicHA3,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
         },{
-            name: ' ',
+            name: '50th',
+            data: basicHA4,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'green'
+        },{
+            name: '15th',
+            data: basicHA5,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
+        },{
+            name: '3rd',
+            data: basicHA6,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'red'
+        },{
+            name: '实际',
             data: babyHA,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:4,
-                lineWidth:2,
+                radius:2,
+                lineWidth:1,
             },
             color: 'black'
         }];
 
         var chartData2 =  [{
             name: '1',
-            data: basicWA1,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'green'
+            data: basicWA2,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'red'
+        },{
+            name: '3',
+            data: basicWA3,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
         },{
             name: '4',
             data: basicWA4,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'red'
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'green'
+        },{
+            name: '5',
+            data: basicWA5,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
         },{
             name: '7',
-            data: basicWA7,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'blue'
+            data: basicWA6,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'red'
         },{
-            name: ' ',
+            name: '实际',
             data: babyWA,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:4,
-                lineWidth:2,
+                radius:2,
+                lineWidth:1,
             },
             color: 'black'
         }];
 
 
         var chartData3 =  [{
-            name: '1',
-            data: basicHead1,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'green'
-        },{
-            name: '4',
-            data: basicHead4,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
+            name: '97th',
+            data: basicHead2,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
             color: 'red'
         },{
-            name: '7',
-            data: basicHead7,
-            marker:{//线上数据点
-                symbol:'circle',//圆点显示
-                radius:2,
-                lineWidth:2,
-            },
-            color: 'blue'
+            name: '85th',
+            data: basicHead3,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
         },{
-            name: ' ',
+            name: '50th',
+            data: basicHead4,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'green'
+        },{
+            name: '15th',
+            data: basicHead5,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'orange'
+        },{
+            name: '3rd',
+            data: basicHead6,
+            // marker:{//线上数据点
+            //     symbol:'circle',//圆点显示
+            //     radius:2,
+            //     lineWidth:2,
+            // },
+            lineWidth: 1,
+            color: 'red'
+        },{
+            name: '实际',
             data: babyHead,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:4,
-                lineWidth:2,
+                radius:2,
+                lineWidth:1,
             },
             color: 'black'
         }];
+        // var age = {
+        //     0: 'Birth 出生',
+        //     12: '1year 1岁',
+        //     24: '2years 2岁',
+        //     36: '3years 3岁',
+        //     48: '4years 4岁',
+        //     60: '5years 5岁',
+        // }
+        var age = {
+            0: '出生',
+            12: '1岁',
+            24: '2岁',
+            36: '3岁',
+            48: '4岁',
+            60: '5岁',
+        }
         $('#column1').highcharts({
             chart: {
-                backgroundColor:"transparent"
+                backgroundColor:"#29b2f7",
+                plotBackgroundColor: '#FFF',
+                spacing: [10, 10, 0, 0]
             },
             title: {
-                text: '身高/月龄',
+                text: '',
                 style: {
                     fontSize: '12px'
                 }
@@ -360,19 +448,54 @@
             },
             yAxis: {
                 title: {
-                    text: '身高(cm)'
-                }
+                    text: 'Length/Height(cm) 身高',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                labels:{
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                tickPositions: [45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125]
             },
             xAxis: {
                 title: {
-                    text: '月龄'
-                }
+                    text: 'Age(completed months and years) 年龄 (整月和整年)',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                // tickAmount: 20,
+                tickInterval: 2,
+                labels: {
+                    formatter: function () {
+                        if (age[this.value]) {
+                            return age[this.value];
+                        } else {
+                            return this.value % 12;
+                        }
+                    },
+                    style: {
+                        color: 'white',
+                        fontSize: '8px'
+                    }
+                },
             },
             legend: {
+                align: 'right',
                 // layout: 'vertical',
-                // align: 'left',
-                // verticalAlign: 'middle'
-                enabled: false
+                verticalAlign: 'top',
+                x: -80,
+                y: -5,
+                floating: true,
+                itemStyle:{
+                    fontSize:'8px'
+                }
             },
             series: chartData1
         }, function(c){
@@ -381,10 +504,12 @@
 
         $('#column2').highcharts({
             chart: {
-                backgroundColor:"transparent"
+                backgroundColor:"#29b2f7",
+                plotBackgroundColor: '#FFF',
+                spacing: [10, 10, 0, 0]
             },
             title: {
-                text: '体重/月龄',
+                text: '',
                 style: {
                     fontSize: '12px'
                 }
@@ -397,12 +522,42 @@
             },
             yAxis: {
                 title: {
-                    text: '体重(kg)'
-                }
+                    text: '体重 Weight(kg)',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                labels:{
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                tickPositions: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32]
             },
             xAxis: {
                 title: {
-                    text: '月龄'
+                    text: 'Age(completed months and years) 年龄 (整月和整年)',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                // tickAmount: 20,
+                tickInterval: 2,
+                labels: {
+                    formatter: function () {
+                        if (age[this.value]) {
+                            return age[this.value];
+                        } else {
+                            return this.value % 12;
+                        }
+                    },
+                    style: {
+                        color: 'white',
+                        fontSize: '8px'
+                    }
                 }
             },
             legend: {
@@ -417,10 +572,12 @@
         });
         $('#column3').highcharts({
             chart: {
-                backgroundColor:"transparent"
+                backgroundColor:"#29b2f7",
+                plotBackgroundColor: '#FFF',
+                spacing: [10, 10, 0, 0]
             },
             title: {
-                text: '头围',
+                text: '',
                 style: {
                     fontSize: '12px'
                 }
@@ -433,12 +590,42 @@
             },
             yAxis: {
                 title: {
-                    text: '头围(cm)'
-                }
+                    text: '头围 Head circumference(cm)',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                labels:{
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                tickPositions: [28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60]
             },
             xAxis: {
                 title: {
-                    text: '月龄'
+                    text: 'Age(completed months and years) 年龄 (整月和整年)',
+                    style: {
+                        color: 'white',
+                        fontSize: '10px'
+                    }
+                },
+                // tickAmount: 20,
+                tickInterval: 2,
+                labels: {
+                    formatter: function () {
+                        if (age[this.value]) {
+                            return age[this.value];
+                        } else {
+                            return this.value % 12;
+                        }
+                    },
+                    style: {
+                        color: 'white',
+                        fontSize: '8px'
+                    }
                 }
             },
             legend: {
