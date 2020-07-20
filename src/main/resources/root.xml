@@ -82,6 +82,12 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--生长发育测试-->
+        <action name="newtestGroup2020" method="newTestGroup2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestGroup2020.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--儿童气质测试-->
         <action name="newtestQiZhi" method="newTestQiZhi" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestQiZhi.jsp</result>
@@ -178,6 +184,11 @@
         <!--成长发育-->
         <action name="showresultGroup" method="showResultGroup" class="com.free4lab.babycheckup.action.ResultGroupAction">
             <result name="success" >views/showresultGroup.jsp</result>
+        </action>
+
+        <!--成长发育2020-->
+        <action name="showresultGroup2020" method="showResultGroup2020" class="com.free4lab.babycheckup.action.ResultGroup2020Action">
+            <result name="success" >views/showresultGroup2020.jsp</result>
         </action>
 
         <!--儿童气质-->
@@ -345,10 +356,18 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!--比内结果-->
+        <!--生长发育结果-->
         <action name="saveresultGroup" method="saveResultGroup" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultGroup,resultGroup.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--生长发育2020结果-->
+        <action name="saveresultGroup2020" method="saveResultGroup2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultGroup2020,resultGroup2020.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -432,6 +451,14 @@
                 <param name="includeProperties">babyid,flag</param>
             </result>
         </action>
+
+        <!--是不是能进行身体机能2020版测试-->
+        <action name="monthageGroup2020" method="testMonthAgeGroup2020" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
 
         <!--是不是能进行儿童气质测试测试-->
         <action name="monthageQiZhi" method="testMonthAgeQiZhi" class="com.free4lab.babycheckup.action.BabyAction">

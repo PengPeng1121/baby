@@ -45,11 +45,13 @@ public class TestAction {
     private List<Result2016> result2016List = new ArrayList<Result2016>();
     private List<ResultADHD> resultADHDList = new ArrayList<ResultADHD>();
     private List<ResultFeel2020> resultFeel2020List = new ArrayList<ResultFeel2020>();
+    private List<ResultGroup2020> resultGroup2020List = new ArrayList<ResultGroup2020>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
     private Result result;
     private ResultGroup resultGroup;
+    private ResultGroup2020 resultGroup2020;
     private ResultNei resultNei;
     private ResultFeel resultFeel;
     private ResultDDST resultDDST;
@@ -263,6 +265,21 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 生长发育2020版
+    public String newTestGroup2020(){
+
+        if(!canTest(29)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 29;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -280,6 +297,7 @@ public class TestAction {
         result2016List = ResultManager2016.findResultBybid(babyid);
         resultADHDList = ResultADHDManager.findResultBybid(babyid);
         resultFeel2020List = ResultFeel2020Manager.findResultBybid(babyid);
+        resultGroup2020List = ResultGroup2020Manager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -742,13 +760,38 @@ public class TestAction {
         resultGroup.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
         resultGroup.setUpdateTime(new Date());
         resultGroup.setCreateTime(new Date());
-        //todo 详情表
         try {
             resultGroup.setBabyMonthAge( Math.round((differentdays(baby.getBirthday(),new Date()))/30.4)+"");
             Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
             resultGroup.setUpdateUser(userId.toString());
             resultGroup.setCreateUser(userId.toString());
             ResultGroupManager.saveResult(resultGroup);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        return SUCCESS;
+    }
+
+    // 身体发育2020版
+    public String saveResultGroup2020(){
+        if(!subTestTimes(29)){
+            return "fail";
+        }
+        baby = BabyManager.findById(resultGroup2020.getBabyId());
+        resultGroup2020.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultGroup2020.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+        resultGroup2020.setTestId(29);
+        resultGroup2020.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultGroup2020.setUpdateTime(new Date());
+        resultGroup2020.setCreateTime(new Date());
+        try {
+            resultGroup2020.setBabyMonthAge( Math.round((differentdays(baby.getBirthday(),new Date()))/30.4)+"");
+            Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+            resultGroup2020.setUpdateUser(userId.toString());
+            resultGroup2020.setCreateUser(userId.toString());
+            ResultGroup2020Manager.saveResult(resultGroup2020);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -1400,5 +1443,21 @@ public class TestAction {
 
     public void setResultFeel2020(ResultFeel2020 resultFeel2020) {
         this.resultFeel2020 = resultFeel2020;
+    }
+
+    public ResultGroup2020 getResultGroup2020() {
+        return resultGroup2020;
+    }
+
+    public void setResultGroup2020(ResultGroup2020 resultGroup2020) {
+        this.resultGroup2020 = resultGroup2020;
+    }
+
+    public List<ResultGroup2020> getResultGroup2020List() {
+        return resultGroup2020List;
+    }
+
+    public void setResultGroup2020List(List<ResultGroup2020> resultGroup2020List) {
+        this.resultGroup2020List = resultGroup2020List;
     }
 }

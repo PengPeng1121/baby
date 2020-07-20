@@ -24,5 +24,24 @@
                 <param name="root">groupBasicInfo</param>
             </result>
         </action>
+
+
+        <!-- 查询儿童程长发育测试历史 / -->
+        <action name="group2020BabyInfo" method="group2020BabyInfo" class="com.free4lab.babycheckup.action.ResultGroup2020Action">
+            <result name="fail"></result>
+            <!-- 返回json类型数据 -->
+            <result type="json">
+                <param name="root">group2020BabyInfo</param>
+            </result>
+        </action>
+
+        <!-- 查询儿童程长发育测试基础数据 / -->
+        <action name="group2020BasicInfo" method="group2020BasicInfo" class="com.free4lab.babycheckup.action.ResultGroup2020Action">
+            <result name="fail"></result>
+            <!-- 返回json类型数据 -->
+            <result type="json">
+                <param name="root">group2020BasicInfo</param>
+            </result>
+        </action>
     </package>
 </struts>
