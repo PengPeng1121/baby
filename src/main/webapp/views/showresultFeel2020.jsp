@@ -26,6 +26,9 @@
             size:  auto portrait;   /* auto is the initial value */
             margin: 5mm;  /* this affects the margin in the printer settings */
         }
+        td {
+            padding: 5px !important;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -224,8 +227,8 @@
 
 
 
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px; font-weight: bold;">
-            <div class="panel-heading" id="headRemark">医师评价及建议</div>
+        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
+            <div class="panel-heading" id="headRemark" style="font-weight: bold;">医师评价及建议</div>
             <!-- <div class="panel-body front-no-padding">
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
             </div> -->
