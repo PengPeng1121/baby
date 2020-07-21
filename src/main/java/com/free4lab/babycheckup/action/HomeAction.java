@@ -26,6 +26,7 @@ public class HomeAction {
     private long numberOfResult2016;
     private long numberOfResultADHD;
     private long numberOfResultFeel2020;
+    private long numberOfResultGroup2020;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -41,6 +42,7 @@ public class HomeAction {
     private Integer result2016LeftTimes;
     private Integer resultADHDLeftTimes;
     private Integer resultFeel2020LeftTimes;
+    private Integer resultGroup2020LeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -64,6 +66,7 @@ public class HomeAction {
         numberOfResult2016 = ResultManager2016.countResultByHosIdAndTestId(hoid,26);
         numberOfResultADHD = ResultADHDManager.countResultByHosIdAndTestId(hoid,27);
         numberOfResultFeel2020 = ResultFeel2020Manager.countResultByHosIdAndTestId(hoid,28);
+        numberOfResultGroup2020 = ResultGroup2020Manager.countResultByHosIdAndTestId(hoid,29);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -123,6 +126,9 @@ public class HomeAction {
                             break;
                         case 28:
                             resultFeel2020LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 29:
+                            resultGroup2020LeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -384,5 +390,21 @@ public class HomeAction {
 
     public void setResultFeel2020LeftTimes(Integer resultFeel2020LeftTimes) {
         this.resultFeel2020LeftTimes = resultFeel2020LeftTimes;
+    }
+
+    public long getNumberOfResultGroup2020() {
+        return numberOfResultGroup2020;
+    }
+
+    public void setNumberOfResultGroup2020(long numberOfResultGroup2020) {
+        this.numberOfResultGroup2020 = numberOfResultGroup2020;
+    }
+
+    public Integer getResultGroup2020LeftTimes() {
+        return resultGroup2020LeftTimes;
+    }
+
+    public void setResultGroup2020LeftTimes(Integer resultGroup2020LeftTimes) {
+        this.resultGroup2020LeftTimes = resultGroup2020LeftTimes;
     }
 }

@@ -352,6 +352,18 @@ public class BabyAction {
         return "success";
     }
 
+    //0~6岁
+    public String testMonthAgeGroup2020(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge <= 60 && 0 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
     //0~12岁
     public String testMonthAgeQiZhi(){
         Date d2 = new Date(new java.util.Date().getTime());
