@@ -42,7 +42,6 @@
 
         <input id="babyid" type="hidden" value="<s:property value="resultPhysical.babyid"/>">
         <input id="resultid" type="hidden" value="<s:property value="resultPhysical.id"/>">
-        <input id="height" type="hidden" value="<s:property value="resultPhysical.hairIsNormal"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
@@ -91,8 +90,40 @@
     var days = $('#days').val();
     var gender = $('#gender').val();
     var hairIsNormal,
-        hairReason;
-    
+        hairReason,
+        fingernailIsNormal,
+        fingernailReason,
+        skinIsNormal,
+        skinReason,
+        faceIsNormal,
+        faceReason,
+        headIsNormal,
+        headReason,
+        eyeIsNormal,
+        eyeReason,
+        earIsNormal,
+        earReason,
+        mouthIsNormal,
+        mouthReason,
+        neckIsNormal,
+        neckReason,
+        lymphIsNormal,
+        lymphReason,
+        thoracicCavityIsNormal,
+        thoracicCavityReason,
+        heartIsNormal,
+        heartReason,
+        lungIsNormal,
+        lungReason,
+        stomachIsNormal,
+        stomachReason,
+        limbIsNormal,
+        limbReason,
+        sexFeaturesIsNormal,
+        sexFeaturesReason,
+        vdIsNormal,
+        vdReason;
+
 
     var data = "{";
         data += "'babyId':" + babyid+ ",";
