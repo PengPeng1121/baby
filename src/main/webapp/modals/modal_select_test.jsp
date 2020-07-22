@@ -86,6 +86,10 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Group2020()"><h4
                     style="color: white;font-size: small">生长发育2020</h4></a>
         </div>
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Physical()"><h4
+                    style="color: white;font-size: small">体格头面检查</h4></a>
+        </div>
     </div>
 </div>
 <script>
@@ -380,6 +384,25 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestGroup2020?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Physical() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthagePhysical",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestPhysical?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
