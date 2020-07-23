@@ -54,6 +54,15 @@
                     <s:if test="baby.gender == 0">
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaGroupBgGirl.png">
                     </s:if>
+
+                    <table style="width: 100%;border:0 ">
+                        <tr>
+                            <td class="col-md-2">姓名:</td>
+                            <td class="col-md-2" style="text-decoration: underline"><s:property value="baby.name"/></td>
+                            
+                        </tr>
+                    </table>
+
                     <table style="width: 800px; height:1060px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 130px;" id="content-table">
                         <tr>
                             <td>
