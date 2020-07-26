@@ -473,108 +473,108 @@
         
         data += "'resultPhysical.hairIsNormal':" + hairIsNormal + ",";
         if (hairReason) {
-            data += "'resultPhysical.hairReason':" + hairReason + ",";
+            data += "'resultPhysical.hairReason':'" + hairReason + "',";
         }
         // data += "'resultPhysical.hairReason':" + hairReason + ",";
 
         data += "'resultPhysical.fingernailIsNormal':" + fingernailIsNormal + ",";
         if (fingernailReason) {
-            data += "'resultPhysical.fingernailReason':" + fingernailReason + ",";
+            data += "'resultPhysical.fingernailReason':'" + fingernailReason + "',";
         }
         // data += "'resultPhysical.fingernailReason':" + fingernailReason + ",";
 
         data += "'resultPhysical.skinIsNormal':" + skinIsNormal + ",";
         if (skinReason) {
-            data += "'resultPhysical.skinReason':" + skinReason + ",";
+            data += "'resultPhysical.skinReason':'" + skinReason + "',";
         }
         // data += "'resultPhysical.skinReason':" + skinReason + ",";
 
         data += "'resultPhysical.faceIsNormal':" + faceIsNormal + ",";
         if (faceReason) {
-            data += "'resultPhysical.faceReason':" + faceReason + ",";
+            data += "'resultPhysical.faceReason':'" + faceReason + "',";
         }
         // data += "'resultPhysical.faceReason':" + faceReason + ",";
 
         data += "'resultPhysical.headIsNormal':" + headIsNormal + ",";
         if (headReason) {
-            data += "'resultPhysical.headReason':" + headReason + ",";
+            data += "'resultPhysical.headReason':'" + headReason + "',";
         }
         // data += "'resultPhysical.headReason':" + headReason + ",";
 
         data += "'resultPhysical.eyeIsNormal':" + eyeIsNormal + ",";
         if (eyeReason) {
-            data += "'resultPhysical.eyeReason':" + eyeReason + ",";
+            data += "'resultPhysical.eyeReason':'" + eyeReason + "',";
         }
         // data += "'resultPhysical.eyeReason':" + eyeReason + ",";
 
         data += "'resultPhysical.earIsNormal':" + earIsNormal + ",";
         if (earReason) {
-            data += "'resultPhysical.earReason':" + earReason + ",";
+            data += "'resultPhysical.earReason':'" + earReason + "',";
         }
         // data += "'resultPhysical.earReason':" + earReason + ",";
 
         data += "'resultPhysical.mouthIsNormal':" + mouthIsNormal + ",";
         if (mouthReason) {
-            data += "'resultPhysical.mouthReason':" + mouthReason + ",";
+            data += "'resultPhysical.mouthReason':'" + mouthReason + "',";
         }
         // data += "'resultPhysical.mouthReason':" + mouthReason + ",";
 
         data += "'resultPhysical.neckIsNormal':" + neckIsNormal + ",";
         if (neckReason) {
-            data += "'resultPhysical.neckReason':" + neckReason + ",";
+            data += "'resultPhysical.neckReason':'" + neckReason + "',";
         }
         // data += "'resultPhysical.neckReason':" + neckReason + ",";
 
         data += "'resultPhysical.lymphIsNormal':" + lymphIsNormal + ",";
         if (lymphReason) {
-            data += "'resultPhysical.lymphReason':" + lymphReason + ",";
+            data += "'resultPhysical.lymphReason':'" + lymphReason + "',";
         }
         // data += "'resultPhysical.lymphReason':" + lymphReason + ",";
 
         data += "'resultPhysical.thoracicCavityIsNormal':" + thoracicCavityIsNormal + ",";
         if (thoracicCavityReason) {
-            data += "'resultPhysical.thoracicCavityReason':" + thoracicCavityReason + ",";
+            data += "'resultPhysical.thoracicCavityReason':'" + thoracicCavityReason + "',";
         }
         // data += "'resultPhysical.thoracicCavityReason':" + thoracicCavityReason + ",";
 
         data += "'resultPhysical.heartIsNormal':" + heartIsNormal + ",";
         if (heartReason) {
-            data += "'resultPhysical.heartReason':" + heartReason + ",";
+            data += "'resultPhysical.heartReason':'" + heartReason + "',";
         }
         // data += "'resultPhysical.heartReason':" + heartReason + ",";
 
         data += "'resultPhysical.lungIsNormal':" + lungIsNormal + ",";
         if (lungReason) {
-            data += "'resultPhysical.lungReason':" + lungReason + ",";
+            data += "'resultPhysical.lungReason':'" + lungReason + "',";
         }
         // data += "'resultPhysical.lungReason':" + lungReason + ",";
 
         data += "'resultPhysical.stomachIsNormal':" + stomachIsNormal + ",";
         if (stomachReason) {
-            data += "'resultPhysical.stomachReason':" + stomachReason + ",";
+            data += "'resultPhysical.stomachReason':'" + stomachReason + "',";
         }
         // data += "'resultPhysical.stomachReason':" + stomachReason + ",";
 
         data += "'resultPhysical.limbIsNormal':" + limbIsNormal + ",";
         if (limbReason) {
-            data += "'resultPhysical.limbReason':" + limbReason + ",";
+            data += "'resultPhysical.limbReason':'" + limbReason + "',";
         }
         // data += "'resultPhysical.limbReason':" + limbReason + ",";
 
         data += "'resultPhysical.sexFeaturesIsNormal':" + sexFeaturesIsNormal + ",";
         if (sexFeaturesReason) {
-            data += "'resultPhysical.sexFeaturesReason':" + sexFeaturesReason + ",";
+            data += "'resultPhysical.sexFeaturesReason':'" + sexFeaturesReason + "',";
         }
         // data += "'resultPhysical.sexFeaturesReason':" + sexFeaturesReason + ",";
 
         data += "'resultPhysical.vdIsNormal':" + vdIsNormal + ",";
         if (vdReason) {
-            data += "'resultPhysical.vdReason':" + vdReason + ",";
+            data += "'resultPhysical.vdReason':'" + vdReason + "',";
         }
         // data += "'resultPhysical.vdReason':" + vdReason + ",";
 
         if (remark) {
-            data += "'resultPhysical.remark':" + remark + ",";
+            data += "'resultPhysical.remark':'" + remark + "'";
         }
         // data += "'resultPhysical.remark':" + remark + ",";
 
