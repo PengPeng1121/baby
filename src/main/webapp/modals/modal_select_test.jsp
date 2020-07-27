@@ -90,6 +90,10 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Physical()"><h4
                     style="color: white;font-size: small">体格头面检查</h4></a>
         </div>
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Summary()"><h4
+                    style="color: white;font-size: small">总评</h4></a>
+        </div>
     </div>
 </div>
 <script>
@@ -403,6 +407,25 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestPhysical?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Summary() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthageSummary",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestSummary?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
