@@ -67,10 +67,10 @@
                     <tbody style="width: 100%">
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>
-                                日期
+                                总评日期
                             </td>
                             <td>
-                                <input id="baby-birth" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+                                <input id="summaryDate" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
                             </td>
                         </tr>
                         <tr>
@@ -94,11 +94,10 @@
 
 
 
-    //月龄
-    var time = $("#baby-birth").val().trim();
+    var summaryDate = $("#summaryDate").val().trim();
     var remark = $('#remark').val();
 
-    $('#baby-birth').cxCalendar();
+    $('#summaryDate').cxCalendar();
     
     function save() {
         
@@ -114,7 +113,8 @@
     function score() {
 
         var data = "{";
-        data += "'resultSummary.time':" + $("#babyid").val() + ",";
+        data += "'resultSummary.babyId':" + $("#babyid").val() + ",";
+        data += "'resultSummary.summaryDate':" + summaryDate + ",";
         data += "'resultSummary.remark':" + remark + ",";
         data += "}";
         

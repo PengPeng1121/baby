@@ -15,12 +15,6 @@
             background-color: transparent;
             /*width: 800px;*/
         }
-        .column-body{
-            width: 500px;
-            height: 240px;
-            margin-left: 50px;
-            margin-top: 5px;
-        }
         body, table, tbody, tr, td {
             background-color: transparent;
         }
@@ -40,8 +34,9 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultPhysical.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultPhysical.id"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultSummary.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultSummary.id"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultSummary.remark"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
@@ -49,36 +44,41 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaGroupBgBoy.png">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.png">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaGroupBgGirl.png">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.png">
                     </s:if>
 
                     <table style="width: 100%;border:0 ">
                         <tr>
-                            <td class="col-md-2">姓名:</td>
-                            <td class="col-md-2" style="text-decoration: underline"><s:property value="baby.name"/></td>
-                            
+
+                            <td class="col-md-2" style="font-weight: bold;">
+                                <span style="letter-spacing: 18px">姓</span>
+                                <span style="letter-spacing: 1px">名:</span>
+                            </td>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
+
+                            <td class="col-md-2 col-offset-2" style="font-weight: bold;">
+                                <span style="letter-spacing: 18px">出生日</span>
+                                <span style="letter-spacing: 1px">期:</span>
+                            </td>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.birthday" format="yyyy-MM-dd"/></td>
+
                         </tr>
                     </table>
 
                     <table style="width: 800px; height:1060px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 130px;" id="content-table">
                         <tr>
                             <td>
-                                毛发
-                            </td>
-                            <td>
-                                <input type="radio" name="answer-1" value="1" />正常
-                            </td>
-                            <td>
-                                <input type="radio" name="answer-1" value="0" />其他
-                            </td>
-                            <td>
-                                <input id="answer-1-detail" />
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remarkText"></textarea>
                             </td>
                         </tr>
                     </table>
+
+                    <p>
+                        <s:property value="resultSummary.summaryDate"/>
+                    </p>
                 </div>
             </div>
             <div style="width:270px;float: right">
@@ -97,60 +97,13 @@
     var babyid = $('#babyid').val();
     var resultid = $('#resultid').val();
     var days = $('#days').val();
-    var gender = $('#gender').val();
-    var hairIsNormal,
-        hairReason,
-        fingernailIsNormal,
-        fingernailReason,
-        skinIsNormal,
-        skinReason,
-        faceIsNormal,
-        faceReason,
-        headIsNormal,
-        headReason,
-        eyeIsNormal,
-        eyeReason,
-        earIsNormal,
-        earReason,
-        mouthIsNormal,
-        mouthReason,
-        neckIsNormal,
-        neckReason,
-        lymphIsNormal,
-        lymphReason,
-        thoracicCavityIsNormal,
-        thoracicCavityReason,
-        heartIsNormal,
-        heartReason,
-        lungIsNormal,
-        lungReason,
-        stomachIsNormal,
-        stomachReason,
-        limbIsNormal,
-        limbReason,
-        sexFeaturesIsNormal,
-        sexFeaturesReason,
-        vdIsNormal,
-        vdReason;
+    var remark = $('#remark').val();
 
 
-    var data = "{";
-        data += "'babyId':" + babyid+ ",";
-        data += "'resultId':" + resultid+ ",";
-        data += "}";
-    $.ajax({
-        url: 'getPhysicalResult',
-        type: 'post',
-        data: eval('(' + data + ')'),
-        success:function (json) {
-            hairIsNormal = json.hairIsNormal;
-            hairReason = json.hairReason;
-            draw();
-        }
-    })
-    function draw () {
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    remark = remark.replace(reg,"\n");
+    $('#remarkText').html(remark);
 
-    }
     
     $('.print').click(function(){
         window.print();
