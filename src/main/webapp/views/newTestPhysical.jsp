@@ -573,17 +573,21 @@
         }
         // data += "'resultPhysical.vdReason':" + vdReason + ",";
 
-        if (remark) {
-            data += "'resultPhysical.remark':'" + remark + "'";
-        }
-        // data += "'resultPhysical.remark':" + remark + ",";
+        
 
         data += "}";
         
+        data = eval('(' + data + ')');
+
+
+        if (remark) {
+            data['resultPhysical.remark'] = remark;
+        }
+        // data += "'resultPhysical.remark':" + remark + ",";
         $.ajax({
             url: 'saveresultPhysical',
             type: 'post',
-            data: eval('(' + data + ')'),
+            data: data,
             success:function (json) {
                 window.location = "showresultPhysical?id=" + json.resultPhysical.id;
             }
