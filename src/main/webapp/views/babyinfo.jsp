@@ -504,7 +504,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultPhysical2020?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>

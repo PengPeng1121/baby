@@ -27,7 +27,7 @@
         }
         .item{
             letter-spacing: 8px;
-            width: 230px;
+            width: 220px;
         }
         body, table, tbody, tr, td {
             background-color: transparent;
@@ -77,6 +77,25 @@
             height: 240px !important;
             margin-left: 50px !important;
             margin-top: 5px !important;
+        }
+        input[type="radio"] {
+            display: none !important;
+        }
+        input[type='radio'] + label:before{
+            content: "" !important;
+            display: inline-block !important;
+            width: 20px !important;
+            height: 20px !important;
+            border: 2px solid #df9390 !important;
+            border-radius:50% !important;
+            position: relative !important;
+            top: 5px !important;
+        }
+        input[type='radio']:checked + label:before{
+            background-color: #000 !important;
+        }
+        #name{
+            padding-left: 0px;
         }
     </style>
 </head>
@@ -147,18 +166,18 @@
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg4Girl.jpg"">
                     </s:if>
 
-                    <table style="width: 20%;
+                    <table style="width: 35%;
                         border: 0;
                         position: relative;
                         top: 120px;
                         left: 50px;
                         font-size: 16px">
                         <tr>
-                            <td class="col-md-5" style="font-weight: bold;">
+                            <td style="font-weight: bold; width: 100px; padding-left: 15px">
                                 <span style="letter-spacing: 18px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                             </td>
-                            <td class="col-md-7" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
+                            <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
                         </tr>
                     </table>
 
@@ -167,7 +186,7 @@
                             <td class="item">
                                 毛发
                             </td>
-                            <td style="width: 75px">
+                            <td style="width: 85px">
                                 <input type="radio" name="answer-1" value="1" checked  id="radio-answer-1-1">
                                 <label for="radio-answer-1-1">正常</label>
                             </td>

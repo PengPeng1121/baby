@@ -452,7 +452,7 @@
 
 
                 <!-- 总评(河马) -->
-                <s:if test="resultSummaryLeftTimes != 0">
+                <!-- <s:if test="resultSummaryLeftTimes != 0">
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
@@ -480,7 +480,7 @@
                         </div>
                     </div>
                 </div>
-                </s:if>
+                </s:if> -->
 
 
 
