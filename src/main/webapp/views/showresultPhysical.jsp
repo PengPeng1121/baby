@@ -47,6 +47,7 @@
         }
         input[type='radio']:checked + label:before{
             background-color: #000;
+            box-shadow: inset 0 0 0 3px #fff;
         }
         label {
             font-size: 14px;
