@@ -8,6 +8,7 @@
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <title>新建评测-儿童发育评测平台</title>
     <s:include value="/statics/head.html"></s:include>
+    <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
     <style type="text/css">
         p{
             margin:0;
@@ -62,28 +63,33 @@
                 </div>
             </div>
             
-            <div class="panel panel-default front-panel">
-                <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
-                    <tbody style="width: 100%">
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>
-                                总评日期
-                            </td>
-                            <td>
-                                <input id="summaryDate" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
-                            </td>
-                        </tr>
-                        <tr>
-                            <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remark"></textarea>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
+
+            <textarea rows="30" style="width: 800px;resize:none;border: 0;position: relative;left: 170px;" id="remark"></textarea>
+
+
+            <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 30%;position: relative;left: 170px">
+                <tbody style="width: 100%">
+                    <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <td>
+                            总评日期
+                        </td>
+                        <td>
+                            <input id="summaryDate" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            
+            
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 <a type="button" class="btn btn-primary pull-right" onclick="save()" >保存</a>
             </div>
+
+            <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
         </form>
     </div>
     <s:include value="/statics/footer.jsp"/>
@@ -94,8 +100,7 @@
 
 
 
-    var summaryDate = $("#summaryDate").val().trim();
-    var remark = $('#remark').val();
+    
 
     $('#summaryDate').cxCalendar();
     
@@ -111,17 +116,19 @@
 
 
     function score() {
-
+        var summaryDate = $("#summaryDate").val().trim();
+        var summary = $('#remark').val();
         var data = "{";
-        data += "'resultSummary.babyId':" + $("#babyid").val() + ",";
-        data += "'resultSummary.summaryDate':" + summaryDate + ",";
-        data += "'resultSummary.remark':" + remark + ",";
+        data += "'resultSummary.babyId':" + $("#babyid").val();
         data += "}";
         
+        data = eval('(' + data + ')');
+        data['resultSummary.summaryDate'] = summaryDate;
+        data['resultSummary.summary'] = summary;
         $.ajax({
             url: 'saveresultSummary',
             type: 'post',
-            data: eval('(' + data + ')'),
+            data: data,
             success:function (json) {
                 window.location = "showresultSummary?id=" + json.resultSummary.id;
             }

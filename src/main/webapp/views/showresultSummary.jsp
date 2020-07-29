@@ -36,7 +36,7 @@
 
         <input id="babyid" type="hidden" value="<s:property value="resultSummary.babyid"/>">
         <input id="resultid" type="hidden" value="<s:property value="resultSummary.id"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultSummary.remark"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultSummary.summary"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
