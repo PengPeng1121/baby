@@ -3,6 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
+import com.free4lab.babycheckup.model.ResultAllergy;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.util.CollectionUtils;
 
@@ -27,6 +28,9 @@ public class HomeAction {
     private long numberOfResultADHD;
     private long numberOfResultFeel2020;
     private long numberOfResultGroup2020;
+    private long numberOfResultPhysical;
+    private long numberOfResultSummary;
+    private long numberOfResultAllergy;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -43,6 +47,9 @@ public class HomeAction {
     private Integer resultADHDLeftTimes;
     private Integer resultFeel2020LeftTimes;
     private Integer resultGroup2020LeftTimes;
+    private Integer resultPhysicalLeftTimes;
+    private Integer resultSummaryLeftTimes;
+    private Integer resultAllergyLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -67,6 +74,9 @@ public class HomeAction {
         numberOfResultADHD = ResultADHDManager.countResultByHosIdAndTestId(hoid,27);
         numberOfResultFeel2020 = ResultFeel2020Manager.countResultByHosIdAndTestId(hoid,28);
         numberOfResultGroup2020 = ResultGroup2020Manager.countResultByHosIdAndTestId(hoid,29);
+        numberOfResultPhysical = ResultPhysicalManager.countResultByHosIdAndTestId(hoid,30);
+        numberOfResultSummary = ResultSummaryManager.countResultByHosIdAndTestId(hoid,31);
+        numberOfResultAllergy = ResultAllergyManager.countResultByHosIdAndTestId(hoid,32);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -129,6 +139,15 @@ public class HomeAction {
                             break;
                         case 29:
                             resultGroup2020LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 30:
+                            resultPhysicalLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 31:
+                            resultSummaryLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 32:
+                            resultAllergyLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -406,5 +425,37 @@ public class HomeAction {
 
     public void setResultGroup2020LeftTimes(Integer resultGroup2020LeftTimes) {
         this.resultGroup2020LeftTimes = resultGroup2020LeftTimes;
+    }
+
+    public long getNumberOfResultPhysical() {
+        return numberOfResultPhysical;
+    }
+
+    public void setNumberOfResultPhysical(long numberOfResultPhysical) {
+        this.numberOfResultPhysical = numberOfResultPhysical;
+    }
+
+    public Integer getResultPhysicalLeftTimes() {
+        return resultPhysicalLeftTimes;
+    }
+
+    public void setResultPhysicalLeftTimes(Integer resultPhysicalLeftTimes) {
+        this.resultPhysicalLeftTimes = resultPhysicalLeftTimes;
+    }
+
+    public long getNumberOfResultSummary() {
+        return numberOfResultSummary;
+    }
+
+    public void setNumberOfResultSummary(long numberOfResultSummary) {
+        this.numberOfResultSummary = numberOfResultSummary;
+    }
+
+    public Integer getResultSummaryLeftTimes() {
+        return resultSummaryLeftTimes;
+    }
+
+    public void setResultSummaryLeftTimes(Integer resultSummaryLeftTimes) {
+        this.resultSummaryLeftTimes = resultSummaryLeftTimes;
     }
 }

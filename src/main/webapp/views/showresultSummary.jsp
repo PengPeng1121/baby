@@ -63,7 +63,7 @@
                                 <span style="letter-spacing: 18px">出生日</span>
                                 <span style="letter-spacing: 1px">期:</span>
                             </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.birthday" format="yyyy-MM-dd"/></td>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
 
                         </tr>
                     </table>

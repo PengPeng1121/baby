@@ -26,6 +26,8 @@
         <class>com.free4lab.babycheckup.model.TestInstruction</class>
         <class>com.free4lab.babycheckup.model.ResultADHD</class>
         <class>com.free4lab.babycheckup.model.ResultFeel2020</class>
+        <class>com.free4lab.babycheckup.model.ResultGroup2020</class>
+        <class>com.free4lab.babycheckup.model.ResultPhysical</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://47.94.202.106:3306/babycheckup?characterEncoding=UTF-8"/>

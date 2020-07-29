@@ -443,7 +443,7 @@
 
 
         $.ajax({
-            url: 'saveresultPhysical',
+            url: 'saveresultAllergy',
             type: 'post',
             data: data,
             success:function (json) {

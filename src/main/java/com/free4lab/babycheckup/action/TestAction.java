@@ -46,6 +46,9 @@ public class TestAction {
     private List<ResultADHD> resultADHDList = new ArrayList<ResultADHD>();
     private List<ResultFeel2020> resultFeel2020List = new ArrayList<ResultFeel2020>();
     private List<ResultGroup2020> resultGroup2020List = new ArrayList<ResultGroup2020>();
+    private List<ResultPhysical> resultPhysicalList = new ArrayList<ResultPhysical>();
+    private List<ResultSummary> resultSummaryList = new ArrayList<ResultSummary>();
+    private List<ResultAllergy> resultAllergyList = new ArrayList<ResultAllergy>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -65,6 +68,9 @@ public class TestAction {
     private Result2016 result2016;
     private ResultADHD resultADHD;
     private ResultFeel2020 resultFeel2020;
+    private ResultPhysical resultPhysical;
+    private ResultSummary resultSummary;
+    private ResultAllergy resultAllergy;
     private String days;
     private int day;
     //早产天数
@@ -74,6 +80,9 @@ public class TestAction {
     private Integer babyAgeYear;//儿童年龄-年
     //全部卡片配置
     private final static Integer CONFIG_TYPE = 1;
+
+    // 错误描述
+    private String errorDesc;
 
     public String newTest0_6() {
         if(!canTest(1)){
@@ -280,6 +289,149 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 体格头面检查
+    public String newTestPhysical(){
+        if(!canTest(30)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 30;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    //气质
+    public String newTestQiZhi(){
+
+        if(!canTest(24)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 24;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(24);
+        int month = (int)Math.round((differentdays(birth,today))/30.4);
+        if(0<month&&month<=4){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,1);
+        }else if(4<month&&month<=11){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,2);
+        }else if(11<month&&month<=35){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,3);
+        }else if(35<month&&month<=83){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,4);
+        }else if(83<month&&month<=156){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,5);
+        }
+
+        return SUCCESS;
+    }
+
+    //感受
+    public String newTestFeel(){
+
+        if(!canTest(25)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 25;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(25);
+        questionList = QuestionManager.findByTestid(25);
+
+        return SUCCESS;
+    }
+
+    // 多动症
+    public String newTestADHD(){
+
+        if(!canTest(27)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 27;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(27);
+        questionList = QuestionManager.findByTestid(27);
+
+        return SUCCESS;
+    }
+
+    // feel2020
+    public String newTestFeel2020(){
+
+        if(!canTest(28)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 28;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(28);
+        questionList = QuestionManager.findByTestid(28);
+
+        return SUCCESS;
+    }
+
+    public String newTestDDST() {
+        if(!canTest(21)){
+            return "fail";
+        }
+        questionTypeList = QuestionManager.findTypeByTestid(21);
+
+//        questionList = QuestionManager.findByTestid(21);
+        baby = BabyManager.findById(babyid);
+        testid = 21;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = (differentdays(birth,today))/30+"";
+        if(StringUtils.isNotEmpty(days)){
+            List<Integer> monthList = new ArrayList<Integer>();
+            for (int i=1;i<=Integer.parseInt(days);i++){
+                monthList.add(i);
+            }
+            questionMonthList = monthList;
+        }else {
+            questionMonthList = null;
+        }
+        DDSTList = DDSTQuestionManager.findQuestions(days);
+        return SUCCESS;
+    }
+
+    // 总览
+    public String newTestSummary() {
+        if(!canTest(31)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 31;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 过敏
+    public String newTestAllergy() {
+        if(!canTest(32)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        testid = 32;
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -298,6 +450,9 @@ public class TestAction {
         resultADHDList = ResultADHDManager.findResultBybid(babyid);
         resultFeel2020List = ResultFeel2020Manager.findResultBybid(babyid);
         resultGroup2020List = ResultGroup2020Manager.findResultBybid(babyid);
+        resultPhysicalList = ResultPhysicalManager.findResultBybid(babyid);
+        resultSummaryList = ResultSummaryManager.findResultBybid(babyid);
+        resultAllergyList = ResultAllergyManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -565,31 +720,6 @@ public class TestAction {
         return SUCCESS;
     }
 
-    public String newTestDDST() {
-        if(!canTest(21)){
-            return "fail";
-        }
-        questionTypeList = QuestionManager.findTypeByTestid(21);
-
-//        questionList = QuestionManager.findByTestid(21);
-        baby = BabyManager.findById(babyid);
-        testid = 21;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = (differentdays(birth,today))/30+"";
-        if(StringUtils.isNotEmpty(days)){
-            List<Integer> monthList = new ArrayList<Integer>();
-            for (int i=1;i<=Integer.parseInt(days);i++){
-                monthList.add(i);
-            }
-            questionMonthList = monthList;
-        }else {
-            questionMonthList = null;
-        }
-        DDSTList = DDSTQuestionManager.findQuestions(days);
-        return SUCCESS;
-    }
-
     public String saveResultDDST(){
         if(!subTestTimes(21)){
             return "fail";
@@ -800,33 +930,7 @@ public class TestAction {
         return SUCCESS;
     }
 
-    //气质
-    public String newTestQiZhi(){
 
-        if(!canTest(24)){
-            return "fail";
-        }
-        baby = BabyManager.findById(babyid);
-        testid = 24;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = Math.round((differentdays(birth,today))/30.4)+"";
-        questionTypeList = QuestionManager.findTypeByTestid(24);
-        int month = (int)Math.round((differentdays(birth,today))/30.4);
-        if(0<month&&month<=4){
-            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,1);
-        }else if(4<month&&month<=11){
-            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,2);
-        }else if(11<month&&month<=35){
-            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,3);
-        }else if(35<month&&month<=83){
-            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,4);
-        }else if(83<month&&month<=156){
-            questionList = QuestionManager.findQuestionListByTestIdAndMonth(24,5);
-        }
-
-        return SUCCESS;
-    }
 
     //气质
     public String saveResultQiZhi(){
@@ -856,22 +960,6 @@ public class TestAction {
     }
 
 
-    //感受
-    public String newTestFeel(){
-
-        if(!canTest(25)){
-            return "fail";
-        }
-        baby = BabyManager.findById(babyid);
-        testid = 25;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = Math.round((differentdays(birth,today))/30.4)+"";
-        questionTypeList = QuestionManager.findTypeByTestid(25);
-        questionList = QuestionManager.findByTestid(25);
-
-        return SUCCESS;
-    }
 
     //感受
     public String saveResultFeel(){
@@ -975,22 +1063,6 @@ public class TestAction {
         return SUCCESS;
     }
 
-    // 多动症
-    public String newTestADHD(){
-
-        if(!canTest(27)){
-            return "fail";
-        }
-        baby = BabyManager.findById(babyid);
-        testid = 27;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = Math.round((differentdays(birth,today))/30.4)+"";
-        questionTypeList = QuestionManager.findTypeByTestid(27);
-        questionList = QuestionManager.findByTestid(27);
-
-        return SUCCESS;
-    }
 
     // 多动症
     public String saveResultADHD(){
@@ -1011,23 +1083,6 @@ public class TestAction {
     }
 
     // feel2020
-    public String newTestFeel2020(){
-
-        if(!canTest(28)){
-            return "fail";
-        }
-        baby = BabyManager.findById(babyid);
-        testid = 28;
-        Date today = new Date(new java.util.Date().getTime());
-        Date birth = baby.getBirthday();
-        days = Math.round((differentdays(birth,today))/30.4)+"";
-        questionTypeList = QuestionManager.findTypeByTestid(28);
-        questionList = QuestionManager.findByTestid(28);
-
-        return SUCCESS;
-    }
-
-    // feel2020
     public String saveResultFeel2020(){
         try {
             resultFeel2020.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
@@ -1042,6 +1097,71 @@ public class TestAction {
         }catch (Exception e){
 
         }
+        return SUCCESS;
+    }
+
+    // 总览
+    public String saveResultSummary(){
+        if(!subTestTimes(31)){
+            return "fail";
+        }
+        if(StringUtils.isEmpty(resultSummary.getSummary())){
+            errorDesc = "总览内容不能为空！";
+            return "fail";
+        }
+        if(resultSummary.getSummary().length()>500){
+            errorDesc = "总览内容不能大于500字！";
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultSummary.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultSummary.setUserId(userId);
+        resultSummary.setTestId(31);
+        resultSummary.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultSummary.setState("finished");
+        resultSummary.setUpdateTime(new Date());
+        resultSummary.setCreateTime(new Date());
+        resultSummary.setUpdateUser(userId.toString());
+        resultSummary.setCreateUser(userId.toString());
+        ResultSummaryManager.saveResult(resultSummary);
+        return SUCCESS;
+    }
+
+    // 体格头面检查
+    public String saveResultPhysical(){
+        if(!subTestTimes(30)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultPhysical.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultPhysical.setUserId(userId);
+        resultPhysical.setTestId(30);
+        resultPhysical.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultPhysical.setState("finished");
+        resultPhysical.setUpdateTime(new Date());
+        resultPhysical.setCreateTime(new Date());
+        resultPhysical.setUpdateUser(userId.toString());
+        resultPhysical.setCreateUser(userId.toString());
+        ResultPhysicalManager.saveResult(resultPhysical);
+        return SUCCESS;
+    }
+
+    // 体格头面检查
+    public String saveResultAllergy(){
+        if(!subTestTimes(32)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultAllergy.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultAllergy.setUserId(userId);
+        resultAllergy.setTestId(32);
+        resultAllergy.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultAllergy.setState("finished");
+        resultAllergy.setUpdateTime(new Date());
+        resultAllergy.setCreateTime(new Date());
+        resultAllergy.setUpdateUser(userId.toString());
+        resultAllergy.setCreateUser(userId.toString());
+        ResultAllergyManager.saveResult(resultAllergy);
         return SUCCESS;
     }
 
@@ -1459,5 +1579,61 @@ public class TestAction {
 
     public void setResultGroup2020List(List<ResultGroup2020> resultGroup2020List) {
         this.resultGroup2020List = resultGroup2020List;
+    }
+
+    public List<ResultPhysical> getResultPhysicalList() {
+        return resultPhysicalList;
+    }
+
+    public void setResultPhysicalList(List<ResultPhysical> resultPhysicalList) {
+        this.resultPhysicalList = resultPhysicalList;
+    }
+
+    public ResultPhysical getResultPhysical() {
+        return resultPhysical;
+    }
+
+    public void setResultPhysical(ResultPhysical resultPhysical) {
+        this.resultPhysical = resultPhysical;
+    }
+
+    public List<ResultSummary> getResultSummaryList() {
+        return resultSummaryList;
+    }
+
+    public void setResultSummaryList(List<ResultSummary> resultSummaryList) {
+        this.resultSummaryList = resultSummaryList;
+    }
+
+    public ResultSummary getResultSummary() {
+        return resultSummary;
+    }
+
+    public void setResultSummary(ResultSummary resultSummary) {
+        this.resultSummary = resultSummary;
+    }
+
+    public List<ResultAllergy> getResultAllergyList() {
+        return resultAllergyList;
+    }
+
+    public void setResultAllergyList(List<ResultAllergy> resultAllergyList) {
+        this.resultAllergyList = resultAllergyList;
+    }
+
+    public ResultAllergy getResultAllergy() {
+        return resultAllergy;
+    }
+
+    public void setResultAllergy(ResultAllergy resultAllergy) {
+        this.resultAllergy = resultAllergy;
+    }
+
+    public String getErrorDesc() {
+        return errorDesc;
+    }
+
+    public void setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
     }
 }
