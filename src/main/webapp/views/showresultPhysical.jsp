@@ -94,6 +94,7 @@
         }
         input[type='radio']:checked + label:before{
             background-color: #000 !important;
+            box-shadow: inset 0 0 0 3px #fff !important;
         }
         #name{
             padding-left: 0px;
