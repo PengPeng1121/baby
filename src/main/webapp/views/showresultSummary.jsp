@@ -28,6 +28,21 @@
         input, .noprint {
             display: none
         }
+        div{
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        body, table, tbody, tr, td {
+            background-color: transparent;
+        }
+        #content-table{
+            left: 100px !important;
+            top: 240px !important;
+        }
+        #date{
+            left: 550px !important;
+            top: 900px !important;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -44,40 +59,50 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.png">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.png">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
                     </s:if>
 
-                    <table style="width: 100%;border:0 ">
+                    <table style="width: 55%;
+                        border: 0;
+                        position: relative;
+                        top: 120px;
+                        left: 70px;
+                        font-size: 16px">
                         <tr>
 
                             <td class="col-md-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 18px">姓</span>
+                                <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                             </td>
                             <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
 
                             <td class="col-md-2 col-offset-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 18px">出生日</span>
-                                <span style="letter-spacing: 1px">期:</span>
+                                <span style="letter-spacing: 1px">出生日期:</span>
                             </td>
                             <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
 
                         </tr>
                     </table>
 
-                    <table style="width: 800px; height:1060px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 130px;" id="content-table">
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 210px" id="content-table">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%" id="remarkText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
                             </td>
                         </tr>
                     </table>
 
-                    <p>
-                        <s:property value="resultSummary.summaryDate"/>
+                    <p id="date" style="
+                        position: absolute;
+                        top: 1000px;
+                        left: 700px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    ">
+                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
                     </p>
                 </div>
             </div>
