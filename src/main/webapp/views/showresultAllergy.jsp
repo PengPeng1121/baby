@@ -22,12 +22,14 @@
             margin-top: 5px;
         }
         .item-line{
-            border-bottom: 1px solid #df9390;
+            /*border-bottom: 1px solid #df9390;*/
             height: 40px;
+            font-weight: normal;
+            font-size: 14px;
         }
         .item{
-            letter-spacing: 8px;
-            width: 230px;
+            letter-spacing: 1px;
+            width: 300px;
         }
         body, table, tbody, tr, td {
             background-color: transparent;
@@ -47,16 +49,15 @@
         }
         input[type='radio']:checked + label:before{
             background-color: #000;
+            box-shadow: inset 0 0 0 3px #fff;
         }
         label {
             font-size: 14px;
             letter-spacing: 3px;
             font-weight: normal;
         }
-        .detail{
-            margin: 0px;
-            font-weight: normal;
-            font-size: 14px;
+        li{
+           padding-bottom: 10px;
         }
     </style>
     <style type="text/css" media="print">
@@ -78,33 +79,52 @@
             margin-left: 50px !important;
             margin-top: 5px !important;
         }
+
+        input[type="radio"] {
+            display: none !important;
+        }
+        input[type='radio'] + label:before{
+            content: "" !important;
+            display: inline-block !important;
+            width: 20px !important;
+            height: 20px !important;
+            border: 2px solid #df9390 !important;
+            border-radius:50% !important;
+            position: relative !important;
+            top: 5px !important;
+        }
+        input[type='radio']:checked + label:before{
+            background-color: #000 !important;
+            box-shadow: inset 0 0 0 3px #fff !important;
+        }
+
     </style>
 </head>
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultPhysical.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultPhysical.id"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultAllergy.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultAllergy.id"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
 
 
-        <input id="r1" type="hidden" value="<s:property value="resultPhysical.r1" />">
-        <input id="r2" type="hidden" value="<s:property value="resultPhysical.r2" />">
-        <input id="r3" type="hidden" value="<s:property value="resultPhysical.r3" />">
-        <input id="r4" type="hidden" value="<s:property value="resultPhysical.r4" />">
-        <input id="r5" type="hidden" value="<s:property value="resultPhysical.r5" />">
-        <input id="r6" type="hidden" value="<s:property value="resultPhysical.r6" />">
-        <input id="r7" type="hidden" value="<s:property value="resultPhysical.r7" />">
-        <input id="r8" type="hidden" value="<s:property value="resultPhysical.r8" />">
-        <input id="r9" type="hidden" value="<s:property value="resultPhysical.r9" />">
-        <input id="r10" type="hidden" value="<s:property value="resultPhysical.r10" />">
-        <input id="r11" type="hidden" value="<s:property value="resultPhysical.r11" />">
-        <input id="r12" type="hidden" value="<s:property value="resultPhysical.r12" />">
-        <input id="r13" type="hidden" value="<s:property value="resultPhysical.r13" />">
-        <input id="r14" type="hidden" value="<s:property value="resultPhysical.r14" />">
-        <input id="r15" type="hidden" value="<s:property value="resultPhysical.r15" />">
+        <input id="r1" type="hidden" value="<s:property value="resultAllergy.r1" />">
+        <input id="r2" type="hidden" value="<s:property value="resultAllergy.r2" />">
+        <input id="r3" type="hidden" value="<s:property value="resultAllergy.r3" />">
+        <input id="r4" type="hidden" value="<s:property value="resultAllergy.r4" />">
+        <input id="r5" type="hidden" value="<s:property value="resultAllergy.r5" />">
+        <input id="r6" type="hidden" value="<s:property value="resultAllergy.r6" />">
+        <input id="r7" type="hidden" value="<s:property value="resultAllergy.r7" />">
+        <input id="r8" type="hidden" value="<s:property value="resultAllergy.r8" />">
+        <input id="r9" type="hidden" value="<s:property value="resultAllergy.r9" />">
+        <input id="r10" type="hidden" value="<s:property value="resultAllergy.r10" />">
+        <input id="r11" type="hidden" value="<s:property value="resultAllergy.r11" />">
+        <input id="r12" type="hidden" value="<s:property value="resultAllergy.r12" />">
+        <input id="r13" type="hidden" value="<s:property value="resultAllergy.r13" />">
+        <input id="r14" type="hidden" value="<s:property value="resultAllergy.r14" />">
+        <input id="r15" type="hidden" value="<s:property value="resultAllergy.r15" />">
 
 
 
@@ -113,10 +133,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg4Boy.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg3Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg4Girl.jpg"">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg3Girl.jpg"">
                     </s:if>
 
                     <table style="width: 20%;
@@ -134,16 +154,16 @@
                         </tr>
                     </table>
 
-                    <table style="width: 660px; height:760px;border:0;font-size: 16px;font-weight: bold; position: relative;top: 210px;left: 60px" id="content-table">
+                    <table style="width: 660px; height:615px;border:0;font-size: 16px;font-weight: bold; position: relative;top: 210px;left: 60px" id="content-table">
                         <tr class="item-line">
                             <td class="item">
                                 眼圈发紫或指尖发白
                             </td>
-                            <td style="width: 75px">
+                            <td style="width: 40px">
                                 <input type="radio" name="answer-1" value="1" checked  id="radio-answer-1-1">
                                 <label for="radio-answer-1-1">有</label>
                             </td>
-                            <td style="width: 75px">
+                            <td style="width: 40px">
                                 <input type="radio" name="answer-1" value="0" id="radio-answer-1-0">
                                 <label for="radio-answer-1-0">无</label>
                             </td>
@@ -331,7 +351,13 @@
                             </td>
                         </tr>
                     </table>
-                    <ul>
+                    <ul style="
+                        position: relative;
+                        top: 240px;
+                        left: 28px;
+                        width: 600px;
+                        font-size: 12px;
+                    ">
                         <li>
                             自评0分无过敏风险
                         </li>

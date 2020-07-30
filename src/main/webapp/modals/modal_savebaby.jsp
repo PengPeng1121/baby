@@ -56,7 +56,7 @@
         style="color: white;font-size: small">总评</h4></a>
 
         <a type="button" class="btn  modal-box text-center" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
-        style="color: white;font-size: small">食物过敏或不耐受风险评估</h4></a>
+        style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
 
 
     </div>

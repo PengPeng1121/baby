@@ -79,9 +79,6 @@
                                     <input type="radio" name="answer-1" value="0" id="radio-answer-1-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-1-detail"  style="width: 80%" />
-                            </td>
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>2</td>
@@ -97,9 +94,6 @@
                                 <label for="radio-answer-2-0">
                                     <input type="radio" name="answer-2" value="0" id="radio-answer-2-0" />无
                                 </label>
-                            </td>
-                            <td>
-                                <input id="answer-2-detail"  style="width: 80%" />
                             </td>
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">    
@@ -117,9 +111,6 @@
                                     <input type="radio" name="answer-3" value="0" id="radio-answer-3-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-3-detail"  style="width: 80%" />
-                            </td>
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>4</td>
@@ -136,9 +127,7 @@
                                     <input type="radio" name="answer-4" value="0" id="radio-answer-4-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-4-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             
@@ -156,9 +145,7 @@
                                     <input type="radio" name="answer-5" value="0" id="radio-answer-5-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-5-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>6</td>
@@ -175,9 +162,7 @@
                                     <input type="radio" name="answer-6" value="0"  id="radio-answer-6-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-6-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>7</td>
@@ -194,9 +179,7 @@
                                     <input type="radio" name="answer-7" value="0" id="radio-answer-7-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-7-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>8</td>
@@ -213,9 +196,7 @@
                                     <input type="radio" name="answer-8" value="0" id="radio-answer-8-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-8-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>9</td>
@@ -232,9 +213,7 @@
                                     <input type="radio" name="answer-9" value="0" id="radio-answer-9-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-9-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>10</td>
@@ -251,9 +230,7 @@
                                     <input type="radio" name="answer-10" value="0"  id="radio-answer-10-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-10-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>11</td>
@@ -270,9 +247,7 @@
                                     <input type="radio" name="answer-11" value="0"  id="radio-answer-11-0"  />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-11-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>12</td>
@@ -289,9 +264,7 @@
                                     <input type="radio" name="answer-12" value="0" id="radio-answer-12-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-12-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>13</td>
@@ -308,9 +281,7 @@
                                     <input type="radio" name="answer-13" value="0" id="radio-answer-13-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-13-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>14</td>
@@ -327,9 +298,7 @@
                                     <input type="radio" name="answer-14" value="0" id="radio-answer-14-0" />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-14-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>15</td>
@@ -346,9 +315,7 @@
                                     <input type="radio" name="answer-15" value="0" id="radio-answer-15-0"  />无
                                 </label>
                             </td>
-                            <td>
-                                <input id="answer-15-detail"  style="width: 80%" />
-                            </td>
+                            
                         </tr>
                     </tbody>
                 </table>
