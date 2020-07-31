@@ -29,6 +29,7 @@
         td {
             padding: 5px !important;
         }
+
     </style>
 </head>
 <body class="front-body">
@@ -86,93 +87,93 @@
         <div class="panel panel-default front-panel" id="allbaby">
             <div class="panel-heading" style="text-align: center; font-weight: bold;">评定结果</div>
             <div class="panel-body front-no-padding">
-                <table class="table table-striped front-table">
-                    <thead>
-                    <tr>
-                        <td class="col-md-4" style="font-weight: bold;">评定项目</td>
-                        <td class="col-md-3" style="font-weight: bold;">原始分</td>
-                        <td class="col-md-3" style="font-weight: bold;">T值</td>
-                        <td class="col-md-4" style="font-weight: bold;">评定结果</td>
-                        <!-- <td class="col-md-6">建议</td> -->
-                    </tr>
-                    </thead>
+                <table class="table table-striped  table-bordered front-table">
                     <tbody>
                     <tr>
-                        <td>1.前脑平衡和大脑双侧分化</td>
-                        <td><s:property value="resultFeel2020.a1"/></td>
-                        <td id="b1"></td>
-                        <td id="r1"></td>
-                        <!-- <td rowspan="5">
-                            <textarea id="s1" style="height: 160px" ></textarea>
-                        </td> -->
+                        <td style="padding: 0px;width: 50%;">
+                            <table class="table table-striped front-table" style="margin-bottom: 20px">
+                                <thead>
+                                <tr>
+                                    <td class="col-md-4" style="font-weight: bold;">评定项目</td>
+                                    <td class="col-md-3" style="font-weight: bold;">原始分</td>
+                                    <td class="col-md-3" style="font-weight: bold;">T值</td>
+                                    <td class="col-md-4" style="font-weight: bold;">评定结果</td>
+                                    <!-- <td class="col-md-6">建议</td> -->
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1.前脑平衡和大脑双侧分化</td>
+                                    <td><s:property value="resultFeel2020.a1"/></td>
+                                    <td id="b1"></td>
+                                    <td id="r1"></td>
+                                    <!-- <td rowspan="5">
+                                        <textarea id="s1" style="height: 160px" ></textarea>
+                                    </td> -->
+                                </tr>
+
+                                <tr>
+                                    <td>2.脑神经心理抑制困难</td>
+                                    <td><s:property value="resultFeel2020.a2"/></td>
+                                    <td id="b2"></td>
+                                    <td id="r2"></td>
+                                    
+                                </tr>
+
+
+                                <tr>
+                                    <td>3.触觉防御过多及反应不足</td>
+                                    <td><s:property value="resultFeel2020.a3"/></td>
+                                    <td id="b3"></td>
+                                    <td id="r3"></td>
+                                    
+                                </tr>
+
+
+                                <tr>
+                                    <td>4.发育期运动障碍</td>
+                                    <td><s:property value="resultFeel2020.a4"/></td>
+                                    <td id="b4"></td>
+                                    <td id="r4"></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>5.视觉空间，形态</td>
+                                    <td><s:property value="resultFeel2020.a5"/></td>
+                                    <td id="b5"></td>
+                                    <td id="r5"></td>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>6.本体觉（重力不安症）</td>
+                                    <td><s:property value="resultFeel2020.a6"/></td>
+                                    <td id="b6"></td>
+                                    <td id="r6"></td>
+                                    
+                                </tr>
+
+                                </tbody>
+                            </table> 
+                        </td>
+                        <td style="padding: 0px;width: 50%;">
+                            <table class="table table-striped front-table" id="table1">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 0px;">
+                                            <div id="column"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
                     </tr>
-
-                    <tr>
-                        <td>2.脑神经心理抑制困难</td>
-                        <td><s:property value="resultFeel2020.a2"/></td>
-                        <td id="b2"></td>
-                        <td id="r2"></td>
-                        
-                    </tr>
-
-
-                    <tr>
-                        <td>3.触觉防御过多及反应不足</td>
-                        <td><s:property value="resultFeel2020.a3"/></td>
-                        <td id="b3"></td>
-                        <td id="r3"></td>
-                        
-                    </tr>
-
-
-                    <tr>
-                        <td>4.发育期运动障碍</td>
-                        <td><s:property value="resultFeel2020.a4"/></td>
-                        <td id="b4"></td>
-                        <td id="r4"></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>5.视觉空间，形态</td>
-                        <td><s:property value="resultFeel2020.a5"/></td>
-                        <td id="b5"></td>
-                        <td id="r5"></td>
-                        
-                    </tr>
-
-                    <tr>
-                        <td>6.本体觉（重力不安症）</td>
-                        <td><s:property value="resultFeel2020.a6"/></td>
-                        <td id="b6"></td>
-                        <td id="r6"></td>
-                        
-                    </tr>
-
                     </tbody>
                 </table>
+                
             </div>
         </div>
-        <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table1">
-            <tbody>
-            <tr>
-                <td style="text-align:center; font-weight: bold;">评定结果柱状图</td>
-            </tr>
-            <tr>
-                <td style="padding: 0px;width: 50%;">
-                    <div style="border: 1px dashed #ddd">
-                        <div id="column"></div>
-                    </div>
-                    
-                </td>
-                <!-- <td style="padding: 0px;width: 50%;">
-                    <div style="border: 1px dashed #ddd">
-                        <div id="spider"></div>
-                    </div>
-                    
-                </td> -->
-            </tr>
-            </tbody>
-        </table>
+        
 
 
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px" id="table2">
@@ -233,7 +234,7 @@
                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
             </div> -->
             <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="8" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
                 <div id="doctorRemarkText" style="display: none;"></div>
             </div>
         </div>
@@ -772,8 +773,8 @@
                     'font-size': '15px'
                 });
                 $('#column').css({
-                    width: '700px',
-                    height: '200px'
+                    width: '340px',
+                    height: '240px'
                 });
                 // $('#spider').css({
                 //     width: '300px',
