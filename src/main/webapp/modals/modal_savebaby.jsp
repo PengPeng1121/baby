@@ -58,6 +58,9 @@
         <a type="button" class="btn  modal-box text-center" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
 
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic2()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">生产、既往、家族史</h4></a>
+
 
     </div>
 </div>
@@ -407,6 +410,24 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestAllergy?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Basic2() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthageBasic2",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBasic2?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
