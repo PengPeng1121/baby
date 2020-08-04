@@ -82,7 +82,7 @@
                             <td class="col-md-2 col-offset-2" style="font-weight: bold;">
                                 <span style="letter-spacing: 1px">出生日期:</span>
                             </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px;text-align: right;"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
 
                         </tr>
                     </table>
