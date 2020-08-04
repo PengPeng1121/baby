@@ -106,7 +106,7 @@
 
 
 
-                    <s:iterator value="result3_6List" var="re3_6">
+                    <!-- <s:iterator value="result3_6List" var="re3_6">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -133,10 +133,10 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
-                    <s:iterator value="result0_2List" var="re0_2">
+                    <!-- <s:iterator value="result0_2List" var="re0_2">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -163,10 +163,10 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
-                    <s:iterator value="result0_3List" var="re0_3">
+                    <!-- <s:iterator value="result0_3List" var="re0_3">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -193,10 +193,10 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
-                    <s:iterator value="result50List" var="re50">
+                    <!-- <s:iterator value="result50List" var="re50">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -219,11 +219,11 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
 
-                    <s:iterator value="result132List" var="re132">
+                    <!-- <s:iterator value="result132List" var="re132">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -246,11 +246,11 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
 
-                    <s:iterator value="resultCognizeList" var="reCognize">
+                    <!-- <s:iterator value="resultCognizeList" var="reCognize">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -273,10 +273,10 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
-                    <s:iterator value="result0_3List" var="re0_3">
+                    <!-- <s:iterator value="result0_3List" var="re0_3">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -303,7 +303,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
                     <s:iterator value="resultDDSTList" var="resultDDST">
                         <tr>
@@ -330,7 +330,7 @@
                         </tr>
                     </s:iterator>
 
-                    <s:iterator value="resultNeiList" var="resultNei">
+                    <!-- <s:iterator value="resultNeiList" var="resultNei">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -353,9 +353,9 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultGroupList" var="resultGroup">
+                    <!-- <s:iterator value="resultGroupList" var="resultGroup">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -378,11 +378,11 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
 
-                    <s:iterator value="resultQiZhiList" var="resultQiZhi">
+                    <!-- <s:iterator value="resultQiZhiList" var="resultQiZhi">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -405,10 +405,10 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
-                    <s:iterator value="resultFeelList" var="resultFeel">
+                    <!-- <s:iterator value="resultFeelList" var="resultFeel">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -431,7 +431,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
 
                     <s:iterator value="resultFeel2020List" var="resultFeel2020">
@@ -564,7 +564,7 @@
                         </tr>
                     </s:iterator>
 
-                    <s:iterator value="resultBasic2List" var="resultBasic2">
+                    <!-- <s:iterator value="resultBasic2List" var="resultBasic2">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -587,8 +587,58 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
+                    <!-- <s:iterator value="resultBasic1List" var="resultBasic1">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           基础信息
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBasic1.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBasic1?id=<s:property value="#resultBasic1.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator> -->
+
+
+                    <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           气质测评2020
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultQiZhi2020.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultQiZhi2020?id=<s:property value="#resultQiZhi2020.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
 
 
 

@@ -165,7 +165,7 @@
 
 
                 <!-- 育儿技能评估（0-2岁） -->
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -191,7 +191,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- 育儿技能评估（0-3岁） -->
                 <!-- <div class="col-md-3">
@@ -212,7 +212,7 @@
 
 
                 <!-- 学龄前50项智力测查 -->
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- 婴幼儿认知测定量表 -->
@@ -268,7 +268,7 @@
 
 
                 <!-- 婴儿-初中学生生活能力量表 -->
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -292,7 +292,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- 小儿智能发育筛查 -->
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
@@ -513,11 +513,46 @@
                     </div>
                 </div>
                 </s:if>
+                
+
+
+
+                <!-- 基础1(河马) -->
+                <!-- <s:if test="resultBasic1LeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">基础信息</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBasic1"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBasic1LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=33" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if> -->
+
 
 
 
                 <!-- 基础2(河马) -->
-                <s:if test="resultBasic2LeftTimes != 0">
+                <!-- <s:if test="resultBasic2LeftTimes != 0">
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
@@ -532,7 +567,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <s:if test="resultAllergyLeftTimes == 0">
+                                        <s:if test="resultBasic2LeftTimes == 0">
                                             <span>请购买</span>
                                         </s:if>
                                         <s:else>
@@ -546,18 +581,11 @@
                         </div>
                     </div>
                 </div>
-                </s:if>
-
-
-
-
-
-
-
+                </s:if> -->
 
 
                 <!-- 气质 -->
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -583,11 +611,40 @@
 
                         </div>
                     </div>
+                </div> -->
+
+                <!--河马 气质 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">气质测验2020</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultQiZhi2020"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultQiZhi2020LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=35" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
 
                 <!-- 感觉统合 -->
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -611,7 +668,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 

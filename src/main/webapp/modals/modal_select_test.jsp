@@ -24,10 +24,10 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start3_6()"><h4
                     style="color: white;font-size: small">开始3-6岁<br/>育儿技能评估</h4></a>
         </div> -->
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start0_2()"><h4
                     style="color: white;font-size: small">开始家庭养育<br/>评估（0-2岁)</h4></a>
-        </div>
+        </div> -->
 
         <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start0_3()"><h4
@@ -35,15 +35,15 @@
         </div> -->
 
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start50()"><h4
                     style="color: white;font-size: small">开始学前50项<br/>智力筛查</h4></a>
-        </div>
+        </div> -->
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start132()"><h4
                     style="color: white;font-size: small">婴儿-初中学生<br/>生活能力量表</h4></a>
-        </div>
+        </div> -->
         <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
@@ -56,19 +56,23 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_nei()"><h4
                     style="color: white;font-size: small">中国比内测验</h4></a>
         </div> -->
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_group()"><h4
                     style="color: white;font-size: small">生长发育测验</h4></a>
-        </div>
+        </div> -->
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_QiZhi()"><h4
                     style="color: white;font-size: small">气质测评</h4></a>
-        </div>
+        </div> -->
         <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_QiZhi2020()"><h4
+                    style="color: white;font-size: small">气质测评2020</h4></a>
+        </div>
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Feel()"><h4
                     style="color: white;font-size: small">感觉统合能力</h4></a>
-        </div>
+        </div> -->
 
 
         <div style="margin-top: 10px; display: inline-block; width: 200px">
@@ -100,10 +104,15 @@
                     style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic2()"><h4
-                    style="color: white;font-size: small">生产、既往、家族史</h4></a>
-        </div>
+                    style="color: white;font-size: small">生产史、既往史<br/>家族史</h4></a>
+        </div> -->
+
+        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()"><h4
+                    style="color: white;font-size: small">基础信息</h4></a>
+        </div> -->
 
     </div>
 </div>
@@ -476,6 +485,44 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestBasic2?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Basic1() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthageBasic1",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBasic1?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_QiZhi2020() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthageQiZhi2020",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestQiZhi2020?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
