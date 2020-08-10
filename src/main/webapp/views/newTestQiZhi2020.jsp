@@ -80,17 +80,24 @@
                                         <td>
                                             <s:property value="#question.ordinal"/>
                                         </td>
-                                        <td style="width:60%">
+                                        <td style="width:50%">
                                             <s:property value="#question.description"/>
                                         </td>
                                         <td class="type-<s:property value="#question.type"/> ">
-                                            <select class="answer-<s:property value="#question.ordinal"/> form-control ">
-                                                <option value="0">-请选择-</option>
-                                                <option value="1">从不</option>
-                                                <option value="2">经常</option>
-                                                <option value="3">偶尔</option>
-                                                <option value="4">总是</option>
-                                            </select>
+
+                                            <label for="<s:property value="#question.ordinal"/>-1">从不</label>
+                                            <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="1" id="<s:property value="#question.ordinal"/>-1" />
+
+                                            <label for="<s:property value="#question.ordinal"/>-2">偶尔</label>
+                                            <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="2" id="<s:property value="#question.ordinal"/>-2" /> 
+
+                                            <label for="<s:property value="#question.ordinal"/>-3">经常</label>
+                                            <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="3" id="<s:property value="#question.ordinal"/>-3" /> 
+
+                                            <label for="<s:property value="#question.ordinal"/>-4">总是</label>
+                                            <input style="width: 25px;" type="radio" name="<s:property value="#question.ordinal"/>" value="4" id="<s:property value="#question.ordinal"/>-4" /> 
+
+
                                         </td>
                                     </tr>
                                
@@ -119,24 +126,27 @@
         $('.question').removeClass('noanswer');
         // 去掉所有没有答的题的样式
         for(var i = 1; i <= questionSum; i++) {
-            temp = $(".answer-" + i).val();
-            if (temp === '0') {
-                // 标注所有没有答的题
+            temp = $("input:radio[name="+ i +"]:checked").val();
+            if (!temp) {
+                // Todo: 标注所有没有答的题
                 for (var j = i; j <= questionSum; j++) {
-                    if ($(".answer-" + j).val() === '0') {
-                        $(".answer-" + j).parents('tr').addClass('noanswer');
+                    if (!$("input:radio[name="+ j +"]:checked").val()) {
+                        $("input:radio[name="+ j +"]").parents('tr').addClass('noanswer');
                     }
                 }
                 $.tipModal('alert', 'warning', '有题目未完成！');
                 return false;
             }
+
         }
+
+
         for (var k = 1; k <= questionSum; k++) {
-            temp = $(".answer-" + k).val();
+            temp = $("input:radio[name="+ k +"]:checked").val();
             if(temp==""||temp==undefined){
                 continue;
             }
-            type = $(".answer-" + k).parents('td').attr("class");
+            type = $("input:radio[name="+ k +"]").parents('td').attr("class");
             //转换temp
             temp = parseInt(temp);
             if(type.indexOf('type-121') != -1){
