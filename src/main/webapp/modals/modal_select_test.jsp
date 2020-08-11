@@ -104,10 +104,10 @@
                     style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
         </div>
 
-        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic2()"><h4
                     style="color: white;font-size: small">生产史、既往史<br/>家族史</h4></a>
-        </div> -->
+        </div>
 
         <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()"><h4

@@ -552,7 +552,7 @@
 
 
                 <!-- 基础2(河马) -->
-                <!-- <s:if test="resultBasic2LeftTimes != 0">
+                <s:if test="resultBasic2LeftTimes != 0">
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
@@ -581,7 +581,7 @@
                         </div>
                     </div>
                 </div>
-                </s:if> -->
+                </s:if>
 
 
                 <!-- 气质 -->

@@ -175,7 +175,7 @@
                                     <input type="checkbox" name="familyHeredityDisease"  value="3">糖尿病
                                     <input type="checkbox" name="familyHeredityDisease"  value="4">哮喘
                                     <input type="checkbox" name="familyHeredityDisease"  value="5">癫痫
-                                    <input type="checkbox" name="familyHeredityDisease"  value="5">神经疾病
+                                    <input type="checkbox" name="familyHeredityDisease"  value="6">神经疾病
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">

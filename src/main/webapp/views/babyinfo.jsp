@@ -564,7 +564,7 @@
                         </tr>
                     </s:iterator>
 
-                    <!-- <s:iterator value="resultBasic2List" var="resultBasic2">
+                    <s:iterator value="resultBasic2List" var="resultBasic2">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -587,7 +587,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator> -->
+                    </s:iterator>
 
                     <!-- <s:iterator value="resultBasic1List" var="resultBasic1">
                         <tr>
