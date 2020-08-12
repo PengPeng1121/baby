@@ -552,7 +552,7 @@
 
 
                 <!-- 基础2(河马) -->
-                <!-- <s:if test="resultBasic2LeftTimes != 0">
+                <s:if test="resultBasic2LeftTimes != 0">
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
@@ -581,7 +581,7 @@
                         </div>
                     </div>
                 </div>
-                </s:if> -->
+                </s:if>
 
 
                 <!-- 气质 -->
@@ -691,6 +691,34 @@
                                         </s:if>
                                         <s:else>
                                             <a href="record?testId=28" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 牙齿 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">牙齿</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTooth"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultToothLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=36" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                         </s:else>
                                     </div>
                                 </div>
