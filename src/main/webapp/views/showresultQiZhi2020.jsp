@@ -51,7 +51,8 @@
 
 
         <input type="hidden" id="resultID" value="<s:property value="resultQiZhi2020.id"/>">
-
+        
+        <input type="hidden" id="remarkOld" value="<s:property value="resultQiZhi2020.remark"/>">
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
@@ -146,7 +147,8 @@
         <div class="panel panel-default front-panel" id="advice">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea rows="20" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="20" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <div id="doctorRemarkText" style="display: none;"></div>
             </div>
         </div>
 
@@ -330,7 +332,31 @@
             });
             
             chart1.reflow();
-            window.print();
+
+
+            var remark = $('#doctorRemark').val();
+            var realRemark = '';
+            realRemark = remark.replace(/\n/g, "<br/>");
+            $('#doctorRemarkText').html(realRemark);
+            $('#doctorRemarkText').show();
+            $('#doctorRemark').hide();
+
+            var resultID = +$('#resultID').val();
+            var data = "{";
+            var  resultRecord = {};
+            var remark = $('#doctorRemarkText').html() + '';
+            var data = "{";
+            data += "'resultRecord.resultId':" + resultID + "}";
+            data = eval('(' + data + ')');
+            data['resultRecord.remark'] = remark;
+            $.ajax({
+                url: 'saveRecordQiZhi2020',
+                type: 'post',
+                data: data,
+                success:function (json) {
+                     window.print();
+                }
+            })
         })
         $('#column1').highcharts({
             chart: {
@@ -402,6 +428,24 @@
         }, function(c){
             chart1 = c;
         });
+
+
+
+        var inter = setInterval(function() {
+            if (window.flag === 0) {
+                var remarkOld = $("#remarkOld").val();
+                if (remarkOld && remarkOld!= 'null') {
+                    var reg = new RegExp("<br>","g");//g,表示全部替换。
+                    remarkOld = remarkOld.replace(reg,"\n");
+                    $('#doctorRemark').html(remarkOld);
+                }
+
+                clearInterval(inter);
+            }
+        }, 200)
+
+
+
     });
     var remarks = {
         1:{
