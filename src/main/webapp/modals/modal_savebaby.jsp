@@ -66,6 +66,9 @@
         <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">牙齿</h4></a>
 
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_Feed()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">营养与喂养</h4></a>
+
         <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">基本信息</h4></a> -->
 
@@ -491,6 +494,25 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestTooth?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_Feed() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthageFeed",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestFeed?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
