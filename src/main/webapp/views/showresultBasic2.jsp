@@ -384,10 +384,10 @@
                             <tr>
                                 <td>
                                     是否有过敏史:
-                                    <input type="radio" name="isHeredityDisease5" value="1"   id="radio-answer-8-1">
+                                    <input type="radio" name="isAllergyHistory" value="1"   id="radio-answer-8-1">
                                     <label for="radio-answer-9-1" style="width: 50px;margin-left: 20px;font-weight: normal;"> 是</label>
 
-                                    <input type="radio" name="isHeredityDisease5" value="0"   id="radio-answer-8-1">
+                                    <input type="radio" name="isAllergyHistory" value="0"   id="radio-answer-8-1">
                                     <label for="radio-answer-9-0" style="width: 50px;margin-left: 20px;font-weight: normal;"> 否</label>
                                 </td>
                             </tr>
