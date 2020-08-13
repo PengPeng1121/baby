@@ -425,6 +425,42 @@ public class BabyAction {
     }
 
 
+    //0~12岁
+    public String testMonthAgeBasic1(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge < 156 && 0 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
+
+    //0~12岁
+    public String testMonthAgeBasic2(){
+        Date d2 = new Date(new java.util.Date().getTime());
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge < 156 && 0 <= monthAge){
+            flag = true;
+        }
+        return "success";
+    }
+
+    // 气质2020
+    public String testMonthageQiZhi2020(){
+        baby = BabyManager.findById(babyid);
+        Date d1 = baby.getBirthday();
+        Date d2 = new Date(new java.util.Date().getTime());
+        int monthAge = (int)Math.round((differentdays(d1,d2))/30.4);
+        if(monthAge < 73){
+            flag = true;
+        }
+        return "success";
+    }
 
     public int differentdays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));

@@ -49,6 +49,9 @@ public class TestAction {
     private List<ResultPhysical> resultPhysicalList = new ArrayList<ResultPhysical>();
     private List<ResultSummary> resultSummaryList = new ArrayList<ResultSummary>();
     private List<ResultAllergy> resultAllergyList = new ArrayList<ResultAllergy>();
+    private List<ResultBasic1> resultBasic1List = new ArrayList<ResultBasic1>();
+    private List<ResultBasic2> resultBasic2List = new ArrayList<ResultBasic2>();
+    private List<ResultQiZhi2020> resultQiZhi2020List = new ArrayList<ResultQiZhi2020>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -71,6 +74,9 @@ public class TestAction {
     private ResultPhysical resultPhysical;
     private ResultSummary resultSummary;
     private ResultAllergy resultAllergy;
+    private ResultBasic1 resultBasic1;
+    private ResultBasic2 resultBasic2;
+    private ResultQiZhi2020 resultQiZhi2020;
     private String days;
     private int day;
     //早产天数
@@ -432,6 +438,55 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 基础信息a
+    public String newTestBasic1() {
+        testid = 33;
+        if(!canTest(testid)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 基础信息b
+    public String newTestBasic2() {
+        testid = 34;
+        if(!canTest(testid)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    //气质2020
+    public String newTestQiZhi2020(){
+        testid = 35;
+        if(!canTest(testid)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        questionTypeList = QuestionManager.findTypeByTestid(testid);
+        int month = (int)Math.round((differentdays(birth,today))/30.4);
+
+        if(0<month&&month<=24){
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(testid,24);
+        }else{
+            questionList = QuestionManager.findQuestionListByTestIdAndMonth(testid,36);
+        }
+
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -453,6 +508,9 @@ public class TestAction {
         resultPhysicalList = ResultPhysicalManager.findResultBybid(babyid);
         resultSummaryList = ResultSummaryManager.findResultBybid(babyid);
         resultAllergyList = ResultAllergyManager.findResultBybid(babyid);
+        resultBasic1List = ResultBasic1Manager.findResultBybid(babyid);
+        resultBasic2List = ResultBasic2Manager.findResultBybid(babyid);
+        resultQiZhi2020List = ResultQiZhi2020Manager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1102,15 +1160,15 @@ public class TestAction {
 
     // 总览
     public String saveResultSummary(){
-        if(!subTestTimes(31)){
-            return "fail";
-        }
         if(StringUtils.isEmpty(resultSummary.getSummary())){
             errorDesc = "总览内容不能为空！";
             return "fail";
         }
-        if(resultSummary.getSummary().length()>500){
-            errorDesc = "总览内容不能大于500字！";
+        if(resultSummary.getSummary().length()>1000){
+            errorDesc = "总览内容不能大于1000字！";
+            return "fail";
+        }
+        if(!subTestTimes(31)){
             return "fail";
         }
         Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
@@ -1146,7 +1204,7 @@ public class TestAction {
         return SUCCESS;
     }
 
-    // 体格头面检查
+    // 过敏
     public String saveResultAllergy(){
         if(!subTestTimes(32)){
             return "fail";
@@ -1162,6 +1220,64 @@ public class TestAction {
         resultAllergy.setUpdateUser(userId.toString());
         resultAllergy.setCreateUser(userId.toString());
         ResultAllergyManager.saveResult(resultAllergy);
+        return SUCCESS;
+    }
+
+    // 基础信息1
+    public String saveResultBasic1(){
+        if(!subTestTimes(33)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBasic1.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBasic1.setUserId(userId);
+        resultBasic1.setTestId(33);
+        resultBasic1.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBasic1.setState("finished");
+        resultBasic1.setUpdateTime(new Date());
+        resultBasic1.setCreateTime(new Date());
+        resultBasic1.setUpdateUser(userId.toString());
+        resultBasic1.setCreateUser(userId.toString());
+        ResultBasic1Manager.saveResult(resultBasic1);
+        return SUCCESS;
+    }
+
+    // 基础信息2
+    public String saveResultBasic2(){
+        if(!subTestTimes(34)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBasic2.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBasic2.setUserId(userId);
+        resultBasic2.setTestId(34);
+        resultBasic2.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBasic2.setState("finished");
+        resultBasic2.setUpdateTime(new Date());
+        resultBasic2.setCreateTime(new Date());
+        resultBasic2.setUpdateUser(userId.toString());
+        resultBasic2.setCreateUser(userId.toString());
+        ResultBasic2Manager.saveResult(resultBasic2);
+        return SUCCESS;
+    }
+
+
+    // 气质2020
+    public String saveResultQiZhi2020(){
+        if(!subTestTimes(35)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultQiZhi2020.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultQiZhi2020.setUserId(userId);
+        resultQiZhi2020.setTestId(35);
+        resultQiZhi2020.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultQiZhi2020.setState("finished");
+        resultQiZhi2020.setUpdateTime(new Date());
+        resultQiZhi2020.setCreateTime(new Date());
+        resultQiZhi2020.setUpdateUser(userId.toString());
+        resultQiZhi2020.setCreateUser(userId.toString());
+        ResultQiZhi2020Manager.saveResult(resultQiZhi2020);
         return SUCCESS;
     }
 
@@ -1635,5 +1751,53 @@ public class TestAction {
 
     public void setErrorDesc(String errorDesc) {
         this.errorDesc = errorDesc;
+    }
+
+    public List<ResultBasic1> getResultBasic1List() {
+        return resultBasic1List;
+    }
+
+    public void setResultBasic1List(List<ResultBasic1> resultBasic1List) {
+        this.resultBasic1List = resultBasic1List;
+    }
+
+    public List<ResultBasic2> getResultBasic2List() {
+        return resultBasic2List;
+    }
+
+    public void setResultBasic2List(List<ResultBasic2> resultBasic2List) {
+        this.resultBasic2List = resultBasic2List;
+    }
+
+    public ResultBasic1 getResultBasic1() {
+        return resultBasic1;
+    }
+
+    public void setResultBasic1(ResultBasic1 resultBasic1) {
+        this.resultBasic1 = resultBasic1;
+    }
+
+    public ResultBasic2 getResultBasic2() {
+        return resultBasic2;
+    }
+
+    public void setResultBasic2(ResultBasic2 resultBasic2) {
+        this.resultBasic2 = resultBasic2;
+    }
+
+    public List<ResultQiZhi2020> getResultQiZhi2020List() {
+        return resultQiZhi2020List;
+    }
+
+    public void setResultQiZhi2020List(List<ResultQiZhi2020> resultQiZhi2020List) {
+        this.resultQiZhi2020List = resultQiZhi2020List;
+    }
+
+    public ResultQiZhi2020 getResultQiZhi2020() {
+        return resultQiZhi2020;
+    }
+
+    public void setResultQiZhi2020(ResultQiZhi2020 resultQiZhi2020) {
+        this.resultQiZhi2020 = resultQiZhi2020;
     }
 }

@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col-md-12">
                 该测评未开通，请联系经销商15142070576！
+                <s:property value="errorDesc"/>
             </div>
         </div>
     </div>   

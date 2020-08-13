@@ -94,6 +94,13 @@
             <result name="fail">error.jsp</result>
         </action>
 
+
+        <!--儿童气质测试2020-->
+        <action name="newtestQiZhi2020" method="newTestQiZhi2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestQiZhi2020.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--感受测试-->
         <action name="newtestFeel" method="newTestFeel" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestFeel.jsp</result>
@@ -129,6 +136,18 @@
             <result name="success" >views/newTestAllergy.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
+
+        <!--基础信息1-->
+        <action name="newtestBasic1" method="newTestBasic1" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBasic1.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <!--基础信息2-->
+        <action name="newtestBasic2" method="newTestBasic2" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBasic2.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
 
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
@@ -214,6 +233,11 @@
             <result name="success" >views/showresultQiZhi.jsp</result>
         </action>
 
+        <!--儿童气质2020-->
+        <action name="showresultQiZhi2020" method="showResultQiZhi2020" class="com.free4lab.babycheckup.action.ResultQiZhi2020Action">
+            <result name="success" >views/showresultQiZhi2020.jsp</result>
+        </action>
+
         <!--儿童感受 -->
         <action name="showresultFeel" method="showResultFeel" class="com.free4lab.babycheckup.action.ResultFeelAction">
             <result name="success" >views/showresultFeel.jsp</result>
@@ -237,6 +261,16 @@
         <!--过敏 -->
         <action name="showresultAllergy" method="showResultAllergy" class="com.free4lab.babycheckup.action.ResultAllergyAction">
             <result name="success" >views/showresultAllergy.jsp</result>
+        </action>
+
+        <!--基础信息1 -->
+        <action name="showresultBasic1" method="showResultBasic1" class="com.free4lab.babycheckup.action.ResultBasic1Action">
+            <result name="success" >views/showresultBasic1.jsp</result>
+        </action>
+
+        <!--基础信息2 -->
+        <action name="showresultBasic2" method="showResultBasic2" class="com.free4lab.babycheckup.action.ResultBasic2Action">
+            <result name="success" >views/showresultBasic2.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -413,6 +447,14 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--儿童气质结果2020-->
+        <action name="saveresultQiZhi2020" method="saveResultQiZhi2020" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultQiZhi2020,resultQiZhi2020.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--儿童感受结果-->
         <action name="saveresultFeel" method="saveResultFeel" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
@@ -441,6 +483,22 @@
         <action name="saveresultAllergy" method="saveResultAllergy" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultAllergy,resultAllergy.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 基础信息1 -->
+        <action name="saveresultBasic1" method="saveResultBasic1" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBasic1,resultBasic1.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 基础信息2 -->
+        <action name="saveresultBasic2" method="saveResultBasic2" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBasic2,resultBasic2.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
@@ -547,6 +605,27 @@
 
         <!--是不是能进行过敏测试-->
         <action name="monthageAllergy" method="testMonthAgeAllergy" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
+        <!--是不是能进行基础信息1测试-->
+        <action name="monthageBasic1" method="testMonthAgeBasic1" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
+        <!--是不是能进行基础信息2测试-->
+        <action name="monthageBasic2" method="testMonthAgeBasic2" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
+        <!--是不是能进行基础信息2测试-->
+        <action name="monthageQiZhi2020" method="testMonthageQiZhi2020" class="com.free4lab.babycheckup.action.BabyAction">
             <result type="json" name="success">
                 <param name="includeProperties">babyid,flag</param>
             </result>

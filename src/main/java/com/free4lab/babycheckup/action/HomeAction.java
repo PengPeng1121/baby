@@ -4,6 +4,7 @@ import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.HospitalTestConfig;
 import com.free4lab.babycheckup.model.HospitalTestTimes;
 import com.free4lab.babycheckup.model.ResultAllergy;
+import com.free4lab.babycheckup.model.ResultBasic1;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.util.CollectionUtils;
 
@@ -31,6 +32,9 @@ public class HomeAction {
     private long numberOfResultPhysical;
     private long numberOfResultSummary;
     private long numberOfResultAllergy;
+    private long numberOfResultBasic1;
+    private long numberOfResultBasic2;
+    private long numberOfResultQiZhi2020;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -50,6 +54,9 @@ public class HomeAction {
     private Integer resultPhysicalLeftTimes;
     private Integer resultSummaryLeftTimes;
     private Integer resultAllergyLeftTimes;
+    private Integer resultBasic1LeftTimes;
+    private Integer resultBasic2LeftTimes;
+    private Integer resultQiZhi2020LeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -77,6 +84,9 @@ public class HomeAction {
         numberOfResultPhysical = ResultPhysicalManager.countResultByHosIdAndTestId(hoid,30);
         numberOfResultSummary = ResultSummaryManager.countResultByHosIdAndTestId(hoid,31);
         numberOfResultAllergy = ResultAllergyManager.countResultByHosIdAndTestId(hoid,32);
+        numberOfResultBasic1 = ResultBasic1Manager.countResultByHosIdAndTestId(hoid,33);
+        numberOfResultBasic2 = ResultBasic2Manager.countResultByHosIdAndTestId(hoid,34);
+        numberOfResultQiZhi2020 = ResultQiZhi2020Manager.countResultByHosIdAndTestId(hoid,35);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -148,6 +158,15 @@ public class HomeAction {
                             break;
                         case 32:
                             resultAllergyLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 33:
+                            resultBasic1LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 34:
+                            resultBasic2LeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 35:
+                            resultQiZhiLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -457,5 +476,69 @@ public class HomeAction {
 
     public void setResultSummaryLeftTimes(Integer resultSummaryLeftTimes) {
         this.resultSummaryLeftTimes = resultSummaryLeftTimes;
+    }
+
+    public long getNumberOfResultAllergy() {
+        return numberOfResultAllergy;
+    }
+
+    public void setNumberOfResultAllergy(long numberOfResultAllergy) {
+        this.numberOfResultAllergy = numberOfResultAllergy;
+    }
+
+    public Integer getResultAllergyLeftTimes() {
+        return resultAllergyLeftTimes;
+    }
+
+    public void setResultAllergyLeftTimes(Integer resultAllergyLeftTimes) {
+        this.resultAllergyLeftTimes = resultAllergyLeftTimes;
+    }
+
+    public long getNumberOfResultBasic1() {
+        return numberOfResultBasic1;
+    }
+
+    public void setNumberOfResultBasic1(long numberOfResultBasic1) {
+        this.numberOfResultBasic1 = numberOfResultBasic1;
+    }
+
+    public long getNumberOfResultBasic2() {
+        return numberOfResultBasic2;
+    }
+
+    public void setNumberOfResultBasic2(long numberOfResultBasic2) {
+        this.numberOfResultBasic2 = numberOfResultBasic2;
+    }
+
+    public Integer getResultBasic1LeftTimes() {
+        return resultBasic1LeftTimes;
+    }
+
+    public void setResultBasic1LeftTimes(Integer resultBasic1LeftTimes) {
+        this.resultBasic1LeftTimes = resultBasic1LeftTimes;
+    }
+
+    public Integer getResultBasic2LeftTimes() {
+        return resultBasic2LeftTimes;
+    }
+
+    public void setResultBasic2LeftTimes(Integer resultBasic2LeftTimes) {
+        this.resultBasic2LeftTimes = resultBasic2LeftTimes;
+    }
+
+    public long getNumberOfResultQiZhi2020() {
+        return numberOfResultQiZhi2020;
+    }
+
+    public void setNumberOfResultQiZhi2020(long numberOfResultQiZhi2020) {
+        this.numberOfResultQiZhi2020 = numberOfResultQiZhi2020;
+    }
+
+    public Integer getResultQiZhi2020LeftTimes() {
+        return resultQiZhi2020LeftTimes;
+    }
+
+    public void setResultQiZhi2020LeftTimes(Integer resultQiZhi2020LeftTimes) {
+        this.resultQiZhi2020LeftTimes = resultQiZhi2020LeftTimes;
     }
 }
