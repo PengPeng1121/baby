@@ -52,7 +52,7 @@
 
         <input type="hidden" id="resultID" value="<s:property value="resultQiZhi2020.id"/>">
         
-        <input type="hidden" id="remarkOld" value="<s:property value="resultQiZhi2020.remark"/>">
+        <input type="hidden" id="remarkOld" value="<s:property value="resultRecord.remark"/>">
         <table class="table table-striped  table-bordered front-table" style="margin-bottom: 20px">
             <tbody>
             <tr>
@@ -148,7 +148,7 @@
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
                 <textarea id="doctorRemark" rows="20" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
-                <div id="doctorRemarkText" style="display: none;"></div>
+                <textarea id="doctorRemarkText" rows="20" style="resize:none;border: 0;width: 100%;height: 100%;display: none;"></textarea>
             </div>
         </div>
 
@@ -306,6 +306,7 @@
     
 
     $(function () {
+        window.flag = 0;
         var chart1
         $('.print').click(function(){
 
@@ -335,8 +336,8 @@
 
 
             var remark = $('#doctorRemark').val();
-            var realRemark = '';
-            realRemark = remark.replace(/\n/g, "<br/>");
+            var realRemark = remark;
+            // realRemark = remark.replace(/\n/g, "<br/>");
             $('#doctorRemarkText').html(realRemark);
             $('#doctorRemarkText').show();
             $('#doctorRemark').hide();
