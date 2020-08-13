@@ -176,7 +176,7 @@
                     </s:if>
 
 
-                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 280px;">
+                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 360px;top: 280px;">
                         <tbody style="width: 100%">
                             <tr class="item-line">
                                 <td>
@@ -270,7 +270,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 660px;left: 440px;">
+                    <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 660px;left: 360px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="border:0px;width: 200px">
@@ -282,7 +282,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 750px;left: 440px;">
+                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 750px;left: 360px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td colspan="4">
@@ -323,7 +323,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 860px;left: 440px;">
+                    <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 860px;left: 360px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 510px">
