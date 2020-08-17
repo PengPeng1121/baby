@@ -40,7 +40,7 @@
         #info-table{
             position: absolute;
             top: 1000px;
-            left: 600px;
+            left: 577px;
         }
         #tooth-img{
             width: 450px !important;
@@ -118,7 +118,7 @@
             border-bottom: 20px solid #000;
             position: absolute;
             z-index: 100;
-            left: -10px;
+            
             top: 5px;
         }
         .info2{
@@ -191,7 +191,7 @@
         #info-table{
             position: absolute !important;
             top: 970px;
-            left: 300px;
+            left: 267px;
         }
         #tooth-img{
             width: 450px !important;
@@ -269,7 +269,7 @@
             border-bottom: 20px solid #000 !important;
             position: absolute !important;
             z-index: 100 !important;
-            left: -10px !important;
+            
             top: 5px !important;
         }
         .info2{
@@ -420,22 +420,22 @@
                     
                     <table  id="info-table">
                         <tr>
-                            <td>
-                                <div class="info1"></div>
-                            </td>
-                            <td>
-                                未生长
-                            </td>
-                            <td>
-                                <div class="info2"></div>
-                            </td>
-                            <td>
-                                歪斜
-                            </td>
-                            <td>
+                            <td style="width: 30px">
                                 <div class="info3"></div>
                             </td>
-                            <td>
+                            <td style="width: 60px"> 
+                                未生长
+                            </td>
+                            <td style="width: 30px">
+                                <div class="info1"></div>
+                            </td>
+                            <td style="width: 60px"> 
+                                歪斜
+                            </td>
+                            <td style="width: 30px">
+                                <div class="info2"></div>
+                            </td>
+                            <td style="width: 60px"> 
                                 龋齿
                             </td>
                         </tr>
@@ -451,12 +451,12 @@
                     <div class="rightUp7 tooth-icon" style="top: 630px;left: 524px;"></div>
 
                     <div class="leftUp1 tooth-icon" style="top: 433px;left: 693px;"></div>
-                    <div class="leftUp2 tooth-icon" style="top: 448px;left: 742px;"></div>
-                    <div class="leftUp3 tooth-icon" style="top: 476px;left: 770px;"></div>
-                    <div class="leftUp4 tooth-icon" style="top: 508px;left: 800px;"></div>
-                    <div class="leftUp5 tooth-icon" style="top: 544px;left: 820px;"></div>
-                    <div class="leftUp6 tooth-icon" style="top: 584px;left: 828px;"></div>
-                    <div class="leftUp7 tooth-icon" style="top: 630px;left: 828px;"></div>
+                    <div class="leftUp2 tooth-icon" style="top: 448px;left: 738px;"></div>
+                    <div class="leftUp3 tooth-icon" style="top: 476px;left: 765px;"></div>
+                    <div class="leftUp4 tooth-icon" style="top: 508px;left: 792px;"></div>
+                    <div class="leftUp5 tooth-icon" style="top: 544px;left: 810px;"></div>
+                    <div class="leftUp6 tooth-icon" style="top: 584px;left: 818px;"></div>
+                    <div class="leftUp7 tooth-icon" style="top: 630px;left: 818px;"></div>
 
 
                     <div class="rightDown7 tooth-icon" style="top: 726px;left: 524px;"></div>
@@ -467,12 +467,12 @@
                     <div class="rightDown2 tooth-icon" style="top: 916px;left: 598px;"></div>
                     <div class="rightDown1 tooth-icon" style="top: 923px;left: 646px;"></div>
 
-                    <div class="leftDown7 tooth-icon" style="top: 726px;left: 828px;"></div>
-                    <div class="leftDown6 tooth-icon" style="top: 771px;left: 828px;"></div>
-                    <div class="leftDown5 tooth-icon" style="top: 813px;left: 820px;"></div>
-                    <div class="leftDown4 tooth-icon" style="top: 849px;left: 800px;"></div>
-                    <div class="leftDown3 tooth-icon" style="top: 879px;left: 770px;"></div>
-                    <div class="leftDown2 tooth-icon" style="top: 916px;left: 742px;"></div>
+                    <div class="leftDown7 tooth-icon" style="top: 726px;left: 818px;"></div>
+                    <div class="leftDown6 tooth-icon" style="top: 771px;left: 818px;"></div>
+                    <div class="leftDown5 tooth-icon" style="top: 813px;left: 810px;"></div>
+                    <div class="leftDown4 tooth-icon" style="top: 849px;left: 792px;"></div>
+                    <div class="leftDown3 tooth-icon" style="top: 879px;left: 765px;"></div>
+                    <div class="leftDown2 tooth-icon" style="top: 916px;left: 738px;"></div>
                     <div class="leftDown1 tooth-icon" style="top: 923px;left: 693px;"></div>
     
 
@@ -535,11 +535,11 @@
     remark = remark.replace(reg,"\n");
     $('#remarkText').html(remark);
 
-
+    // 1未生长 0歪斜 2龋齿
     var styles = {
-        '1': "style1",
-        '0': "style2",
-        '2': "style3"
+        '1': "style3",
+        '0': "style1",
+        '2': "style2"
     }
 
     $("input:radio[name='answer-1'][value='"+ a1 +"']").attr('checked','true');
