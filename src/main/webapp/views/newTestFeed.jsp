@@ -17,23 +17,13 @@
             background-color: #ffeb3b;
         }
 
-        .start{
-            background-color: #79eef7;
-        }
-        .data-input{
-            text-align: right;
-            height: 25px;
-            line-height: 25px;
-        }
-
-
     </style>
 </head>
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童生长发育2020</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">营养与喂养</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -66,6 +56,7 @@
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
                 <div class="panel-heading">测查数据:</div>
+
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                         <tbody style="width: 100%">
@@ -75,12 +66,12 @@
                                     当前总奶量:
                                 </td>
                                 <td >
-                                    <input id="babyBirthWeekAge" style="width: 100%" /> 
+                                    <input id="currentMilkYield" style="width: 100%" /> 
                                 </td>
-                                <td>
-                                    <input type="checkbox" name="childbirthSituation"  value="0">母乳
-                                    <input type="checkbox" name="childbirthSituation"  value="1">配方
-                                    <input type="checkbox" name="childbirthSituation"  value="2">混合
+                                <td colspan="2">
+                                    <input type="checkbox" name="milkType"  value="0">母乳
+                                    <input type="checkbox" name="milkType"  value="1">配方
+                                    <input type="checkbox" name="milkType"  value="2">混合
                                 </td>
                             </tr>
 
@@ -89,12 +80,12 @@
                                 <td>
                                     配方种类
                                 </td>
-                                <td colspan="2">
-                                    <input type="checkbox" name="childbirthSituation"  value="0">普通
-                                    <input type="checkbox" name="childbirthSituation"  value="1">适度
-                                    <input type="checkbox" name="childbirthSituation"  value="2">深度
-                                    <input type="checkbox" name="childbirthSituation"  value="3">氨基酸
-                                    <input type="checkbox" name="childbirthSituation"  value="4">羊奶粉
+                                <td colspan="3">
+                                    <input type="checkbox" name="milkRecipe"  value="0">普通
+                                    <input type="checkbox" name="milkRecipe"  value="1">适度
+                                    <input type="checkbox" name="milkRecipe"  value="2">深度
+                                    <input type="checkbox" name="milkRecipe"  value="3">氨基酸
+                                    <input type="checkbox" name="milkRecipe"  value="4">羊奶粉
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -102,8 +93,8 @@
                                 <td>
                                     辅食添加情况:
                                 </td>
-                                <td colspan="2">
-                                    <input id="babyBirthWeekAge" style="width: 100%" /> 
+                                <td colspan="3">
+                                    <input id="accessoryFoodSituation" style="width: 100%" /> 
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -111,14 +102,12 @@
                                 <td>
                                     食物过敏情况
                                 </td>
-                                <td>
+                                <td colspan="3">
                                     <label for="radio-answer-1-1">
-                                        <input type="radio" name="isHeredityDisease1" value="1" id="radio-answer-1-1" />有
+                                        <input type="radio" name="isFoodAllergy" value="1" id="radio-answer-1-1" />有
                                     </label>
-                                </td>
-                                <td>
                                     <label for="radio-answer-1-0">
-                                        <input type="radio" name="isHeredityDisease1" value="0" id="radio-answer-1-0" />无
+                                        <input type="radio" name="isFoodAllergy" value="0" id="radio-answer-1-0" />无
                                     </label>
                                 </td>
                             </tr>
@@ -127,8 +116,8 @@
                                 <td>
                                     过敏情况
                                 </td>
-                                <td colspan="2">
-                                    <input id="childBearingAge" style="width: 100%" /> 
+                                <td colspan="3">
+                                    <input id="foodAllergySituation" style="width: 100%" /> 
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -136,10 +125,10 @@
                                 <td>
                                     辅食添加次数/天
                                 </td>
-                                <td colspan="2">
-                                    <input type="checkbox" name="childbirthSituation"  value="0">一餐
-                                    <input type="checkbox" name="childbirthSituation"  value="1">二餐
-                                    <input type="checkbox" name="childbirthSituation"  value="2">三餐
+                                <td colspan="3">
+                                    <input type="checkbox" name="accessoryFoodAddTimes"  value="0">一餐
+                                    <input type="checkbox" name="accessoryFoodAddTimes"  value="1">二餐
+                                    <input type="checkbox" name="accessoryFoodAddTimes"  value="2">三餐
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -147,11 +136,11 @@
                                 <td>
                                     辅食性状:
                                 </td>
-                                <td colspan="2">
-                                    <input type="checkbox" name="childbirthSituation"  value="0">泥糊
-                                    <input type="checkbox" name="childbirthSituation"  value="1">泥糊带小颗粒
-                                    <input type="checkbox" name="childbirthSituation"  value="2">小丁块
-                                    <input type="checkbox" name="childbirthSituation"  value="3">大丁块
+                                <td colspan="3">
+                                    <input type="checkbox" name="accessoryFoodShape"  value="0">泥糊
+                                    <input type="checkbox" name="accessoryFoodShape"  value="1">泥糊带小颗粒
+                                    <input type="checkbox" name="accessoryFoodShape"  value="2">小丁块
+                                    <input type="checkbox" name="accessoryFoodShape"  value="3">大丁块
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -159,8 +148,8 @@
                                 <td>
                                     辅食添加时间:
                                 </td>
-                                <td colspan="2">
-                                    <input id="pregnantCount" style="width: 100%" /> 
+                                <td colspan="3">
+                                    <input id="accessoryFoodAddDate" style="width: 100%" /> 
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -168,45 +157,40 @@
                                 <td>
                                     是否自主进食
                                 </td>
-                                <td>
-                                    <label for="radio-answer-2-1">
-                                        <input type="radio" name="isHeredityDisease1" value="1" id="radio-answer-2-1" />是
-                                    </label>
-                                </td>
-                                <td>
-                                    <label for="radio-answer-2-0">
-                                        <input type="radio" name="isHeredityDisease1" value="0" id="radio-answer-2-0" />否
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>10</td>
-                                <td>
-                                    备注
-                                </td>
                                 <td colspan="2">
-                                    <input id="childBearingAge" style="width: 100%" /> 
+                                    <label for="radio-answer-2-1">
+                                        <input type="radio" name="isOwnFood" value="1" id="radio-answer-2-1" />是
+                                    </label>
+                                    <label for="radio-answer-2-0">
+                                        <input type="radio" name="isOwnFood" value="0" id="radio-answer-2-0" />否
+                                    </label>
+                                </td>
+                                <td>
+                                    <input id="ownFoodSituation" style="width: 100%" /> 
                                 </td>
                             </tr>
                             
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>
+                                    10
+                                </td>
+                                <td>
                                     大便次数:
                                 </td>
                                 <td>
-                                    <input id="pregnantCount" style="width: 100%" /> 
+                                    <input id="shitTimes" style="width: 100%" /> 
                                 </td>
                                 <td>
                                     大便性状:
                                 </td>
                                 <td>
-                                    <input id="pregnantCount" style="width: 100%" /> 
+                                    <input id="shitShape" style="width: 100%" /> 
                                 </td>
                             </tr>
                             
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>
-                                    <textarea rows="40" style="width: 800px;resize:none;border: 0;" id="remark"></textarea>
+                                <td colspan="5">
+                                    <textarea rows="10" style="width:100%;resize:none;border: 0;" id="feedSuggest"></textarea>
                                 </td>
                             </tr>
                         </tbody>
@@ -244,57 +228,76 @@
 
 
     function score() {
-        var isNormalChildbirth,
-            childbirthSituation,
-            babyBirthWeekAge,
-            babyBirthWeight,
-            motherPregnancyDiseaseSituation,
-            babyCount,
-            pregnantCount,
-            diseasePastHistory,
-            familyHeredityDisease,
-            isHeredityDisease1,
-            isHeredityDisease2,
-            isHeredityDisease3,
-            isHeredityDisease4,
-            isAllergyHistory,
-            allergySituation;
+        var currentMilkYield,
+            milkType,
+            milkRecipe,
+            accessoryFoodSituation,
+            isFoodAllergy,
+            foodAllergySituation,
+            accessoryFoodAddTimes,
+            accessoryFoodShape,
+            accessoryFoodAddDate,
+            isOwnFood,
+            ownFoodSituation,
+            shitTimes,
+            shitShape,
+            feedSuggest;
         var data = {};
-        var childbirthSituationList = [];
-        var childbirthSituationStr = '';
-        $('input[name="childbirthSituation"]:checked').each(function(){
-            childbirthSituationList.push($(this).val());
-            childbirthSituationStr = childbirthSituationList.join(',');
+        
+        var milkTypeList = [];
+        var milkTypeStr = '';
+        $('input[name="milkType"]:checked').each(function(){
+            milkTypeList.push($(this).val());
+            milkTypeStr = milkTypeList.join(',');
         });
 
-        var familyHeredityDiseaseList = [];
-        var familyHeredityDiseaseStr = '';
-        $('input[name="familyHeredityDisease"]:checked').each(function(){
-            familyHeredityDiseaseList.push($(this).val());
-            familyHeredityDiseaseStr = familyHeredityDiseaseList.join(',');
+        var accessoryFoodAddTimesList = [];
+        var accessoryFoodAddTimesStr = '';
+        $('input[name="accessoryFoodAddTimes"]:checked').each(function(){
+            accessoryFoodAddTimesList.push($(this).val());
+            accessoryFoodAddTimesStr = accessoryFoodAddTimesList.join(',');
+        });
+
+        var accessoryFoodShapeList = [];
+        var accessoryFoodShapeStr = '';
+        $('input[name="accessoryFoodShape"]:checked').each(function(){
+            accessoryFoodShapeList.push($(this).val());
+            accessoryFoodShapeStr = accessoryFoodShapeList.join(',');
+        });
+
+
+        var milkRecipeList = [];
+        var milkRecipeStr = '';
+        $('input[name="milkRecipe"]:checked').each(function(){
+            milkRecipeList.push($(this).val());
+            milkRecipeStr = milkRecipeList.join(',');
         });
 
 
 
 
-        data['resultBasic2.babyId'] = $("#babyid").val();
-        data['resultBasic2.isNormalChildbirth'] = parseInt($("input:radio[name='isNormalChildbirth']:checked").val());
-        data['resultBasic2.childbirthSituation'] = childbirthSituationStr;
-        data['resultBasic2.babyBirthWeekAge'] = $("#babyBirthWeekAge").val();
-        data['resultBasic2.babyBirthWeight'] = $("#babyBirthWeight").val();
-        data['resultBasic2.childBearingAge'] = $("#childBearingAge").val();
 
-        data['resultBasic2.motherPregnancyDiseaseSituation'] = $("#motherPregnancyDiseaseSituation").val();
-        data['resultBasic2.babyCount'] = $("#babyCount").val();
-        data['resultBasic2.pregnantCount'] = $("#pregnantCount").val();
-        data['resultBasic2.diseasePastHistory'] = $("#diseasePastHistory").val();
-        data['resultBasic2.familyHeredityDisease'] = familyHeredityDiseaseStr;
-        data['resultBasic2.isHeredityDisease1'] = parseInt($("input:radio[name='isHeredityDisease1']:checked").val());
-        data['resultBasic2.isHeredityDisease2'] = parseInt($("input:radio[name='isHeredityDisease2']:checked").val());
-        data['resultBasic2.isHeredityDisease3'] = parseInt($("input:radio[name='isHeredityDisease3']:checked").val());
-        data['resultBasic2.isHeredityDisease4'] = parseInt($("input:radio[name='isHeredityDisease4']:checked").val());
-        data['resultBasic2.isAllergyHistory'] = parseInt($("input:radio[name='isAllergyHistory']:checked").val());
-        data['resultBasic2.allergySituation'] = $("#allergySituation").val();
+
+
+        data['resultFeed.babyId'] = $("#babyid").val();
+        data['resultFeed.currentMilkYield'] = $("#currentMilkYield").val();
+        data['resultFeed.milkType'] = milkTypeStr;
+        data['resultFeed.milkRecipe'] = milkRecipeStr;
+
+        data['resultFeed.accessoryFoodSituation'] = $("#accessoryFoodSituation").val();
+        data['resultFeed.isFoodAllergy'] = parseInt($("input:radio[name='isFoodAllergy']:checked").val());
+        data['resultFeed.foodAllergySituation'] = $("#foodAllergySituation").val();
+        data['resultFeed.accessoryFoodAddTimes'] = accessoryFoodAddTimesStr;
+        data['resultFeed.accessoryFoodShape'] = accessoryFoodShapeStr;
+        data['resultFeed.accessoryFoodAddDate'] = $("#accessoryFoodAddDate").val();
+
+        data['resultFeed.isOwnFood'] = parseInt($("input:radio[name='isOwnFood']:checked").val());
+        data['resultFeed.ownFoodSituation'] = $("#ownFoodSituation").val();
+
+        data['resultFeed.shitTimes'] = $("#shitTimes").val();
+        data['resultFeed.shitShape'] = $("#shitShape").val();
+        data['resultFeed.feedSuggest'] = $("#feedSuggest").val();
+
 
         
         
