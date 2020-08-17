@@ -646,7 +646,7 @@
 
 
 
-                    <!-- <s:iterator value="resultBasic1List" var="resultBasic1">
+                    <s:iterator value="resultBasic1List" var="resultBasic1">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -669,7 +669,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator> -->
+                    </s:iterator>
 
 
                     <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">

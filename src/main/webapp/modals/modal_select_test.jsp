@@ -120,10 +120,10 @@
                     style="color: white;font-size: small">营养与喂养</h4></a>
         </div>
 
-        <!-- <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()"><h4
                     style="color: white;font-size: small">基础信息</h4></a>
-        </div> -->
+        </div>
 
     </div>
 </div>

@@ -69,8 +69,8 @@
         <a type="button" class="btn  modal-box text-center" href="javascript:start_Feed()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">营养与喂养</h4></a>
 
-        <!-- <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()" style="margin-top: 10px"><h4
-        style="color: white;font-size: small">基本信息</h4></a> -->
+        <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">基本信息</h4></a>
 
 
     </div>
