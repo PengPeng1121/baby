@@ -49,24 +49,21 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultBasic1.babyid"/>">
-        <input id="nickName" type="hidden" value="<s:property value="resultBasic1.nickName"/>">
-        <input id="address" type="hidden" value="<s:property value="resultBasic1.address"/>">
-        <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.contactMobile"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultSummary.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultSummary.id"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultSummary.summary"/>">
+        <input id="days" type="hidden" value="<s:property value="days"/>">
+        <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg2Boy.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg2Girl.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
                     </s:if>
-
-
-
-                    <img style="width: 40px;position: absolute;z-index: 1;" src="statics/img/hemaBg2Girl.jpg">
 
                     <table style="width: 55%;
                         border: 0;
@@ -76,87 +73,37 @@
                         font-size: 16px">
                         <tr>
 
-                            <td  style="font-weight: bold;">
+                            <td class="col-md-2" style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                             </td>
-                            <span>
-                                <s:property value="baby.name"/>
-                            </span>
-                        </tr>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">小</span>
-                                <span style="letter-spacing: 1px">名:</span>
-                            </td>
-                            <span>
-                                <s:property value="resultBasic1.nickName"/>
-                            </span>
-                        </tr>
-
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">性</span>
-                                <span style="letter-spacing: 1px">别:</span>
-                            </td>
-                            <span>
-                                <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
-                            </span>
-                        </tr>
-
-                        <tr>
-                            <td  style="font-weight: bold;">
+                            <td class="col-md-2 col-offset-2" style="font-weight: bold;">
                                 <span style="letter-spacing: 1px">出生日期:</span>
                             </td>
-                            <span>
-                                <s:date name="baby.birthday" format="yyyy-MM-dd"/>
-                            </span>
+                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px;text-align: right;"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
 
                         </tr>
                     </table>
 
-                    <table style="width: 55%;
-                        border: 0;
-                        position: relative;
-                        top: 320px;
-                        left: 70px;
-                        font-size: 16px">
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
                         <tr>
-
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">民</span>
-                                <span style="letter-spacing: 1px">族:</span>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
                             </td>
-                            <span>
-                                <s:property value="baby.nation"/>
-                            </span>
-                        </tr>
-
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">地</span>
-                                <span style="letter-spacing: 1px">址:</span>
-                            </td>
-                            <span>
-                                <s:property value="resultBasic1.address"/>
-                            </span>
-                        </tr>
-
-
-
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 1px">联系电话:</span>
-                            </td>
-                            <span>
-                                <s:property value="resultBasic1.contactMobile"/>
-                            </span>
-
                         </tr>
                     </table>
 
-
+                    <p id="date" style="
+                        position: absolute;
+                        top: 1000px;
+                        left: 950px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    ">
+                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
+                    </p>
                 </div>
             </div>
             <div style="width:270px;float: right">
@@ -174,7 +121,13 @@
 <script type="text/javascript">
     var babyid = $('#babyid').val();
     var resultid = $('#resultid').val();
+    var days = $('#days').val();
+    var remark = $('#remark').val();
 
+
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    remark = remark.replace(reg,"\n");
+    $('#remarkText').html(remark);
 
     
     $('.print').click(function(){

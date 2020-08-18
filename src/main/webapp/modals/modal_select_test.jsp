@@ -125,6 +125,11 @@
                     style="color: white;font-size: small">基础信息</h4></a>
         </div>
 
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Plan()"><h4
+                    style="color: white;font-size: small">定制化方案</h4></a>
+        </div>
+
     </div>
 </div>
 <script>
@@ -573,6 +578,45 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestFeed?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_Plan() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthagePlan",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestPlan?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Bless() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthageBless",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBless?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

@@ -8,6 +8,7 @@
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <title>新建评测-儿童发育评测平台</title>
     <s:include value="/statics/head.html"></s:include>
+    <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
     <style type="text/css">
         p{
             margin:0;
@@ -33,7 +34,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童生长发育2020</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">体格头面检查</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -62,46 +63,47 @@
                 </div>
             </div>
             
-            <div class="panel panel-default front-panel">
-                <input id="days" type="hidden" value="<s:property value="days"/>">
-                <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <div class="panel-heading">基本信息:</div>
-                <div class="panel-body front-no-padding" style="padding: 15px;">
-                    <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">小名:</label>
-                        <div class="col-md-9">
-                           <input id="nickName" />
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">地址:</label>
-                        <div class="col-md-9">
-                           <input id="address" />
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">联系电话:</label>
-                        <div class="col-md-9">
-                           <input id="contactMobile" />
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+
+            <textarea rows="30" style="width: 800px;resize:none;border: 0;position: relative;left: 170px;" id="remark"></textarea>
+
+
+            <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 30%;position: relative;left: 170px">
+                <tbody style="width: 100%">
+                    <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <td>
+                            总评日期
+                        </td>
+                        <td>
+                            <input id="summaryDate" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            
+            
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 <a type="button" class="btn btn-primary pull-right" onclick="save()" >保存</a>
             </div>
+
+            <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
         </form>
     </div>
     <s:include value="/statics/footer.jsp"/>
 </div>
 <s:include value="/statics/tail.html"/>
+<script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
 <script type="text/javascript">
 
 
 
+    
 
+    $('#summaryDate').cxCalendar();
+    
     function save() {
         
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
@@ -114,26 +116,21 @@
 
 
     function score() {
-        var nickName,
-            address,
-            contactMobile;
-
-        nickName = $("#nickName").val();
-        address = $("#address").val();
-        contactMobile = $("#contactMobile").val();
-
-        var data = {};
-        data ['resultBasic1.babyId'] = parseInt($("#babyid").val());
-        data ['resultBasic1.nickName'] = nickName;
-        data ['resultBasic1.address'] = address;
-        data ['resultBasic1.contactMobile'] = contactMobile;
-
+        var summaryDate = $("#summaryDate").val().trim();
+        var summary = $('#remark').val();
+        var data = "{";
+        data += "'resultSummary.babyId':" + $("#babyid").val();
+        data += "}";
+        
+        data = eval('(' + data + ')');
+        data['resultSummary.summaryDate'] = summaryDate;
+        data['resultSummary.summary'] = summary;
         $.ajax({
-            url: 'saveresultBasic1',
+            url: 'saveresultSummary',
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultBasic1?id=" + json.resultBasic1.id;
+                window.location = "showresultSummary?id=" + json.resultSummary.id;
             }
         })
     }
