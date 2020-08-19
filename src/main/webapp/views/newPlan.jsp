@@ -62,24 +62,51 @@
                     
                 </div>
             </div>
+
+
+
+            <div class="panel panel-default front-panel" id="info">
+                <div class="panel-heading">自己的愿望</div>
+                <div class="panel-body front-no-padding" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <textarea rows="5"  id="ownWish"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default front-panel" id="info">
+                <div class="panel-heading">医生的祝愿</div>
+                <div class="panel-body front-no-padding" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <textarea rows="5"  id="doctorWish"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default front-panel" id="info">
+                <div class="panel-heading">健康规划</div>
+                <div class="panel-body front-no-padding" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <textarea rows="5"  id="healthPlan"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-default front-panel" id="info">
+                <div class="panel-heading">建议未来发展方向</div>
+                <div class="panel-body front-no-padding" style="padding: 15px;">
+                    <div class="col-md-12">
+                        <textarea rows="5"  id="futureDirection"></textarea>
+                    </div>
+                </div>
+            </div>
             
 
 
-            <textarea rows="30" style="width: 800px;resize:none;border: 0;position: relative;left: 170px;" id="remark"></textarea>
 
-
-            <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 30%;position: relative;left: 170px">
-                <tbody style="width: 100%">
-                    <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                        <td>
-                            总评日期
-                        </td>
-                        <td>
-                            <input id="summaryDate" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
 
 
             
@@ -116,21 +143,26 @@
 
 
     function score() {
-        var summaryDate = $("#summaryDate").val().trim();
-        var summary = $('#remark').val();
+        
+        var ownWish = $('#ownWish').val();
+        var doctorWish = $('#doctorWish').val();
+        var healthPlan = $('#healthPlan').val();
+        var futureDirection = $('#futureDirection').val();
         var data = "{";
-        data += "'resultSummary.babyId':" + $("#babyid").val();
+        data += "'resultPlan.babyId':" + $("#babyid").val();
         data += "}";
         
         data = eval('(' + data + ')');
-        data['resultSummary.summaryDate'] = summaryDate;
-        data['resultSummary.summary'] = summary;
+        data['resultPlan.ownWish'] = ownWish;
+        data['resultPlan.doctorWish'] = doctorWish;
+        data['resultPlan.healthPlan'] = healthPlan;
+        data['resultPlan.futureDirection'] = futureDirection;
         $.ajax({
-            url: 'saveresultSummary',
+            url: 'saveresultPlan',
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultSummary?id=" + json.resultSummary.id;
+                window.location = "showresultPlan?id=" + json.resultPlan.id;
             }
         })
     }

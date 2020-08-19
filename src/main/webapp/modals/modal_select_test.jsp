@@ -130,6 +130,11 @@
                     style="color: white;font-size: small">定制化方案</h4></a>
         </div>
 
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Bless()"><h4
+                    style="color: white;font-size: small">祝福</h4></a>
+        </div>
+
     </div>
 </div>
 <script>
@@ -591,7 +596,7 @@
         var babyid = $("#babyid").val();
         
         $.ajax({
-            url: "monthagePlan",
+            url: "testMonthage",
             type: "post",
             data: {
                 babyid: babyid
@@ -610,7 +615,7 @@
         var babyid = $("#babyid").val();
         
         $.ajax({
-            url: "monthageBless",
+            url: "testMonthage",
             type: "post",
             data: {
                 babyid: babyid

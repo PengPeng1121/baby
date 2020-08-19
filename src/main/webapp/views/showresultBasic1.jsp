@@ -66,53 +66,54 @@
 
 
 
-                    <img style="width: 40px;position: absolute;z-index: 1;" src="statics/img/hemaBg2Girl.jpg">
+                    <img style="width: 120px;position: absolute;z-index: 1;top: 270px;left: 400px;" src="statics/img/hemaBg2Girl.jpg">
 
                     <table style="width: 55%;
                         border: 0;
                         position: relative;
-                        top: 120px;
-                        left: 70px;
+                        top: 200px;
+                        left: 470px;
                         font-size: 16px">
                         <tr>
 
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
+                                <span>
+                                    <s:property value="baby.name"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:property value="baby.name"/>
-                            </span>
+                            
                         </tr>
 
                         <tr>
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">小</span>
                                 <span style="letter-spacing: 1px">名:</span>
+                                <span>
+                                    <s:property value="resultBasic1.nickName"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:property value="resultBasic1.nickName"/>
-                            </span>
+                            
                         </tr>
 
                         <tr>
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">性</span>
                                 <span style="letter-spacing: 1px">别:</span>
+                                <span>
+                                    <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
+                                </span>
                             </td>
-                            <span>
-                                <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
-                            </span>
                         </tr>
 
                         <tr>
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 1px">出生日期:</span>
+                                <span>
+                                    <s:date name="baby.birthday" format="yyyy-MM-dd"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:date name="baby.birthday" format="yyyy-MM-dd"/>
-                            </span>
-
                         </tr>
                     </table>
 
@@ -120,27 +121,29 @@
                         border: 0;
                         position: relative;
                         top: 320px;
-                        left: 70px;
+                        left: 470px;
                         font-size: 16px">
                         <tr>
 
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">民</span>
                                 <span style="letter-spacing: 1px">族:</span>
+                                <span>
+                                    <s:property value="baby.nation"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:property value="baby.nation"/>
-                            </span>
+                            
                         </tr>
 
                         <tr>
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">地</span>
                                 <span style="letter-spacing: 1px">址:</span>
+                                <span>
+                                    <s:property value="resultBasic1.address"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:property value="resultBasic1.address"/>
-                            </span>
+                            
                         </tr>
 
 
@@ -148,11 +151,10 @@
                         <tr>
                             <td  style="font-weight: bold;">
                                 <span style="letter-spacing: 1px">联系电话:</span>
+                                <span>
+                                    <s:property value="resultBasic1.contactMobile"/>
+                                </span>
                             </td>
-                            <span>
-                                <s:property value="resultBasic1.contactMobile"/>
-                            </span>
-
                         </tr>
                     </table>
 

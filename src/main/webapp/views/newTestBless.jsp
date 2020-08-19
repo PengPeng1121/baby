@@ -68,21 +68,9 @@
                 <div class="panel-heading">基本信息:</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">小名:</label>
+                        <label class="col-md-3 front-label data-input">医生姓名:</label>
                         <div class="col-md-9">
-                           <input id="nickName" />
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">地址:</label>
-                        <div class="col-md-9">
-                           <input id="address" />
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">联系电话:</label>
-                        <div class="col-md-9">
-                           <input id="contactMobile" />
+                           <input id="doctorName" />
                         </div>
                     </div>
                 </div>
@@ -114,26 +102,20 @@
 
 
     function score() {
-        var nickName,
-            address,
-            contactMobile;
+        var doctorName;
 
-        nickName = $("#nickName").val();
-        address = $("#address").val();
-        contactMobile = $("#contactMobile").val();
+        doctorName = $("#doctorName").val();
 
         var data = {};
         data ['resultBasic1.babyId'] = parseInt($("#babyid").val());
-        data ['resultBasic1.nickName'] = nickName;
-        data ['resultBasic1.address'] = address;
-        data ['resultBasic1.contactMobile'] = contactMobile;
+        data ['resultBasic1.doctorName'] = doctorName;
 
         $.ajax({
-            url: 'saveresultBasic1',
+            url: 'saveresultBless',
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultBasic1?id=" + json.resultBasic1.id;
+                window.location = "showresultBless?id=" + json.resultBless.id;
             }
         })
     }

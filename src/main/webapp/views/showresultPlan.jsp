@@ -49,11 +49,16 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultSummary.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultSummary.id"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultSummary.summary"/>">
-        <input id="days" type="hidden" value="<s:property value="days"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultPlan.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultPlan.id"/>">
+
+        <input id="ownWish" type="hidden" value="<s:property value="resultPlan.ownWish"/>">
+        <input id="doctorWish" type="hidden" value="<s:property value="resultPlan.doctorWish"/>">
+        <input id="healthPlan" type="hidden" value="<s:property value="resultPlan.healthPlan"/>">
+        <input id="futureDirection" type="hidden" value="<s:property value="resultPlan.futureDirection"/>">
+
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
+
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
@@ -65,45 +70,43 @@
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
                     </s:if>
 
-                    <table style="width: 55%;
-                        border: 0;
-                        position: relative;
-                        top: 120px;
-                        left: 70px;
-                        font-size: 16px">
-                        <tr>
-
-                            <td class="col-md-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">姓</span>
-                                <span style="letter-spacing: 1px">名:</span>
-                            </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
-
-                            <td class="col-md-2 col-offset-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 1px">出生日期:</span>
-                            </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px;text-align: right;"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-
-                        </tr>
-                    </table>
 
                     <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
                             </td>
                         </tr>
                     </table>
 
-                    <p id="date" style="
-                        position: absolute;
-                        top: 1000px;
-                        left: 950px;
-                        font-weight: bold;
-                        font-size: 16px;
-                    ">
-                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
-                    </p>
+
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+                    
                 </div>
             </div>
             <div style="width:270px;float: right">
@@ -122,12 +125,30 @@
     var babyid = $('#babyid').val();
     var resultid = $('#resultid').val();
     var days = $('#days').val();
-    var remark = $('#remark').val();
+    var ownWish = $('#ownWish').val();
+    var doctorWish = $('#doctorWish').val();
+    var healthPlan = $('#healthPlan').val();
+    var futureDirection = $('#futureDirection').val();
+
 
 
     var reg = new RegExp("<br>","g");//g,表示全部替换。
-    remark = remark.replace(reg,"\n");
-    $('#remarkText').html(remark);
+    ownWish = ownWish.replace(reg,"\n");
+    $('#ownWishText').html(ownWish);
+
+    
+    doctorWish = doctorWish.replace(reg,"\n");
+    $('#doctorWishText').html(doctorWish);
+
+
+    
+    healthPlan = healthPlan.replace(reg,"\n");
+    $('#healthPlanText').html(healthPlan);
+
+
+    
+    futureDirection = futureDirection.replace(reg,"\n");
+    $('#futureDirectionText').html(futureDirection);
 
     
     $('.print').click(function(){

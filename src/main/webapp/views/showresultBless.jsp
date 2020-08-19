@@ -49,10 +49,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultSummary.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultSummary.id"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultSummary.summary"/>">
-        <input id="days" type="hidden" value="<s:property value="days"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultBless.babyid"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
         <div class="container" id="hemaFront">
@@ -65,35 +62,6 @@
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
                     </s:if>
 
-                    <table style="width: 55%;
-                        border: 0;
-                        position: relative;
-                        top: 120px;
-                        left: 70px;
-                        font-size: 16px">
-                        <tr>
-
-                            <td class="col-md-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">姓</span>
-                                <span style="letter-spacing: 1px">名:</span>
-                            </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
-
-                            <td class="col-md-2 col-offset-2" style="font-weight: bold;">
-                                <span style="letter-spacing: 1px">出生日期:</span>
-                            </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px;text-align: right;"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-
-                        </tr>
-                    </table>
-
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
-                        <tr>
-                            <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
-                            </td>
-                        </tr>
-                    </table>
 
                     <p id="date" style="
                         position: absolute;
@@ -102,7 +70,7 @@
                         font-weight: bold;
                         font-size: 16px;
                     ">
-                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
+                        <s:property value="resultBless.doctorName"/></td>
                     </p>
                 </div>
             </div>
@@ -120,14 +88,6 @@
 </script>
 <script type="text/javascript">
     var babyid = $('#babyid').val();
-    var resultid = $('#resultid').val();
-    var days = $('#days').val();
-    var remark = $('#remark').val();
-
-
-    var reg = new RegExp("<br>","g");//g,表示全部替换。
-    remark = remark.replace(reg,"\n");
-    $('#remarkText').html(remark);
 
     
     $('.print').click(function(){
