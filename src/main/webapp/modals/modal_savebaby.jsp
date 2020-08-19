@@ -531,7 +531,7 @@
     function start_Plan() {
         var babyid = $("#babyid").val();
         $.ajax({
-            url: "testMonthage",
+            url: "monthage",
             type: "post",
             data: {
                 babyid: babyid
@@ -549,7 +549,7 @@
     function start_Bless() {
         var babyid = $("#babyid").val();
         $.ajax({
-            url: "testMonthage",
+            url: "monthage",
             type: "post",
             data: {
                 babyid: babyid

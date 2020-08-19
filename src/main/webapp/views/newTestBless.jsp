@@ -107,8 +107,8 @@
         doctorName = $("#doctorName").val();
 
         var data = {};
-        data ['resultBasic1.babyId'] = parseInt($("#babyid").val());
-        data ['resultBasic1.doctorName'] = doctorName;
+        data ['resultBless.babyId'] = parseInt($("#babyid").val());
+        data ['resultBless.doctorName'] = doctorName;
 
         $.ajax({
             url: 'saveresultBless',

@@ -71,7 +71,7 @@
                     </s:if>
 
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
@@ -80,7 +80,7 @@
                     </table>
 
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 500px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
@@ -89,7 +89,7 @@
                     </table>
 
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 700px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
@@ -98,7 +98,7 @@
                     </table>
 
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 900px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>

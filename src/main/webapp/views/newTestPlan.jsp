@@ -69,7 +69,7 @@
                 <div class="panel-heading">自己的愿望</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12">
-                        <textarea rows="5"  id="ownWish"></textarea>
+                        <textarea rows="5"  id="ownWish" style="width: 800px"></textarea>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                 <div class="panel-heading">医生的祝愿</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12">
-                        <textarea rows="5"  id="doctorWish"></textarea>
+                        <textarea rows="5"  id="doctorWish" style="width: 800px"></textarea>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 <div class="panel-heading">健康规划</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12">
-                        <textarea rows="5"  id="healthPlan"></textarea>
+                        <textarea rows="5"  id="healthPlan" style="width: 800px"></textarea>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="panel-heading">建议未来发展方向</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12">
-                        <textarea rows="5"  id="futureDirection"></textarea>
+                        <textarea rows="5"  id="futureDirection" style="width: 800px"></textarea>
                     </div>
                 </div>
             </div>

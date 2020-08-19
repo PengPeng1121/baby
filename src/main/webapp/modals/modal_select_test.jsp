@@ -596,7 +596,7 @@
         var babyid = $("#babyid").val();
         
         $.ajax({
-            url: "testMonthage",
+            url: "monthage",
             type: "post",
             data: {
                 babyid: babyid
@@ -615,7 +615,7 @@
         var babyid = $("#babyid").val();
         
         $.ajax({
-            url: "testMonthage",
+            url: "monthage",
             type: "post",
             data: {
                 babyid: babyid

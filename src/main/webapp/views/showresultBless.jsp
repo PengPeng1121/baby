@@ -35,11 +35,8 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
-        #content-table{
-            left: 100px !important;
-            top: 240px !important;
-        }
-        #date{
+
+        #doctorName{
             left: 550px !important;
             top: 900px !important;
         }
@@ -61,9 +58,21 @@
                     <s:if test="baby.gender == 0">
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
                     </s:if>
+                    
+
+                    <p id="babyName" style="
+                        position: absolute;
+                        top: 400px;
+                        left: 950px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    ">
+                        <s:property value="baby.name"/>
+                    </p>
 
 
-                    <p id="date" style="
+
+                    <p id="doctorName" style="
                         position: absolute;
                         top: 1000px;
                         left: 950px;
