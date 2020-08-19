@@ -18,6 +18,46 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
+        #table-1{
+            top: 400px;
+        }
+        #table-2{
+            top: 500px;
+        }
+        #table-3{
+            top: 600px;
+        }
+        #table-4{
+            top: 700px;
+        }
+        #title-1{
+            top: 380px;
+        }
+        #title-2{
+            top: 480px;
+        }
+        #title-3{
+            top: 580px;
+        }
+        #title-4{
+            top: 680px;
+        }
+        .title{
+            position: absolute;
+            letter-spacing: 6px;
+            color: #274b7b;
+            left: 546px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .content{
+            width: 590px; 
+            height:100px;
+            border:0;
+            font-size: 16px; 
+            position: absolute;
+            left: 538px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -35,14 +75,43 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
-        #content-table{
-            left: 100px !important;
-            top: 240px !important;
+        .title{
+            
+            left: 170px !important;
+            
         }
-        #date{
-            left: 550px !important;
-            top: 900px !important;
+        .content{
+            
+            left: 160px !important;
         }
+
+
+
+        #table-1{
+            top: 300px !important;
+        }
+        #table-2{
+            top: 400px !important;
+        }
+        #table-3{
+            top: 500px !important;
+        }
+        #table-4{
+            top: 600px !important;
+        }
+        #title-1{
+            top: 280px !important;
+        }
+        #title-2{
+            top: 380px !important;
+        }
+        #title-3{
+            top: 480px !important;
+        }
+        #title-4{
+            top: 580px !important;
+        }
+
     </style>
 </head>
 <body class="front-body">
@@ -64,14 +133,42 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Girl.jpg">
                     </s:if>
 
 
-                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 50%;
+                        border: 0;
+                        position: relative;
+                        top: 208px;
+                        left: 150px;
+                        font-size: 16px;
+                        color: #274b7b;">
+                        <tr>
+                            <td style="font-weight: bold; width: 50%; padding-left: 15px">
+                                <span style="letter-spacing: 18px">姓</span>
+                                <span style="letter-spacing: 1px">名:</span>
+                                <span>
+                                    <s:property value="baby.name"/>
+                                </span>
+                            </td>
+                            <td>
+                                <span style="letter-spacing: 18px">性</span>
+                                <span style="letter-spacing: 1px">别:</span>
+                                <span>
+                                    <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
+                                </span>
+                            </td>
+                            
+                        </tr>
+                    </table>
+
+
+                    <p class="title" id="title-1">自己的愿望:</p>
+                    <table class="content" id="table-1">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
@@ -79,8 +176,8 @@
                         </tr>
                     </table>
 
-
-                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 500px;left: 490px" id="content-table">
+                    <p class="title" id="title-2">医生的祝愿:</p>
+                    <table class="content" id="table-2">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
@@ -88,8 +185,8 @@
                         </tr>
                     </table>
 
-
-                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 700px;left: 490px" id="content-table">
+                    <p class="title" id="title-3">医生的祝愿:</p>
+                    <table class="content" id="table-3">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
@@ -97,8 +194,8 @@
                         </tr>
                     </table>
 
-
-                    <table style="width: 590px; height:100px;border:0;font-size: 16px; position: absolute;top: 900px;left: 490px" id="content-table">
+                    <p class="title" id="title-4">建议未来发展方向:</p>
+                    <table class="content" id="table-4">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>

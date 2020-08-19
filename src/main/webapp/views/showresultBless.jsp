@@ -37,8 +37,12 @@
         }
 
         #doctorName{
-            left: 550px !important;
-            top: 900px !important;
+            left: 500px !important;
+            top: 960px !important;
+        }
+        #babyName{
+            left: 195px !important;
+            top: 425px !important;
         }
     </style>
 </head>
@@ -53,19 +57,20 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Boy.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg10Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg5Girl.jpg">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg10Girl.jpg">
                     </s:if>
                     
 
                     <p id="babyName" style="
                         position: absolute;
-                        top: 400px;
-                        left: 950px;
+                        top: 495px;
+                        left: 600px;
                         font-weight: bold;
                         font-size: 16px;
+                        font-weight: bold;
                     ">
                         <s:property value="baby.name"/>
                     </p>
@@ -74,8 +79,8 @@
 
                     <p id="doctorName" style="
                         position: absolute;
-                        top: 1000px;
-                        left: 950px;
+                        top: 1030px;
+                        left: 900px;
                         font-weight: bold;
                         font-size: 16px;
                     ">
