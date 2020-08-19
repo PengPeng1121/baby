@@ -18,6 +18,25 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
+        .line{
+            border-bottom: 1px solid #df9390;
+            height: 40px;
+        }
+        .line-img{
+            width: 20px;
+            z-index: 1;
+            padding-bottom: 4px;
+        }
+        .value{
+            margin-left: 10px;
+        }
+        #faceImg{
+            width: 120px;
+            position: absolute;
+            z-index: 1;
+            top: 290px;
+            left: 460px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -35,13 +54,15 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
-        #content-table{
+        #faceImg{
+            width: 120px !important;
+            position: absolute !important;
+            z-index: 1 !important;
+            top: 220px !important;
             left: 100px !important;
-            top: 240px !important;
         }
-        #date{
-            left: 550px !important;
-            top: 900px !important;
+        #table1, #table2{
+            width: 52% !important;
         }
     </style>
 </head>
@@ -66,80 +87,118 @@
 
 
 
-                    <img style="width: 120px;position: absolute;z-index: 1;top: 270px;left: 400px;" src="statics/img/hemaBg2Girl.jpg">
+                    <img id="faceImg" src="statics/img/hemaBg2Girl.jpg">
 
-                    <table style="width: 55%;
+                    <table style="width: 38%;
                         border: 0;
                         position: relative;
-                        top: 200px;
-                        left: 470px;
-                        font-size: 16px">
-                        <tr>
+                        top: 220px;
+                        left: 270px;
+                        font-size: 16px"
+                        id="table1">
+                        <tr  class="line">
 
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">姓</span>
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/name1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/name2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 10px;margin-left: 10px ">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
-                                <span>
+                                <span class="value">
                                     <s:property value="baby.name"/>
                                 </span>
                             </td>
                             
                         </tr>
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">小</span>
+                        <tr  class="line">
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/nick1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/nick2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 10px;margin-left: 10px ">小</span>
                                 <span style="letter-spacing: 1px">名:</span>
-                                <span>
+                                <span class="value">
                                     <s:property value="resultBasic1.nickName"/>
                                 </span>
                             </td>
                             
                         </tr>
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">性</span>
+                        <tr  class="line">
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/gender1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/gender2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 10px;margin-left: 10px ">性</span>
                                 <span style="letter-spacing: 1px">别:</span>
-                                <span>
+                                <span class="value">
                                     <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
                                 </span>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 1px">出生日期:</span>
-                                <span>
+                        <tr  class="line">
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/birth1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/birth2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 1px;margin-left: 10px ">出生日期:</span>
+                                <span class="value">
                                     <s:date name="baby.birthday" format="yyyy-MM-dd"/>
                                 </span>
                             </td>
                         </tr>
                     </table>
 
-                    <table style="width: 55%;
+                    <table style="width: 38%;
                         border: 0;
                         position: relative;
                         top: 320px;
-                        left: 470px;
-                        font-size: 16px">
-                        <tr>
-
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">民</span>
+                        left: 270px;
+                        font-size: 16px"
+                        id="table2">
+                        <tr class="line">
+                                
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/nation1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/nation2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 10px;margin-left: 10px ">民</span>
                                 <span style="letter-spacing: 1px">族:</span>
-                                <span>
+                                <span class="value">
                                     <s:property value="baby.nation"/>
                                 </span>
                             </td>
                             
                         </tr>
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 10px">地</span>
+                        <tr class="line">
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/add1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/add2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 10px;margin-left: 10px ">地</span>
                                 <span style="letter-spacing: 1px">址:</span>
-                                <span>
+                                <span class="value">
                                     <s:property value="resultBasic1.address"/>
                                 </span>
                             </td>
@@ -148,10 +207,16 @@
 
 
 
-                        <tr>
-                            <td  style="font-weight: bold;">
-                                <span style="letter-spacing: 1px">联系电话:</span>
-                                <span>
+                        <tr class="line">
+                            <td>
+                                <s:if test="baby.gender == 1">
+                                <img class="line-img" src="statics/img/phone1.png">
+                                </s:if>
+                                <s:if test="baby.gender == 0">
+                                <img class="line-img" src="statics/img/phone2.png">">
+                                </s:if>
+                                <span style="letter-spacing: 1px;margin-left: 10px ">联系电话:</span>
+                                <span class="value">
                                     <s:property value="resultBasic1.contactMobile"/>
                                 </span>
                             </td>
