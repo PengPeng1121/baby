@@ -239,13 +239,18 @@
                                     <input type="checkbox" name="milkRecipe"  value="0">
                                     <label style="font-weight: normal;margin-left: 50px"> 普通</label>
                                     <input type="checkbox" name="milkRecipe"  value="1" style="">
-                                    <label style="font-weight: normal;margin-left: 40px"> 适度</label>
+                                    <label style="font-weight: normal;margin-left: 5px"> 适度</label>
                                     <input type="checkbox" name="milkRecipe"  value="2" style="">
-                                    <label style="font-weight: normal;margin-left: 40px"> 深度</label>
-                                    <input type="checkbox" name="milkRecipe"  value="0">
-                                    <label style="font-weight: normal;margin-left: 40px"> 氨基酸</label>
-                                    <input type="checkbox" name="milkRecipe"  value="1" style="">
-                                    <label style="font-weight: normal;margin-left: 40px"> 羊奶粉</label>
+                                    <label style="font-weight: normal;margin-left: 5px"> 深度</label>
+                                    <input type="checkbox" name="milkRecipe"  value="3">
+                                    <label style="font-weight: normal;margin-left: 5px"> 氨基酸</label>
+                                    <input type="checkbox" name="milkRecipe"  value="4" style="">
+                                    <label style="font-weight: normal;margin-left: 5px"> 羊奶粉</label>
+                                    <input type="checkbox" name="milkRecipe"  value="5" style="">
+                                    <label style="font-weight: normal;margin-left: 5px"> 其他</label>
+                                    <span style="margin-left: 5px">
+                                        <s:property value="resultFeed.milkRecipeInfo"/> 
+                                    </span>
                                 </td>
                             </tr>
                             <tr class="item-line">
@@ -254,7 +259,7 @@
                                         辅食添加情况:
                                     </span>
                                     <span style="margin-left: 60px">
-                                        <s:property value="resultFeed.accessoryFoodSituation"/> 周 (正常为38-42周)
+                                        <s:property value="resultFeed.accessoryFoodSituation"/> 
                                     </span>
                                 </td>
                             </tr>
@@ -307,7 +312,7 @@
                             </tr>
 
 
-                            <tr>
+                            <tr class="item-line">
                                 <td>
                                     <span>
                                         辅食添加时间:

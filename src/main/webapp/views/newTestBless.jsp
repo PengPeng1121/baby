@@ -73,6 +73,9 @@
                            <input id="doctorName" />
                         </div>
                     </div>
+                    <div class="col-md-12" style="padding-bottom: 10px">
+                        <textarea rows="30" style="width: 800px;resize:none;border: 2" id="blessInfo"></textarea>
+                    </div>
                 </div>
             </div>
 
@@ -105,10 +108,12 @@
         var doctorName;
 
         doctorName = $("#doctorName").val();
+        blessInfo = $("#blessInfo").val();
 
         var data = {};
         data ['resultBless.babyId'] = parseInt($("#babyid").val());
         data ['resultBless.doctorName'] = doctorName;
+        data ['resultBless.blessInfo'] = blessInfo;
 
         $.ajax({
             url: 'saveresultBless',

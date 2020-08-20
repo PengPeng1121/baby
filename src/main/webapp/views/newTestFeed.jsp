@@ -86,6 +86,8 @@
                                     <input type="checkbox" name="milkRecipe"  value="2">深度
                                     <input type="checkbox" name="milkRecipe"  value="3">氨基酸
                                     <input type="checkbox" name="milkRecipe"  value="4">羊奶粉
+                                    <input type="checkbox" name="milkRecipe"  value="5">其他
+                                    <input id="milkRecipeInfo" /> 
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -297,6 +299,9 @@
         data['resultFeed.shitTimes'] = $("#shitTimes").val();
         data['resultFeed.shitShape'] = $("#shitShape").val();
         data['resultFeed.feedSuggest'] = $("#feedSuggest").val();
+
+        data['resultFeed.milkRecipeInfo'] = $("#milkRecipeInfo").val();
+        
 
 
         

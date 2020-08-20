@@ -18,6 +18,9 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
+        #content-table{
+            width: 450px; border:0;font-size: 16px; position: absolute;top: 550px;left: 550px
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -52,6 +55,7 @@
 
         <input id="babyid" type="hidden" value="<s:property value="resultBless.babyid"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
+        <input id="blessInfo" type="hidden" value="<s:property value="resultBless.blessInfo"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
@@ -86,6 +90,32 @@
                     ">
                         <s:property value="resultBless.doctorName"/></td>
                     </p>
+
+                    <s:if test="baby.gender == 1">
+                    <table  id="content-table">
+                        <tr>
+                            <td>
+                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    color: #51627e;letter-spacing: 2px;line-height: 30px;" id="blessInfoText">
+                                </textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                    <table  id="content-table">
+                        <tr>
+                            <td>
+                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    color: #e89893;letter-spacing: 2px;line-height: 30px;" id="blessInfoText">
+                                </textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    </s:if>
+
+
+
+
+
                 </div>
             </div>
             <div style="width:270px;float: right">
@@ -102,6 +132,12 @@
 </script>
 <script type="text/javascript">
     var babyid = $('#babyid').val();
+    var blessInfo = $('#blessInfo').val();
+
+
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    blessInfo = blessInfo.replace(reg,"\n");
+    // $('#blessInfoText').html(blessInfo);
 
     
     $('.print').click(function(){

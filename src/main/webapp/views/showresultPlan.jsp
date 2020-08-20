@@ -42,10 +42,18 @@
         #title-4{
             top: 680px;
         }
-        .title{
+        .title-boy{
             position: absolute;
             letter-spacing: 6px;
-            color: #274b7b;
+            color: #51627e;
+            left: 546px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .title-girl{
+            position: absolute;
+            letter-spacing: 6px;
+            color: #e89893;
             left: 546px;
             font-size: 16px;
             font-weight: bold;
@@ -57,6 +65,9 @@
             font-size: 16px; 
             position: absolute;
             left: 538px;
+        }
+        textarea{
+            margin-top: 8px;
         }
     </style>
     <style type="text/css" media="print">
@@ -75,11 +86,20 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
-        .title{
+        .title-girl{
             
             left: 170px !important;
+            color: #e89893 !important;
             
         }
+
+        .title-boy{
+            
+            left: 170px !important;
+            color: #51627e !important;
+            
+        }
+
         .content{
             
             left: 160px !important;
@@ -112,6 +132,16 @@
             top: 580px !important;
         }
 
+        #table-info-boy{
+            width: 80% !important;
+            color: #51627e !important;
+        }
+
+        #table-info-girl{
+            width: 80% !important;
+            color: #e89893 !important;
+        }
+
     </style>
 </head>
 <body class="front-body">
@@ -134,11 +164,6 @@
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
                     <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Boy.jpg">
-                    </s:if>
-                    <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Girl.jpg">
-                    </s:if>
-
 
                     <table style="width: 50%;
                         border: 0;
@@ -146,7 +171,8 @@
                         top: 208px;
                         left: 150px;
                         font-size: 16px;
-                        color: #274b7b;">
+                        color: #51627e;"
+                        id="table-info-boy">
                         <tr>
                             <td style="font-weight: bold; width: 50%; padding-left: 15px">
                                 <span style="letter-spacing: 18px">姓</span>
@@ -167,41 +193,116 @@
                     </table>
 
 
-                    <p class="title" id="title-1">自己的愿望:</p>
+                    <p class="title-boy" id="title-1">自己的愿望:</p>
                     <table class="content" id="table-1">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
                             </td>
                         </tr>
                     </table>
 
-                    <p class="title" id="title-2">医生的祝愿:</p>
+                    <p class="title-boy" id="title-2">医生的祝愿:</p>
                     <table class="content" id="table-2">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
                             </td>
                         </tr>
                     </table>
 
-                    <p class="title" id="title-3">医生的祝愿:</p>
+                    <p class="title-boy" id="title-3">医生的祝愿:</p>
                     <table class="content" id="table-3">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
                             </td>
                         </tr>
                     </table>
 
-                    <p class="title" id="title-4">建议未来发展方向:</p>
+                    <p class="title-boy" id="title-4">建议未来发展方向:</p>
                     <table class="content" id="table-4">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>
                             </td>
                         </tr>
                     </table>
+
+
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Girl.jpg">
+
+                    <table style="width: 50%;
+                        border: 0;
+                        position: relative;
+                        top: 208px;
+                        left: 150px;
+                        font-size: 16px;
+                        color: #e89893;"
+                        id="table-info-girl">
+                        <tr>
+                            <td style="font-weight: bold; width: 50%; padding-left: 15px">
+                                <span style="letter-spacing: 18px">姓</span>
+                                <span style="letter-spacing: 1px">名: </span>
+                                <span>
+                                     <s:property value="baby.name"/>
+                                </span>
+                            </td>
+                            <td>
+                                <span style="letter-spacing: 18px">性</span>
+                                <span style="letter-spacing: 1px">别: </span>
+                                <span>
+                                     <s:if test="baby.gender == 1">男</s:if><s:else>女</s:else>
+                                </span>
+                            </td>
+                            
+                        </tr>
+                    </table>
+
+
+                    <p class="title-girl" id="title-1">自己的愿望:</p>
+                    <table class="content" id="table-1">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="ownWishText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p class="title-girl" id="title-2">医生的祝愿:</p>
+                    <table class="content" id="table-2">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="doctorWishText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p class="title-girl" id="title-3">医生的祝愿:</p>
+                    <table class="content" id="table-3">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="healthPlanText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p class="title-girl" id="title-4">建议未来发展方向:</p>
+                    <table class="content" id="table-4">
+                        <tr>
+                            <td>
+                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="futureDirectionText"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    </s:if>
+
+
+                    
 
                     
                 </div>
