@@ -47,6 +47,17 @@
             left: 195px !important;
             top: 425px !important;
         }
+
+        #content-table{
+            top: 480px  !important;
+            left: 195px  !important;
+        }
+        .info-girl{
+            color: #e89893  !important;
+        }
+        .info-boy{
+            color: #51627e  !important;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -95,7 +106,7 @@
                     <table  id="content-table">
                         <tr>
                             <td>
-                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    color: #51627e;letter-spacing: 2px;line-height: 30px;" id="blessInfoText">
+                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    letter-spacing: 2px;line-height: 30px;" id="blessInfoText" class="info-boy">
                                 </textarea>
                             </td>
                         </tr>
@@ -105,7 +116,7 @@
                     <table  id="content-table">
                         <tr>
                             <td>
-                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    color: #e89893;letter-spacing: 2px;line-height: 30px;" id="blessInfoText">
+                                <textarea rows="6" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;    letter-spacing: 2px;line-height: 30px;" id="blessInfoText" class="info-girl">
                                 </textarea>
                             </td>
                         </tr>
@@ -137,7 +148,7 @@
 
     var reg = new RegExp("<br>","g");//g,表示全部替换。
     blessInfo = blessInfo.replace(reg,"\n");
-    // $('#blessInfoText').html(blessInfo);
+    $('#blessInfoText').html(blessInfo);
 
     
     $('.print').click(function(){

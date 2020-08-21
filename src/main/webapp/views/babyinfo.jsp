@@ -617,7 +617,7 @@
                     </s:iterator>
 
 
-                    <s:iterator value="resultFeedList" var="resultTooth">
+                    <s:iterator value="resultFeedList" var="resultFeed">
                         <tr>
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
@@ -635,7 +635,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultFeed?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>

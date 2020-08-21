@@ -69,6 +69,18 @@
         textarea{
             margin-top: 8px;
         }
+
+        #table-info-boy{
+            
+            color: #51627e ;
+        }
+
+        #table-info-girl{
+            
+            color: #e89893 ;
+        }
+
+
     </style>
     <style type="text/css" media="print">
         @page
@@ -170,11 +182,10 @@
                         position: relative;
                         top: 208px;
                         left: 150px;
-                        font-size: 16px;
-                        color: #51627e;"
+                        font-size: 16px;"
                         id="table-info-boy">
                         <tr>
-                            <td style="font-weight: bold; width: 50%; padding-left: 15px">
+                            <td style="width: 50%; padding-left: 15px">
                                 <span style="letter-spacing: 18px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                                 <span>
@@ -240,10 +251,10 @@
                         top: 208px;
                         left: 150px;
                         font-size: 16px;
-                        color: #e89893;"
+                        "
                         id="table-info-girl">
                         <tr>
-                            <td style="font-weight: bold; width: 50%; padding-left: 15px">
+                            <td style="width: 50%; padding-left: 15px">
                                 <span style="letter-spacing: 18px">姓</span>
                                 <span style="letter-spacing: 1px">名: </span>
                                 <span>
