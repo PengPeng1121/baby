@@ -85,6 +85,19 @@
                            <input id="contactMobile" />
                         </div>
                     </div>
+                    <div class="col-md-12" style="padding-bottom: 10px">
+                        <form id="form" method="POST" enctype="multipart/form-data" 
+                         onsubmit="return check();">
+                            <input type="file" accept="image/*" name="file" id="file"/>
+                            <input type="button"  onclick="uploadImg()" value="提交"/>
+                        </form>
+                    </div>
+                    <div class="col-md-12" style="padding-bottom: 10px">
+                        <img id="preview" style="width: 200px">
+                        <input id="imgUrl" type="hidden" >
+                    </div>
+                    
+                    
                 </div>
             </div>
 
@@ -99,7 +112,56 @@
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
 
+    var fileDom = document.getElementById("file");
+    var previewDom = document.getElementById("preview");
+    fileDom.addEventListener("change", e=>{
+        var file = fileDom.files[0];
+        // check if input contains a valid image file
+        if (!file || file.type.indexOf("image/") < 0) {
+            fileDom.value = "";
+            previewDom.src = "";
+            return;
+        }
 
+        // use FileReader to load image and show preview of the image
+        var fileReader = new FileReader();
+        fileReader.onload = e=>{
+            previewDom.src = e.target.result;
+        };
+        fileReader.readAsDataURL(file);
+    });
+
+    var formDom = document.getElementById("form");
+    function check() {
+        var file = fileDom.files[0];
+        // check if input contains a valid image file
+        if (!file || file.type.indexOf("image/") < 0) {
+            return false;
+        }
+        return true;
+    }
+
+
+
+    function uploadImg() {
+        var formData = new FormData();
+        var file = fileDom.files[0]; 
+        formData.append("filename", file.name);
+        formData.append("file", file);
+        $.ajax({
+            url: "admin/uploadHeadImg",
+            type: "POST",
+            enctype: "multipart/form-data",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function (json) {
+                console.log('上传成功');
+                $('#imgUrl').val('123');
+            }
+        });
+    }
 
 
     function save() {
@@ -127,6 +189,7 @@
         data ['resultBasic1.nickName'] = nickName;
         data ['resultBasic1.address'] = address;
         data ['resultBasic1.contactMobile'] = contactMobile;
+        data ['resultBasic1.headImgUrl'] = $("#imgUrl").val();
 
         $.ajax({
             url: 'saveresultBasic1',

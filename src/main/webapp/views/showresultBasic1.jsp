@@ -74,6 +74,7 @@
         <input id="nickName" type="hidden" value="<s:property value="resultBasic1.nickName"/>">
         <input id="address" type="hidden" value="<s:property value="resultBasic1.address"/>">
         <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.contactMobile"/>">
+        <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
@@ -87,7 +88,7 @@
 
 
 
-                    <img id="faceImg" src="statics/img/hemaBg2Girl.jpg">
+                    <img id="faceImg" src="<s:property value="resultBasic1.headImgUrl"/>">
 
                     <table style="width: 38%;
                         border: 0;
