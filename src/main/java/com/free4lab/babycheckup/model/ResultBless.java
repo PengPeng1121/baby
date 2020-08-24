@@ -5,8 +5,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "result_basic1", schema = "babycheckup", catalog = "")
-public class ResultBasic1 {
+@Table(name = "result_bless", schema = "babycheckup", catalog = "")
+public class ResultBless {
     private int id;
     private int testId;
     private int hosId;
@@ -15,21 +15,13 @@ public class ResultBasic1 {
     private int userId;
     private String state;
     /**
-     * 头像地址
+     * 医生姓名
      */
-    private String headImgUrl;
+    private String doctorName;
     /**
-     * 小名
+     * 祝福内容
      */
-    private String nickName;
-    /**
-     * 地址
-     */
-    private String address;
-    /**
-     * 联系电话
-     */
-    private String contactMobile;
+    private String blessInfo;
     /**
      * 备注
      */
@@ -109,7 +101,7 @@ public class ResultBasic1 {
     }
 
     @Basic
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "user_id")
     public int getUserId() {
         return userId;
     }
@@ -118,45 +110,24 @@ public class ResultBasic1 {
         this.userId = userId;
     }
 
-
     @Basic
-    @Column(name = "head_img_url")
-    public String getHeadImgUrl() {
-        return headImgUrl;
+    @Column(name = "doctor_name")
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public void setHeadImgUrl(String headImgUrl) {
-        this.headImgUrl = headImgUrl;
-    }
-
-    @Basic
-    @Column(name = "nick_name")
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
     @Basic
-    @Column(name = "address")
-    public String getAddress() {
-        return address;
+    @Column(name = "bless_info")
+    public String getBlessInfo() {
+        return blessInfo;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    @Basic
-    @Column(name = "contact_mobile")
-    public String getContactMobile() {
-        return contactMobile;
-    }
-
-    public void setContactMobile(String contactMobile) {
-        this.contactMobile = contactMobile;
+    public void setBlessInfo(String blessInfo) {
+        this.blessInfo = blessInfo;
     }
 
     @Basic

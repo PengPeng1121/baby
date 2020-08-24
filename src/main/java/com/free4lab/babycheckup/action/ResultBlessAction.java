@@ -1,12 +1,9 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.ResultQiZhi2020Manager;
+import com.free4lab.babycheckup.manager.ResultBlessManager;
 import com.free4lab.babycheckup.manager.TestResultRecordManager;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.ResultQiZhi2020;
-import com.free4lab.babycheckup.model.TestResultRecord;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.BeanUtils;
 
@@ -17,25 +14,25 @@ import java.text.SimpleDateFormat;
 /**
  * Created by Administrator on 2017/6/29.
  */
-public class ResultQiZhi2020Action {
+public class ResultBlessAction {
     private int resultid;
     private Baby baby;
     private int id;
-    private ResultQiZhi2020 resultQiZhi2020;
+    private ResultBless resultBless;
     private String SUCCESS = "success";
     private Double monthage;
     private String stime;//检查日期
     private Hospital hospital;
     private TestResultRecord resultRecord;
 
-    public String showResultQiZhi2020() {
-        resultQiZhi2020 = ResultQiZhi2020Manager.findResultByid(id);
-        baby = BabyManager.findById(resultQiZhi2020.getBabyId());
+    public String showResultBless() {
+        resultBless = ResultBlessManager.findResultByid(id);
+        baby = BabyManager.findById(resultBless.getBabyId());
         Date d1 = baby.getBirthday();
-        stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultQiZhi2020.getTime());
+        stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBless.getTime());
         Date d2 = Date.valueOf(stime);
         monthage = diffDays(d1,d2);
-        resultRecord = TestResultRecordManager.find(35,id);
+        resultRecord = TestResultRecordManager.find(39,id);
         if(resultRecord == null){
             resultRecord = new TestResultRecord();
             resultRecord.setTesterName("null");
@@ -49,11 +46,11 @@ public class ResultQiZhi2020Action {
         return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30.4));
     }
     //保存记录，没有新增，有修改
-    public String saveRecordQiZhi2020(){
-        TestResultRecord record = TestResultRecordManager.find(35,resultRecord.getResultId());
+    public String saveRecordBless(){
+        TestResultRecord record = TestResultRecordManager.find(39,resultRecord.getResultId());
         if(record==null){
             //保存
-            resultRecord.setTestId(35);
+            resultRecord.setTestId(39);
             resultRecord.setVersion("1");
             resultRecord.setHospitalId((Integer) ActionContext.getContext().getSession().get("hoid"));
             resultRecord.setUserId((Integer) ActionContext.getContext().getSession().get("userid"));
@@ -128,12 +125,12 @@ public class ResultQiZhi2020Action {
         this.resultid = resultid;
     }
 
-    public ResultQiZhi2020 getResultQiZhi2020() {
-        return resultQiZhi2020;
+    public ResultBless getResultBless() {
+        return resultBless;
     }
 
-    public void setResultQiZhi2020(ResultQiZhi2020 resultQiZhi2020) {
-        this.resultQiZhi2020 = resultQiZhi2020;
+    public void setResultBless(ResultBless resultBless) {
+        this.resultBless = resultBless;
     }
 
     public TestResultRecord getResultRecord() {

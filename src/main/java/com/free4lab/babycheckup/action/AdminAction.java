@@ -8,6 +8,7 @@ import com.free4lab.babycheckup.model.BabySchema;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.User;
 import com.free4lab.babycheckup.utils.FileLocationUtil;
+import com.free4lab.babycheckup.utils.FileUtil;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.ServletActionContext;
 
@@ -88,7 +89,7 @@ public class AdminAction {
     public String uploadLogo() {
         relativePath = FileLocationUtil.getLocation(file.getName()) + filename;
         String absolutePath = "../../../../opt/nfs/" + relativePath;
-        saveFile(file, absolutePath);
+        FileUtil.saveFile(file, absolutePath);
         Hospital hospital = HospitalManager.findByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         if(position.equals("logoLanding")) {
             hospital.setLogoLanding(relativePath);
@@ -101,37 +102,6 @@ public class AdminAction {
         return SUCCESS;
     }
 
-    private void saveFile(File file, String path) {
-        InputStream inputStream = null;
-        OutputStream outputStream = null;
-        try {
-            inputStream = new FileInputStream(file);
-            outputStream = new FileOutputStream(path);
-            int temp;
-            while ((temp = inputStream.read()) != -1) {
-                outputStream.write(temp);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if(inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if(outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
     public String babySetAdmin(){
         bs = BabyManager.findBsByHoid((Integer) ActionContext.getContext().getSession().get("hoid"));
         return SUCCESS;

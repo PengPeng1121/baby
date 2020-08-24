@@ -15,7 +15,7 @@
             <!-- 左侧栏移动端触发：可选  -->
             <%--<img class="nav-toggle-left" id="front-nav-toggle-left" alt="SidebarToggle"/>--%>
             <!-- 品牌图片大小为150 * 30：宽度不定，高度固定30px -->
-            <div class="nav-brand"><a href="home"><img class="img-responsive" src="http://47.94.16.189/image/<s:property value="hospital.logoLanding"/>" alt="Babycheckup" onerror="this.src='statics/img/CIPlogo.png'" style="height: 30px;width: 250px;"/></a></div>
+            <div class="nav-brand"><a href="home"><img class="img-responsive" src="http://47.94.202.106/image/<s:property value="hospital.logoLanding"/>" alt="Babycheckup" onerror="this.src='statics/img/CIPlogo.png'" style="height: 30px;width: 250px;"/></a></div>
         </div>
         <!-- 导航栏右侧区域 -->
         <%--<div class="nav-right">
@@ -29,7 +29,7 @@
             <div class="col-md-9">
                 <div class="panel panel-default front-panel" style="background: #e7e7e7; border: 0;">
                     <div class="panel-body" style="height: 100%;padding: 0px;">
-                        <img src="http://47.94.16.189/image/<s:property value="hospital.bannerLanding"/>" class="change-img" onerror="this.src='statics/img/banner.png'" style="width: 100%;max-width: 100%; display: block;">
+                        <img src="http://47.94.202.106/image/<s:property value="hospital.bannerLanding"/>" class="change-img" onerror="this.src='statics/img/banner.png'" style="width: 100%;max-width: 100%; display: block;">
                         <%--height: 271px;width: 847.5px;--%>
                     </div>
                 </div>

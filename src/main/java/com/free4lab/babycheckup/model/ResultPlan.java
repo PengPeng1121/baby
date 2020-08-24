@@ -5,8 +5,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "result_basic1", schema = "babycheckup", catalog = "")
-public class ResultBasic1 {
+@Table(name = "result_plan", schema = "babycheckup", catalog = "")
+public class ResultPlan {
     private int id;
     private int testId;
     private int hosId;
@@ -15,21 +15,21 @@ public class ResultBasic1 {
     private int userId;
     private String state;
     /**
-     * 头像地址
+     * 自我意愿
      */
-    private String headImgUrl;
+    private String ownWish;
     /**
-     * 小名
+     * 医生的祝福
      */
-    private String nickName;
+    private String doctorWish;
     /**
-     * 地址
+     * 健康规划
      */
-    private String address;
+    private String healthPlan;
     /**
-     * 联系电话
+     * 未来方向
      */
-    private String contactMobile;
+    private String futureDirection;
     /**
      * 备注
      */
@@ -109,7 +109,7 @@ public class ResultBasic1 {
     }
 
     @Basic
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "user_id")
     public int getUserId() {
         return userId;
     }
@@ -118,45 +118,44 @@ public class ResultBasic1 {
         this.userId = userId;
     }
 
-
     @Basic
-    @Column(name = "head_img_url")
-    public String getHeadImgUrl() {
-        return headImgUrl;
+    @Column(name = "own_wish")
+    public String getOwnWish() {
+        return ownWish;
     }
 
-    public void setHeadImgUrl(String headImgUrl) {
-        this.headImgUrl = headImgUrl;
-    }
-
-    @Basic
-    @Column(name = "nick_name")
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setOwnWish(String ownWish) {
+        this.ownWish = ownWish;
     }
 
     @Basic
-    @Column(name = "address")
-    public String getAddress() {
-        return address;
+    @Column(name = "doctor_wish")
+    public String getDoctorWish() {
+        return doctorWish;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDoctorWish(String doctorWish) {
+        this.doctorWish = doctorWish;
     }
 
     @Basic
-    @Column(name = "contact_mobile")
-    public String getContactMobile() {
-        return contactMobile;
+    @Column(name = "health_plan")
+    public String getHealthPlan() {
+        return healthPlan;
     }
 
-    public void setContactMobile(String contactMobile) {
-        this.contactMobile = contactMobile;
+    public void setHealthPlan(String healthPlan) {
+        this.healthPlan = healthPlan;
+    }
+
+    @Basic
+    @Column(name = "future_direction")
+    public String getFutureDirection() {
+        return futureDirection;
+    }
+
+    public void setFutureDirection(String futureDirection) {
+        this.futureDirection = futureDirection;
     }
 
     @Basic

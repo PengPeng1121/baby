@@ -35,6 +35,10 @@ public class HomeAction {
     private long numberOfResultBasic1;
     private long numberOfResultBasic2;
     private long numberOfResultQiZhi2020;
+    private long numberOfResultTooth;
+    private long numberOfResultFeed;
+    private long numberOfResultPlan;
+    private long numberOfResultBless;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -57,6 +61,10 @@ public class HomeAction {
     private Integer resultBasic1LeftTimes;
     private Integer resultBasic2LeftTimes;
     private Integer resultQiZhi2020LeftTimes;
+    private Integer resultToothLeftTimes;
+    private Integer resultFeedLeftTimes;
+    private Integer resultPlanLeftTimes;
+    private Integer resultBlessLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -87,6 +95,10 @@ public class HomeAction {
         numberOfResultBasic1 = ResultBasic1Manager.countResultByHosIdAndTestId(hoid,33);
         numberOfResultBasic2 = ResultBasic2Manager.countResultByHosIdAndTestId(hoid,34);
         numberOfResultQiZhi2020 = ResultQiZhi2020Manager.countResultByHosIdAndTestId(hoid,35);
+        numberOfResultTooth = ResultToothManager.countResultByHosIdAndTestId(hoid,36);
+        numberOfResultFeed = ResultFeedManager.countResultByHosIdAndTestId(hoid,37);
+        numberOfResultPlan = ResultPlanManager.countResultByHosIdAndTestId(hoid,38);
+        numberOfResultBless = ResultBlessManager.countResultByHosIdAndTestId(hoid,39);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -167,6 +179,18 @@ public class HomeAction {
                             break;
                         case 35:
                             resultQiZhiLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 36:
+                            resultToothLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 37:
+                            resultFeedLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 38:
+                            resultPlanLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 39:
+                            resultBlessLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -540,5 +564,69 @@ public class HomeAction {
 
     public void setResultQiZhi2020LeftTimes(Integer resultQiZhi2020LeftTimes) {
         this.resultQiZhi2020LeftTimes = resultQiZhi2020LeftTimes;
+    }
+
+    public long getNumberOfResultTooth() {
+        return numberOfResultTooth;
+    }
+
+    public void setNumberOfResultTooth(long numberOfResultTooth) {
+        this.numberOfResultTooth = numberOfResultTooth;
+    }
+
+    public Integer getResultToothLeftTimes() {
+        return resultToothLeftTimes;
+    }
+
+    public void setResultToothLeftTimes(Integer resultToothLeftTimes) {
+        this.resultToothLeftTimes = resultToothLeftTimes;
+    }
+
+    public long getNumberOfResultFeed() {
+        return numberOfResultFeed;
+    }
+
+    public void setNumberOfResultFeed(long numberOfResultFeed) {
+        this.numberOfResultFeed = numberOfResultFeed;
+    }
+
+    public Integer getResultFeedLeftTimes() {
+        return resultFeedLeftTimes;
+    }
+
+    public void setResultFeedLeftTimes(Integer resultFeedLeftTimes) {
+        this.resultFeedLeftTimes = resultFeedLeftTimes;
+    }
+
+    public long getNumberOfResultPlan() {
+        return numberOfResultPlan;
+    }
+
+    public void setNumberOfResultPlan(long numberOfResultPlan) {
+        this.numberOfResultPlan = numberOfResultPlan;
+    }
+
+    public long getNumberOfResultBless() {
+        return numberOfResultBless;
+    }
+
+    public void setNumberOfResultBless(long numberOfResultBless) {
+        this.numberOfResultBless = numberOfResultBless;
+    }
+
+    public Integer getResultPlanLeftTimes() {
+        return resultPlanLeftTimes;
+    }
+
+    public void setResultPlanLeftTimes(Integer resultPlanLeftTimes) {
+        this.resultPlanLeftTimes = resultPlanLeftTimes;
+    }
+
+    public Integer getResultBlessLeftTimes() {
+        return resultBlessLeftTimes;
+    }
+
+    public void setResultBlessLeftTimes(Integer resultBlessLeftTimes) {
+        this.resultBlessLeftTimes = resultBlessLeftTimes;
     }
 }

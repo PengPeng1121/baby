@@ -48,4 +48,5 @@
     <include file="account.xml" />
     <include file="admin.xml" />
     <include file="ajax_request.xml" />
+    <include file="head_img.xml" />
 </struts>

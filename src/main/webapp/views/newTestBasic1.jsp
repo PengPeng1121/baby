@@ -149,7 +149,7 @@
         formData.append("filename", file.name);
         formData.append("file", file);
         $.ajax({
-            url: "admin/uploadHeadImg",
+            url: "babyImg/uploadHeadImg",
             type: "POST",
             enctype: "multipart/form-data",
             data: formData,

@@ -147,7 +147,26 @@
             <result name="success" >views/newTestBasic2.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
-
+        <!--牙-->
+        <action name="newtestTooth" method="newTestTooth" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestTooth.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <!--喂养-->
+        <action name="newtestFeed" method="newTestFeed" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestFeed.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <!--计划-->
+        <action name="newtestPlan" method="newTestPlan" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestPlan.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <!--祝福-->
+        <action name="newtestBless" method="newTestBless" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBless.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
 
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
@@ -238,6 +257,16 @@
             <result name="success" >views/showresultQiZhi2020.jsp</result>
         </action>
 
+        <!--牙-->
+        <action name="showresultTooth" method="showResultTooth" class="com.free4lab.babycheckup.action.ResultToothAction">
+            <result name="success" >views/showresultTooth.jsp</result>
+        </action>
+
+        <!--喂养-->
+        <action name="showresultFeed" method="showResultFeed" class="com.free4lab.babycheckup.action.ResultFeedAction">
+            <result name="success" >views/showresultFeed.jsp</result>
+        </action>
+
         <!--儿童感受 -->
         <action name="showresultFeel" method="showResultFeel" class="com.free4lab.babycheckup.action.ResultFeelAction">
             <result name="success" >views/showresultFeel.jsp</result>
@@ -271,6 +300,16 @@
         <!--基础信息2 -->
         <action name="showresultBasic2" method="showResultBasic2" class="com.free4lab.babycheckup.action.ResultBasic2Action">
             <result name="success" >views/showresultBasic2.jsp</result>
+        </action>
+
+        <!--计划 -->
+        <action name="showresultPlan" method="showResultPlan" class="com.free4lab.babycheckup.action.ResultPlanAction">
+            <result name="success" >views/showresultPlan.jsp</result>
+        </action>
+
+        <!--祝福 -->
+        <action name="showresultBless" method="showResultBless" class="com.free4lab.babycheckup.action.ResultBlessAction">
+            <result name="success" >views/showresultBless.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -323,6 +362,22 @@
 
         <!--feel2020 评语-->
         <action name="saveRecordFeel2020" method="saveRecordFeel2020" class="com.free4lab.babycheckup.action.ResultFeel2020Action">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--气质2020 评语-->
+        <action name="saveRecordQiZhi2020" method="saveRecordQiZhi2020" class="com.free4lab.babycheckup.action.ResultQiZhi2020Action">
+            <result type="json" name="success">
+                <param name="includeProperties">resultRecord</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--喂养 评语-->
+        <action name="saveRecordFeed" method="saveRecordFeed" class="com.free4lab.babycheckup.action.ResultFeedAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultRecord</param>
             </result>
@@ -503,6 +558,38 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!-- 牙 -->
+        <action name="saveresultTooth" method="saveResultTooth" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultTooth,resultTooth.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 喂养 -->
+        <action name="saveresultFeed" method="saveResultFeed" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultFeed,resultFeed.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 计划 -->
+        <action name="saveresultPlan" method="saveResultPlan" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultPlan,resultPlan.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 祝福 -->
+        <action name="saveresultBless" method="saveResultBless" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBless,resultBless.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <action name="admin" method="indexAdmin" class="com.free4lab.babycheckup.action.AdminAction">
             <result name="success">views/index_admin.jsp</result>
         </action>
@@ -630,6 +717,21 @@
                 <param name="includeProperties">babyid,flag</param>
             </result>
         </action>
+
+        <!--是不是能进行 牙齿 测试-->
+        <action name="monthageTooth" method="testMonthageTooth" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
+        <!--是不是能进行 喂养 测试-->
+        <action name="monthageFeed" method="testMonthageFeed" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid,flag</param>
+            </result>
+        </action>
+
 
         <action name="findhospital" method="findHospital" class="com.free4lab.babycheckup.action.HospitalAction">
             <result type="json" name="success">

@@ -52,6 +52,10 @@ public class TestAction {
     private List<ResultBasic1> resultBasic1List = new ArrayList<ResultBasic1>();
     private List<ResultBasic2> resultBasic2List = new ArrayList<ResultBasic2>();
     private List<ResultQiZhi2020> resultQiZhi2020List = new ArrayList<ResultQiZhi2020>();
+    private List<ResultTooth> resultToothList = new ArrayList<ResultTooth>();
+    private List<ResultFeed> resultFeedList = new ArrayList<ResultFeed>();
+    private List<ResultPlan> resultPlanList = new ArrayList<ResultPlan>();
+    private List<ResultBless> resultBlessList = new ArrayList<ResultBless>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -77,6 +81,10 @@ public class TestAction {
     private ResultBasic1 resultBasic1;
     private ResultBasic2 resultBasic2;
     private ResultQiZhi2020 resultQiZhi2020;
+    private ResultTooth resultTooth;
+    private ResultFeed resultFeed;
+    private ResultBless resultBless;
+    private ResultPlan resultPlan;
     private String days;
     private int day;
     //早产天数
@@ -487,6 +495,52 @@ public class TestAction {
         return SUCCESS;
     }
 
+
+    // 牙
+    public String newTestTooth() {
+        testid = 36;
+        if(!canTest(testid)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 喂养
+    public String newTestFeed() {
+        testid = 37;
+        if(!canTest(testid)){
+            return "fail";
+        }
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+
+    // 定制计划
+    public String newTestPlan() {
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 祝福
+    public String newTestBless() {
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -511,6 +565,10 @@ public class TestAction {
         resultBasic1List = ResultBasic1Manager.findResultBybid(babyid);
         resultBasic2List = ResultBasic2Manager.findResultBybid(babyid);
         resultQiZhi2020List = ResultQiZhi2020Manager.findResultBybid(babyid);
+        resultToothList = ResultToothManager.findResultBybid(babyid);
+        resultFeedList = ResultFeedManager.findResultBybid(babyid);
+        resultPlanList = ResultPlanManager.findResultBybid(babyid);
+        resultBlessList = ResultBlessManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1281,6 +1339,78 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 牙
+    public String saveResultTooth(){
+        if(!subTestTimes(36)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultTooth.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultTooth.setUserId(userId);
+        resultTooth.setTestId(36);
+        resultTooth.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultTooth.setState("finished");
+        resultTooth.setUpdateTime(new Date());
+        resultTooth.setCreateTime(new Date());
+        resultTooth.setUpdateUser(userId.toString());
+        resultTooth.setCreateUser(userId.toString());
+        ResultToothManager.saveResult(resultTooth);
+        return SUCCESS;
+    }
+
+
+    // 喂养
+    public String saveResultFeed(){
+        if(!subTestTimes(37)){
+            return "fail";
+        }
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultFeed.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultFeed.setUserId(userId);
+        resultFeed.setTestId(37);
+        resultFeed.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultFeed.setState("finished");
+        resultFeed.setUpdateTime(new Date());
+        resultFeed.setCreateTime(new Date());
+        resultFeed.setUpdateUser(userId.toString());
+        resultFeed.setCreateUser(userId.toString());
+        ResultFeedManager.saveResult(resultFeed);
+        return SUCCESS;
+    }
+
+    // 定制计划
+    public String saveResultPlan(){
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultPlan.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultPlan.setUserId(userId);
+        resultPlan.setTestId(38);
+        resultPlan.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultPlan.setState("finished");
+        resultPlan.setUpdateTime(new Date());
+        resultPlan.setCreateTime(new Date());
+        resultPlan.setUpdateUser(userId.toString());
+        resultPlan.setCreateUser(userId.toString());
+        ResultPlanManager.saveResult(resultPlan);
+        return SUCCESS;
+    }
+
+    // 祝福
+    public String saveResultBless(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBless.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBless.setUserId(userId);
+        resultBless.setTestId(39);
+        resultBless.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBless.setState("finished");
+        resultBless.setUpdateTime(new Date());
+        resultBless.setCreateTime(new Date());
+        resultBless.setUpdateUser(userId.toString());
+        resultBless.setCreateUser(userId.toString());
+        ResultBlessManager.saveResult(resultBless);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -1799,5 +1929,69 @@ public class TestAction {
 
     public void setResultQiZhi2020(ResultQiZhi2020 resultQiZhi2020) {
         this.resultQiZhi2020 = resultQiZhi2020;
+    }
+
+    public List<ResultTooth> getResultToothList() {
+        return resultToothList;
+    }
+
+    public void setResultToothList(List<ResultTooth> resultToothList) {
+        this.resultToothList = resultToothList;
+    }
+
+    public ResultTooth getResultTooth() {
+        return resultTooth;
+    }
+
+    public void setResultTooth(ResultTooth resultTooth) {
+        this.resultTooth = resultTooth;
+    }
+
+    public List<ResultFeed> getResultFeedList() {
+        return resultFeedList;
+    }
+
+    public void setResultFeedList(List<ResultFeed> resultFeedList) {
+        this.resultFeedList = resultFeedList;
+    }
+
+    public ResultFeed getResultFeed() {
+        return resultFeed;
+    }
+
+    public void setResultFeed(ResultFeed resultFeed) {
+        this.resultFeed = resultFeed;
+    }
+
+    public List<ResultPlan> getResultPlanList() {
+        return resultPlanList;
+    }
+
+    public void setResultPlanList(List<ResultPlan> resultPlanList) {
+        this.resultPlanList = resultPlanList;
+    }
+
+    public List<ResultBless> getResultBlessList() {
+        return resultBlessList;
+    }
+
+    public void setResultBlessList(List<ResultBless> resultBlessList) {
+        this.resultBlessList = resultBlessList;
+    }
+
+    public ResultBless getResultBless() {
+        return resultBless;
+    }
+
+    public void setResultBless(ResultBless resultBless) {
+        this.resultBless = resultBless;
+    }
+
+    public ResultPlan getResultPlan() {
+        return resultPlan;
+    }
+
+    public void setResultPlan(ResultPlan resultPlan) {
+        this.resultPlan = resultPlan;
     }
 }

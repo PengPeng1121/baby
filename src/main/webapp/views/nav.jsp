@@ -10,7 +10,7 @@
             <div class="nav-brand">
                 <a href="home" style="color:#fff;font-size: 20px">
                     儿童发育评测平台
-                    <!-- <img class="img-responsive" src="http://47.94.16.189/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/> -->
+                    <!-- <img class="img-responsive" src="http://47.94.202.106/image/<s:property value="#session.logo"/>" alt="Babycheckup" onerror="this.src='statics/img/logo.png'" style="height: 30px;width: 250px;"/> -->
                 </a>
             </div>
         </div>

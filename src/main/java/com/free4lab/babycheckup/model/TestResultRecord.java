@@ -84,7 +84,7 @@ public class TestResultRecord {
     }
 
     @Basic
-    @Column(name = "tester_name", nullable = false)
+    @Column(name = "tester_name")
     public String getTesterName() {
         return testerName;
     }

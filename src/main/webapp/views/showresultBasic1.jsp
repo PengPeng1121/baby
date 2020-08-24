@@ -74,7 +74,7 @@
         <input id="nickName" type="hidden" value="<s:property value="resultBasic1.nickName"/>">
         <input id="address" type="hidden" value="<s:property value="resultBasic1.address"/>">
         <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.contactMobile"/>">
-        <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
+        <input id="headImgUrl" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
