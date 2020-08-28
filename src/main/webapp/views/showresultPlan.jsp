@@ -175,7 +175,7 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg9Boy.jpg">
 
                     <table style="width: 50%;
                         border: 0;
@@ -222,7 +222,7 @@
                         </tr>
                     </table>
 
-                    <p class="title-boy" id="title-3">医生的祝愿:</p>
+                    <p class="title-boy" id="title-3">健康规划:</p>
                     <table class="content" id="table-3">
                         <tr>
                             <td>
@@ -243,7 +243,7 @@
 
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg9Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg9Girl.jpg">
 
                     <table style="width: 50%;
                         border: 0;

@@ -87,7 +87,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 590px !important;
+            top: 600px !important;
         }
         #table-main2{
             border: 0px !important;
@@ -95,7 +95,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 680px !important;
+            top: 700px !important;
         }
         #table-main3{
             border: 0px !important;
@@ -103,7 +103,7 @@
             width: 85% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 790px !important;
+            top: 820px !important;
         }
 
 
@@ -169,14 +169,14 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg7Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg7Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Girl.jpg">
                     </s:if>
 
 
-                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 360px;top: 280px;">
+                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 280px;">
                         <tbody style="width: 100%">
                             <tr class="item-line">
                                 <td>
@@ -225,13 +225,13 @@
                                         生产胎龄:
                                     </span>
                                     <span style="margin-left: 60px">
-                                        <s:property value="resultBasic2.babyBirthWeekAge"/> 周 (正常为38-42周)
+                                        <s:property value="resultBasic2.babyBirthWeekAge"/> 
                                     </span>
                                     <span style="margin-left: 160px">
                                         宝贝出生体重:   
                                     </span>
                                     <span>
-                                        <s:property value="resultBasic2.babyBirthWeight"/> KG
+                                        <s:property value="resultBasic2.babyBirthWeight"/>      g
                                     </span>
 
                                 </td>
@@ -268,11 +268,28 @@
                                     </span>
                                 </td>
                             </tr>
+                            <tr class="item-line">
+                                <td>
+                                    <span>
+                                        父亲身高:
+                                    </span>
+                                    <span>
+                                        <s:property value="resultBasic2.fatherHeight"/> cm
+                                    </span>
+                                    <span style="margin-left: 220px">
+                                        母亲身高:
+                                    </span>
+                                    <span>
+                                        <s:property value="resultBasic2.motherHeight"/> cm
+                                    </span>
+                                </td>
+                               
+                            </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 660px;left: 360px;">
+                    <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 660px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
+                            <tr class="item-line">
                                 <td style="border:0px;width: 200px">
                                     有无重大疾病或发生意外情况:
                                 </td>
@@ -282,7 +299,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 750px;left: 360px;">
+                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td colspan="4">
@@ -323,7 +340,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 860px;left: 360px;">
+                    <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 890px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 510px">
@@ -391,10 +408,10 @@
                                     <label for="radio-answer-9-0" style="width: 50px;margin-left: 20px;font-weight: normal;"> 否</label>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="item-line">
                                 <td>
                                     <span> 过敏情况: </span>
-                                    <span style="border-bottom: 1px #df9390 solid;"> <s:property value="resultBasic2.allergySituation"/>  </span>
+                                    <span > <s:property value="resultBasic2.allergySituation"/>  </span>
                                 </td>
                             </tr>
                         </tbody>
@@ -444,7 +461,7 @@
     }
 
     // 多选框赋值
-    // $("input:checkbox[name='childbirthSituation'][value='1']").attr('checked','true');
+    $("input:checkbox[name='childbirthSituation'][value='1']").attr('checked','true');
     
     $('.print').click(function(){
         window.print();

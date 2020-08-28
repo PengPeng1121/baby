@@ -15,6 +15,12 @@
             background-color: transparent;
             /*width: 800px;*/
         }
+        #name-text{
+            display: inline-block;
+            border-bottom: 1px solid #df938f;
+            margin-left: 20px;
+            width: 160px;
+        }
         body, table, tbody, tr, td {
             background-color: transparent;
         }
@@ -96,6 +102,13 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
+
+        #name-text{
+            display: inline-block !important;
+            border-bottom: 1px solid #df938f !important;
+            margin-left: 10px !important;
+            width: 160px !important;
+        }
         
 
         input[type="radio"] {
@@ -135,10 +148,11 @@
         
 
         #name-table{
+            width: 300px !important;
             position: absolute !important;
             left: 60px !important;
             top: 135px !important;
-            width: 23% !important;
+            
             font-size: 16px !important;
         }
         #table-main{
@@ -190,19 +204,21 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg6Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg6Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg6Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg6Girl.jpg">
                     </s:if>
                     <table id="name-table">
                         <tr>
 
-                            <td class="col-md-4" style="font-weight: bold;">
+                            <td class="col-md-12" style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
+                                <div id="name-text">
+                                    <s:property value="baby.name"/>
+                                </div>
                             </td>
-                            <td class="col-md-8" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
 
                         </tr>
                     </table>
@@ -305,7 +321,7 @@
                                     <label style="font-weight: normal;margin-left: 40px"> 泥糊带小颗粒</label>
                                     <input type="checkbox" name="accessoryFoodShape"  value="2" style="">
                                     <label style="font-weight: normal;margin-left: 40px"> 小丁块</label>
-                                    <input type="checkbox" name="accessoryFoodShape"  value="2" style="">
+                                    <input type="checkbox" name="accessoryFoodShape"  value="3" style="">
                                     <label style="font-weight: normal;margin-left: 40px"> 大丁块</label>
                                     
                                 </td>
@@ -318,7 +334,7 @@
                                         辅食添加时间:
                                     </span>
                                     <span style="margin-left: 60px">
-                                        <s:property value="resultFeed.accessoryFoodAddTimes"/> 周 (正常为38-42周)
+                                        <s:property value="resultFeed.accessoryFoodAddTimes"/> 
                                     </span>
                                 </td>
                             </tr>

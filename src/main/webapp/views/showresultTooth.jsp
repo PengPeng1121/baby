@@ -27,6 +27,12 @@
             left: 70px;
             font-size: 16px;
         }
+        #name-text{
+            display: inline-block;
+            border-bottom: 1px solid #df938f;
+            margin-left: 20px;
+            width: 160px;
+        }
         #content-table{
             width: 450px;
             height: 120px;
@@ -171,12 +177,18 @@
             margin: 0px !important;
         }
         #name-table {
-            width: 25% !important;
+            width: 300px !important;
             border: 0 !important;
             position: relative !important;
             top: 120px !important;
             left: 70px !important;
             font-size: 16px !important;
+        }
+        #name-text{
+            display: inline-block !important;
+            border-bottom: 1px solid #df938f !important;
+            margin-left: 10px !important;
+            width: 160px !important;
         }
         #content-table{
             width: 450px !important;
@@ -365,20 +377,23 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg8Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg8Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Girl.jpg">
                     </s:if>
 
                     <table id="name-table">
                         <tr>
 
-                            <td class="col-md-2" style="font-weight: bold;">
+                            <td class="col-md-12" style="font-weight: bold;">
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
+                                <div id="name-text">
+                                    <s:property value="baby.name"/>
+                                </div>
                             </td>
-                            <td class="col-md-3" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
+                            
 
                         </tr>
                     </table>

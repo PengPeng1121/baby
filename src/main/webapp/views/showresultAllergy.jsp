@@ -59,6 +59,12 @@
         li{
            padding-bottom: 10px;
         }
+        #name-text{
+            display: inline-block;
+            border-bottom: 1px solid #df938f;
+            margin-left: 20px;
+            width: 160px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -97,6 +103,16 @@
             background-color: #000 !important;
             box-shadow: inset 0 0 0 3px #fff !important;
         }
+        #name-text{
+            display: inline-block !important;
+            border-bottom: 1px solid #df938f !important;
+            margin-left: 10px !important;
+            width: 160px !important;
+        }
+
+        #name-table{
+            width: 300px !important;
+        }
 
     </style>
 </head>
@@ -133,24 +149,28 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg3Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg3Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg3Girl.jpg"">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg3Girl.jpg"">
                     </s:if>
 
-                    <table style="width: 20%;
+                    <table style="width: 25%;
                         border: 0;
                         position: relative;
                         top: 120px;
                         left: 50px;
-                        font-size: 16px">
+                        font-size: 16px"
+                        id="name-table">
                         <tr>
-                            <td class="col-md-5" style="font-weight: bold;">
+                            <td class="col-md-12" style="font-weight: bold;">
                                 <span style="letter-spacing: 18px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
+                                <div id="name-text">
+                                    <s:property value="baby.name"/>
+                                </div>
                             </td>
-                            <td class="col-md-7" style="border-bottom: 1px solid #df938f;padding-left: 0px"><s:property value="baby.name"/></td>
+                            
                         </tr>
                     </table>
 
@@ -160,7 +180,7 @@
                                 眼圈发紫或指尖发白
                             </td>
                             <td style="width: 40px">
-                                <input type="radio" name="answer-1" value="1" checked  id="radio-answer-1-1">
+                                <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1">
                                 <label for="radio-answer-1-1">有</label>
                             </td>
                             <td style="width: 40px">
@@ -173,7 +193,7 @@
                                 头发稀疏偏黄，头两侧缺少头发
                             </td>
                             <td>
-                                <input type="radio" name="answer-2" value="1" checked  id="radio-answer-2-1">
+                                <input type="radio" name="answer-2" value="1"   id="radio-answer-2-1">
                                 <label for="radio-answer-2-1">有</label>
                             </td>
                             <td>
@@ -186,7 +206,7 @@
                                 有荨麻疹、慢性湿疹、口水疹、尿布疹病史
                             </td>
                             <td>
-                                <input type="radio" name="answer-3" value="1" checked  id="radio-answer-3-1">
+                                <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1">
                                 <label for="radio-answer-3-1">有</label>
                             </td>
                             <td>
@@ -199,7 +219,7 @@
                                 皮肤爱红、爱痒
                             </td>
                             <td>
-                                <input type="radio" name="answer-4" value="1" checked  id="radio-answer-4-1">
+                                <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1">
                                 <label for="radio-answer-4-1">有</label>
                             </td>
                             <td>
@@ -212,7 +232,7 @@
                                 喜欢揉鼻子、揉眼睛、挠耳朵
                             </td>
                             <td>
-                                <input type="radio" name="answer-5" value="1" checked id="radio-answer-5-1">
+                                <input type="radio" name="answer-5" value="1"  id="radio-answer-5-1">
                                 <label for="radio-answer-5-1">有</label>
                             </td>
                             <td>
@@ -225,7 +245,7 @@
                                 排便异常，腹泻、便秘、便血
                             </td>
                             <td>
-                                <input type="radio" name="answer-6" value="1" checked id="radio-answer-6-1">
+                                <input type="radio" name="answer-6" value="1"  id="radio-answer-6-1">
                                 <label for="radio-answer-6-1">有</label>
                             </td>
                             <td>
@@ -238,7 +258,7 @@
                                 睡眠差，俯卧睡，经常腹痛
                             </td>
                             <td>
-                                <input type="radio" name="answer-7" value="1" checked id="radio-answer-7-1">
+                                <input type="radio" name="answer-7" value="1"  id="radio-answer-7-1">
                                 <label for="radio-answer-7-1">有</label>
                             </td>
                             <td>
@@ -251,7 +271,7 @@
                                 无原因的反复咳嗽、流涕、打喷嚏、喘息
                             </td>
                             <td>
-                                <input type="radio" name="answer-8" value="1" checked id="radio-answer-8-1" >
+                                <input type="radio" name="answer-8" value="1"  id="radio-answer-8-1" >
                                 <label for="radio-answer-8-1">有</label>
                             </td>
                             <td>
@@ -264,7 +284,7 @@
                                 偶有吐奶、厌奶、吃完食物出现呕吐及腹泻
                             </td>
                             <td>
-                                <input type="radio" name="answer-9" value="1" checked id="radio-answer-9-1" >
+                                <input type="radio" name="answer-9" value="1"  id="radio-answer-9-1" >
                                 <label for="radio-answer-9-1">有</label>
                             </td>
                             <td>
@@ -277,7 +297,7 @@
                                 一段时间内体重不增，或体重异常增加
                             </td>
                             <td>
-                                <input type="radio" name="answer-10" value="1" checked id="radio-answer-10-1" >
+                                <input type="radio" name="answer-10" value="1"  id="radio-answer-10-1" >
                                 <label for="radio-answer-10-1">有</label>
                             </td>
                             <td>
@@ -290,7 +310,7 @@
                                 身高体重增长缓慢
                             </td>
                             <td>
-                                <input type="radio" name="answer-11" value="1" checked  id="radio-answer-11-1" >
+                                <input type="radio" name="answer-11" value="1"   id="radio-answer-11-1" >
                                 <label for="radio-answer-11-1">有</label>
                             </td>
                             <td>
@@ -303,7 +323,7 @@
                                 食欲差，积食，厌食厌奶
                             </td>
                             <td>
-                                <input type="radio" name="answer-12" value="1" checked id="radio-answer-12-1">
+                                <input type="radio" name="answer-12" value="1"  id="radio-answer-12-1">
                                 <label for="radio-answer-12-1">有</label>
                             </td>
                             <td>
@@ -316,7 +336,7 @@
                                 两种以上微量元素缺乏
                             </td>
                             <td>
-                                <input type="radio" name="answer-13" value="1" checked  id="radio-answer-13-1">
+                                <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1">
                                 <label for="radio-answer-13-1">有</label>
                             </td>
                             <td>
@@ -329,7 +349,7 @@
                                 反复呼吸道感染
                             </td>
                             <td>
-                                <input type="radio" name="answer-14" value="1" checked id="radio-answer-14-1">
+                                <input type="radio" name="answer-14" value="1"  id="radio-answer-14-1">
                                 <label for="radio-answer-14-1">有</label>
                             </td>
                             <td>
@@ -342,7 +362,7 @@
                                 嗓子呼噜声
                             </td>
                             <td>
-                                <input type="radio" name="answer-15" value="1" checked id="radio-answer-15-1" >
+                                <input type="radio" name="answer-15" value="1"  id="radio-answer-15-1" >
                                 <label for="radio-answer-15-1">有</label>        
                             </td>
                             <td>

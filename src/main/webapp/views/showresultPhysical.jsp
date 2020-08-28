@@ -162,10 +162,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg4Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg4Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 800px;position: absolute;z-index: -1;height: 1080px;" src="statics/img/hemaBg4Girl.jpg"">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg4Girl.jpg"">
                     </s:if>
 
                     <table style="width: 35%;
@@ -189,7 +189,7 @@
                                 毛发
                             </td>
                             <td style="width: 85px">
-                                <input type="radio" name="answer-1" value="1" checked  id="radio-answer-1-1">
+                                <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1">
                                 <label for="radio-answer-1-1">正常</label>
                             </td>
                             <td style="width: 75px">
@@ -205,7 +205,7 @@
                                 指甲
                             </td>
                             <td>
-                                <input type="radio" name="answer-2" value="1" checked  id="radio-answer-2-1">
+                                <input type="radio" name="answer-2" value="1"   id="radio-answer-2-1">
                                 <label for="radio-answer-2-1">正常</label>
                             </td>
                             <td>
@@ -221,7 +221,7 @@
                                 皮肤
                             </td>
                             <td>
-                                <input type="radio" name="answer-3" value="1" checked  id="radio-answer-3-1">
+                                <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1">
                                 <label for="radio-answer-3-1">正常</label>
                             </td>
                             <td>
@@ -237,7 +237,7 @@
                                 面色
                             </td>
                             <td>
-                                <input type="radio" name="answer-4" value="1" checked  id="radio-answer-4-1">
+                                <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1">
                                 <label for="radio-answer-4-1">正常</label>
                             </td>
                             <td>
@@ -253,7 +253,7 @@
                                 头部
                             </td>
                             <td>
-                                <input type="radio" name="answer-5" value="1" checked id="radio-answer-5-1">
+                                <input type="radio" name="answer-5" value="1"  id="radio-answer-5-1">
                                 <label for="radio-answer-5-1">正常</label>
                             </td>
                             <td>
@@ -269,7 +269,7 @@
                                 眼
                             </td>
                             <td>
-                                <input type="radio" name="answer-6" value="1" checked id="radio-answer-6-1">
+                                <input type="radio" name="answer-6" value="1"  id="radio-answer-6-1">
                                 <label for="radio-answer-6-1">正常</label>
                             </td>
                             <td>
@@ -285,7 +285,7 @@
                                 耳
                             </td>
                             <td>
-                                <input type="radio" name="answer-7" value="1" checked id="radio-answer-7-1">
+                                <input type="radio" name="answer-7" value="1"  id="radio-answer-7-1">
                                 <label for="radio-answer-7-1">正常</label>
                             </td>
                             <td>
@@ -301,7 +301,7 @@
                                 口腔
                             </td>
                             <td>
-                                <input type="radio" name="answer-8" value="1" checked id="radio-answer-8-1" >
+                                <input type="radio" name="answer-8" value="1"  id="radio-answer-8-1" >
                                 <label for="radio-answer-8-1">正常</label>
                             </td>
                             <td>
@@ -317,7 +317,7 @@
                                 颈部
                             </td>
                             <td>
-                                <input type="radio" name="answer-9" value="1" checked id="radio-answer-9-1" >
+                                <input type="radio" name="answer-9" value="1"  id="radio-answer-9-1" >
                                 <label for="radio-answer-9-1">正常</label>
                             </td>
                             <td>
@@ -333,7 +333,7 @@
                                 淋巴结
                             </td>
                             <td>
-                                <input type="radio" name="answer-10" value="1" checked id="radio-answer-10-1" >
+                                <input type="radio" name="answer-10" value="1"  id="radio-answer-10-1" >
                                 <label for="radio-answer-10-1">正常</label>
                             </td>
                             <td>
@@ -349,7 +349,7 @@
                                 胸廓
                             </td>
                             <td>
-                                <input type="radio" name="answer-11" value="1" checked  id="radio-answer-11-1" >
+                                <input type="radio" name="answer-11" value="1"   id="radio-answer-11-1" >
                                 <label for="radio-answer-11-1">正常</label>
                             </td>
                             <td>
@@ -365,7 +365,7 @@
                                 心脏
                             </td>
                             <td>
-                                <input type="radio" name="answer-12" value="1" checked id="radio-answer-12-1">
+                                <input type="radio" name="answer-12" value="1"  id="radio-answer-12-1">
                                 <label for="radio-answer-12-1">正常</label>
                             </td>
                             <td>
@@ -381,7 +381,7 @@
                                 肺
                             </td>
                             <td>
-                                <input type="radio" name="answer-13" value="1" checked  id="radio-answer-13-1">
+                                <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1">
                                 <label for="radio-answer-13-1">正常</label>
                             </td>
                             <td>
@@ -397,7 +397,7 @@
                                 腹
                             </td>
                             <td>
-                                <input type="radio" name="answer-14" value="1" checked id="radio-answer-14-1">
+                                <input type="radio" name="answer-14" value="1"  id="radio-answer-14-1">
                                 <label for="radio-answer-14-1">正常</label>
                             </td>
                             <td>
@@ -413,7 +413,7 @@
                                 四肢
                             </td>
                             <td>
-                                <input type="radio" name="answer-15" value="1" checked id="radio-answer-15-1" >
+                                <input type="radio" name="answer-15" value="1"  id="radio-answer-15-1" >
                                 <label for="radio-answer-15-1">正常</label>        
                             </td>
                             <td>
@@ -429,7 +429,7 @@
                                 肛门/外生殖器
                             </td>
                             <td>
-                                <input type="radio" name="answer-16" value="1" checked id="radio-answer-16-1"  >
+                                <input type="radio" name="answer-16" value="1"  id="radio-answer-16-1"  >
                                 <label for="radio-answer-16-1">正常</label>
                             </td>
                             <td>
