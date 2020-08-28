@@ -322,6 +322,66 @@
                     </div>
                 </div>
 
+
+
+                                <!-- 感觉统合2020 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">感觉统合测验2020</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFeel2020"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultFeel2020LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=28" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--河马 气质 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">气质测验2020</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultQiZhi2020"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultQiZhi2020LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=35" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- 比内 -->
                 <!-- <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
@@ -382,139 +442,6 @@
                     </div>
                 </div>
                 </s:if> -->
-
-
-
-                <!-- 生长发育(河马) -->
-                <s:if test="resultGroup2020LeftTimes != 0">
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">生长发育测验2020</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultGroup2020"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultGroup2020LeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=29" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                </s:if>
-
-
-                <!-- 体格头面检查(河马) -->
-                <s:if test="resultPhysicalLeftTimes != 0">
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">体格头面检查</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultPhysical"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultPhysicalLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=30" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                </s:if>
-
-
-
-
-                <!-- 总评(河马) -->
-                <s:if test="resultSummaryLeftTimes != 0">
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">总评</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultSummary"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultSummaryLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=31" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                </s:if>
-
-
-                <!-- 过敏(河马) -->
-                <s:if test="resultAllergyLeftTimes != 0">
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">食物过敏或不耐受风险评估</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultAllergy"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultAllergyLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=32" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                </s:if>
-                
-
 
 
                 <!-- 基础1(河马) -->
@@ -583,6 +510,258 @@
                 </div>
                 </s:if>
 
+                <!-- 过敏(河马) -->
+                <s:if test="resultAllergyLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">食物过敏或不耐受风险评估</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultAllergy"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultAllergyLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=32" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+
+
+                <!-- 生长发育(河马) -->
+                <s:if test="resultGroup2020LeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">生长发育测验2020</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultGroup2020"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultGroup2020LeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=29" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                <!-- 体格头面检查(河马) -->
+                <s:if test="resultPhysicalLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">体格头面检查</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultPhysical"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultPhysicalLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=30" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                <!-- 营养与喂养 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">营养与喂养</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFeed"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultFeedLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=37" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 牙齿 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">牙齿</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTooth"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultToothLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=36" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 定制化方案 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">定制化方案</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultPlan"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultPlanLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=38" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 祝福 -->
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">祝福</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBless"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBlessLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=39" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 总评(河马) -->
+                <s:if test="resultSummaryLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">总评</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultSummary"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultSummaryLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=31" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                
+                
+
+
+
+                
+
 
                 <!-- 气质 -->
                 <!-- <div class="col-md-3">
@@ -613,34 +792,7 @@
                     </div>
                 </div> -->
 
-                <!--河马 气质 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">气质测验2020</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultQiZhi2020"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultQiZhi2020LeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=35" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                
 
 
                 <!-- 感觉统合 -->
@@ -672,146 +824,18 @@
 
 
 
-                <!-- 感觉统合2020 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">感觉统合测验2020</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFeel2020"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultFeel2020LeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=28" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
-                <!-- 牙齿 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">牙齿</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTooth"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultToothLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=36" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 营养与喂养 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">营养与喂养</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFeed"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultFeedLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=37" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+
+                
 
 
                 
 
 
-                <!-- 祝福 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">祝福</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBless"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultBlessLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=39" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-
-                <!-- 定制化方案 -->
-                <div class="col-md-3">
-                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
-                        <div class="panel-body">
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">定制化方案</p>
-                                    <div class="as-desc">
-                                        <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultPlan"/></label>
-                                            <label style="font-weight:normal;">个</label>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <s:if test="resultPlanLeftTimes == 0">
-                                            <span>请购买</span>
-                                        </s:if>
-                                        <s:else>
-                                            <a href="record?testId=38" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
-                                        </s:else>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 
