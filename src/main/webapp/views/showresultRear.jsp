@@ -96,8 +96,8 @@
                     <table style="width: 55%;
                         border: 0;
                         position: relative;
-                        top: 120px;
-                        left: 70px;
+                        top: 133px;
+                        left: 80px;
                         font-size: 16px"
                         id="name-table">
                         <tr>
