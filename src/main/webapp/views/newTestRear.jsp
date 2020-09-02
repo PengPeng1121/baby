@@ -102,7 +102,7 @@
 
     
 
-    $('#summaryDate').cxCalendar();
+    $('#rearDate').cxCalendar();
     
     function save() {
         
@@ -117,14 +117,14 @@
 
     function score() {
         var rearDate = $("#rearDate").val().trim();
-        var remark = $('#remark').val();
+        var rearContent = $('#remark').val();
         var data = "{";
         data += "'resultRear.babyId':" + $("#babyid").val();
         data += "}";
         
         data = eval('(' + data + ')');
-        data['resultRear.rearDate'] = summaryDate;
-        data['resultRear.remark'] = remark;
+        data['resultRear.rearDate'] = rearDate;
+        data['resultRear.rearContent'] = rearContent;
         $.ajax({
             url: 'saveresultRear',
             type: 'post',

@@ -79,7 +79,7 @@
 
         <input id="babyid" type="hidden" value="<s:property value="resultRear.babyid"/>">
         <input id="resultid" type="hidden" value="<s:property value="resultRear.id"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultRear.remark"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultRear.rearContent"/>">
         <input id="days" type="hidden" value="<s:property value="days"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         
@@ -137,7 +137,7 @@
                         font-weight: bold;
                         font-size: 16px;
                     ">
-                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
+                        <s:date name="resultRear.rearDate" format="yyyy-MM-dd"/>
                     </p>
                 </div>
             </div>

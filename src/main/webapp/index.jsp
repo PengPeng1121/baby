@@ -755,7 +755,7 @@
                 </s:if>
 
 
-                <!-- 总评(河马) -->
+                <!-- 养育风格指导(河马) -->
                 <s:if test="resultRearLeftTimes != 0">
                 <div class="col-md-3">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
