@@ -87,10 +87,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Boy.jpg">
+                    <img style="width: 824px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Girl.jpg">
+                    <img style="width: 824px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Girl.jpg">
                     </s:if>
 
                     <table style="width: 55%;
