@@ -147,8 +147,8 @@
         <div class="panel panel-default front-panel" id="advice">
             <div class="panel-heading" style="text-align: center;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark" rows="20" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
-                <textarea id="doctorRemarkText" rows="20" style="resize:none;border: 0;width: 100%;height: 100%;display: none;"></textarea>
+                <textarea id="doctorRemark" rows="24" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemarkText" rows="24" style="resize:none;border: 0;width: 100%;height: 100%;display: none;"></textarea>
             </div>
         </div>
 

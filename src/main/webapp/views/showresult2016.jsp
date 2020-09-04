@@ -321,7 +321,7 @@
                 title: {
                     text: '发育商'
                 },
-                min: 60,
+                min: 30,
                 max: 200,
                 labels: {
                     useHTML: true,
@@ -348,7 +348,7 @@
                         }
                     }
                 },
-                tickPositions: [50, 70, 80, 110, 130, 180],
+                tickPositions: [0, 70, 80, 110, 130, 180],
                 opposite: true
             }],
             tooltip: {
