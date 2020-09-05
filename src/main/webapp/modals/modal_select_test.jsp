@@ -140,6 +140,11 @@
                     style="color: white;font-size: small">养育风格指导</h4></a>
         </div>
 
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Eye()"><h4
+                    style="color: white;font-size: small">视力</h4></a>
+        </div>
+
     </div>
 </div>
 <script>
@@ -646,6 +651,26 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestRear?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_Eye() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestEye?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
