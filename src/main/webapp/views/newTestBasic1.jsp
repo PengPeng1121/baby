@@ -148,6 +148,8 @@
         var file = fileDom.files[0]; 
         formData.append("filename", file.name);
         formData.append("file", file);
+        formData.append("testId", 33);
+        formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadHeadImg",
             type: "POST",
@@ -158,7 +160,7 @@
             dataType: "json",
             success: function (json) {
                 console.log('上传成功');
-                $('#imgUrl').val('123');
+                $('#imgUrl').val(json.headImgUrl);
             }
         });
     }

@@ -31,7 +31,7 @@
             margin-left: 10px;
         }
         #faceImg{
-            width: 120px;
+            width: 150px;
             position: absolute;
             z-index: 1;
             top: 290px;
@@ -55,7 +55,7 @@
             background-color: transparent;
         }
         #faceImg{
-            width: 120px !important;
+            width: 150px !important;
             position: absolute !important;
             z-index: 1 !important;
             top: 220px !important;
