@@ -1,10 +1,7 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.manager.*;
-import com.free4lab.babycheckup.model.HospitalTestConfig;
-import com.free4lab.babycheckup.model.HospitalTestTimes;
-import com.free4lab.babycheckup.model.ResultAllergy;
-import com.free4lab.babycheckup.model.ResultBasic1;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.util.CollectionUtils;
 
@@ -39,6 +36,8 @@ public class HomeAction {
     private long numberOfResultFeed;
     private long numberOfResultPlan;
     private long numberOfResultBless;
+    private long numberOfResultRear;
+    private long numberOfResultEye;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -65,6 +64,8 @@ public class HomeAction {
     private Integer resultFeedLeftTimes;
     private Integer resultPlanLeftTimes;
     private Integer resultBlessLeftTimes;
+    private Integer resultRearLeftTimes;
+    private Integer resultEyeLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -99,6 +100,8 @@ public class HomeAction {
         numberOfResultFeed = ResultFeedManager.countResultByHosIdAndTestId(hoid,37);
         numberOfResultPlan = ResultPlanManager.countResultByHosIdAndTestId(hoid,38);
         numberOfResultBless = ResultBlessManager.countResultByHosIdAndTestId(hoid,39);
+        numberOfResultRear = ResultRearManager.countResultByHosIdAndTestId(hoid,40);
+        numberOfResultEye = ResultEyeManager.countResultByHosIdAndTestId(hoid,41);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -191,6 +194,12 @@ public class HomeAction {
                             break;
                         case 39:
                             resultBlessLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 40:
+                            resultRearLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 41:
+                            resultEyeLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -628,5 +637,37 @@ public class HomeAction {
 
     public void setResultBlessLeftTimes(Integer resultBlessLeftTimes) {
         this.resultBlessLeftTimes = resultBlessLeftTimes;
+    }
+
+    public long getNumberOfResultRear() {
+        return numberOfResultRear;
+    }
+
+    public void setNumberOfResultRear(long numberOfResultRear) {
+        this.numberOfResultRear = numberOfResultRear;
+    }
+
+    public Integer getResultRearLeftTimes() {
+        return resultRearLeftTimes;
+    }
+
+    public void setResultRearLeftTimes(Integer resultRearLeftTimes) {
+        this.resultRearLeftTimes = resultRearLeftTimes;
+    }
+
+    public long getNumberOfResultEye() {
+        return numberOfResultEye;
+    }
+
+    public void setNumberOfResultEye(long numberOfResultEye) {
+        this.numberOfResultEye = numberOfResultEye;
+    }
+
+    public Integer getResultEyeLeftTimes() {
+        return resultEyeLeftTimes;
+    }
+
+    public void setResultEyeLeftTimes(Integer resultEyeLeftTimes) {
+        this.resultEyeLeftTimes = resultEyeLeftTimes;
     }
 }

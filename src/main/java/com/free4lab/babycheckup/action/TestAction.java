@@ -56,6 +56,8 @@ public class TestAction {
     private List<ResultFeed> resultFeedList = new ArrayList<ResultFeed>();
     private List<ResultPlan> resultPlanList = new ArrayList<ResultPlan>();
     private List<ResultBless> resultBlessList = new ArrayList<ResultBless>();
+    private List<ResultRear> resultRearList = new ArrayList<ResultRear>();
+    private List<ResultEye> resultEyeList = new ArrayList<ResultEye>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -85,6 +87,8 @@ public class TestAction {
     private ResultFeed resultFeed;
     private ResultBless resultBless;
     private ResultPlan resultPlan;
+    private ResultRear resultRear;
+    private ResultEye resultEye;
     private String days;
     private int day;
     //早产天数
@@ -541,6 +545,25 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 养育指导
+    public String newTestRear() {
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+
+    // 视力筛查
+    public String newTestEye() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -569,6 +592,8 @@ public class TestAction {
         resultFeedList = ResultFeedManager.findResultBybid(babyid);
         resultPlanList = ResultPlanManager.findResultBybid(babyid);
         resultBlessList = ResultBlessManager.findResultBybid(babyid);
+        resultRearList = ResultRearManager.findResultBybid(babyid);
+        resultEyeList = ResultEyeManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1411,6 +1436,41 @@ public class TestAction {
         return SUCCESS;
     }
 
+
+    // 养育指导
+    public String saveResultRear(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultRear.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultRear.setUserId(userId);
+        resultRear.setTestId(40);
+        resultRear.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultRear.setState("finished");
+        resultRear.setUpdateTime(new Date());
+        resultRear.setCreateTime(new Date());
+        resultRear.setUpdateUser(userId.toString());
+        resultRear.setCreateUser(userId.toString());
+        ResultRearManager.saveResult(resultRear);
+        return SUCCESS;
+    }
+
+    // 视力筛查
+    public String saveResultEye(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultEye.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultEye.setUserId(userId);
+        resultEye.setTestId(41);
+        resultEye.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultEye.setState("finished");
+        resultEye.setCreateTime(new Date());
+        resultEye.setUpdateTime(new Date());
+        resultEye.setCreateUser(userId.toString());
+        resultEye.setUpdateUser(userId.toString());
+        ResultEyeManager.saveResult(resultEye);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -1993,5 +2053,37 @@ public class TestAction {
 
     public void setResultPlan(ResultPlan resultPlan) {
         this.resultPlan = resultPlan;
+    }
+
+    public List<ResultRear> getResultRearList() {
+        return resultRearList;
+    }
+
+    public void setResultRearList(List<ResultRear> resultRearList) {
+        this.resultRearList = resultRearList;
+    }
+
+    public ResultRear getResultRear() {
+        return resultRear;
+    }
+
+    public void setResultRear(ResultRear resultRear) {
+        this.resultRear = resultRear;
+    }
+
+    public List<ResultEye> getResultEyeList() {
+        return resultEyeList;
+    }
+
+    public void setResultEyeList(List<ResultEye> resultEyeList) {
+        this.resultEyeList = resultEyeList;
+    }
+
+    public ResultEye getResultEye() {
+        return resultEye;
+    }
+
+    public void setResultEye(ResultEye resultEye) {
+        this.resultEye = resultEye;
     }
 }

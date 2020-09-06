@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="babyImg" namespace="/babyImg" extends="default">
+        <!--上传头像 -->
+        <action name="uploadHeadImg" method="uploadHeadImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">headImgUrl</param>
+            </result>
+        </action>
+
+        <action name="uploadEyeImg" method="uploadEyeImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">eyeImgUrl</param>
+            </result>
+        </action>
+    </package>
+</struts>

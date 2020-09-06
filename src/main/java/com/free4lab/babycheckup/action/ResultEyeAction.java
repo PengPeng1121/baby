@@ -1,36 +1,33 @@
 package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.ResultBasic1Manager;
+import com.free4lab.babycheckup.manager.ResultEyeManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.ResultBasic1;
+import com.free4lab.babycheckup.model.ResultEye;
 import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by Administrator on 2017/6/29.
- */
-public class ResultBasic1Action {
+public class ResultEyeAction {
     private int resultid;
     private Baby baby;
     private int id;
-    private ResultBasic1 resultBasic1;
+    private ResultEye resultEye;
     private String SUCCESS = "success";
     private Double monthage;
     private String stime;//检查日期
     private Hospital hospital;
 
-    public String showResultBasic1() {
-        resultBasic1 = ResultBasic1Manager.findResultByid(id);
+    public String showResultEye() {
+        resultEye = ResultEyeManager.findResultByid(id);
         // 拼装url 用虚拟路径
-        resultBasic1.setHeadImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBasic1.getHeadImgUrl());
-        baby = BabyManager.findById(resultBasic1.getBabyId());
+        resultEye.setEyeImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultEye.getEyeImgUrl());
+        baby = BabyManager.findById(resultEye.getBabyId());
         Date d1 = baby.getBirthday();
-        stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBasic1.getTime());
+        stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultEye.getTime());
         Date d2 = Date.valueOf(stime);
         monthage = diffDays(d1,d2);
         return SUCCESS;
@@ -90,19 +87,11 @@ public class ResultBasic1Action {
         this.resultid = resultid;
     }
 
-    public ResultBasic1 getResultBasic1() {
-        return resultBasic1;
+    public ResultEye getResultEye() {
+        return resultEye;
     }
 
-    public void setResultBasic1(ResultBasic1 resultBasic1) {
-        this.resultBasic1 = resultBasic1;
-    }
-
-    public String getSUCCESS() {
-        return SUCCESS;
-    }
-
-    public void setSUCCESS(String SUCCESS) {
-        this.SUCCESS = SUCCESS;
+    public void setResultEye(ResultEye resultEye) {
+        this.resultEye = resultEye;
     }
 }

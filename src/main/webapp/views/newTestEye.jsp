@@ -72,7 +72,13 @@
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
-                    
+                    <div class="col-md-12" style="padding-bottom: 10px">
+                        <form id="form" method="POST" enctype="multipart/form-data"
+                              onsubmit="return check();">
+                            <input type="file" accept="image/*" name="file" id="file"/>
+                            <input type="button"  onclick="uploadImg()" value="提交"/>
+                        </form>
+                    </div>
                     
                 </div>
             </div>
@@ -157,6 +163,7 @@
 
         var data = {};
         data ['resultEye.eyeImgUrl'] = $("#imgUrl").val();
+        data ['resultEye.babyId'] = parseInt($("#babyid").val());
 
         $.ajax({
             url: 'saveresultEye',

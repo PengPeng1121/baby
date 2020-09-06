@@ -7,9 +7,12 @@ import java.io.*;
  */
 public class FileUtil {
 
-//    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/care";
-      public static final String FILE_ABSOLUTE_PATH = "C:\\code\\workspace\\baby\\opt\\file\\baby\\care\\";
+    //    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/care/";
+//    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/img/";
 
+    public static final String FILE_ABSOLUTE_PATH = "C:\\code\\image\\";
+
+    public static final String FILE_VIRTUAL_PATH = "/image/";
 
     public static void saveFile(File file, String path) {
         InputStream inputStream = null;
