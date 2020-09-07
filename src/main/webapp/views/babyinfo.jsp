@@ -802,6 +802,58 @@
                     </s:iterator>
 
 
+                    <s:iterator value="resultEarList" var="resultEar">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           听力
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultEar.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultEar?id=<s:property value="#resultEar.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+                    <s:iterator value="resultBMDList" var="resultBMD">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           骨密度
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBMD.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBMD?id=<s:property value="#resultBMD.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
 
 
 

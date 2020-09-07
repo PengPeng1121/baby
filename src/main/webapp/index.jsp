@@ -819,6 +819,70 @@
                 </s:if>
 
 
+                <!-- 听力(河马) -->
+                <s:if test="resultEarLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">听力 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultEar"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultEarLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=42" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                <!-- 骨密度(河马) -->
+                <s:if test="resultBMDLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">听力 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBMD"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBMDLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=43" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
                 
                 
 
