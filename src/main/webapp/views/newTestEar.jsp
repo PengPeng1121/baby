@@ -180,6 +180,7 @@
         formData.append("filename", file.name);
         formData.append("file", file);
         formData.append("testId", 42);
+        formData.append("type", 1);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadEarImg",
@@ -202,6 +203,7 @@
         formData.append("filename", file.name);
         formData.append("file", file);
         formData.append("testId", 42);
+        formData.append("type", 2);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadEarImg",
