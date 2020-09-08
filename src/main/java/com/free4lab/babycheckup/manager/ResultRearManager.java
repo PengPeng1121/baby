@@ -25,4 +25,8 @@ public class ResultRearManager {
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultRear update(ResultRear rear) {
+        return getInstance().update(rear);
+    }
 }

@@ -8,9 +8,9 @@ import java.io.*;
 public class FileUtil {
 
     //    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/care/";
-//    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/img/";
+    public static final String FILE_ABSOLUTE_PATH = "../../../opt/file/baby/img/";
 
-    public static final String FILE_ABSOLUTE_PATH = "C:\\code\\image\\";
+//    public static final String FILE_ABSOLUTE_PATH = "C:\\code\\image\\";
 
     public static final String FILE_VIRTUAL_PATH = "/image/";
 

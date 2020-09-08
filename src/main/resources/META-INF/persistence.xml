@@ -35,6 +35,7 @@
         <class>com.free4lab.babycheckup.model.ResultFeed</class>
         <class>com.free4lab.babycheckup.model.ResultRear</class>
         <class>com.free4lab.babycheckup.model.ResultEye</class>
+        <class>com.free4lab.babycheckup.model.ResultBMD</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://47.94.202.106:3306/babycheckup?characterEncoding=UTF-8"/>

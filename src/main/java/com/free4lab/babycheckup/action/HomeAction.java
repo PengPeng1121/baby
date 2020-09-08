@@ -38,6 +38,8 @@ public class HomeAction {
     private long numberOfResultBless;
     private long numberOfResultRear;
     private long numberOfResultEye;
+    private long numberOfResultEar;
+    private long numberOfResultBMD;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -66,6 +68,8 @@ public class HomeAction {
     private Integer resultBlessLeftTimes;
     private Integer resultRearLeftTimes;
     private Integer resultEyeLeftTimes;
+    private Integer resultEarLeftTimes;
+    private Integer resultBMDLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -669,5 +673,37 @@ public class HomeAction {
 
     public void setResultEyeLeftTimes(Integer resultEyeLeftTimes) {
         this.resultEyeLeftTimes = resultEyeLeftTimes;
+    }
+
+    public long getNumberOfResultEar() {
+        return numberOfResultEar;
+    }
+
+    public void setNumberOfResultEar(long numberOfResultEar) {
+        this.numberOfResultEar = numberOfResultEar;
+    }
+
+    public long getNumberOfResultBMD() {
+        return numberOfResultBMD;
+    }
+
+    public void setNumberOfResultBMD(long numberOfResultBMD) {
+        this.numberOfResultBMD = numberOfResultBMD;
+    }
+
+    public Integer getResultEarLeftTimes() {
+        return resultEarLeftTimes;
+    }
+
+    public void setResultEarLeftTimes(Integer resultEarLeftTimes) {
+        this.resultEarLeftTimes = resultEarLeftTimes;
+    }
+
+    public Integer getResultBMDLeftTimes() {
+        return resultBMDLeftTimes;
+    }
+
+    public void setResultBMDLeftTimes(Integer resultBMDLeftTimes) {
+        this.resultBMDLeftTimes = resultBMDLeftTimes;
     }
 }

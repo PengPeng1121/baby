@@ -58,6 +58,8 @@ public class TestAction {
     private List<ResultBless> resultBlessList = new ArrayList<ResultBless>();
     private List<ResultRear> resultRearList = new ArrayList<ResultRear>();
     private List<ResultEye> resultEyeList = new ArrayList<ResultEye>();
+    private List<ResultEar> resultEarList = new ArrayList<ResultEar>();
+    private List<ResultBMD> resultBMDList = new ArrayList<ResultBMD>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -89,6 +91,8 @@ public class TestAction {
     private ResultPlan resultPlan;
     private ResultRear resultRear;
     private ResultEye resultEye;
+    private ResultEar resultEar;
+    private ResultBMD resultBMD;
     private String days;
     private int day;
     //早产天数
@@ -564,6 +568,24 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 听力筛查
+    public String newTestEar() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 骨密度筛查
+    public String newTestBMD() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -594,6 +616,8 @@ public class TestAction {
         resultBlessList = ResultBlessManager.findResultBybid(babyid);
         resultRearList = ResultRearManager.findResultBybid(babyid);
         resultEyeList = ResultEyeManager.findResultBybid(babyid);
+        resultEarList = ResultEarManager.findResultBybid(babyid);
+        resultBMDList = ResultBMDManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1471,6 +1495,41 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 听力筛查
+    public String saveResultEar(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultEar.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultEar.setUserId(userId);
+        resultEar.setTestId(42);
+        resultEar.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultEar.setState("finished");
+        resultEar.setCreateTime(new Date());
+        resultEar.setUpdateTime(new Date());
+        resultEar.setCreateUser(userId.toString());
+        resultEar.setUpdateUser(userId.toString());
+        ResultEarManager.saveResult(resultEar);
+        return SUCCESS;
+    }
+
+
+    // 骨密度筛查
+    public String saveResultBMD(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBMD.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBMD.setUserId(userId);
+        resultBMD.setTestId(43);
+        resultBMD.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBMD.setState("finished");
+        resultBMD.setCreateTime(new Date());
+        resultBMD.setUpdateTime(new Date());
+        resultBMD.setCreateUser(userId.toString());
+        resultBMD.setUpdateUser(userId.toString());
+        ResultBMDManager.saveResult(resultBMD);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -2085,5 +2144,37 @@ public class TestAction {
 
     public void setResultEye(ResultEye resultEye) {
         this.resultEye = resultEye;
+    }
+
+    public List<ResultEar> getResultEarList() {
+        return resultEarList;
+    }
+
+    public void setResultEarList(List<ResultEar> resultEarList) {
+        this.resultEarList = resultEarList;
+    }
+
+    public List<ResultBMD> getResultBMDList() {
+        return resultBMDList;
+    }
+
+    public void setResultBMDList(List<ResultBMD> resultBMDList) {
+        this.resultBMDList = resultBMDList;
+    }
+
+    public ResultEar getResultEar() {
+        return resultEar;
+    }
+
+    public void setResultEar(ResultEar resultEar) {
+        this.resultEar = resultEar;
+    }
+
+    public ResultBMD getResultBMD() {
+        return resultBMD;
+    }
+
+    public void setResultBMD(ResultBMD resultBMD) {
+        this.resultBMD = resultBMD;
     }
 }

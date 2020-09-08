@@ -173,12 +173,23 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!--实力筛查-->
+        <!--视力筛查-->
         <action name="newtestEye" method="newTestEye" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestEye.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--听力筛查-->
+        <action name="newtestEar" method="newTestEar" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestEar.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--骨密度筛查-->
+        <action name="newtestBMD" method="newTestBMD" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBMD.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
 
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
@@ -332,6 +343,16 @@
         <!--视力筛查 -->
         <action name="showresultEye" method="showResultEye" class="com.free4lab.babycheckup.action.ResultEyeAction">
             <result name="success" >views/showresultEye.jsp</result>
+        </action>
+
+        <!--听力筛查 -->
+        <action name="showresultEar" method="showResultEar" class="com.free4lab.babycheckup.action.ResultEarAction">
+            <result name="success" >views/showresultEar.jsp</result>
+        </action>
+
+        <!--骨密度筛查 -->
+        <action name="showresultBMD" method="showResultBMD" class="com.free4lab.babycheckup.action.ResultBMDAction">
+            <result name="success" >views/showresultBMD.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -624,6 +645,22 @@
         <action name="saveresultEye" method="saveResultEye" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultEye,resultEye.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 听力筛查 -->
+        <action name="saveresultEar" method="saveResultEar" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultEar,resultEar.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 骨密度筛查 -->
+        <action name="saveresultBMD" method="saveResultBMD" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBMD,resultBMD.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>

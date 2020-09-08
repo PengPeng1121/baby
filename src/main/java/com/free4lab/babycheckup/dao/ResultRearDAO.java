@@ -64,4 +64,8 @@ public class ResultRearDAO extends AbstractDAO<ResultRear> {
         String testid="testId";
         return super.countByProperty(hoid,hosid,testid,testId);
     }
+
+    public ResultRear update(ResultRear rear) {
+        return super.update(rear);
+    }
 }

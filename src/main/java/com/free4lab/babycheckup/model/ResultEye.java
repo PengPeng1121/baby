@@ -15,7 +15,7 @@ public class ResultEye {
     private int userId;
     private String state;
     /**
-     * 实力筛查地址
+     * 视力筛查地址
      */
     private String eyeImgUrl;
     /**

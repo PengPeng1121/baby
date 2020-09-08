@@ -4,14 +4,17 @@ import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultRearManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.ResultRear;
+import com.opensymphony.xwork2.ActionContext;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2017/6/29.
  */
 public class ResultRearAction {
-    private int resultid;
+    private int resultId;
+    private String rearContent;
     private Baby baby;
     private int id;
     private ResultRear resultRear;
@@ -25,6 +28,16 @@ public class ResultRearAction {
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultRear.getTime());
         return SUCCESS;
     }
+
+    public String updateResultRear() {
+        resultRear = ResultRearManager.findResultByid(resultId);
+        resultRear.setRearContent(rearContent);
+        resultRear.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        resultRear.setUpdateTime(new Date());
+        resultRear = ResultRearManager.update(resultRear);
+        return SUCCESS;
+    }
+
 
     public Baby getBaby() {
         return baby;
@@ -58,12 +71,12 @@ public class ResultRearAction {
         this.monthage = monthage;
     }
 
-    public int getResultid() {
-        return resultid;
+    public int getResultId() {
+        return resultId;
     }
 
-    public void setResultid(int resultid) {
-        this.resultid = resultid;
+    public void setResultId(int resultId) {
+        this.resultId = resultId;
     }
 
     public ResultRear getResultRear() {
@@ -74,11 +87,11 @@ public class ResultRearAction {
         this.resultRear = resultRear;
     }
 
-    public String getSUCCESS() {
-        return SUCCESS;
+    public String getRearContent() {
+        return rearContent;
     }
 
-    public void setSUCCESS(String SUCCESS) {
-        this.SUCCESS = SUCCESS;
+    public void setRearContent(String rearContent) {
+        this.rearContent = rearContent;
     }
 }
