@@ -125,7 +125,8 @@
                     <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
                         <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px" id="remarkText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px" id="doctorRemark"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px" id="doctorRemarkText"></textarea>
                             </td>
                         </tr>
                     </table>
@@ -162,11 +163,33 @@
 
     var reg = new RegExp("<br>","g");//g,表示全部替换。
     remark = remark.replace(reg,"\n");
-    $('#remarkText').html(remark);
+    $('#doctorRemark').html(remark);
 
     
     $('.print').click(function(){
-        window.print();
+        var remark = $('#doctorRemark').val();
+        var realRemark = remark;
+        // realRemark = remark.replace(/\n/g, "<br/>");
+        $('#doctorRemarkText').html(realRemark);
+        $('#doctorRemarkText').show();
+        $('#doctorRemark').hide();
+
+        var resultID = +$('#resultID').val();
+        var data = "{";
+        var  resultRecord = {};
+        var remark = $('#doctorRemarkText').html() + '';
+        var data = "{";
+        data += "'resultRear.resultId':" + resultID + "}";
+        data = eval('(' + data + ')');
+        data['resultRear.rearContent'] = remark;
+        $.ajax({
+            url: 'saveRecordRear2020',
+            type: 'post',
+            data: data,
+            success:function (json) {
+                 window.print();
+            }
+        })
     });
 </script>
 </body>
