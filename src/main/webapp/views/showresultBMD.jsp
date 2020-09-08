@@ -34,7 +34,7 @@
             width: 650px;
             position: absolute;
             z-index: 1;
-            top: 490px;
+            top: 290px;
             left: 460px;
         }
     </style>
@@ -58,8 +58,8 @@
             width: 650px !important;
             position: absolute !important;
             z-index: 1 !important;
-            top: 420px !important;
-            left: 100px !important;
+            top: 220px !important;
+            left: 80px !important;
         }
     </style>
 </head>

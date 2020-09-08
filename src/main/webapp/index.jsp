@@ -858,7 +858,7 @@
                         <div class="panel-body">
                             <div class="media">
                                 <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">听力 </p>
+                                    <p class="media-heading" style="font-size: 16px;">骨密度 </p>
                                     <div class="as-desc">
                                         <div style="display: inline-block;">
                                             <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBMD"/></label>

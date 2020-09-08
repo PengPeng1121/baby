@@ -133,7 +133,7 @@
         formData.append("testId", 43);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
-            url: "babyImg/uploadBMDImg",
+            url: "babyImg/uploadBmdImg",
             type: "POST",
             enctype: "multipart/form-data",
             data: formData,
@@ -141,7 +141,7 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
-                $('#imgUrl').val(json.BMDImgUrl);
+                $('#imgUrl').val(json.bmdImgUrl);
             }
         });
     }
