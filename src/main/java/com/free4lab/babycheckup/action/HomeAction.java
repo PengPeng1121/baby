@@ -106,6 +106,8 @@ public class HomeAction {
         numberOfResultBless = ResultBlessManager.countResultByHosIdAndTestId(hoid,39);
         numberOfResultRear = ResultRearManager.countResultByHosIdAndTestId(hoid,40);
         numberOfResultEye = ResultEyeManager.countResultByHosIdAndTestId(hoid,41);
+        numberOfResultEar = ResultEarManager.countResultByHosIdAndTestId(hoid,42);
+        numberOfResultBMD = ResultBMDManager.countResultByHosIdAndTestId(hoid,43);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -204,6 +206,12 @@ public class HomeAction {
                             break;
                         case 41:
                             resultEyeLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 42:
+                            resultEarLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 43:
+                            resultBMDLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }

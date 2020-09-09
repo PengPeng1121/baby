@@ -174,7 +174,7 @@
         $('#doctorRemarkText').show();
         $('#doctorRemark').hide();
 
-        var resultID = +$('#resultID').val();
+        var resultID = +$('#resultid').val();
         var data = "{";
         var remark = $('#doctorRemarkText').html() + '';
         var data = "{";

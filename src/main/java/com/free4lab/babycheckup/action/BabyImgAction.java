@@ -33,7 +33,7 @@ public class BabyImgAction {
     // 上传头像
     public String uploadHeadImg() {
         // 头像地址
-        headImgUrl = buildFileName(HEAD_IMG_URL_PREFIX,filename);
+        headImgUrl = buildFileName(HEAD_IMG_URL_PREFIX);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + headImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -42,7 +42,7 @@ public class BabyImgAction {
     // 上传视力筛查
     public String uploadEyeImg() {
         // 视力筛查
-        eyeImgUrl = buildFileName(EYE_IMG_URL_PREFIX,filename);
+        eyeImgUrl = buildFileName(EYE_IMG_URL_PREFIX);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + eyeImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -51,7 +51,7 @@ public class BabyImgAction {
     // 上传听力筛查
     public String uploadEarImg() {
         // 听力筛查
-        earImgUrl = buildFileName(EAR_IMG_URL_PREFIX,filename);
+        earImgUrl = buildFileName(EAR_IMG_URL_PREFIX);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + earImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -60,7 +60,7 @@ public class BabyImgAction {
     // 上传骨密度筛查
     public String uploadBMDImg() {
         // 骨密度筛查
-        bmdImgUrl = buildFileName(BMD_IMG_URL_PREFIX,filename);
+        bmdImgUrl = buildFileName(BMD_IMG_URL_PREFIX);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + bmdImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -69,17 +69,14 @@ public class BabyImgAction {
     /**
      * 构建文件名 前缀-日期（yyyy-MM-dd）-T-测试卡片id-B-小朋友id-UUID
      * @param  prefix
-     * @param  filename
      * @return
      */
-    private String buildFileName(String prefix,String filename){
-        if(StringUtils.isNotEmpty(filename) && filename.length() > 30){
-            filename = filename.substring(0,30);
-        }
+    private String buildFileName(String prefix){
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String timeNow = simpleDateFormat.format(new Date());
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(prefix).append("-").append(timeNow).append("-T-").append(testId).append("-B-").append(babyId).append("-").append(filename);
+        stringBuffer.append(prefix).append("-").append(timeNow).append("-T-").append(testId).append("-B-").append(babyId);
         return stringBuffer.toString();
     }
 
