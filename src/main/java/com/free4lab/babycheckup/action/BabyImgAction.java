@@ -33,7 +33,7 @@ public class BabyImgAction {
     // 上传头像
     public String uploadHeadImg() {
         // 头像地址
-        headImgUrl = buildFileName(HEAD_IMG_URL_PREFIX);
+        headImgUrl = buildFileName(HEAD_IMG_URL_PREFIX,filename);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + headImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -42,7 +42,7 @@ public class BabyImgAction {
     // 上传视力筛查
     public String uploadEyeImg() {
         // 视力筛查
-        eyeImgUrl = buildFileName(EYE_IMG_URL_PREFIX);
+        eyeImgUrl = buildFileName(EYE_IMG_URL_PREFIX,filename);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + eyeImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -51,7 +51,7 @@ public class BabyImgAction {
     // 上传听力筛查
     public String uploadEarImg() {
         // 听力筛查
-        earImgUrl = buildFileName(EAR_IMG_URL_PREFIX);
+        earImgUrl = buildFileName(EAR_IMG_URL_PREFIX,filename);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + earImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -60,7 +60,7 @@ public class BabyImgAction {
     // 上传骨密度筛查
     public String uploadBMDImg() {
         // 骨密度筛查
-        bmdImgUrl = buildFileName(BMD_IMG_URL_PREFIX);
+        bmdImgUrl = buildFileName(BMD_IMG_URL_PREFIX,filename);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + bmdImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
@@ -71,12 +71,14 @@ public class BabyImgAction {
      * @param  prefix
      * @return
      */
-    private String buildFileName(String prefix){
-
+    private String buildFileName(String prefix,String filename){
+        if(StringUtils.isNotEmpty(filename)){
+            filename = filename.substring(filename.lastIndexOf("."),filename.length());
+        }
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String timeNow = simpleDateFormat.format(new Date());
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(prefix).append("-").append(timeNow).append("-T-").append(testId).append("-B-").append(babyId);
+        stringBuffer.append(prefix).append("-").append(timeNow).append("-T-").append(testId).append("-B-").append(babyId).append("-").append(filename);
         return stringBuffer.toString();
     }
 
