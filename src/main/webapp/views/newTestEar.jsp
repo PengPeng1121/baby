@@ -61,11 +61,12 @@
                     
                 </div>
             </div>
-            
-            <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <div class="panel-heading">上传听力筛查图片</div>
+            
+            <div class="panel panel-default front-panel">
+
+                <div class="panel-heading">上传听力筛查图片(6个月以下)</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     
                     <div class="col-md-12" style="padding-bottom: 10px">
@@ -79,6 +80,17 @@
                             <input type="button"  onclick="uploadImg1()" value="提交"/>
                         </form>
                     </div>
+
+
+                    
+                </div>
+            </div>
+
+
+            <div class="panel panel-default front-panel">
+                <div class="panel-heading">上传中耳筛查图片(6个月以上)</div>
+                <div class="panel-body front-no-padding" style="padding: 15px;">
+                    
 
 
                     <div class="col-md-12" style="padding-bottom: 10px">
@@ -180,7 +192,6 @@
         formData.append("filename", file.name);
         formData.append("file", file);
         formData.append("testId", 42);
-        formData.append("type", 1);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadEarImg",
@@ -191,7 +202,8 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
-                $('#imgUrl1').val(json.earImgUrlFirst);
+                $('#imgUrl1').val(json.earImgUrl);
+                $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
             }
         });
     }
@@ -203,7 +215,6 @@
         formData.append("filename", file.name);
         formData.append("file", file);
         formData.append("testId", 42);
-        formData.append("type", 2);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadEarImg",
@@ -214,7 +225,8 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
-                $('#imgUrl2').val(json.earImgUrlSecond);
+                $('#imgUrl2').val(json.earImgUrl);
+                $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
             }
         });
     }

@@ -87,10 +87,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 824px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Boy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 824px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg11Girl.jpg">
                     </s:if>
 
                     <table style="width: 55%;
@@ -122,11 +122,11 @@
                         </tr>
                     </table>
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 350px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px" id="doctorRemark"></textarea>
-                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px" id="doctorRemarkText"></textarea>
+                                <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;font-size: 10px;display: none" id="doctorRemarkText"></textarea>
                             </td>
                         </tr>
                     </table>
@@ -176,14 +176,13 @@
 
         var resultID = +$('#resultID').val();
         var data = "{";
-        var  resultRecord = {};
         var remark = $('#doctorRemarkText').html() + '';
         var data = "{";
-        data += "'resultRear.resultId':" + resultID + "}";
+        data += "'resultId':" + resultID + "}";
         data = eval('(' + data + ')');
-        data['resultRear.rearContent'] = remark;
+        data['rearContent'] = remark;
         $.ajax({
-            url: 'saveRecordRear2020',
+            url: 'updateResultRear',
             type: 'post',
             data: data,
             success:function (json) {

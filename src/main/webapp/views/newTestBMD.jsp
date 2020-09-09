@@ -142,6 +142,7 @@
             dataType: "json",
             success: function (json) {
                 $('#imgUrl').val(json.bmdImgUrl);
+                $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
             }
         });
     }

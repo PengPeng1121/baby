@@ -30,11 +30,18 @@
         .value{
             margin-left: 10px;
         }
-        #eyeImg{
+        #earImg1{
             width: 650px;
             position: absolute;
             z-index: 1;
-            top: 490px;
+            top: 290px;
+            left: 460px;
+        }
+        #earImg2{
+            width: 650px;
+            position: absolute;
+            z-index: 1;
+            top: 290px;
             left: 460px;
         }
     </style>
@@ -54,12 +61,19 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
-        #eyeImg{
+        #earImg1{
             width: 650px !important;
             position: absolute !important;
             z-index: 1 !important;
-            top: 420px !important;
-            left: 100px !important;
+            top: 220px !important;
+            left: 80px !important;
+        }
+        #earImg2{
+            width: 650px !important;
+            position: absolute !important;
+            z-index: 1 !important;
+            top: 220px !important;
+            left: 80px !important;
         }
     </style>
 </head>
@@ -67,11 +81,9 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultBasic1.babyid"/>">
-        <input id="nickName" type="hidden" value="<s:property value="resultBasic1.nickName"/>">
-        <input id="address" type="hidden" value="<s:property value="resultBasic1.address"/>">
-        <input id="contactMobile" type="hidden" value="<s:property value="resultBasic1.contactMobile"/>">
-        <input id="headImgUrl" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultEar.babyid"/>">
+        <input id="earImgUrlFirst" type="hidden" value="<s:property value="resultEar.earImgUrlFirst"/>">
+        <input id="earImgUrlSecond" type="hidden" value="<s:property value="resultEar.earImgUrlSecond"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
@@ -84,9 +96,13 @@
                     </s:if>
 
 
+                    <s:if test="resultEar.earImgUrlFirst != ''">
+                    <img id="earImg1" src="<s:property value="resultEar.earImgUrlFirst"/>">
+                    </s:if>
 
-                    <img id="eyeImg" src="<s:property value="resultEye.eyeImgUrl"/>">
-
+                    <s:if test="resultEar.earImgUrlSecond != ''">
+                    <img id="earImg2" src="<s:property value="resultEar.earImgUrlSecond"/>">
+                    </s:if>
                     
 
 
