@@ -146,6 +146,16 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td>父亲身高</td>
+                                <td>
+                                   <input id="fatherHeight"  style="width: 100%" /> 
+                                </td>
+                                <td>母亲身高</td>
+                                <td>
+                                    <input id="motherHeight"  style="width: 100%" /> 
+                                </td>
+                            </tr>
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>8</td>
                                 <td>
                                     产次:
@@ -341,6 +351,9 @@
         data['resultBasic2.babyBirthWeekAge'] = $("#babyBirthWeekAge").val();
         data['resultBasic2.babyBirthWeight'] = $("#babyBirthWeight").val();
         data['resultBasic2.childBearingAge'] = $("#childBearingAge").val();
+
+        data['resultBasic2.fatherHeight'] = $("#fatherHeight").val();
+        data['resultBasic2.motherHeight'] = $("#motherHeight").val();
 
         data['resultBasic2.motherPregnancyDiseaseSituation'] = $("#motherPregnancyDiseaseSituation").val();
         data['resultBasic2.babyCount'] = $("#babyCount").val();
