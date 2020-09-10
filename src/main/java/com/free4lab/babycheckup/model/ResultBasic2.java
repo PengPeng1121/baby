@@ -79,6 +79,14 @@ public class ResultBasic2 {
      */
     private String allergySituation;
     /**
+     * 父亲身高
+     */
+    private String fatherHeight;
+    /**
+     * 母亲身高
+     */
+    private String motherHeight;
+    /**
      * 备注
      */
     private String remark;
@@ -329,6 +337,26 @@ public class ResultBasic2 {
     }
 
     @Basic
+    @Column(name = "father_height", nullable = false)
+    public String getFatherHeight() {
+        return fatherHeight;
+    }
+
+    public void setFatherHeight(String fatherHeight) {
+        this.fatherHeight = fatherHeight;
+    }
+
+    @Basic
+    @Column(name = "mother_height", nullable = false)
+    public String getMotherHeight() {
+        return motherHeight;
+    }
+
+    public void setMotherHeight(String motherHeight) {
+        this.motherHeight = motherHeight;
+    }
+
+    @Basic
     @Column(name = "remark")
     public String getRemark() {
         return remark;
@@ -377,5 +405,6 @@ public class ResultBasic2 {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
 
 }
