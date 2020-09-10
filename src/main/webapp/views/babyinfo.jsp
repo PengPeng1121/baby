@@ -853,6 +853,109 @@
                         </tr>
                     </s:iterator>
 
+                    <s:iterator value="resultBloodList" var="resultBlood">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           血常规
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBlood.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBlood?id=<s:property value="#resultBlood.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultMicroList" var="resultMicro">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           微量元素
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultMicro.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultMicro?id=<s:property value="#resultMicro.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultBoneList" var="resultBone">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           骨碱酶
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBone.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBone?id=<s:property value="#resultBone.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+                    <s:iterator value="resultUrineList" var="resultUrine">
+                        <tr>
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           尿常规
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultUrine.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultUrine?id=<s:property value="#resultUrine.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+
 
 
 

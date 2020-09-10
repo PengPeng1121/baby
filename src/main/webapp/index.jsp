@@ -882,6 +882,132 @@
                 </div>
                 </s:if>
 
+                <!-- 血常规(河马) -->
+                <s:if test="resultBloodLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">血常规 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBlood"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBloodLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=44" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                <!-- 微量元素(河马) -->
+                <s:if test="resultMicroLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">微量元素 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultMicro"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultMicroLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=45" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+
+                <!-- 骨碱酶(河马) -->
+                <s:if test="resultBoneLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">骨碱酶 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBone"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBoneLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=46" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 尿常规(河马) -->
+                <s:if test="resultUrineLeftTimes != 0">
+                <div class="col-md-3">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">尿常规 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultUrine"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultUrineLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=47" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
 
                 
                 

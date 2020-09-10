@@ -155,6 +155,29 @@
                     style="color: white;font-size: small">骨密度</h4></a>
         </div>
 
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Blood()"><h4
+                    style="color: white;font-size: small">血常规</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Micro()"><h4
+                    style="color: white;font-size: small">微量元素</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Bone()"><h4
+                    style="color: white;font-size: small">骨碱酶</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Urine()"><h4
+                    style="color: white;font-size: small">尿常规</h4></a>
+        </div>
+
+
+
     </div>
 </div>
 <script>
@@ -727,6 +750,83 @@
 
         })
     }
+
+
+    function start_Blood() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBlood?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Micro() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestMicro?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Bone() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBone?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_Urine() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestUrine?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    
 
     function start_ADHD() {
         var babyid = $("#babyid").val();
