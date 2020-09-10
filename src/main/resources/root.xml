@@ -235,6 +235,14 @@
             <result name="success" >views/showresultRear.jsp</result>
         </action>
 
+        <!--养育指导结果编辑-->
+        <action name="updateResultRear" method="updateResultRear" class="com.free4lab.babycheckup.action.ResultRearAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultId,rearContent</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--小儿智能发育筛查的测评医生评价-->
         <action name="saveRecordDDST" method="saveRecordDDST" class="com.free4lab.babycheckup.action.ResultDDSTAction">
             <result type="json" name="success">

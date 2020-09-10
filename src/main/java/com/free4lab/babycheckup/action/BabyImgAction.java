@@ -69,12 +69,11 @@ public class BabyImgAction {
     /**
      * 构建文件名 前缀-日期（yyyy-MM-dd）-T-测试卡片id-B-小朋友id-UUID
      * @param  prefix
-     * @param  filename
      * @return
      */
     private String buildFileName(String prefix,String filename){
-        if(StringUtils.isNotEmpty(filename) && filename.length() > 30){
-            filename = filename.substring(0,30);
+        if(StringUtils.isNotEmpty(filename)){
+            filename = filename.substring(filename.lastIndexOf("."),filename.length());
         }
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String timeNow = simpleDateFormat.format(new Date());
