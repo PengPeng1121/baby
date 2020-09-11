@@ -50,6 +50,7 @@
 
             </div>
         </div>
+        <input type="hidden" id="username" value="<s:property value="#session.username"/>">
         <div class="panel panel-default front-panel" id="test">
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
@@ -986,7 +987,7 @@
         window.location = "record/editbabyinfo?babyid=" + bid;
     }
 
-
+    
 
 </script>
 </body>

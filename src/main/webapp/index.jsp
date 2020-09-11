@@ -35,7 +35,7 @@
 <div class="front-inner front-inner-media">
     <div class="container">
         <div class="row">
-            <div class="col-md-12" style="background-color: #FFF">
+            <div class="col-md-12 doctorOperate" style="background-color: #FFF">
                 <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
                     <div class="col-md-2" style="display: inline-block;padding-left: 0">
                         <div class="text-left" style="margin-bottom: 5px;"><label style="font-weight:normal;"><h4>快捷功能</h4></label></div>
@@ -69,6 +69,7 @@
             </div>
 
             <input type="hidden" id="hoid" value="<s:property value="#session.hoid"/>">
+            <input type="hidden" id="username" value="<s:property value="#session.username"/>">
 
             <div class="col-md-12" style="background-color: #FFF;margin-top: 20px">
                 <div class="col-md-12 as-carousel" style="padding-left: 0;margin: 0 15px">
@@ -78,7 +79,7 @@
                 </div>
 
                 <!-- 0-6岁小儿神经心理发育检查表 -->
-                <div class="col-md-3 old-test">
+                <div class="col-md-3 old-test doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -106,7 +107,7 @@
                 
 
                 <!-- 0-6岁小儿神经心理发育检查表 2016-->
-                <div class="col-md-3 new-test">
+                <div class="col-md-3 new-test doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -294,7 +295,7 @@
                     </div>
                 </div> -->
                 <!-- 小儿智能发育筛查 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -325,7 +326,7 @@
 
 
                                 <!-- 感觉统合2020 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -353,7 +354,7 @@
 
 
                 <!--河马 气质 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -512,7 +513,7 @@
 
                 <!-- 过敏(河马) -->
                 <s:if test="resultAllergyLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -546,7 +547,7 @@
 
                 <!-- 生长发育(河马) -->
                 <s:if test="resultGroup2020LeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -578,7 +579,7 @@
 
                 <!-- 体格头面检查(河马) -->
                 <s:if test="resultPhysicalLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -609,7 +610,7 @@
 
 
                 <!-- 营养与喂养 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -639,7 +640,7 @@
 
 
                 <!-- 牙齿 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -668,7 +669,7 @@
 
 
                 <!-- 定制化方案 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -696,7 +697,7 @@
 
 
                 <!-- 祝福 -->
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -725,7 +726,7 @@
 
                 <!-- 总评(河马) -->
                 <s:if test="resultSummaryLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -757,7 +758,7 @@
 
                 <!-- 养育风格指导(河马) -->
                 <s:if test="resultRearLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -789,7 +790,7 @@
 
                 <!-- 视力(河马) -->
                 <s:if test="resultEyeLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -821,7 +822,7 @@
 
                 <!-- 听力(河马) -->
                 <s:if test="resultEarLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -853,7 +854,7 @@
 
                 <!-- 骨密度(河马) -->
                 <s:if test="resultBMDLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -884,7 +885,7 @@
 
                 <!-- 血常规(河马) -->
                 <s:if test="resultBloodLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -916,7 +917,7 @@
 
                 <!-- 微量元素(河马) -->
                 <s:if test="resultMicroLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -948,7 +949,7 @@
 
                 <!-- 骨碱酶(河马) -->
                 <s:if test="resultBoneLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -979,7 +980,7 @@
 
                 <!-- 尿常规(河马) -->
                 <s:if test="resultUrineLeftTimes != 0">
-                <div class="col-md-3">
+                <div class="col-md-3 doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -997,6 +998,130 @@
                                         </s:if>
                                         <s:else>
                                             <a href="record?testId=47" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 乙肝(河马) -->
+                <s:if test="resultHBsLeftTimes != 0">
+                <div class="col-md-3 doctorOperate">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">乙肝 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultHBs"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultHBsLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=48" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 21项速发过敏原(河马) -->
+                <s:if test="resultFastAllergyLeftTimes != 0">
+                <div class="col-md-3 doctorOperate">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">21项速发过敏原 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFastAllergy"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultFastAllergyLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=49" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 14项慢性食物过敏原(河马) -->
+                <s:if test="resultFoodAllergyLeftTimes != 0">
+                <div class="col-md-3 doctorOperate">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">14项慢性食物过敏原 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultFoodAllergy"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultFoodAllergyLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=50" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 血型鉴定(河马) -->
+                <s:if test="resultBloodTypeLeftTimes != 0">
+                <div class="col-md-3 doctorOperate">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">血型鉴定 </p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultBloodType"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultBloodTypeLeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=51" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                         </s:else>
                                     </div>
 
@@ -1094,7 +1219,7 @@
 
 
                 <!-- 多动症 -->
-                <div class="col-md-3 adhd">
+                <div class="col-md-3 adhd doctorOperate">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1172,9 +1297,10 @@
 <script>
     $("#home").addClass("front-active");
     var hoid = parseInt($("#hoid").val());
+    var username = $("#username").val();
     console.log(hoid)
 
-
+    // 适配陆总
     if (hoid != 2) {
         $('.old-test').hide();
     } else {
@@ -1185,6 +1311,14 @@
     } else {
         $('.adhd').hide();
     }
+
+    if (username == '家长填报') {
+        console.log('家长视角。。。。。。');
+        
+        $('.doctorOperate').hide();
+    }
+
+
 </script>
 </body>
 </html>
