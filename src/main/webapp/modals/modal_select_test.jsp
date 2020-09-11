@@ -8,13 +8,14 @@
     </div>
     <input type="hidden" id="babyid" value="">
     <input type="hidden" id="hoid" value="<s:property value="#session.hoid"/>">
+    <input type="hidden" id="username" value="<s:property value="#session.username"/>">
     <div class="modal-body">
-        <div style="margin-top: 10px; display: inline-block; width: 200px" class="old-test">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="new-test doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start0_6()"><h4
                     style="color: white;font-size: small">开始0-6岁小儿<br/>神经心理发育测评</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px" class="new-test">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="new-test doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start2016()"><h4
                     style="color: white;font-size: small">开始0-6岁小儿<br/>神经心理发育测评<br/>(2016)</h4></a>
         </div>
@@ -48,7 +49,7 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_cognize()"><h4
                     style="color: white;font-size: small">婴幼儿认知测定</h4></a>
         </div> -->
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_ddst()"><h4
                     style="color: white;font-size: small">小儿智能发育筛查</h4></a>
         </div>
@@ -65,7 +66,7 @@
             <a type="button" class="btn  modal-box text-center" href="javascript:start_QiZhi()"><h4
                     style="color: white;font-size: small">气质测评</h4></a>
         </div> -->
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_QiZhi2020()"><h4
                     style="color: white;font-size: small">气质测评2020</h4></a>
         </div>
@@ -75,33 +76,39 @@
         </div> -->
 
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Feel2020()"><h4
                     style="color: white;font-size: small">感觉统合能力2020</h4></a>
         </div>
 
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_ADHD()"><h4
                     style="color: white;font-size: small">多动症筛查</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Group2020()"><h4
                     style="color: white;font-size: small">生长发育2020</h4></a>
         </div>
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Physical()"><h4
                     style="color: white;font-size: small">体格头面检查</h4></a>
         </div>
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Summary()"><h4
                     style="color: white;font-size: small">总评</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Allergy()"><h4
                     style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
+        </div>
+
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()"><h4
+                    style="color: white;font-size: small">基础信息</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px">
@@ -110,70 +117,87 @@
         </div>
 
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth()"><h4
                     style="color: white;font-size: small">牙齿</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Feed()"><h4
                     style="color: white;font-size: small">营养与喂养</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
-            <a type="button" class="btn  modal-box text-center" href="javascript:start_Basic1()"><h4
-                    style="color: white;font-size: small">基础信息</h4></a>
-        </div>
+        
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Plan()"><h4
                     style="color: white;font-size: small">定制化方案</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Bless()"><h4
                     style="color: white;font-size: small">祝福</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Rear()"><h4
                     style="color: white;font-size: small">养育风格指导</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Eye()"><h4
                     style="color: white;font-size: small">视力</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Ear()"><h4
                     style="color: white;font-size: small">听力</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_BMD()"><h4
                     style="color: white;font-size: small">骨密度</h4></a>
         </div>
 
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Blood()"><h4
                     style="color: white;font-size: small">血常规</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Micro()"><h4
                     style="color: white;font-size: small">微量元素</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Bone()"><h4
                     style="color: white;font-size: small">骨碱酶</h4></a>
         </div>
 
-        <div style="margin-top: 10px; display: inline-block; width: 200px">
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Urine()"><h4
                     style="color: white;font-size: small">尿常规</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_HBs()"><h4
+                    style="color: white;font-size: small">乙肝</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_FastAllergy()"><h4
+                    style="color: white;font-size: small">21项速发过敏原</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_FoodAllergy()"><h4
+                    style="color: white;font-size: small">14项慢性食物过敏原</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_BloodType()"><h4
+                    style="color: white;font-size: small">血型鉴定</h4></a>
         </div>
 
 
@@ -183,6 +207,7 @@
 <script>
     
     var hoid = parseInt($("#hoid").val());
+    var username = $("#username").val();
     console.log(hoid)
 
 
@@ -190,6 +215,13 @@
         $('.old-test').hide();
     } else {
         $('.new-test').hide();
+    }
+
+
+    if (username == '家长填报') {
+        console.log('家长视角。。。。。。');
+        
+        $('.doctorOperate').hide();
     }
 
 
@@ -824,6 +856,80 @@
 
         })
     }
+
+
+        function start_HBs() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestHBs?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_FastAllergy() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestFastAllergy?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_FoodAllergy() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestFoodAllergy?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_BloodType() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestBloodType?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
 
 
     

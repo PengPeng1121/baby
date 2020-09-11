@@ -67,8 +67,8 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultEye.babyid"/>">
-        <input id="ImgUrl" type="hidden" value="<s:property value="resultEye.eyeImgUrl"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultBone.babyid"/>">
+        <input id="ImgUrl" type="hidden" value="<s:property value="resultBone.boneImgUrl"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
@@ -82,7 +82,7 @@
 
 
 
-                    <img id="eyeImg" src="<s:property value="resultEye.eyeImgUrl"/>">
+                    <img id="eyeImg" src="<s:property value="resultBone.boneImgUrl"/>">
 
                     
 
