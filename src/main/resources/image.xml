@@ -30,5 +30,59 @@
                 <param name="includeProperties">bmdImgUrl</param>
             </result>
         </action>
+        <!--上传骨密度筛查 -->
+        <action name="uploadBmdImg" method="uploadBMDImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">bmdImgUrl</param>
+            </result>
+        </action>
+        <!--上传血常规文件 -->
+        <action name="uploadBloodImg" method="uploadBloodImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">bloodImgUrl</param>
+            </result>
+        </action>
+        <!--上传微量元素检查文件 -->
+        <action name="uploadMicroImg" method="uploadMicroImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">microImgUrl</param>
+            </result>
+        </action>
+        <!--上传骨碱酶检查文件 -->
+        <action name="uploadBoneImg" method="uploadBoneImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">boneImgUrl</param>
+            </result>
+        </action>
+        <!--上传尿常规检查查文件 -->
+        <action name="uploadUrineImg" method="uploadUrineImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">urineImgUrl</param>
+            </result>
+        </action>
+        <!--上传乙肝检查文件 -->
+        <action name="uploadHBsImg" method="uploadHbsImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">hbsImgUrl</param>
+            </result>
+        </action>
+        <!--上传21项速查过敏原文件 -->
+        <action name="uploadFastAllergyImg" method="uploadFastAllergyImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">fastAllergyImgUrl</param>
+            </result>
+        </action>
+        <!--上传14项慢性食物过敏原文件 -->
+        <action name="uploadFoodAllergyImg" method="uploadFoodAllergyImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">foodAllergyImgUrl</param>
+            </result>
+        </action>
+        <!--上传血型检查文件 -->
+        <action name="uploadBloodTypeImg" method="uploadBloodTypeImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">bloodTypeImgUrl</param>
+            </result>
+        </action>
     </package>
 </struts>

@@ -167,7 +167,7 @@
         data ['resultFastAllergy.babyId'] = parseInt($("#babyid").val());
 
         $.ajax({
-            url: 'saveresultBlood',
+            url: 'saveresultFastAllergy',
             type: 'post',
             data: data,
             success:function (json) {

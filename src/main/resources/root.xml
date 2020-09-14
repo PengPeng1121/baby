@@ -191,6 +191,54 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--血常规-->
+        <action name="newtestBlood" method="newTestBlood" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBlood.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--骨碱酶-->
+        <action name="newtestBone" method="newTestBone" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBone.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--微量元素-->
+        <action name="newtestMicro" method="newTestMicro" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestMicro.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--尿常规-->
+        <action name="newtestUrine" method="newTestUrine" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestUrine.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--乙肝-->
+        <action name="newtestHBs" method="newTestHbs" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestHBs.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--速发过敏原-->
+        <action name="newtestFastAllergy" method="newTestFastAllergy" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestFastAllergy.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--食物过敏原-->
+        <action name="newtestFoodAllergy" method="newTestFoodAllergy" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestFoodAllergy.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--血型-->
+        <action name="newtestBloodType" method="newTestBloodType" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestBloodType.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -361,6 +409,51 @@
         <!--骨密度筛查 -->
         <action name="showresultBMD" method="showResultBMD" class="com.free4lab.babycheckup.action.ResultBMDAction">
             <result name="success" >views/showresultBMD.jsp</result>
+        </action>
+
+        <!--血常规 -->
+        <action name="showresultBlood" method="showResult" class="com.free4lab.babycheckup.action.ResultBloodAction">
+            <result name="success" >views/showresultBlood.jsp</result>
+        </action>
+
+        <!--骨碱酶 -->
+        <action name="showresultBone" method="showResult" class="com.free4lab.babycheckup.action.ResultBoneAction">
+            <result name="success" >views/showresultBone.jsp</result>
+        </action>
+
+        <!--微量元素 -->
+        <action name="showresultMicro" method="showResult" class="com.free4lab.babycheckup.action.ResultMicroAction">
+            <result name="success" >views/showresultMicro.jsp</result>
+        </action>
+
+        <!--尿常规 -->
+        <action name="showresultUrine" method="showResult" class="com.free4lab.babycheckup.action.ResultUrineAction">
+            <result name="success" >views/showresultUrine.jsp</result>
+        </action>
+
+        <!--乙肝 -->
+        <action name="showresultHBs" method="showResult" class="com.free4lab.babycheckup.action.ResultHbsAction">
+            <result name="success" >views/showresultHBs.jsp</result>
+        </action>
+
+        <!--速发过敏原 -->
+        <action name="showresultFastAllergy" method="showResult" class="com.free4lab.babycheckup.action.ResultFastAllergyAction">
+            <result name="success" >views/showresultFastAllergy.jsp</result>
+        </action>
+
+        <!--食物过敏原 -->
+        <action name="showresultFoodAllergy" method="showResult" class="com.free4lab.babycheckup.action.ResultFoodAllergyAction">
+            <result name="success" >views/showresultFoodAllergy.jsp</result>
+        </action>
+
+        <!--食物过敏原 -->
+        <action name="showresultFoodAllergy" method="showResult" class="com.free4lab.babycheckup.action.ResultFoodAllergyAction">
+            <result name="success" >views/showresultFoodAllergy.jsp</result>
+        </action>
+
+        <!--血型 -->
+        <action name="showresultBloodType" method="showResult" class="com.free4lab.babycheckup.action.ResultBloodTypeAction">
+            <result name="success" >views/showresultBloodType.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -669,6 +762,70 @@
         <action name="saveresultBMD" method="saveResultBMD" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultBMD,resultBMD.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 血常规 -->
+        <action name="saveresultBlood" method="saveResultBlood" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBlood,resultBlood.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 微量元素 -->
+        <action name="saveresultMicro" method="saveResultMicro" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultMicro,resultMicro.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 骨碱酶 -->
+        <action name="saveresultBone" method="saveResultBone" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBone,resultBone.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 尿常规 -->
+        <action name="saveresultUrine" method="saveResultUrine" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultUrine,resultUrine.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 乙肝 -->
+        <action name="saveresultHBs" method="saveResultHbs" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultHBs,resultHBs.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 速发过敏原 -->
+        <action name="saveresultFastAllergy" method="saveResultFastAllergy" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultFastAllergy,resultFastAllergy.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 食物过敏原 -->
+        <action name="saveresultFoodAllergy" method="saveResultFoodAllergy" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultFoodAllergy,resultFoodAllergy.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 血型 -->
+        <action name="saveresultBloodType" method="saveResultBloodType" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBloodType,resultBloodType.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>

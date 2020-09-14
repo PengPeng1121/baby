@@ -60,6 +60,14 @@ public class TestAction {
     private List<ResultEye> resultEyeList = new ArrayList<ResultEye>();
     private List<ResultEar> resultEarList = new ArrayList<ResultEar>();
     private List<ResultBMD> resultBMDList = new ArrayList<ResultBMD>();
+    private List<ResultBlood> resultBloodList = new ArrayList<ResultBlood>();
+    private List<ResultMicro> resultMicroList = new ArrayList<ResultMicro>();
+    private List<ResultUrine> resultUrineList = new ArrayList<ResultUrine>();
+    private List<ResultBone> resultBoneList = new ArrayList<ResultBone>();
+    private List<ResultHbs> resultHBsList = new ArrayList<ResultHbs>();
+    private List<ResultFastAllergy> resultFastAllergyList = new ArrayList<ResultFastAllergy>();
+    private List<ResultFoodAllergy> resultFoodAllergyList = new ArrayList<ResultFoodAllergy>();
+    private List<ResultBloodType> resultBloodTypeList = new ArrayList<ResultBloodType>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -93,6 +101,14 @@ public class TestAction {
     private ResultEye resultEye;
     private ResultEar resultEar;
     private ResultBMD resultBMD;
+    private ResultBlood resultBlood;
+    private ResultBone resultBone;
+    private ResultMicro resultMicro;
+    private ResultUrine resultUrine;
+    private ResultHbs resultHBs;
+    private ResultFastAllergy resultFastAllergy;
+    private ResultFoodAllergy resultFoodAllergy;
+    private ResultBloodType resultBloodType;
     private String days;
     private int day;
     //早产天数
@@ -586,6 +602,78 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 血常规
+    public String newTestBlood() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 微量元素
+    public String newTestMicro() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 骨碱酶
+    public String newTestBone() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 尿常规
+    public String newTestUrine() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 乙肝
+    public String newTestHbs() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 速发过敏原
+    public String newTestFastAllergy() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 食物过敏原
+    public String newTestFoodAllergy() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
+    // 血型
+    public String newTestBloodType() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -618,6 +706,14 @@ public class TestAction {
         resultEyeList = ResultEyeManager.findResultBybid(babyid);
         resultEarList = ResultEarManager.findResultBybid(babyid);
         resultBMDList = ResultBMDManager.findResultBybid(babyid);
+        resultBloodList = ResultBloodManager.findResultBybid(babyid);
+        resultBoneList = ResultBoneManager.findResultBybid(babyid);
+        resultMicroList = ResultMicroManager.findResultBybid(babyid);
+        resultUrineList = ResultUrineManager.findResultBybid(babyid);
+        resultHBsList = ResultHbsManager.findResultBybid(babyid);
+        resultFastAllergyList = ResultFastAllergyManager.findResultBybid(babyid);
+        resultFoodAllergyList = ResultFoodAllergyManager.findResultBybid(babyid);
+        resultBloodTypeList = ResultBloodTypeManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1530,6 +1626,143 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 血常规
+    public String saveResultBlood(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBlood.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBlood.setUserId(userId);
+        resultBlood.setTestId(44);
+        resultBlood.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBlood.setState("finished");
+        resultBlood.setCreateTime(new Date());
+        resultBlood.setUpdateTime(new Date());
+        resultBlood.setCreateUser(userId.toString());
+        resultBlood.setUpdateUser(userId.toString());
+        ResultBloodManager.saveResult(resultBlood);
+        return SUCCESS;
+    }
+
+
+    // 微量元素
+    public String saveResultMicro(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultMicro.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultMicro.setUserId(userId);
+        resultMicro.setTestId(45);
+        resultMicro.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultMicro.setState("finished");
+        resultMicro.setCreateTime(new Date());
+        resultMicro.setUpdateTime(new Date());
+        resultMicro.setCreateUser(userId.toString());
+        resultMicro.setUpdateUser(userId.toString());
+        ResultMicroManager.saveResult(resultMicro);
+        return SUCCESS;
+    }
+
+    // 骨碱酶
+    public String saveResultBone(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBone.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBone.setUserId(userId);
+        resultBone.setTestId(46);
+        resultBone.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBone.setState("finished");
+        resultBone.setCreateTime(new Date());
+        resultBone.setUpdateTime(new Date());
+        resultBone.setCreateUser(userId.toString());
+        resultBone.setUpdateUser(userId.toString());
+        ResultBoneManager.saveResult(resultBone);
+        return SUCCESS;
+    }
+
+    // 尿常规
+    public String saveResultUrine(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultUrine.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultUrine.setUserId(userId);
+        resultUrine.setTestId(47);
+        resultUrine.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultUrine.setState("finished");
+        resultUrine.setCreateTime(new Date());
+        resultUrine.setUpdateTime(new Date());
+        resultUrine.setCreateUser(userId.toString());
+        resultUrine.setUpdateUser(userId.toString());
+        ResultUrineManager.saveResult(resultUrine);
+        return SUCCESS;
+    }
+
+    // 乙肝
+    public String saveResultHbs(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultHBs.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultHBs.setUserId(userId);
+        resultHBs.setTestId(48);
+        resultHBs.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultHBs.setState("finished");
+        resultHBs.setCreateTime(new Date());
+        resultHBs.setUpdateTime(new Date());
+        resultHBs.setCreateUser(userId.toString());
+        resultHBs.setUpdateUser(userId.toString());
+        ResultHbsManager.saveResult(resultHBs);
+        return SUCCESS;
+    }
+
+    // 速发过敏原
+    public String saveResultFastAllergy(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultFastAllergy.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultFastAllergy.setUserId(userId);
+        resultFastAllergy.setTestId(49);
+        resultFastAllergy.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultFastAllergy.setState("finished");
+        resultFastAllergy.setCreateTime(new Date());
+        resultFastAllergy.setUpdateTime(new Date());
+        resultFastAllergy.setCreateUser(userId.toString());
+        resultFastAllergy.setUpdateUser(userId.toString());
+        ResultFastAllergyManager.saveResult(resultFastAllergy);
+        return SUCCESS;
+    }
+
+    // 食物过敏
+    public String saveResultFoodAllergy(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultFoodAllergy.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultFoodAllergy.setUserId(userId);
+        resultFoodAllergy.setTestId(50);
+        resultFoodAllergy.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultFoodAllergy.setState("finished");
+        resultFoodAllergy.setCreateTime(new Date());
+        resultFoodAllergy.setUpdateTime(new Date());
+        resultFoodAllergy.setCreateUser(userId.toString());
+        resultFoodAllergy.setUpdateUser(userId.toString());
+        ResultFoodAllergyManager.saveResult(resultFoodAllergy);
+        return SUCCESS;
+    }
+
+    // 血型
+    public String saveResultBloodType(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultBloodType.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultBloodType.setUserId(userId);
+        resultBloodType.setTestId(51);
+        resultBloodType.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultBloodType.setState("finished");
+        resultBloodType.setCreateTime(new Date());
+        resultBloodType.setUpdateTime(new Date());
+        resultBloodType.setCreateUser(userId.toString());
+        resultBloodType.setUpdateUser(userId.toString());
+        ResultBloodTypeManager.saveResult(resultBloodType);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -2176,5 +2409,141 @@ public class TestAction {
 
     public void setResultBMD(ResultBMD resultBMD) {
         this.resultBMD = resultBMD;
+    }
+
+    public List<ResultBlood> getResultBloodList() {
+        return resultBloodList;
+    }
+
+    public void setResultBloodList(List<ResultBlood> resultBloodList) {
+        this.resultBloodList = resultBloodList;
+    }
+
+    public List<ResultMicro> getResultMicroList() {
+        return resultMicroList;
+    }
+
+    public void setResultMicroList(List<ResultMicro> resultMicroList) {
+        this.resultMicroList = resultMicroList;
+    }
+
+    public List<ResultUrine> getResultUrineList() {
+        return resultUrineList;
+    }
+
+    public void setResultUrineList(List<ResultUrine> resultUrineList) {
+        this.resultUrineList = resultUrineList;
+    }
+
+    public List<ResultBone> getResultBoneList() {
+        return resultBoneList;
+    }
+
+    public void setResultBoneList(List<ResultBone> resultBoneList) {
+        this.resultBoneList = resultBoneList;
+    }
+
+    public List<ResultFastAllergy> getResultFastAllergyList() {
+        return resultFastAllergyList;
+    }
+
+    public void setResultFastAllergyList(List<ResultFastAllergy> resultFastAllergyList) {
+        this.resultFastAllergyList = resultFastAllergyList;
+    }
+
+    public List<ResultFoodAllergy> getResultFoodAllergyList() {
+        return resultFoodAllergyList;
+    }
+
+    public void setResultFoodAllergyList(List<ResultFoodAllergy> resultFoodAllergyList) {
+        this.resultFoodAllergyList = resultFoodAllergyList;
+    }
+
+    public List<ResultBloodType> getResultBloodTypeList() {
+        return resultBloodTypeList;
+    }
+
+    public void setResultBloodTypeList(List<ResultBloodType> resultBloodTypeList) {
+        this.resultBloodTypeList = resultBloodTypeList;
+    }
+
+    public String getSUCCESS() {
+        return SUCCESS;
+    }
+
+    public void setSUCCESS(String SUCCESS) {
+        this.SUCCESS = SUCCESS;
+    }
+
+    public ResultBlood getResultBlood() {
+        return resultBlood;
+    }
+
+    public void setResultBlood(ResultBlood resultBlood) {
+        this.resultBlood = resultBlood;
+    }
+
+    public ResultBone getResultBone() {
+        return resultBone;
+    }
+
+    public void setResultBone(ResultBone resultBone) {
+        this.resultBone = resultBone;
+    }
+
+    public ResultMicro getResultMicro() {
+        return resultMicro;
+    }
+
+    public void setResultMicro(ResultMicro resultMicro) {
+        this.resultMicro = resultMicro;
+    }
+
+    public ResultUrine getResultUrine() {
+        return resultUrine;
+    }
+
+    public void setResultUrine(ResultUrine resultUrine) {
+        this.resultUrine = resultUrine;
+    }
+
+    public List<ResultHbs> getResultHBsList() {
+        return resultHBsList;
+    }
+
+    public void setResultHBsList(List<ResultHbs> resultHBsList) {
+        this.resultHBsList = resultHBsList;
+    }
+
+    public ResultHbs getResultHBs() {
+        return resultHBs;
+    }
+
+    public void setResultHBs(ResultHbs resultHBs) {
+        this.resultHBs = resultHBs;
+    }
+
+    public ResultFastAllergy getResultFastAllergy() {
+        return resultFastAllergy;
+    }
+
+    public void setResultFastAllergy(ResultFastAllergy resultFastAllergy) {
+        this.resultFastAllergy = resultFastAllergy;
+    }
+
+    public ResultFoodAllergy getResultFoodAllergy() {
+        return resultFoodAllergy;
+    }
+
+    public void setResultFoodAllergy(ResultFoodAllergy resultFoodAllergy) {
+        this.resultFoodAllergy = resultFoodAllergy;
+    }
+
+    public ResultBloodType getResultBloodType() {
+        return resultBloodType;
+    }
+
+    public void setResultBloodType(ResultBloodType resultBloodType) {
+        this.resultBloodType = resultBloodType;
     }
 }

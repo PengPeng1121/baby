@@ -133,7 +133,7 @@
         formData.append("testId", 51);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
-            url: "babyImg/uploadBloodImg",
+            url: "babyImg/uploadBloodTypeImg",
             type: "POST",
             enctype: "multipart/form-data",
             data: formData,

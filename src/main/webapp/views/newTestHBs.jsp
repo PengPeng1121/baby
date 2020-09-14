@@ -167,7 +167,7 @@
         data ['resultHBs.babyId'] = parseInt($("#babyid").val());
 
         $.ajax({
-            url: 'saveresultBlood',
+            url: 'saveresultHBs',
             type: 'post',
             data: data,
             success:function (json) {

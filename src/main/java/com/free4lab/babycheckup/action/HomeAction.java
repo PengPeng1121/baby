@@ -40,6 +40,14 @@ public class HomeAction {
     private long numberOfResultEye;
     private long numberOfResultEar;
     private long numberOfResultBMD;
+    private long numberOfResultBlood;
+    private long numberOfResultBone;
+    private long numberOfResultUrine;
+    private long numberOfResultMicro;
+    private long numberOfResultFastAllergy;
+    private long numberOfResultFoodAllergy;
+    private long numberOfResultHBs;
+    private long numberOfResultBloodType;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -70,6 +78,15 @@ public class HomeAction {
     private Integer resultEyeLeftTimes;
     private Integer resultEarLeftTimes;
     private Integer resultBMDLeftTimes;
+    private Integer resultBloodLeftTimes;
+    private Integer resultBoneLeftTimes;
+    private Integer resultUrineLeftTimes;
+    private Integer resultMicroLeftTimes;
+    private Integer resultHBsLeftTimes;
+    private Integer resultFastAllergyLeftTimes;
+    private Integer resultFoodAllergyLeftTimes;
+    private Integer resultBloodTypeLeftTimes;
+
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -108,6 +125,14 @@ public class HomeAction {
         numberOfResultEye = ResultEyeManager.countResultByHosIdAndTestId(hoid,41);
         numberOfResultEar = ResultEarManager.countResultByHosIdAndTestId(hoid,42);
         numberOfResultBMD = ResultBMDManager.countResultByHosIdAndTestId(hoid,43);
+        numberOfResultBlood = ResultBloodManager.countResultByHosIdAndTestId(hoid,44);
+        numberOfResultMicro = ResultMicroManager.countResultByHosIdAndTestId(hoid,45);
+        numberOfResultBone = ResultBoneManager.countResultByHosIdAndTestId(hoid,46);
+        numberOfResultUrine = ResultUrineManager.countResultByHosIdAndTestId(hoid,47);
+        numberOfResultHBs = ResultHbsManager.countResultByHosIdAndTestId(hoid,48);
+        numberOfResultFastAllergy = ResultFastAllergyManager.countResultByHosIdAndTestId(hoid,49);
+        numberOfResultFoodAllergy = ResultFoodAllergyManager.countResultByHosIdAndTestId(hoid,50);
+        numberOfResultBloodType = ResultBloodTypeManager.countResultByHosIdAndTestId(hoid,51);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -212,6 +237,30 @@ public class HomeAction {
                             break;
                         case 43:
                             resultBMDLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 44:
+                            resultBloodLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 45:
+                            resultMicroLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 46:
+                            resultBoneLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 47:
+                            resultUrineLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 48:
+                            resultHBsLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 49:
+                            resultFastAllergyLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 50:
+                            resultFoodAllergyLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 51:
+                            resultBloodTypeLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -713,5 +762,133 @@ public class HomeAction {
 
     public void setResultBMDLeftTimes(Integer resultBMDLeftTimes) {
         this.resultBMDLeftTimes = resultBMDLeftTimes;
+    }
+
+    public long getNumberOfResultBlood() {
+        return numberOfResultBlood;
+    }
+
+    public void setNumberOfResultBlood(long numberOfResultBlood) {
+        this.numberOfResultBlood = numberOfResultBlood;
+    }
+
+    public long getNumberOfResultBone() {
+        return numberOfResultBone;
+    }
+
+    public void setNumberOfResultBone(long numberOfResultBone) {
+        this.numberOfResultBone = numberOfResultBone;
+    }
+
+    public long getNumberOfResultUrine() {
+        return numberOfResultUrine;
+    }
+
+    public void setNumberOfResultUrine(long numberOfResultUrine) {
+        this.numberOfResultUrine = numberOfResultUrine;
+    }
+
+    public long getNumberOfResultMicro() {
+        return numberOfResultMicro;
+    }
+
+    public void setNumberOfResultMicro(long numberOfResultMicro) {
+        this.numberOfResultMicro = numberOfResultMicro;
+    }
+
+    public long getNumberOfResultFastAllergy() {
+        return numberOfResultFastAllergy;
+    }
+
+    public void setNumberOfResultFastAllergy(long numberOfResultFastAllergy) {
+        this.numberOfResultFastAllergy = numberOfResultFastAllergy;
+    }
+
+    public long getNumberOfResultFoodAllergy() {
+        return numberOfResultFoodAllergy;
+    }
+
+    public void setNumberOfResultFoodAllergy(long numberOfResultFoodAllergy) {
+        this.numberOfResultFoodAllergy = numberOfResultFoodAllergy;
+    }
+
+    public long getNumberOfResultBloodType() {
+        return numberOfResultBloodType;
+    }
+
+    public void setNumberOfResultBloodType(long numberOfResultBloodType) {
+        this.numberOfResultBloodType = numberOfResultBloodType;
+    }
+
+    public Integer getResultBloodLeftTimes() {
+        return resultBloodLeftTimes;
+    }
+
+    public void setResultBloodLeftTimes(Integer resultBloodLeftTimes) {
+        this.resultBloodLeftTimes = resultBloodLeftTimes;
+    }
+
+    public Integer getResultBoneLeftTimes() {
+        return resultBoneLeftTimes;
+    }
+
+    public void setResultBoneLeftTimes(Integer resultBoneLeftTimes) {
+        this.resultBoneLeftTimes = resultBoneLeftTimes;
+    }
+
+    public Integer getResultUrineLeftTimes() {
+        return resultUrineLeftTimes;
+    }
+
+    public void setResultUrineLeftTimes(Integer resultUrineLeftTimes) {
+        this.resultUrineLeftTimes = resultUrineLeftTimes;
+    }
+
+    public Integer getResultMicroLeftTimes() {
+        return resultMicroLeftTimes;
+    }
+
+    public void setResultMicroLeftTimes(Integer resultMicroLeftTimes) {
+        this.resultMicroLeftTimes = resultMicroLeftTimes;
+    }
+
+    public long getNumberOfResultHBs() {
+        return numberOfResultHBs;
+    }
+
+    public void setNumberOfResultHBs(long numberOfResultHBs) {
+        this.numberOfResultHBs = numberOfResultHBs;
+    }
+
+    public Integer getResultHBsLeftTimes() {
+        return resultHBsLeftTimes;
+    }
+
+    public void setResultHBsLeftTimes(Integer resultHBsLeftTimes) {
+        this.resultHBsLeftTimes = resultHBsLeftTimes;
+    }
+
+    public Integer getResultFastAllergyLeftTimes() {
+        return resultFastAllergyLeftTimes;
+    }
+
+    public void setResultFastAllergyLeftTimes(Integer resultFastAllergyLeftTimes) {
+        this.resultFastAllergyLeftTimes = resultFastAllergyLeftTimes;
+    }
+
+    public Integer getResultFoodAllergyLeftTimes() {
+        return resultFoodAllergyLeftTimes;
+    }
+
+    public void setResultFoodAllergyLeftTimes(Integer resultFoodAllergyLeftTimes) {
+        this.resultFoodAllergyLeftTimes = resultFoodAllergyLeftTimes;
+    }
+
+    public Integer getResultBloodTypeLeftTimes() {
+        return resultBloodTypeLeftTimes;
+    }
+
+    public void setResultBloodTypeLeftTimes(Integer resultBloodTypeLeftTimes) {
+        this.resultBloodTypeLeftTimes = resultBloodTypeLeftTimes;
     }
 }
