@@ -188,7 +188,7 @@
                                     <label for="radio-answer-1-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 顺产</label>
 
                                     <input type="radio" name="isNormalChildbirth" value="0"   id="radio-answer-1-1">
-                                    <label for="radio-answer-1-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 刨腹产</label>
+                                    <label for="radio-answer-1-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 剖腹产</label>
                                     
                                 </td>
                             </tr>
@@ -225,7 +225,7 @@
                                         生产胎龄:
                                     </span>
                                     <span style="margin-left: 60px">
-                                        <s:property value="resultBasic2.babyBirthWeekAge"/> 
+                                        <s:property value="resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
                                     </span>
                                     <span style="margin-left: 160px">
                                         宝贝出生体重:   

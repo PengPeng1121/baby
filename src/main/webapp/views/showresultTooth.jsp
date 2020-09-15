@@ -34,7 +34,7 @@
             width: 160px;
         }
         #content-table{
-            width: 450px;
+            width: 300px;
             height: 120px;
             border: 0;
             /*font-size: 16px;
@@ -47,6 +47,12 @@
             position: absolute;
             top: 1000px;
             left: 577px;
+        }
+        #remarkText{
+            position: absolute;
+            left: 800px;
+            top: 270px;
+            background-color: transparent;
         }
         #tooth-img{
             width: 450px !important;
@@ -191,7 +197,7 @@
             width: 160px !important;
         }
         #content-table{
-            width: 450px !important;
+            width: 300px !important;
             height: 120px !important;
             border: 0 !important;
             /*font-size: 16px;
@@ -204,6 +210,11 @@
             position: absolute !important;
             top: 970px;
             left: 267px;
+        }
+        #remarkText{
+            position: absolute !important;
+            left: 420px !important;
+            top: 200px !important;
         }
         #tooth-img{
             width: 450px !important;
@@ -407,9 +418,6 @@
                                 <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1">
                                 <label for="radio-answer-1-1"></label>
                             </td>
-                            <td rowspan="3">
-                                <textarea id="remarkText" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
-                            </td>
                         </tr>
                         <tr class="item-line">
                             <td class="item">
@@ -430,6 +438,10 @@
                             </td>
                         </tr>
                     </table>
+
+                    <textarea id="remarkText" rows="3" style="resize:none;border: 0;width: 350px;height: 120px"></textarea>
+
+
                     <!-- 牙图 -->
                     <img id="tooth-img" src="statics/img/tooth.jpg">
                     

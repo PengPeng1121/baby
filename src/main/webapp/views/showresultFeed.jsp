@@ -79,6 +79,7 @@
         }
         #remark-table{
             width: 590px !important;
+            height: 400px !important;
             border:0 !important;
             font-size: 16px !important;
             position: absolute !important;
@@ -165,10 +166,11 @@
         }
         #remark-table{
             width: 590px !important;
+            height: 400px !important;
             border:0 !important;
             font-size: 16px !important;
             position: absolute !important;
-            top: 750px !important;
+            top: 680px !important;
             left: 110px !important;
         }
 
@@ -334,7 +336,7 @@
                                         辅食添加时间:
                                     </span>
                                     <span style="margin-left: 60px">
-                                        <s:property value="resultFeed.accessoryFoodAddTimes"/> 
+                                        <s:property value="resultFeed.accessoryFoodAddDate"/> 
                                     </span>
                                 </td>
                             </tr>

@@ -333,7 +333,7 @@
                         </tr>
                         <tr class="item-line">
                             <td class="item">
-                                两种以上微量元素缺乏
+                                两种以上微量元素缺乏(如果未化验或不清楚，请填写‘无’)
                             </td>
                             <td>
                                 <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1">

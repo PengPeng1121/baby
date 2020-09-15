@@ -459,7 +459,7 @@
                         <tr>
                             <td colspan="4">
                                 <!-- <p id="remarkText" style="font-weight: normal;"></p> -->
-                                <textarea id="remarkText" rows="3" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                                <textarea id="remarkText" rows="3" style="resize:none;border: 0;width: 100%;height: 100%; font-weight: normal;"></textarea>
                             </td>
                         </tr>
                     </table>

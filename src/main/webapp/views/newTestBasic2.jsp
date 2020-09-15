@@ -81,7 +81,7 @@
                                 </td>
                                 <td>
                                     <label for="radio-answer-1-0">
-                                        <input type="radio" name="isNormalChildbirth" value="0" id="radio-answer-1-0" />刨腹产
+                                        <input type="radio" name="isNormalChildbirth" value="0" id="radio-answer-1-0" />剖腹产
                                     </label>
                                 </td>
                             </tr>
@@ -239,7 +239,7 @@
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>14</td>
                                 <td>
-                                    父母双方有食物吸收查、身体消瘦、排便异常病史
+                                    父母双方有食物吸收差、身体消瘦、排便异常病史。
                                 </td>
                                 <td>
                                     <label for="radio-answer-8-1">

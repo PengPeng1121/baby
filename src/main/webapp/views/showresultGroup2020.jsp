@@ -95,7 +95,7 @@
                             <td class="col-md-4 content-2">
                                 <div class="panel panel-default front-panel" id="info" style="border: 0px; background-color: transparent;position: relative;top: -280px;left: -15px">
                                     <div class="panel-body front-no-padding" style="padding: 5px;border:0;background-color: transparent">
-                                        <table style="width: 100%;border:0;font-size: 16px;font-weight: bold; ">
+                                        <table style="width: 100%;border:0;font-size: 14px; font-weight: normal;">
                                             <tr style="height: 40px">
                                                 <td class="col-md-6 item" style="letter-spacing: 15px; padding: 0px">姓名:</td>
                                                 <td class="col-md-6" style="padding-left: 0px"><span style="text-decoration: underline;"><s:property value="baby.name"/></span></td>
@@ -289,7 +289,7 @@
             data: babyHA,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:2,
+                radius:4,
                 lineWidth:1,
             },
             color: 'black'
@@ -350,7 +350,7 @@
             data: babyWA,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:2,
+                radius:4,
                 lineWidth:1,
             },
             color: 'black'
@@ -412,7 +412,7 @@
             data: babyHead,
             marker:{//线上数据点
                 symbol:'circle',//圆点显示
-                radius:2,
+                radius:4,
                 lineWidth:1,
             },
             color: 'black'
