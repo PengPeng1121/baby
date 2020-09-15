@@ -57,7 +57,7 @@
         <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_Summary()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">总评</h4></a>
 
-        <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center " href="javascript:start_Allergy()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
 
 
@@ -114,6 +114,9 @@
 
         <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_BloodType()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">血型鉴定</h4></a>
+
+        <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_Attention()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">儿童智商.注意力<br/>评估及指导</h4></a>
 
 
         <input type="hidden" id="username" value="<s:property value="#session.username"/>">
@@ -823,6 +826,24 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestBloodType?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Attention() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestAttention?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }
