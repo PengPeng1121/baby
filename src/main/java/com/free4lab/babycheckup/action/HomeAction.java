@@ -48,6 +48,7 @@ public class HomeAction {
     private long numberOfResultFoodAllergy;
     private long numberOfResultHBs;
     private long numberOfResultBloodType;
+    private long numberOfResultAttention;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -86,7 +87,7 @@ public class HomeAction {
     private Integer resultFastAllergyLeftTimes;
     private Integer resultFoodAllergyLeftTimes;
     private Integer resultBloodTypeLeftTimes;
-
+    private Integer resultAttentionLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -133,6 +134,7 @@ public class HomeAction {
         numberOfResultFastAllergy = ResultFastAllergyManager.countResultByHosIdAndTestId(hoid,49);
         numberOfResultFoodAllergy = ResultFoodAllergyManager.countResultByHosIdAndTestId(hoid,50);
         numberOfResultBloodType = ResultBloodTypeManager.countResultByHosIdAndTestId(hoid,51);
+        numberOfResultAttention = ResultAttentionManager.countResultByHosIdAndTestId(hoid,52);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -261,6 +263,9 @@ public class HomeAction {
                             break;
                         case 51:
                             resultBloodTypeLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 52:
+                            resultAttentionLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -890,5 +895,21 @@ public class HomeAction {
 
     public void setResultBloodTypeLeftTimes(Integer resultBloodTypeLeftTimes) {
         this.resultBloodTypeLeftTimes = resultBloodTypeLeftTimes;
+    }
+
+    public long getNumberOfResultAttention() {
+        return numberOfResultAttention;
+    }
+
+    public void setNumberOfResultAttention(long numberOfResultAttention) {
+        this.numberOfResultAttention = numberOfResultAttention;
+    }
+
+    public Integer getResultAttentionLeftTimes() {
+        return resultAttentionLeftTimes;
+    }
+
+    public void setResultAttentionLeftTimes(Integer resultAttentionLeftTimes) {
+        this.resultAttentionLeftTimes = resultAttentionLeftTimes;
     }
 }

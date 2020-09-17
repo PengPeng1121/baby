@@ -68,6 +68,7 @@ public class TestAction {
     private List<ResultFastAllergy> resultFastAllergyList = new ArrayList<ResultFastAllergy>();
     private List<ResultFoodAllergy> resultFoodAllergyList = new ArrayList<ResultFoodAllergy>();
     private List<ResultBloodType> resultBloodTypeList = new ArrayList<ResultBloodType>();
+    private List<ResultAttention> resultAttentionList = new ArrayList<ResultAttention>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -109,6 +110,7 @@ public class TestAction {
     private ResultFastAllergy resultFastAllergy;
     private ResultFoodAllergy resultFoodAllergy;
     private ResultBloodType resultBloodType;
+    private ResultAttention resultAttention;
     private String days;
     private int day;
     //早产天数
@@ -674,6 +676,15 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 注意力指导及建议
+    public String newTestAttention() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -714,6 +725,7 @@ public class TestAction {
         resultFastAllergyList = ResultFastAllergyManager.findResultBybid(babyid);
         resultFoodAllergyList = ResultFoodAllergyManager.findResultBybid(babyid);
         resultBloodTypeList = ResultBloodTypeManager.findResultBybid(babyid);
+        resultAttentionList = ResultAttentionManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1763,6 +1775,23 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 注意力指导建议
+    public String saveResultAttention(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultAttention.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultAttention.setUserId(userId);
+        resultAttention.setTestId(52);
+        resultAttention.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultAttention.setState("finished");
+        resultAttention.setCreateTime(new Date());
+        resultAttention.setUpdateTime(new Date());
+        resultAttention.setCreateUser(userId.toString());
+        resultAttention.setUpdateUser(userId.toString());
+        ResultAttentionManager.saveResult(resultAttention);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -2545,5 +2574,21 @@ public class TestAction {
 
     public void setResultBloodType(ResultBloodType resultBloodType) {
         this.resultBloodType = resultBloodType;
+    }
+
+    public List<ResultAttention> getResultAttentionList() {
+        return resultAttentionList;
+    }
+
+    public void setResultAttentionList(List<ResultAttention> resultAttentionList) {
+        this.resultAttentionList = resultAttentionList;
+    }
+
+    public ResultAttention getResultAttention() {
+        return resultAttention;
+    }
+
+    public void setResultAttention(ResultAttention resultAttention) {
+        this.resultAttention = resultAttention;
     }
 }

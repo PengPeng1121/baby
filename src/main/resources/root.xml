@@ -239,6 +239,13 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--注意力指导建议-->
+        <action name="newtestAttention" method="newTestAttention" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestAttention.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+
         <!--0-6岁结果-->
         <action name="showreult" method="showResult" class="com.free4lab.babycheckup.action.ResultAction">
             <result name="success" >views/showresult.jsp</result>
@@ -454,6 +461,11 @@
         <!--血型 -->
         <action name="showresultBloodType" method="showResult" class="com.free4lab.babycheckup.action.ResultBloodTypeAction">
             <result name="success" >views/showresultBloodType.jsp</result>
+        </action>
+
+        <!--注意力指导建议 -->
+        <action name="showresultAttention" method="showResult" class="com.free4lab.babycheckup.action.ResultAttentionAction">
+            <result name="success" >views/showresultAttention.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -826,6 +838,14 @@
         <action name="saveresultBloodType" method="saveResultBloodType" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultBloodType,resultBloodType.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 血型 -->
+        <action name="saveresultAttention" method="saveResultAttention" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultAttention,resultAttention.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>

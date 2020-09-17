@@ -277,10 +277,10 @@
                                     <input type="radio" name="a5" value="1"   id="radio-answer-5-1">
                                     <label for="radio-answer-5-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
-                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-2">
+                                    <input type="radio" name="a5" value="2"   id="radio-answer-5-2">
                                     <label for="radio-answer-5-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
-                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-3">
+                                    <input type="radio" name="a5" value="3"   id="radio-answer-5-3">
                                     <label for="radio-answer-5-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
