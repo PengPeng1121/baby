@@ -56,6 +56,16 @@
             margin-left: 20px;
             width: 160px;
         }
+        .item-line{
+            border-bottom: 1px solid #df9390;
+            height: 45px;
+        }
+        #table-1{
+            top: 600px;
+            position: absolute;
+            left: 450px;
+            width: 800px;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -105,6 +115,16 @@
         #name-table{
             width: 700px !important;
         }
+        #table-main{
+            left: 80px !important;
+            width: 650px  !important;
+        }
+        #table-1{
+            top: 600px !important;
+            position: absolute !important;
+            left: 80px !important;
+            width: 650px !important;
+        }
     </style>
 </head>
 <body class="front-body">
@@ -118,16 +138,16 @@
         <input id="a4" type="hidden" value="<s:property value="resultAttention.a4"/>">
         <input id="a5" type="hidden" value="<s:property value="resultAttention.a5"/>">
         <input id="score" type="hidden" value="<s:property value="resultAttention.score"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultAttention.remark"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultAttention.suggest"/>">
         
         <div class="container" id="hemaFront">
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEyeBoy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgAttentionBoy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEyeGirl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgAttentionGirl.jpg">
                     </s:if>
 
 
@@ -161,25 +181,25 @@
                     </table>
 
 
-                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 280px;">
+                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 450px;top: 280px;">
                         <tbody style="width: 100%">
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        抗干扰:
                                     </span>
 
                                     <input type="radio" name="a1" value="0"   id="radio-answer-1-0">
-                                    <label for="radio-answer-1-0" style="width: 80px;margin-left: 20px;font-weight: normal;"> 良好</label>
+                                    <label for="radio-answer-1-0" style="width: 120px;margin-left: 30px;font-weight: normal;"> 良好</label>
 
                                     <input type="radio" name="a1" value="1"   id="radio-answer-1-1">
-                                    <label for="radio-answer-1-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 正常</label>
+                                    <label for="radio-answer-1-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
                                     <input type="radio" name="a1" value="2"   id="radio-answer-1-2">
-                                    <label for="radio-answer-1-2" style="width: 80px;margin-left: 20px;font-weight: normal;"> 需要提升</label>
+                                    <label for="radio-answer-1-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
                                     <input type="radio" name="a1" value="3"   id="radio-answer-1-3">
-                                    <label for="radio-answer-1-3" style="width: 80px;margin-left: 20px;font-weight: normal;"> 筛查</label>
+                                    <label for="radio-answer-1-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
 
 
                                     
@@ -187,87 +207,87 @@
                             </tr>
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        转移:
                                     </span>
 
                                     <input type="radio" name="a2" value="0"   id="radio-answer-2-0">
-                                    <label for="radio-answer-2-0" style="width: 80px;margin-left: 20px;font-weight: normal;"> 良好</label>
+                                    <label for="radio-answer-2-0" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
 
                                     <input type="radio" name="a2" value="1"   id="radio-answer-2-1">
-                                    <label for="radio-answer-2-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 正常</label>
+                                    <label for="radio-answer-2-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
                                     <input type="radio" name="a2" value="2"   id="radio-answer-2-2">
-                                    <label for="radio-answer-2-2" style="width: 80px;margin-left: 20px;font-weight: normal;"> 需要提升</label>
+                                    <label for="radio-answer-2-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
                                     <input type="radio" name="a2" value="3"   id="radio-answer-2-3">
-                                    <label for="radio-answer-2-3" style="width: 80px;margin-left: 20px;font-weight: normal;"> 筛查</label>
+                                    <label for="radio-answer-2-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
                             </tr>
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        分配:
                                     </span>
 
                                     <input type="radio" name="a3" value="0"   id="radio-answer-3-0">
-                                    <label for="radio-answer-3-0" style="width: 80px;margin-left: 20px;font-weight: normal;"> 良好</label>
+                                    <label for="radio-answer-3-0" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
 
                                     <input type="radio" name="a3" value="1"   id="radio-answer-3-1">
-                                    <label for="radio-answer-3-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 正常</label>
+                                    <label for="radio-answer-3-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
                                     <input type="radio" name="a3" value="2"   id="radio-answer-3-2">
-                                    <label for="radio-answer-3-2" style="width: 80px;margin-left: 20px;font-weight: normal;"> 需要提升</label>
+                                    <label for="radio-answer-3-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
                                     <input type="radio" name="a3" value="3"   id="radio-answer-3-3">
-                                    <label for="radio-answer-3-3" style="width: 80px;margin-left: 20px;font-weight: normal;"> 筛查</label>
+                                    <label for="radio-answer-3-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
                             </tr>
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        广度:
                                     </span>
 
                                     <input type="radio" name="a4" value="0"   id="radio-answer-4-0">
-                                    <label for="radio-answer-4-0" style="width: 80px;margin-left: 20px;font-weight: normal;"> 良好</label>
+                                    <label for="radio-answer-4-0" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
 
                                     <input type="radio" name="a4" value="1"   id="radio-answer-4-1">
-                                    <label for="radio-answer-4-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 正常</label>
+                                    <label for="radio-answer-4-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
                                     <input type="radio" name="a4" value="2"   id="radio-answer-4-2">
-                                    <label for="radio-answer-4-2" style="width: 80px;margin-left: 20px;font-weight: normal;"> 需要提升</label>
+                                    <label for="radio-answer-4-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
                                     <input type="radio" name="a4" value="3"   id="radio-answer-4-3">
-                                    <label for="radio-answer-4-3" style="width: 80px;margin-left: 20px;font-weight: normal;"> 筛查</label>
+                                    <label for="radio-answer-4-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
                             </tr>
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        同理心:
                                     </span>
 
-                                    <input type="radio" name="a5" value="0"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 良好</label>
+                                    <input type="radio" name="a5" value="0"   id="radio-answer-5-0">
+                                    <label for="radio-answer-5-0" style="width: 120px;margin-left: 30px;font-weight: normal;"> 良好</label>
 
                                     <input type="radio" name="a5" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 正常</label>
+                                    <label for="radio-answer-5-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
 
-                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 需要提升</label>
+                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-2">
+                                    <label for="radio-answer-5-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
 
-                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 80px;margin-left: 20px;font-weight: normal;"> 筛查</label>
+                                    <input type="radio" name="a5" value="1"   id="radio-answer-5-3">
+                                    <label for="radio-answer-5-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
                             </tr>
                             <tr class="item-line">
                                 <td>
-                                    <span>
+                                    <span  style="font-weight: bold;font-size: 16px">
                                        智商:
                                     </span>
                                     <span style="margin-left: 31px">
@@ -280,8 +300,11 @@
 
                     <table class="content" id="table-1">
                         <tr>
+                            <td style="font-size: 16px;font-weight: bold;">指导建议</td>
+                        </tr>
+                        <tr>
                             <td>
-                                <textarea rows="3" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
+                                <textarea rows="10" style="resize:none;border: 0;width: 80%;height: 100%; background-color: transparent;" id="remarkText"></textarea>
                             </td>
                         </tr>
                     </table>

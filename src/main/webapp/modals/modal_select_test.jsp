@@ -192,7 +192,7 @@
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_FoodAllergy()"><h4
-                    style="color: white;font-size: small">14项慢性食物过敏原</h4></a>
+                    style="color: white;font-size: small">14项慢性食物<br/>过敏原</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
@@ -202,7 +202,7 @@
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="doctorOperate">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Attention()"><h4
-                    style="color: white;font-size: small">儿童智商.注意力评估及指导</h4></a>
+                    style="color: white;font-size: small">儿童智商.注意力<br/>评估及指导</h4></a>
         </div>
 
 

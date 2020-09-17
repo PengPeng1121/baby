@@ -110,7 +110,7 @@
         style="color: white;font-size: small">21项速发过敏原</h4></a>
 
         <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_FoodAllergy()" style="margin-top: 10px"><h4
-        style="color: white;font-size: small">14项慢性食物过敏原</h4></a>
+        style="color: white;font-size: small">14项慢性食物<br/>过敏原</h4></a>
 
         <a type="button" class="btn  modal-box text-center doctorOperate" href="javascript:start_BloodType()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">血型鉴定</h4></a>

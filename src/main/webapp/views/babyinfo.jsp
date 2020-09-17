@@ -1075,7 +1075,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultAttentionType?id=<s:property value="#resultAttention.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultAttention?id=<s:property value="#resultAttention.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>

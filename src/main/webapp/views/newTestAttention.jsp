@@ -60,12 +60,7 @@
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <!-- 问题列表 -->
-                <input id="questionSum" type="hidden" value="<s:property value="DDSTList.size()"/>">
-                <!-- 每组问题的个数 -->
-                <input id="questionMonthSum" type="hidden" value="<s:property value="questionMonthList.size()"/>">
-                <!-- type  题目类型 -->
-                <input id="questionTypeSum" type="hidden" value="<s:property value="questionTypeList.size()"/>">
+                
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
                         <tr style="text-align: center;">
@@ -73,7 +68,7 @@
                                 项目
                             </td>
                             <td style="width: 400px" colspan="4">
-                                项目
+                                程度
                             </td>
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -91,117 +86,118 @@
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="width: 100px" rowspan="5"> 
+                            <td style="" rowspan="5"> 
                                 注意力
                             </td>
-                            <td style="width: 100px"> 
+                            <td style=""> 
                                 抗干扰
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-1 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-1 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-1 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-1 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="width: 100px"> 
+                            <td style=""> 
                                 转移
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-2 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-2 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-2 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-2 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="width: 100px"> 
+                            <td style=""> 
                                 分配
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-3 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-3 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-3 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-3 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="width: 100px"> 
+                            <td style=""> 
                                 广度
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-4 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-4 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-4 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-4 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-
-                            <td style="width: 100px"> 
+                        </tr>
+                        <tr class="question">
+                            <td style=""> 
                                 同理心
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-5 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-5 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-5 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
-                            <td style="width: 10%" onclick="select(this)">
+                            <td style="" onclick="select(this)">
                                 <span class="answer-5 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
                                 </span>
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="width: 100px"> 
+                            <td style=""> 
                                 智商
                             </td>
-                            <td colspan="3"> 
+                            <td colspan="4"> 
                                 <input id="score" style="width: 100%" /> 
                             </td>
                         </tr>
@@ -214,7 +210,7 @@
                 <div class="panel-heading">指导建议</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12">
-                        <textarea rows="5"  id="remark" style="width: 800px"></textarea>
+                        <textarea rows="10"  id="remark" style="width: 800px"></textarea>
                     </div>
                 </div>
             </div>
@@ -234,15 +230,13 @@
 
     var questionSum = 26;
     var questionScore = [0,0,0,0,0,0];
-    var result = [0,0,0,0,0]
+    var resultArr = [0,0,0,0,0]
     var resultMap = {
         a: 0,
         b: 1,
         c: 2,
         d: 3
     }
-    var remark = $('#remark').val();
-    var score = parseInt($('#score').val());
 
 
     function prepare() {
@@ -254,21 +248,25 @@
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
-                    var data = "{";
-                    data += "'resultAttention.a1':" + result[0] + ",";
-                    data += "'resultAttention.a2':" + result[1] + ",";
-                    data += "'resultAttention.a3':" + result[2] + ",";
-                    data += "'resultAttention.a4':" + result[3] + ",";
-                    data += "'resultAttention.a5':" + result[4] + ",";
-                    data += "'resultAttention.remark':" + remark + ",";
-                    data += "'resultAttention.score':" + score + ",";
-                    data += "'resultAttention.babyId':" + $("#babyid").val() + "}";
+                    var data = {};
+                    var remark = $('#remark').val();
+                    var score = parseInt($('#score').val());
+                    var babyid = parseInt($('#babyid').val());
+                    data['resultAttention.a1'] = resultArr[0];
+                    data['resultAttention.a2'] = resultArr[1];
+                    data['resultAttention.a3'] = resultArr[2];
+                    data['resultAttention.a4'] = resultArr[3];
+                    data['resultAttention.a5'] = resultArr[4];
+                    data['resultAttention.suggest'] = remark;
+                    data['resultAttention.score'] = score;
+                    data['resultAttention.babyId'] = babyid;
+                    
                     
 
                     $.ajax({
                         url: 'saveresultAttention',
                         type: 'post',
-                        data: eval('(' + data + ')'),
+                        data: data,
                         success:function (json) {
                             window.location = "showresultAttention?id=" + json.resultAttention.id;
                         }
@@ -296,8 +294,8 @@
         $span.addClass('show').removeClass('hide');
         var questionIndex = $span.attr('class').split(' ')[0].replace('answer-', '');
         var value = resultMap[$span.attr('class').split(' ')[1]]
-        result [questionIndex-1] = value
-        console.log(result)
+        resultArr [questionIndex-1] = value
+        console.log(resultArr)
     }
 
 </script>
