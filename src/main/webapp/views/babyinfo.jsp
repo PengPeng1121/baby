@@ -56,7 +56,7 @@
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
                     <s:iterator value="resultList" var="re">
-                        <tr>
+                        <tr class="old-test manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -81,7 +81,7 @@
                     </s:iterator>
 
                     <s:iterator value="result2016List" var="re">
-                        <tr>
+                        <tr class="new-test manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -104,8 +104,6 @@
                             </td>
                         </tr>
                     </s:iterator>
-
-
 
                     <!-- <s:iterator value="result3_6List" var="re3_6">
                         <tr>
@@ -136,7 +134,6 @@
                         </tr>
                     </s:iterator> -->
 
-
                     <!-- <s:iterator value="result0_2List" var="re0_2">
                         <tr>
                             <td>
@@ -165,7 +162,6 @@
                             </td>
                         </tr>
                     </s:iterator> -->
-
 
                     <!-- <s:iterator value="result0_3List" var="re0_3">
                         <tr>
@@ -196,7 +192,6 @@
                         </tr>
                     </s:iterator> -->
 
-
                     <!-- <s:iterator value="result50List" var="re50">
                         <tr>
                             <td>
@@ -221,8 +216,6 @@
                             </td>
                         </tr>
                     </s:iterator> -->
-
-
 
                     <!-- <s:iterator value="result132List" var="re132">
                         <tr>
@@ -249,8 +242,6 @@
                         </tr>
                     </s:iterator> -->
 
-
-
                     <!-- <s:iterator value="resultCognizeList" var="reCognize">
                         <tr>
                             <td>
@@ -275,7 +266,6 @@
                             </td>
                         </tr>
                     </s:iterator> -->
-
 
                     <!-- <s:iterator value="result0_3List" var="re0_3">
                         <tr>
@@ -307,7 +297,7 @@
                     </s:iterator> -->
 
                     <s:iterator value="resultDDSTList" var="resultDDST">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -381,8 +371,6 @@
                         </tr>
                     </s:iterator> -->
 
-
-
                     <!-- <s:iterator value="resultQiZhiList" var="resultQiZhi">
                         <tr>
                             <td>
@@ -407,7 +395,6 @@
                             </td>
                         </tr>
                     </s:iterator> -->
-
 
                     <!-- <s:iterator value="resultFeelList" var="resultFeel">
                         <tr>
@@ -434,9 +421,8 @@
                         </tr>
                     </s:iterator> -->
 
-
                     <s:iterator value="resultFeel2020List" var="resultFeel2020">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -460,9 +446,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultGroup2020List" var="resultGroup2020">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -486,9 +471,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultPhysicalList" var="resultPhysical">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -512,9 +496,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultSummaryList" var="resultSummary">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -538,10 +521,8 @@
                         </tr>
                     </s:iterator>
 
-
-
                     <s:iterator value="resultAllergyList" var="resultAllergy">
-                        <tr>
+                        <tr class="manage doctorOperate parent view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -566,7 +547,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultBasic2List" var="resultBasic2">
-                        <tr>
+                        <tr class="manage doctorOperate parent view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -590,10 +571,8 @@
                         </tr>
                     </s:iterator>
 
-
-
                     <s:iterator value="resultToothList" var="resultTooth">
-                        <tr>
+                        <tr class="manage doctorOperate tooth view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -610,16 +589,15 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultTooth?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultFeedList" var="resultFeed">
-                        <tr>
+                        <tr class="manage doctorOperate feed view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -643,12 +621,8 @@
                         </tr>
                     </s:iterator>
 
-
-
-
-
                     <s:iterator value="resultBasic1List" var="resultBasic1">
-                        <tr>
+                        <tr class="manage doctorOperate parent view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -672,9 +646,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">
-                        <tr>
+                        <tr class="manage doctorOperate qizhi view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -698,9 +671,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultPlanList" var="resultPlan">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -724,9 +696,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultBlessList" var="resultBless">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -750,9 +721,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultRearList" var="resultRear">
-                        <tr>
+                        <tr class="manage doctorOperate qizhi view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -776,9 +746,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultEyeList" var="resultEye">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -802,9 +771,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultEarList" var="resultEar">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -828,9 +796,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultBMDList" var="resultBMD">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -855,7 +822,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultBloodList" var="resultBlood">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -880,7 +847,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultMicroList" var="resultMicro">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -905,7 +872,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultBoneList" var="resultBone">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -929,9 +896,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultUrineList" var="resultUrine">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -955,9 +921,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultHBsList" var="resultHBs">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -982,7 +947,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultFastAllergyList" var="resultFastAllergy">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -1007,7 +972,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultFoodAllergyList" var="resultFoodAllergy">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -1032,7 +997,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultBloodTypeList" var="resultBloodType">
-                        <tr>
+                        <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -1056,9 +1021,8 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultAttentionList" var="resultAttention">
-                        <tr>
+                        <tr class="manage doctorOperate heart view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -1081,14 +1045,6 @@
                             </td>
                         </tr>
                     </s:iterator>
-
-
-
-
-
-
-
-
 
                     </tbody>
                 </table>
@@ -1113,6 +1069,53 @@
     function editbaby(bid){
         window.location = "record/editbabyinfo?babyid=" + bid;
     }
+
+
+    var hoid = parseInt($("#hoid").val());
+    var username = $("#username").val();
+    console.log(hoid + username)
+
+
+    // 适配陆总
+    if (hoid != 2) {
+        $('.old-test').hide();
+    } else {
+        $('.new-test').hide();
+    }
+
+
+
+    if (username == '家长填报') {
+        console.log('家长视角。。。。。。');
+        $('.view').hide();
+        $('.parent').show();
+    }
+
+    if (username == '心理测评师') {
+        console.log('心理测评师视角。。。。。。');
+        $('.view').hide();
+        $('.heart').show();
+    }
+
+    if (username == '气质测评师') {
+        console.log('气质测评师视角。。。。。。');
+        $('.view').hide();
+        $('.qizhi').show();
+    }
+
+    if (username == '牙齿测评师') {
+        console.log('牙齿测评师视角。。。。。。');
+        $('.view').hide();
+        $('.tooth').show();
+    }
+
+    if (username == '营养师') {
+        console.log('营养师视角。。。。。。');
+        $('.view').hide();
+        $('.feed').show();
+    }
+
+
 
     
 

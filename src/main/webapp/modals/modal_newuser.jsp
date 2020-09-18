@@ -51,10 +51,6 @@
             $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '姓名长度至少为两位！'});
         } else if($("#name").val().trim().length >20){
             $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '姓名长度不能超过二十位！'});
-        }else if(NumofName($("#name").val().trim()) == true){
-            $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '姓名中不能有数字！'});
-        } else if(ischina($("#name").val().trim()) == false) {
-            $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '姓名格式不正确！'});
         }else if($("#email").val().trim().length != 0 && isEmail($("#email").val().trim()) == false){
             $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '邮箱格式不正确！'});
         }
