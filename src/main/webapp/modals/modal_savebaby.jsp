@@ -82,37 +82,37 @@
         <a type="button" class="btn  modal-box text-center manage doctorOperate qizhi view" href="javascript:start_Rear()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">养育风格指导</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Eye()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate hushi view" href="javascript:start_Eye()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">视力</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Ear()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate hushi view" href="javascript:start_Ear()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">听力</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_BMD()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate hushi view" href="javascript:start_BMD()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">骨密度</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Blood()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_Blood()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">血常规</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Micro()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_Micro()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">微量元素</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Bone()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_Bone()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">骨碱酶</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Urine()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_Urine()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">尿常规</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_HBs()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_HBs()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">乙肝</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_FastAllergy()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_FastAllergy()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">21项速发过敏原</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_FoodAllergy()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_FoodAllergy()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">14项慢性食物<br/>过敏原</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_BloodType()" style="margin-top: 10px"><h4
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_BloodType()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">血型鉴定</h4></a>
 
         <a type="button" class="btn  modal-box text-center manage doctorOperate heart view" href="javascript:start_Attention()" style="margin-top: 10px"><h4
@@ -168,6 +168,18 @@
         console.log('营养师视角。。。。。。');
         $('.view').hide();
         $('.feed').show();
+    }
+
+    if (username.indexOf('检验师') != -1) {
+        console.log('检验师视角。。。。。。');
+        $('.view').hide();
+        $('.jianyan').show();
+    }
+
+    if (username.indexOf('护士') != -1) {
+        console.log('护士视角。。。。。。');
+        $('.view').hide();
+        $('.hushi').show();
     }
 
 

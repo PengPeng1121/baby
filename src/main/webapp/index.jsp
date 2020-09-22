@@ -779,7 +779,7 @@
 
                 <!-- 视力(河马) -->
                 <s:if test="resultEyeLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate hushi view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -811,7 +811,7 @@
 
                 <!-- 听力(河马) -->
                 <s:if test="resultEarLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate hushi view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -843,7 +843,7 @@
 
                 <!-- 骨密度(河马) -->
                 <s:if test="resultBMDLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate hushi view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -874,7 +874,7 @@
 
                 <!-- 血常规(河马) -->
                 <s:if test="resultBloodLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -906,7 +906,7 @@
 
                 <!-- 微量元素(河马) -->
                 <s:if test="resultMicroLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -938,7 +938,7 @@
 
                 <!-- 骨碱酶(河马) -->
                 <s:if test="resultBoneLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -969,7 +969,7 @@
 
                 <!-- 尿常规(河马) -->
                 <s:if test="resultUrineLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1000,7 +1000,7 @@
 
                 <!-- 乙肝(河马) -->
                 <s:if test="resultHBsLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1031,7 +1031,7 @@
 
                 <!-- 21项速发过敏原(河马) -->
                 <s:if test="resultFastAllergyLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1062,7 +1062,7 @@
 
                 <!-- 14项慢性食物过敏原(河马) -->
                 <s:if test="resultFoodAllergyLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate  jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1093,7 +1093,7 @@
 
                 <!-- 血型鉴定(河马) -->
                 <s:if test="resultBloodTypeLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate view">
+                <div class="col-md-3  manage doctorOperate jianyan view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1328,6 +1328,19 @@
         console.log('营养师视角。。。。。。');
         $('.view').hide();
         $('.feed').show();
+    }
+
+    if (username.indexOf('检验师') != -1) {
+        console.log('检验师视角。。。。。。');
+        $('.view').hide();
+        $('.jianyan').show();
+    }
+
+
+    if (username.indexOf('护士') != -1) {
+        console.log('护士视角。。。。。。');
+        $('.view').hide();
+        $('.hushi').show();
     }
 
 
