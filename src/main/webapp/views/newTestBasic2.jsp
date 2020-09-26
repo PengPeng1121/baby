@@ -33,7 +33,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童生长发育2020</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">生产、既往、家族史</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -284,7 +284,9 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-primary pull-right" onclick="save()" >保存</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基本信息</a>
+                <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a>
             </div>
         </form>
     </div>
@@ -310,8 +312,64 @@
         
     }
 
+    function saveAndBasic1() {
+        
+            $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                if(result) {
+                    scoreAndBasic1();
+                }
+            });
+        
+    }
 
-    function score() {
+    function saveAndAllergy() {
+        
+            $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                if(result) {
+                    scoreAndAllergy();
+                }
+            });
+        
+    }
+
+
+    function score() {        
+        $.ajax({
+            url: 'saveresultBasic2',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "showresultBasic2?id=" + json.resultBasic2.id;
+            }
+        })
+    }
+
+
+    function scoreAndBasic1() {        
+        $.ajax({
+            url: 'saveresultBasic2',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "newtestBasic1?babyid=" + parseInt($("#babyid").val());
+            }
+        })
+    }
+
+
+    function scoreAndAllergy() {        
+        $.ajax({
+            url: 'saveresultBasic2',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "newtestAllergy?babyid=" + parseInt($("#babyid").val());
+            }
+        })
+    }
+
+
+    function getData() {
         var isNormalChildbirth,
             childbirthSituation,
             babyBirthWeekAge,
@@ -366,18 +424,10 @@
         data['resultBasic2.isHeredityDisease4'] = parseInt($("input:radio[name='isHeredityDisease4']:checked").val());
         data['resultBasic2.isAllergyHistory'] = parseInt($("input:radio[name='isAllergyHistory']:checked").val());
         data['resultBasic2.allergySituation'] = $("#allergySituation").val();
-
-        
-        
-        $.ajax({
-            url: 'saveresultBasic2',
-            type: 'post',
-            data: data,
-            success:function (json) {
-                window.location = "showresultBasic2?id=" + json.resultBasic2.id;
-            }
-        })
+        return data;
     }
+
+
 
 
 </script>

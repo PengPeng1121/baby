@@ -57,8 +57,7 @@
         <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Summary()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">总评</h4></a>
 
-        <a type="button" class="btn  modal-box text-center manage doctorOperate parent view" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
-        style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
+        
 
 
         <a type="button" class="btn  modal-box text-center manage doctorOperate tooth view" href="javascript:start_Tooth()" style="margin-top: 10px"><h4
@@ -72,6 +71,9 @@
 
         <a type="button" class="btn  modal-box text-center manage doctorOperate parent view" href="javascript:start_Basic2()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">生产史、既往史<br/>家族史</h4></a>
+
+        <a type="button" class="btn  modal-box text-center manage doctorOperate parent view" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
 
         <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Plan()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">定制化方案</h4></a>

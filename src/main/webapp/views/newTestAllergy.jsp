@@ -33,7 +33,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">体格头面检查</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">食物过敏或不耐受风险评估</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -337,7 +337,9 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-primary pull-right" onclick="save()" >保存</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基础信息</a>
+                <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a>
             </div>
 
             <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
@@ -367,8 +369,66 @@
         
     }
 
+    function saveAndBasic1() {
+        
+            $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                if(result) {
+                    scoreAndBasic1();
+                }
+            });
+        
+    }
 
-    function score() {
+    function saveAndAllergy() {
+        
+            $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+                if(result) {
+                    scoreAndAllergy();
+                }
+            });
+        
+    }
+
+
+    function score() {        
+        $.ajax({
+            url: 'saveresultAllergy',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "showresultAllergy?id=" + json.resultBasic2.id;
+            }
+        })
+    }
+
+
+    function scoreAndBasic1() {        
+        $.ajax({
+            url: 'saveresultAllergy',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "newtestBasic1?babyid=" + parseInt($("#babyid").val());
+            }
+        })
+    }
+
+
+    function scoreAndBasic2() {        
+        $.ajax({
+            url: 'saveresultAllergy',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+            }
+        })
+    }
+
+
+
+
+    function getData() {
         var r1 = parseInt($("input:radio[name='answer-1']:checked").val());
         var r2 = parseInt($("input:radio[name='answer-2']:checked").val());
         var r3 = parseInt($("input:radio[name='answer-3']:checked").val());
@@ -407,16 +467,7 @@
         data['resultAllergy.r14'] = r14;
         data['resultAllergy.r15'] = r15;
 
-
-
-        $.ajax({
-            url: 'saveresultAllergy',
-            type: 'post',
-            data: data,
-            success:function (json) {
-                window.location = "showresultAllergy?id=" + json.resultAllergy.id;
-            }
-        })
+        return data
     }
 
 
