@@ -81,7 +81,11 @@
     var testId = 0;
     //获取url参数
     testId = $.getUrlParam('testId');
-    function searchbaby(){
+
+    AllBabyDivPage(1);
+
+
+    function searchbaby(page){
         var babyName = $("#baby-name").val().trim();
         var babyBirth = $("#baby-birth").val().trim();
         var parentName = $("#parent-name").val().trim();
@@ -97,7 +101,8 @@
                     parentName:parentName,
                     parentTel:parentTel,
                     babyBirth:babyBirth,
-                    testId: 0
+                    testId: testId,
+                    page: page
                 },
                 success:function(html){
                     $("#search_result").html(html);
@@ -129,12 +134,18 @@
             parentName:'',
             parentTel:'',
             babyBirth:'',
-            testId: testId
+            testId: testId,
+            page: 1
         },
         success:function(html){
             $("#search_result").html(html);
         }
     })
+
+
+    function AllBabyDivPage(page) {
+        searchbaby(page)
+    }
 </script>
 </body>
 </html>

@@ -63,6 +63,9 @@
 </s:else>
 
 <script type="text/javascript">
+    var divHtml = $.getDivPageHtml(<s:property value="page"/>,<s:property value="pageNum"/>,"AllBabyDivPage");
+    debugger;
+    $("#list-page").html(divHtml);
     function selecttest(bid,birth){
 //        if(birth >= 84){
 //            $.tipModal('alert', 'info', '该儿童超出本系统测查年龄！');

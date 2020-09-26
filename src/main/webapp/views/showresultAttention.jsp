@@ -265,7 +265,7 @@
                                     
                                 </td>
                             </tr>
-                            <tr class="item-line">
+                            <!-- <tr class="item-line">
                                 <td>
                                     <span  style="font-weight: bold;font-size: 16px">
                                        同理心:
@@ -284,7 +284,7 @@
                                     <label for="radio-answer-5-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
                                     
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr class="item-line">
                                 <td>
                                     <span  style="font-weight: bold;font-size: 16px">

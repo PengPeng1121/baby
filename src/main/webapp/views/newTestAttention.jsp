@@ -86,7 +86,7 @@
                             </td>
                         </tr>
                         <tr class="question">
-                            <td style="" rowspan="5"> 
+                            <td style="" rowspan="4"> 
                                 注意力
                             </td>
                             <td style=""> 
@@ -174,27 +174,6 @@
                         </tr>
                         <tr class="question">
                             <td style=""> 
-                                同理心
-                            </td>
-                            <td style="" onclick="select(this)">
-                                <span class="answer-5 a hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
-                                </span>
-                            </td>
-                            <td style="" onclick="select(this)">
-                                <span class="answer-5 b hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
-                                </span>
-                            </td>
-                            <td style="" onclick="select(this)">
-                                <span class="answer-5 c hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
-                                </span>
-                            </td>
-                            <td style="" onclick="select(this)">
-                                <span class="answer-5 d hide glyphicon glyphicon-ok" style="top: 4px; color: green; text-align:center">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="question">
-                            <td style=""> 
                                 智商
                             </td>
                             <td colspan="4"> 
@@ -256,7 +235,7 @@
                     data['resultAttention.a2'] = resultArr[1];
                     data['resultAttention.a3'] = resultArr[2];
                     data['resultAttention.a4'] = resultArr[3];
-                    data['resultAttention.a5'] = resultArr[4];
+                    data['resultAttention.a5'] = 0;
                     data['resultAttention.suggest'] = remark;
                     data['resultAttention.score'] = score;
                     data['resultAttention.babyId'] = babyid;
