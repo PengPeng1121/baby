@@ -90,23 +90,38 @@
         var babyBirth = $("#baby-birth").val().trim();
         var parentName = $("#parent-name").val().trim();
         var parentTel = $("#parent-tel").val().trim();
-        if(babyName.length == 0 && parentName.length == 0 && parentTel.length == 0){
-            $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写搜索内容！'});
-        }else {
-            $.ajax({
-                url:"record/searchBabyByHoid",
-                type:"post",
-                data:{
-                    babyName:babyName,
-                    parentName:parentName,
-                    parentTel:parentTel,
-                    babyBirth:babyBirth
-                },
-                success:function(html){
-                    $("#search_result").html(html);
-                }
-            })
-        }
+        // if(babyName.length == 0 && parentName.length == 0 && parentTel.length == 0){
+        //     $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写搜索内容！'});
+        // }else {
+        //     $.ajax({
+        //         url:"record/searchBabyByHoid",
+        //         type:"post",
+        //         data:{
+        //             babyName:babyName,
+        //             parentName:parentName,
+        //             parentTel:parentTel,
+        //             babyBirth:babyBirth
+        //         },
+        //         success:function(html){
+        //             $("#search_result").html(html);
+        //         }
+        //     })
+        // }
+
+
+        $.ajax({
+            url:"record/searchBabyByHoid",
+            type:"post",
+            data:{
+                babyName:babyName,
+                parentName:parentName,
+                parentTel:parentTel,
+                babyBirth:babyBirth
+            },
+            success:function(html){
+                $("#search_result").html(html);
+            }
+        })
     }
 
     function cancelSearch() {
