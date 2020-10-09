@@ -9,6 +9,7 @@ import com.free4lab.babycheckup.model.Parent;
 import com.free4lab.babycheckup.model.User;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.util.CollectionUtils;
 
 import java.text.ParsePosition;
 import java.util.*;
@@ -100,19 +101,39 @@ public class BabyAction {
 
             }
         }
-        if(testId==null || testId == 0){
-            babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
-        }else if(testId != null){
-            babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        // 如果没有传 默认1
+        if(page==0){
+            page = 1;
         }
-
-        if(babyList!=null && babyList.size()>0){
-            //默认显示5条
-            if(babyList.size()>5){
-                //移除
-                babyList= babyList.subList(0,5);
+        if(testId==null || testId == 0){
+            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, 0, 0,false);
+            if(!CollectionUtils.isEmpty(babyAllList)){
+                babyNumber = babyAllList.size();
+                if(babyNumber % PAGE_SIZE != 0){
+                    pageNum =  (babyNumber / PAGE_SIZE) + 1;
+                }else {
+                    pageNum =  babyNumber / PAGE_SIZE;
+                }
+                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, page, PAGE_SIZE,true);
+            }else {
+                babyNumber = 0;
+            }
+        }else if(testId != null){
+            // 查询所有
+            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, 0,0,false);
+            if(!CollectionUtils.isEmpty(babyAllList)){
+                babyNumber = babyAllList.size();
+                if(babyNumber % PAGE_SIZE != 0){
+                    pageNum =  (babyNumber / PAGE_SIZE) + 1;
+                }else {
+                    pageNum =  babyNumber / PAGE_SIZE;
+                }
+                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, page, PAGE_SIZE,true);
+            }else {
+                babyNumber = 0;
             }
         }
+
         babyList = calculateMonthage(babyList);
         return "success";
     }
@@ -129,17 +150,40 @@ public class BabyAction {
 
             }
         }
-        if(testId==null || testId == 0){
-            babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid);
-        }else if(testId != null){
-            babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId);
+        // 如果没有传 默认1
+        if(page==0){
+            page = 1;
         }
-        if(babyList!=null && babyList.size()>0){
-            //默认显示5条
-            if(babyList.size()>5){
-                babyList =  babyList.subList(0,5);
+        if(testId==null || testId == 0){
+            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, 0, 0,false);
+            if(!CollectionUtils.isEmpty(babyAllList)){
+                babyNumber = babyAllList.size();
+                if(babyNumber % PAGE_SIZE != 0){
+                    pageNum =  (babyNumber / PAGE_SIZE) + 1;
+                }else {
+                    pageNum =  babyNumber / PAGE_SIZE;
+                }
+                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, page, PAGE_SIZE,true);
+            }else {
+                babyNumber = 0;
+            }
+        }else if(testId != null){
+            // 查询所有
+            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, 0, 0,false);
+            if(!CollectionUtils.isEmpty(babyAllList)){
+                babyNumber = babyAllList.size();
+                if(babyNumber % PAGE_SIZE != 0){
+                    pageNum =  (babyNumber / PAGE_SIZE) + 1;
+                }else {
+                    pageNum =  babyNumber / PAGE_SIZE;
+                }
+
+                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, page, PAGE_SIZE,true);
+            }else {
+                babyNumber = 0;
             }
         }
+
         babyList = calculateMonthage(babyList);
         return "success";
     }
@@ -514,6 +558,9 @@ public class BabyAction {
     }
 
     public List<Baby> calculateMonthage(List<Baby> babyList){
+        if(CollectionUtils.isEmpty(babyList)){
+            return babyList;
+        }
         for(Baby b:babyList){
             Date d1 = b.getBirthday();
             Date d2 = new Date(new java.util.Date().getTime());

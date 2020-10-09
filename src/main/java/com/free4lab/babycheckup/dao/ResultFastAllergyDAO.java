@@ -47,7 +47,7 @@ public class ResultFastAllergyDAO extends AbstractDAO<ResultFastAllergy> {
         List<ResultFastAllergy> resultList = new ArrayList<ResultFastAllergy>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultFastAllergy findResultByid(int rid){

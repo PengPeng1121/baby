@@ -2,20 +2,23 @@ package com.free4lab.babycheckup.action;
 
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultBasic1Manager;
+import com.free4lab.babycheckup.manager.ResultRearManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultBasic1;
 import com.free4lab.babycheckup.utils.FileUtil;
+import com.opensymphony.xwork2.ActionContext;
 
-import java.sql.Date;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2017/6/29.
  */
 public class ResultBasic1Action {
-    private int resultid;
+    private int resultId;
     private Baby baby;
     private int id;
     private ResultBasic1 resultBasic1;
@@ -30,12 +33,27 @@ public class ResultBasic1Action {
         resultBasic1.setHeadImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBasic1.getHeadImgUrl());
         baby = BabyManager.findById(resultBasic1.getBabyId());
         Date d1 = baby.getBirthday();
-        stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBasic1.getTime());
-        Date d2 = Date.valueOf(stime);
+        stime = new SimpleDateFormat("yyyy-MM-dd").format(resultBasic1.getTime());
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(resultBasic1.getTime());
+        Date d2 = cal.getTime();
         monthage = diffDays(d1,d2);
         return SUCCESS;
     }
 
+    public String updateResultBasic1() {
+        ResultBasic1 old = ResultBasic1Manager.findResultByid(resultId);
+        if(resultBasic1 == null){
+            return "fail";
+        }
+        if(resultId != resultBasic1.getId() || old.getBabyId() != resultBasic1.getBabyId()){
+            return "fail";
+        }
+        resultBasic1.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        resultBasic1.setUpdateTime(new Date());
+        resultBasic1 = ResultBasic1Manager.update(resultBasic1);
+        return SUCCESS;
+    }
 
     public Double diffDays(java.util.Date d1, java.util.Date d2){
         DecimalFormat df=new DecimalFormat("0.0");
@@ -82,12 +100,12 @@ public class ResultBasic1Action {
         this.monthage = monthage;
     }
 
-    public int getResultid() {
-        return resultid;
+    public int getResultId() {
+        return resultId;
     }
 
-    public void setResultid(int resultid) {
-        this.resultid = resultid;
+    public void setResultId(int resultId) {
+        this.resultId = resultId;
     }
 
     public ResultBasic1 getResultBasic1() {

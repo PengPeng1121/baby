@@ -47,7 +47,7 @@ public class ResultBloodTypeDAO extends AbstractDAO<ResultBloodType> {
         List<ResultBloodType> resultList = new ArrayList<ResultBloodType>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultBloodType findResultByid(int rid){

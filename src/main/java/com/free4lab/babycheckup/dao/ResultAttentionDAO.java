@@ -47,7 +47,7 @@ public class ResultAttentionDAO extends AbstractDAO<ResultAttention> {
         List<ResultAttention> resultList = new ArrayList<ResultAttention>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultAttention findResultByid(int rid){

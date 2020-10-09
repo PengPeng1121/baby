@@ -1,6 +1,7 @@
 package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultBasic2DAO;
+import com.free4lab.babycheckup.model.ResultBasic1;
 import com.free4lab.babycheckup.model.ResultBasic2;
 
 import java.util.List;
@@ -25,4 +26,9 @@ public class ResultBasic2Manager {
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultBasic2 update(ResultBasic2 resultBasic2) {
+        return getInstance().update(resultBasic2);
+    }
+
 }

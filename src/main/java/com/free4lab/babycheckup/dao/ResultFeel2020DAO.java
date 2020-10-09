@@ -47,7 +47,7 @@ public class ResultFeel2020DAO extends AbstractDAO<ResultFeel2020> {
         List<ResultFeel2020> resultList = new ArrayList<ResultFeel2020>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultFeel2020 findResultByid(int rid){

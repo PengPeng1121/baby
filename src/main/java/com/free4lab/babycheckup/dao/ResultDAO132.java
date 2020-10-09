@@ -47,7 +47,7 @@ public class ResultDAO132 extends AbstractDAO<Result132> {
         List<Result132> resultList = new ArrayList<Result132>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public Result132 findResultByid(int rid){

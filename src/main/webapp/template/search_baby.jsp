@@ -7,7 +7,7 @@
 </s:if>
 <s:else>
     <div class="front-resource-info clearfix" style="margin-left: 13px;margin-bottom: 13px">
-        <div class="pull-left">搜索结果共<s:property value="babyList.size()"/>个</div>
+        <div class="pull-left">搜索结果共<s:property value="babyNumber"/>个</div>
     </div>
     <div class="panel panel-default front-panel" style="margin:0;">
         <div class="panel-body" style="padding: 0;">

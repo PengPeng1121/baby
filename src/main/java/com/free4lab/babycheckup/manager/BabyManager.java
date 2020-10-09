@@ -72,7 +72,7 @@ public class BabyManager {
         return baby;
     }
 
-    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid){
+    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid,int page,int pageSize,boolean unionFlag){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
@@ -88,15 +88,17 @@ public class BabyManager {
             parentParams.put("tel", parentTel);
         }
         List<Baby> babyList = new ArrayList<Baby>();
-        babyList = getBabyDAOInstance().findBabyList(babyParams, parentParams, hoid);
-        for(Baby baby : babyList) {
-            baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
-            baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+        babyList = getBabyDAOInstance().findBabyList(babyParams, parentParams, hoid,page,pageSize);
+        if(unionFlag){
+            for(Baby baby : babyList) {
+                baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
+                baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+            }
         }
         return babyList;
     }
 
-    public static List<Baby> findBySearchWithTestId(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId){
+    public static List<Baby> findBySearchWithTestId(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId,int page,int pageSize,boolean unionFlag){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
@@ -112,10 +114,12 @@ public class BabyManager {
             parentParams.put("tel", parentTel);
         }
         List<Baby> babyList = new ArrayList<Baby>();
-        babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId);
-        for(Baby baby : babyList) {
-            baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
-            baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+        babyList =  getBabyDAOInstance().findBabyListBySearch(babyParams, parentParams, hoid,testId,page,pageSize);
+        if(unionFlag){
+            for(Baby baby : babyList) {
+                baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
+                baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+            }
         }
         return babyList;
     }

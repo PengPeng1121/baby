@@ -47,7 +47,7 @@ public class ResultBasic1DAO extends AbstractDAO<ResultBasic1> {
         List<ResultBasic1> resultList = new ArrayList<ResultBasic1>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",true);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultBasic1 findResultByid(int rid){

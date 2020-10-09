@@ -47,7 +47,7 @@ public class ResultQiZhiDAO extends AbstractDAO<ResultQiZhi> {
         List<ResultQiZhi> resultList = new ArrayList<ResultQiZhi>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultQiZhi findResultByid(int rid){

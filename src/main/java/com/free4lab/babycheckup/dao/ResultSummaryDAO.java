@@ -47,7 +47,7 @@ public class ResultSummaryDAO extends AbstractDAO<ResultSummary> {
         List<ResultSummary> resultList = new ArrayList<ResultSummary>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",true);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultSummary findResultByid(int rid){

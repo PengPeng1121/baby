@@ -47,7 +47,7 @@ public class ResultUrineDAO extends AbstractDAO<ResultUrine> {
         List<ResultUrine> resultList = new ArrayList<ResultUrine>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultUrine findResultByid(int rid){

@@ -25,4 +25,9 @@ public class ResultBasic1Manager {
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultBasic1 update(ResultBasic1 resultBasic1) {
+        return getInstance().update(resultBasic1);
+    }
+
 }

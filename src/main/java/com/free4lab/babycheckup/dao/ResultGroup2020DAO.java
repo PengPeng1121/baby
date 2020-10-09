@@ -47,7 +47,7 @@ public class ResultGroup2020DAO extends AbstractDAO<ResultGroup2020> {
         List<ResultGroup2020> resultList = new ArrayList<ResultGroup2020>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",true);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultGroup2020 findResultByid(int rid){

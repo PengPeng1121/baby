@@ -47,7 +47,7 @@ public class ResultEarDAO extends AbstractDAO<ResultEar> {
         List<ResultEar> resultList = new ArrayList<ResultEar>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",false);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultEar findResultByid(int rid){

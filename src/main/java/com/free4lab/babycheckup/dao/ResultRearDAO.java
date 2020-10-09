@@ -47,7 +47,7 @@ public class ResultRearDAO extends AbstractDAO<ResultRear> {
         List<ResultRear> resultList = new ArrayList<ResultRear>();
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("babyId",bid);
-        resultList = findByProperty(params,0,Integer.MAX_VALUE,"time",true);
+        resultList = findByProperty(params,null,null,"time",false);
         return resultList;
     }
     public ResultRear findResultByid(int rid){
