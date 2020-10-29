@@ -289,6 +289,8 @@
         if(prepare()) {
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
+                    
+
                     var data = "{";
                     var questionSelect = [questionSum];
                     for(var i = 0; i < questionSum; i++) {
@@ -337,6 +339,18 @@
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
+                            // var refreshData = {
+                            //     babyid: $("#babyid").val()
+                            // }
+                            // $.ajax({
+                            //     url: 'refreshExamTime',
+                            //     type: 'post',
+                            //     data: refreshData,
+                            //     success:function (json) {
+                            //         console.log('更新时间成功');
+                            //         window.location = "showreult2016?id=" + json.result2016.id;
+                            //     }
+                            // })
                             window.location = "showreult2016?id=" + json.result2016.id;
                         }
                     })

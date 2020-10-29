@@ -8,13 +8,27 @@
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <title>儿童详情-儿童发育评测平台</title>
     <s:include value="/statics/head.html"/>
+    <style>
+        .selected{
+            color: #FFF;
+            background-color: green;
+        }
+        .unSelected{
+            /*color: #f5f5f5;
+            background-color: #FFF;*/
+        }
+    </style>
 </head>
 <body class="front-body">
 <s:include value="nav.jsp?act=records"/>
+
+<input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
+
+
 <div class="front-inner front-inner-media">
     <div class="container">
         <div class="panel panel-default front-panel" id="info">
-            <div class="panel-heading">小儿基本资料</div>
+            <div class="panel-heading">小儿基本资料111</div>
             <div class="panel-body front-no-padding" style="padding:15px;">
                 <div class="col-md-6">
                     <label class="col-md-3 control-label front-label">姓名</label>
@@ -465,6 +479,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -540,6 +555,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -1045,6 +1061,11 @@
                             </td>
                         </tr>
                     </s:iterator>
+                    <tr>
+                        <td>
+                            <button class="btn btn-default pull-right" onclick="report()"> 打印所选报告</button>
+                        </td>
+                    </tr>
 
                     </tbody>
                 </table>
@@ -1057,6 +1078,8 @@
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
     $("#record").addClass("front-active");
+
+    var reportSelect = [];
 
     function selecttest(bid,birth){
 
@@ -1073,8 +1096,51 @@
 
     var hoid = parseInt($("#hoid").val());
     var username = $("#username").val();
+    var babyid = $("#babyid").val();
+    // var babyid = 1227;
     console.log(hoid + username)
 
+
+    function report() {
+        var ps = '';
+        for (var i =0, len = reportSelect.length; i < len; i++) {
+            ps+= reportSelect[i]['resultId'];
+            ps+= '_' + reportSelect[i]['testId'];
+            if (i < (len-1)) {
+                ps+= ','
+            }
+        }
+        window.location = "showresultAll?babyid=" + babyid + "&ps=" + ps;
+    }
+
+
+    function selecReport(target,rId, tId) {
+        var $target = $(target);
+        var tclass = $target.attr('class');
+        if (tclass.indexOf('unSelected') != -1) {
+            for (var i =0, len = reportSelect.length; i < len; i++) {
+                item = reportSelect[i];
+                if (item['testId'] == tId) {
+                    alert('您已选择同一类型测评,请取消原选中');
+                    return;
+                }
+            }
+            $(target).addClass('selected').removeClass('unSelected');
+            reportSelect.push({resultId: rId,testId: tId});
+            console.log(reportSelect);
+        } else {
+            for (var i =0, len = reportSelect.length; i < len; i++) {
+                item = reportSelect[i];
+                if (item['resultId'] == rId) {
+                    reportSelect.splice(i,1);
+                    console.log(reportSelect);
+                    $(target).addClass('unSelected').removeClass('selected');
+                    return;
+                }
+
+            }
+        }
+    }
 
     // 适配陆总
     if (hoid != 2) {
