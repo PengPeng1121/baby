@@ -763,7 +763,18 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultTooth?id=" + json.resultTooth.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultTooth?id=" + json.resultTooth.id;
+                    }
+                })
             }
         })
     }
