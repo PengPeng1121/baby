@@ -4,8 +4,6 @@ import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultFoodAllergyManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.ResultFoodAllergy;
-import com.free4lab.babycheckup.model.ResultHbs;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -22,8 +20,7 @@ public class ResultFoodAllergyAction {
 
     public String showResult() {
         resultFoodAllergy = ResultFoodAllergyManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultFoodAllergy.setFoodAllergyImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultFoodAllergy.getFoodAllergyImgUrl());
+
         baby = BabyManager.findById(resultFoodAllergy.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultFoodAllergy.getTime());

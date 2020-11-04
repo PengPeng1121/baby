@@ -5,7 +5,6 @@ import com.free4lab.babycheckup.manager.ResultEyeManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultEye;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -23,8 +22,7 @@ public class ResultEyeAction {
 
     public String showResultEye() {
         resultEye = ResultEyeManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultEye.setEyeImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultEye.getEyeImgUrl());
+
         baby = BabyManager.findById(resultEye.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultEye.getTime());

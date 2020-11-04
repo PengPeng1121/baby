@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultBasic1DAO;
 import com.free4lab.babycheckup.model.ResultBasic1;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class ResultBasic1Manager {
         return getInstance().findResultByBabyid(BabyId);
     }
     public static ResultBasic1 findResultByid(int id){
-        return getInstance().findResultByid(id);
+        // 拼装url 用虚拟路径
+        ResultBasic1 resultBasic1 = getInstance().findResultByid(id);
+        resultBasic1.setHeadImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBasic1.getHeadImgUrl());
+        return resultBasic1;
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}

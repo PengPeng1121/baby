@@ -124,7 +124,7 @@ public class ResultAction2016 {
 
     public Double diffDays(Date d1, Timestamp d2){
         DecimalFormat df=new DecimalFormat("0.0");
-        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30));
+        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30.4));
     }
 
     public Baby getBaby() {

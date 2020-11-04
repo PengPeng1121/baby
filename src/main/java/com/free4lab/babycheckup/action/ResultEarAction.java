@@ -5,8 +5,6 @@ import com.free4lab.babycheckup.manager.ResultEarManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultEar;
-import com.free4lab.babycheckup.utils.FileUtil;
-import org.apache.commons.lang.StringUtils;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -24,13 +22,7 @@ public class ResultEarAction {
 
     public String showResultEar() {
         resultEar = ResultEarManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        if(StringUtils.isNotEmpty(resultEar.getEarImgUrlFirst())){
-            resultEar.setEarImgUrlFirst(FileUtil.FILE_VIRTUAL_PATH +resultEar.getEarImgUrlFirst());
-        }
-        if(StringUtils.isNotEmpty(resultEar.getEarImgUrlSecond())){
-            resultEar.setEarImgUrlSecond(FileUtil.FILE_VIRTUAL_PATH +resultEar.getEarImgUrlSecond());
-        }
+
         baby = BabyManager.findById(resultEar.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultEar.getTime());

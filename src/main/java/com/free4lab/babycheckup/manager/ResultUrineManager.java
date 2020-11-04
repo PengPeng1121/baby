@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultUrineDAO;
 import com.free4lab.babycheckup.model.ResultUrine;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class ResultUrineManager {
         return getResultUrineDAOInstance().findResultByBabyid(bid);
     }
     public static ResultUrine findResultByid(int rid){
-        return getResultUrineDAOInstance().findResultByid(rid);
+        ResultUrine resultUrine = getResultUrineDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultUrine.setUrineImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultUrine.getUrineImgUrl());
+        return resultUrine;
     }
     public static long countResultByHoid(int hoid) {return getResultUrineDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultUrineDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

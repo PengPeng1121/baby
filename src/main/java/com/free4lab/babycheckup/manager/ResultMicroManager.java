@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultMicroDAO;
 import com.free4lab.babycheckup.model.ResultMicro;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,11 @@ public class ResultMicroManager {
         return getResultMicroDAOInstance().findResultByBabyid(bid);
     }
     public static ResultMicro findResultByid(int rid){
-        return getResultMicroDAOInstance().findResultByid(rid);
+        ResultMicro resultMicro = getResultMicroDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultMicro.setMicroImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultMicro.getMicroImgUrl());
+
+        return resultMicro;
     }
     public static long countResultByHoid(int hoid) {return getResultMicroDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultMicroDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

@@ -29,8 +29,6 @@ public class ResultBasic1Action {
 
     public String showResultBasic1() {
         resultBasic1 = ResultBasic1Manager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultBasic1.setHeadImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBasic1.getHeadImgUrl());
         baby = BabyManager.findById(resultBasic1.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new SimpleDateFormat("yyyy-MM-dd").format(resultBasic1.getTime());

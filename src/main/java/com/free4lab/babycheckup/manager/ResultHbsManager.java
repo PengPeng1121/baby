@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultHbsDAO;
 import com.free4lab.babycheckup.model.ResultHbs;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class ResultHbsManager {
         return getResultHbsDAOInstance().findResultByBabyid(bid);
     }
     public static ResultHbs findResultByid(int rid){
-        return getResultHbsDAOInstance().findResultByid(rid);
+        ResultHbs resultHBs = getResultHbsDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultHBs.setHbsImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultHBs.getHbsImgUrl());
+        return resultHBs;
     }
     public static long countResultByHoid(int hoid) {return getResultHbsDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultHbsDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

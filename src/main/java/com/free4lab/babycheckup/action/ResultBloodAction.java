@@ -5,8 +5,6 @@ import com.free4lab.babycheckup.manager.ResultBloodManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultBlood;
-import com.free4lab.babycheckup.model.ResultEye;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -24,8 +22,7 @@ public class ResultBloodAction {
 
     public String showResult() {
         resultBlood = ResultBloodManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultBlood.setBloodImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBlood.getBloodImgUrl());
+
         baby = BabyManager.findById(resultBlood.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBlood.getTime());

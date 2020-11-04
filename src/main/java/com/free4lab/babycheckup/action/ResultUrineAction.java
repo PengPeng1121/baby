@@ -3,9 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultUrineManager;
 import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.ResultBone;
 import com.free4lab.babycheckup.model.ResultUrine;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -22,8 +20,7 @@ public class ResultUrineAction {
 
     public String showResult() {
         resultUrine = ResultUrineManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultUrine.setUrineImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultUrine.getUrineImgUrl());
+
         baby = BabyManager.findById(resultUrine.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultUrine.getTime());

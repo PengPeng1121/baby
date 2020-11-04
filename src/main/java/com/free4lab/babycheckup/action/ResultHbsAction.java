@@ -4,7 +4,6 @@ import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultHbsManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.ResultHbs;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -21,8 +20,7 @@ public class ResultHbsAction {
 
     public String showResult() {
         resultHBs = ResultHbsManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultHBs.setHbsImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultHBs.getHbsImgUrl());
+
         baby = BabyManager.findById(resultHBs.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultHBs.getTime());

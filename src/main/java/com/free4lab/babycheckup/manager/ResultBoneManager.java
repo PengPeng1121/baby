@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultBoneDAO;
 import com.free4lab.babycheckup.model.ResultBone;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,11 @@ public class ResultBoneManager {
         return getResultBoneDAOInstance().findResultByBabyid(bid);
     }
     public static ResultBone findResultByid(int rid){
-        return getResultBoneDAOInstance().findResultByid(rid);
+        ResultBone resultBone = getResultBoneDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultBone.setBoneImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBone.getBoneImgUrl());
+
+        return resultBone;
     }
     public static long countResultByHoid(int hoid) {return getResultBoneDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBoneDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

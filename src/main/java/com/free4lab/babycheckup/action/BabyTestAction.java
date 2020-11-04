@@ -2,8 +2,17 @@ package com.free4lab.babycheckup.action;
 
 
 import com.free4lab.babycheckup.manager.*;
+import com.free4lab.babycheckup.model.Baby;
+import com.free4lab.babycheckup.model.Result;
+import com.free4lab.babycheckup.model.Result2016;
 import com.free4lab.babycheckup.vo.AllTestResultVo;
+import com.free4lab.babycheckup.vo.OtherResultVo;
 import org.apache.commons.lang.StringUtils;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.text.DecimalFormat;
 
 /**
  * Created by Administrator on 2020/10/28
@@ -11,8 +20,10 @@ import org.apache.commons.lang.StringUtils;
 public class BabyTestAction {
     private String SUCCESS = "success";
     private int babyid;
+    private Baby baby;
     private String ps;
     private AllTestResultVo allTestResultVo;
+    private OtherResultVo otherResultVo;
 
     public String showResultAll(){
         if(StringUtils.isBlank(ps)){
@@ -20,8 +31,9 @@ public class BabyTestAction {
         }
         String[] testResultListArr = ps.split(",");
         allTestResultVo = new AllTestResultVo();
+        otherResultVo = new OtherResultVo();
+        baby = BabyManager.findById(babyid);
         for(int i =0; i<testResultListArr.length;i++){
-            System.out.println(testResultListArr[i]);
             if(StringUtils.isBlank(testResultListArr[i])){
                 continue;
             }
@@ -51,7 +63,26 @@ public class BabyTestAction {
                     allTestResultVo.setResultFeel(ResultFeelManager.findResultByid(resultId));
                     break;
                 case 26:
-                    allTestResultVo.setResult2016(ResultManager2016.findResultByid(resultId));
+                    Result2016 result2016 = ResultManager2016.findResultByid(resultId);
+                    if(null != result2016){
+                        Double monthage = diffDays(baby.getBirthday(),result2016.getTime());
+                        BigDecimal bigDecimalScoreSport = new BigDecimal(result2016.getScoreSport()*100/monthage);
+                        otherResultVo.setScoreSport(bigDecimalScoreSport.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
+
+                        BigDecimal bigDecimalScoreAct = new BigDecimal(result2016.getScoreAct()*100/monthage);
+                        otherResultVo.setScoreAct(bigDecimalScoreAct.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
+
+                        BigDecimal bigDecimalScoreAdapt = new BigDecimal(result2016.getScoreAdapt()*100/monthage);
+                        otherResultVo.setScoreAdapt(bigDecimalScoreAdapt.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
+
+                        BigDecimal bigDecimalScoreLanguage = new BigDecimal(result2016.getScoreLanguage()*100/monthage);
+                        otherResultVo.setScoreLanguage(bigDecimalScoreLanguage.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
+
+                        BigDecimal bigDecimalScoreSocial = new BigDecimal(result2016.getScoreSocial()*100/monthage);
+                        otherResultVo.setScoreSocial( bigDecimalScoreSocial.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
+                    }
+
+                    allTestResultVo.setResult2016(result2016);
                     break;
                 case 27:
                     allTestResultVo.setResultADHD(ResultADHDManager.findResultByid(resultId));
@@ -133,16 +164,21 @@ public class BabyTestAction {
                     break;
             }
         }
-
-        System.out.println(babyid);
-
         return SUCCESS;
     }
 
+    public Double diffDays(Date d1, Timestamp d2){
+        DecimalFormat df=new DecimalFormat("0.0");
+        return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30.4));
+    }
 
+    public Baby getBaby() {
+        return baby;
+    }
 
-
-
+    public void setBaby(Baby baby) {
+        this.baby = baby;
+    }
 
     public int getBabyid() {
         return babyid;
@@ -166,5 +202,13 @@ public class BabyTestAction {
 
     public void setAllTestResultVo(AllTestResultVo allTestResultVo) {
         this.allTestResultVo = allTestResultVo;
+    }
+
+    public OtherResultVo getOtherResultVo() {
+        return otherResultVo;
+    }
+
+    public void setOtherResultVo(OtherResultVo otherResultVo) {
+        this.otherResultVo = otherResultVo;
     }
 }

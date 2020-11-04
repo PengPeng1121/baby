@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultBloodDAO;
 import com.free4lab.babycheckup.model.ResultBlood;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class ResultBloodManager {
         return getResultBloodDAOInstance().findResultByBabyid(bid);
     }
     public static ResultBlood findResultByid(int rid){
-        return getResultBloodDAOInstance().findResultByid(rid);
+        ResultBlood resultBlood = getResultBloodDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultBlood.setBloodImgUrl(FileUtil.FILE_VIRTUAL_PATH + resultBlood.getBloodImgUrl());
+        return resultBlood;
     }
     public static long countResultByHoid(int hoid) {return getResultBloodDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBloodDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

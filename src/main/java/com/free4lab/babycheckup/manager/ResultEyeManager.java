@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultEyeDAO;
 import com.free4lab.babycheckup.model.ResultEye;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,11 @@ public class ResultEyeManager {
         return getResultEyeDAOInstance().findResultByBabyid(bid);
     }
     public static ResultEye findResultByid(int rid){
-        return getResultEyeDAOInstance().findResultByid(rid);
+        ResultEye resultEye = getResultEyeDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultEye.setEyeImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultEye.getEyeImgUrl());
+
+        return resultEye;
     }
     public static long countResultByHoid(int hoid) {return getResultEyeDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultEyeDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

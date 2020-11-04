@@ -5,8 +5,6 @@ import com.free4lab.babycheckup.manager.ResultBMDManager;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Hospital;
 import com.free4lab.babycheckup.model.ResultBMD;
-import com.free4lab.babycheckup.utils.FileUtil;
-import org.apache.commons.lang.StringUtils;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -24,10 +22,7 @@ public class ResultBMDAction {
 
     public String showResultBMD() {
         resultBMD = ResultBMDManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        if(StringUtils.isNotEmpty(resultBMD.getBmdImgUrl())){
-            resultBMD.setBmdImgUrl(FileUtil.FILE_VIRTUAL_PATH + resultBMD.getBmdImgUrl());
-        }
+
         baby = BabyManager.findById(resultBMD.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBMD.getTime());

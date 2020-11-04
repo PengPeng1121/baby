@@ -2,6 +2,7 @@ package com.free4lab.babycheckup.manager;
 
 import com.free4lab.babycheckup.dao.ResultFoodAllergyDAO;
 import com.free4lab.babycheckup.model.ResultFoodAllergy;
+import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.util.List;
 
@@ -21,7 +22,11 @@ public class ResultFoodAllergyManager {
         return getResultFoodAllergyDAOInstance().findResultByBabyid(bid);
     }
     public static ResultFoodAllergy findResultByid(int rid){
-        return getResultFoodAllergyDAOInstance().findResultByid(rid);
+        ResultFoodAllergy resultFoodAllergy = getResultFoodAllergyDAOInstance().findResultByid(rid);
+        // 拼装url 用虚拟路径
+        resultFoodAllergy.setFoodAllergyImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultFoodAllergy.getFoodAllergyImgUrl());
+
+        return resultFoodAllergy;
     }
     public static long countResultByHoid(int hoid) {return getResultFoodAllergyDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultFoodAllergyDAOInstance().countResultByHosIdAndTestId(hoid,testId);}

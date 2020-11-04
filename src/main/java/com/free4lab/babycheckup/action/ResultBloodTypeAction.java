@@ -3,10 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultBloodTypeManager;
 import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.ResultBlood;
 import com.free4lab.babycheckup.model.ResultBloodType;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -23,8 +20,7 @@ public class ResultBloodTypeAction {
 
     public String showResult() {
         resultBloodType = ResultBloodTypeManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultBloodType.setBloodTypeImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBloodType.getBloodTypeImgUrl());
+
         baby = BabyManager.findById(resultBloodType.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBloodType.getTime());

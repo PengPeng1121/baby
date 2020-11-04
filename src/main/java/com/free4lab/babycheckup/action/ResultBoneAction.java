@@ -3,10 +3,7 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.ResultBoneManager;
 import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.ResultBlood;
 import com.free4lab.babycheckup.model.ResultBone;
-import com.free4lab.babycheckup.utils.FileUtil;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
@@ -23,8 +20,7 @@ public class ResultBoneAction {
 
     public String showResult() {
         resultBone = ResultBoneManager.findResultByid(id);
-        // 拼装url 用虚拟路径
-        resultBone.setBoneImgUrl(FileUtil.FILE_VIRTUAL_PATH +resultBone.getBoneImgUrl());
+
         baby = BabyManager.findById(resultBone.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultBone.getTime());
