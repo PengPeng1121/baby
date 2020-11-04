@@ -1004,5 +1004,16 @@
             </result>
         </action>
 
+        <!--baby所有测评-->
+        <action name="showresultAll" method="showResultAll" class="com.free4lab.babycheckup.action.BabyTestAction" >
+            <result name="success">views/showresultAll.jsp</result>
+        </action>
+
+        <!--刷新baby测评时间-->
+        <action name="refreshExamTime" method="refreshExamTime" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">babyid</param>
+            </result>
+        </action>
     </package>
 </struts>

@@ -309,6 +309,19 @@ public class BabyAction {
         return "success";
     }
 
+
+    // 刷新宝宝最近测试时间
+    public String refreshExamTime(){
+        Baby updateBaby = BabyManager.findById(babyid);
+        if(null != updateBaby){
+            //保存
+            updateBaby.setLastTestTime(new Date());
+            BabyManager.update(updateBaby,null,null);
+        }
+        return "success";
+    }
+
+
     public String testMonthage(){
         baby = BabyManager.findById(babyid);
         Date d1 = baby.getBirthday();

@@ -13,6 +13,7 @@ public class Baby {
     private int hoid;
     private int userid;
     private Timestamp time;
+    private java.util.Date lastTestTime;
     private Date birthday;
     private int birth;
     private String nation;
@@ -536,119 +537,14 @@ public class Baby {
         this.bmi = bmi;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Baby baby = (Baby) o;
-
-        if (babyid != baby.babyid) return false;
-        if (gender != baby.gender) return false;
-        if (hoid != baby.hoid) return false;
-        if (userid != baby.userid) return false;
-        if (name != null ? !name.equals(baby.name) : baby.name != null) return false;
-        if (time != null ? !time.equals(baby.time) : baby.time != null) return false;
-        if (birthday != null ? !birthday.equals(baby.birthday) : baby.birthday != null) return false;
-        if (nation != null ? !nation.equals(baby.nation) : baby.nation != null) return false;
-        if (fatherid != null ? !fatherid.equals(baby.fatherid) : baby.fatherid != null) return false;
-        if (motherid != null ? !motherid.equals(baby.motherid) : baby.motherid != null) return false;
-        if (motherIllness != null ? !motherIllness.equals(baby.motherIllness) : baby.motherIllness != null)
-            return false;
-        if (parity != null ? !parity.equals(baby.parity) : baby.parity != null) return false;
-        if (pregnancy != null ? !pregnancy.equals(baby.pregnancy) : baby.pregnancy != null) return false;
-        if (delivery != null ? !delivery.equals(baby.delivery) : baby.delivery != null) return false;
-        if (asphyxia != null ? !asphyxia.equals(baby.asphyxia) : baby.asphyxia != null) return false;
-        if (birthWeight != null ? !birthWeight.equals(baby.birthWeight) : baby.birthWeight != null) return false;
-        if (jaundice != null ? !jaundice.equals(baby.jaundice) : baby.jaundice != null) return false;
-        if (havePumping != null ? !havePumping.equals(baby.havePumping) : baby.havePumping != null) return false;
-        if (pumpingTimes != null ? !pumpingTimes.equals(baby.pumpingTimes) : baby.pumpingTimes != null) return false;
-        if (pumpingBegin != null ? !pumpingBegin.equals(baby.pumpingBegin) : baby.pumpingBegin != null) return false;
-        if (familyHistory != null ? !familyHistory.equals(baby.familyHistory) : baby.familyHistory != null)
-            return false;
-        if (illnessHistory != null ? !illnessHistory.equals(baby.illnessHistory) : baby.illnessHistory != null)
-            return false;
-        if (height != null ? !height.equals(baby.height) : baby.height != null) return false;
-        if (weight != null ? !weight.equals(baby.weight) : baby.weight != null) return false;
-        if (head != null ? !head.equals(baby.head) : baby.head != null) return false;
-        if (diagnosis != null ? !diagnosis.equals(baby.diagnosis) : baby.diagnosis != null) return false;
-        if (remarks != null ? !remarks.equals(baby.remarks) : baby.remarks != null) return false;
-        if (relation != null ? !relation.equals(baby.relation) : baby.relation != null) return false;
-        if (province != null ? !province.equals(baby.province) : baby.province != null) return false;
-        if (city != null ? !city.equals(baby.city) : baby.city != null) return false;
-        if (address != null ? !address.equals(baby.address) : baby.address != null) return false;
-        if (postcode != null ? !postcode.equals(baby.postcode) : baby.postcode != null) return false;
-        if (account != null ? !account.equals(baby.account) : baby.account != null) return false;
-        if (bloodtype != null ? !bloodtype.equals(baby.bloodtype) : baby.bloodtype != null) return false;
-        if (education != null ? !education.equals(baby.education) : baby.education != null) return false;
-        if (preDelivery != null ? !preDelivery.equals(baby.preDelivery) : baby.preDelivery != null) return false;
-        if (deformity != null ? !deformity.equals(baby.deformity) : baby.deformity != null) return false;
-        if (frontalSuture != null ? !frontalSuture.equals(baby.frontalSuture) : baby.frontalSuture != null)
-            return false;
-        if (onlyChild != null ? !onlyChild.equals(baby.onlyChild) : baby.onlyChild != null) return false;
-        if (reason != null ? !reason.equals(baby.reason) : baby.reason != null) return false;
-        if (evaluation != null ? !evaluation.equals(baby.evaluation) : baby.evaluation != null) return false;
-        if (overview != null ? !overview.equals(baby.overview) : baby.overview != null) return false;
-        if (motherBirthage != null ? !motherBirthage.equals(baby.motherBirthage) : baby.motherBirthage != null)
-            return false;
-        if (marriage != null ? !marriage.equals(baby.marriage) : baby.marriage != null) return false;
-        if (sit != null ? !sit.equals(baby.sit) : baby.sit != null) return false;
-        if (bust != null ? !bust.equals(baby.bust) : baby.bust != null) return false;
-        if (bmi != null ? !bmi.equals(baby.bmi) : baby.bmi != null) return false;
-
-        return true;
+    @Basic
+    @Column(name = "last_test_time")
+    public java.util.Date getLastTestTime() {
+        return lastTestTime;
     }
 
-    @Override
-    public int hashCode() {
-        int result = babyid;
-        result = 31 * result + (int) gender;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + hoid;
-        result = 31 * result + userid;
-        result = 31 * result + (time != null ? time.hashCode() : 0);
-        result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
-        result = 31 * result + (nation != null ? nation.hashCode() : 0);
-        result = 31 * result + (fatherid != null ? fatherid.hashCode() : 0);
-        result = 31 * result + (motherid != null ? motherid.hashCode() : 0);
-        result = 31 * result + (motherIllness != null ? motherIllness.hashCode() : 0);
-        result = 31 * result + (parity != null ? parity.hashCode() : 0);
-        result = 31 * result + (pregnancy != null ? pregnancy.hashCode() : 0);
-        result = 31 * result + (delivery != null ? delivery.hashCode() : 0);
-        result = 31 * result + (asphyxia != null ? asphyxia.hashCode() : 0);
-        result = 31 * result + (birthWeight != null ? birthWeight.hashCode() : 0);
-        result = 31 * result + (jaundice != null ? jaundice.hashCode() : 0);
-        result = 31 * result + (havePumping != null ? havePumping.hashCode() : 0);
-        result = 31 * result + (pumpingTimes != null ? pumpingTimes.hashCode() : 0);
-        result = 31 * result + (pumpingBegin != null ? pumpingBegin.hashCode() : 0);
-        result = 31 * result + (familyHistory != null ? familyHistory.hashCode() : 0);
-        result = 31 * result + (illnessHistory != null ? illnessHistory.hashCode() : 0);
-        result = 31 * result + (height != null ? height.hashCode() : 0);
-        result = 31 * result + (weight != null ? weight.hashCode() : 0);
-        result = 31 * result + (head != null ? head.hashCode() : 0);
-        result = 31 * result + (diagnosis != null ? diagnosis.hashCode() : 0);
-        result = 31 * result + (remarks != null ? remarks.hashCode() : 0);
-        result = 31 * result + (relation != null ? relation.hashCode() : 0);
-        result = 31 * result + (province != null ? province.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + (postcode != null ? postcode.hashCode() : 0);
-        result = 31 * result + (account != null ? account.hashCode() : 0);
-        result = 31 * result + (bloodtype != null ? bloodtype.hashCode() : 0);
-        result = 31 * result + (education != null ? education.hashCode() : 0);
-        result = 31 * result + (preDelivery != null ? preDelivery.hashCode() : 0);
-        result = 31 * result + (deformity != null ? deformity.hashCode() : 0);
-        result = 31 * result + (frontalSuture != null ? frontalSuture.hashCode() : 0);
-        result = 31 * result + (onlyChild != null ? onlyChild.hashCode() : 0);
-        result = 31 * result + (reason != null ? reason.hashCode() : 0);
-        result = 31 * result + (evaluation != null ? evaluation.hashCode() : 0);
-        result = 31 * result + (overview != null ? overview.hashCode() : 0);
-        result = 31 * result + (motherBirthage != null ? motherBirthage.hashCode() : 0);
-        result = 31 * result + (marriage != null ? marriage.hashCode() : 0);
-        result = 31 * result + (sit != null ? sit.hashCode() : 0);
-        result = 31 * result + (bust != null ? bust.hashCode() : 0);
-        result = 31 * result + (bmi != null ? bmi.hashCode() : 0);
-        return result;
+    public void setLastTestTime(java.util.Date lastTestTime) {
+        this.lastTestTime = lastTestTime;
     }
 
     private Parent father;
