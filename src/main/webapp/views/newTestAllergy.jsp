@@ -396,7 +396,7 @@
             type: 'post',
             data: getData(),
             success:function (json) {
-                window.location = "showresultAllergy?id=" + json.resultBasic2.id;
+                window.location = "showresultAllergy?id=" + json.resultAllergy.id;
             }
         })
     }
