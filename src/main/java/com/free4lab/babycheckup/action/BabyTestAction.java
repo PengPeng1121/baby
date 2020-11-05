@@ -5,6 +5,7 @@ import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.Result;
 import com.free4lab.babycheckup.model.Result2016;
+import com.free4lab.babycheckup.model.TestResultRecord;
 import com.free4lab.babycheckup.vo.AllTestResultVo;
 import com.free4lab.babycheckup.vo.OtherResultVo;
 import org.apache.commons.lang.StringUtils;
@@ -81,13 +82,14 @@ public class BabyTestAction {
                         BigDecimal bigDecimalScoreSocial = new BigDecimal(result2016.getScoreSocial()*100/monthage);
                         otherResultVo.setScoreSocial( bigDecimalScoreSocial.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue());
                     }
-
+                    otherResultVo.setRecord2016(TestResultRecordManager.find(testId,resultId));
                     allTestResultVo.setResult2016(result2016);
                     break;
                 case 27:
                     allTestResultVo.setResultADHD(ResultADHDManager.findResultByid(resultId));
                     break;
                 case 28:
+                    otherResultVo.setRecordFeel2020(TestResultRecordManager.find(testId,resultId));
                     allTestResultVo.setResultFeel2020(ResultFeel2020Manager.findResultByid(resultId));
                     break;
                 case 29:
