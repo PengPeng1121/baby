@@ -763,6 +763,7 @@
             type: 'post',
             data: data,
             success:function (json) {
+                var rId = json.resultTooth.id;
                 var refreshData = {
                     babyid: $("#babyid").val()
                 }
@@ -772,7 +773,7 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultTooth?id=" + json.resultTooth.id;
+                        window.location = "showresultTooth?id=" + rId;
                     }
                 })
             }
