@@ -69,30 +69,216 @@
             <div class="panel-body front-no-padding">
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
-                    <s:iterator value="resultList" var="re">
-                        <tr class="old-test manage doctorOperate view">
+
+                    <s:iterator value="resultBasic1List" var="resultBasic1">
+                        <tr class="manage doctorOperate parent view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                            <span class="front-text-title" >
-                                0-6岁小儿神经心理发育检查表
-                            </span>
+                        <span class="front-text-title" >
+                           基础信息
+                        </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
                                                 <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBasic1.time" format="yyyy-MM-dd HH:mm:ss" /></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showreult?id=<s:property value="#re.id"/>">查看报告</a>
+                                        <a class="btn btn-default" href="showresultBasic1?id=<s:property value="#resultBasic1.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic1.id"/>, 33)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                     </s:iterator>
+
+
+                    <s:iterator value="resultBasic2List" var="resultBasic2">
+                        <tr class="manage doctorOperate parent view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           生产、既往、家族史
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBasic2.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBasic2?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultGroup2020List" var="resultGroup2020">
+                        <tr class="manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           生长发育测验2020
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultGroup2020.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultAllergyList" var="resultAllergy">
+                        <tr class="manage doctorOperate parent view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           食物过敏或不耐受风险评估
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultAllergy.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultPhysicalList" var="resultPhysical">
+                        <tr class="manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           体格头面检查
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultPhysical.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultFeedList" var="resultFeed">
+                        <tr class="manage doctorOperate feed view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           营养与喂养
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultFeed.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultToothList" var="resultTooth">
+                        <tr class="manage doctorOperate tooth view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           牙齿
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultTooth.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTooth.id"/>, 36)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultFeel2020List" var="resultFeel2020">
+                        <tr class="manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           感觉统合能力2020
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultFeel2020.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultFeel2020?id=<s:property value="#resultFeel2020.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeel2020.id"/>, 28)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
 
                     <s:iterator value="result2016List" var="re">
                         <tr class="new-test manage doctorOperate view">
@@ -120,6 +306,268 @@
                             </td>
                         </tr>
                     </s:iterator>
+
+
+                    <s:iterator value="resultList" var="re">
+                        <tr class="old-test manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                            <span class="front-text-title" >
+                                0-6岁小儿神经心理发育检查表
+                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showreult?id=<s:property value="#re.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultAttentionList" var="resultAttention">
+                        <tr class="manage doctorOperate heart view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           儿童智商.注意力评估及指导
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultAttention.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultAttention?id=<s:property value="#resultAttention.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAttention.id"/>, 52)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultEyeList" var="resultEye">
+                        <tr class="manage doctorOperate hushi view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           视力
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultEye.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultEye?id=<s:property value="#resultEye.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultEye.id"/>, 41)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultBMDList" var="resultBMD">
+                        <tr class="manage doctorOperate hushi view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           骨密度
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBMD.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBMD?id=<s:property value="#resultBMD.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBMD.id"/>, 43)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultEarList" var="resultEar">
+                        <tr class="manage doctorOperate hushi view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           听力
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultEar.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultEar?id=<s:property value="#resultEar.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultEar.id"/>, 42)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
+                    <s:iterator value="resultBloodList" var="resultBlood">
+                        <tr class="manage doctorOperate jianyan view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           血常规
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBlood.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBlood?id=<s:property value="#resultBlood.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBlood.id"/>, 44)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultBoneList" var="resultBone">
+                        <tr class="manage doctorOperate jianyan view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           骨碱酶
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBone.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultBone?id=<s:property value="#resultBone.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBone.id"/>, 46)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultMicroList" var="resultMicro">
+                        <tr class="manage doctorOperate jianyan view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           微量元素
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultMicro.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultMicro?id=<s:property value="#resultMicro.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultMicro.id"/>, 45)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultUrineList" var="resultUrine">
+                        <tr class="manage doctorOperate jianyan view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           尿常规
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultUrine.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultUrine?id=<s:property value="#resultUrine.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultSummaryList" var="resultSummary">
+                        <tr class="manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           总评
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultSummary.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultSummary?id=<s:property value="#resultSummary.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultSummary.id"/>, 31)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    
 
                     <!-- <s:iterator value="result3_6List" var="re3_6">
                         <tr>
@@ -436,238 +884,7 @@
                             </td>
                         </tr>
                     </s:iterator> -->
-
-                    <s:iterator value="resultFeel2020List" var="resultFeel2020">
-                        <tr class="manage doctorOperate view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           感觉统合能力2020
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultFeel2020.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultFeel2020?id=<s:property value="#resultFeel2020.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultGroup2020List" var="resultGroup2020">
-                        <tr class="manage doctorOperate view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           生长发育测验2020
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultGroup2020.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultPhysicalList" var="resultPhysical">
-                        <tr class="manage doctorOperate view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           体格头面检查
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultPhysical.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultSummaryList" var="resultSummary">
-                        <tr class="manage doctorOperate view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           总评
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultSummary.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultSummary?id=<s:property value="#resultSummary.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultSummary.id"/>, 31)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultAllergyList" var="resultAllergy">
-                        <tr class="manage doctorOperate parent view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           食物过敏或不耐受风险评估
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultAllergy.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultBasic2List" var="resultBasic2">
-                        <tr class="manage doctorOperate parent view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           生产、既往、家族史
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBasic2.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultBasic2?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultToothList" var="resultTooth">
-                        <tr class="manage doctorOperate tooth view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           牙齿
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultTooth.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultFeedList" var="resultFeed">
-                        <tr class="manage doctorOperate feed view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           营养与喂养
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultFeed.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultBasic1List" var="resultBasic1">
-                        <tr class="manage doctorOperate parent view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           基础信息
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBasic1.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultBasic1?id=<s:property value="#resultBasic1.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic1.id"/>, 33)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
+                   
 
                     <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">
                         <tr class="manage doctorOperate qizhi view">
@@ -688,6 +905,31 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultQiZhi2020?id=<s:property value="#resultQiZhi2020.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultRearList" var="resultRear">
+                        <tr class="manage doctorOperate qizhi view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           养育风格指导
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultRear.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showresultRear?id=<s:property value="#resultRear.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -744,206 +986,9 @@
                         </tr>
                     </s:iterator>
 
-                    <s:iterator value="resultRearList" var="resultRear">
-                        <tr class="manage doctorOperate qizhi view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           养育风格指导
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultRear.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultRear?id=<s:property value="#resultRear.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
+                    
 
-                    <s:iterator value="resultEyeList" var="resultEye">
-                        <tr class="manage doctorOperate hushi view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           视力
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultEye.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultEye?id=<s:property value="#resultEye.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultEarList" var="resultEar">
-                        <tr class="manage doctorOperate hushi view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           听力
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultEar.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultEar?id=<s:property value="#resultEar.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultBMDList" var="resultBMD">
-                        <tr class="manage doctorOperate hushi view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           骨密度
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBMD.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultBMD?id=<s:property value="#resultBMD.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultBloodList" var="resultBlood">
-                        <tr class="manage doctorOperate jianyan view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           血常规
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBlood.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultBlood?id=<s:property value="#resultBlood.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBlood.id"/>, 44)">选中此报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultMicroList" var="resultMicro">
-                        <tr class="manage doctorOperate jianyan view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           微量元素
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultMicro.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultMicro?id=<s:property value="#resultMicro.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultBoneList" var="resultBone">
-                        <tr class="manage doctorOperate jianyan view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           骨碱酶
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultBone.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultBone?id=<s:property value="#resultBone.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultUrineList" var="resultUrine">
-                        <tr class="manage doctorOperate jianyan view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           尿常规
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultUrine.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultUrine?id=<s:property value="#resultUrine.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
+                    
 
                     <s:iterator value="resultHBsList" var="resultHBs">
                         <tr class="manage doctorOperate jianyan view">
@@ -1039,31 +1084,6 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultBloodType?id=<s:property value="#resultBloodType.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
-
-                    <s:iterator value="resultAttentionList" var="resultAttention">
-                        <tr class="manage doctorOperate heart view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           儿童智商.注意力评估及指导
-                        </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultAttention.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showresultAttention?id=<s:property value="#resultAttention.id"/>">查看报告</a>
                                     </div>
                                 </div>
                             </td>

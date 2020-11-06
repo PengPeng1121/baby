@@ -10,6 +10,11 @@
         body, table, tbody, tr, td {
             background-color: transparent;
         }
+        .print{
+            position: fixed;
+            top: 700px;
+            right: 300px;
+        }
         input[type="radio"] {
             display: none;
         }
@@ -89,10 +94,10 @@
         }
         #basic1 #faceImg{
             width: 150px;
-            position: absolute;
+            position: relative;
             z-index: 1;
             top: 290px;
-            left: 460px;
+            left: 80px;
         }
 
         #group .column-body{
@@ -153,18 +158,561 @@
         #test2016 #remark1, #remark2, #remark3, #remark4, #remark5, #doctorRemark{
             font-size: 10px;
         }
+        #test2016 #table2016-1, #table2016-2,  #table2016-4, #doctorRemark2016{
+            width: 60%;
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+        #test2016 #table2016-3{
+            width: 55%;
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+        #test2016 #tester2016{
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+
+
+        #feel #tableFeel1, #tableFeel2,  #tableFeel3, #doctorRemarkFeel{
+            width: 65%;
+            position: relative;
+            left: 50px;
+            top: 100px;
+            margin-bottom: 0px;
+        }
+        #feel #testerFeel{
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
 
         #blood #bloodImg{
             width: 650px;
             position: relative;
             z-index: 1;
             top: 290px;
-            left: 460px;
+            left: 90px;
         }
+
+        #bone #boneImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 90px;
+        }
+
+        #eye #eyeImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 240px;
+            left: 90px;
+        }
+
+        #BMD #BMDImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 240px;
+            left: 90px;
+        }
+
+        #micro #microImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 90px;
+        }
+
+        #ear #earImg1, #earImg2{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 240px;
+            left: 90px;
+        }
+
+        #attention #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
+        }
+        #attention #table-main{
+            border: 0px;
+            margin: 0; 
+            width: 60%;
+            position: relative;
+            left: 70px;
+            top: 180px;
+        }
+        #attention #table-1{
+            width: 60%;
+            position: relative;
+            left: 70px;
+            top: 300px;
+        }
+
+        #tooth #name-table{
+            position: relative;
+            left: 60px;
+            top: 130px;
+            width: 25%;
+            font-size: 16px;
+        }
+        #tooth #content-table{
+            width: 300px;
+            height: 120px;
+            border: 0;
+            position: relative;
+            top: 30px;
+            left: 80px;
+            display: inline-block;
+        }
+        #tooth #remarkTextTooth{
+            position: relative;
+            left: 100px;
+            top: 50px;
+            background-color: transparent;
+        }
+
+        #tooth #tooth-img{
+            position: relative;
+            left: -520px;
+            top: 350px;
+        }
+
+        #tooth #info-table{
+            position: relative;
+            top: 400px;
+            left: 220px;
+        }
+
+
+        #tooth .info1{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #000;
+            z-index: 100;
+        }
+        #tooth .info2{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #000; 
+        }
+        #tooth .info3 {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+
+        #tooth .info3::before,
+        #tooth .info3::after {
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 2px;
+            height: 20px;
+        }
+
+        #tooth .info3::before {
+            transform: rotate(45deg);
+        }
+
+        #tooth .info3::after {
+            transform: rotate(-45deg);
+        }
+
+        #tooth .style0{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #FFF;
+            position: relative;
+            z-index: 100;
+        }
+
+
+        #tooth .style1{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #000;
+            position: relative;
+            z-index: 100;
+        }
+        #tooth .style2{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            position: relative;
+            z-index: 100; 
+        }
+        #tooth .style3 {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 100;
+        }
+
+        #tooth .style3::before{
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 1px;
+            height: 20px;
+            z-index: 100;
+        }
+
+        #tooth .style3::after {
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 1px;
+            height: 20px;
+            z-index: 100;
+        }
+
+        #tooth .style3::before {
+            transform: rotate(45deg);
+        }
+
+        #tooth .style3::after {
+            transform: rotate(-45deg);
+        }
+        
        
     </style>
     <style type="text/css" media="print">
-        
+        @page
+        {
+            size:  auto portrait;   /* auto is the initial value */
+            margin: 5mm;  /* this affects the margin in the printer settings */
+        }
+        .noprint {
+            display: none
+        }
+        div{
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        input[type="radio"] {
+            display: none !important;
+        }
+        input[type='radio'] + label:before{
+            content: "" !important;
+            display: inline-block !important;
+            width: 20px !important;
+            height: 20px !important;
+            border: 2px solid #df9390 !important;
+            border-radius:50% !important;
+            position: relative !important;
+            top: 5px !important;
+        }
+        input[type='radio']:checked + label:before{
+            background-color: #000 !important;
+            box-shadow: inset 0 0 0 3px #fff !important;
+        }
+        input[type="checkbox"] {
+            display: none !important;
+        }
+        input[type='checkbox'] + label:before{
+            content: "" !important;
+            display: inline-block !important;
+            width: 20px !important;
+            height: 20px !important;
+            border: 2px solid #df9390 !important;
+            border-radius:50% !important;
+            position: relative !important;
+            top: 5px !important;
+        }
+        input[type='checkbox']:checked + label:before{
+            background-color: #000 !important;
+            box-shadow: inset 0 0 0 3px #fff !important;
+        }
+
+        #name-text{
+            display: inline-block !important;
+            border-bottom: 1px solid #df938f !important;
+            margin-left: 10px !important;
+            width: 160px !important;
+        }
+        #name-table{
+            width: 300px !important;
+        }
+
+
+        #basci1 #faceImg{
+            width: 150px !important;
+            position: absolute !important;
+            z-index: 1 !important;
+            top: 220px !important;
+            left: 100px !important;
+        }
+        #basic1 #table1, #table2{
+            width: 52% !important;
+        }
+
+        #basic2 #table-main{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 80% !important;
+            position: relative !important;
+            left: 60px !important;
+            top: 200px !important;
+        }
+        #basic2 #table-main1{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 80% !important;
+            position: relative !important;
+            left: 60px !important;
+            top: 255px !important;
+        }
+        #basic2 #table-main2{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 80% !important;
+            position: relative !important;
+            left: 60px !important;
+            top: 310px !important;
+        }
+        #basic2 #table-main3{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 85% !important;
+            position: relative !important;
+            left: 60px !important;
+            top: 310px !important;
+        }
+        #group #content-table{
+            top: 80px !important;
+        }
+
+        #group .column-body{
+            width: 500px !important;
+            height: 240px !important;
+            margin-left: 50px !important;
+            margin-top: 5px !important;
+        }
+
+        #feed #table-main{
+            border: 0px !important;
+            margin: 0 !important;
+            width: 80% !important;
+            position: relative !important;
+            left: 60px !important;
+            top: 200px !important;
+        }
+        #test2016 #table2016-1, #table2016-2, #table2016-3, #table2016-4, #doctorRemark2016{
+            width: 80%;
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+        #test2016 #tester2016{
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+
+        #feel #tableFeel1, #tableFeel2,  #tableFeel3, #doctorRemarkFeel{
+            width: 88%;
+        }
+        #feel #testerFeel{
+            position: relative;
+            left: 60px;
+            top: 100px;
+        }
+
+        #summary #birth-text{
+            display: inline-block !important;
+            border-bottom: 1px solid #df938f !important;
+            margin-left: 10px !important;
+            width: 160px !important;
+        }
+        #summary #name-table{
+            width: 700px !important;
+        }
+
+        #attention #name-table{
+            width: 700px !important;
+            top: 140px;
+            left: 70px;
+            
+        }
+        #attention #table-main{ 
+            width: 80%;
+            left: 70px;
+            top: 180px;
+        }
+        #attention #table-1{
+            width: 80%;
+            left: 70px;
+            top: 300px;
+        }
+
+        #tooth #name-table{
+            position: relative;
+            left: 60px;
+            top: 130px;
+            width: 60%;
+            font-size: 16px;
+        }
+        #tooth #content-table{
+            width: 300px;
+            height: 120px;
+            border: 0;
+            position: relative;
+            top: 160px;
+            left: 80px;
+            display: inline-block;
+        }
+        #tooth #remarkTextTooth{
+            position: relative;
+            left: 100px;
+            top: 180px;
+            background-color: transparent;
+        }
+
+        #tooth #tooth-img{
+            position: relative;
+            left: 100px;
+            top: 180px;
+        }
+
+        #tooth #info-table{
+            position: relative;
+            top: 200px;
+            left: 180px;
+        }
+        .info1{
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 10px solid transparent !important;
+            border-right: 10px solid transparent !important;
+            border-bottom: 20px solid #000 !important;
+            position: absolute !important;
+            z-index: 100 !important;
+            
+            top: 5px !important;
+        }
+        .info2{
+            border-radius: 50% !important;
+            width: 20px !important;
+            height: 20px !important;
+            background-color: #000 !important;
+        }
+        .info3 {
+            position: relative !important;
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .info3::before,
+        .info3::after {
+            position: absolute !important;
+            content: ' ' !important;
+            background-color: #000 !important;
+            left: 10px !important;
+            width: 2px !important;
+            height: 20px !important;
+        }
+
+        .info3::before {
+            transform: rotate(45deg) !important;
+        }
+
+        .info3::after {
+            transform: rotate(-45deg) !important;
+        }
+        .tooth-icon{
+            transform:translate(-40px, -170px) !important;
+            -webkit-transform:translate(-40px, -170px) !important;  
+            -moz-transform:translate(-40px, -170px) !important;   
+        }
+
+        #tooth .style0{
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 10px solid transparent !important;
+            border-right: 10px solid transparent !important;
+            border-bottom: 20px solid #FFF !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+
+
+        #tooth .style1{
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 10px solid transparent !important;
+            border-right: 10px solid transparent !important;
+            border-bottom: 20px solid #000 !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+        #tooth .style2{
+            border-radius: 50% !important;
+            width: 20px !important;
+            height: 20px !important;
+            background-color: #000 !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+        #tooth .style3 {
+            width: 20px !important;
+            height: 20px !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+
+        #tooth .style3::before{
+            position: absolute !important;
+            content: ' ' !important;
+            background-color: #000 !important;
+            left: 10px !important;
+            width: 1px !important;
+            height: 20px !important;
+            z-index: 100 !important;
+        }
+
+        #tooth .style3::after {
+            position: absolute !important;
+            content: ' ' !important;
+            background-color: #000 !important;
+            left: 10px !important;
+            width: 1px !important;
+            height: 20px !important;
+            z-index: 100 !important;
+        }
+
+        #tooth .style3::before {
+            transform: rotate(45deg) !important;
+        }
+
+        #tooth .style3::after {
+            transform: rotate(-45deg) !important;
+        }
+
+
     </style>
 </head>
 <body class="front-body">
@@ -268,18 +816,77 @@
     <input id="feedSuggest" type="hidden" value="<s:property value="allTestResultVo.resultFeed.feedSuggest"/>">
     <!-- 2016 -->
     <input type="hidden" id="resultID2016" value="<s:property value="allTestResultVo.result2016.id"/>">
-    <input type="hidden" id="testerName2016" value="<s:property value="allTestResultVo.resultRecord.testerName"/>">
+    <input type="hidden" id="testerName2016" value="<s:property value="otherResultVo.record2016.testerName"/>">
     <!-- blood -->
 
     <!-- summary -->
     <input id="summaryRemark" type="hidden" value="<s:property value="allTestResultVo.resultSummary.summary"/>">
+
+    <!-- feel -->
+    <input type="hidden" id="feelRemark" value="<s:property value="otherResultVo.recordFeel2020.remark"/>">
+
+    <input type="hidden" id="a1Feel" value="<s:property value="allTestResultVo.resultFeel2020.a1"/>">
+    <input type="hidden" id="a2Feel" value="<s:property value="allTestResultVo.resultFeel2020.a2"/>">
+    <input type="hidden" id="a3Feel" value="<s:property value="allTestResultVo.resultFeel2020.a3"/>">
+    <input type="hidden" id="a4Feel" value="<s:property value="allTestResultVo.resultFeel2020.a4"/>">
+    <input type="hidden" id="a5Feel" value="<s:property value="allTestResultVo.resultFeel2020.a5"/>">
+    <input type="hidden" id="a6Feel" value="<s:property value="allTestResultVo.resultFeel2020.a6"/>">
+
+
+    <!-- attention -->
+
+    <input id="a1attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a1"/>">
+    <input id="a2attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a2"/>">
+    <input id="a3attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a3"/>">
+    <input id="a4attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a4"/>">
+    <input id="a5attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a5"/>">
+    <input id="scoreAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.score"/>">
+    <input id="remarkAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.suggest"/>">
+
+
+    <!-- tooth -->
+
+    <input id="attentionBrushWay" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushWay"/>">
+    <input id="attentionBrushHabit" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushHabit"/>">
+    <input id="attentionTeethSituation" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionTeethSituation"/>">
+    <input id="remarkTooth" type="hidden" value="<s:property value="allTestResultVo.resultTooth.remark"/>">
+    
+    <input id="leftUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp1"/>">
+    <input id="leftUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp2"/>">
+    <input id="leftUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp3"/>">
+    <input id="leftUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp4"/>">
+    <input id="leftUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp5"/>">
+    <input id="leftUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp6"/>">
+    <input id="leftUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp7"/>">
+    <input id="rightUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp1"/>">
+    <input id="rightUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp2"/>">
+    <input id="rightUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp3"/>">
+    <input id="rightUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp4"/>">
+    <input id="rightUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp5"/>">
+    <input id="rightUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp6"/>">
+    <input id="rightUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp7"/>">
+    
+    <input id="leftDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown1"/>">
+    <input id="leftDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown2"/>">
+    <input id="leftDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown3"/>">
+    <input id="leftDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown4"/>">
+    <input id="leftDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown5"/>">
+    <input id="leftDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown6"/>">
+    <input id="leftDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown7"/>">
+    <input id="rightDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown1"/>">
+    <input id="rightDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown2"/>">
+    <input id="rightDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown3"/>">
+    <input id="rightDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown4"/>">
+    <input id="rightDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown5"/>">
+    <input id="rightDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown6"/>">
+    <input id="rightDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown7"/>">
 
 
     <s:if test="allTestResultVo.resultBasic1">
     <div class="container" class="hemaFront" id="basic1">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent; margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2Boy.jpg">
                 </s:if>
@@ -289,7 +896,7 @@
 
 
 
-                <img id="faceImg" src="<s:property value="resultBasic1.headImgUrl"/>">
+                <img id="faceImg" src="<s:property value="allTestResultVo.resultBasic1.headImgUrl"/>">
 
                 <table style="width: 38%;
                     border: 0;
@@ -433,7 +1040,7 @@
     <div class="container" class="hemaFront" id="basic2">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent; margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Boy.jpg">
                 </s:if>
@@ -442,7 +1049,7 @@
                 </s:if>
 
 
-                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 1350px;">
+                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 1380px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td>
@@ -553,7 +1160,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 1755px;left: 440px;">
+                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 1800px;left: 440px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td style="border:0px;width: 200px">
@@ -565,7 +1172,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1860px;left: 440px;">
+                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1900px;left: 440px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td colspan="4">
@@ -606,7 +1213,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1975px;left: 440px;">
+                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 2015px;left: 440px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td style="width: 510px">
@@ -692,14 +1299,14 @@
     <div class="container" class="hemaFront" id="group">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent; margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg1Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg1Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg1Boy.jpg">
                 </s:if>
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg1Girl.jpg">
                 </s:if>
-                <table style="width: 800px; height:1060px;border:0;font-size: 16px;font-weight: bold; position: absolute;top: 2320px;" id="content-table">
+                <table style="width: 800px; height:1122px;border:0;font-size: 16px;font-weight: bold; position: relative;top: 80px;" id="content-table">
                     <tr>
                         <td class="col-md-8 content-1">
                             <div id="column1" class="column-body"></div>
@@ -743,7 +1350,7 @@
     <div class="container" class="hemaFront" id="allergy">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg3Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg3Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg3Boy.jpg">
                 </s:if>
@@ -996,7 +1603,7 @@
     <div class="container" class="hemaFront" id="physical">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg4Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg4Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg4Boy.jpg">
                 </s:if>
@@ -1308,7 +1915,7 @@
     <div class="container" class="hemaFront" id="feed">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg6Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg6Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg6Boy.jpg">
                 </s:if>
@@ -1497,37 +2104,285 @@
     </div>
     </s:if>
 
-    <s:if test="allTestResultVo.result2016">
-    <!-- <div class="container" id="test2016">
-        <img id="ruiweiyue" class="pull-right" style="height: 100px;width: 100px;" src="statics/img/hemaCode.png" alt="Logo">
-        <img id="hema" class="pull-left" style="height: 120px;width: 720px;" src="statics/img/hema.png" alt="Logo">
+    <s:if test="allTestResultVo.resultTooth">
+    <div class="container" class="hemaFront" id="tooth" style="height: 1122px">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Boy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Girl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12" style="font-weight: bold;">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table  id="content-table">
+                    <tr class="item-line">
+                        <td class="item">
+                            注意刷牙方法
+                        </td>
+                        <td style="width: 85px">
+                            <input type="radio" name="answer-1-tooth" value="1"   id="radio-answer-1-1-tooth">
+                            <label for="radio-answer-1-1-tooth"></label>
+                        </td>
+                    </tr>
+                    <tr class="item-line">
+                        <td class="item">
+                            注意刷牙习惯
+                        </td>
+                        <td>
+                            <input type="radio" name="answer-2-tooth" value="1"   id="radio-answer-2-1-tooth">
+                            <label for="radio-answer-2-1-tooth"></label>
+                        </td>
+                    </tr>
+                    <tr class="item-line">
+                        <td class="item">
+                            注意换牙后的歪斜情况
+                        </td>
+                        <td>
+                            <input type="radio" name="answer-3-tooth" value="1"   id="radio-answer-3-1-tooth">
+                            <label for="radio-answer-3-1-tooth"></label>
+                        </td>
+                    </tr>
+                </table>
+                <textarea id="remarkTextTooth" rows="3" style="resize:none;border: 0;width: 350px;height: 120px"></textarea>
+                <!-- 牙图 -->
+                <img id="tooth-img" src="statics/img/tooth.jpg">
+                
+                <table  id="info-table">
+                    <tr>
+                        <td style="width: 30px">
+                            <div class="info3"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            未生长
+                        </td>
+                        <td style="width: 30px">
+                            <div class="info1"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            歪斜
+                        </td>
+                        <td style="width: 30px">
+                            <div class="info2"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            龋齿
+                        </td>
+                    </tr>
+                </table>
 
-        <div class="panel panel-default front-panel" id="info" style="margin-top: 120px">
-            <div class="panel-body front-no-padding" style="padding: 15px;">
-                <table style="width: 100%">
+                <!-- 点 -->
+                <div class="rightUp1 tooth-icon " style="top: -218px;left: 323px;"></div>
+                <div class="rightUp2 tooth-icon " style="top: -226px;left: 280px;"></div>
+                <div class="rightUp3 tooth-icon " style="top: -212px;left: 253px;"></div>
+                <div class="rightUp4 tooth-icon " style="top: -200px;left: 225px;"></div>
+                <div class="rightUp5 tooth-icon " style="top: -184px;left: 210px;"></div>
+                <div class="rightUp6 tooth-icon " style="top: -163px;left: 202px;"></div>
+                <div class="rightUp7 tooth-icon " style="top: -137px;left: 197px;"></div>
+
+                <div class="leftUp1 tooth-icon " style="top: -355px;left: 371px;"></div>
+                <div class="leftUp2 tooth-icon " style="top: -363px;left: 415px;"></div>
+                <div class="leftUp3 tooth-icon " style="top: -347px;left: 442px;"></div>
+                <div class="leftUp4 tooth-icon " style="top: -338px;left: 466px;"></div>
+                <div class="leftUp5 tooth-icon " style="top: -327px;left: 485px;"></div>
+                <div class="leftUp6 tooth-icon " style="top: -303px;left: 494px;"></div>
+                <div class="leftUp7 tooth-icon " style="top: -277px;left: 497px;"></div>
+
+
+                <div class="rightDown7 tooth-icon " style="top: -196px;left: 197px;"></div>
+                <div class="rightDown6 tooth-icon " style="top: -176px;left: 202px;"></div>
+                <div class="rightDown5 tooth-icon " style="top: -154px;left: 210px;"></div>
+                <div class="rightDown4 tooth-icon " style="top: -139px;left: 225px;"></div>
+                <div class="rightDown3 tooth-icon " style="top: -128px;left: 253px;"></div>
+                <div class="rightDown2 tooth-icon " style="top: -113px;left: 280px;"></div>
+                <div class="rightDown1 tooth-icon " style="top: -121px;left: 323px;"></div>
+
+                <div class="leftDown7 tooth-icon " style="top: -337px;left: 497px;"></div>
+                <div class="leftDown6 tooth-icon " style="top: -312px;left: 494px;"></div>
+                <div class="leftDown5 tooth-icon " style="top: -292px;left: 485px;"></div>
+                <div class="leftDown4 tooth-icon " style="top: -277px;left: 466px;"></div>
+                <div class="leftDown3 tooth-icon " style="top: -267px;left: 442px;"></div>
+                <div class="leftDown2 tooth-icon " style="top: -253px;left: 415px;"></div>
+                <div class="leftDown1 tooth-icon " style="top: -261px;left: 371px;"></div>
+            </div>
+        </div>　
+    </div>    
+    </s:if>
+
+
+    <s:if test="allTestResultVo.resultFeel2020">
+    <div class="container" class="hemaFront" id="feel" style="height: 1122px">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgFeelBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgFeelGirl.jpg">
+                </s:if>
+                <table id="tableFeel1">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-3">测评日期:<s:date name="allTestResultVo.resultFeel2020.time" format="yyyy-MM-dd"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table" id="tableFeel2">
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0px;width: 40%;">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <td class="col-md-4" style="font-weight: bold;">评定项目</td>
+                                        <td class="col-md-3" style="font-weight: bold;">原始分</td>
+                                        <td class="col-md-3" style="font-weight: bold;">T值</td>
+                                        <td class="col-md-4" style="font-weight: bold;">评定结果</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1.前脑平衡和大脑双侧分化</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a1"/></td>
+                                        <td id="b1Feel"></td>
+                                        <td id="r1Feel"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2.脑神经心理抑制困难</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a2"/></td>
+                                        <td id="b2Feel"></td>
+                                        <td id="r2Feel"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.触觉防御过多及反应不足</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a3"/></td>
+                                        <td id="b3Feel"></td>
+                                        <td id="r3Feel"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.发育期运动障碍</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a4"/></td>
+                                        <td id="b4Feel"></td>
+                                        <td id="r4Feel"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.视觉空间，形态</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a5"/></td>
+                                        <td id="b5Feel"></td>
+                                        <td id="r5Feel"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.本体觉（重力不安症）</td>
+                                        <td><s:property value="allTestResultVo.resultFeel2020.a6"/></td>
+                                        <td id="b6Feel"></td>
+                                        <td id="r6Feel"></td>
+                                    </tr>
+                                    </tbody>
+                                </table> 
+                            </td>
+                            <td style="padding: 0px;width: 60%;">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border:0px">
+                                                <div id="columnFeel"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table" id="tableFeel3">
+                    <tbody>
+                        <tr>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                视觉集中训练
+                            </td>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                视觉追踪训练
+                            </td>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                听觉统合训练
+                            </td>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                触觉训练
+                            </td>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                平衡感觉训练
+                            </td>
+                            <td style="width: 16%; font-weight: bold; padding: 5px 8px;">
+                                本体感觉训练
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ccc">
+                            <td id="remark1Feel">
+                                1.抱住孩子的头，叫孩子的名字，并深情看孩子让孩子做出反应。<br/>2.准备玩具，和孩子相对而坐。孩子会东张西望，这时候拿出准备好的玩具，放到孩子眼前，吸引孩子目光，让孩子的视线随着玩具移到目前的任务上。
+                            </td>
+                            <td id="remark2Feel">
+                                1.让孩子在运动中踢球，让孩子学会按住滚动的球。<br/>2.让孩子用球扔向另一正在滚动的球。<br/>3.准备好一间房间，一只手电筒。把窗关上，使屋内黑暗，打开电筒的开关，照向墙壁，叫孩子去抓墙上的光。
+                            </td>
+                            <td id="remark3Feel">
+                                1.找寻声音。(3-5分钟)<br/>2.模仿自然界的声音。(7-8分钟)<br/>3.听动训练。(5-10分钟)<br/>4.辨别声音。(5-10分钟)
+                            </td>
+                            <td id="remark4Feel">
+                                1.通过不同的刷子、不同布质的毛巾，给予孩子适当的刺激，可于洗澡时进行。<br/>2.让孩子触摸不同的物件，让其辨别物件的大小、形状和质地等。<br/>3.三温暖治疗。让孩子辨别不同的水温。
+                            </td>
+                            <td id="remark5Feel">
+                                1.荡秋千。<br/>2.攀爬不平稳平面。<br/>3.滑车训练。(此项可训练5-10分钟)<br/>4.倒立走。此项对上肢大肌肉的训练也相当有帮助。(此项训练5-15分钟)
+                            </td>
+                            <td id="remark6Feel">
+                                1.沿直线行走。可适当增加难度，如让孩子端水。<br/>2.攀爬。<br/>3.跳圈游戏。在地上排列两列圆圈若干个，距离左右上下10CM，让孩子双脚跨在不同圆圈上往前跳，可增加圆圈的个数和距离。也可训练平衡感觉。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <textarea id="doctorRemarkFeel" rows="5" style="resize:none;border: 0;"></textarea>
+                <div id="testerFeel"><p>测评者：<s:property value="otherResultVo.recordFeel2020.testerName"/> </p></div>
+            </div>    
+        </div>　
+    </div>    
+    </s:if>
+
+
+
+    <s:if test="allTestResultVo.result2016">
+    <div class="container" class="hemaFront" id="test2016">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2016Boy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2016Girl.jpg">
+                </s:if>
+                <table id="table2016-1">
                     <tbody>
                     <tr>
-                        <td class="col-md-2">姓名</td>
-                        <td class="col-md-2"><s:property value="baby.name"/></td>
-                        <td class="col-md-2">性别</td>
-                        <td class="col-md-2"><s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
-                        <td class="col-md-2">出生日期</td>
-                        <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
-                    </tr>
-                    <tr>
                         <td class="col-md-2">检查日期</td>
-                        <td class="col-md-2"><s:property value="stime"/></td>
+                        <td class="col-md-2">
+                            <s:date name="allTestResultVo.result2016.time" format="yyyy-MM-dd"/>
+                        </td>
                         <td class="col-md-2">智龄</td>
                         <td class="col-md-2" id="DQ"></td>
                         <td class="col-md-2">发育商DQ</td>
                         <td class="col-md-2" id="growth"></td>
                     </tr>
                 </table>
-            </div>
-        </div>
-        <div class="panel panel-default front-panel" id="allbaby">
-            <div class="panel-body front-no-padding">
-                <table class="table table-striped table-bordered front-table">
+
+                <table class="table table-striped  front-table" id="table2016-2">
                     <thead>
                     <tr>
                         <th class="col-md-2">测试项目</th>
@@ -1541,82 +2396,287 @@
                     <tbody>
                     <tr>
                         <td>智龄（月）</td>
-                        <td id="scoreSport"><s:property value="result2016.scoreSport"/></td>
-                        <td id="scoreAct"><s:property value="result2016.scoreAct"/></td>
-                        <td id="scoreAdapt"><s:property value="result2016.scoreAdapt"/></td>
-                        <td id="scoreLanguage"><s:property value="result2016.scoreLanguage"/></td>
-                        <td id="scoreSocial"><s:property value="result2016.scoreSocial"/></td>
+                        <td id="scoreSport"><s:property value="allTestResultVo.result2016.scoreSport"/></td>
+                        <td id="scoreAct"><s:property value="allTestResultVo.result2016.scoreAct"/></td>
+                        <td id="scoreAdapt"><s:property value="allTestResultVo.result2016.scoreAdapt"/></td>
+                        <td id="scoreLanguage"><s:property value="allTestResultVo.result2016.scoreLanguage"/></td>
+                        <td id="scoreSocial"><s:property value="allTestResultVo.result2016.scoreSocial"/></td>
                     </tr>
                     <tr>
                         <td>单项发育商（DQ）</td>
-                        <td><s:property value="scoreSport"/></td>
-                        <td><s:property value="scoreAct"/></td>
-                        <td><s:property value="scoreAdapt"/></td>
-                        <td><s:property value="scoreLanguage"/></td>
-                        <td id="last"><s:property value="scoreSocial"/></td>
+                        <td><s:property value="otherResultVo.scoreSport"/></td>
+                        <td><s:property value="otherResultVo.scoreAct"/></td>
+                        <td><s:property value="otherResultVo.scoreAdapt"/></td>
+                        <td><s:property value="otherResultVo.scoreLanguage"/></td>
+                        <td id="last"><s:property value="otherResultVo.scoreSocial"/></td>
                     </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <table class="table table-striped  table-bordered front-table">
-            <tbody>
-            <tr>
-                <td style="padding: 0px;width: 100%;">
-                    <div id="column" style="height: 200px"></div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
 
-        <table class="table table-striped  table-bordered front-table">
-            <tbody>
-                <tr>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        大运动
-                    </td>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        精细运动
-                    </td>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        适应能力
-                    </td>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
-                        语言
-                    </td>
-                    <td style="width: 20%; font-weight: bold; padding: 5px 8px;"> 
-                        社交能力
-                    </td>
-                </tr>
-                <tr>
-                    <td id="remark1"></td>
-                    <td id="remark2"></td>
-                    <td id="remark3"></td>
-                    <td id="remark4"></td>
-                    <td id="remark5"></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
-            <div class="panel-heading" style="text-align: left; padding: 5px 8px; font-weight: bold;">医师评价及建议</div>
-            <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark2016" rows="10" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <table class="table table-striped  front-table" id="table2016-3">
+                    <tbody>
+                    <tr>
+                        <td style="padding: 0px;width: 100%;">
+                            <div id="column" style="height: 200px"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped  front-table" id="table2016-4">
+                    <tbody>
+                        <tr>
+                            <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                                大运动
+                            </td>
+                            <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                                精细运动
+                            </td>
+                            <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                                适应能力
+                            </td>
+                            <td style="width: 20%; font-weight: bold; padding: 5px 8px;">
+                                语言
+                            </td>
+                            <td style="width: 20%; font-weight: bold; padding: 5px 8px;"> 
+                                社交能力
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="remark1"></td>
+                            <td id="remark2"></td>
+                            <td id="remark3"></td>
+                            <td id="remark4"></td>
+                            <td id="remark5" style="border: 0px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <textarea id="doctorRemark2016" rows="8" style="resize:none;border: 0;background-color: transparent;"></textarea>
+                <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.testerName"/></p></div>
             </div>
         </div>
-        <div style="width:270px;float: right">
-            <div ><p style="margin-top: 20px;font-size: 16px;">测评者： <input  id="testerName"/> </p></div>
-        </div>　
-    </div> -->
+    </div>
+    </s:if>
+
+    <s:if test="allTestResultVo.resultAttention">
+    <div class="container" class="hemaFront" id="attention">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgAttentionBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgAttentionGirl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-4" style="font-weight: bold;">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                        <td class="col-md-4 col-offset-4" style="font-weight: bold;">
+                            <span style="letter-spacing: 1px">出生日期:</span>
+                            <div id="birth-text">
+                                <s:date name="baby.birthday" format="yyyy-MM-dd"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="table-main" align="center">
+                    <tbody style="width: 100%">
+                        <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   抗干扰:
+                                </span>
+
+                                <input type="radio" name="a1attention" value="0"   id="radio-answer-1-0-attention">
+                                <label for="radio-answer-1-0-attention" style="width: 120px;margin-left: 30px;font-weight: normal;"> 良好</label>
+
+                                <input type="radio" name="a1attention" value="1"   id="radio-answer-1-1-attention">
+                                <label for="radio-answer-1-1-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
+
+                                <input type="radio" name="a1attention" value="2"   id="radio-answer-1-2-attention">
+                                <label for="radio-answer-1-2-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
+
+                                <input type="radio" name="a1attention" value="3"   id="radio-answer-1-3-attention">
+                                <label for="radio-answer-1-3-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
+                            </td>
+                        </tr>
+                        <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   转移:
+                                </span>
+
+                                <input type="radio" name="a2attention" value="0"   id="radio-answer-2-0-attention">
+                                <label for="radio-answer-2-0-attention" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
+
+                                <input type="radio" name="a2attention" value="1"   id="radio-answer-2-1-attention">
+                                <label for="radio-answer-2-1-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
+
+                                <input type="radio" name="a2attention" value="2"   id="radio-answer-2-2-attention">
+                                <label for="radio-answer-2-2-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
+
+                                <input type="radio" name="a2attention" value="3"   id="radio-answer-2-3-attention">
+                                <label for="radio-answer-2-3-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
+                                
+                            </td>
+                        </tr>
+                        <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   分配:
+                                </span>
+
+                                <input type="radio" name="a3attention" value="0"   id="radio-answer-3-0-attention">
+                                <label for="radio-answer-3-0-attention" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
+
+                                <input type="radio" name="a3attention" value="1"   id="radio-answer-3-1-attention">
+                                <label for="radio-answer-3-1-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
+
+                                <input type="radio" name="a3attention" value="2"   id="radio-answer-3-2-attention">
+                                <label for="radio-answer-3-2-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
+
+                                <input type="radio" name="a3attention" value="3"   id="radio-answer-3-3-attention">
+                                <label for="radio-answer-3-3-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
+                                
+                            </td>
+                        </tr>
+                        <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   广度:
+                                </span>
+
+                                <input type="radio" name="a4attention" value="0"   id="radio-answer-4-0-attention">
+                                <label for="radio-answer-4-0-attention" style="width: 120px;margin-left: 45px;font-weight: normal;"> 良好</label>
+
+                                <input type="radio" name="a4attention" value="1"   id="radio-answer-4-1-attention">
+                                <label for="radio-answer-4-1-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
+
+                                <input type="radio" name="a4attention" value="2"   id="radio-answer-4-2-attention">
+                                <label for="radio-answer-4-2-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
+
+                                <input type="radio" name="a4attention" value="3"   id="radio-answer-4-3-attention">
+                                <label for="radio-answer-4-3-attention" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
+                                
+                            </td>
+                        </tr>
+                        <!-- <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   同理心:
+                                </span>
+
+                                <input type="radio" name="a5" value="0"   id="radio-answer-5-0">
+                                <label for="radio-answer-5-0" style="width: 120px;margin-left: 30px;font-weight: normal;"> 良好</label>
+
+                                <input type="radio" name="a5" value="1"   id="radio-answer-5-1">
+                                <label for="radio-answer-5-1" style="width: 120px;margin-left: 10px;font-weight: normal;"> 正常</label>
+
+                                <input type="radio" name="a5" value="2"   id="radio-answer-5-2">
+                                <label for="radio-answer-5-2" style="width: 120px;margin-left: 10px;font-weight: normal;"> 需要提升</label>
+
+                                <input type="radio" name="a5" value="3"   id="radio-answer-5-3">
+                                <label for="radio-answer-5-3" style="width: 120px;margin-left: 10px;font-weight: normal;"> 筛查</label>
+                                
+                            </td>
+                        </tr> -->
+                        <tr class="item-line">
+                            <td>
+                                <span  style="font-weight: bold;font-size: 16px">
+                                   智商:
+                                </span>
+                                <span style="margin-left: 31px">
+                                    <s:property value="allTestResultVo.resultAttention.score"/> 
+                                </span>
+                            </td>
+                    </tbody>
+                </table>
+                <table class="content" id="table-1">
+                    <tr>
+                        <td style="font-size: 16px;font-weight: bold;">指导建议</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="10" style="resize:none;border: 0;width: 80%; background-color: transparent;" id="remarkTextAttention"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>    
     </s:if>
 
 
+    <s:if test="allTestResultVo.resultEye">
+    <div class="container" class="hemaFront" id="eye">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEyeBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEyeBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEyeGirl.jpg">
+                </s:if>
+                <img id="eyeImg" src="<s:property value="allTestResultVo.resultEye.eyeImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+    <s:if test="allTestResultVo.resultBMD">
+    <div class="container" class="hemaFront" id="BMD">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBMDBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBMDBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBMDGirl.jpg">
+                </s:if>
+                <img id="BMDImg" src="<s:property value="allTestResultVo.resultBMD.BMDImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+    <s:if test="allTestResultVo.resultEar">
+    <div class="container" class="hemaFront" id="ear">
+       <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEarBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEarBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgEarGirl.jpg">
+                </s:if>
+                <s:if test="allTestResultVo.resultEar.earImgUrlFirst != ''">
+                <img id="earImg1" src="<s:property value="allTestResultVo.resultEar.earImgUrlFirst"/>">
+                </s:if>
+
+                <s:if test="allTestResultVo.resultEar.earImgUrlSecond != ''">
+                <img id="earImg2" src="<s:property value="allTestResultVo.resultEar.earImgUrlSecond"/>">
+                </s:if>
+            </div>
+        </div>
+    </div>
+    </s:if>
 
     
-        
+    <s:if test="allTestResultVo.resultBlood">    
     <div class="container" class="hemaFront" id="blood">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
-            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBloodBoy.jpg">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBloodBoy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBloodBoy.jpg">
                 </s:if>
@@ -1627,11 +2687,48 @@
             </div>
         </div>
     </div>
+    </s:if>
 
+    <s:if test="allTestResultVo.resultBone"> 
+    <div class="container" class="hemaFront" id="bone">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneGirl.jpg">
+                </s:if>
+                <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+
+    <s:if test="allTestResultVo.resultMicro">
+    <div class="container" class="hemaFront" id="micro">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroGirl.jpg">
+                </s:if>
+                <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+    <s:if test="allTestResultVo.resultSummary"> 
     <div class="container" class="hemaFront" id="summary">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Boy.jpg">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Boy.jpg"> -->
                 <s:if test="baby.gender == 1">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Boy.jpg">
                 </s:if>
@@ -1688,7 +2785,9 @@
             </div>
         </div>　
     </div>
+    </s:if>
     
+    <a type="button" class="btn btn-primary noprint pull-right print" style="">打印结果</a>
 
     <footer class="footer-default noprint">
         <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
@@ -2411,7 +3510,7 @@
 </script>
 
 <!-- 2016 -->
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     var dq_fix = <s:property value="allTestResultVo.result2016.dq"/>;
     var growth_fix = <s:property value="allTestResultVo.result2016.growth"/>;
     $("#DQ").html(dq_fix);
@@ -2427,15 +3526,15 @@
     var a5 = 0;
     a5 = <s:property value="allTestResultVo.result2016.scoreSocial"/>;
     var b1 = 0;
-    b1 = <s:property value="scoreSport"/>;//发育商
+    b1 = <s:property value="otherResultVo.scoreSport"/>;//发育商
     var b2 = 0;
-    b2 = <s:property value="allTestResultVo.scoreAct"/>;
+    b2 = <s:property value="otherResultVo.scoreAct"/>;
     var b3 = 0;
-    b3 = <s:property value="allTestResultVo.scoreAdapt"/>;
+    b3 = <s:property value="otherResultVo.scoreAdapt"/>;
     var b4 = 0;
-    b4 = <s:property value="allTestResultVo.scoreLanguage"/>;
+    b4 = <s:property value="otherResultVo.scoreLanguage"/>;
     var b5 = 0;
-    b5 = <s:property value="allTestResultVo.scoreSocial"/>;
+    b5 = <s:property value="otherResultVo.scoreSocial"/>;
     var a = [b1, b2, b3, b4, b5];
     a = a.sort();
     var max = a[0];
@@ -2678,7 +3777,7 @@
         })
         $('#testerName').val($("#testerName2016").val());
     });
-</script> -->
+</script>
 
 
 <!-- summary -->
@@ -2689,6 +3788,506 @@
     $('#summaryRemarkText').html(summaryRemark);
 </script>
 
+
+
+<!-- feel -->
+<script type="text/javascript">
+    var a1Feel = +$('#a1Feel').val();
+    var a2Feel = +$('#a2Feel').val();
+    var a3Feel = +$('#a3Feel').val();
+    var a4Feel = +$('#a4Feel').val();
+    var a5Feel = +$('#a5Feel').val();
+    var a6Feel = +$('#a6Feel').val();
+    var map = {
+        1:{
+            11:  70,
+            12:  64,
+            13:  60,
+            14:  57,
+            15:  54,
+            16:  52,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  43,
+            21:  41,
+            22:  39,
+            23:  37,
+            24:  36,
+            25:  34,
+            26:  32,
+            27:  31,
+            28:  29,
+            29:  28,
+            30:  27,
+            31:  26,
+            32:  25,
+            33:  25,
+            34:  23,
+            35:  20,
+            36:  16,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        2:{
+            9:   73,
+            10:  69,
+            11:  67,
+            12:  64,
+            13:  62,
+            14:  60,
+            15:  58,
+            16:  55,
+            17:  53,
+            18:  51,
+            19:  49,
+            20:  48,
+            21:  46,
+            22:  44,
+            23:  42,
+            24:  40,
+            25:  39,
+            26:  37,
+            27:  36,
+            28:  34,
+            29:  32,
+            30:  30,
+            31:  28,
+            32:  26,
+            33:  25,
+            34:  23,
+            35:  22,
+            36:  20,
+            37:  16,
+            38:  16,
+            39:  16,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16
+        },
+        3:{
+            14:  70,
+            15:  65,
+            16:  63,
+            17:  61,
+            18:  59,
+            19:  57,
+            20:  55,
+            21:  53,
+            22:  51,
+            23:  50,
+            24:  48,
+            25:  47,
+            26:  45,
+            27:  44,
+            28:  42,
+            29:  41,
+            30:  40,
+            31:  38,
+            32:  37,
+            33:  36,
+            34:  34,
+            35:  33,
+            36:  32,
+            37:  31,
+            38:  29,
+            39:  28,
+            40:  26,
+            41:  26,
+            42:  25,
+            43:  24,
+            44:  22,
+            45:  22,
+            46:  22,
+            47:  21,
+            48:  21,
+            49:  21,
+            50:  21,
+            51:  20,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16,
+            56:  16,
+            57:  16,
+            58:  16,
+            59:  16,
+            60:  16,
+            61:  16,
+            62:  16,
+            63:  16,
+            64:  16,
+            65:  16,
+            66:  16,
+            67:  16,
+            68:  16,
+            69:  16,
+            70:  16
+        },
+        4:{
+            11:  65,
+            12:  59,
+            13:  57,
+            14:  55,
+            15:  53,
+            16:  51,
+            17:  49,
+            18:  47,
+            19:  45,
+            20:  44,
+            21:  42,
+            22:  40,
+            23:  39,
+            24:  38,
+            25:  36,
+            26:  35,
+            27:  34,
+            28:  33,
+            29:  32,
+            30:  31,
+            31:  29,
+            32:  28,
+            33:  28,
+            34:  26,
+            35:  25,
+            36:  24,
+            37:  23,
+            38:  22,
+            39:  21,
+            40:  20,
+            41:  20,
+            42:  20,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16,
+            51:  16,
+            52:  16,
+            53:  16,
+            54:  16,
+            55:  16
+        },
+        5:{
+            5:   61,
+            6:   54,
+            7:   50,
+            8:   48,
+            9:   45,
+            10:  41,
+            11:  38,
+            12:  35,
+            13:  32,
+            14:  30,
+            15:  27,
+            16:  25,
+            17:  23,
+            18:  22,
+            19:  20,
+            20:  16,
+            21:  16,
+            22:  16,
+            23:  16,
+            24:  16,
+            25:  16
+        },
+        6:{
+            10:  64,
+            11:  59,
+            12:  56,
+            13:  54,
+            14:  52,
+            15:  51,
+            16:  49,
+            17:  48,
+            18:  46,
+            19:  45,
+            20:  43,
+            21:  42,
+            22:  40,
+            23:  38,
+            24:  37,
+            25:  35,
+            26:  34,
+            27:  33,
+            28:  32,
+            29:  30,
+            30:  30,
+            31:  29,
+            32:  26,
+            33:  25,
+            34:  23,
+            36:  22,
+            40:  16,
+            41:  16,
+            42:  16,
+            43:  16,
+            44:  16,
+            45:  16,
+            46:  16,
+            47:  16,
+            48:  16,
+            49:  16,
+            50:  16
+        }
+    }
+    function getScore (a,i) {
+        i = i + 1;
+        return map[i][a];
+    }
+    var resultAll = [
+        {a:a1Feel ,b:0, c:''},
+        {a:a2Feel ,b:0, c:''},
+        {a:a3Feel ,b:0, c:''},
+        {a:a4Feel ,b:0, c:''},
+        {a:a5Feel ,b:0, c:''},
+        {a:a6Feel ,b:0, c:''}
+    ]
+    var r1,r2,r3,r4,r5,r6;
+    var bArr = [];
+
+    var lll = resultAll.length;
+    var a = 0;
+    var b = 0;
+    var c = '';
+    for (var i = 0; i < lll; i++) {
+        a = resultAll[i]['a'];
+        b = getScore(a,i);
+        bArr[i] = b;
+        resultAll[i]['b'] = b;
+        if ( b < 30 ) {
+            c = '重度失常'
+        } else if ( b < 40) {
+            c = '中度失常'
+        } else if ( b < 50) {
+            c = '轻度失常'
+        } else {
+            c = '正常'
+        }
+        resultAll[i]['c'] = c;
+
+    }
+    $('#b1Feel').text(resultAll[0]['b'])
+    $('#b2Feel').text(resultAll[1]['b'])
+    $('#b3Feel').text(resultAll[2]['b'])
+    $('#b4Feel').text(resultAll[3]['b'])
+    $('#b5Feel').text(resultAll[4]['b'])
+    $('#b6Feel').text(resultAll[5]['b'])
+    $('#r1Feel').text(resultAll[0]['c'])
+    $('#r2Feel').text(resultAll[1]['c'])
+    $('#r3Feel').text(resultAll[2]['c'])
+    $('#r4Feel').text(resultAll[3]['c'])
+    $('#r5Feel').text(resultAll[4]['c'])
+    $('#r6Feel').text(resultAll[5]['c'])
+    // 柱状图数据
+    $(function () {
+        var chart1,
+            chart2;
+        var categories =  ['前脑平衡和大脑双侧分化', '脑神经心理抑制困难', '触觉防御过多及反应不足', '发育期运动障碍', '视觉空间，形态', '本体觉（重力不安症）'];
+        var result =  [bArr[0], bArr[1], bArr[2], bArr[3], bArr[4], bArr[5]];
+        $('#columnFeel').highcharts({
+            chart: {
+                type: 'column'
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: categories
+            },
+            yAxis: [{
+                min: 0,
+                plotLines: [{
+                    color: 'red',
+                    value: 20,
+                    width: 2
+                }, {
+                    color: 'orange',
+                    value: 30,
+                    width: 2
+                }, {
+                    color: 'blue',
+                    value: 40,
+                    width: 2
+                }],
+                title: {
+                    text: ''
+                }
+            }],
+            legend: {
+                shadow: false,
+                enabled: false 
+            },
+            tooltip: {
+                shared: true
+            },
+            plotOptions: {
+                column: {
+                    grouping: false,
+                    shadow: false,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: '得分',
+                color: '#ff8547',
+                data: result
+            }]
+        }, function(c){
+            chart1 = c;
+        });
+
+        var reg = new RegExp("<br>","g");//g,表示全部替换。
+        var feelRemark = $("#feelRemark").val();
+        feelRemark = feelRemark.replace(reg,"\n");
+        $('#doctorRemarkFeel').html(feelRemark);
+    });
+</script>
+
+<!-- attention -->
+<script>
+    var a1attention = $('#a1attention').val();
+    var a2attention = $('#a2attention').val();
+    var a3attention = $('#a3attention').val();
+    var a4attention = $('#a4attention').val();
+    var a5attention = $('#a5attention').val();
+
+    var remarkAttention = $('#remarkAttention').val();
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    remarkAttention = remarkAttention.replace(reg,"\n");
+    $('#remarkTextAttention').html(remarkAttention);
+
+    
+    $("input:radio[name='a1attention'][value='"+ a1attention +"']").attr('checked','true');
+    
+    $("input:radio[name='a2attention'][value='"+ a2attention +"']").attr('checked','true');
+
+    $("input:radio[name='a3attention'][value='"+ a3attention +"']").attr('checked','true');
+
+    $("input:radio[name='a4attention'][value='"+ a4attention +"']").attr('checked','true');
+
+    $("input:radio[name='a5attention'][value='"+ a5attention +"']").attr('checked','true');
+</script>
+
+
+
+<!-- tooth -->
+<script type="text/javascript">
+    var leftUp1 = $('#leftUp1').val();
+    var leftUp2 = $('#leftUp2').val();
+    var leftUp3 = $('#leftUp3').val();
+    var leftUp4 = $('#leftUp4').val();
+    var leftUp5 = $('#leftUp5').val();
+    var leftUp6 = $('#leftUp6').val();
+    var leftUp7 = $('#leftUp7').val();
+
+    var rightUp1 = $('#rightUp1').val();
+    var rightUp2 = $('#rightUp2').val();
+    var rightUp3 = $('#rightUp3').val();
+    var rightUp4 = $('#rightUp4').val();
+    var rightUp5 = $('#rightUp5').val();
+    var rightUp6 = $('#rightUp6').val();
+    var rightUp7 = $('#rightUp7').val();
+
+    var leftDown1 = $('#leftDown1').val();
+    var leftDown2 = $('#leftDown2').val();
+    var leftDown3 = $('#leftDown3').val();
+    var leftDown4 = $('#leftDown4').val();
+    var leftDown5 = $('#leftDown5').val();
+    var leftDown6 = $('#leftDown6').val();
+    var leftDown7 = $('#leftDown7').val();
+
+    var rightDown1 = $('#rightDown1').val();
+    var rightDown2 = $('#rightDown2').val();
+    var rightDown3 = $('#rightDown3').val();
+    var rightDown4 = $('#rightDown4').val();
+    var rightDown5 = $('#rightDown5').val();
+    var rightDown6 = $('#rightDown6').val();
+    var rightDown7 = $('#rightDown7').val();
+
+    var a1 = parseInt($("#attentionBrushWay").val());
+    var a2 = parseInt($("#attentionBrushHabit").val());
+    var a3 = parseInt($("#attentionTeethSituation").val());
+
+
+    var remarkTooth = $('#remarkTooth').val();
+
+
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    remarkTooth = remarkTooth.replace(reg,"\n");
+    $('#remarkTextTooth').html(remarkTooth);
+
+    // 1未生长 0歪斜 2龋齿
+    var styles = {
+        '1': "style3",
+        '0': "style1",
+        '2': "style2",
+        'NaN': "style0"
+    }
+
+    $("input:radio[name='answer-1-tooth'][value='"+ a1 +"']").attr('checked','true');
+    $("input:radio[name='answer-2-tooth'][value='"+ a2 +"']").attr('checked','true');
+    $("input:radio[name='answer-3-tooth'][value='"+ a3 +"']").attr('checked','true');
+    
+
+    // 给div样式
+    $(".leftDown1").addClass(styles[leftDown1]);
+    $(".leftDown2").addClass(styles[leftDown2]);
+    $(".leftDown3").addClass(styles[leftDown3]);
+    $(".leftDown4").addClass(styles[leftDown4]);
+    $(".leftDown5").addClass(styles[leftDown5]);
+    $(".leftDown6").addClass(styles[leftDown6]);
+    $(".leftDown7").addClass(styles[leftDown7]);
+    $(".rightDown1").addClass(styles[rightDown1]);
+    $(".rightDown2").addClass(styles[rightDown2]);
+    $(".rightDown3").addClass(styles[rightDown3]);
+    $(".rightDown4").addClass(styles[rightDown4]);
+    $(".rightDown5").addClass(styles[rightDown5]);
+    $(".rightDown6").addClass(styles[rightDown6]);
+    $(".rightDown7").addClass(styles[rightDown7]);
+    
+    $(".leftUp1").addClass(styles[leftUp1]);
+    $(".leftUp2").addClass(styles[leftUp2]);  
+    $(".leftUp3").addClass(styles[leftUp3]);  
+    $(".leftUp4").addClass(styles[leftUp4]);  
+    $(".leftUp5").addClass(styles[leftUp5]);  
+    $(".leftUp6").addClass(styles[leftUp6]);  
+    $(".leftUp7").addClass(styles[leftUp7]);      
+    
+    $(".rightUp1").addClass(styles[rightUp1]);
+    $(".rightUp2").addClass(styles[rightUp2]);
+    $(".rightUp3").addClass(styles[rightUp3]);
+    $(".rightUp4").addClass(styles[rightUp4]);
+    $(".rightUp5").addClass(styles[rightUp5]);
+    $(".rightUp6").addClass(styles[rightUp6]);
+    $(".rightUp7").addClass(styles[rightUp7]);
+</script>
 
 
 </body>
