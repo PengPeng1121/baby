@@ -256,7 +256,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultEar?id=" + json.resultEar.id;
+                var rId = json.resultEar.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultEar?id=" + rId;
+                    }
+                })
+                // window.location = "showresultEar?id=" + json.resultEar.id;
             }
         })
     }

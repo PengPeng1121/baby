@@ -130,7 +130,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultSummary?id=" + json.resultSummary.id;
+                var rId = json.resultSummary.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultSummary?id=" + rId;
+                    }
+                })
+                // window.location = "showresultSummary?id=" + json.resultSummary.id;
             }
         })
     }

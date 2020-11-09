@@ -168,7 +168,20 @@
             type: 'post',
             data: eval('(' + data + ')'),
             success:function (json) {
-                window.location = "showresultGroup2020?id=" + json.resultGroup2020.id;
+                var rId = json.resultGroup2020.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultGroup2020?id=" + rId;
+                    }
+                })
+                // window.location = "showresultGroup2020?id=" + json.resultGroup2020.id;
             }
         })
     }

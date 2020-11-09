@@ -589,7 +589,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultPhysical?id=" + json.resultPhysical.id;
+                var rId = json.resultPhysical.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultPhysical?id=" + rId;
+                    }
+                })
+                // window.location = "showresultPhysical?id=" + json.resultPhysical.id;
             }
         })
     }

@@ -247,7 +247,20 @@
                         type: 'post',
                         data: data,
                         success:function (json) {
-                            window.location = "showresultAttention?id=" + json.resultAttention.id;
+                            var rId = json.resultAttention.id;
+                            var refreshData = {
+                                babyid: $("#babyid").val()
+                            }
+                            $.ajax({
+                                url: 'refreshExamTime',
+                                type: 'post',
+                                data: refreshData,
+                                success:function (json) {
+                                    console.log('更新时间成功');
+                                    window.location = "showresultAttention?id=" + rId;
+                                }
+                            })
+                            // window.location = "showresultAttention?id=" + json.resultAttention.id;
                         }
                     })
                 }

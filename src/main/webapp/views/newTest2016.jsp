@@ -339,19 +339,20 @@
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
-                            // var refreshData = {
-                            //     babyid: $("#babyid").val()
-                            // }
-                            // $.ajax({
-                            //     url: 'refreshExamTime',
-                            //     type: 'post',
-                            //     data: refreshData,
-                            //     success:function (json) {
-                            //         console.log('更新时间成功');
-                            //         window.location = "showreult2016?id=" + json.result2016.id;
-                            //     }
-                            // })
-                            window.location = "showreult2016?id=" + json.result2016.id;
+                            var rId = json.result2016.id;
+                            var refreshData = {
+                                babyid: $("#babyid").val()
+                            }
+                            $.ajax({
+                                url: 'refreshExamTime',
+                                type: 'post',
+                                data: refreshData,
+                                success:function (json) {
+                                    console.log('更新时间成功');
+                                    window.location = "showreult2016?id=" + rId;
+                                }
+                            })
+                            // window.location = "showreult2016?id=" + json.result2016.id;
                         }
                     })
                 }

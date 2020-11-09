@@ -396,7 +396,20 @@
             type: 'post',
             data: getData(),
             success:function (json) {
-                window.location = "showresultAllergy?id=" + json.resultAllergy.id;
+                var rId = json.resultAllergy.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultAllergy?id=" + rId;
+                    }
+                })
+                // window.location = "showresultAllergy?id=" + json.resultAllergy.id;
             }
         })
     }
@@ -408,7 +421,20 @@
             type: 'post',
             data: getData(),
             success:function (json) {
-                window.location = "newtestBasic1?babyid=" + parseInt($("#babyid").val());
+                var rId = json.resultAllergy.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "newtestBasic1?babyid=" + parseInt($("#babyid").val());
+                    }
+                })
+                // window.location = "newtestBasic1?babyid=" + parseInt($("#babyid").val());
             }
         })
     }
@@ -420,7 +446,20 @@
             type: 'post',
             data: getData(),
             success:function (json) {
-                window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+                var rId = json.resultAllergy.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+                    }
+                })
+                // window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
             }
         })
     }

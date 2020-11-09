@@ -171,7 +171,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultEye?id=" + json.resultEye.id;
+                var rId = json.resultEye.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultEye?id=" + rId;
+                    }
+                })
+                // window.location = "showresultEye?id=" + json.resultEye.id;
             }
         })
     }

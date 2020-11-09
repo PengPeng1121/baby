@@ -285,7 +285,20 @@
                         type: 'post',
                         data: eval('(' + data + ')'),
                         success:function (json) {
-                            window.location = "showresultFeel2020?id=" + json.resultFeel2020.id;
+                            var rId = json.resultFeel2020.id;
+                            var refreshData = {
+                                babyid: $("#babyid").val()
+                            }
+                            $.ajax({
+                                url: 'refreshExamTime',
+                                type: 'post',
+                                data: refreshData,
+                                success:function (json) {
+                                    console.log('更新时间成功');
+                                    window.location = "showresultFeel2020?id=" + rId;
+                                }
+                            })
+                            // window.location = "showresultFeel2020?id=" + json.resultFeel2020.id;
                         }
                     })
                 }

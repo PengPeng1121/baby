@@ -220,8 +220,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                
-                window.location = "showresultBasic1?id=" + json.resultBasic1.id;
+                var rId = json.resultBasic1.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultBasic1?id=" + json.resultBasic1.id;
+                    }
+                })
+                // window.location = "showresultBasic1?id=" + json.resultBasic1.id;
             }
         })
     }
@@ -248,8 +260,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                
-                window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+                var rId = json.resultBasic1.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+                    }
+                })
+                // window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
             }
         })
     }
@@ -276,8 +300,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                
-                window.location = "newtestAllergy?babyid=" + parseInt($("#babyid").val());
+                var rId = json.resultBasic1.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "newtestAllergy?babyid=" + parseInt($("#babyid").val());
+                    }
+                })
+                // window.location = "newtestAllergy?babyid=" + parseInt($("#babyid").val());
             }
         })
     }

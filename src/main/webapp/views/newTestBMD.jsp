@@ -171,7 +171,20 @@
             type: 'post',
             data: data,
             success:function (json) {
-                window.location = "showresultBMD?id=" + json.resultBMD.id;
+                var rId = json.resultBMD.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "showresultBMD?id=" + rId;
+                    }
+                })
+                // window.location = "showresultBMD?id=" + json.resultBMD.id;
             }
         })
     }
