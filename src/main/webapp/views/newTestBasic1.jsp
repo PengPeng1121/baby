@@ -161,7 +161,7 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
-                console.log('上传成功');
+                $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
                 $('#imgUrl').val(json.headImgUrl);
             }
         });
@@ -230,7 +230,7 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultBasic1?id=" + json.resultBasic1.id;
+                        window.location = "showresultBasic1?id=" + rId;
                     }
                 })
                 // window.location = "showresultBasic1?id=" + json.resultBasic1.id;

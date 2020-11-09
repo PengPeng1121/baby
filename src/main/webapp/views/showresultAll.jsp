@@ -126,6 +126,10 @@
             font-size: 14px;
         }
 
+        #physical .item-line{
+            height: 40px;
+        }
+
         #feed .item-line{
             border-bottom: 1px solid #df9390;
             height: 40px;
@@ -165,7 +169,7 @@
             top: 100px;
         }
         #test2016 #table2016-3{
-            width: 55%;
+            width: 60%;
             position: relative;
             left: 60px;
             top: 100px;
@@ -178,11 +182,13 @@
 
 
         #feel #tableFeel1, #tableFeel2,  #tableFeel3, #doctorRemarkFeel{
+            
             width: 65%;
             position: relative;
             left: 50px;
             top: 100px;
             margin-bottom: 0px;
+            font-size: 12px;
         }
         #feel #testerFeel{
             position: relative;
@@ -195,7 +201,7 @@
             position: relative;
             z-index: 1;
             top: 290px;
-            left: 90px;
+            left: 80px;
         }
 
         #bone #boneImg{
@@ -203,7 +209,7 @@
             position: relative;
             z-index: 1;
             top: 290px;
-            left: 90px;
+            left: 80px;
         }
 
         #eye #eyeImg{
@@ -211,7 +217,7 @@
             position: relative;
             z-index: 1;
             top: 240px;
-            left: 90px;
+            left: 80px;
         }
 
         #BMD #BMDImg{
@@ -219,7 +225,7 @@
             position: relative;
             z-index: 1;
             top: 240px;
-            left: 90px;
+            left: 80px;
         }
 
         #micro #microImg{
@@ -227,7 +233,7 @@
             position: relative;
             z-index: 1;
             top: 290px;
-            left: 90px;
+            left: 80px;
         }
 
         #ear #earImg1, #earImg2{
@@ -235,7 +241,7 @@
             position: relative;
             z-index: 1;
             top: 240px;
-            left: 90px;
+            left: 80px;
         }
 
         #attention #name-table{
@@ -503,7 +509,7 @@
             top: 310px !important;
         }
         #group #content-table{
-            top: 80px !important;
+            top: 60px !important;
         }
 
         #group .column-body{
@@ -712,6 +718,10 @@
             transform: rotate(-45deg) !important;
         }
 
+        #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2{
+            left: 70px !important;
+        }
+
 
     </style>
 </head>
@@ -901,7 +911,7 @@
                 <table style="width: 38%;
                     border: 0;
                     position: relative;
-                    top: 220px;
+                    top: 130px;
                     left: 270px;
                     font-size: 16px"
                     id="table1">
@@ -975,7 +985,7 @@
                 <table style="width: 38%;
                     border: 0;
                     position: relative;
-                    top: 320px;
+                    top: 180px;
                     left: 270px;
                     font-size: 16px"
                     id="table2">
@@ -1306,7 +1316,7 @@
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg1Girl.jpg">
                 </s:if>
-                <table style="width: 800px; height:1122px;border:0;font-size: 16px;font-weight: bold; position: relative;top: 80px;" id="content-table">
+                <table style="width: 800px; height:1122px;border:0;font-size: 16px;font-weight: bold; position: relative;top: 60px;" id="content-table">
                     <tr>
                         <td class="col-md-8 content-1">
                             <div id="column1" class="column-body"></div>
@@ -1902,7 +1912,7 @@
                     <tr>
                         <td colspan="4">
                             <!-- <p id="remarkText" style="font-weight: normal;"></p> -->
-                            <textarea id="physicalRemarkText" rows="3" style="resize:none;border: 0;width: 100%;height: 100%; font-weight: normal;"></textarea>
+                            <textarea id="physicalRemarkText" rows="3" style="resize:none;border: 0;width: 100%; background-color: transparent; font-weight: normal;"></textarea>
                         </td>
                     </tr>
                 </table>
@@ -1947,7 +1957,7 @@
                                    当前总奶量:
                                 </span>
                                 <span style="margin-left: 40px">
-                                    <s:property value="resultFeed.currentMilkYield"/> ml/天
+                                    <s:property value="allTestResultVo.resultFeed.currentMilkYield"/> ml/天
                                 </span>
 
                                 <input type="checkbox" name="milkType"  value="0">
@@ -1978,7 +1988,7 @@
                                 <input type="checkbox" name="milkRecipe"  value="5" style="">
                                 <label style="font-weight: normal;margin-left: 5px"> 其他</label>
                                 <span style="margin-left: 5px">
-                                    <s:property value="resultFeed.milkRecipeInfo"/> 
+                                    <s:property value="allTestResultVo.resultFeed.milkRecipeInfo"/> 
                                 </span>
                             </td>
                         </tr>
@@ -1988,7 +1998,7 @@
                                     辅食添加情况:
                                 </span>
                                 <span style="margin-left: 60px">
-                                    <s:property value="resultFeed.accessoryFoodSituation"/> 
+                                    <s:property value="allTestResultVo.resultFeed.accessoryFoodSituation"/> 
                                 </span>
                             </td>
                         </tr>
@@ -2003,7 +2013,7 @@
                                 <input type="radio" name="isFoodAllergy" value="0"   id="radio-answer-5-0">
                                 <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 无</label>
                                 
-                                <s:property value="resultFeed.foodAllergySituation"/>
+                                <s:property value="allTestResultVo.resultFeed.foodAllergySituation"/>
 
                             </td>
                             </td>
@@ -2047,7 +2057,7 @@
                                     辅食添加时间:
                                 </span>
                                 <span style="margin-left: 60px">
-                                    <s:property value="resultFeed.accessoryFoodAddDate"/> 
+                                    <s:property value="allTestResultVo.resultFeed.accessoryFoodAddDate"/> 
                                 </span>
                             </td>
                         </tr>
@@ -2063,7 +2073,7 @@
                                 <input type="radio" name="isOwnFood" value="0"   id="radio-answer-5-0">
                                 <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
                                 
-                                <s:property value="resultFeed.ownFoodSituation"/>
+                                <s:property value="allTestResultVo.resultFeed.ownFoodSituation"/>
 
                             </td>
                             </td>
@@ -2080,13 +2090,13 @@
                                     大便次数:
                                 </span>
                                 <span>
-                                    <s:property value="resultFeed.shitTimes"/>
+                                    <s:property value="allTestResultVo.resultFeed.shitTimes"/>
                                 </span>
                                 <span style="margin-left: 100px">
                                     大便性状:
                                 </span>
                                 <span>
-                                    <s:property value="resultFeed.shitShape"/>
+                                    <s:property value="allTestResultVo.resultFeed.shitShape"/>
                                 </span>
                             </td>
                         </tr>
@@ -2105,7 +2115,7 @@
     </s:if>
 
     <s:if test="allTestResultVo.resultTooth">
-    <div class="container" class="hemaFront" id="tooth" style="height: 1122px">
+    <div class="container" class="hemaFront" id="tooth" style="height: 1122px;overflow: hidden;">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
                 <s:if test="baby.gender == 1">
@@ -2154,7 +2164,7 @@
                         </td>
                     </tr>
                 </table>
-                <textarea id="remarkTextTooth" rows="3" style="resize:none;border: 0;width: 350px;height: 120px"></textarea>
+                <textarea id="remarkTextTooth" rows="3" style="resize:none;border: 0;width: 350px;height: 120px;background-color: transparent;"></textarea>
                 <!-- 牙图 -->
                 <img id="tooth-img" src="statics/img/tooth.jpg">
                 
@@ -2221,7 +2231,7 @@
 
 
     <s:if test="allTestResultVo.resultFeel2020">
-    <div class="container" class="hemaFront" id="feel" style="height: 1122px">
+    <div class="container" class="hemaFront" id="feel" style="height: 1122px;overflow: hidden;">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
                 <s:if test="baby.gender == 1">
@@ -2349,7 +2359,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <textarea id="doctorRemarkFeel" rows="5" style="resize:none;border: 0;"></textarea>
+                <textarea id="doctorRemarkFeel" rows="5" style="resize:none;border: 0;background-color: transparent;"></textarea>
                 <div id="testerFeel"><p>测评者：<s:property value="otherResultVo.recordFeel2020.testerName"/> </p></div>
             </div>    
         </div>　
@@ -2408,7 +2418,7 @@
                         <td><s:property value="otherResultVo.scoreAct"/></td>
                         <td><s:property value="otherResultVo.scoreAdapt"/></td>
                         <td><s:property value="otherResultVo.scoreLanguage"/></td>
-                        <td id="last"><s:property value="otherResultVo.scoreSocial"/></td>
+                        <td id="last" style="border:0px"><s:property value="otherResultVo.scoreSocial"/></td>
                     </tr>
                     </tbody>
                 </table>
@@ -2453,7 +2463,7 @@
                 </table>
 
                 <textarea id="doctorRemark2016" rows="8" style="resize:none;border: 0;background-color: transparent;"></textarea>
-                <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.testerName"/></p></div>
+                <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.record2016.testerName"/></p></div>
             </div>
         </div>
     </div>
@@ -2725,7 +2735,7 @@
     </s:if>
 
     <s:if test="allTestResultVo.resultSummary"> 
-    <div class="container" class="hemaFront" id="summary">
+    <div class="container" class="hemaFront" id="summary" style="height:1122px; overflow: hidden;">
         <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
             <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
                 <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Boy.jpg"> -->
