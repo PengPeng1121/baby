@@ -33,7 +33,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">尿常规</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">心电图</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -65,7 +65,7 @@
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <div class="panel-heading">上传尿常规图片</div>
+                <div class="panel-heading">上传心电图图片</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     
                     <div class="col-md-12" style="padding-bottom: 10px">
@@ -133,7 +133,7 @@
         formData.append("testId", 47);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
-            url: "babyImg/uploadUrineImg",
+            url: "babyImg/uploadECGImg",
             type: "POST",
             enctype: "multipart/form-data",
             data: formData,
@@ -141,7 +141,7 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
-                $('#imgUrl').val(json.urineImgUrl);
+                $('#imgUrl').val(json.ECGImgUrl);
                 $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
             }
         });
@@ -163,15 +163,15 @@
         
 
         var data = {};
-        data ['resultUrine.urineImgUrl'] = $("#imgUrl").val();
-        data ['resultUrine.babyId'] = parseInt($("#babyid").val());
+        data ['resultECG.ECGImgUrl'] = $("#imgUrl").val();
+        data ['resultECG.babyId'] = parseInt($("#babyid").val());
 
         $.ajax({
-            url: 'saveresultUrine',
+            url: 'saveresultECG',
             type: 'post',
             data: data,
             success:function (json) {
-                var rId = json.resultUrine.id;
+                var rId = json.resultECG.id;
                 var refreshData = {
                     babyid: $("#babyid").val()
                 }
@@ -181,7 +181,7 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultUrine?id=" + rId;
+                        window.location = "showresultECG?id=" + rId;
                     }
                 })
                 // window.location = "showresultUrine?id=" + json.resultUrine.id;
