@@ -235,6 +235,21 @@
             top: 290px;
             left: 80px;
         }
+        #urine #urineImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 80px;
+        }
+
+        #ecg #ECGImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 80px;
+        }
 
         #ear #earImg1, #earImg2{
             width: 650px;
@@ -718,7 +733,7 @@
             transform: rotate(-45deg) !important;
         }
 
-        #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2{
+        #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2, #urineImg, #ECGImg{
             left: 70px !important;
         }
 
@@ -2733,6 +2748,43 @@
         </div>
     </div>
     </s:if>
+
+    <s:if test="allTestResultVo.resultUrine">
+    <div class="container" class="hemaFront" id="urine">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgUrineBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgUrineGirl.jpg">
+                </s:if>
+                <img id="urineImg" src="<s:property value="allTestResultVo.resultUrine.urineImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+
+    <s:if test="allTestResultVo.resultECG">
+    <div class="container" class="hemaFront" id="ecg">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgECGBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgECGGirl.jpg">
+                </s:if>
+                <img id="ECGImg" src="<s:property value="allTestResultVo.resultECG.ECGImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+
 
     <s:if test="allTestResultVo.resultSummary"> 
     <div class="container" class="hemaFront" id="summary" style="height:1122px; overflow: hidden;">

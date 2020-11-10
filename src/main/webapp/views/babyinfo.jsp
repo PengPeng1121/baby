@@ -535,6 +535,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultUrine?id=<s:property value="#resultUrine.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultUrine.id"/>, 47)">选中此报告</a>
                                         <!-- 47 -->
                                     </div>
                                 </div>
@@ -562,6 +563,8 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" href="showresultECG?id=<s:property value="#resultECG.id"/>">查看报告</a>
                                         <!-- 53 -->
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultECG.id"/>, 53)">选中此报告</a>
+                                        <!-- 47 -->
                                     </div>
                                 </div>
                             </td>
