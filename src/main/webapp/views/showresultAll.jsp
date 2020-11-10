@@ -1206,34 +1206,34 @@
                         </tr>
                         <tr>
                             <td style="width: 180px">
-                                <input type="checkbox" name="familyHeredityDisease"  value="0">
-                                <label style="font-weight: normal"> 无</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="0" id="checkbox-answer-2-1">
+                                <label for="checkbox-answer-2-1" style="font-weight: normal"> 无</label>
                             </td>
                             <td style="width: 180px">
-                                <input type="checkbox" name="familyHeredityDisease"  value="1">
-                                <label style="font-weight: normal"> 高血压</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="1" id="checkbox-answer-2-2">
+                                <label for="checkbox-answer-2-2" style="font-weight: normal"> 高血压</label>
                             </td>
                             <td style="width: 180px">
-                                <input type="checkbox" name="familyHeredityDisease"  value="2">
-                                <label style="font-weight: normal"> 冠心病</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="2" id="checkbox-answer-2-3">
+                                <label for="checkbox-answer-2-3" style="font-weight: normal"> 冠心病</label>
                             </td>
                             <td style="width: 180px">
-                                <input type="checkbox" name="familyHeredityDisease"  value="3">
-                                <label style="font-weight: normal"> 糖尿病</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="3" id="checkbox-answer-2-4">
+                                <label for="checkbox-answer-2-4" style="font-weight: normal"> 糖尿病</label>
                             </td>
                         </tr>
                         <tr class="item-line">
                             <td>
-                                <input type="checkbox" name="familyHeredityDisease"  value="4">
-                                <label style="font-weight: normal"> 哮喘</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="4" id="checkbox-answer-2-5">
+                                <label for="checkbox-answer-2-5" style="font-weight: normal"> 哮喘</label>
                             </td>
                             <td>    
-                                <input type="checkbox" name="familyHeredityDisease"  value="5">
-                                <label style="font-weight: normal"> 癫痫</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="5" id="checkbox-answer-2-6">
+                                <label for="checkbox-answer-2-6" style="font-weight: normal"> 癫痫</label>
                             </td>
                             <td colspan="2">
-                                <input type="checkbox" name="familyHeredityDisease"  value="6">
-                                <label style="font-weight: normal"> 神经疾病</label>
+                                <input type="checkbox" name="familyHeredityDisease"  value="6" id="checkbox-answer-2-7">
+                                <label for="checkbox-answer-2-7" style="font-weight: normal"> 神经疾病</label>
                             </td>
                         </tr>
                     </tbody>
@@ -1299,10 +1299,10 @@
                         <tr>
                             <td>
                                 是否有过敏史:
-                                <input type="radio" name="isAllergyHistory" value="1"   id="radio-answer-8-1">
+                                <input type="radio" name="isAllergyHistory" value="1"   id="radio-answer-9-1">
                                 <label for="radio-answer-9-1" style="width: 50px;margin-left: 20px;font-weight: normal;"> 是</label>
 
-                                <input type="radio" name="isAllergyHistory" value="0"   id="radio-answer-8-1">
+                                <input type="radio" name="isAllergyHistory" value="0"   id="radio-answer-9-0">
                                 <label for="radio-answer-9-0" style="width: 50px;margin-left: 20px;font-weight: normal;"> 否</label>
                             </td>
                         </tr>
