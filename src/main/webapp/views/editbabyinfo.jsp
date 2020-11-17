@@ -35,9 +35,21 @@
                     <span class="control-label front-label">
 					<select id="nation" class="form-control front-no-radius front-no-box-shadow">
 						<option value="汉族">汉族</option>
-						<option value="满族">满族</option>
+                        <option value="满族">满族</option>
                         <option value="蒙族">蒙族</option>
                         <option value="回族">回族</option>
+                        <option value="回族">壮族</option>
+                        <option value="回族">维吾尔族</option>
+                        <option value="回族">苗族</option>
+                        <option value="回族">朝鲜族</option>
+                        <option value="回族">彝族</option>
+                        <option value="回族">藏族</option>
+                        <option value="回族">土家族</option>
+                        <option value="回族">土家族</option>
+                        <option value="蒙古族">蒙古族</option>
+                        <option value="回族">布依族</option>
+                        <option value="回族">瑶族</option>
+                        <option value="回族">白族</option>
                         <option value="其他">其他</option>
                     </select></span>
                 </div>
