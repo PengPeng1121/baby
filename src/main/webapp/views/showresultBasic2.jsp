@@ -227,7 +227,16 @@
                                     <span style="margin-left: 60px">
                                         <s:property value="resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
                                     </span>
-                                    <span style="margin-left: 160px">
+
+                                    <span style="margin-left: 30px">
+                                        是否早产:
+                                    </span>
+                                    <span style="margin-left: 10px">
+                                        <s:if test="resultBasic2.isPremature == 1">是</s:if><s:else>否</s:else>
+                                    </span>
+
+
+                                    <span style="margin-left: 60px">
                                         宝贝出生体重:   
                                     </span>
                                     <span>
@@ -465,7 +474,7 @@
     }
 
     // 多选框赋值
-    $("input:checkbox[name='childbirthSituation'][value='1']").attr('checked','true');
+    // $("input:checkbox[name='childbirthSituation'][value='1']").attr('checked','true');
     
     $('.print').click(function(){
         window.print();

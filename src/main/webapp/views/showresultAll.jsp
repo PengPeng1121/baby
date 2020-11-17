@@ -235,11 +235,21 @@
             top: 290px;
             left: 80px;
         }
+
+
+        #micro #boneImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 600px;
+            left: 80px;
+        }
+
         #urine #urineImg{
             width: 650px;
             position: relative;
             z-index: 1;
-            top: 290px;
+            top: 240px;
             left: 80px;
         }
 
@@ -284,8 +294,8 @@
 
         #tooth #name-table{
             position: relative;
-            left: 60px;
-            top: 130px;
+            left: 70px;
+            top: 90px;
             width: 25%;
             font-size: 16px;
         }
@@ -592,8 +602,8 @@
 
         #tooth #name-table{
             position: relative;
-            left: 60px;
-            top: 130px;
+            left: 70px;
+            top: 90px;
             width: 60%;
             font-size: 16px;
         }
@@ -602,27 +612,27 @@
             height: 120px;
             border: 0;
             position: relative;
-            top: 160px;
-            left: 80px;
+            top: 180px;
+            left: 100px;
             display: inline-block;
         }
         #tooth #remarkTextTooth{
             position: relative;
             left: 100px;
-            top: 180px;
+            top: 200px;
             background-color: transparent;
         }
 
         #tooth #tooth-img{
             position: relative;
-            left: 100px;
-            top: 180px;
+            left: 190px;
+            top: 200px;
         }
 
         #tooth #info-table{
             position: relative;
-            top: 200px;
-            left: 180px;
+            top: 220px;
+            left: 250px;
         }
         .info1{
             width: 0 !important;
@@ -665,9 +675,9 @@
             transform: rotate(-45deg) !important;
         }
         .tooth-icon{
-            transform:translate(-40px, -170px) !important;
-            -webkit-transform:translate(-40px, -170px) !important;  
-            -moz-transform:translate(-40px, -170px) !important;   
+            transform:translate(55px, -150px) !important;
+            -webkit-transform:translate(55px, -150px) !important;  
+            -moz-transform:translate(55px, -150px) !important;   
         }
 
         #tooth .style0{
@@ -1123,13 +1133,22 @@
                                     生产胎龄:
                                 </span>
                                 <span style="margin-left: 60px">
-                                    <s:property value="allTestResultVo.resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
+                                    <s:property value="resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
                                 </span>
-                                <span style="margin-left: 160px">
+
+                                <span style="margin-left: 30px">
+                                    是否早产:
+                                </span>
+                                <span style="margin-left: 10px">
+                                    <s:if test="resultBasic2.isPremature == 1">是</s:if><s:else>否</s:else>
+                                </span>
+
+
+                                <span style="margin-left: 60px">
                                     宝贝出生体重:   
                                 </span>
                                 <span>
-                                    <s:property value="allTestResultVo.resultBasic2.babyBirthWeight"/>      g
+                                    <s:property value="resultBasic2.babyBirthWeight"/>      g
                                 </span>
 
                             </td>
@@ -1391,7 +1410,7 @@
                     font-size: 16px"
                     id="name-table">
                     <tr>
-                        <td class="col-md-12" style="font-weight: bold;">
+                        <td class="col-md-12">
                             <span style="letter-spacing: 18px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                             <div id="name-text">
@@ -1643,7 +1662,7 @@
                     left: 50px;
                     font-size: 16px">
                     <tr>
-                        <td style="font-weight: bold; width: 100px; padding-left: 15px">
+                        <td style=" width: 100px; padding-left: 15px">
                             <span style="letter-spacing: 18px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                         </td>
@@ -1950,7 +1969,7 @@
                 <table id="name-table">
                     <tr>
 
-                        <td class="col-md-12" style="font-weight: bold;">
+                        <td class="col-md-12">
                             <span style="letter-spacing: 10px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                             <div id="name-text">
@@ -2141,7 +2160,7 @@
                 </s:if>
                 <table id="name-table">
                     <tr>
-                        <td class="col-md-12" style="font-weight: bold;">
+                        <td class="col-md-12">
                             <span style="letter-spacing: 10px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                             <div id="name-text">
@@ -2496,14 +2515,14 @@
                 </s:if>
                 <table id="name-table">
                     <tr>
-                        <td class="col-md-4" style="font-weight: bold;">
+                        <td class="col-md-4">
                             <span style="letter-spacing: 10px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                             <div id="name-text">
                                 <s:property value="baby.name"/>
                             </div>
                         </td>
-                        <td class="col-md-4 col-offset-4" style="font-weight: bold;">
+                        <td class="col-md-4 col-offset-4">
                             <span style="letter-spacing: 1px">出生日期:</span>
                             <div id="birth-text">
                                 <s:date name="baby.birthday" format="yyyy-MM-dd"/>
@@ -2714,22 +2733,7 @@
     </div>
     </s:if>
 
-    <s:if test="allTestResultVo.resultBone"> 
-    <div class="container" class="hemaFront" id="bone">
-        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
-            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
-                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneBoy.jpg"> -->
-                <s:if test="baby.gender == 1">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneBoy.jpg">
-                </s:if>
-                <s:if test="baby.gender == 0">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneGirl.jpg">
-                </s:if>
-                <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
-            </div>
-        </div>
-    </div>
-    </s:if>
+    
 
 
     <s:if test="allTestResultVo.resultMicro">
@@ -2744,6 +2748,8 @@
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroGirl.jpg">
                 </s:if>
                 <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
+
+                <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
             </div>
         </div>
     </div>
@@ -2801,13 +2807,13 @@
                 <table style="width: 55%;
                     border: 0;
                     position: relative;
-                    top: 120px;
-                    left: 70px;
+                    top: 100px;
+                    left: 85px;
                     font-size: 16px"
                     id="name-table">
                     <tr>
 
-                        <td class="col-md-4" style="font-weight: bold;">
+                        <td class="col-md-4">
                             <span style="letter-spacing: 10px">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
                             <div id="name-text">
@@ -2816,7 +2822,7 @@
                         </td>
                         
 
-                        <td class="col-md-4 col-offset-4" style="font-weight: bold;">
+                        <td class="col-md-4 col-offset-4">
                             <span style="letter-spacing: 1px">出生日期:</span>
                             <div id="birth-text">
                                 <s:date name="baby.birthday" format="yyyy-MM-dd"/>
@@ -2893,8 +2899,6 @@
     for (var j = 0, llen = childbirthSituationArr.length; j < llen; j++) {
         $("input:checkbox[name='childbirthSituation'][value='" + childbirthSituationArr[j] + "']").attr('checked','true');
     }
-    // 多选框赋值
-    $("input:checkbox[name='childbirthSituation'][value='1']").attr('checked','true');
 </script>
 
 <!-- group -->

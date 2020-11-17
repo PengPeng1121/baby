@@ -112,6 +112,22 @@
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>4</td>
                                 <td>
+                                    是否早产
+                                </td>
+                                <td>
+                                    <label for="radio-answer-2-1">
+                                        <input type="radio" name="isPremature" value="1"  id="radio-answer-2-1" />是
+                                    </label>
+                                </td>
+                                <td>
+                                    <label for="radio-answer-2-0">
+                                        <input type="radio" name="isPremature" value="0" id="radio-answer-2-0" />否
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                                <td>5</td>
+                                <td>
                                     出生体重:
                                 </td>
                                 <td colspan="2">
@@ -119,7 +135,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>5</td>
+                                <td>6</td>
                                 <td>
                                     母亲生育年龄(周岁):
                                 </td>
@@ -128,7 +144,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>6</td>
+                                <td>7</td>
                                 <td>
                                     胎次:
                                 </td>
@@ -137,7 +153,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>7</td>
+                                <td>8</td>
                                 <td>
                                     母亲妊娠期患病情况:
                                 </td>
@@ -156,7 +172,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>8</td>
+                                <td>9</td>
                                 <td>
                                     产次:
                                 </td>
@@ -165,7 +181,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>9</td>
+                                <td>10</td>
                                 <td>
                                     有无重大疾病或发生意外情况:
                                 </td>
@@ -174,7 +190,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>10</td>
+                                <td>11</td>
                                 <td>
                                     父母系三代有先天家族遗传性疾病:
                                 </td>
@@ -189,7 +205,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>11</td>
+                                <td>12</td>
                                 <td>
                                     外祖父母、祖父母有慢性咳嗽、季节性咳嗽、运动后咳嗽或哮喘病史
                                 </td>
@@ -205,7 +221,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>12</td>
+                                <td>13</td>
                                 <td>
                                     父母双方有皮肤发痒、荨麻疹、药疹、湿疹病史
                                 </td>
@@ -221,7 +237,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>13</td>
+                                <td>14</td>
                                 <td>
                                     父母双方有哮喘、鼻炎、慢性咳嗽病史
                                 </td>
@@ -237,7 +253,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>14</td>
+                                <td>15</td>
                                 <td>
                                     父母双方有食物吸收差、身体消瘦、排便异常病史。
                                 </td>
@@ -253,7 +269,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>15</td>
+                                <td>16</td>
                                 <td>
                                     是否有过敏史
                                 </td>
@@ -269,7 +285,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>16</td>
+                                <td>17</td>
                                 <td>
                                     过敏情况:
                                 </td>
@@ -285,7 +301,7 @@
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基本信息</a>
+                <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基本信息</a> -->
                 <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a>
             </div>
         </form>
@@ -423,6 +439,7 @@
             isHeredityDisease3,
             isHeredityDisease4,
             isAllergyHistory,
+            isPremature,
             allergySituation;
         var data = {};
         var childbirthSituationList = [];
@@ -444,6 +461,7 @@
 
         data['resultBasic2.babyId'] = $("#babyid").val();
         data['resultBasic2.isNormalChildbirth'] = parseInt($("input:radio[name='isNormalChildbirth']:checked").val());
+        data['resultBasic2.isPremature'] = parseInt($("input:radio[name='isPremature']:checked").val());
         data['resultBasic2.childbirthSituation'] = childbirthSituationStr;
         data['resultBasic2.babyBirthWeekAge'] = $("#babyBirthWeekAge").val();
         data['resultBasic2.babyBirthWeight'] = $("#babyBirthWeight").val();

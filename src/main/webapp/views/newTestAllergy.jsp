@@ -338,8 +338,8 @@
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基础信息</a>
-                <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a>
+                <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基础信息</a>
+                <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a> -->
             </div>
 
             <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
