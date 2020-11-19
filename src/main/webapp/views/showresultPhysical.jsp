@@ -175,7 +175,7 @@
                         left: 50px;
                         font-size: 16px">
                         <tr>
-                            <td style="font-weight: bold; width: 100px; padding-left: 15px">
+                            <td style=" width: 100px; padding-left: 15px">
                                 <span style="letter-spacing: 18px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                             </td>

@@ -96,13 +96,13 @@
                     <table style="width: 55%;
                         border: 0;
                         position: relative;
-                        top: 120px;
+                        top: 100px;
                         left: 70px;
                         font-size: 16px"
                         id="name-table">
                         <tr>
 
-                            <td class="col-md-4" style="font-weight: bold;">
+                            <td class="col-md-4" >
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                                 <div id="name-text">
@@ -111,7 +111,7 @@
                             </td>
                             
 
-                            <td class="col-md-4 col-offset-4" style="font-weight: bold;">
+                            <td class="col-md-4 col-offset-4" >
                                 <span style="letter-spacing: 1px">出生日期:</span>
                                 <div id="birth-text">
                                     <s:date name="baby.birthday" format="yyyy-MM-dd"/>

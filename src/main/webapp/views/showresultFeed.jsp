@@ -214,7 +214,7 @@
                     <table id="name-table">
                         <tr>
 
-                            <td class="col-md-12" style="font-weight: bold;">
+                            <td class="col-md-12">
                                 <span style="letter-spacing: 10px">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
                                 <div id="name-text">

@@ -204,12 +204,31 @@
             left: 80px;
         }
 
+
+        #blood #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
+        }
+
         #bone #boneImg{
             width: 650px;
             position: relative;
             z-index: 1;
             top: 290px;
             left: 80px;
+        }
+
+        #bone #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
         }
 
         #eye #eyeImg{
@@ -245,6 +264,16 @@
             left: 80px;
         }
 
+        #micro #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
+        }
+
+
         #urine #urineImg{
             width: 650px;
             position: relative;
@@ -253,12 +282,30 @@
             left: 80px;
         }
 
+        #urine #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
+        }
+
         #ecg #ECGImg{
             width: 650px;
             position: relative;
             z-index: 1;
             top: 290px;
             left: 80px;
+        }
+
+        #ecg #name-table{
+            width: 55%;
+            border: 0;
+            position: relative;
+            top: 120px;
+            left: 70px;
+            font-size: 16px
         }
 
         #ear #earImg1, #earImg2{
@@ -1084,7 +1131,7 @@
                 </s:if>
 
 
-                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 1380px;">
+                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 60%;position: relative;left: 70px;top: 195px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td>
@@ -1204,7 +1251,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 35%;position: absolute;top: 1800px;left: 440px;">
+                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 60%;position: relative;top: 265px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td style="border:0px;width: 200px">
@@ -1216,7 +1263,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1900px;left: 440px;">
+                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 325px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td colspan="4">
@@ -1257,7 +1304,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 2015px;left: 440px;">
+                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 330px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td style="width: 510px">
@@ -2727,6 +2774,17 @@
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBloodGirl.jpg">
                 </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <img id="bloodImg" src="<s:property value="allTestResultVo.resultBlood.bloodImgUrl"/>">
             </div>
         </div>
@@ -2747,13 +2805,57 @@
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroGirl.jpg">
                 </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
-
-                <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
+                <s:if test="allTestResultVo.resultBone">
+                    <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
+                </s:if>
             </div>
         </div>
     </div>
     </s:if>
+
+    <s:if test="allTestResultVo.resultBone">
+        <s:if test="!allTestResultVo.resultMicro">
+            <div class="container" class="hemaFront" id="bone">
+                <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+                    <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                        <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                        <s:if test="baby.gender == 1">
+                        <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneBoy.jpg">
+                        </s:if>
+                        <s:if test="baby.gender == 0">
+                        <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgBoneGirl.jpg">
+                        </s:if>
+                        <table id="name-table">
+                            <tr>
+                                <td class="col-md-12">
+                                    <span style="letter-spacing: 10px">姓</span>
+                                    <span style="letter-spacing: 1px">名:</span>
+                                    <div id="name-text">
+                                        <s:property value="baby.name"/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
+                    </div>
+                </div>
+            </div>
+        </s:if>
+    </s:if>
+
+
 
     <s:if test="allTestResultVo.resultUrine">
     <div class="container" class="hemaFront" id="urine">
@@ -2766,6 +2868,17 @@
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgUrineGirl.jpg">
                 </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <img id="urineImg" src="<s:property value="allTestResultVo.resultUrine.urineImgUrl"/>">
             </div>
         </div>
@@ -2784,6 +2897,17 @@
                 <s:if test="baby.gender == 0">
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgECGGirl.jpg">
                 </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <img id="ECGImg" src="<s:property value="allTestResultVo.resultECG.ECGImgUrl"/>">
             </div>
         </div>
