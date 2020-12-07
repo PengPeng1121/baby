@@ -564,7 +564,7 @@
                                         <a class="btn btn-default" href="showresultECG?id=<s:property value="#resultECG.id"/>">查看报告</a>
                                         <!-- 53 -->
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultECG.id"/>, 53)">选中此报告</a>
-                                        <!-- 47 -->
+                                        <!-- 53 -->
                                     </div>
                                 </div>
                             </td>
@@ -1178,6 +1178,7 @@
         if (tclass.indexOf('unSelected') != -1) {
             for (var i =0, len = reportSelect.length; i < len; i++) {
                 item = reportSelect[i];
+                console.log(reportSelect)
                 if (item['testId'] == tId) {
                     alert('您已选择同一类型测评,请取消原选中');
                     return;

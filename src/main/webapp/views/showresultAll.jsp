@@ -330,7 +330,7 @@
             width: 60%;
             position: relative;
             left: 70px;
-            top: 180px;
+            top: 270px;
         }
         #attention #table-1{
             width: 60%;
@@ -639,7 +639,7 @@
         #attention #table-main{ 
             width: 80%;
             left: 70px;
-            top: 180px;
+            top: 270px;
         }
         #attention #table-1{
             width: 80%;
@@ -1267,7 +1267,7 @@
                     <tbody style="width: 100%">
                         <tr>
                             <td colspan="4">
-                                父母系三代有先天家族遗传性疾病:
+                                父母系三代有无先天家族遗传性疾病:
                             </td>
                         </tr>
                         <tr>
@@ -2695,7 +2695,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <textarea rows="10" style="resize:none;border: 0;width: 80%; background-color: transparent;" id="remarkTextAttention"></textarea>
+                            <textarea rows="10" style="resize:none;border: 0;width: 100%; background-color: transparent;" id="remarkTextAttention"></textarea>
                         </td>
                     </tr>
                 </table>
@@ -2793,38 +2793,72 @@
 
     
 
-
+    <!-- 微量元素和骨碱酶 -->
     <s:if test="allTestResultVo.resultMicro">
-    <div class="container" class="hemaFront" id="micro">
-        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
-            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
-                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
-                <s:if test="baby.gender == 1">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg">
-                </s:if>
-                <s:if test="baby.gender == 0">
-                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroGirl.jpg">
-                </s:if>
-                <table id="name-table">
-                    <tr>
-                        <td class="col-md-12">
-                            <span style="letter-spacing: 10px">姓</span>
-                            <span style="letter-spacing: 1px">名:</span>
-                            <div id="name-text">
-                                <s:property value="baby.name"/>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
-                <s:if test="allTestResultVo.resultBone">
+        <s:if test="allTestResultVo.resultBone">
+        <div class="container" class="hemaFront" id="micro">
+            <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+                <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                    <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                    <s:if test="baby.gender == 1">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoneBoy.jpg">
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoneGirl.jpg">
+                    </s:if>
+                    <table id="name-table">
+                        <tr>
+                            <td class="col-md-12">
+                                <span style="letter-spacing: 10px">姓</span>
+                                <span style="letter-spacing: 1px">名:</span>
+                                <div id="name-text">
+                                    <s:property value="baby.name"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
                     <img id="boneImg" src="<s:property value="allTestResultVo.resultBone.boneImgUrl"/>">
-                </s:if>
+                </div>
             </div>
         </div>
-    </div>
+        </s:if>
     </s:if>
 
+    <!-- 只有微量元素 -->
+    <s:if test="allTestResultVo.resultMicro">
+        <s:if test="!allTestResultVo.resultBone">
+        <div class="container" class="hemaFront" id="micro">
+
+            <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+                <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                    <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                    <s:if test="baby.gender == 1">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg">
+                    </s:if>
+                    <s:if test="baby.gender == 0">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroGirl.jpg">
+                    </s:if>
+                    <table id="name-table">
+                        <tr>
+                            <td class="col-md-12">
+                                <span style="letter-spacing: 10px">姓</span>
+                                <span style="letter-spacing: 1px">名:</span>
+                                <div id="name-text">
+                                    <s:property value="baby.name"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <img id="microImg" src="<s:property value="allTestResultVo.resultMicro.microImgUrl"/>">
+                </div>
+            </div>
+        </div>
+        </s:if>
+    </s:if>
+
+
+    <!-- 只有骨碱酶 -->
     <s:if test="allTestResultVo.resultBone">
         <s:if test="!allTestResultVo.resultMicro">
             <div class="container" class="hemaFront" id="bone">
