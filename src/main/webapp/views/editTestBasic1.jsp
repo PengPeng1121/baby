@@ -66,9 +66,9 @@
                 
                 <input id="resultID" type="hidden" value="<s:property value="resultBasic1.id"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <input id="nickNameOld" type="hidden" value="<s:property value="baby.nickName"/>">
-                <input id="addressOld" type="hidden" value="<s:property value="baby.address"/>">
-                <input id="contactMobileOld" type="hidden" value="<s:property value="baby.contactMobile"/>">
+                <input id="nickNameOld" type="hidden" value="<s:property value="resultBasic1.nickName"/>">
+                <input id="addressOld" type="hidden" value="<s:property value="resultBasic1.address"/>">
+                <input id="contactMobileOld" type="hidden" value="<s:property value="resultBasic1.contactMobile"/>">
 
                 
                 <input id="headImgUrl" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
