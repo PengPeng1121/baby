@@ -994,7 +994,7 @@
                             <img class="line-img" src="statics/img/name1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/name2.png">">
+                            <img class="line-img" src="statics/img/name2.png">
                             </s:if>
                             <span style="letter-spacing: 10px;margin-left: 10px ">姓</span>
                             <span style="letter-spacing: 1px">名:</span>
@@ -1011,7 +1011,7 @@
                             <img class="line-img" src="statics/img/nick1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/nick2.png">">
+                            <img class="line-img" src="statics/img/nick2.png">
                             </s:if>
                             <span style="letter-spacing: 10px;margin-left: 10px ">小</span>
                             <span style="letter-spacing: 1px">名:</span>
@@ -1028,7 +1028,7 @@
                             <img class="line-img" src="statics/img/gender1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/gender2.png">">
+                            <img class="line-img" src="statics/img/gender2.png">
                             </s:if>
                             <span style="letter-spacing: 10px;margin-left: 10px ">性</span>
                             <span style="letter-spacing: 1px">别:</span>
@@ -1044,7 +1044,7 @@
                             <img class="line-img" src="statics/img/birth1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/birth2.png">">
+                            <img class="line-img" src="statics/img/birth2.png">
                             </s:if>
                             <span style="letter-spacing: 1px;margin-left: 10px ">出生日期:</span>
                             <span class="value">
@@ -2965,7 +2965,7 @@
                 <table style="width: 55%;
                     border: 0;
                     position: relative;
-                    top: 100px;
+                    top: 120px;
                     left: 85px;
                     font-size: 16px"
                     id="name-table">
