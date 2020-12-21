@@ -43,7 +43,7 @@
     function save() {
         if ($("#tel").val().trim().length == 0) {
             $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写联系电话！'});
-        }else if($("#tel").val().trim().length != 11 || isTelCode($("#tel").val().trim()) == false ) {
+        }else if(isTelCode($("#tel").val().trim()) == false ) {
             $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写正确的手机号码！'});
         } else if ($("#name").val().length == 0) {
             $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写用户姓名！'});
@@ -83,7 +83,8 @@
     }
     function isTelCode(str) {
         var  reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
-        return reg.test(str);
+        return true;
+        // return reg.test(str);
     }
     function NumofName(str) {
         var  reg = /[0-9]/;

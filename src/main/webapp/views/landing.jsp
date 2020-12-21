@@ -92,10 +92,10 @@
             $('#tel-div').removeClass("has-error");
             $('#tel-help-block').hide();
         }
-        if($('#tel-input').val().length != 11) {
-            $('#tel-div').addClass("has-error");
-            $('#tel-help-block').show();
-        }
+        // if($('#tel-input').val().length != 11) {
+        //     $('#tel-div').addClass("has-error");
+        //     $('#tel-help-block').show();
+        // }
     }
 
     function pswInputBlur() {
