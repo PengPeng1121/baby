@@ -207,7 +207,7 @@
         data ['resultBasic1.contactMobile'] = contactMobile;
         data ['resultBasic1.headImgUrl'] = $("#imgUrl").val();
         // 结果页ID
-        data ['resultBasic1.resultID'] = resultID;
+        data ['resultBasic1.id'] = resultID;
     
         $.ajax({
             url: 'updateresultBasic1',
