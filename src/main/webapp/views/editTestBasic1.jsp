@@ -66,6 +66,9 @@
                 
                 <input id="resultID" type="hidden" value="<s:property value="resultBasic1.id"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
+                <input id="nickNameOld" type="hidden" value="<s:property value="baby.nickName"/>">
+                <input id="addressOld" type="hidden" value="<s:property value="baby.address"/>">
+                <input id="contactMobileOld" type="hidden" value="<s:property value="baby.contactMobile"/>">
 
                 
                 <input id="headImgUrl" type="hidden" value="<s:property value="resultBasic1.headImgUrl"/>">
@@ -76,19 +79,19 @@
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">小名:</label>
                         <div class="col-md-9">
-                           <s:property value="resultBasic1.nickName"/>
+                           <input id="nickName" /> 
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">地址:</label>
                         <div class="col-md-9">
-                           <s:property value="resultBasic1.address"/>
+                           <input id="address" /> 
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">联系电话:</label>
                         <div class="col-md-9">
-                           <s:property value="resultBasic1.contactMobile"/>
+                           <input id="contactMobile" />
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
@@ -122,6 +125,16 @@
     var fileDom = document.getElementById("file");
     var previewDom = document.getElementById("preview");
     var headImgUrl = $('#headImgUrl').val();
+
+
+    var nickNameOld = $('#nickNameOld').val();
+    var addressOld = $('#addressOld').val();
+    var contactMobileOld = $('#contactMobileOld').val();
+
+    $('#nickName').val(nickNameOld);
+    $('#address').val(addressOld);
+    $('#contactMobile').val(contactMobileOld);
+
 
     if (headImgUrl) {
         previewDom.src = headImgUrl;
@@ -159,9 +172,11 @@
     function uploadImg() {
         var formData = new FormData();
         var file = fileDom.files[0]; 
+        resultID = $("#resultID").val();
         formData.append("filename", file.name);
         formData.append("file", file);
         formData.append("testId", 33);
+        formData.append("resultID", resultID);
         formData.append("babyId", $('#babyid').val());
         $.ajax({
             url: "babyImg/uploadHeadImg",
