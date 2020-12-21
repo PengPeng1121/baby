@@ -300,9 +300,10 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                
                 <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基本信息</a> -->
-                <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a>
+                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
             </div>
         </form>
     </div>
