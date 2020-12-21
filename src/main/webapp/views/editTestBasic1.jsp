@@ -189,9 +189,6 @@
         
     }
 
-    function saveAndBasic2() {
-   
-
 
     function score() {
         var nickName,
