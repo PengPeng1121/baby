@@ -71,7 +71,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-1-1">
-                                    <input type="radio" name="answer-1" value="1" checked  id="radio-answer-1-1" />有
+                                    <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1" />有
                                 </label>
                             </td>
                             <td>
@@ -87,7 +87,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-2-1">
-                                    <input type="radio" name="answer-2" value="1" checked  id="radio-answer-2-1" />有
+                                    <input type="radio" name="answer-2" value="1"   id="radio-answer-2-1" />有
                                 </label>
                             </td>
                             <td>
@@ -103,7 +103,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-3-1">
-                                    <input type="radio" name="answer-3" value="1" checked  id="radio-answer-3-1" />有
+                                    <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1" />有
                                 </label>
                             </td>
                             <td>
@@ -119,7 +119,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-4-1">
-                                    <input type="radio" name="answer-4" value="1" checked  id="radio-answer-4-1" />有
+                                    <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1" />有
                                 </label>
                             </td>
                             <td>
@@ -137,7 +137,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-5-1">
-                                    <input type="radio" name="answer-5" value="1" checked id="radio-answer-5-1" />有
+                                    <input type="radio" name="answer-5" value="1"  id="radio-answer-5-1" />有
                                 </label>
                             </td>
                             <td>
@@ -154,7 +154,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-6-1">
-                                    <input type="radio" name="answer-6" value="1" checked id="radio-answer-6-1" />有
+                                    <input type="radio" name="answer-6" value="1"  id="radio-answer-6-1" />有
                                 </label>
                             </td>
                             <td>
@@ -171,7 +171,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-7-1">
-                                    <input type="radio" name="answer-7" value="1" checked id="radio-answer-7-1" />有
+                                    <input type="radio" name="answer-7" value="1"  id="radio-answer-7-1" />有
                                 </label>
                             </td>
                             <td>
@@ -188,7 +188,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-8-1">
-                                    <input type="radio" name="answer-8" value="1" checked id="radio-answer-8-1"  />有
+                                    <input type="radio" name="answer-8" value="1"  id="radio-answer-8-1"  />有
                                 </label>
                             </td>
                             <td>
@@ -205,7 +205,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-9-1">
-                                    <input type="radio" name="answer-9" value="1" checked id="radio-answer-9-1" />有
+                                    <input type="radio" name="answer-9" value="1"  id="radio-answer-9-1" />有
                                 </label>
                             </td>
                             <td>
@@ -222,7 +222,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-10-1">
-                                    <input type="radio" name="answer-10" value="1" checked id="radio-answer-10-1"  />有
+                                    <input type="radio" name="answer-10" value="1"  id="radio-answer-10-1"  />有
                                 </label>
                             </td>
                             <td>
@@ -239,7 +239,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-11-1">
-                                    <input type="radio" name="answer-11" value="1" checked  id="radio-answer-11-1"  />有
+                                    <input type="radio" name="answer-11" value="1"   id="radio-answer-11-1"  />有
                                 </label>
                             </td>
                             <td>
@@ -256,7 +256,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-12-1">
-                                    <input type="radio" name="answer-12" value="1" checked id="radio-answer-12-1" />有
+                                    <input type="radio" name="answer-12" value="1"  id="radio-answer-12-1" />有
                                 </label>
                             </td>
                             <td>
@@ -273,7 +273,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-13-1">
-                                    <input type="radio" name="answer-13" value="1" checked  id="radio-answer-13-1" />有
+                                    <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1" />有
                                 </label>
                             </td>
                             <td>
@@ -290,7 +290,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-14-1">
-                                    <input type="radio" name="answer-14" value="1" checked id="radio-answer-14-1" />有
+                                    <input type="radio" name="answer-14" value="1"  id="radio-answer-14-1" />有
                                 </label>
                             </td>
                             <td>
@@ -307,7 +307,7 @@
                             </td>
                             <td>
                                 <label for="radio-answer-15-1">
-                                    <input type="radio" name="answer-15" value="1" checked id="radio-answer-15-1"  />有
+                                    <input type="radio" name="answer-15" value="1"  id="radio-answer-15-1"  />有
                                 </label>        
                             </td>
                             <td>
