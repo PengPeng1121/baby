@@ -101,6 +101,7 @@
         <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
     </footer>
     <input type="hidden" id="username" value="<s:property value="#session.username"/>">
+    <input type="hidden" id="userid" value="<s:property value="#session.userid"/>">
 </div>
 <s:include value="/statics/tail.html"/>
 <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
@@ -114,11 +115,25 @@
         });
 
         var username = $("#username").val();
+        var userid = $("#userid").val();
+        // var userlist = <s:property value="userlist"/>;//用户列表
 
-        if (username == '家长填报') {
-            $("#doctor").val(15);
-        }
-        // $("#doctor").val(data.baby.userid);
+        // for (var i = 0, l = userlist.length; i < l; i++) {
+        //   if (userlist[i]['name'] === username) {
+        //     $("#doctor").val(userlist[i]['userid']);
+        //     break;
+        //   }
+        // }
+
+        // if (username.indexOf('家长填报') != -1) {
+        //     for (var i = 0, l = userlist.length; i < l; i++) {
+        //       if (userlist[i]['name'] === username) {
+        //         $("#doctor").val(userlist[i]['userid']);
+        //         break;
+        //       }
+        //     }
+        // }
+        $("#doctor").val(userid);
     });
 
     function changeState(state) {
