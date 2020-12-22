@@ -40,16 +40,23 @@ public class ResultBasic1Action {
     }
 
     public String updateResultBasic1() {
-        ResultBasic1 old = ResultBasic1Manager.findResultByid(resultId);
         if(resultBasic1 == null){
             return "fail";
         }
-        if(resultId != resultBasic1.getId() || old.getBabyId() != resultBasic1.getBabyId()){
+
+        ResultBasic1 old = ResultBasic1Manager.findResultByid(resultBasic1.getId());
+
+        if(old.getBabyId() != resultBasic1.getBabyId()){
             return "fail";
         }
-        resultBasic1.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
-        resultBasic1.setUpdateTime(new Date());
-        resultBasic1 = ResultBasic1Manager.update(resultBasic1);
+
+        old.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        old.setUpdateTime(new Date());
+        old.setNickName(resultBasic1.getNickName());
+        old.setHeadImgUrl(resultBasic1.getHeadImgUrl());
+        old.setAddress(resultBasic1.getAddress());
+        old.setContactMobile(resultBasic1.getContactMobile());
+        ResultBasic1Manager.update(old);
         return SUCCESS;
     }
 

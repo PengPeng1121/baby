@@ -83,6 +83,8 @@ public class AllTestResultVo {
 
     private ResultUrine resultUrine;
 
+    private ResultEcg resultECG;
+
     public Result2016 getResult2016() {
         return result2016;
     }
@@ -345,5 +347,13 @@ public class AllTestResultVo {
 
     public void setResultUrine(ResultUrine resultUrine) {
         this.resultUrine = resultUrine;
+    }
+
+    public ResultEcg getResultECG() {
+        return resultECG;
+    }
+
+    public void setResultECG(ResultEcg resultECG) {
+        this.resultECG = resultECG;
     }
 }

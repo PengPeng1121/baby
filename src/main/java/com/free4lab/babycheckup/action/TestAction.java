@@ -69,6 +69,7 @@ public class TestAction {
     private List<ResultFoodAllergy> resultFoodAllergyList = new ArrayList<ResultFoodAllergy>();
     private List<ResultBloodType> resultBloodTypeList = new ArrayList<ResultBloodType>();
     private List<ResultAttention> resultAttentionList = new ArrayList<ResultAttention>();
+    private List<ResultEcg> resultECGList = new ArrayList<ResultEcg>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -111,6 +112,7 @@ public class TestAction {
     private ResultFoodAllergy resultFoodAllergy;
     private ResultBloodType resultBloodType;
     private ResultAttention resultAttention;
+    private ResultEcg resultECG;
     private String days;
     private int day;
     //早产天数
@@ -685,6 +687,15 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 心电筛查
+    public String newTestEcg() {
+        baby = BabyManager.findById(babyid);
+        Date birth = baby.getBirthday();
+        Date today = new Date(new java.util.Date().getTime());
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     public String babyTest(){
         baby = BabyManager.findById(babyid);
         resultList = ResultManager.findResultBybid(babyid);
@@ -726,6 +737,7 @@ public class TestAction {
         resultFoodAllergyList = ResultFoodAllergyManager.findResultBybid(babyid);
         resultBloodTypeList = ResultBloodTypeManager.findResultBybid(babyid);
         resultAttentionList = ResultAttentionManager.findResultBybid(babyid);
+        resultECGList = ResultEcgManager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1792,6 +1804,24 @@ public class TestAction {
         return SUCCESS;
     }
 
+
+    // 心电筛查
+    public String saveResultEcg(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultECG.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultECG.setUserId(userId);
+        resultECG.setTestId(53);
+        resultECG.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultECG.setState("finished");
+        resultECG.setCreateTime(new Date());
+        resultECG.setUpdateTime(new Date());
+        resultECG.setCreateUser(userId.toString());
+        resultECG.setUpdateUser(userId.toString());
+        ResultEcgManager.saveResult(resultECG);
+        return SUCCESS;
+    }
+
     private String calculateP(Integer p){
         String pStr = "0~50";
         if(0<p && p<=50){
@@ -2590,5 +2620,21 @@ public class TestAction {
 
     public void setResultAttention(ResultAttention resultAttention) {
         this.resultAttention = resultAttention;
+    }
+
+    public List<ResultEcg> getResultECGList() {
+        return resultECGList;
+    }
+
+    public void setResultECGList(List<ResultEcg> resultECGList) {
+        this.resultECGList = resultECGList;
+    }
+
+    public ResultEcg getResultECG() {
+        return resultECG;
+    }
+
+    public void setResultECG(ResultEcg resultECG) {
+        this.resultECG = resultECG;
     }
 }

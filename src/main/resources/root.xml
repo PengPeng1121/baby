@@ -244,6 +244,11 @@
             <result name="success" >views/newTestAttention.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
+        <!--心电筛查-->
+        <action name="newtestECG" method="newTestEcg" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestECG.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
 
 
         <!--0-6岁结果-->
@@ -388,10 +393,21 @@
             <result name="success" >views/showresultBasic1.jsp</result>
         </action>
 
+        <!--编辑基础信息1 -->
+        <action name="editTestBasic1" method="showResultBasic1" class="com.free4lab.babycheckup.action.ResultBasic1Action">
+            <result name="success" >views/editTestBasic1.jsp</result>
+        </action>
+
         <!--基础信息2 -->
         <action name="showresultBasic2" method="showResultBasic2" class="com.free4lab.babycheckup.action.ResultBasic2Action">
             <result name="success" >views/showresultBasic2.jsp</result>
         </action>
+
+        <!--编辑基础信息2 -->
+        <action name="editTestBasic2" method="showResultBasic2" class="com.free4lab.babycheckup.action.ResultBasic2Action">
+            <result name="success" >views/editTestBasic2.jsp</result>
+        </action>
+
 
         <!--计划 -->
         <action name="showresultPlan" method="showResultPlan" class="com.free4lab.babycheckup.action.ResultPlanAction">
@@ -453,11 +469,6 @@
             <result name="success" >views/showresultFoodAllergy.jsp</result>
         </action>
 
-        <!--食物过敏原 -->
-        <action name="showresultFoodAllergy" method="showResult" class="com.free4lab.babycheckup.action.ResultFoodAllergyAction">
-            <result name="success" >views/showresultFoodAllergy.jsp</result>
-        </action>
-
         <!--血型 -->
         <action name="showresultBloodType" method="showResult" class="com.free4lab.babycheckup.action.ResultBloodTypeAction">
             <result name="success" >views/showresultBloodType.jsp</result>
@@ -466,6 +477,11 @@
         <!--注意力指导建议 -->
         <action name="showresultAttention" method="showResult" class="com.free4lab.babycheckup.action.ResultAttentionAction">
             <result name="success" >views/showresultAttention.jsp</result>
+        </action>
+
+        <!--心电筛查 -->
+        <action name="showresultECG" method="showResult" class="com.free4lab.babycheckup.action.ResultEcgAction">
+            <result name="success" >views/showresultECG.jsp</result>
         </action>
 
         <!--儿童感受 评语-->
@@ -706,8 +722,24 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!-- 编辑 -->
+        <action name="updateresultBasic1" method="updateResultBasic1" class="com.free4lab.babycheckup.action.ResultBasic1Action">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBasic1,resultBasic1.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!-- 基础信息2 -->
         <action name="saveresultBasic2" method="saveResultBasic2" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultBasic2,resultBasic2.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 编辑 -->
+        <action name="updateresultBasic2" method="updateResultBasic2" class="com.free4lab.babycheckup.action.ResultBasic2Action">
             <result type="json" name="success">
                 <param name="includeProperties">resultBasic2,resultBasic2.id</param>
             </result>
@@ -842,10 +874,18 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!-- 血型 -->
+        <!-- 注意力 -->
         <action name="saveresultAttention" method="saveResultAttention" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultAttention,resultAttention.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 血型 -->
+        <action name="saveresultECG" method="saveResultEcg" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultECG,resultECG.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>

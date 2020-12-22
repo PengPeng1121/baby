@@ -31,6 +31,20 @@
         <class>com.free4lab.babycheckup.model.ResultBasic1</class>
         <class>com.free4lab.babycheckup.model.ResultBasic2</class>
         <class>com.free4lab.babycheckup.model.ResultQiZhi2020</class>
+        <class>com.free4lab.babycheckup.model.ResultTooth</class>
+        <class>com.free4lab.babycheckup.model.ResultFeed</class>
+        <class>com.free4lab.babycheckup.model.ResultRear</class>
+        <class>com.free4lab.babycheckup.model.ResultEye</class>
+        <class>com.free4lab.babycheckup.model.ResultBMD</class>
+        <class>com.free4lab.babycheckup.model.ResultBlood</class>
+        <class>com.free4lab.babycheckup.model.ResultBone</class>
+        <class>com.free4lab.babycheckup.model.ResultMicro</class>
+        <class>com.free4lab.babycheckup.model.ResultUrine</class>
+        <class>com.free4lab.babycheckup.model.ResultHbs</class>
+        <class>com.free4lab.babycheckup.model.ResultFastAllergy</class>
+        <class>com.free4lab.babycheckup.model.ResultFoodAllergy</class>
+        <class>com.free4lab.babycheckup.model.ResultBloodType</class>
+        <class>com.free4lab.babycheckup.model.ResultAttention</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://47.94.202.106:3306/babycheckup?characterEncoding=UTF-8"/>

@@ -35,6 +35,11 @@ public class ResultTooth {
     private int attentionTeethSituation;
 
     /**
+     * 是否已涂氟 0否 1是
+     */
+    private int attentionFu;
+
+    /**
      * 评语
      */
     private String comment;
@@ -294,6 +299,16 @@ public class ResultTooth {
 
     public void setAttentionTeethSituation(int attentionTeethSituation) {
         this.attentionTeethSituation = attentionTeethSituation;
+    }
+
+    @Basic
+    @Column(name = "attention_fu")
+    public int getAttentionFu() {
+        return attentionFu;
+    }
+
+    public void setAttentionFu(int attentionFu) {
+        this.attentionFu = attentionFu;
     }
 
     @Basic

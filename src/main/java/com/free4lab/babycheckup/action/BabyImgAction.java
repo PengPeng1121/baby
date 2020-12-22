@@ -29,6 +29,8 @@ public class BabyImgAction {
     private String fastAllergyImgUrl;// 21项速查过敏原
     private String foodAllergyImgUrl;// 14项慢性食物过敏原
     private String bloodTypeImgUrl;// 血型检查
+    private String ECGImgUrl;// 血型检查
+
 
     // 头像文件前缀
     private final static String HEAD_IMG_URL_PREFIX = "Head";
@@ -54,6 +56,8 @@ public class BabyImgAction {
     private final static String FOOD_ALLERGY_IMG_URL_PREFIX = "Food-allergy";
     // 血型检查文件前缀
     private final static String BLOOD_TYPE_IMG_URL_PREFIX = "Blood-type";
+    // 心电筛查
+    private final static String ECG_IMG_URL_PREFIX = "ECG";
 
     // 上传头像
     public String uploadHeadImg() {
@@ -152,6 +156,14 @@ public class BabyImgAction {
     public String uploadBloodTypeImg() {
         bloodTypeImgUrl = buildFileName(BLOOD_TYPE_IMG_URL_PREFIX,filename);
         String relativePath = FileUtil.FILE_ABSOLUTE_PATH + bloodTypeImgUrl;
+        FileUtil.saveFile(file, relativePath);
+        return SUCCESS;
+    }
+
+    // 上传心电检查文件
+    public String uploadEcgImg() {
+        ECGImgUrl = buildFileName(ECG_IMG_URL_PREFIX,filename);
+        String relativePath = FileUtil.FILE_ABSOLUTE_PATH + ECGImgUrl;
         FileUtil.saveFile(file, relativePath);
         return SUCCESS;
     }
@@ -308,19 +320,11 @@ public class BabyImgAction {
         this.bloodTypeImgUrl = bloodTypeImgUrl;
     }
 
-    public static String getHeadImgUrlPrefix() {
-        return HEAD_IMG_URL_PREFIX;
+    public String getECGImgUrl() {
+        return ECGImgUrl;
     }
 
-    public static String getEyeImgUrlPrefix() {
-        return EYE_IMG_URL_PREFIX;
-    }
-
-    public static String getEarImgUrlPrefix() {
-        return EAR_IMG_URL_PREFIX;
-    }
-
-    public static String getBmdImgUrlPrefix() {
-        return BMD_IMG_URL_PREFIX;
+    public void setECGImgUrl(String ECGImgUrl) {
+        this.ECGImgUrl = ECGImgUrl;
     }
 }

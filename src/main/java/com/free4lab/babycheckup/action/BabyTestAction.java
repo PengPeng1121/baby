@@ -164,6 +164,9 @@ public class BabyTestAction {
                 case 52:
                     allTestResultVo.setResultAttention(ResultAttentionManager.findResultByid(resultId));
                     break;
+                case 53:
+                    allTestResultVo.setResultECG(ResultEcgManager.findResultByid(resultId));
+                    break;
             }
         }
         return SUCCESS;

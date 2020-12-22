@@ -45,16 +45,39 @@ public class ResultBasic2Action {
 
 
     public String updateResultBasic2() {
-        ResultBasic2 old = ResultBasic2Manager.findResultByid(resultId);
         if(resultBasic2 == null){
             return "fail";
         }
-        if(resultId != resultBasic2.getId() || old.getBabyId() != resultBasic2.getBabyId()){
+        ResultBasic2 old = ResultBasic2Manager.findResultByid(resultBasic2.getId());
+
+        if(old.getBabyId() != resultBasic2.getBabyId()){
             return "fail";
         }
-        resultBasic2.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
-        resultBasic2.setUpdateTime(new Date());
-        resultBasic2 = ResultBasic2Manager.update(resultBasic2);
+        old.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        old.setUpdateTime(new Date());
+
+        old.setAllergySituation(resultBasic2.getAllergySituation());
+        old.setBabyBirthWeekAge(resultBasic2.getBabyBirthWeekAge());
+        old.setBabyBirthWeight(resultBasic2.getBabyBirthWeight());
+        old.setChildBearingAge(resultBasic2.getChildBearingAge());
+        old.setChildbirthSituation(resultBasic2.getChildbirthSituation());
+        old.setDiseasePastHistory(resultBasic2.getDiseasePastHistory());
+        old.setFamilyHeredityDisease(resultBasic2.getFamilyHeredityDisease());
+        old.setFatherHeight(resultBasic2.getFatherHeight());
+        old.setBabyCount(resultBasic2.getBabyCount());
+        old.setIsAllergyHistory(resultBasic2.getIsAllergyHistory());
+        old.setIsHeredityDisease1(resultBasic2.getIsHeredityDisease1());
+        old.setIsHeredityDisease2(resultBasic2.getIsHeredityDisease2());
+        old.setIsHeredityDisease3(resultBasic2.getIsHeredityDisease3());
+        old.setIsHeredityDisease4(resultBasic2.getIsHeredityDisease4());
+        old.setIsNormalChildbirth(resultBasic2.getIsNormalChildbirth());
+        old.setIsPremature(resultBasic2.getIsPremature());
+        old.setMotherHeight(resultBasic2.getMotherHeight());
+        old.setMotherPregnancyDiseaseSituation(resultBasic2.getMotherPregnancyDiseaseSituation());
+        old.setPregnantCount(resultBasic2.getPregnantCount());
+        old.setRemark(resultBasic2.getRemark());
+
+        old = ResultBasic2Manager.update(old);
         return SUCCESS;
     }
 
