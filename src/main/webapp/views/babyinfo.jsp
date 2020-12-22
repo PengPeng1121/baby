@@ -116,6 +116,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="editTestBasic2?id=<s:property value="#resultBasic2.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultBasic2?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
                                     </div>
