@@ -1122,7 +1122,7 @@
                     </s:iterator>
                     <tr>
                         <td>
-                            <button class="btn btn-default pull-right" onclick="report()"> 打印所选报告</button>
+                            <button class="btn btn-primary pull-right" onclick="report()"> 查看所选报告</button>
                         </td>
                     </tr>
 
