@@ -104,7 +104,7 @@
                                 <img class="line-img" src="statics/img/name1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/name2.png">">
+                                <img class="line-img" src="statics/img/name2.png">
                                 </s:if>
                                 <span style="letter-spacing: 10px;margin-left: 10px ">姓</span>
                                 <span style="letter-spacing: 1px">名:</span>
@@ -121,7 +121,7 @@
                                 <img class="line-img" src="statics/img/nick1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/nick2.png">">
+                                <img class="line-img" src="statics/img/nick2.png">
                                 </s:if>
                                 <span style="letter-spacing: 10px;margin-left: 10px ">小</span>
                                 <span style="letter-spacing: 1px">名:</span>
@@ -138,7 +138,7 @@
                                 <img class="line-img" src="statics/img/gender1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/gender2.png">">
+                                <img class="line-img" src="statics/img/gender2.png">
                                 </s:if>
                                 <span style="letter-spacing: 10px;margin-left: 10px ">性</span>
                                 <span style="letter-spacing: 1px">别:</span>
@@ -154,7 +154,7 @@
                                 <img class="line-img" src="statics/img/birth1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/birth2.png">">
+                                <img class="line-img" src="statics/img/birth2.png">
                                 </s:if>
                                 <span style="letter-spacing: 1px;margin-left: 10px ">出生日期:</span>
                                 <span class="value">
@@ -178,7 +178,7 @@
                                 <img class="line-img" src="statics/img/nation1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/nation2.png">">
+                                <img class="line-img" src="statics/img/nation2.png">
                                 </s:if>
                                 <span style="letter-spacing: 10px;margin-left: 10px ">民</span>
                                 <span style="letter-spacing: 1px">族:</span>
@@ -195,7 +195,7 @@
                                 <img class="line-img" src="statics/img/add1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/add2.png">">
+                                <img class="line-img" src="statics/img/add2.png">
                                 </s:if>
                                 <span style="letter-spacing: 10px;margin-left: 10px ">地</span>
                                 <span style="letter-spacing: 1px">址:</span>
@@ -214,7 +214,7 @@
                                 <img class="line-img" src="statics/img/phone1.png">
                                 </s:if>
                                 <s:if test="baby.gender == 0">
-                                <img class="line-img" src="statics/img/phone2.png">">
+                                <img class="line-img" src="statics/img/phone2.png">
                                 </s:if>
                                 <span style="letter-spacing: 1px;margin-left: 10px ">联系电话:</span>
                                 <span class="value">

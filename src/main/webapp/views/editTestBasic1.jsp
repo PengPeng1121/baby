@@ -94,14 +94,14 @@
                            <input id="contactMobile" />
                         </div>
                     </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
+                    <div class="col-md-4" style="padding-bottom: 10px">
                         <form id="form" method="POST" enctype="multipart/form-data" 
                          onsubmit="return check();">
-                            <input type="file" accept="image/*" name="file" id="file"/>
-                            <input type="button"  onclick="uploadImg()" value="提交"/>
+                            <input type="file" class="btn btn-default" accept="image/*" name="file" id="file"/>
+                            <input type="button"  class="btn btn-primary" style="margin-top: 20px"  onclick="uploadImg()" value="提交"/>
                         </form>
                     </div>
-                    <div class="col-md-12" style="padding-bottom: 10px">
+                    <div class="col-md-8" style="padding-bottom: 10px">
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
@@ -112,7 +112,7 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
                 <!-- <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a> -->
             </div>
         </form>
@@ -134,6 +134,7 @@
     $('#nickName').val(nickNameOld);
     $('#address').val(addressOld);
     $('#contactMobile').val(contactMobileOld);
+    $('#imgUrl').val(headImgUrl);
 
 
     if (headImgUrl) {
@@ -214,13 +215,17 @@
         address = $("#address").val();
         contactMobile = $("#contactMobile").val();
         resultID = $("#resultID").val();
+        imgUrl = $("#imgUrl").val();
 
+        if (imgUrl.indexOf('image') != -1) {
+            imgUrl = imgUrl.split('/')[2]
+        }
         var data = {};
         data ['resultBasic1.babyId'] = parseInt($("#babyid").val());
         data ['resultBasic1.nickName'] = nickName;
         data ['resultBasic1.address'] = address;
         data ['resultBasic1.contactMobile'] = contactMobile;
-        data ['resultBasic1.headImgUrl'] = $("#imgUrl").val();
+        data ['resultBasic1.headImgUrl'] = imgUrl;
         // 结果页ID
         data ['resultBasic1.id'] = resultID;
     
