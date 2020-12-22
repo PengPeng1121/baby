@@ -15,7 +15,7 @@
             </div>
         </div>
         <!-- 导航栏菜单 -->
-        <div class="nav-collapse collapse" id="nav-collapse-demo">
+        <div class="nav-collapse collapse" id="nav-collapse-demo"  style="background-color: #298bc8">
             <ul class="nav navbar-nav">
                 <li id="home" class="${param.act == "home" ? "front-active" : ""}"><a href="home">首页</a></li>
                 <li id="record" class="${param.act == "record" ? "front-active" : ""}"><a href="record">病历</a></li>
