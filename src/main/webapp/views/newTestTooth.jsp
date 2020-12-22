@@ -99,6 +99,22 @@
                                 </label>
                             </td>
                         </tr>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">    
+                            <td>4</td>
+                            <td>
+                                已涂氟
+                            </td>
+                            <td>
+                                <label for="radio-answer-4-1">
+                                    <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1" />是
+                                </label>
+                            </td>
+                            <td>
+                                <label for="radio-answer-4-0">
+                                    <input type="radio" name="answer-4" value="0" id="radio-answer-4-0" />否
+                                </label>
+                            </td>
+                        </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td colspan="5">
                                 <textarea name="" id="remark" cols="100" rows="10" style="resize:none"></textarea>
@@ -107,6 +123,7 @@
                     </tbody>
                 </table>
             </div>
+            <!-- 生长  未生长 开颌  反颌  深覆合 深覆盖  龋齿  -->
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
@@ -116,22 +133,41 @@
                                 上左一
                             </td>
                             <td>
+                                <label for="t-radio-answer-1-0">
+                                    <input type="radio" name="t-answer-1" value="99"   id="t-radio-answer-1-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-1-1">
                                     <input type="radio" name="t-answer-1" value="1"   id="t-radio-answer-1-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-1-0">
-                                    <input type="radio" name="t-answer-1" value="0" id="t-radio-answer-1-0" />歪斜
+                                <label for="t-radio-answer-1-2">
+                                    <input type="radio" name="t-answer-1" value="10" id="t-radio-answer-1-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-1-3">
+                                    <input type="radio" name="t-answer-1" value="11" id="t-radio-answer-1-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-1-4">
+                                    <input type="radio" name="t-answer-1" value="12" id="t-radio-answer-1-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-1-5">
+                                    <input type="radio" name="t-answer-1" value="13" id="t-radio-answer-1-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-1-2">
-                                    <input type="radio" name="t-answer-1" value="2" id="t-radio-answer-1-2" />龋齿
+                                <label for="t-radio-answer-1-6">
+                                    <input type="radio" name="t-answer-1" value="2" id="t-radio-answer-1-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右一
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-2-0">
+                                    <input type="radio" name="t-answer-2" value="99"   id="t-radio-answer-2-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-2-1">
@@ -139,13 +175,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-2-0">
-                                    <input type="radio" name="t-answer-2" value="0" id="t-radio-answer-2-0" />歪斜
+                                <label for="t-radio-answer-2-2">
+                                    <input type="radio" name="t-answer-2" value="10" id="t-radio-answer-2-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-2-3">
+                                    <input type="radio" name="t-answer-2" value="11" id="t-radio-answer-2-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-2-4">
+                                    <input type="radio" name="t-answer-2" value="12" id="t-radio-answer-2-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-2-5">
+                                    <input type="radio" name="t-answer-2" value="13" id="t-radio-answer-2-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-2-2">
-                                    <input type="radio" name="t-answer-2" value="2" id="t-radio-answer-2-2" />龋齿
+                                <label for="t-radio-answer-2-6">
+                                    <input type="radio" name="t-answer-2" value="2" id="t-radio-answer-2-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -155,22 +200,41 @@
                                 上左二
                             </td>
                             <td>
+                                <label for="t-radio-answer-3-0">
+                                    <input type="radio" name="t-answer-3" value="99"   id="t-radio-answer-3-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-3-1">
                                     <input type="radio" name="t-answer-3" value="1"   id="t-radio-answer-3-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-3-0">
-                                    <input type="radio" name="t-answer-3" value="0" id="t-radio-answer-3-0" />歪斜
+                                <label for="t-radio-answer-3-2">
+                                    <input type="radio" name="t-answer-3" value="10" id="t-radio-answer-3-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-3-3">
+                                    <input type="radio" name="t-answer-3" value="11" id="t-radio-answer-3-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-3-4">
+                                    <input type="radio" name="t-answer-3" value="12" id="t-radio-answer-3-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-3-5">
+                                    <input type="radio" name="t-answer-3" value="13" id="t-radio-answer-3-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-3-2">
-                                    <input type="radio" name="t-answer-3" value="2" id="t-radio-answer-3-2" />龋齿
+                                <label for="t-radio-answer-3-6">
+                                    <input type="radio" name="t-answer-3" value="2" id="t-radio-answer-3-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右二
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-4-0">
+                                    <input type="radio" name="t-answer-4" value="99"   id="t-radio-answer-4-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-4-1">
@@ -178,13 +242,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-4-0">
-                                    <input type="radio" name="t-answer-4" value="0" id="t-radio-answer-4-0" />歪斜
+                                <label for="t-radio-answer-4-2">
+                                    <input type="radio" name="t-answer-4" value="10" id="t-radio-answer-4-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-4-3">
+                                    <input type="radio" name="t-answer-4" value="11" id="t-radio-answer-4-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-4-4">
+                                    <input type="radio" name="t-answer-4" value="12" id="t-radio-answer-4-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-4-5">
+                                    <input type="radio" name="t-answer-4" value="13" id="t-radio-answer-4-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-4-2">
-                                    <input type="radio" name="t-answer-4" value="2" id="t-radio-answer-4-2" />龋齿
+                                <label for="t-radio-answer-4-6">
+                                    <input type="radio" name="t-answer-4" value="2" id="t-radio-answer-4-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -194,22 +267,41 @@
                                 上左三
                             </td>
                             <td>
+                                <label for="t-radio-answer-5-0">
+                                    <input type="radio" name="t-answer-5" value="99"   id="t-radio-answer-5-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-5-1">
                                     <input type="radio" name="t-answer-5" value="1"   id="t-radio-answer-5-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-5-0">
-                                    <input type="radio" name="t-answer-5" value="0" id="t-radio-answer-5-0" />歪斜
+                                <label for="t-radio-answer-5-2">
+                                    <input type="radio" name="t-answer-5" value="10" id="t-radio-answer-5-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-5-3">
+                                    <input type="radio" name="t-answer-5" value="11" id="t-radio-answer-5-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-5-4">
+                                    <input type="radio" name="t-answer-5" value="12" id="t-radio-answer-5-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-5-5">
+                                    <input type="radio" name="t-answer-5" value="13" id="t-radio-answer-5-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-5-2">
-                                    <input type="radio" name="t-answer-5" value="2" id="t-radio-answer-5-2" />龋齿
+                                <label for="t-radio-answer-5-6">
+                                    <input type="radio" name="t-answer-5" value="2" id="t-radio-answer-5-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右三
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-6-0">
+                                    <input type="radio" name="t-answer-6" value="99"   id="t-radio-answer-6-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-6-1">
@@ -217,13 +309,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-6-0">
-                                    <input type="radio" name="t-answer-6" value="0" id="t-radio-answer-6-0" />歪斜
+                                <label for="t-radio-answer-6-2">
+                                    <input type="radio" name="t-answer-6" value="10" id="t-radio-answer-6-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-6-3">
+                                    <input type="radio" name="t-answer-6" value="11" id="t-radio-answer-6-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-6-4">
+                                    <input type="radio" name="t-answer-6" value="12" id="t-radio-answer-6-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-6-5">
+                                    <input type="radio" name="t-answer-6" value="13" id="t-radio-answer-6-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-6-2">
-                                    <input type="radio" name="t-answer-6" value="2" id="t-radio-answer-6-2" />龋齿
+                                <label for="t-radio-answer-6-6">
+                                    <input type="radio" name="t-answer-6" value="2" id="t-radio-answer-6-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -233,22 +334,41 @@
                                 上左四
                             </td>
                             <td>
+                                <label for="t-radio-answer-7-0">
+                                    <input type="radio" name="t-answer-7" value="99"   id="t-radio-answer-7-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-7-1">
                                     <input type="radio" name="t-answer-7" value="1"   id="t-radio-answer-7-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-7-0">
-                                    <input type="radio" name="t-answer-7" value="0" id="t-radio-answer-7-0" />歪斜
+                                <label for="t-radio-answer-7-2">
+                                    <input type="radio" name="t-answer-7" value="10" id="t-radio-answer-7-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-7-3">
+                                    <input type="radio" name="t-answer-7" value="11" id="t-radio-answer-7-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-7-4">
+                                    <input type="radio" name="t-answer-7" value="12" id="t-radio-answer-7-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-7-5">
+                                    <input type="radio" name="t-answer-7" value="13" id="t-radio-answer-7-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-7-2">
-                                    <input type="radio" name="t-answer-7" value="2" id="t-radio-answer-7-2" />龋齿
+                                <label for="t-radio-answer-7-6">
+                                    <input type="radio" name="t-answer-7" value="2" id="t-radio-answer-7-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右四
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-8-0">
+                                    <input type="radio" name="t-answer-8" value="99"   id="t-radio-answer-8-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-8-1">
@@ -256,13 +376,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-8-0">
-                                    <input type="radio" name="t-answer-8" value="0" id="t-radio-answer-8-0" />歪斜
+                                <label for="t-radio-answer-8-2">
+                                    <input type="radio" name="t-answer-8" value="10" id="t-radio-answer-8-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-8-3">
+                                    <input type="radio" name="t-answer-8" value="11" id="t-radio-answer-8-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-8-4">
+                                    <input type="radio" name="t-answer-8" value="12" id="t-radio-answer-8-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-8-5">
+                                    <input type="radio" name="t-answer-8" value="13" id="t-radio-answer-8-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-8-2">
-                                    <input type="radio" name="t-answer-8" value="2" id="t-radio-answer-8-2" />龋齿
+                                <label for="t-radio-answer-8-6">
+                                    <input type="radio" name="t-answer-8" value="2" id="t-radio-answer-8-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -272,22 +401,41 @@
                                 上左五
                             </td>
                             <td>
+                                <label for="t-radio-answer-9-0">
+                                    <input type="radio" name="t-answer-9" value="99"   id="t-radio-answer-9-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-9-1">
                                     <input type="radio" name="t-answer-9" value="1"   id="t-radio-answer-9-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-9-0">
-                                    <input type="radio" name="t-answer-9" value="0" id="t-radio-answer-9-0" />歪斜
+                                <label for="t-radio-answer-9-2">
+                                    <input type="radio" name="t-answer-9" value="10" id="t-radio-answer-9-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-9-3">
+                                    <input type="radio" name="t-answer-9" value="11" id="t-radio-answer-9-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-9-4">
+                                    <input type="radio" name="t-answer-9" value="12" id="t-radio-answer-9-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-9-5">
+                                    <input type="radio" name="t-answer-9" value="13" id="t-radio-answer-9-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-9-2">
-                                    <input type="radio" name="t-answer-9" value="2" id="t-radio-answer-9-2" />龋齿
+                                <label for="t-radio-answer-9-6">
+                                    <input type="radio" name="t-answer-9" value="2" id="t-radio-answer-9-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右五
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-10-0">
+                                    <input type="radio" name="t-answer-10" value="99"   id="t-radio-answer-10-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-10-1">
@@ -295,13 +443,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-10-0">
-                                    <input type="radio" name="t-answer-10" value="0" id="t-radio-answer-10-0" />歪斜
+                                <label for="t-radio-answer-10-2">
+                                    <input type="radio" name="t-answer-10" value="10" id="t-radio-answer-10-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-10-3">
+                                    <input type="radio" name="t-answer-10" value="11" id="t-radio-answer-10-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-10-4">
+                                    <input type="radio" name="t-answer-10" value="12" id="t-radio-answer-10-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-10-5">
+                                    <input type="radio" name="t-answer-10" value="13" id="t-radio-answer-10-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-10-2">
-                                    <input type="radio" name="t-answer-10" value="2" id="t-radio-answer-10-2" />龋齿
+                                <label for="t-radio-answer-10-6">
+                                    <input type="radio" name="t-answer-10" value="2" id="t-radio-answer-10-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -311,22 +468,41 @@
                                 上左六
                             </td>
                             <td>
+                                <label for="t-radio-answer-11-0">
+                                    <input type="radio" name="t-answer-11" value="99"   id="t-radio-answer-11-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-11-1">
                                     <input type="radio" name="t-answer-11" value="1"   id="t-radio-answer-11-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-11-0">
-                                    <input type="radio" name="t-answer-11" value="0" id="t-radio-answer-11-0" />歪斜
+                                <label for="t-radio-answer-11-2">
+                                    <input type="radio" name="t-answer-11" value="10" id="t-radio-answer-11-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-11-3">
+                                    <input type="radio" name="t-answer-11" value="11" id="t-radio-answer-11-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-11-4">
+                                    <input type="radio" name="t-answer-11" value="12" id="t-radio-answer-11-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-11-5">
+                                    <input type="radio" name="t-answer-11" value="13" id="t-radio-answer-11-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-11-2">
-                                    <input type="radio" name="t-answer-11" value="2" id="t-radio-answer-11-2" />龋齿
+                                <label for="t-radio-answer-11-6">
+                                    <input type="radio" name="t-answer-11" value="2" id="t-radio-answer-11-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右六
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-12-0">
+                                    <input type="radio" name="t-answer-12" value="99"   id="t-radio-answer-12-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-12-1">
@@ -334,13 +510,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-12-0">
-                                    <input type="radio" name="t-answer-12" value="0" id="t-radio-answer-12-0" />歪斜
+                                <label for="t-radio-answer-12-2">
+                                    <input type="radio" name="t-answer-12" value="10" id="t-radio-answer-12-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-12-3">
+                                    <input type="radio" name="t-answer-12" value="11" id="t-radio-answer-12-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-12-4">
+                                    <input type="radio" name="t-answer-12" value="12" id="t-radio-answer-12-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-12-5">
+                                    <input type="radio" name="t-answer-12" value="13" id="t-radio-answer-12-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-12-2">
-                                    <input type="radio" name="t-answer-12" value="2" id="t-radio-answer-12-2" />龋齿
+                                <label for="t-radio-answer-12-6">
+                                    <input type="radio" name="t-answer-12" value="2" id="t-radio-answer-12-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -350,22 +535,41 @@
                                 上左七
                             </td>
                             <td>
+                                <label for="t-radio-answer-13-0">
+                                    <input type="radio" name="t-answer-13" value="99"   id="t-radio-answer-13-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-13-1">
                                     <input type="radio" name="t-answer-13" value="1"   id="t-radio-answer-13-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-13-0">
-                                    <input type="radio" name="t-answer-13" value="0" id="t-radio-answer-13-0" />歪斜
+                                <label for="t-radio-answer-13-2">
+                                    <input type="radio" name="t-answer-13" value="10" id="t-radio-answer-13-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-13-3">
+                                    <input type="radio" name="t-answer-13" value="11" id="t-radio-answer-13-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-13-4">
+                                    <input type="radio" name="t-answer-13" value="12" id="t-radio-answer-13-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-13-5">
+                                    <input type="radio" name="t-answer-13" value="13" id="t-radio-answer-13-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-13-2">
-                                    <input type="radio" name="t-answer-13" value="2" id="t-radio-answer-13-2" />龋齿
+                                <label for="t-radio-answer-13-6">
+                                    <input type="radio" name="t-answer-13" value="2" id="t-radio-answer-13-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 上右七
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-14-0">
+                                    <input type="radio" name="t-answer-14" value="99"   id="t-radio-answer-14-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-14-1">
@@ -373,19 +577,29 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-14-0">
-                                    <input type="radio" name="t-answer-14" value="0" id="t-radio-answer-14-0" />歪斜
+                                <label for="t-radio-answer-14-2">
+                                    <input type="radio" name="t-answer-14" value="10" id="t-radio-answer-14-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-14-3">
+                                    <input type="radio" name="t-answer-14" value="11" id="t-radio-answer-14-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-14-4">
+                                    <input type="radio" name="t-answer-14" value="12" id="t-radio-answer-14-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-14-5">
+                                    <input type="radio" name="t-answer-14" value="13" id="t-radio-answer-14-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-14-2">
-                                    <input type="radio" name="t-answer-14" value="2" id="t-radio-answer-14-2" />龋齿
+                                <label for="t-radio-answer-14-6">
+                                    <input type="radio" name="t-answer-14" value="2" id="t-radio-answer-14-6" />龋齿
                                 </label>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <!-- 生长  未生长 开颌  反颌  深覆合 深覆盖  龋齿  -->
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
@@ -395,22 +609,41 @@
                                 下左一
                             </td>
                             <td>
+                                <label for="t-radio-answer-15-0">
+                                    <input type="radio" name="t-answer-15" value="99"   id="t-radio-answer-15-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-15-1">
                                     <input type="radio" name="t-answer-15" value="1"   id="t-radio-answer-15-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-15-0">
-                                    <input type="radio" name="t-answer-15" value="0" id="t-radio-answer-15-0" />歪斜
+                                <label for="t-radio-answer-15-2">
+                                    <input type="radio" name="t-answer-15" value="10" id="t-radio-answer-15-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-15-3">
+                                    <input type="radio" name="t-answer-15" value="11" id="t-radio-answer-15-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-15-4">
+                                    <input type="radio" name="t-answer-15" value="12" id="t-radio-answer-15-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-15-5">
+                                    <input type="radio" name="t-answer-15" value="13" id="t-radio-answer-15-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-15-2">
-                                    <input type="radio" name="t-answer-15" value="2" id="t-radio-answer-15-2" />龋齿
+                                <label for="t-radio-answer-15-6">
+                                    <input type="radio" name="t-answer-15" value="2" id="t-radio-answer-15-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右一
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-16-0">
+                                    <input type="radio" name="t-answer-16" value="99"   id="t-radio-answer-16-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-16-1">
@@ -418,13 +651,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-16-0">
-                                    <input type="radio" name="t-answer-16" value="0" id="t-radio-answer-16-0" />歪斜
+                                <label for="t-radio-answer-16-2">
+                                    <input type="radio" name="t-answer-16" value="10" id="t-radio-answer-16-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-16-3">
+                                    <input type="radio" name="t-answer-16" value="11" id="t-radio-answer-16-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-16-4">
+                                    <input type="radio" name="t-answer-16" value="12" id="t-radio-answer-16-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-16-5">
+                                    <input type="radio" name="t-answer-16" value="13" id="t-radio-answer-16-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-16-2">
-                                    <input type="radio" name="t-answer-16" value="2" id="t-radio-answer-16-2" />龋齿
+                                <label for="t-radio-answer-16-6">
+                                    <input type="radio" name="t-answer-16" value="2" id="t-radio-answer-16-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -434,22 +676,41 @@
                                 下左二
                             </td>
                             <td>
+                                <label for="t-radio-answer-17-0">
+                                    <input type="radio" name="t-answer-17" value="99"   id="t-radio-answer-17-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-17-1">
                                     <input type="radio" name="t-answer-17" value="1"   id="t-radio-answer-17-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-17-0">
-                                    <input type="radio" name="t-answer-17" value="0" id="t-radio-answer-17-0" />歪斜
+                                <label for="t-radio-answer-17-2">
+                                    <input type="radio" name="t-answer-17" value="10" id="t-radio-answer-17-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-17-3">
+                                    <input type="radio" name="t-answer-17" value="11" id="t-radio-answer-17-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-17-4">
+                                    <input type="radio" name="t-answer-17" value="12" id="t-radio-answer-17-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-17-5">
+                                    <input type="radio" name="t-answer-17" value="13" id="t-radio-answer-17-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-17-2">
-                                    <input type="radio" name="t-answer-17" value="2" id="t-radio-answer-17-2" />龋齿
+                                <label for="t-radio-answer-17-6">
+                                    <input type="radio" name="t-answer-17" value="2" id="t-radio-answer-17-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右二
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-18-0">
+                                    <input type="radio" name="t-answer-18" value="99"   id="t-radio-answer-18-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-18-1">
@@ -457,13 +718,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-18-0">
-                                    <input type="radio" name="t-answer-18" value="0" id="t-radio-answer-18-0" />歪斜
+                                <label for="t-radio-answer-18-2">
+                                    <input type="radio" name="t-answer-18" value="10" id="t-radio-answer-18-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-18-3">
+                                    <input type="radio" name="t-answer-18" value="11" id="t-radio-answer-18-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-18-4">
+                                    <input type="radio" name="t-answer-18" value="12" id="t-radio-answer-18-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-18-5">
+                                    <input type="radio" name="t-answer-18" value="13" id="t-radio-answer-18-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-18-2">
-                                    <input type="radio" name="t-answer-18" value="2" id="t-radio-answer-18-2" />龋齿
+                                <label for="t-radio-answer-18-6">
+                                    <input type="radio" name="t-answer-18" value="2" id="t-radio-answer-18-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -473,22 +743,41 @@
                                 下左三
                             </td>
                             <td>
+                                <label for="t-radio-answer-19-0">
+                                    <input type="radio" name="t-answer-19" value="99"   id="t-radio-answer-19-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-19-1">
                                     <input type="radio" name="t-answer-19" value="1"   id="t-radio-answer-19-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-19-0">
-                                    <input type="radio" name="t-answer-19" value="0" id="t-radio-answer-19-0" />歪斜
+                                <label for="t-radio-answer-19-2">
+                                    <input type="radio" name="t-answer-19" value="10" id="t-radio-answer-19-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-19-3">
+                                    <input type="radio" name="t-answer-19" value="11" id="t-radio-answer-19-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-19-4">
+                                    <input type="radio" name="t-answer-19" value="12" id="t-radio-answer-19-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-19-5">
+                                    <input type="radio" name="t-answer-19" value="13" id="t-radio-answer-19-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-19-2">
-                                    <input type="radio" name="t-answer-19" value="2" id="t-radio-answer-19-2" />龋齿
+                                <label for="t-radio-answer-19-6">
+                                    <input type="radio" name="t-answer-19" value="2" id="t-radio-answer-19-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右三
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-20-0">
+                                    <input type="radio" name="t-answer-20" value="99"   id="t-radio-answer-20-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-20-1">
@@ -496,13 +785,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-20-0">
-                                    <input type="radio" name="t-answer-20" value="0" id="t-radio-answer-20-0" />歪斜
+                                <label for="t-radio-answer-20-2">
+                                    <input type="radio" name="t-answer-20" value="10" id="t-radio-answer-20-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-20-3">
+                                    <input type="radio" name="t-answer-20" value="11" id="t-radio-answer-20-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-20-4">
+                                    <input type="radio" name="t-answer-20" value="12" id="t-radio-answer-20-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-20-5">
+                                    <input type="radio" name="t-answer-20" value="13" id="t-radio-answer-20-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-20-2">
-                                    <input type="radio" name="t-answer-20" value="2" id="t-radio-answer-20-2" />龋齿
+                                <label for="t-radio-answer-20-6">
+                                    <input type="radio" name="t-answer-20" value="2" id="t-radio-answer-20-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -512,22 +810,41 @@
                                 下左四
                             </td>
                             <td>
+                                <label for="t-radio-answer-21-0">
+                                    <input type="radio" name="t-answer-21" value="99"   id="t-radio-answer-21-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-21-1">
                                     <input type="radio" name="t-answer-21" value="1"   id="t-radio-answer-21-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-21-0">
-                                    <input type="radio" name="t-answer-21" value="0" id="t-radio-answer-21-0" />歪斜
+                                <label for="t-radio-answer-21-2">
+                                    <input type="radio" name="t-answer-21" value="10" id="t-radio-answer-21-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-21-3">
+                                    <input type="radio" name="t-answer-21" value="11" id="t-radio-answer-21-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-21-4">
+                                    <input type="radio" name="t-answer-21" value="12" id="t-radio-answer-21-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-21-5">
+                                    <input type="radio" name="t-answer-21" value="13" id="t-radio-answer-21-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-21-2">
-                                    <input type="radio" name="t-answer-21" value="2" id="t-radio-answer-21-2" />龋齿
+                                <label for="t-radio-answer-21-6">
+                                    <input type="radio" name="t-answer-21" value="2" id="t-radio-answer-21-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右四
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-22-0">
+                                    <input type="radio" name="t-answer-22" value="99"   id="t-radio-answer-22-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-22-1">
@@ -535,13 +852,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-22-0">
-                                    <input type="radio" name="t-answer-22" value="0" id="t-radio-answer-22-0" />歪斜
+                                <label for="t-radio-answer-22-2">
+                                    <input type="radio" name="t-answer-22" value="10" id="t-radio-answer-22-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-22-3">
+                                    <input type="radio" name="t-answer-22" value="11" id="t-radio-answer-22-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-22-4">
+                                    <input type="radio" name="t-answer-22" value="12" id="t-radio-answer-22-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-22-5">
+                                    <input type="radio" name="t-answer-22" value="13" id="t-radio-answer-22-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-22-2">
-                                    <input type="radio" name="t-answer-22" value="2" id="t-radio-answer-22-2" />龋齿
+                                <label for="t-radio-answer-22-6">
+                                    <input type="radio" name="t-answer-22" value="2" id="t-radio-answer-22-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -551,22 +877,41 @@
                                 下左五
                             </td>
                             <td>
+                                <label for="t-radio-answer-23-0">
+                                    <input type="radio" name="t-answer-23" value="99"   id="t-radio-answer-23-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-23-1">
                                     <input type="radio" name="t-answer-23" value="1"   id="t-radio-answer-23-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-23-0">
-                                    <input type="radio" name="t-answer-23" value="0" id="t-radio-answer-23-0" />歪斜
+                                <label for="t-radio-answer-23-2">
+                                    <input type="radio" name="t-answer-23" value="10" id="t-radio-answer-23-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-23-3">
+                                    <input type="radio" name="t-answer-23" value="11" id="t-radio-answer-23-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-23-4">
+                                    <input type="radio" name="t-answer-23" value="12" id="t-radio-answer-23-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-23-5">
+                                    <input type="radio" name="t-answer-23" value="13" id="t-radio-answer-23-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-23-2">
-                                    <input type="radio" name="t-answer-23" value="2" id="t-radio-answer-23-2" />龋齿
+                                <label for="t-radio-answer-23-6">
+                                    <input type="radio" name="t-answer-23" value="2" id="t-radio-answer-23-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右五
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-24-0">
+                                    <input type="radio" name="t-answer-24" value="99"   id="t-radio-answer-24-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-24-1">
@@ -574,13 +919,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-24-0">
-                                    <input type="radio" name="t-answer-24" value="0" id="t-radio-answer-24-0" />歪斜
+                                <label for="t-radio-answer-24-2">
+                                    <input type="radio" name="t-answer-24" value="10" id="t-radio-answer-24-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-24-3">
+                                    <input type="radio" name="t-answer-24" value="11" id="t-radio-answer-24-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-24-4">
+                                    <input type="radio" name="t-answer-24" value="12" id="t-radio-answer-24-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-24-5">
+                                    <input type="radio" name="t-answer-24" value="13" id="t-radio-answer-24-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-24-2">
-                                    <input type="radio" name="t-answer-24" value="2" id="t-radio-answer-24-2" />龋齿
+                                <label for="t-radio-answer-24-6">
+                                    <input type="radio" name="t-answer-24" value="2" id="t-radio-answer-24-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -590,22 +944,41 @@
                                 下左六
                             </td>
                             <td>
+                                <label for="t-radio-answer-25-0">
+                                    <input type="radio" name="t-answer-25" value="99"   id="t-radio-answer-25-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-25-1">
                                     <input type="radio" name="t-answer-25" value="1"   id="t-radio-answer-25-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-25-0">
-                                    <input type="radio" name="t-answer-25" value="0" id="t-radio-answer-25-0" />歪斜
+                                <label for="t-radio-answer-25-2">
+                                    <input type="radio" name="t-answer-25" value="10" id="t-radio-answer-25-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-25-3">
+                                    <input type="radio" name="t-answer-25" value="11" id="t-radio-answer-25-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-25-4">
+                                    <input type="radio" name="t-answer-25" value="12" id="t-radio-answer-25-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-25-5">
+                                    <input type="radio" name="t-answer-25" value="13" id="t-radio-answer-25-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-25-2">
-                                    <input type="radio" name="t-answer-25" value="2" id="t-radio-answer-25-2" />龋齿
+                                <label for="t-radio-answer-25-6">
+                                    <input type="radio" name="t-answer-25" value="2" id="t-radio-answer-25-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右六
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-26-0">
+                                    <input type="radio" name="t-answer-26" value="99"   id="t-radio-answer-26-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-26-1">
@@ -613,13 +986,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-26-0">
-                                    <input type="radio" name="t-answer-26" value="0" id="t-radio-answer-26-0" />歪斜
+                                <label for="t-radio-answer-26-2">
+                                    <input type="radio" name="t-answer-26" value="10" id="t-radio-answer-26-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-26-3">
+                                    <input type="radio" name="t-answer-26" value="11" id="t-radio-answer-26-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-26-4">
+                                    <input type="radio" name="t-answer-26" value="12" id="t-radio-answer-26-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-26-5">
+                                    <input type="radio" name="t-answer-26" value="13" id="t-radio-answer-26-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-26-2">
-                                    <input type="radio" name="t-answer-26" value="2" id="t-radio-answer-26-2" />龋齿
+                                <label for="t-radio-answer-26-6">
+                                    <input type="radio" name="t-answer-26" value="2" id="t-radio-answer-26-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -629,22 +1011,41 @@
                                 下左七
                             </td>
                             <td>
+                                <label for="t-radio-answer-27-0">
+                                    <input type="radio" name="t-answer-27" value="99"   id="t-radio-answer-27-0" />已生长
+                                </label>
+                            </td>
+                            <td>
                                 <label for="t-radio-answer-27-1">
                                     <input type="radio" name="t-answer-27" value="1"   id="t-radio-answer-27-1" />未生长
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-27-0">
-                                    <input type="radio" name="t-answer-27" value="0" id="t-radio-answer-27-0" />歪斜
+                                <label for="t-radio-answer-27-2">
+                                    <input type="radio" name="t-answer-27" value="10" id="t-radio-answer-27-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-27-3">
+                                    <input type="radio" name="t-answer-27" value="11" id="t-radio-answer-27-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-27-4">
+                                    <input type="radio" name="t-answer-27" value="12" id="t-radio-answer-27-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-27-5">
+                                    <input type="radio" name="t-answer-27" value="13" id="t-radio-answer-27-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-27-2">
-                                    <input type="radio" name="t-answer-27" value="2" id="t-radio-answer-27-2" />龋齿
+                                <label for="t-radio-answer-27-6">
+                                    <input type="radio" name="t-answer-27" value="2" id="t-radio-answer-27-6" />龋齿
                                 </label>
                             </td>
                             <td>
                                 下右七
+                            </td>
+                            <td>
+                                <label for="t-radio-answer-28-0">
+                                    <input type="radio" name="t-answer-28" value="99"   id="t-radio-answer-28-0" />已生长
+                                </label>
                             </td>
                             <td>
                                 <label for="t-radio-answer-28-1">
@@ -652,13 +1053,22 @@
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-28-0">
-                                    <input type="radio" name="t-answer-28" value="0" id="t-radio-answer-28-0" />歪斜
+                                <label for="t-radio-answer-28-2">
+                                    <input type="radio" name="t-answer-28" value="10" id="t-radio-answer-28-2" />歪斜
+                                </label>
+                                <label for="t-radio-answer-28-3">
+                                    <input type="radio" name="t-answer-28" value="11" id="t-radio-answer-28-3" />歪斜
+                                </label>
+                                <label for="t-radio-answer-28-4">
+                                    <input type="radio" name="t-answer-28" value="12" id="t-radio-answer-28-4" />歪斜
+                                </label>
+                                <label for="t-radio-answer-28-5">
+                                    <input type="radio" name="t-answer-28" value="13" id="t-radio-answer-28-5" />歪斜
                                 </label>
                             </td>
                             <td>
-                                <label for="t-radio-answer-28-2">
-                                    <input type="radio" name="t-answer-28" value="2" id="t-radio-answer-28-2" />龋齿
+                                <label for="t-radio-answer-28-6">
+                                    <input type="radio" name="t-answer-28" value="2" id="t-radio-answer-28-6" />龋齿
                                 </label>
                             </td>
                         </tr>
@@ -687,6 +1097,7 @@
         var a1 = parseInt($("input:radio[name='answer-1']:checked").val());
         var a2 = parseInt($("input:radio[name='answer-2']:checked").val());
         var a3 = parseInt($("input:radio[name='answer-3']:checked").val());
+        var a4 = parseInt($("input:radio[name='answer-4']:checked").val());
         var leftUp1 = parseInt($("input:radio[name='t-answer-1']:checked").val());
         var rightUp1 = parseInt($("input:radio[name='t-answer-2']:checked").val());
         var leftUp2 = parseInt($("input:radio[name='t-answer-3']:checked").val());
@@ -722,7 +1133,8 @@
         data += "'resultTooth.babyId':" + $("#babyid").val() + ",";
         data += "'resultTooth.attentionBrushWay':" + a1 + ",";
         data += "'resultTooth.attentionBrushHabit':" + a2 + ",";
-        data += "'resultTooth.attentionTeethSituation':" + a3 + ",";      
+        data += "'resultTooth.attentionTeethSituation':" + a3 + ",";
+        data += "'resultTooth.attentionFu':" + a4 + ",";      
         
         data += "'resultTooth.leftUp1':" + leftUp1 + ",";   
         data += "'resultTooth.leftUp2':" + leftUp2 + ",";   

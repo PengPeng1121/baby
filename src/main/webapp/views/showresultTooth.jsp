@@ -350,6 +350,7 @@
         <input id="attentionBrushWay" type="hidden" value="<s:property value="resultTooth.attentionBrushWay"/>">
         <input id="attentionBrushHabit" type="hidden" value="<s:property value="resultTooth.attentionBrushHabit"/>">
         <input id="attentionTeethSituation" type="hidden" value="<s:property value="resultTooth.attentionTeethSituation"/>">
+        <input id="attentionFu" type="hidden" value="<s:property value="resultTooth.attentionFu"/>">
         <input id="remark" type="hidden" value="<s:property value="resultTooth.remark"/>">
         
         <input id="leftUp1" type="hidden" value="<s:property value="resultTooth.leftUp1"/>">
@@ -435,6 +436,15 @@
                             <td>
                                 <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1">
                                 <label for="radio-answer-3-1"></label>
+                            </td>
+                        </tr>
+                        <tr class="item-line">
+                            <td class="item">
+                                已涂氟
+                            </td>
+                            <td>
+                                <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1">
+                                <label for="radio-answer-4-1"></label>
                             </td>
                         </tr>
                     </table>
@@ -553,6 +563,7 @@
     var a1 = parseInt($("#attentionBrushWay").val());
     var a2 = parseInt($("#attentionBrushHabit").val());
     var a3 = parseInt($("#attentionTeethSituation").val());
+    var a4 = parseInt($("#attentionFu").val());
 
 
     var remark = $('#remark').val();
@@ -562,16 +573,13 @@
     remark = remark.replace(reg,"\n");
     $('#remarkText').html(remark);
 
-    // 1未生长 0歪斜 2龋齿
-    var styles = {
-        '1': "style3",
-        '0': "style1",
-        '2': "style2"
-    }
+    // 1未生长 0歪斜 2龋齿 var styles = { '1': "style3", '10': "style1", '11':
+"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
 
     $("input:radio[name='answer-1'][value='"+ a1 +"']").attr('checked','true');
     $("input:radio[name='answer-2'][value='"+ a2 +"']").attr('checked','true');
     $("input:radio[name='answer-3'][value='"+ a3 +"']").attr('checked','true');
+    $("input:radio[name='answer-4'][value='"+ a4 +"']").attr('checked','true');
     
 
     // 给div样式
