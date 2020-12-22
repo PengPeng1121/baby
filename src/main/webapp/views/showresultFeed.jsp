@@ -286,11 +286,13 @@
                                     <span>
                                         食物过敏情况
                                     </span>
-                                    <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 25px;font-weight: normal;"> 有</label>
+                                    
 
                                     <input type="radio" name="isFoodAllergy" value="0"   id="radio-answer-5-0">
                                     <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 无</label>
+
+                                    <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-5-1">
+                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 25px;font-weight: normal;"> 有</label>
                                     
                                     <s:property value="resultFeed.foodAllergySituation"/>
 
@@ -346,11 +348,13 @@
                                     <span>
                                         是否自主进食
                                     </span>
-                                    <input type="radio" name="isOwnFood" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 26px;font-weight: normal;"> 是</label>
+                                    
 
                                     <input type="radio" name="isOwnFood" value="0"   id="radio-answer-5-0">
                                     <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
+
+                                    <input type="radio" name="isOwnFood" value="1"   id="radio-answer-5-1">
+                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 26px;font-weight: normal;"> 是</label>
                                     
                                     <s:property value="resultFeed.ownFoodSituation"/>
 

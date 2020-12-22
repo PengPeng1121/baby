@@ -105,11 +105,12 @@
                                     食物过敏情况
                                 </td>
                                 <td colspan="3">
-                                    <label for="radio-answer-1-1">
-                                        <input type="radio" name="isFoodAllergy" value="1" id="radio-answer-1-1" />有
-                                    </label>
+                                    
                                     <label for="radio-answer-1-0">
                                         <input type="radio" name="isFoodAllergy" value="0" id="radio-answer-1-0" />无
+                                    </label>
+                                    <label for="radio-answer-1-1">
+                                        <input type="radio" name="isFoodAllergy" value="1" id="radio-answer-1-1" />有
                                     </label>
                                 </td>
                             </tr>
@@ -160,11 +161,12 @@
                                     是否自主进食
                                 </td>
                                 <td colspan="2">
-                                    <label for="radio-answer-2-1">
-                                        <input type="radio" name="isOwnFood" value="1" id="radio-answer-2-1" />是
-                                    </label>
+                                    
                                     <label for="radio-answer-2-0">
                                         <input type="radio" name="isOwnFood" value="0" id="radio-answer-2-0" />否
+                                    </label>
+                                    <label for="radio-answer-2-1">
+                                        <input type="radio" name="isOwnFood" value="1" id="radio-answer-2-1" />是
                                     </label>
                                 </td>
                                 <td>
