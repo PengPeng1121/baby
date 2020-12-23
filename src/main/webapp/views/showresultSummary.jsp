@@ -122,7 +122,7 @@
                         </tr>
                     </table>
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 300px;left: 490px" id="content-table">
+                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 390px;left: 490px" id="content-table">
                         <tr>
                             <td>
                                 <textarea rows="3" style="resize:none;border: 0;width: 100%;height: 100%; background-color: transparent;" id="remarkText"></textarea>

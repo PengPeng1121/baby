@@ -160,17 +160,17 @@
                                 <td>
                                     是否自主进食
                                 </td>
-                                <td colspan="2">
-                                    
+                                <td>
                                     <label for="radio-answer-2-0">
                                         <input type="radio" name="isOwnFood" value="0" id="radio-answer-2-0" />否
                                     </label>
+                                    <input id="ownFoodSituation1" style="width: 100%" />
+                                </td>
+                                <td>
                                     <label for="radio-answer-2-1">
                                         <input type="radio" name="isOwnFood" value="1" id="radio-answer-2-1" />是
                                     </label>
-                                </td>
-                                <td>
-                                    <input id="ownFoodSituation" style="width: 100%" /> 
+                                    <input id="ownFoodSituation2" style="width: 100%" />
                                 </td>
                             </tr>
                             
@@ -295,8 +295,14 @@
         data['resultFeed.accessoryFoodShape'] = accessoryFoodShapeStr;
         data['resultFeed.accessoryFoodAddDate'] = $("#accessoryFoodAddDate").val();
 
-        data['resultFeed.isOwnFood'] = parseInt($("input:radio[name='isOwnFood']:checked").val());
-        data['resultFeed.ownFoodSituation'] = $("#ownFoodSituation").val();
+        isOwnFood = parseInt($("input:radio[name='isOwnFood']:checked").val());
+        data['resultFeed.isOwnFood'] = isOwnFood;
+        if (isOwnFood) {
+            data['resultFeed.ownFoodSituation'] = $("#ownFoodSituation2").val();
+        } else {
+            data['resultFeed.ownFoodSituation'] = $("#ownFoodSituation1").val();
+        }
+        
 
         data['resultFeed.shitTimes'] = $("#shitTimes").val();
         data['resultFeed.shitShape'] = $("#shitShape").val();
