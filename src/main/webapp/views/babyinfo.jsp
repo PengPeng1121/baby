@@ -593,6 +593,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="editresultSummary?id=<s:property value="#resultSummary.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultSummary?id=<s:property value="#resultSummary.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultSummary.id"/>, 31)">选中此报告</a>
                                     </div>
