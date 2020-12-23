@@ -61,6 +61,7 @@
                     
                 </div>
             </div>
+            <input id="resultID" type="hidden" value="<s:property value="resultAllergy.id"/>">
 
             <input id="r1Old" type="hidden" value="<s:property value="resultAllergy.r1" />">
             <input id="r2Old" type="hidden" value="<s:property value="resultAllergy.r2" />">
@@ -419,7 +420,7 @@
 
     function score() {        
         $.ajax({
-            url: 'editresultAllergy',
+            url: 'updateresultAllergy',
             type: 'post',
             data: getData(),
             success:function (json) {
@@ -485,6 +486,10 @@
         data['resultAllergy.r13'] = r13;
         data['resultAllergy.r14'] = r14;
         data['resultAllergy.r15'] = r15;
+
+        resultID = $("#resultID").val();
+
+        data ['resultAllergy.id'] = resultID;
 
         return data
     }

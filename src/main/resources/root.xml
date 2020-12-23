@@ -393,6 +393,11 @@
             <result name="success" >views/showresultAllergy.jsp</result>
         </action>
 
+        <!--过敏 编辑 -->
+        <action name="editTestAllergy" method="showResultAllergy" class="com.free4lab.babycheckup.action.ResultAllergyAction">
+            <result name="success" >views/editTestAllergy.jsp</result>
+        </action>
+
         <!--基础信息1 -->
         <action name="showresultBasic1" method="showResultBasic1" class="com.free4lab.babycheckup.action.ResultBasic1Action">
             <result name="success" >views/showresultBasic1.jsp</result>
@@ -721,6 +726,14 @@
 
         <!-- 过敏 -->
         <action name="saveresultAllergy" method="saveResultAllergy" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultAllergy,resultAllergy.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 过敏 -->
+        <action name="updateresultAllergy" method="updateResultAllergy" class="com.free4lab.babycheckup.action.ResultAllergyAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultAllergy,resultAllergy.id</param>
             </result>

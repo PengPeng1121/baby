@@ -25,4 +25,8 @@ public class ResultAllergyManager {
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultAllergy update(ResultAllergy resultAllergy) {
+        return getInstance().update(resultAllergy);
+    }
 }
