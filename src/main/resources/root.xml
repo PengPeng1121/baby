@@ -383,6 +383,11 @@
             <result name="success" >views/showresultSummary.jsp</result>
         </action>
 
+        <!--总览 编辑 -->
+        <action name="editresultSummary" method="showResultSummary" class="com.free4lab.babycheckup.action.ResultSummaryAction">
+            <result name="success" >views/editTestSummary.jsp</result>
+        </action>
+
         <!--过敏 -->
         <action name="showresultAllergy" method="showResultAllergy" class="com.free4lab.babycheckup.action.ResultAllergyAction">
             <result name="success" >views/showresultAllergy.jsp</result>
@@ -700,6 +705,14 @@
 
         <!-- 总览 -->
         <action name="saveresultSummary" method="saveResultSummary" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultSummary,resultSummary.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 编辑总览 -->
+        <action name="updateresultSummary" method="updateResultSummary" class="com.free4lab.babycheckup.action.ResultSummaryAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultSummary,resultSummary.id</param>
             </result>

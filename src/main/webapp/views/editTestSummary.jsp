@@ -34,6 +34,8 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
+        <input id="resultID" type="hidden" value="<s:property value="resultSummary.id"/>">
+
         <input id="remarkOld" type="hidden" value="<s:property value="resultSummary.summary"/>">
         <input id="summaryDateOld" type="hidden" value="<s:property value="resultSummary.summaryDate"/>">
         <h1 style="margin-top: 0px;margin-bottom: 20px;">体格头面检查</h1>
@@ -128,6 +130,8 @@
     function score() {
         var summaryDate = $("#summaryDate").val().trim();
         var summary = $('#remark').val();
+        resultID = $("#resultID").val();
+
         var data = "{";
         data += "'resultSummary.babyId':" + $("#babyid").val();
         data += "}";
@@ -135,8 +139,10 @@
         data = eval('(' + data + ')');
         data['resultSummary.summaryDate'] = summaryDate;
         data['resultSummary.summary'] = summary;
+        // 结果页ID
+        data ['resultSummary.id'] = resultID;
         $.ajax({
-            url: 'editresultSummary',
+            url: 'updateresultSummary',
             type: 'post',
             data: data,
             success:function (json) {
