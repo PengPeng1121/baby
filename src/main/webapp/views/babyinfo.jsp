@@ -143,6 +143,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+
                                         <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
                                     </div>
@@ -169,6 +170,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="editTestAllergy?id=<s:property value="#resultAllergy.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
                                     </div>
