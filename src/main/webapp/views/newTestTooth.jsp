@@ -48,7 +48,7 @@
             </div>
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
-                    <tbody style="width: 100%">
+                    <tbody >
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>1</td>
                             <td>
@@ -58,8 +58,6 @@
                                 <label for="radio-answer-1-1">
                                     <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1" />是
                                 </label>
-                            </td>
-                            <td>
                                 <label for="radio-answer-1-0">
                                     <input type="radio" name="answer-1" value="0" id="radio-answer-1-0" />否
                                 </label>
@@ -75,8 +73,6 @@
                                 <label for="radio-answer-2-1">
                                     <input type="radio" name="answer-2" value="1"   id="radio-answer-2-1" />是
                                 </label>
-                            </td>
-                            <td>
                                 <label for="radio-answer-2-0">
                                     <input type="radio" name="answer-2" value="0" id="radio-answer-2-0" />否
                                 </label>
@@ -92,8 +88,6 @@
                                 <label for="radio-answer-3-1">
                                     <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1" />是
                                 </label>
-                            </td>
-                            <td>
                                 <label for="radio-answer-3-0">
                                     <input type="radio" name="answer-3" value="0" id="radio-answer-3-0" />否
                                 </label>
@@ -108,8 +102,6 @@
                                 <label for="radio-answer-4-1">
                                     <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1" />是
                                 </label>
-                            </td>
-                            <td>
                                 <label for="radio-answer-4-0">
                                     <input type="radio" name="answer-4" value="0" id="radio-answer-4-0" />否
                                 </label>
@@ -117,7 +109,7 @@
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td colspan="5">
-                                <textarea name="" id="remark" cols="100" rows="10" style="resize:none"></textarea>
+                                <textarea name="" id="remark" cols="80%" rows="10" style="resize:none"></textarea>
                             </td>
                         </tr>
                     </tbody>
@@ -127,7 +119,7 @@
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>1</td>
                             <td>
                                 上左一
@@ -144,16 +136,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-1-2">
-                                    <input type="radio" name="t-answer-1" value="10" id="t-radio-answer-1-2" />歪斜
+                                    <input type="radio" name="t-answer-1" value="10" id="t-radio-answer-1-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-1-3">
-                                    <input type="radio" name="t-answer-1" value="11" id="t-radio-answer-1-3" />歪斜
+                                    <input type="radio" name="t-answer-1" value="11" id="t-radio-answer-1-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-1-4">
-                                    <input type="radio" name="t-answer-1" value="12" id="t-radio-answer-1-4" />歪斜
+                                    <input type="radio" name="t-answer-1" value="12" id="t-radio-answer-1-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-1-5">
-                                    <input type="radio" name="t-answer-1" value="13" id="t-radio-answer-1-5" />歪斜
+                                    <input type="radio" name="t-answer-1" value="13" id="t-radio-answer-1-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -176,16 +168,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-2-2">
-                                    <input type="radio" name="t-answer-2" value="10" id="t-radio-answer-2-2" />歪斜
+                                    <input type="radio" name="t-answer-2" value="10" id="t-radio-answer-2-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-2-3">
-                                    <input type="radio" name="t-answer-2" value="11" id="t-radio-answer-2-3" />歪斜
+                                    <input type="radio" name="t-answer-2" value="11" id="t-radio-answer-2-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-2-4">
-                                    <input type="radio" name="t-answer-2" value="12" id="t-radio-answer-2-4" />歪斜
+                                    <input type="radio" name="t-answer-2" value="12" id="t-radio-answer-2-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-2-5">
-                                    <input type="radio" name="t-answer-2" value="13" id="t-radio-answer-2-5" />歪斜
+                                    <input type="radio" name="t-answer-2" value="13" id="t-radio-answer-2-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -194,7 +186,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>2</td>
                             <td>
                                 上左二
@@ -211,16 +203,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-3-2">
-                                    <input type="radio" name="t-answer-3" value="10" id="t-radio-answer-3-2" />歪斜
+                                    <input type="radio" name="t-answer-3" value="10" id="t-radio-answer-3-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-3-3">
-                                    <input type="radio" name="t-answer-3" value="11" id="t-radio-answer-3-3" />歪斜
+                                    <input type="radio" name="t-answer-3" value="11" id="t-radio-answer-3-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-3-4">
-                                    <input type="radio" name="t-answer-3" value="12" id="t-radio-answer-3-4" />歪斜
+                                    <input type="radio" name="t-answer-3" value="12" id="t-radio-answer-3-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-3-5">
-                                    <input type="radio" name="t-answer-3" value="13" id="t-radio-answer-3-5" />歪斜
+                                    <input type="radio" name="t-answer-3" value="13" id="t-radio-answer-3-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -243,16 +235,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-4-2">
-                                    <input type="radio" name="t-answer-4" value="10" id="t-radio-answer-4-2" />歪斜
+                                    <input type="radio" name="t-answer-4" value="10" id="t-radio-answer-4-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-4-3">
-                                    <input type="radio" name="t-answer-4" value="11" id="t-radio-answer-4-3" />歪斜
+                                    <input type="radio" name="t-answer-4" value="11" id="t-radio-answer-4-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-4-4">
-                                    <input type="radio" name="t-answer-4" value="12" id="t-radio-answer-4-4" />歪斜
+                                    <input type="radio" name="t-answer-4" value="12" id="t-radio-answer-4-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-4-5">
-                                    <input type="radio" name="t-answer-4" value="13" id="t-radio-answer-4-5" />歪斜
+                                    <input type="radio" name="t-answer-4" value="13" id="t-radio-answer-4-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -261,7 +253,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">    
+                        <tr style="background-color: #d9edf7;">    
                             <td>3</td>
                             <td>
                                 上左三
@@ -278,16 +270,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-5-2">
-                                    <input type="radio" name="t-answer-5" value="10" id="t-radio-answer-5-2" />歪斜
+                                    <input type="radio" name="t-answer-5" value="10" id="t-radio-answer-5-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-5-3">
-                                    <input type="radio" name="t-answer-5" value="11" id="t-radio-answer-5-3" />歪斜
+                                    <input type="radio" name="t-answer-5" value="11" id="t-radio-answer-5-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-5-4">
-                                    <input type="radio" name="t-answer-5" value="12" id="t-radio-answer-5-4" />歪斜
+                                    <input type="radio" name="t-answer-5" value="12" id="t-radio-answer-5-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-5-5">
-                                    <input type="radio" name="t-answer-5" value="13" id="t-radio-answer-5-5" />歪斜
+                                    <input type="radio" name="t-answer-5" value="13" id="t-radio-answer-5-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -310,16 +302,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-6-2">
-                                    <input type="radio" name="t-answer-6" value="10" id="t-radio-answer-6-2" />歪斜
+                                    <input type="radio" name="t-answer-6" value="10" id="t-radio-answer-6-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-6-3">
-                                    <input type="radio" name="t-answer-6" value="11" id="t-radio-answer-6-3" />歪斜
+                                    <input type="radio" name="t-answer-6" value="11" id="t-radio-answer-6-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-6-4">
-                                    <input type="radio" name="t-answer-6" value="12" id="t-radio-answer-6-4" />歪斜
+                                    <input type="radio" name="t-answer-6" value="12" id="t-radio-answer-6-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-6-5">
-                                    <input type="radio" name="t-answer-6" value="13" id="t-radio-answer-6-5" />歪斜
+                                    <input type="radio" name="t-answer-6" value="13" id="t-radio-answer-6-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -328,7 +320,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>4</td>
                             <td>
                                 上左四
@@ -345,16 +337,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-7-2">
-                                    <input type="radio" name="t-answer-7" value="10" id="t-radio-answer-7-2" />歪斜
+                                    <input type="radio" name="t-answer-7" value="10" id="t-radio-answer-7-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-7-3">
-                                    <input type="radio" name="t-answer-7" value="11" id="t-radio-answer-7-3" />歪斜
+                                    <input type="radio" name="t-answer-7" value="11" id="t-radio-answer-7-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-7-4">
-                                    <input type="radio" name="t-answer-7" value="12" id="t-radio-answer-7-4" />歪斜
+                                    <input type="radio" name="t-answer-7" value="12" id="t-radio-answer-7-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-7-5">
-                                    <input type="radio" name="t-answer-7" value="13" id="t-radio-answer-7-5" />歪斜
+                                    <input type="radio" name="t-answer-7" value="13" id="t-radio-answer-7-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -377,16 +369,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-8-2">
-                                    <input type="radio" name="t-answer-8" value="10" id="t-radio-answer-8-2" />歪斜
+                                    <input type="radio" name="t-answer-8" value="10" id="t-radio-answer-8-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-8-3">
-                                    <input type="radio" name="t-answer-8" value="11" id="t-radio-answer-8-3" />歪斜
+                                    <input type="radio" name="t-answer-8" value="11" id="t-radio-answer-8-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-8-4">
-                                    <input type="radio" name="t-answer-8" value="12" id="t-radio-answer-8-4" />歪斜
+                                    <input type="radio" name="t-answer-8" value="12" id="t-radio-answer-8-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-8-5">
-                                    <input type="radio" name="t-answer-8" value="13" id="t-radio-answer-8-5" />歪斜
+                                    <input type="radio" name="t-answer-8" value="13" id="t-radio-answer-8-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -395,7 +387,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>5</td>
                             <td>
                                 上左五
@@ -412,16 +404,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-9-2">
-                                    <input type="radio" name="t-answer-9" value="10" id="t-radio-answer-9-2" />歪斜
+                                    <input type="radio" name="t-answer-9" value="10" id="t-radio-answer-9-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-9-3">
-                                    <input type="radio" name="t-answer-9" value="11" id="t-radio-answer-9-3" />歪斜
+                                    <input type="radio" name="t-answer-9" value="11" id="t-radio-answer-9-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-9-4">
-                                    <input type="radio" name="t-answer-9" value="12" id="t-radio-answer-9-4" />歪斜
+                                    <input type="radio" name="t-answer-9" value="12" id="t-radio-answer-9-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-9-5">
-                                    <input type="radio" name="t-answer-9" value="13" id="t-radio-answer-9-5" />歪斜
+                                    <input type="radio" name="t-answer-9" value="13" id="t-radio-answer-9-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -444,16 +436,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-10-2">
-                                    <input type="radio" name="t-answer-10" value="10" id="t-radio-answer-10-2" />歪斜
+                                    <input type="radio" name="t-answer-10" value="10" id="t-radio-answer-10-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-10-3">
-                                    <input type="radio" name="t-answer-10" value="11" id="t-radio-answer-10-3" />歪斜
+                                    <input type="radio" name="t-answer-10" value="11" id="t-radio-answer-10-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-10-4">
-                                    <input type="radio" name="t-answer-10" value="12" id="t-radio-answer-10-4" />歪斜
+                                    <input type="radio" name="t-answer-10" value="12" id="t-radio-answer-10-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-10-5">
-                                    <input type="radio" name="t-answer-10" value="13" id="t-radio-answer-10-5" />歪斜
+                                    <input type="radio" name="t-answer-10" value="13" id="t-radio-answer-10-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -462,7 +454,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>6</td>
                             <td>
                                 上左六
@@ -479,16 +471,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-11-2">
-                                    <input type="radio" name="t-answer-11" value="10" id="t-radio-answer-11-2" />歪斜
+                                    <input type="radio" name="t-answer-11" value="10" id="t-radio-answer-11-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-11-3">
-                                    <input type="radio" name="t-answer-11" value="11" id="t-radio-answer-11-3" />歪斜
+                                    <input type="radio" name="t-answer-11" value="11" id="t-radio-answer-11-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-11-4">
-                                    <input type="radio" name="t-answer-11" value="12" id="t-radio-answer-11-4" />歪斜
+                                    <input type="radio" name="t-answer-11" value="12" id="t-radio-answer-11-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-11-5">
-                                    <input type="radio" name="t-answer-11" value="13" id="t-radio-answer-11-5" />歪斜
+                                    <input type="radio" name="t-answer-11" value="13" id="t-radio-answer-11-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -511,16 +503,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-12-2">
-                                    <input type="radio" name="t-answer-12" value="10" id="t-radio-answer-12-2" />歪斜
+                                    <input type="radio" name="t-answer-12" value="10" id="t-radio-answer-12-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-12-3">
-                                    <input type="radio" name="t-answer-12" value="11" id="t-radio-answer-12-3" />歪斜
+                                    <input type="radio" name="t-answer-12" value="11" id="t-radio-answer-12-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-12-4">
-                                    <input type="radio" name="t-answer-12" value="12" id="t-radio-answer-12-4" />歪斜
+                                    <input type="radio" name="t-answer-12" value="12" id="t-radio-answer-12-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-12-5">
-                                    <input type="radio" name="t-answer-12" value="13" id="t-radio-answer-12-5" />歪斜
+                                    <input type="radio" name="t-answer-12" value="13" id="t-radio-answer-12-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -529,7 +521,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>7</td>
                             <td>
                                 上左七
@@ -546,16 +538,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-13-2">
-                                    <input type="radio" name="t-answer-13" value="10" id="t-radio-answer-13-2" />歪斜
+                                    <input type="radio" name="t-answer-13" value="10" id="t-radio-answer-13-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-13-3">
-                                    <input type="radio" name="t-answer-13" value="11" id="t-radio-answer-13-3" />歪斜
+                                    <input type="radio" name="t-answer-13" value="11" id="t-radio-answer-13-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-13-4">
-                                    <input type="radio" name="t-answer-13" value="12" id="t-radio-answer-13-4" />歪斜
+                                    <input type="radio" name="t-answer-13" value="12" id="t-radio-answer-13-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-13-5">
-                                    <input type="radio" name="t-answer-13" value="13" id="t-radio-answer-13-5" />歪斜
+                                    <input type="radio" name="t-answer-13" value="13" id="t-radio-answer-13-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -578,16 +570,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-14-2">
-                                    <input type="radio" name="t-answer-14" value="10" id="t-radio-answer-14-2" />歪斜
+                                    <input type="radio" name="t-answer-14" value="10" id="t-radio-answer-14-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-14-3">
-                                    <input type="radio" name="t-answer-14" value="11" id="t-radio-answer-14-3" />歪斜
+                                    <input type="radio" name="t-answer-14" value="11" id="t-radio-answer-14-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-14-4">
-                                    <input type="radio" name="t-answer-14" value="12" id="t-radio-answer-14-4" />歪斜
+                                    <input type="radio" name="t-answer-14" value="12" id="t-radio-answer-14-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-14-5">
-                                    <input type="radio" name="t-answer-14" value="13" id="t-radio-answer-14-5" />歪斜
+                                    <input type="radio" name="t-answer-14" value="13" id="t-radio-answer-14-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -603,7 +595,7 @@
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>1</td>
                             <td>
                                 下左一
@@ -620,16 +612,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-15-2">
-                                    <input type="radio" name="t-answer-15" value="10" id="t-radio-answer-15-2" />歪斜
+                                    <input type="radio" name="t-answer-15" value="10" id="t-radio-answer-15-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-15-3">
-                                    <input type="radio" name="t-answer-15" value="11" id="t-radio-answer-15-3" />歪斜
+                                    <input type="radio" name="t-answer-15" value="11" id="t-radio-answer-15-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-15-4">
-                                    <input type="radio" name="t-answer-15" value="12" id="t-radio-answer-15-4" />歪斜
+                                    <input type="radio" name="t-answer-15" value="12" id="t-radio-answer-15-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-15-5">
-                                    <input type="radio" name="t-answer-15" value="13" id="t-radio-answer-15-5" />歪斜
+                                    <input type="radio" name="t-answer-15" value="13" id="t-radio-answer-15-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -652,16 +644,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-16-2">
-                                    <input type="radio" name="t-answer-16" value="10" id="t-radio-answer-16-2" />歪斜
+                                    <input type="radio" name="t-answer-16" value="10" id="t-radio-answer-16-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-16-3">
-                                    <input type="radio" name="t-answer-16" value="11" id="t-radio-answer-16-3" />歪斜
+                                    <input type="radio" name="t-answer-16" value="11" id="t-radio-answer-16-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-16-4">
-                                    <input type="radio" name="t-answer-16" value="12" id="t-radio-answer-16-4" />歪斜
+                                    <input type="radio" name="t-answer-16" value="12" id="t-radio-answer-16-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-16-5">
-                                    <input type="radio" name="t-answer-16" value="13" id="t-radio-answer-16-5" />歪斜
+                                    <input type="radio" name="t-answer-16" value="13" id="t-radio-answer-16-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -670,7 +662,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>2</td>
                             <td>
                                 下左二
@@ -687,16 +679,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-17-2">
-                                    <input type="radio" name="t-answer-17" value="10" id="t-radio-answer-17-2" />歪斜
+                                    <input type="radio" name="t-answer-17" value="10" id="t-radio-answer-17-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-17-3">
-                                    <input type="radio" name="t-answer-17" value="11" id="t-radio-answer-17-3" />歪斜
+                                    <input type="radio" name="t-answer-17" value="11" id="t-radio-answer-17-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-17-4">
-                                    <input type="radio" name="t-answer-17" value="12" id="t-radio-answer-17-4" />歪斜
+                                    <input type="radio" name="t-answer-17" value="12" id="t-radio-answer-17-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-17-5">
-                                    <input type="radio" name="t-answer-17" value="13" id="t-radio-answer-17-5" />歪斜
+                                    <input type="radio" name="t-answer-17" value="13" id="t-radio-answer-17-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -719,16 +711,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-18-2">
-                                    <input type="radio" name="t-answer-18" value="10" id="t-radio-answer-18-2" />歪斜
+                                    <input type="radio" name="t-answer-18" value="10" id="t-radio-answer-18-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-18-3">
-                                    <input type="radio" name="t-answer-18" value="11" id="t-radio-answer-18-3" />歪斜
+                                    <input type="radio" name="t-answer-18" value="11" id="t-radio-answer-18-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-18-4">
-                                    <input type="radio" name="t-answer-18" value="12" id="t-radio-answer-18-4" />歪斜
+                                    <input type="radio" name="t-answer-18" value="12" id="t-radio-answer-18-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-18-5">
-                                    <input type="radio" name="t-answer-18" value="13" id="t-radio-answer-18-5" />歪斜
+                                    <input type="radio" name="t-answer-18" value="13" id="t-radio-answer-18-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -737,7 +729,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">    
+                        <tr style="background-color: #d9edf7;">    
                             <td>3</td>
                             <td>
                                 下左三
@@ -754,16 +746,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-19-2">
-                                    <input type="radio" name="t-answer-19" value="10" id="t-radio-answer-19-2" />歪斜
+                                    <input type="radio" name="t-answer-19" value="10" id="t-radio-answer-19-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-19-3">
-                                    <input type="radio" name="t-answer-19" value="11" id="t-radio-answer-19-3" />歪斜
+                                    <input type="radio" name="t-answer-19" value="11" id="t-radio-answer-19-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-19-4">
-                                    <input type="radio" name="t-answer-19" value="12" id="t-radio-answer-19-4" />歪斜
+                                    <input type="radio" name="t-answer-19" value="12" id="t-radio-answer-19-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-19-5">
-                                    <input type="radio" name="t-answer-19" value="13" id="t-radio-answer-19-5" />歪斜
+                                    <input type="radio" name="t-answer-19" value="13" id="t-radio-answer-19-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -786,16 +778,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-20-2">
-                                    <input type="radio" name="t-answer-20" value="10" id="t-radio-answer-20-2" />歪斜
+                                    <input type="radio" name="t-answer-20" value="10" id="t-radio-answer-20-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-20-3">
-                                    <input type="radio" name="t-answer-20" value="11" id="t-radio-answer-20-3" />歪斜
+                                    <input type="radio" name="t-answer-20" value="11" id="t-radio-answer-20-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-20-4">
-                                    <input type="radio" name="t-answer-20" value="12" id="t-radio-answer-20-4" />歪斜
+                                    <input type="radio" name="t-answer-20" value="12" id="t-radio-answer-20-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-20-5">
-                                    <input type="radio" name="t-answer-20" value="13" id="t-radio-answer-20-5" />歪斜
+                                    <input type="radio" name="t-answer-20" value="13" id="t-radio-answer-20-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -804,7 +796,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>4</td>
                             <td>
                                 下左四
@@ -821,16 +813,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-21-2">
-                                    <input type="radio" name="t-answer-21" value="10" id="t-radio-answer-21-2" />歪斜
+                                    <input type="radio" name="t-answer-21" value="10" id="t-radio-answer-21-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-21-3">
-                                    <input type="radio" name="t-answer-21" value="11" id="t-radio-answer-21-3" />歪斜
+                                    <input type="radio" name="t-answer-21" value="11" id="t-radio-answer-21-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-21-4">
-                                    <input type="radio" name="t-answer-21" value="12" id="t-radio-answer-21-4" />歪斜
+                                    <input type="radio" name="t-answer-21" value="12" id="t-radio-answer-21-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-21-5">
-                                    <input type="radio" name="t-answer-21" value="13" id="t-radio-answer-21-5" />歪斜
+                                    <input type="radio" name="t-answer-21" value="13" id="t-radio-answer-21-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -853,16 +845,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-22-2">
-                                    <input type="radio" name="t-answer-22" value="10" id="t-radio-answer-22-2" />歪斜
+                                    <input type="radio" name="t-answer-22" value="10" id="t-radio-answer-22-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-22-3">
-                                    <input type="radio" name="t-answer-22" value="11" id="t-radio-answer-22-3" />歪斜
+                                    <input type="radio" name="t-answer-22" value="11" id="t-radio-answer-22-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-22-4">
-                                    <input type="radio" name="t-answer-22" value="12" id="t-radio-answer-22-4" />歪斜
+                                    <input type="radio" name="t-answer-22" value="12" id="t-radio-answer-22-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-22-5">
-                                    <input type="radio" name="t-answer-22" value="13" id="t-radio-answer-22-5" />歪斜
+                                    <input type="radio" name="t-answer-22" value="13" id="t-radio-answer-22-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -871,7 +863,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>5</td>
                             <td>
                                 下左五
@@ -888,16 +880,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-23-2">
-                                    <input type="radio" name="t-answer-23" value="10" id="t-radio-answer-23-2" />歪斜
+                                    <input type="radio" name="t-answer-23" value="10" id="t-radio-answer-23-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-23-3">
-                                    <input type="radio" name="t-answer-23" value="11" id="t-radio-answer-23-3" />歪斜
+                                    <input type="radio" name="t-answer-23" value="11" id="t-radio-answer-23-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-23-4">
-                                    <input type="radio" name="t-answer-23" value="12" id="t-radio-answer-23-4" />歪斜
+                                    <input type="radio" name="t-answer-23" value="12" id="t-radio-answer-23-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-23-5">
-                                    <input type="radio" name="t-answer-23" value="13" id="t-radio-answer-23-5" />歪斜
+                                    <input type="radio" name="t-answer-23" value="13" id="t-radio-answer-23-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -920,16 +912,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-24-2">
-                                    <input type="radio" name="t-answer-24" value="10" id="t-radio-answer-24-2" />歪斜
+                                    <input type="radio" name="t-answer-24" value="10" id="t-radio-answer-24-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-24-3">
-                                    <input type="radio" name="t-answer-24" value="11" id="t-radio-answer-24-3" />歪斜
+                                    <input type="radio" name="t-answer-24" value="11" id="t-radio-answer-24-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-24-4">
-                                    <input type="radio" name="t-answer-24" value="12" id="t-radio-answer-24-4" />歪斜
+                                    <input type="radio" name="t-answer-24" value="12" id="t-radio-answer-24-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-24-5">
-                                    <input type="radio" name="t-answer-24" value="13" id="t-radio-answer-24-5" />歪斜
+                                    <input type="radio" name="t-answer-24" value="13" id="t-radio-answer-24-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -938,7 +930,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>6</td>
                             <td>
                                 下左六
@@ -955,16 +947,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-25-2">
-                                    <input type="radio" name="t-answer-25" value="10" id="t-radio-answer-25-2" />歪斜
+                                    <input type="radio" name="t-answer-25" value="10" id="t-radio-answer-25-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-25-3">
-                                    <input type="radio" name="t-answer-25" value="11" id="t-radio-answer-25-3" />歪斜
+                                    <input type="radio" name="t-answer-25" value="11" id="t-radio-answer-25-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-25-4">
-                                    <input type="radio" name="t-answer-25" value="12" id="t-radio-answer-25-4" />歪斜
+                                    <input type="radio" name="t-answer-25" value="12" id="t-radio-answer-25-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-25-5">
-                                    <input type="radio" name="t-answer-25" value="13" id="t-radio-answer-25-5" />歪斜
+                                    <input type="radio" name="t-answer-25" value="13" id="t-radio-answer-25-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -987,16 +979,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-26-2">
-                                    <input type="radio" name="t-answer-26" value="10" id="t-radio-answer-26-2" />歪斜
+                                    <input type="radio" name="t-answer-26" value="10" id="t-radio-answer-26-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-26-3">
-                                    <input type="radio" name="t-answer-26" value="11" id="t-radio-answer-26-3" />歪斜
+                                    <input type="radio" name="t-answer-26" value="11" id="t-radio-answer-26-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-26-4">
-                                    <input type="radio" name="t-answer-26" value="12" id="t-radio-answer-26-4" />歪斜
+                                    <input type="radio" name="t-answer-26" value="12" id="t-radio-answer-26-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-26-5">
-                                    <input type="radio" name="t-answer-26" value="13" id="t-radio-answer-26-5" />歪斜
+                                    <input type="radio" name="t-answer-26" value="13" id="t-radio-answer-26-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -1005,7 +997,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="background-color: #d9edf7;">
                             <td>7</td>
                             <td>
                                 下左七
@@ -1022,16 +1014,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-27-2">
-                                    <input type="radio" name="t-answer-27" value="10" id="t-radio-answer-27-2" />歪斜
+                                    <input type="radio" name="t-answer-27" value="10" id="t-radio-answer-27-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-27-3">
-                                    <input type="radio" name="t-answer-27" value="11" id="t-radio-answer-27-3" />歪斜
+                                    <input type="radio" name="t-answer-27" value="11" id="t-radio-answer-27-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-27-4">
-                                    <input type="radio" name="t-answer-27" value="12" id="t-radio-answer-27-4" />歪斜
+                                    <input type="radio" name="t-answer-27" value="12" id="t-radio-answer-27-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-27-5">
-                                    <input type="radio" name="t-answer-27" value="13" id="t-radio-answer-27-5" />歪斜
+                                    <input type="radio" name="t-answer-27" value="13" id="t-radio-answer-27-5" />深覆盖
                                 </label>
                             </td>
                             <td>
@@ -1054,16 +1046,16 @@
                             </td>
                             <td>
                                 <label for="t-radio-answer-28-2">
-                                    <input type="radio" name="t-answer-28" value="10" id="t-radio-answer-28-2" />歪斜
+                                    <input type="radio" name="t-answer-28" value="10" id="t-radio-answer-28-2" />开颌
                                 </label>
                                 <label for="t-radio-answer-28-3">
-                                    <input type="radio" name="t-answer-28" value="11" id="t-radio-answer-28-3" />歪斜
+                                    <input type="radio" name="t-answer-28" value="11" id="t-radio-answer-28-3" />反颌
                                 </label>
                                 <label for="t-radio-answer-28-4">
-                                    <input type="radio" name="t-answer-28" value="12" id="t-radio-answer-28-4" />歪斜
+                                    <input type="radio" name="t-answer-28" value="12" id="t-radio-answer-28-4" />深覆合
                                 </label>
                                 <label for="t-radio-answer-28-5">
-                                    <input type="radio" name="t-answer-28" value="13" id="t-radio-answer-28-5" />歪斜
+                                    <input type="radio" name="t-answer-28" value="13" id="t-radio-answer-28-5" />深覆盖
                                 </label>
                             </td>
                             <td>

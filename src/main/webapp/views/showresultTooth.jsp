@@ -573,7 +573,8 @@
     remark = remark.replace(reg,"\n");
     $('#remarkText').html(remark);
 
-    // 1未生长 0歪斜 2龋齿 var styles = { '1': "style3", '10': "style1", '11':
+    // 1未生长 0歪斜 2龋齿 
+    var styles = { '1': "style3", '10': "style1", '11':
 "style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
 
     $("input:radio[name='answer-1'][value='"+ a1 +"']").attr('checked','true');
