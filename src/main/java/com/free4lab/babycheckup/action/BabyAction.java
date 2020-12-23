@@ -327,7 +327,7 @@ public class BabyAction {
         Date d1 = baby.getBirthday();
         Date d2 = new Date(new java.util.Date().getTime());
         int monthage = (differentdays(d1,d2))/30;
-        if(monthage < 84){
+        if(monthage < 217){
             flag = true;
         }
         return "success";

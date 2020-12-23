@@ -84,5 +84,12 @@
                 <param name="includeProperties">bloodTypeImgUrl</param>
             </result>
         </action>
+
+        <!--上传心电检查文件 -->
+        <action name="uploadECGImg" method="uploadEcgImg" class="com.free4lab.babycheckup.action.BabyImgAction">
+            <result name="success" type="json">
+                <param name="includeProperties">ECGImgUrl</param>
+            </result>
+        </action>
     </package>
 </struts>

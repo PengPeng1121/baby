@@ -136,6 +136,8 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultBloodType result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
             }else if(testId==52){
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultAttention result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==53){
+                queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultEcg result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
             }else {
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
             }
@@ -208,6 +210,7 @@ public class BabyDAO extends AbstractDAO<Baby> {
                     queryString += " AND parent." + entry.getKey() + " = :parent" + entry.getKey();
                 }
             }
+            queryString += " order by baby.lastTestTime desc";
             Query query = this.getEntityManager().createQuery(queryString);
             if (babyParams != null && babyParams.size() > 0) {
                 for (Map.Entry<String, Object> entry : babyParams.entrySet()) {

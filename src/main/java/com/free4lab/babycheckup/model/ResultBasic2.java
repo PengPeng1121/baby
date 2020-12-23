@@ -27,6 +27,10 @@ public class ResultBasic2 {
      */
     private String babyBirthWeekAge;
     /**
+     * 是否早产
+     */
+    private Integer isPremature;
+    /**
      * 宝宝出生体重
      */
     private String babyBirthWeight;
@@ -202,6 +206,16 @@ public class ResultBasic2 {
 
     public void setBabyBirthWeekAge(String babyBirthWeekAge) {
         this.babyBirthWeekAge = babyBirthWeekAge;
+    }
+
+    @Basic
+    @Column(name = "is_premature", nullable = false)
+    public Integer getIsPremature() {
+        return isPremature;
+    }
+
+    public void setIsPremature(Integer isPremature) {
+        this.isPremature = isPremature;
     }
 
     @Basic

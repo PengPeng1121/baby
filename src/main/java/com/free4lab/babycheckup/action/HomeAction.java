@@ -49,6 +49,7 @@ public class HomeAction {
     private long numberOfResultHBs;
     private long numberOfResultBloodType;
     private long numberOfResultAttention;
+    private long numberOfResultECG;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -88,6 +89,7 @@ public class HomeAction {
     private Integer resultFoodAllergyLeftTimes;
     private Integer resultBloodTypeLeftTimes;
     private Integer resultAttentionLeftTimes;
+    private Integer resultECGLeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -135,6 +137,7 @@ public class HomeAction {
         numberOfResultFoodAllergy = ResultFoodAllergyManager.countResultByHosIdAndTestId(hoid,50);
         numberOfResultBloodType = ResultBloodTypeManager.countResultByHosIdAndTestId(hoid,51);
         numberOfResultAttention = ResultAttentionManager.countResultByHosIdAndTestId(hoid,52);
+        numberOfResultECG = ResultEcgManager.countResultByHosIdAndTestId(hoid,53);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -266,6 +269,9 @@ public class HomeAction {
                             break;
                         case 52:
                             resultAttentionLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 53:
+                            resultECGLeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -911,5 +917,21 @@ public class HomeAction {
 
     public void setResultAttentionLeftTimes(Integer resultAttentionLeftTimes) {
         this.resultAttentionLeftTimes = resultAttentionLeftTimes;
+    }
+
+    public long getNumberOfResultECG() {
+        return numberOfResultECG;
+    }
+
+    public void setNumberOfResultECG(long numberOfResultECG) {
+        this.numberOfResultECG = numberOfResultECG;
+    }
+
+    public Integer getResultECGLeftTimes() {
+        return resultECGLeftTimes;
+    }
+
+    public void setResultECGLeftTimes(Integer resultECGLeftTimes) {
+        this.resultECGLeftTimes = resultECGLeftTimes;
     }
 }
