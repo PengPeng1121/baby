@@ -419,7 +419,7 @@
 
     function score() {        
         $.ajax({
-            url: 'saveresultAllergy',
+            url: 'editresultAllergy',
             type: 'post',
             data: getData(),
             success:function (json) {

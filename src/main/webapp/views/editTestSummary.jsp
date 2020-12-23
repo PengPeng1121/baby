@@ -136,7 +136,7 @@
         data['resultSummary.summaryDate'] = summaryDate;
         data['resultSummary.summary'] = summary;
         $.ajax({
-            url: 'saveresultSummary',
+            url: 'editresultSummary',
             type: 'post',
             data: data,
             success:function (json) {
