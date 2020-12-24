@@ -143,7 +143,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-
+                                        <a class="btn btn-default" href="editresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
                                     </div>
@@ -197,6 +197,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="editresultPhysical?id=<s:property value="#resultPhysical.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
                                     </div>
@@ -223,6 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="editresultFeed?id=<s:property value="#resultFeed.id"/>">编辑</a>
                                         <a class="btn btn-default" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
                                     </div>
