@@ -343,6 +343,11 @@
             <result name="success" >views/showresultGroup2020.jsp</result>
         </action>
 
+        <!--成长发育2020-->
+        <action name="editresultGroup2020" method="showResultGroup2020" class="com.free4lab.babycheckup.action.ResultGroup2020Action">
+            <result name="success" >views/editTestGroup2020.jsp</result>
+        </action>
+
         <!--儿童气质-->
         <action name="showresultQiZhi" method="showResultQiZhi" class="com.free4lab.babycheckup.action.ResultQiZhiAction">
             <result name="success" >views/showresultQiZhi.jsp</result>
@@ -363,6 +368,11 @@
             <result name="success" >views/showresultFeed.jsp</result>
         </action>
 
+        <!--喂养-->
+        <action name="editresultFeed" method="showResultFeed" class="com.free4lab.babycheckup.action.ResultFeedAction">
+            <result name="success" >views/editTestFeed.jsp</result>
+        </action>
+
         <!--儿童感受 -->
         <action name="showresultFeel" method="showResultFeel" class="com.free4lab.babycheckup.action.ResultFeelAction">
             <result name="success" >views/showresultFeel.jsp</result>
@@ -376,6 +386,11 @@
         <!--体格面貌 -->
         <action name="showresultPhysical" method="showResultPhysical" class="com.free4lab.babycheckup.action.ResultPhysicalAction">
             <result name="success" >views/showresultPhysical.jsp</result>
+        </action>
+
+        <!--体格面貌 -->
+        <action name="editresultPhysical" method="showResultPhysical" class="com.free4lab.babycheckup.action.ResultPhysicalAction">
+            <result name="success" >views/editTestPhysical.jsp</result>
         </action>
 
         <!--总览 -->
@@ -676,6 +691,15 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!--生长发育2020结果-->
+        <action name="updateresultGroup2020" method="updateResultGroup2020" class="com.free4lab.babycheckup.action.ResultGroup2020Action">
+            <result type="json" name="success">
+                <param name="includeProperties">resultGroup2020,resultGroup2020.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+
         <!--儿童气质结果-->
         <action name="saveresultQiZhi" method="saveResultQiZhi" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
@@ -702,6 +726,14 @@
 
         <!--体格面貌-->
         <action name="saveresultPhysical" method="saveResultPhysical" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultPhysical,resultPhysical.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!--体格面貌-->
+        <action name="updateresultPhysical" method="updateResultPhysical" class="com.free4lab.babycheckup.action.ResultPhysicalAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultPhysical,resultPhysical.id</param>
             </result>
@@ -782,6 +814,14 @@
 
         <!-- 喂养 -->
         <action name="saveresultFeed" method="saveResultFeed" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultFeed,resultFeed.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
+        <!-- 喂养 -->
+        <action name="updateresultFeed" method="updateResultFeed" class="com.free4lab.babycheckup.action.ResultFeedAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultFeed,resultFeed.id</param>
             </result>

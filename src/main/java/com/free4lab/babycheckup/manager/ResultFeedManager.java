@@ -26,4 +26,7 @@ public class ResultFeedManager {
     public static long countResultByHoid(int hoid) {return getResultFeedDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultFeedDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static ResultFeed update(ResultFeed resultFeed) {
+        return getResultFeedDAOInstance().update(resultFeed);
+    }
 }

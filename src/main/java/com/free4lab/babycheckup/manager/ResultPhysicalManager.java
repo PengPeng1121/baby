@@ -25,4 +25,9 @@ public class ResultPhysicalManager {
     }
     public static long countResultByHoid(int hoid) {return getInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultPhysical update(ResultPhysical resultPhysical) {
+        return getInstance().update(resultPhysical);
+    }
+
 }

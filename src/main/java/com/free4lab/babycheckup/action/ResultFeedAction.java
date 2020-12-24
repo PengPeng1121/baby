@@ -10,9 +10,10 @@ import com.free4lab.babycheckup.model.TestResultRecord;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.BeanUtils;
 
-import java.sql.Date;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2017/6/29.
@@ -33,7 +34,9 @@ public class ResultFeedAction {
         baby = BabyManager.findById(resultFeed.getBabyId());
         Date d1 = baby.getBirthday();
         stime = new  SimpleDateFormat("yyyy-MM-dd").format(resultFeed.getTime());
-        Date d2 = Date.valueOf(stime);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(resultFeed.getTime());
+        Date d2 = cal.getTime();
         monthage = diffDays(d1,d2);
         resultRecord = TestResultRecordManager.find(37,id);
         if(resultRecord == null){
@@ -79,6 +82,38 @@ public class ResultFeedAction {
         return SUCCESS;
     }
 
+    public String updateResultFeed() {
+        if(resultFeed == null){
+            return "fail";
+        }
+
+        ResultFeed old = ResultFeedManager.findResultByid(resultFeed.getId());
+
+        if(old.getBabyId() != resultFeed.getBabyId()){
+            return "fail";
+        }
+
+        old.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        old.setUpdateTime(new Date());
+        old.setCurrentMilkYield(resultFeed.getCurrentMilkYield());
+        old.setAccessoryFoodAddDate(resultFeed.getAccessoryFoodAddDate());
+        old.setAccessoryFoodAddTimes(resultFeed.getAccessoryFoodAddTimes());
+        old.setAccessoryFoodShape(resultFeed.getAccessoryFoodShape());
+        old.setAccessoryFoodSituation(resultFeed.getAccessoryFoodSituation());
+        old.setFeedSuggest(resultFeed.getFeedSuggest());
+        old.setFoodAllergySituation(resultFeed.getFoodAllergySituation());
+        old.setIsFoodAllergy(resultFeed.getIsFoodAllergy());
+        old.setIsOwnFood(resultFeed.getIsOwnFood());
+        old.setMilkRecipe(resultFeed.getMilkRecipe());
+        old.setMilkRecipeInfo(resultFeed.getMilkRecipeInfo());
+        old.setMilkType(resultFeed.getMilkType());
+        old.setOwnFoodSituation(resultFeed.getOwnFoodSituation());
+        old.setShitShape(resultFeed.getShitShape());
+        old.setShitTimes(resultFeed.getShitTimes());
+        old.setRemark(resultFeed.getRemark());
+        ResultFeedManager.update(old);
+        return SUCCESS;
+    }
 
     public Baby getBaby() {
         return baby;

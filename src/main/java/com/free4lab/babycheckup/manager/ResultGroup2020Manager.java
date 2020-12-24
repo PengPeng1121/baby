@@ -25,4 +25,8 @@ public class ResultGroup2020Manager {
     }
     public static long countResultByHoid(int hoid) {return getResultDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static ResultGroup2020 update(ResultGroup2020 resultGroup2020) {
+        return getResultDAOInstance().update(resultGroup2020);
+    }
 }

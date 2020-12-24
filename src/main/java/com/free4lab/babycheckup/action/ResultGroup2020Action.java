@@ -1,16 +1,20 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.manager.*;
-import com.free4lab.babycheckup.model.*;
+import com.free4lab.babycheckup.manager.BabyManager;
+import com.free4lab.babycheckup.manager.HospitalManager;
+import com.free4lab.babycheckup.manager.ResultGroup2020Manager;
+import com.free4lab.babycheckup.manager.WhoGrowthStandardManager;
+import com.free4lab.babycheckup.model.Baby;
+import com.free4lab.babycheckup.model.Hospital;
+import com.free4lab.babycheckup.model.ResultGroup2020;
+import com.free4lab.babycheckup.model.WhoGrowthStandardConstant;
 import com.free4lab.babycheckup.vo.Group2020BabyInfo;
 import com.free4lab.babycheckup.vo.Group2020BasicInfo;
 import com.opensymphony.xwork2.ActionContext;
 import com.pp.common.constant.util.ExactAgeUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.hsqldb.lib.StringUtil;
 import org.springframework.util.CollectionUtils;
 
-import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -241,6 +245,26 @@ public class ResultGroup2020Action {
     public int differentDays(Date d1, Date d2){
         int days = (int)((d2.getTime()-d1.getTime())/(1000*3600*24));
         return days;
+    }
+
+    public String updateResultGroup2020() {
+        if(resultGroup2020 == null){
+            return "fail";
+        }
+
+        ResultGroup2020 old = ResultGroup2020Manager.findResultByid(resultGroup2020.getId());
+
+        if(old.getBabyId() != resultGroup2020.getBabyId()){
+            return "fail";
+        }
+
+        old.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+        old.setUpdateTime(new Date());
+        old.setHead(resultGroup2020.getHead());
+        old.setHeight(resultGroup2020.getHeight());
+        old.setWeight(resultGroup2020.getWeight());
+        ResultGroup2020Manager.update(old);
+        return SUCCESS;
     }
 
     public Baby getBaby() {

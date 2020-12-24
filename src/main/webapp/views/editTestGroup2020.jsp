@@ -63,6 +63,7 @@
             </div>
 
             <input id="heightOld" type="hidden" value="<s:property value="resultGroup2020.height"/>">
+
             <input id="weightOld" type="hidden" value="<s:property value="resultGroup2020.weight"/>">
             <input id="bmiOld" type="hidden" value="<s:property value="resultGroup2020.bmi"/>">
             <input id="headOld" type="hidden" value="<s:property value="resultGroup2020.head"/>">
@@ -164,7 +165,7 @@
 
         var data = {};
         data['resultGroup2020.id'] = $("#resultid").val();
-        data['resultGroup2020.babyid'] = $("#babyid").val();
+        data['resultGroup2020.babyId'] = $("#babyid").val();
         data['resultGroup2020.height'] = height;
         data['resultGroup2020.weight'] = weight;
         data['resultGroup2020.bmi'] = bmi;
