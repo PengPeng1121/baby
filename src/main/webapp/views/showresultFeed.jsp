@@ -350,11 +350,13 @@
                                     </span>
                                     
 
-                                    <input type="radio" name="isOwnFood" value="0"   id="radio-answer-5-0">
-                                    <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
+                                    
 
                                     <input type="radio" name="isOwnFood" value="1"   id="radio-answer-5-1">
                                     <label for="radio-answer-5-1" style="width: 60px;margin-left: 26px;font-weight: normal;"> 是</label>
+
+                                    <input type="radio" name="isOwnFood" value="0"   id="radio-answer-5-0">
+                                    <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
                                     
                                     <s:property value="resultFeed.ownFoodSituation"/>
 

@@ -160,17 +160,18 @@
                                 <td>
                                     是否自主进食
                                 </td>
-                                <td>
-                                    <label for="radio-answer-2-0">
-                                        <input type="radio" name="isOwnFood" value="0" id="radio-answer-2-0" />否
-                                    </label>
-                                    <input id="ownFoodSituation1" style="width: 100%" />
-                                </td>
+                                
                                 <td>
                                     <label for="radio-answer-2-1">
                                         <input type="radio" name="isOwnFood" value="1" id="radio-answer-2-1" />是
                                     </label>
                                     <input id="ownFoodSituation2" style="width: 100%" />
+                                </td>
+                                <td>
+                                    <label for="radio-answer-2-0">
+                                        <input type="radio" name="isOwnFood" value="0" id="radio-answer-2-0" />否
+                                    </label>
+                                    <input id="ownFoodSituation1" style="width: 100%" />
                                 </td>
                             </tr>
                             
