@@ -66,7 +66,7 @@
             <input id="weightOld" type="hidden" value="<s:property value="resultGroup2020.weight"/>">
             <input id="bmiOld" type="hidden" value="<s:property value="resultGroup2020.bmi"/>">
             <input id="headOld" type="hidden" value="<s:property value="resultGroup2020.head"/>">
-            <input id="resultid" type="hidden" value="<s:property value="resultPhysical.id"/>">
+            <input id="resultid" type="hidden" value="<s:property value="resultGroup2020.id"/>">
             
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
