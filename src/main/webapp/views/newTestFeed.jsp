@@ -112,6 +112,10 @@
                                     <label for="radio-answer-1-1">
                                         <input type="radio" name="isFoodAllergy" value="1" id="radio-answer-1-1" />有
                                     </label>
+                                    <label for="radio-answer-1-2">
+                                        <input type="radio" name="isFoodAllergy" value="2" id="radio-answer-1-2" />暂不确定
+                                    </label>
+
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">

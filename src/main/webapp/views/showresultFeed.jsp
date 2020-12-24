@@ -288,11 +288,13 @@
                                     </span>
                                     
 
-                                    <input type="radio" name="isFoodAllergy" value="0"   id="radio-answer-5-0">
-                                    <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 无</label>
+                                    <input type="radio" name="isFoodAllergy" value="0"   id="radio-answer-1-0">
+                                    <label for="radio-answer-1-0" style="width: 50px;margin-left: 20px;font-weight: normal;"> 无</label>
 
-                                    <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 25px;font-weight: normal;"> 有</label>
+                                    <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-1-1">
+                                    <label for="radio-answer-1-1" style="width: 50px;margin-left: 5px;font-weight: normal;"> 有</label>
+                                    <input type="radio" name="isFoodAllergy" value="2"   id="radio-answer-1-2">
+                                    <label for="radio-answer-1-2" style="width: 80px;margin-left: 5px;font-weight: normal;"> 暂不确定</label>
                                     
                                     <s:property value="resultFeed.foodAllergySituation"/>
 
@@ -352,11 +354,11 @@
 
                                     
 
-                                    <input type="radio" name="isOwnFood" value="1"   id="radio-answer-5-1">
-                                    <label for="radio-answer-5-1" style="width: 60px;margin-left: 26px;font-weight: normal;"> 是</label>
+                                    <input type="radio" name="isOwnFood" value="1"   id="radio-answer-2-1">
+                                    <label for="radio-answer-2-1" style="width: 60px;margin-left: 26px;font-weight: normal;"> 是</label>
 
-                                    <input type="radio" name="isOwnFood" value="0"   id="radio-answer-5-0">
-                                    <label for="radio-answer-5-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
+                                    <input type="radio" name="isOwnFood" value="0"   id="radio-answer-2-0">
+                                    <label for="radio-answer-2-0" style="width: 60px;margin-left: 20px;font-weight: normal;"> 否</label>
                                     
                                     <s:property value="resultFeed.ownFoodSituation"/>
 
