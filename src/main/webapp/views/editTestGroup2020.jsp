@@ -162,25 +162,20 @@
         bmi = $("#BMI").val();
         head = $("#head").val();
 
-        var data = "{";
-        data += "'resultGroup2020.id':" + $("#resultid").val() + ",";
-        data += "'resultGroup2020.babyId':" + $("#babyid").val() + ",";
-        data += "'resultGroup2020.height':" + height + ",";
-        data += "'resultGroup2020.weight':" + weight + ",";
-        if (bmi) {
-            data += "'resultGroup2020.bmi':" + bmi + ",";
-        }
+        var data = {};
+        data['resultGroup2020.id'] = $("#resultid").val();
+        data['resultGroup2020.babyid'] = $("#babyid").val();
+        data['resultGroup2020.height'] = height;
+        data['resultGroup2020.weight'] = weight;
+        data['resultGroup2020.bmi'] = bmi;
+        data['resultGroup2020.head'] = head;
 
-        if (head) {
-            data += "'resultGroup2020.head':" + head + ",";
-        }
-        
-        data += "}";
+
         
         $.ajax({
             url: 'updateresultGroup2020',
             type: 'post',
-            data: eval('(' + data + ')'),
+            data: data,
             success:function (json) {
                 var rId = json.resultGroup2020.id;
                 var refreshData = {
