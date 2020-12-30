@@ -175,6 +175,22 @@
                     <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Girl.jpg">
                     </s:if>
 
+                    <table style="width: 35%;
+                        border: 0;
+                        position: relative;
+                        top: 80px;
+                        left: 50px;
+                        font-size: 16px">
+                        <tr>
+                            <td style=" width: 100px; padding-left: 15px">
+                                <span style="letter-spacing: 18px">姓</span>
+                                <span style="letter-spacing: 1px">名:</span>
+                            </td>
+                            <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
+                        </tr>
+                    </table>
+
+
 
                     <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 280px;">
                         <tbody style="width: 100%">

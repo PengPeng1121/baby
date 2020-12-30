@@ -554,7 +554,7 @@
             width: 80% !important;
             position: relative !important;
             left: 60px !important;
-            top: 200px !important;
+            top: 170px !important;
         }
         #basic2 #table-main1{
             border: 0px !important;
@@ -562,7 +562,7 @@
             width: 80% !important;
             position: relative !important;
             left: 60px !important;
-            top: 255px !important;
+            top: 235px !important;
         }
         #basic2 #table-main2{
             border: 0px !important;
@@ -570,7 +570,7 @@
             width: 80% !important;
             position: relative !important;
             left: 60px !important;
-            top: 310px !important;
+            top: 295px !important;
         }
         #basic2 #table-main3{
             border: 0px !important;
@@ -578,7 +578,7 @@
             width: 85% !important;
             position: relative !important;
             left: 60px !important;
-            top: 310px !important;
+            top: 295px !important;
         }
         #group #content-table{
             top: 60px !important;
@@ -1134,8 +1134,23 @@
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Girl.jpg">
                 </s:if>
 
+                <table style="width: 35%;
+                        border: 0;
+                        position: relative;
+                        top: 80px;
+                        left: 50px;
+                        font-size: 16px">
+                    <tr>
+                        <td style=" width: 100px; padding-left: 15px">
+                            <span style="letter-spacing: 18px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                        </td>
+                        <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
+                    </tr>
+                </table>
 
-                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 60%;position: relative;left: 70px;top: 195px;">
+
+                <table id="table-main" align="center" style="border: 0px;margin: 0; width: 60%;position: relative;left: 70px;top: 155px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td>
@@ -1255,7 +1270,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 60%;position: relative;top: 265px;left: 60px;">
+                <table  id="table-main1" align="center"  style="border: 0px;margin: 0; width: 60%;position: relative;top: 235px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr class="item-line">
                             <td style="border:0px;width: 200px">
@@ -1267,7 +1282,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 325px;left: 60px;">
+                <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 295px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td colspan="4">
@@ -1308,7 +1323,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 330px;left: 60px;">
+                <table  id="table-main3" align="center"  style="border: 0px;margin: 0;width: 60%;position: relative;top: 300px;left: 60px;">
                     <tbody style="width: 100%">
                         <tr>
                             <td style="width: 510px">
