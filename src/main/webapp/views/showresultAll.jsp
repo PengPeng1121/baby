@@ -898,7 +898,10 @@
     <input id="feedSuggest" type="hidden" value="<s:property value="allTestResultVo.resultFeed.feedSuggest"/>">
     <!-- 2016 -->
     <input type="hidden" id="resultID2016" value="<s:property value="allTestResultVo.result2016.id"/>">
+    <input type="hidden" id="dq_fix" value="<s:property value="allTestResultVo.result2016.dq"/>">
+    <input type="hidden" id="growth_fix" value="<s:property value="allTestResultVo.result2016.growth"/>">
     <input type="hidden" id="testerName2016" value="<s:property value="otherResultVo.record2016.testerName"/>">
+    
     <!-- blood -->
 
     <!-- summary -->
@@ -1196,7 +1199,7 @@
                                     宝贝出生体重:   
                                 </span>
                                 <span>
-                                    <s:property value="resultBasic2.babyBirthWeight"/>      g
+                                    <s:property value="resultBasic2.babyBirthWeight"/>      kg
                                 </span>
 
                             </td>
@@ -2249,15 +2252,15 @@
                             <label for="radio-answer-3-1-tooth"></label>
                         </td>
                     </tr>
-                    <tr class="item-line">
+                    <!-- <tr class="item-line">
                         <td class="item">
                             已涂氟
                         </td>
                         <td>
-                            <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1">
-                            <label for="radio-answer-4-1"></label>
+                            <input type="radio" name="answer-4-tooth" value="1"   id="radio-answer-4-1-tooth">
+                            <label for="radio-answer-4-1-tooth"></label>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
                 <textarea id="remarkTextTooth" rows="3" style="resize:none;border: 0;width: 350px;height: 120px;background-color: transparent;"></textarea>
                 <!-- 牙图 -->
@@ -2509,10 +2512,10 @@
                     </tr>
                     <tr>
                         <td>单项发育商（DQ）</td>
-                        <td><s:property value="otherResultVo.scoreSport"/></td>
-                        <td><s:property value="otherResultVo.scoreAct"/></td>
-                        <td><s:property value="otherResultVo.scoreAdapt"/></td>
-                        <td><s:property value="otherResultVo.scoreLanguage"/></td>
+                        <td id="scoreSport2"><s:property value="otherResultVo.scoreSport"/></td>
+                        <td id="scoreAct2"><s:property value="otherResultVo.scoreAct"/></td>
+                        <td id="scoreAdapt2"><s:property value="otherResultVo.scoreAdapt"/></td>
+                        <td id="scoreLanguage2"><s:property value="otherResultVo.scoreLanguage"/></td>
                         <td id="last" style="border:0px"><s:property value="otherResultVo.scoreSocial"/></td>
                     </tr>
                     </tbody>
@@ -3749,30 +3752,30 @@
 
 <!-- 2016 -->
 <script type="text/javascript">
-    var dq_fix = <s:property value="allTestResultVo.result2016.dq"/>;
-    var growth_fix = <s:property value="allTestResultVo.result2016.growth"/>;
+    var dq_fix = $('#dq_fix').html();
+    var growth_fix = $('#growth_fix').html();
     $("#DQ").html(dq_fix);
     $("#growth").html(growth_fix);
     var a1 = 0;
-    a1 = <s:property value="allTestResultVo.result2016.scoreSport"/>;//智龄
+    a1 =  parseInt($('#scoreSport').html());//智龄
     var a2 = 0;
-    a2 = <s:property value="allTestResultVo.result2016.scoreAct"/>;
+    a2 = parseInt($('#scoreAct').html());
     var a3 = 0;
-    a3 = <s:property value="allTestResultVo.result2016.scoreAdapt"/>;
+    a3 = parseInt($('#scoreAdapt').html());
     var a4 = 0;
-    a4 = <s:property value="allTestResultVo.result2016.scoreLanguage"/>;
+    a4 =  parseInt($('#scoreLanguage').html());
     var a5 = 0;
-    a5 = <s:property value="allTestResultVo.result2016.scoreSocial"/>;
+    a5 =parseInt($('#scoreSocial').html());
     var b1 = 0;
-    b1 = <s:property value="otherResultVo.scoreSport"/>;//发育商
+    b1 =  parseInt($('#scoreSport2').html());//智龄
     var b2 = 0;
-    b2 = <s:property value="otherResultVo.scoreAct"/>;
+    b2 = parseInt($('#scoreAct2').html());
     var b3 = 0;
-    b3 = <s:property value="otherResultVo.scoreAdapt"/>;
+    b3 = parseInt($('#scoreAdapt2').html());
     var b4 = 0;
-    b4 = <s:property value="otherResultVo.scoreLanguage"/>;
+    b4 =  parseInt($('#scoreLanguage2').html());
     var b5 = 0;
-    b5 = <s:property value="otherResultVo.scoreSocial"/>;
+    b5 =parseInt($('#last').html());
     var a = [b1, b2, b3, b4, b5];
     a = a.sort();
     var max = a[0];
@@ -4489,7 +4492,7 @@
     $("input:radio[name='answer-1-tooth'][value='"+ a1 +"']").attr('checked','true');
     $("input:radio[name='answer-2-tooth'][value='"+ a2 +"']").attr('checked','true');
     $("input:radio[name='answer-3-tooth'][value='"+ a3 +"']").attr('checked','true');
-    $("input:radio[name='answer-4'][value='"+ a4 +"']").attr('checked','true');
+    $("input:radio[name='answer-4-tooth'][value='"+ a4 +"']").attr('checked','true');
     
 
     // 给div样式

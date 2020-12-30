@@ -240,7 +240,7 @@
                                         宝贝出生体重:   
                                     </span>
                                     <span>
-                                        <s:property value="resultBasic2.babyBirthWeight"/>      g
+                                        <s:property value="resultBasic2.babyBirthWeight"/>      kg
                                     </span>
 
                                 </td>
