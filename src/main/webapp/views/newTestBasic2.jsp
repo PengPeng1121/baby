@@ -131,7 +131,7 @@
                                     出生体重:
                                 </td>
                                 <td colspan="2">
-                                    <input id="babyBirthWeight" style="width: 100%" /> 
+                                    <input id="babyBirthWeight" style="width: 80%" /> kg
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
@@ -164,11 +164,11 @@
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>父亲身高</td>
                                 <td>
-                                   <input id="fatherHeight"  style="width: 100%" /> 
+                                   <input id="fatherHeight"  style="width: 80%" /> cm
                                 </td>
                                 <td>母亲身高</td>
                                 <td>
-                                    <input id="motherHeight"  style="width: 100%" /> 
+                                    <input id="motherHeight"  style="width: 80%" /> cm
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
