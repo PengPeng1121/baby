@@ -86,9 +86,9 @@
                     <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2Girl.jpg">
                     </s:if>
 
+                    <img id="faceImg" src="<s:property value="resultBasic1.headImgUrl"/>"  onerror="javascript:this.src='statics/img/logoError.png';">
 
-
-                    <img id="faceImg" src="<s:property value="resultBasic1.headImgUrl"/>">
+                    <!-- <img id="faceImg" src="<s:property value="resultBasic1.headImgUrl"/>"> -->
 
                     <table style="width: 38%;
                         border: 0;

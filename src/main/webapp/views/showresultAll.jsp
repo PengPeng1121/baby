@@ -96,7 +96,7 @@
             width: 150px;
             position: relative;
             z-index: 1;
-            top: 290px;
+            top: 240px;
             left: 80px;
         }
 
@@ -348,7 +348,7 @@
         }
         #tooth #content-table{
             width: 300px;
-            height: 120px;
+            
             border: 0;
             position: relative;
             top: 30px;
@@ -541,7 +541,7 @@
             width: 150px !important;
             position: absolute !important;
             z-index: 1 !important;
-            top: 220px !important;
+            top: 200px !important;
             left: 100px !important;
         }
         #basic1 #table1, #table2{
@@ -656,7 +656,7 @@
         }
         #tooth #content-table{
             width: 300px;
-            height: 120px;
+            
             border: 0;
             position: relative;
             top: 180px;
@@ -800,173 +800,176 @@
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
-    <!-- 通用 -->
-    <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-    <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
-    <input id="name" type="hidden" value="<s:property value="baby.name"/>">
-    <input id="birthday" type="hidden" value="<s:property value="baby.birthday"/>">
-    <input id="nation" type="hidden" value="<s:property value="baby.nation"/>">
-
-    <!-- basci1 -->
+    <div>
+        
     
-    <input id="nickName" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.nickName"/>">
-    <input id="address" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.address"/>">
-    <input id="contactMobile" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.contactMobile"/>">
-    <input id="headImgUrl" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.headImgUrl"/>">
-    <!-- basci2 -->
-    <input id="isNormalChildbirth" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isNormalChildbirth"/>">
-    <input id="childbirthSituation" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.childbirthSituation"/>">
-    <input id="familyHeredityDisease" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.familyHeredityDisease"/>">
-    <input id="isHeredityDisease1" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease1"/>">
-    <input id="isHeredityDisease2" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease2"/>">
-    <input id="isHeredityDisease3" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease3"/>">
-    <input id="isHeredityDisease4" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease4"/>">
-    <input id="isAllergyHistory" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isAllergyHistory"/>">
-    <!-- group -->
-    <input id="resultidGroup" type="hidden" value="<s:property value="allTestResultVo.resultGroup2020.id"/>">
-    <input id="height" type="hidden" value="<s:property value="allTestResultVo.resultGroup2020.height"/>">
+        <!-- 通用 -->
+        <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
+        <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
+        <input id="name" type="hidden" value="<s:property value="baby.name"/>">
+        <input id="birthday" type="hidden" value="<s:property value="baby.birthday"/>">
+        <input id="nation" type="hidden" value="<s:property value="baby.nation"/>">
 
-    <!-- Allergy -->
-    <input id="r1" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r1" />">
-    <input id="r2" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r2" />">
-    <input id="r3" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r3" />">
-    <input id="r4" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r4" />">
-    <input id="r5" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r5" />">
-    <input id="r6" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r6" />">
-    <input id="r7" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r7" />">
-    <input id="r8" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r8" />">
-    <input id="r9" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r9" />">
-    <input id="r10" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r10" />">
-    <input id="r11" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r11" />">
-    <input id="r12" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r12" />">
-    <input id="r13" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r13" />">
-    <input id="r14" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r14" />">
-    <input id="r15" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r15" />">
+        <!-- basci1 -->
+        
+        <input id="nickName" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.nickName"/>">
+        <input id="address" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.address"/>">
+        <input id="contactMobile" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.contactMobile"/>">
+        <input id="headImgUrl" type="hidden" value="<s:property value="allTestResultVo.resultBasic1.headImgUrl"/>">
+        <!-- basci2 -->
+        <input id="isNormalChildbirth" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isNormalChildbirth"/>">
+        <input id="childbirthSituation" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.childbirthSituation"/>">
+        <input id="familyHeredityDisease" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.familyHeredityDisease"/>">
+        <input id="isHeredityDisease1" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease1"/>">
+        <input id="isHeredityDisease2" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease2"/>">
+        <input id="isHeredityDisease3" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease3"/>">
+        <input id="isHeredityDisease4" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isHeredityDisease4"/>">
+        <input id="isAllergyHistory" type="hidden" value="<s:property value="allTestResultVo.resultBasic2.isAllergyHistory"/>">
+        <!-- group -->
+        <input id="resultidGroup" type="hidden" value="<s:property value="allTestResultVo.resultGroup2020.id"/>">
+        <input id="height" type="hidden" value="<s:property value="allTestResultVo.resultGroup2020.height"/>">
 
-    <!-- physical -->
-    <input id="hairIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.hairIsNormal"/>">
-    <input id="fingernailIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.fingernailIsNormal"/>">
-    <input id="skinIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.skinIsNormal"/>">
-    <input id="faceIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.faceIsNormal"/>">
-    <input id="headIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.headIsNormal"/>">
-    <input id="eyeIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.eyeIsNormal"/>">
-    <input id="earIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.earIsNormal"/>">
-    <input id="mouthIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.mouthIsNormal"/>">
-    <input id="neckIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.neckIsNormal"/>">
-    <input id="lymphIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lymphIsNormal"/>">
-    <input id="thoracicCavityIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.thoracicCavityIsNormal"/>">
-    <input id="heartIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.heartIsNormal"/>">
-    <input id="lungIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lungIsNormal"/>"
-    <input id="stomachIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.stomachIsNormal"/>">
-    <input id="limbIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.limbIsNormal"/>">
-    <input id="sexFeaturesIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.sexFeaturesIsNormal"/>">
-    <input id="vdIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.vdIsNormal"/>">
-    <input id="hairReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.hairReason"/>">
-    <input id="fingernailReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.fingernailReason"/>">
-    <input id="skinReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.skinReason"/>">
-    <input id="faceReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.faceReason"/>">
-    <input id="headReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.headReason"/>">
-    <input id="eyeReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.eyeReason"/>">
-    <input id="earReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.earReason"/>">
-    <input id="mouthReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.mouthReason"/>">
-    <input id="neckReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.neckReason"/>">
-    <input id="lymphReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lymphReason"/>">
-    <input id="thoracicCavityReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.thoracicCavityReason"/>">
-    <input id="heartReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.heartReason"/>">
-    <input id="lungReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lungReason"/>">
-    <input id="stomachReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.stomachReason"/>">
-    <input id="limbReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.limbReason"/>">
-    <input id="sexFeaturesReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.sexFeaturesReason"/>">
-    <input id="vdReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.vdReason"/>">
+        <!-- Allergy -->
+        <input id="r1" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r1" />">
+        <input id="r2" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r2" />">
+        <input id="r3" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r3" />">
+        <input id="r4" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r4" />">
+        <input id="r5" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r5" />">
+        <input id="r6" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r6" />">
+        <input id="r7" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r7" />">
+        <input id="r8" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r8" />">
+        <input id="r9" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r9" />">
+        <input id="r10" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r10" />">
+        <input id="r11" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r11" />">
+        <input id="r12" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r12" />">
+        <input id="r13" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r13" />">
+        <input id="r14" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r14" />">
+        <input id="r15" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r15" />">
 
-    <input id="physicalRemark" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.remark"/>">
+        <!-- physical -->
+        <input id="hairIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.hairIsNormal"/>">
+        <input id="fingernailIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.fingernailIsNormal"/>">
+        <input id="skinIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.skinIsNormal"/>">
+        <input id="faceIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.faceIsNormal"/>">
+        <input id="headIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.headIsNormal"/>">
+        <input id="eyeIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.eyeIsNormal"/>">
+        <input id="earIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.earIsNormal"/>">
+        <input id="mouthIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.mouthIsNormal"/>">
+        <input id="neckIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.neckIsNormal"/>">
+        <input id="lymphIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lymphIsNormal"/>">
+        <input id="thoracicCavityIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.thoracicCavityIsNormal"/>">
+        <input id="heartIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.heartIsNormal"/>">
+        <input id="lungIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lungIsNormal"/>"
+        <input id="stomachIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.stomachIsNormal"/>">
+        <input id="limbIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.limbIsNormal"/>">
+        <input id="sexFeaturesIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.sexFeaturesIsNormal"/>">
+        <input id="vdIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.vdIsNormal"/>">
+        <input id="hairReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.hairReason"/>">
+        <input id="fingernailReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.fingernailReason"/>">
+        <input id="skinReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.skinReason"/>">
+        <input id="faceReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.faceReason"/>">
+        <input id="headReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.headReason"/>">
+        <input id="eyeReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.eyeReason"/>">
+        <input id="earReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.earReason"/>">
+        <input id="mouthReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.mouthReason"/>">
+        <input id="neckReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.neckReason"/>">
+        <input id="lymphReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lymphReason"/>">
+        <input id="thoracicCavityReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.thoracicCavityReason"/>">
+        <input id="heartReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.heartReason"/>">
+        <input id="lungReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lungReason"/>">
+        <input id="stomachReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.stomachReason"/>">
+        <input id="limbReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.limbReason"/>">
+        <input id="sexFeaturesReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.sexFeaturesReason"/>">
+        <input id="vdReason" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.vdReason"/>">
 
-    <!-- Feed -->
-    <input id="currentMilkYield" type="hidden" value="<s:property value="allTestResultVo.resultFeed.currentMilkYield"/>">
-    <input id="milkType" type="hidden" value="<s:property value="allTestResultVo.resultFeed.milkType"/>">
-    <input id="milkRecipe" type="hidden" value="<s:property value="allTestResultVo.resultFeed.milkRecipe"/>">
-    <input id="accessoryFoodSituation" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodSituation"/>">
-    <input id="isFoodAllergy" type="hidden" value="<s:property value="allTestResultVo.resultFeed.isFoodAllergy"/>">
-    <input id="foodAllergySituation" type="hidden" value="<s:property value="allTestResultVo.allTestResultVo.resultFeed.foodAllergySituation"/>">
-    <input id="accessoryFoodAddTimes" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodAddTimes"/>">
-    <input id="accessoryFoodShape" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodShape"/>">
-    <input id="accessoryFoodAddDate" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodAddDate"/>">
-    <input id="isOwnFood" type="hidden" value="<s:property value="allTestResultVo.resultFeed.isOwnFood"/>">
-    <input id="ownFoodSituation" type="hidden" value="<s:property value="allTestResultVo.resultFeed.ownFoodSituation"/>">
-    <input id="shitTimes" type="hidden" value="<s:property value="allTestResultVo.resultFeed.shitTimes"/>">
-    <input id="shitShape" type="hidden" value="<s:property value="allTestResultVo.resultFeed.shitShape"/>">
-    <input id="feedSuggest" type="hidden" value="<s:property value="allTestResultVo.resultFeed.feedSuggest"/>">
-    <!-- 2016 -->
-    <input type="hidden" id="resultID2016" value="<s:property value="allTestResultVo.result2016.id"/>">
-    <input type="hidden" id="dq_fix" value="<s:property value="allTestResultVo.result2016.dq"/>">
-    <input type="hidden" id="growth_fix" value="<s:property value="allTestResultVo.result2016.growth"/>">
-    <input type="hidden" id="testerName2016" value="<s:property value="otherResultVo.record2016.testerName"/>">
-    
-    <!-- blood -->
+        <input id="physicalRemark" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.remark"/>">
 
-    <!-- summary -->
-    <input id="summaryRemark" type="hidden" value="<s:property value="allTestResultVo.resultSummary.summary"/>">
+        <!-- Feed -->
+        <input id="currentMilkYield" type="hidden" value="<s:property value="allTestResultVo.resultFeed.currentMilkYield"/>">
+        <input id="milkType" type="hidden" value="<s:property value="allTestResultVo.resultFeed.milkType"/>">
+        <input id="milkRecipe" type="hidden" value="<s:property value="allTestResultVo.resultFeed.milkRecipe"/>">
+        <input id="accessoryFoodSituation" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodSituation"/>">
+        <input id="isFoodAllergy" type="hidden" value="<s:property value="allTestResultVo.resultFeed.isFoodAllergy"/>">
+        <input id="foodAllergySituation" type="hidden" value="<s:property value="allTestResultVo.allTestResultVo.resultFeed.foodAllergySituation"/>">
+        <input id="accessoryFoodAddTimes" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodAddTimes"/>">
+        <input id="accessoryFoodShape" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodShape"/>">
+        <input id="accessoryFoodAddDate" type="hidden" value="<s:property value="allTestResultVo.resultFeed.accessoryFoodAddDate"/>">
+        <input id="isOwnFood" type="hidden" value="<s:property value="allTestResultVo.resultFeed.isOwnFood"/>">
+        <input id="ownFoodSituation" type="hidden" value="<s:property value="allTestResultVo.resultFeed.ownFoodSituation"/>">
+        <input id="shitTimes" type="hidden" value="<s:property value="allTestResultVo.resultFeed.shitTimes"/>">
+        <input id="shitShape" type="hidden" value="<s:property value="allTestResultVo.resultFeed.shitShape"/>">
+        <input id="feedSuggest" type="hidden" value="<s:property value="allTestResultVo.resultFeed.feedSuggest"/>">
+        <!-- 2016 -->
+        <input type="hidden" id="resultID2016" value="<s:property value="allTestResultVo.result2016.id"/>">
+        <input type="hidden" id="dq_fix" value="<s:property value="allTestResultVo.result2016.dq"/>">
+        <input type="hidden" id="growth_fix" value="<s:property value="allTestResultVo.result2016.growth"/>">
+        <input type="hidden" id="testerName2016" value="<s:property value="otherResultVo.record2016.testerName"/>">
+        
+        <!-- blood -->
 
-    <!-- feel -->
-    <input type="hidden" id="feelRemark" value="<s:property value="otherResultVo.recordFeel2020.remark"/>">
+        <!-- summary -->
+        <input id="summaryRemark" type="hidden" value="<s:property value="allTestResultVo.resultSummary.summary"/>">
 
-    <input type="hidden" id="a1Feel" value="<s:property value="allTestResultVo.resultFeel2020.a1"/>">
-    <input type="hidden" id="a2Feel" value="<s:property value="allTestResultVo.resultFeel2020.a2"/>">
-    <input type="hidden" id="a3Feel" value="<s:property value="allTestResultVo.resultFeel2020.a3"/>">
-    <input type="hidden" id="a4Feel" value="<s:property value="allTestResultVo.resultFeel2020.a4"/>">
-    <input type="hidden" id="a5Feel" value="<s:property value="allTestResultVo.resultFeel2020.a5"/>">
-    <input type="hidden" id="a6Feel" value="<s:property value="allTestResultVo.resultFeel2020.a6"/>">
+        <!-- feel -->
+        <input type="hidden" id="feelRemark" value="<s:property value="otherResultVo.recordFeel2020.remark"/>">
 
-
-    <!-- attention -->
-
-    <input id="a1attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a1"/>">
-    <input id="a2attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a2"/>">
-    <input id="a3attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a3"/>">
-    <input id="a4attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a4"/>">
-    <input id="a5attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a5"/>">
-    <input id="scoreAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.score"/>">
-    <input id="remarkAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.suggest"/>">
+        <input type="hidden" id="a1Feel" value="<s:property value="allTestResultVo.resultFeel2020.a1"/>">
+        <input type="hidden" id="a2Feel" value="<s:property value="allTestResultVo.resultFeel2020.a2"/>">
+        <input type="hidden" id="a3Feel" value="<s:property value="allTestResultVo.resultFeel2020.a3"/>">
+        <input type="hidden" id="a4Feel" value="<s:property value="allTestResultVo.resultFeel2020.a4"/>">
+        <input type="hidden" id="a5Feel" value="<s:property value="allTestResultVo.resultFeel2020.a5"/>">
+        <input type="hidden" id="a6Feel" value="<s:property value="allTestResultVo.resultFeel2020.a6"/>">
 
 
-    <!-- tooth -->
+        <!-- attention -->
 
-    <input id="attentionBrushWay" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushWay"/>">
-    <input id="attentionBrushHabit" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushHabit"/>">
-    <input id="attentionTeethSituation" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionTeethSituation"/>">
-    <input id="attentionFu" type="hidden" value="<s:property value="resultTooth.attentionFu"/>">
-    <input id="remarkTooth" type="hidden" value="<s:property value="allTestResultVo.resultTooth.remark"/>">
-    
-    <input id="leftUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp1"/>">
-    <input id="leftUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp2"/>">
-    <input id="leftUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp3"/>">
-    <input id="leftUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp4"/>">
-    <input id="leftUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp5"/>">
-    <input id="leftUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp6"/>">
-    <input id="leftUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp7"/>">
-    <input id="rightUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp1"/>">
-    <input id="rightUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp2"/>">
-    <input id="rightUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp3"/>">
-    <input id="rightUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp4"/>">
-    <input id="rightUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp5"/>">
-    <input id="rightUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp6"/>">
-    <input id="rightUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp7"/>">
-    
-    <input id="leftDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown1"/>">
-    <input id="leftDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown2"/>">
-    <input id="leftDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown3"/>">
-    <input id="leftDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown4"/>">
-    <input id="leftDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown5"/>">
-    <input id="leftDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown6"/>">
-    <input id="leftDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown7"/>">
-    <input id="rightDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown1"/>">
-    <input id="rightDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown2"/>">
-    <input id="rightDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown3"/>">
-    <input id="rightDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown4"/>">
-    <input id="rightDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown5"/>">
-    <input id="rightDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown6"/>">
-    <input id="rightDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown7"/>">
+        <input id="a1attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a1"/>">
+        <input id="a2attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a2"/>">
+        <input id="a3attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a3"/>">
+        <input id="a4attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a4"/>">
+        <input id="a5attention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.a5"/>">
+        <input id="scoreAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.score"/>">
+        <input id="remarkAttention" type="hidden" value="<s:property value="allTestResultVo.resultAttention.suggest"/>">
 
+
+        <!-- tooth -->
+
+        <input id="attentionBrushWay" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushWay"/>">
+        <input id="attentionBrushHabit" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionBrushHabit"/>">
+        <input id="attentionTeethSituation" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionTeethSituation"/>">
+        <input id="attentionFu" type="hidden" value="<s:property value="allTestResultVo.resultTooth.attentionFu"/>">
+        <input id="remarkTooth" type="hidden" value="<s:property value="allTestResultVo.resultTooth.remark"/>">
+        
+        <input id="leftUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp1"/>">
+        <input id="leftUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp2"/>">
+        <input id="leftUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp3"/>">
+        <input id="leftUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp4"/>">
+        <input id="leftUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp5"/>">
+        <input id="leftUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp6"/>">
+        <input id="leftUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftUp7"/>">
+        <input id="rightUp1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp1"/>">
+        <input id="rightUp2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp2"/>">
+        <input id="rightUp3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp3"/>">
+        <input id="rightUp4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp4"/>">
+        <input id="rightUp5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp5"/>">
+        <input id="rightUp6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp6"/>">
+        <input id="rightUp7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightUp7"/>">
+        
+        <input id="leftDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown1"/>">
+        <input id="leftDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown2"/>">
+        <input id="leftDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown3"/>">
+        <input id="leftDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown4"/>">
+        <input id="leftDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown5"/>">
+        <input id="leftDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown6"/>">
+        <input id="leftDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.leftDown7"/>">
+        <input id="rightDown1" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown1"/>">
+        <input id="rightDown2" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown2"/>">
+        <input id="rightDown3" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown3"/>">
+        <input id="rightDown4" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown4"/>">
+        <input id="rightDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown5"/>">
+        <input id="rightDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown6"/>">
+        <input id="rightDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown7"/>">
+    </div>
 
     <s:if test="allTestResultVo.resultBasic1">
     <div class="container" class="hemaFront" id="basic1">
@@ -980,14 +983,16 @@
                 <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg2Girl.jpg">
                 </s:if>
 
-
-
-                <img id="faceImg" src="<s:property value="allTestResultVo.resultBasic1.headImgUrl"/>">
+                <span style="display: none;">
+                    <s:property value="allTestResultVo.resultBasic1.headImgUrl"/>
+                </span>
+                <img id="faceImg" src="<s:property value="allTestResultVo.resultBasic1.headImgUrl"/>"  onerror="javascript:this.src='statics/img/logoError.png';">
+                
 
                 <table style="width: 38%;
                     border: 0;
                     position: relative;
-                    top: 130px;
+                    top: 40px;
                     left: 270px;
                     font-size: 16px"
                     id="table1">
@@ -1061,7 +1066,7 @@
                 <table style="width: 38%;
                     border: 0;
                     position: relative;
-                    top: 180px;
+                    top: 100px;
                     left: 270px;
                     font-size: 16px"
                     id="table2">
@@ -1072,7 +1077,7 @@
                             <img class="line-img" src="statics/img/nation1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/nation2.png">">
+                            <img class="line-img" src="statics/img/nation2.png">
                             </s:if>
                             <span style="letter-spacing: 10px;margin-left: 10px ">民</span>
                             <span style="letter-spacing: 1px">族:</span>
@@ -1089,7 +1094,7 @@
                             <img class="line-img" src="statics/img/add1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/add2.png">">
+                            <img class="line-img" src="statics/img/add2.png">
                             </s:if>
                             <span style="letter-spacing: 10px;margin-left: 10px ">地</span>
                             <span style="letter-spacing: 1px">址:</span>
@@ -1108,7 +1113,7 @@
                             <img class="line-img" src="statics/img/phone1.png">
                             </s:if>
                             <s:if test="baby.gender == 0">
-                            <img class="line-img" src="statics/img/phone2.png">">
+                            <img class="line-img" src="statics/img/phone2.png">
                             </s:if>
                             <span style="letter-spacing: 1px;margin-left: 10px ">联系电话:</span>
                             <span class="value">
@@ -2267,7 +2272,7 @@
                             <label for="radio-answer-3-1-tooth"></label>
                         </td>
                     </tr>
-                    <!-- <tr class="item-line">
+                    <tr class="item-line">
                         <td class="item">
                             已涂氟
                         </td>
@@ -2275,7 +2280,7 @@
                             <input type="radio" name="answer-4-tooth" value="1"   id="radio-answer-4-1-tooth">
                             <label for="radio-answer-4-1-tooth"></label>
                         </td>
-                    </tr> -->
+                    </tr>
                 </table>
                 <textarea id="remarkTextTooth" rows="3" style="resize:none;border: 0;width: 350px;height: 120px;background-color: transparent;"></textarea>
                 <!-- 牙图 -->
@@ -2313,30 +2318,30 @@
                 <div class="rightUp6 tooth-icon " style="top: -163px;left: 202px;"></div>
                 <div class="rightUp7 tooth-icon " style="top: -137px;left: 197px;"></div>
 
-                <div class="leftUp1 tooth-icon " style="top: -355px;left: 371px;"></div>
-                <div class="leftUp2 tooth-icon " style="top: -363px;left: 415px;"></div>
-                <div class="leftUp3 tooth-icon " style="top: -347px;left: 442px;"></div>
-                <div class="leftUp4 tooth-icon " style="top: -338px;left: 466px;"></div>
-                <div class="leftUp5 tooth-icon " style="top: -327px;left: 485px;"></div>
-                <div class="leftUp6 tooth-icon " style="top: -303px;left: 494px;"></div>
-                <div class="leftUp7 tooth-icon " style="top: -277px;left: 497px;"></div>
+                <div class="leftUp1 tooth-icon " style="top: -255px;left: 371px;"></div>
+                <div class="leftUp2 tooth-icon " style="top: -263px;left: 415px;"></div>
+                <div class="leftUp3 tooth-icon " style="top: -247px;left: 442px;"></div>
+                <div class="leftUp4 tooth-icon " style="top: -238px;left: 466px;"></div>
+                <div class="leftUp5 tooth-icon " style="top: -227px;left: 485px;"></div>
+                <div class="leftUp6 tooth-icon " style="top: -203px;left: 494px;"></div>
+                <div class="leftUp7 tooth-icon " style="top: -177px;left: 497px;"></div>
 
 
-                <div class="rightDown7 tooth-icon " style="top: -196px;left: 197px;"></div>
-                <div class="rightDown6 tooth-icon " style="top: -176px;left: 202px;"></div>
-                <div class="rightDown5 tooth-icon " style="top: -154px;left: 210px;"></div>
-                <div class="rightDown4 tooth-icon " style="top: -139px;left: 225px;"></div>
-                <div class="rightDown3 tooth-icon " style="top: -128px;left: 253px;"></div>
-                <div class="rightDown2 tooth-icon " style="top: -113px;left: 280px;"></div>
-                <div class="rightDown1 tooth-icon " style="top: -121px;left: 323px;"></div>
+                <div class="rightDown7 tooth-icon " style="top: 104px;left: 197px;"></div>
+                <div class="rightDown6 tooth-icon " style="top: 124px;left: 202px;"></div>
+                <div class="rightDown5 tooth-icon " style="top: 146px;left: 210px;"></div>
+                <div class="rightDown4 tooth-icon " style="top: 161px;left: 225px;"></div>
+                <div class="rightDown3 tooth-icon " style="top: 172px;left: 253px;"></div>
+                <div class="rightDown2 tooth-icon " style="top: 187px;left: 280px;"></div>
+                <div class="rightDown1 tooth-icon " style="top: 179px;left: 323px;"></div>
 
-                <div class="leftDown7 tooth-icon " style="top: -337px;left: 497px;"></div>
-                <div class="leftDown6 tooth-icon " style="top: -312px;left: 494px;"></div>
-                <div class="leftDown5 tooth-icon " style="top: -292px;left: 485px;"></div>
-                <div class="leftDown4 tooth-icon " style="top: -277px;left: 466px;"></div>
-                <div class="leftDown3 tooth-icon " style="top: -267px;left: 442px;"></div>
-                <div class="leftDown2 tooth-icon " style="top: -253px;left: 415px;"></div>
-                <div class="leftDown1 tooth-icon " style="top: -261px;left: 371px;"></div>
+                <div class="leftDown7 tooth-icon " style="top: 63px;left: 497px;"></div>
+                <div class="leftDown6 tooth-icon " style="top: 88px;left: 494px;"></div>
+                <div class="leftDown5 tooth-icon " style="top: 108px;left: 485px;"></div>
+                <div class="leftDown4 tooth-icon " style="top: 123px;left: 466px;"></div>
+                <div class="leftDown3 tooth-icon " style="top: 133px;left: 442px;"></div>
+                <div class="leftDown2 tooth-icon " style="top: 147px;left: 415px;"></div>
+                <div class="leftDown1 tooth-icon " style="top: 139px;left: 371px;"></div>
             </div>
         </div>　
     </div>    
@@ -3766,6 +3771,8 @@
 </script>
 
 <!-- 2016 -->
+
+<s:if test="allTestResultVo.result2016">
 <script type="text/javascript">
     var dq_fix = $('#dq_fix').html();
     var growth_fix = $('#growth_fix').html();
@@ -4034,6 +4041,7 @@
         $('#testerName').val($("#testerName2016").val());
     });
 </script>
+</s:if>
 
 
 <!-- summary -->
@@ -4501,8 +4509,7 @@
     $('#remarkTextTooth').html(remarkTooth);
 
     // 1未生长 0歪斜 2龋齿
-    var styles = { '1': "style3", '10': "style1", '11':
-"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
+    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
 
     $("input:radio[name='answer-1-tooth'][value='"+ a1 +"']").attr('checked','true');
     $("input:radio[name='answer-2-tooth'][value='"+ a2 +"']").attr('checked','true');
