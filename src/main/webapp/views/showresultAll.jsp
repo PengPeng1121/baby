@@ -2120,7 +2120,7 @@
                                 <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-1-1">
                                 <label for="radio-answer-1-1" style="width: 50px;margin-left: 5px;font-weight: normal;"> 有</label>
                                 <input type="radio" name="isFoodAllergy" value="2"   id="radio-answer-1-2">
-                                <label for="radio-answer-1-2" style="width: 80px;margin-left: 5px;font-weight: normal;"> 暂不确定</label>
+                                <label for="radio-answer-1-2" style="width: 100px;margin-left: 5px;font-weight: normal;"> 暂不确定</label>
                                 
                                 <s:property value="allTestResultVo.resultFeed.foodAllergySituation"/>
 
@@ -3070,6 +3070,7 @@
     });
 </script>
 <!-- basci2 -->
+<s:if test="allTestResultVo.resultBasic2">
 <script type="text/javascript">
     var isNormalChildbirth = $('#isNormalChildbirth').val();
     var childbirthSituation = $('#childbirthSituation').val();
@@ -3095,8 +3096,10 @@
         $("input:checkbox[name='childbirthSituation'][value='" + childbirthSituationArr[j] + "']").attr('checked','true');
     }
 </script>
+</s:if>
 
 <!-- group -->
+<s:if test="allTestResultVo.resultGroup2020">
 <script type="text/javascript">
     var babyid = $('#babyid').val();
     var resultidGroup = $('#resultidGroup').val();
@@ -3603,8 +3606,10 @@
         chart3.reflow();
     }
 </script>
+</s:if>
 
 <!-- allergy -->
+<s:if test="allTestResultVo.resultAllergy">
 <script type="text/javascript">
     var r1 = $('#r1').val();
     var r2 = $('#r2').val();
@@ -3638,8 +3643,10 @@
     $("input:radio[name='allergy-answer-14'][value='"+ r14 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-15'][value='"+ r15 +"']").attr('checked','true');
 </script>
+</s:if>
 
 <!-- physical -->
+<s:if test="allTestResultVo.resultPhysical">
 <script type="text/javascript">
     var physicalRemark = $('#physicalRemark').val();
 
@@ -3735,8 +3742,10 @@
     physicalRemark = physicalRemark.replace(reg,"\n");
     $('#physicalRemarkText').html(physicalRemark);
 </script>
+</s:if>
 
 <!-- feed -->
+<s:if test="allTestResultVo.resultFeed">
 <script type="text/javascript">
     var feedSuggest = $('#feedSuggest').val();
     var milkTypeArr = $('#milkType').val().split(',');
@@ -3769,6 +3778,7 @@
     feedSuggest = feedSuggest.replace(reg,"\n");
     $('#feedRemarkText').html(feedSuggest);
 </script>
+</s:if>
 
 <!-- 2016 -->
 
@@ -4045,16 +4055,18 @@
 
 
 <!-- summary -->
+<s:if test="allTestResultVo.resultSummary"> 
 <script type="text/javascript">
     var summaryRemark = $('#summaryRemark').val();
     var reg = new RegExp("<br>","g");//g,表示全部替换。
     summaryRemark = summaryRemark.replace(reg,"\n");
     $('#summaryRemarkText').html(summaryRemark);
 </script>
-
+</s:if>
 
 
 <!-- feel -->
+<s:if test="allTestResultVo.resultFeel2020">
 <script type="text/javascript">
     var a1Feel = +$('#a1Feel').val();
     var a2Feel = +$('#a2Feel').val();
@@ -4433,8 +4445,10 @@
         $('#doctorRemarkFeel').html(feelRemark);
     });
 </script>
+</s:if>
 
 <!-- attention -->
+<s:if test="allTestResultVo.resultAttention">
 <script>
     var a1attention = $('#a1attention').val();
     var a2attention = $('#a2attention').val();
@@ -4458,10 +4472,12 @@
 
     $("input:radio[name='a5attention'][value='"+ a5attention +"']").attr('checked','true');
 </script>
+</s:if>
 
 
 
 <!-- tooth -->
+<s:if test="allTestResultVo.resultTooth">
 <script type="text/javascript">
     var leftUp1 = $('#leftUp1').val();
     var leftUp2 = $('#leftUp2').val();
@@ -4549,6 +4565,7 @@
     $(".rightUp6").addClass(styles[rightUp6]);
     $(".rightUp7").addClass(styles[rightUp7]);
 </script>
+</s:if>
 
 
 </body>
