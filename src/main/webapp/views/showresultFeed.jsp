@@ -294,7 +294,7 @@
                                     <input type="radio" name="isFoodAllergy" value="1"   id="radio-answer-1-1">
                                     <label for="radio-answer-1-1" style="width: 50px;margin-left: 5px;font-weight: normal;"> 有</label>
                                     <input type="radio" name="isFoodAllergy" value="2"   id="radio-answer-1-2">
-                                    <label for="radio-answer-1-2" style="width: 80px;margin-left: 5px;font-weight: normal;"> 暂不确定</label>
+                                    <label for="radio-answer-1-2" style="width: 100px;margin-left: 5px;font-weight: normal;"> 暂不确定</label>
                                     
                                     <s:property value="resultFeed.foodAllergySituation"/>
 

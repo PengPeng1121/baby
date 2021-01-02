@@ -94,6 +94,7 @@
         }
         #basic1 #faceImg{
             width: 150px;
+            height: 180px;
             position: relative;
             z-index: 1;
             top: 240px;
@@ -539,6 +540,7 @@
 
         #basci1 #faceImg{
             width: 150px !important;
+            height: 180px !important;
             position: absolute !important;
             z-index: 1 !important;
             top: 200px !important;
