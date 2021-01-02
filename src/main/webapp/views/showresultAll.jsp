@@ -1204,14 +1204,14 @@
                                     生产胎龄:
                                 </span>
                                 <span style="margin-left: 60px">
-                                    <s:property value="resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
+                                    <s:property value="allTestResultVo.resultBasic2.babyBirthWeekAge"/>  (正常为38-42周)
                                 </span>
 
                                 <span style="margin-left: 30px">
                                     是否早产:
                                 </span>
                                 <span style="margin-left: 10px">
-                                    <s:if test="resultBasic2.isPremature == 1">是</s:if><s:else>否</s:else>
+                                    <s:if test="allTestResultVo.resultBasic2.isPremature == 1">是</s:if><s:else>否</s:else>
                                 </span>
 
 
@@ -1219,7 +1219,7 @@
                                     宝贝出生体重:   
                                 </span>
                                 <span>
-                                    <s:property value="resultBasic2.babyBirthWeight"/>      kg
+                                    <s:property value="allTestResultVo.resultBasic2.babyBirthWeight"/>      kg
                                 </span>
 
                             </td>
