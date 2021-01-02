@@ -157,7 +157,7 @@
                                     出生体重:
                                 </td>
                                 <td colspan="2">
-                                    <input id="babyBirthWeight" style="width: 100%" /> kg
+                                    <input id="babyBirthWeight" style="width: 80%" /> kg
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
