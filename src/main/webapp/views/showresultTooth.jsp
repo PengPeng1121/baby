@@ -23,7 +23,7 @@
             width: 25%;
             border: 0;
             position: relative;
-            top: 100px;
+            top: 80px;
             left: 70px;
             font-size: 16px;
         }
@@ -40,7 +40,7 @@
             /*font-size: 16px;
             font-weight: bold;*/
             position: relative;
-            top: 160px;
+            top: 140px;
             left: 80px;
         }
         #info-table{
@@ -186,7 +186,7 @@
             width: 300px !important;
             border: 0 !important;
             position: relative !important;
-            top: 120px !important;
+            top: 100px !important;
             left: 70px !important;
             font-size: 16px !important;
         }
@@ -203,7 +203,7 @@
             /*font-size: 16px;
             font-weight: bold;*/
             position: relative !important;
-            top: 160px !important;
+            top: 140px !important;
             left: 80px !important;
         }
         #info-table{
