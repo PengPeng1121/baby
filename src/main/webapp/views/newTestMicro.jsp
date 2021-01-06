@@ -173,8 +173,10 @@
             success:function (json) {
                 var rId = json.resultMicro.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 45,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',

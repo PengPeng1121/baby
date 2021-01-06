@@ -591,8 +591,10 @@
             success:function (json) {
                 var rId = json.resultPhysical.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 30,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',

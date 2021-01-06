@@ -341,8 +341,10 @@
                         success:function (json) {
                             var rId = json.result2016.id;
                             var refreshData = {
-                                babyid: $("#babyid").val()
-                            }
+                                babyid: $("#babyid").val(),
+                                testId: 26,
+                                resultId: rId
+                            };
                             $.ajax({
                                 url: 'refreshExamTime',
                                 type: 'post',

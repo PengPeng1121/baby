@@ -358,8 +358,10 @@
             success:function (json) {
                 var rId = json.resultBasic2.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 34,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',
@@ -383,8 +385,10 @@
             success:function (json) {
                 var rId = json.resultBasic2.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 34,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',
@@ -408,8 +412,10 @@
             success:function (json) {
                 var rId = json.resultBasic2.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 34,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',

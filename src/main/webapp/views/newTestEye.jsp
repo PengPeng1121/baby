@@ -173,8 +173,10 @@
             success:function (json) {
                 var rId = json.resultEye.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
-                }
+                    babyid: $("#babyid").val(),
+                    testId: 41,
+                    resultId: rId
+                };
                 $.ajax({
                     url: 'refreshExamTime',
                     type: 'post',

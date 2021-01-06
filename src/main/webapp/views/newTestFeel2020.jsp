@@ -287,8 +287,10 @@
                         success:function (json) {
                             var rId = json.resultFeel2020.id;
                             var refreshData = {
-                                babyid: $("#babyid").val()
-                            }
+                                babyid: $("#babyid").val(),
+                                testId: 28,
+                                resultId: rId
+                            };
                             $.ajax({
                                 url: 'refreshExamTime',
                                 type: 'post',
