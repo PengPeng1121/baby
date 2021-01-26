@@ -340,48 +340,48 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultTooth.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultTooth.id"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultTooth20.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultTooth20.id"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
 
 
 
-        <input id="babyid" type="hidden" value="<s:property value="resultTooth.babyid"/>">
-        <input id="attentionBrushWay" type="hidden" value="<s:property value="resultTooth.attentionBrushWay"/>">
-        <input id="attentionBrushHabit" type="hidden" value="<s:property value="resultTooth.attentionBrushHabit"/>">
-        <input id="attentionTeethSituation" type="hidden" value="<s:property value="resultTooth.attentionTeethSituation"/>">
-        <input id="attentionFu" type="hidden" value="<s:property value="resultTooth.attentionFu"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultTooth.remark"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultTooth20.babyid"/>">
+        <input id="attentionBrushWay" type="hidden" value="<s:property value="resultTooth20.attentionBrushWay"/>">
+        <input id="attentionBrushHabit" type="hidden" value="<s:property value="resultTooth20.attentionBrushHabit"/>">
+        <input id="attentionTeethSituation" type="hidden" value="<s:property value="resultTooth20.attentionTeethSituation"/>">
+        <input id="attentionFu" type="hidden" value="<s:property value="resultTooth20.attentionFu"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultTooth20.remark"/>">
         
-        <input id="leftUp1" type="hidden" value="<s:property value="resultTooth.leftUp1"/>">
-        <input id="leftUp2" type="hidden" value="<s:property value="resultTooth.leftUp2"/>">
-        <input id="leftUp3" type="hidden" value="<s:property value="resultTooth.leftUp3"/>">
-        <input id="leftUp4" type="hidden" value="<s:property value="resultTooth.leftUp4"/>">
-        <input id="leftUp5" type="hidden" value="<s:property value="resultTooth.leftUp5"/>">
-        <input id="leftUp6" type="hidden" value="<s:property value="resultTooth.leftUp6"/>">
-        <input id="leftUp7" type="hidden" value="<s:property value="resultTooth.leftUp7"/>">
-        <input id="rightUp1" type="hidden" value="<s:property value="resultTooth.rightUp1"/>">
-        <input id="rightUp2" type="hidden" value="<s:property value="resultTooth.rightUp2"/>">
-        <input id="rightUp3" type="hidden" value="<s:property value="resultTooth.rightUp3"/>">
-        <input id="rightUp4" type="hidden" value="<s:property value="resultTooth.rightUp4"/>">
-        <input id="rightUp5" type="hidden" value="<s:property value="resultTooth.rightUp5"/>">
-        <input id="rightUp6" type="hidden" value="<s:property value="resultTooth.rightUp6"/>">
-        <input id="rightUp7" type="hidden" value="<s:property value="resultTooth.rightUp7"/>">
+        <input id="leftUp1" type="hidden" value="<s:property value="resultTooth20.leftUp1"/>">
+        <input id="leftUp2" type="hidden" value="<s:property value="resultTooth20.leftUp2"/>">
+        <input id="leftUp3" type="hidden" value="<s:property value="resultTooth20.leftUp3"/>">
+        <input id="leftUp4" type="hidden" value="<s:property value="resultTooth20.leftUp4"/>">
+        <input id="leftUp5" type="hidden" value="<s:property value="resultTooth20.leftUp5"/>">
+        <!-- <input id="leftUp6" type="hidden" value="<s:property value="resultTooth20.leftUp6"/>">
+        <input id="leftUp7" type="hidden" value="<s:property value="resultTooth20.leftUp7"/>"> -->
+        <input id="rightUp1" type="hidden" value="<s:property value="resultTooth20.rightUp1"/>">
+        <input id="rightUp2" type="hidden" value="<s:property value="resultTooth20.rightUp2"/>">
+        <input id="rightUp3" type="hidden" value="<s:property value="resultTooth20.rightUp3"/>">
+        <input id="rightUp4" type="hidden" value="<s:property value="resultTooth20.rightUp4"/>">
+        <input id="rightUp5" type="hidden" value="<s:property value="resultTooth20.rightUp5"/>">
+        <!-- <input id="rightUp6" type="hidden" value="<s:property value="resultTooth20.rightUp6"/>">
+        <input id="rightUp7" type="hidden" value="<s:property value="resultTooth20.rightUp7"/>"> -->
         
-        <input id="leftDown1" type="hidden" value="<s:property value="resultTooth.leftDown1"/>">
-        <input id="leftDown2" type="hidden" value="<s:property value="resultTooth.leftDown2"/>">
-        <input id="leftDown3" type="hidden" value="<s:property value="resultTooth.leftDown3"/>">
-        <input id="leftDown4" type="hidden" value="<s:property value="resultTooth.leftDown4"/>">
-        <input id="leftDown5" type="hidden" value="<s:property value="resultTooth.leftDown5"/>">
-        <input id="leftDown6" type="hidden" value="<s:property value="resultTooth.leftDown6"/>">
-        <input id="leftDown7" type="hidden" value="<s:property value="resultTooth.leftDown7"/>">
-        <input id="rightDown1" type="hidden" value="<s:property value="resultTooth.rightDown1"/>">
-        <input id="rightDown2" type="hidden" value="<s:property value="resultTooth.rightDown2"/>">
-        <input id="rightDown3" type="hidden" value="<s:property value="resultTooth.rightDown3"/>">
-        <input id="rightDown4" type="hidden" value="<s:property value="resultTooth.rightDown4"/>">
-        <input id="rightDown5" type="hidden" value="<s:property value="resultTooth.rightDown5"/>">
-        <input id="rightDown6" type="hidden" value="<s:property value="resultTooth.rightDown6"/>">
-        <input id="rightDown7" type="hidden" value="<s:property value="resultTooth.rightDown7"/>">
+        <input id="leftDown1" type="hidden" value="<s:property value="resultTooth20.leftDown1"/>">
+        <input id="leftDown2" type="hidden" value="<s:property value="resultTooth20.leftDown2"/>">
+        <input id="leftDown3" type="hidden" value="<s:property value="resultTooth20.leftDown3"/>">
+        <input id="leftDown4" type="hidden" value="<s:property value="resultTooth20.leftDown4"/>">
+        <input id="leftDown5" type="hidden" value="<s:property value="resultTooth20.leftDown5"/>">
+        <!-- <input id="leftDown6" type="hidden" value="<s:property value="resultTooth20.leftDown6"/>">
+        <input id="leftDown7" type="hidden" value="<s:property value="resultTooth20.leftDown7"/>"> -->
+        <input id="rightDown1" type="hidden" value="<s:property value="resultTooth20.rightDown1"/>">
+        <input id="rightDown2" type="hidden" value="<s:property value="resultTooth20.rightDown2"/>">
+        <input id="rightDown3" type="hidden" value="<s:property value="resultTooth20.rightDown3"/>">
+        <input id="rightDown4" type="hidden" value="<s:property value="resultTooth20.rightDown4"/>">
+        <input id="rightDown5" type="hidden" value="<s:property value="resultTooth20.rightDown5"/>">
+        <!-- <input id="rightDown6" type="hidden" value="<s:property value="resultTooth20.rightDown6"/>">
+        <input id="rightDown7" type="hidden" value="<s:property value="resultTooth20.rightDown7"/>"> -->
 
 
         
@@ -484,28 +484,28 @@
                     <div class="rightUp3 tooth-icon" style="top: 476px;left: 576px;"></div>
                     <div class="rightUp4 tooth-icon" style="top: 508px;left: 550px;"></div>
                     <div class="rightUp5 tooth-icon" style="top: 544px;left: 535px;"></div>
-                    <div class="rightUp6 tooth-icon" style="top: 584px;left: 527px;"></div>
-                    <div class="rightUp7 tooth-icon" style="top: 630px;left: 524px;"></div>
+                    <!-- <div class="rightUp6 tooth-icon" style="top: 584px;left: 527px;"></div>
+                    <div class="rightUp7 tooth-icon" style="top: 630px;left: 524px;"></div> -->
 
                     <div class="leftUp1 tooth-icon" style="top: 433px;left: 693px;"></div>
                     <div class="leftUp2 tooth-icon" style="top: 448px;left: 738px;"></div>
                     <div class="leftUp3 tooth-icon" style="top: 476px;left: 765px;"></div>
                     <div class="leftUp4 tooth-icon" style="top: 508px;left: 792px;"></div>
                     <div class="leftUp5 tooth-icon" style="top: 544px;left: 810px;"></div>
-                    <div class="leftUp6 tooth-icon" style="top: 584px;left: 818px;"></div>
-                    <div class="leftUp7 tooth-icon" style="top: 630px;left: 818px;"></div>
+                    <!-- <div class="leftUp6 tooth-icon" style="top: 584px;left: 818px;"></div>
+                    <div class="leftUp7 tooth-icon" style="top: 630px;left: 818px;"></div> -->
 
 
-                    <div class="rightDown7 tooth-icon" style="top: 726px;left: 524px;"></div>
-                    <div class="rightDown6 tooth-icon" style="top: 771px;left: 524px;"></div>
+                    <!-- <div class="rightDown7 tooth-icon" style="top: 726px;left: 524px;"></div>
+                    <div class="rightDown6 tooth-icon" style="top: 771px;left: 524px;"></div> -->
                     <div class="rightDown5 tooth-icon" style="top: 813px;left: 534px;"></div>
                     <div class="rightDown4 tooth-icon" style="top: 849px;left: 551px;"></div>
                     <div class="rightDown3 tooth-icon" style="top: 879px;left: 572px;"></div>
                     <div class="rightDown2 tooth-icon" style="top: 916px;left: 598px;"></div>
                     <div class="rightDown1 tooth-icon" style="top: 923px;left: 646px;"></div>
 
-                    <div class="leftDown7 tooth-icon" style="top: 726px;left: 818px;"></div>
-                    <div class="leftDown6 tooth-icon" style="top: 771px;left: 818px;"></div>
+                    <!-- <div class="leftDown7 tooth-icon" style="top: 726px;left: 818px;"></div>
+                    <div class="leftDown6 tooth-icon" style="top: 771px;left: 818px;"></div> -->
                     <div class="leftDown5 tooth-icon" style="top: 813px;left: 810px;"></div>
                     <div class="leftDown4 tooth-icon" style="top: 849px;left: 792px;"></div>
                     <div class="leftDown3 tooth-icon" style="top: 879px;left: 765px;"></div>
@@ -533,32 +533,32 @@
     var leftUp3 = $('#leftUp3').val();
     var leftUp4 = $('#leftUp4').val();
     var leftUp5 = $('#leftUp5').val();
-    var leftUp6 = $('#leftUp6').val();
-    var leftUp7 = $('#leftUp7').val();
+    // var leftUp6 = $('#leftUp6').val();
+    // var leftUp7 = $('#leftUp7').val();
 
     var rightUp1 = $('#rightUp1').val();
     var rightUp2 = $('#rightUp2').val();
     var rightUp3 = $('#rightUp3').val();
     var rightUp4 = $('#rightUp4').val();
     var rightUp5 = $('#rightUp5').val();
-    var rightUp6 = $('#rightUp6').val();
-    var rightUp7 = $('#rightUp7').val();
+    // var rightUp6 = $('#rightUp6').val();
+    // var rightUp7 = $('#rightUp7').val();
 
     var leftDown1 = $('#leftDown1').val();
     var leftDown2 = $('#leftDown2').val();
     var leftDown3 = $('#leftDown3').val();
     var leftDown4 = $('#leftDown4').val();
     var leftDown5 = $('#leftDown5').val();
-    var leftDown6 = $('#leftDown6').val();
-    var leftDown7 = $('#leftDown7').val();
+    // var leftDown6 = $('#leftDown6').val();
+    // var leftDown7 = $('#leftDown7').val();
 
     var rightDown1 = $('#rightDown1').val();
     var rightDown2 = $('#rightDown2').val();
     var rightDown3 = $('#rightDown3').val();
     var rightDown4 = $('#rightDown4').val();
     var rightDown5 = $('#rightDown5').val();
-    var rightDown6 = $('#rightDown6').val();
-    var rightDown7 = $('#rightDown7').val();
+    // var rightDown6 = $('#rightDown6').val();
+    // var rightDown7 = $('#rightDown7').val();
 
     var a1 = parseInt($("#attentionBrushWay").val());
     var a2 = parseInt($("#attentionBrushHabit").val());
@@ -589,31 +589,31 @@
     $(".leftDown3").addClass(styles[leftDown3]);
     $(".leftDown4").addClass(styles[leftDown4]);
     $(".leftDown5").addClass(styles[leftDown5]);
-    $(".leftDown6").addClass(styles[leftDown6]);
-    $(".leftDown7").addClass(styles[leftDown7]);
+    // $(".leftDown6").addClass(styles[leftDown6]);
+    // $(".leftDown7").addClass(styles[leftDown7]);
     $(".rightDown1").addClass(styles[rightDown1]);
     $(".rightDown2").addClass(styles[rightDown2]);
     $(".rightDown3").addClass(styles[rightDown3]);
     $(".rightDown4").addClass(styles[rightDown4]);
     $(".rightDown5").addClass(styles[rightDown5]);
-    $(".rightDown6").addClass(styles[rightDown6]);
-    $(".rightDown7").addClass(styles[rightDown7]);
+    // $(".rightDown6").addClass(styles[rightDown6]);
+    // $(".rightDown7").addClass(styles[rightDown7]);
     
     $(".leftUp1").addClass(styles[leftUp1]);
     $(".leftUp2").addClass(styles[leftUp2]);  
     $(".leftUp3").addClass(styles[leftUp3]);  
     $(".leftUp4").addClass(styles[leftUp4]);  
     $(".leftUp5").addClass(styles[leftUp5]);  
-    $(".leftUp6").addClass(styles[leftUp6]);  
-    $(".leftUp7").addClass(styles[leftUp7]);      
+    // $(".leftUp6").addClass(styles[leftUp6]);  
+    // $(".leftUp7").addClass(styles[leftUp7]);      
     
     $(".rightUp1").addClass(styles[rightUp1]);
     $(".rightUp2").addClass(styles[rightUp2]);
     $(".rightUp3").addClass(styles[rightUp3]);
     $(".rightUp4").addClass(styles[rightUp4]);
     $(".rightUp5").addClass(styles[rightUp5]);
-    $(".rightUp6").addClass(styles[rightUp6]);
-    $(".rightUp7").addClass(styles[rightUp7]);
+    // $(".rightUp6").addClass(styles[rightUp6]);
+    // $(".rightUp7").addClass(styles[rightUp7]);
 
 
     $('.print').click(function(){

@@ -120,8 +120,13 @@
 
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate tooth view">
-            <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth()"><h4
-                    style="color: white;font-size: small">牙齿</h4></a>
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth28()"><h4
+                    style="color: white;font-size: small">牙齿（28颗）</h4></a>
+        </div>
+
+        <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate tooth view">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth20()"><h4
+                    style="color: white;font-size: small">牙齿（20颗）</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate feed view">
@@ -680,7 +685,7 @@
     }
 
 
-    function start_Tooth() {
+    function start_Tooth28() {
         var babyid = $("#babyid").val();
         
         $.ajax({
@@ -690,7 +695,27 @@
                 babyid: babyid
             }, success: function (data) {
                 if (data.flag == true) {
-                    location.href = "newtestTooth?babyid=" + babyid;
+                    location.href = "newtestTooth28?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_Tooth20() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthageTooth",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestTooth20?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

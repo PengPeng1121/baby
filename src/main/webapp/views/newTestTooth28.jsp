@@ -1122,52 +1122,52 @@
         var remark = $("#remark").val() || '';
         
         var data = "{";
-        data += "'resultTooth.babyId':" + $("#babyid").val() + ",";
-        data += "'resultTooth.attentionBrushWay':" + a1 + ",";
-        data += "'resultTooth.attentionBrushHabit':" + a2 + ",";
-        data += "'resultTooth.attentionTeethSituation':" + a3 + ",";
-        data += "'resultTooth.attentionFu':" + a4 + ",";      
+        data += "'resultTooth28.babyId':" + $("#babyid").val() + ",";
+        data += "'resultTooth28.attentionBrushWay':" + a1 + ",";
+        data += "'resultTooth28.attentionBrushHabit':" + a2 + ",";
+        data += "'resultTooth28.attentionTeethSituation':" + a3 + ",";
+        data += "'resultTooth28.attentionFu':" + a4 + ",";      
         
-        data += "'resultTooth.leftUp1':" + leftUp1 + ",";   
-        data += "'resultTooth.leftUp2':" + leftUp2 + ",";   
-        data += "'resultTooth.leftUp3':" + leftUp3 + ",";
-        data += "'resultTooth.leftUp4':" + leftUp4 + ",";
-        data += "'resultTooth.leftUp5':" + leftUp5 + ",";
-        data += "'resultTooth.leftUp6':" + leftUp6 + ",";
-        data += "'resultTooth.leftUp7':" + leftUp7 + ",";
-        data += "'resultTooth.rightUp1':" + rightUp1 + ",";
-        data += "'resultTooth.rightUp2':" + rightUp2 + ",";
-        data += "'resultTooth.rightUp3':" + rightUp3 + ",";
-        data += "'resultTooth.rightUp4':" + rightUp4 + ",";
-        data += "'resultTooth.rightUp5':" + rightUp5 + ",";
-        data += "'resultTooth.rightUp6':" + rightUp6 + ",";
-        data += "'resultTooth.rightUp7':" + rightUp7 + ",";
+        data += "'resultTooth28.leftUp1':" + leftUp1 + ",";   
+        data += "'resultTooth28.leftUp2':" + leftUp2 + ",";   
+        data += "'resultTooth28.leftUp3':" + leftUp3 + ",";
+        data += "'resultTooth28.leftUp4':" + leftUp4 + ",";
+        data += "'resultTooth28.leftUp5':" + leftUp5 + ",";
+        data += "'resultTooth28.leftUp6':" + leftUp6 + ",";
+        data += "'resultTooth28.leftUp7':" + leftUp7 + ",";
+        data += "'resultTooth28.rightUp1':" + rightUp1 + ",";
+        data += "'resultTooth28.rightUp2':" + rightUp2 + ",";
+        data += "'resultTooth28.rightUp3':" + rightUp3 + ",";
+        data += "'resultTooth28.rightUp4':" + rightUp4 + ",";
+        data += "'resultTooth28.rightUp5':" + rightUp5 + ",";
+        data += "'resultTooth28.rightUp6':" + rightUp6 + ",";
+        data += "'resultTooth28.rightUp7':" + rightUp7 + ",";
 
-        data += "'resultTooth.leftDown1':" + leftDown1 + ",";
-        data += "'resultTooth.leftDown2':" + leftDown2 + ",";
-        data += "'resultTooth.leftDown3':" + leftDown3 + ",";
-        data += "'resultTooth.leftDown4':" + leftDown4 + ",";
-        data += "'resultTooth.leftDown5':" + leftDown5 + ",";
-        data += "'resultTooth.leftDown6':" + leftDown6 + ",";
-        data += "'resultTooth.leftDown7':" + leftDown7 + ",";
-        data += "'resultTooth.rightDown1':" + rightDown1 + ",";
-        data += "'resultTooth.rightDown2':" + rightDown2 + ",";
-        data += "'resultTooth.rightDown3':" + rightDown3 + ",";
-        data += "'resultTooth.rightDown4':" + rightDown4 + ",";
-        data += "'resultTooth.rightDown5':" + rightDown5 + ",";
-        data += "'resultTooth.rightDown6':" + rightDown6 + ",";
-        data += "'resultTooth.rightDown7':" + rightDown7 + ",";
+        data += "'resultTooth28.leftDown1':" + leftDown1 + ",";
+        data += "'resultTooth28.leftDown2':" + leftDown2 + ",";
+        data += "'resultTooth28.leftDown3':" + leftDown3 + ",";
+        data += "'resultTooth28.leftDown4':" + leftDown4 + ",";
+        data += "'resultTooth28.leftDown5':" + leftDown5 + ",";
+        data += "'resultTooth28.leftDown6':" + leftDown6 + ",";
+        data += "'resultTooth28.leftDown7':" + leftDown7 + ",";
+        data += "'resultTooth28.rightDown1':" + rightDown1 + ",";
+        data += "'resultTooth28.rightDown2':" + rightDown2 + ",";
+        data += "'resultTooth28.rightDown3':" + rightDown3 + ",";
+        data += "'resultTooth28.rightDown4':" + rightDown4 + ",";
+        data += "'resultTooth28.rightDown5':" + rightDown5 + ",";
+        data += "'resultTooth28.rightDown6':" + rightDown6 + ",";
+        data += "'resultTooth28.rightDown7':" + rightDown7 + ",";
         data += "}";
         data = eval('(' + data + ')');
         if (remark) {
-            data['resultTooth.remark'] = remark;
+            data['resultTooth28.remark'] = remark;
         }
         $.ajax({
-            url: 'saveresultTooth',
+            url: 'saveresultTooth28',
             type: 'post',
             data: data,
             success:function (json) {
-                var rId = json.resultTooth.id;
+                var rId = json.resultTooth28.id;
                 var refreshData = {
                     babyid: $("#babyid").val(),
                     testId: 36,
@@ -1179,7 +1179,7 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultTooth?id=" + rId;
+                        window.location = "showresultTooth28?id=" + rId;
                     }
                 })
             }
