@@ -3,10 +3,8 @@ package com.free4lab.babycheckup.action;
 import com.free4lab.babycheckup.dto.BabyUpdateDto;
 import com.free4lab.babycheckup.manager.BabyManager;
 import com.free4lab.babycheckup.manager.AccountManager;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.BabySchema;
-import com.free4lab.babycheckup.model.Parent;
-import com.free4lab.babycheckup.model.User;
+import com.free4lab.babycheckup.manager.BabyTestRecordManager;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.CollectionUtils;
@@ -39,6 +37,8 @@ public class BabyAction {
     private Boolean flag;
     private String babyName;
     private String parentName;
+    private String lastTestTimeEnd;
+    private String lastTestTimeBegin;
     private String parentTel;
     private List<Baby> babyList;
     private static final int PAGE_SIZE = 10;//用于分页
@@ -47,6 +47,7 @@ public class BabyAction {
     private int babyNumber;
     private String babyBirth;
     private Integer testId;
+    private Integer resultId;
 
     private BabyUpdateDto babyUpdate;
 
@@ -106,7 +107,7 @@ public class BabyAction {
             page = 1;
         }
         if(testId==null || testId == 0){
-            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, 0, 0,false);
+            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid, 0, 0,false);
             if(!CollectionUtils.isEmpty(babyAllList)){
                 babyNumber = babyAllList.size();
                 if(babyNumber % PAGE_SIZE != 0){
@@ -114,13 +115,13 @@ public class BabyAction {
                 }else {
                     pageNum =  babyNumber / PAGE_SIZE;
                 }
-                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, page, PAGE_SIZE,true);
+                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid, page, PAGE_SIZE,true);
             }else {
                 babyNumber = 0;
             }
         }else if(testId != null){
             // 查询所有
-            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, 0,0,false);
+            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, lastTestTimeEnd,lastTestTimeBegin,hoid,testId, 0,0,false);
             if(!CollectionUtils.isEmpty(babyAllList)){
                 babyNumber = babyAllList.size();
                 if(babyNumber % PAGE_SIZE != 0){
@@ -128,7 +129,7 @@ public class BabyAction {
                 }else {
                     pageNum =  babyNumber / PAGE_SIZE;
                 }
-                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, page, PAGE_SIZE,true);
+                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid,testId, page, PAGE_SIZE,true);
             }else {
                 babyNumber = 0;
             }
@@ -155,7 +156,7 @@ public class BabyAction {
             page = 1;
         }
         if(testId==null || testId == 0){
-            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, 0, 0,false);
+            List<Baby> babyAllList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid, 0, 0,false);
             if(!CollectionUtils.isEmpty(babyAllList)){
                 babyNumber = babyAllList.size();
                 if(babyNumber % PAGE_SIZE != 0){
@@ -163,13 +164,13 @@ public class BabyAction {
                 }else {
                     pageNum =  babyNumber / PAGE_SIZE;
                 }
-                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay, hoid, page, PAGE_SIZE,true);
+                babyList = BabyManager.findBySearch(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid, page, PAGE_SIZE,true);
             }else {
                 babyNumber = 0;
             }
         }else if(testId != null){
             // 查询所有
-            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, 0, 0,false);
+            List<Baby> babyAllList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid,testId, 0, 0,false);
             if(!CollectionUtils.isEmpty(babyAllList)){
                 babyNumber = babyAllList.size();
                 if(babyNumber % PAGE_SIZE != 0){
@@ -178,7 +179,7 @@ public class BabyAction {
                     pageNum =  babyNumber / PAGE_SIZE;
                 }
 
-                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay, hoid,testId, page, PAGE_SIZE,true);
+                babyList = BabyManager.findBySearchWithTestId(babyName, parentName, parentTel,babyBirthDay,lastTestTimeEnd,lastTestTimeBegin, hoid,testId, page, PAGE_SIZE,true);
             }else {
                 babyNumber = 0;
             }
@@ -317,6 +318,19 @@ public class BabyAction {
             //保存
             updateBaby.setLastTestTime(new Date());
             BabyManager.update(updateBaby,null,null);
+            if(null != testId && null != resultId){
+                BabyTestRecord babyTestRecord = new BabyTestRecord();
+                babyTestRecord.setBabyId(babyid);
+                babyTestRecord.setTestId(testId);
+                babyTestRecord.setResultId(resultId);
+                babyTestRecord.setHospitalId((Integer) ActionContext.getContext().getSession().get("hoid"));
+                babyTestRecord.setTestUserId((Integer) ActionContext.getContext().getSession().get("userid"));
+                babyTestRecord.setUpdateUser((String) ActionContext.getContext().getSession().get("username"));
+                babyTestRecord.setCreateUser((String) ActionContext.getContext().getSession().get("username"));
+                babyTestRecord.setUpdateTime(new java.util.Date());
+                babyTestRecord.setCreateTime(new java.util.Date());
+                BabyTestRecordManager.save(babyTestRecord);
+            }
         }
         return "success";
     }
@@ -774,5 +788,29 @@ public class BabyAction {
 
     public void setBabyUpdate(BabyUpdateDto babyUpdate) {
         this.babyUpdate = babyUpdate;
+    }
+
+    public Integer getResultId() {
+        return resultId;
+    }
+
+    public void setResultId(Integer resultId) {
+        this.resultId = resultId;
+    }
+
+    public String getLastTestTimeEnd() {
+        return lastTestTimeEnd;
+    }
+
+    public void setLastTestTimeEnd(String lastTestTimeEnd) {
+        this.lastTestTimeEnd = lastTestTimeEnd;
+    }
+
+    public String getLastTestTimeBegin() {
+        return lastTestTimeBegin;
+    }
+
+    public void setLastTestTimeBegin(String lastTestTimeBegin) {
+        this.lastTestTimeBegin = lastTestTimeBegin;
     }
 }

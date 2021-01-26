@@ -50,6 +50,7 @@ public class HomeAction {
     private long numberOfResultBloodType;
     private long numberOfResultAttention;
     private long numberOfResultECG;
+    private long numberOfResultTooth20;
     private Integer result0_6LeftTimes;
     private Integer result3_6LeftTimes;
     private Integer result0_2LeftTimes;
@@ -90,6 +91,7 @@ public class HomeAction {
     private Integer resultBloodTypeLeftTimes;
     private Integer resultAttentionLeftTimes;
     private Integer resultECGLeftTimes;
+    private Integer resultTooth20LeftTimes;
     private Integer totalLeftTimes;
 
     //全部卡片配置
@@ -138,6 +140,7 @@ public class HomeAction {
         numberOfResultBloodType = ResultBloodTypeManager.countResultByHosIdAndTestId(hoid,51);
         numberOfResultAttention = ResultAttentionManager.countResultByHosIdAndTestId(hoid,52);
         numberOfResultECG = ResultEcgManager.countResultByHosIdAndTestId(hoid,53);
+        numberOfResultTooth20 = ResultTooth20Manager.countResultByHosIdAndTestId(hoid,54);
         HospitalTestConfig config = HospitalTestConfigManager.findConfigByHospitalId(hoid);
         if(config==null){
             return "fail";
@@ -272,6 +275,9 @@ public class HomeAction {
                             break;
                         case 53:
                             resultECGLeftTimes = hospitalTestTimes.getLeftTimes();
+                            break;
+                        case 54:
+                            resultTooth20LeftTimes = hospitalTestTimes.getLeftTimes();
                             break;
                     }
                 }
@@ -933,5 +939,21 @@ public class HomeAction {
 
     public void setResultECGLeftTimes(Integer resultECGLeftTimes) {
         this.resultECGLeftTimes = resultECGLeftTimes;
+    }
+
+    public long getNumberOfResultTooth20() {
+        return numberOfResultTooth20;
+    }
+
+    public void setNumberOfResultTooth20(long numberOfResultTooth20) {
+        this.numberOfResultTooth20 = numberOfResultTooth20;
+    }
+
+    public Integer getResultTooth20LeftTimes() {
+        return resultTooth20LeftTimes;
+    }
+
+    public void setResultTooth20LeftTimes(Integer resultTooth20LeftTimes) {
+        this.resultTooth20LeftTimes = resultTooth20LeftTimes;
     }
 }

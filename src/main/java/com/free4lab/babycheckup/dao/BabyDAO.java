@@ -29,6 +29,21 @@ public class BabyDAO extends AbstractDAO<Baby> {
 
     private static final String PU_NAME = "BabyCheckup_PU";
 
+    /**
+     * baby表模糊查询字段
+     */
+    private static final String SEARCH_BABY_LIKE_NAME = "name";
+
+    /**
+     * baby表最近检测时间查询字段begin
+     */
+    private static final String SEARCH_BABY_LAST_TEST_TIME_BEGIN = "lastTestTimeBegin";
+
+    /**
+     * baby表最近检测时间查询字段end
+     */
+    private static final String SEARCH_BABY_LAST_TEST_TIME_END = "lastTestTimeEnd";
+
     @Override
     public String getPUName() {
         return PU_NAME;
@@ -138,6 +153,8 @@ public class BabyDAO extends AbstractDAO<Baby> {
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultAttention result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
             }else if(testId==53){
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultEcg result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
+            }else if(testId==54){
+                queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family,ResultTooth20 result WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid AND baby.babyid = result.babyId";
             }else {
                 queryString= "SELECT baby FROM Baby baby, Parent parent, FamilyRelation family WHERE family.babyid = baby.babyid AND family.parentid = parent.parentid";
             }
@@ -152,8 +169,21 @@ public class BabyDAO extends AbstractDAO<Baby> {
 
             }
             if (babyParams != null && babyParams.size() > 0) {
-                for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
-                    queryString += " AND baby." + entry.getKey() + " = :baby" + entry.getKey();
+                if (babyParams != null && babyParams.size() > 0) {
+                    for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
+                        if(SEARCH_BABY_LIKE_NAME.equals(entry.getKey())){
+                            queryString += " AND baby.name like '%" + entry.getValue()+"%'";
+                            babyParams.put(SEARCH_BABY_LIKE_NAME,null);
+                        }else if(SEARCH_BABY_LAST_TEST_TIME_END.equals(entry.getKey())){
+                            queryString += " AND baby.lastTestTime <= '" + entry.getValue() +"'";;
+                            babyParams.put(SEARCH_BABY_LAST_TEST_TIME_END,null);
+                        }else if(SEARCH_BABY_LAST_TEST_TIME_BEGIN.equals(entry.getKey())){
+                            queryString += " AND baby.lastTestTime >=" + entry.getValue() +"'";;
+                            babyParams.put(SEARCH_BABY_LAST_TEST_TIME_BEGIN,null);
+                        }else {
+                            queryString += " AND baby." + entry.getKey() + " = :baby" + entry.getKey();
+                        }
+                    }
                 }
             }
             if (parentParams != null && parentParams.size() > 0) {
@@ -202,7 +232,18 @@ public class BabyDAO extends AbstractDAO<Baby> {
             }
             if (babyParams != null && babyParams.size() > 0) {
                 for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
-                    queryString += " AND baby." + entry.getKey() + " = :baby" + entry.getKey();
+                    if(SEARCH_BABY_LIKE_NAME.equals(entry.getKey())){
+                        queryString += " AND baby.name like '%" + entry.getValue()+"%'";
+                        babyParams.put(SEARCH_BABY_LIKE_NAME,null);
+                    }else if(SEARCH_BABY_LAST_TEST_TIME_END.equals(entry.getKey())){
+                        queryString += " AND baby.lastTestTime <='" + entry.getValue() +"'";;
+                        babyParams.put(SEARCH_BABY_LAST_TEST_TIME_END,null);
+                    }else if(SEARCH_BABY_LAST_TEST_TIME_BEGIN.equals(entry.getKey())){
+                        queryString += " AND baby.lastTestTime >='" + entry.getValue() +"'";;
+                        babyParams.put(SEARCH_BABY_LAST_TEST_TIME_BEGIN,null);
+                    }else {
+                        queryString += " AND baby." + entry.getKey() + " = :baby" + entry.getKey();
+                    }
                 }
             }
             if (parentParams != null && parentParams.size() > 0) {
@@ -214,7 +255,9 @@ public class BabyDAO extends AbstractDAO<Baby> {
             Query query = this.getEntityManager().createQuery(queryString);
             if (babyParams != null && babyParams.size() > 0) {
                 for (Map.Entry<String, Object> entry : babyParams.entrySet()) {
-                    query.setParameter("baby" + entry.getKey(), entry.getValue());
+                    if( entry.getValue() != null){
+                        query.setParameter("baby" + entry.getKey(), entry.getValue());
+                    }
                 }
             }
             if (parentParams != null && parentParams.size() > 0) {
