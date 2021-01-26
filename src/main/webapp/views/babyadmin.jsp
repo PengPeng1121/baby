@@ -45,6 +45,17 @@
                             <input id="parent-tel" onkeydown="EnterPress(event)" type="text" class="form-control front-no-box-shadow">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label front-label">最近一次测评时间</label>
+                        <div class="col-md-4">
+                            <input id="test-time-begin" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+                        </div>
+                        <div class="col-md-4">    
+                            <input id="test-time-end" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
                     <div class="text-right">
                         <button type="button" id="reset" class="btn btn-default" onclick="cancelSearch()">重置</button>
                         <button type="button" id="enter" class="btn btn-primary" onclick="searchbaby()">查找</button>
@@ -61,7 +72,9 @@
 
             </div>
         </div>--%>
-        <div id="search_result"></div>
+        <div id="search_result">
+            正在查询中，请稍等。。。
+        </div>
     </div>
     <footer class="footer-default">
         <div class="text-center">Copyright © All Right Reserved by 睿为悦(2018)</div>
@@ -86,10 +99,13 @@
 
 
     function searchbaby(page){
+        $('#search_result').html('正在查询中，请稍等。。。')
         var babyName = $("#baby-name").val().trim();
         var babyBirth = $("#baby-birth").val().trim();
         var parentName = $("#parent-name").val().trim();
         var parentTel = $("#parent-tel").val().trim();
+        var testTimeEnd = $("#test-time-end").val().trim();
+        var testTimeBegin = $("#test-time-begin").val().trim();
         // if(babyName.length == 0 && parentName.length == 0 && parentTel.length == 0){
         //     $.fillTipBox({type:'danger', icon:'glyphicon-alert', content:'请填写搜索内容！'});
         // }else {
@@ -120,7 +136,9 @@
                 parentTel:parentTel,
                 babyBirth:babyBirth,
                 testId: testId,
-                page: page
+                page: page,
+                lastTestTimeBegin: testTimeBegin,
+                lastTestTimeEnd: testTimeEnd
             },
             success:function(html){
                 $("#search_result").html(html);
@@ -132,6 +150,8 @@
         $("#baby-birth").val("");
         $("#parent-name").val("");
         $("#parent-tel").val("");
+        $("#test-time-end").val("");
+        $("#test-time-begin").val("");
     }
     function EnterPress(e) {
         var e = e || window.event;
@@ -141,6 +161,8 @@
     }
 
     $('#baby-birth').cxCalendar();
+    $('#test-time-end').cxCalendar();
+    $('#test-time-begin').cxCalendar();
 
     //首次请求
     $.ajax({
@@ -152,7 +174,9 @@
             parentTel:'',
             babyBirth:'',
             testId: testId,
-            page: 1
+            page: 1,
+            lastTestTimeEnd: '',
+            lastTestTimeBegin: ''
         },
         success:function(html){
             $("#search_result").html(html);
