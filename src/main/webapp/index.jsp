@@ -637,12 +637,12 @@
                                     <p class="media-heading" style="font-size: 16px;">牙齿(28颗)</p>
                                     <div class="as-desc">
                                         <div style="display: inline-block;">
-                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTooth28"/></label>
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTooth"/></label>
                                             <label style="font-weight:normal;">个</label>
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <s:if test="resultTooth28LeftTimes == 0">
+                                        <s:if test="resultToothLeftTimes == 0">
                                             <span>请购买</span>
                                         </s:if>
                                         <s:else>

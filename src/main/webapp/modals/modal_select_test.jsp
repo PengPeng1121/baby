@@ -120,7 +120,7 @@
 
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate tooth view">
-            <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth28()"><h4
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_Tooth()"><h4
                     style="color: white;font-size: small">牙齿（28颗）</h4></a>
         </div>
 
@@ -685,7 +685,7 @@
     }
 
 
-    function start_Tooth28() {
+    function start_Tooth() {
         var babyid = $("#babyid").val();
         
         $.ajax({
@@ -695,7 +695,7 @@
                 babyid: babyid
             }, success: function (data) {
                 if (data.flag == true) {
-                    location.href = "newtestTooth28?babyid=" + babyid;
+                    location.href = "newtestTooth?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

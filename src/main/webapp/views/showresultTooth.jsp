@@ -340,48 +340,48 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media" style="background-color: transparent;">
 
-        <input id="babyid" type="hidden" value="<s:property value="resultTooth28.babyid"/>">
-        <input id="resultid" type="hidden" value="<s:property value="resultTooth28.id"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultTooth.babyid"/>">
+        <input id="resultid" type="hidden" value="<s:property value="resultTooth.id"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
 
 
 
-        <input id="babyid" type="hidden" value="<s:property value="resultTooth28.babyid"/>">
-        <input id="attentionBrushWay" type="hidden" value="<s:property value="resultTooth28.attentionBrushWay"/>">
-        <input id="attentionBrushHabit" type="hidden" value="<s:property value="resultTooth28.attentionBrushHabit"/>">
-        <input id="attentionTeethSituation" type="hidden" value="<s:property value="resultTooth28.attentionTeethSituation"/>">
-        <input id="attentionFu" type="hidden" value="<s:property value="resultTooth28.attentionFu"/>">
-        <input id="remark" type="hidden" value="<s:property value="resultTooth28.remark"/>">
+        <input id="babyid" type="hidden" value="<s:property value="resultTooth.babyid"/>">
+        <input id="attentionBrushWay" type="hidden" value="<s:property value="resultTooth.attentionBrushWay"/>">
+        <input id="attentionBrushHabit" type="hidden" value="<s:property value="resultTooth.attentionBrushHabit"/>">
+        <input id="attentionTeethSituation" type="hidden" value="<s:property value="resultTooth.attentionTeethSituation"/>">
+        <input id="attentionFu" type="hidden" value="<s:property value="resultTooth.attentionFu"/>">
+        <input id="remark" type="hidden" value="<s:property value="resultTooth.remark"/>">
         
-        <input id="leftUp1" type="hidden" value="<s:property value="resultTooth28.leftUp1"/>">
-        <input id="leftUp2" type="hidden" value="<s:property value="resultTooth28.leftUp2"/>">
-        <input id="leftUp3" type="hidden" value="<s:property value="resultTooth28.leftUp3"/>">
-        <input id="leftUp4" type="hidden" value="<s:property value="resultTooth28.leftUp4"/>">
-        <input id="leftUp5" type="hidden" value="<s:property value="resultTooth28.leftUp5"/>">
-        <input id="leftUp6" type="hidden" value="<s:property value="resultTooth28.leftUp6"/>">
-        <input id="leftUp7" type="hidden" value="<s:property value="resultTooth28.leftUp7"/>">
-        <input id="rightUp1" type="hidden" value="<s:property value="resultTooth28.rightUp1"/>">
-        <input id="rightUp2" type="hidden" value="<s:property value="resultTooth28.rightUp2"/>">
-        <input id="rightUp3" type="hidden" value="<s:property value="resultTooth28.rightUp3"/>">
-        <input id="rightUp4" type="hidden" value="<s:property value="resultTooth28.rightUp4"/>">
-        <input id="rightUp5" type="hidden" value="<s:property value="resultTooth28.rightUp5"/>">
-        <input id="rightUp6" type="hidden" value="<s:property value="resultTooth28.rightUp6"/>">
-        <input id="rightUp7" type="hidden" value="<s:property value="resultTooth28.rightUp7"/>">
+        <input id="leftUp1" type="hidden" value="<s:property value="resultTooth.leftUp1"/>">
+        <input id="leftUp2" type="hidden" value="<s:property value="resultTooth.leftUp2"/>">
+        <input id="leftUp3" type="hidden" value="<s:property value="resultTooth.leftUp3"/>">
+        <input id="leftUp4" type="hidden" value="<s:property value="resultTooth.leftUp4"/>">
+        <input id="leftUp5" type="hidden" value="<s:property value="resultTooth.leftUp5"/>">
+        <input id="leftUp6" type="hidden" value="<s:property value="resultTooth.leftUp6"/>">
+        <input id="leftUp7" type="hidden" value="<s:property value="resultTooth.leftUp7"/>">
+        <input id="rightUp1" type="hidden" value="<s:property value="resultTooth.rightUp1"/>">
+        <input id="rightUp2" type="hidden" value="<s:property value="resultTooth.rightUp2"/>">
+        <input id="rightUp3" type="hidden" value="<s:property value="resultTooth.rightUp3"/>">
+        <input id="rightUp4" type="hidden" value="<s:property value="resultTooth.rightUp4"/>">
+        <input id="rightUp5" type="hidden" value="<s:property value="resultTooth.rightUp5"/>">
+        <input id="rightUp6" type="hidden" value="<s:property value="resultTooth.rightUp6"/>">
+        <input id="rightUp7" type="hidden" value="<s:property value="resultTooth.rightUp7"/>">
         
-        <input id="leftDown1" type="hidden" value="<s:property value="resultTooth28.leftDown1"/>">
-        <input id="leftDown2" type="hidden" value="<s:property value="resultTooth28.leftDown2"/>">
-        <input id="leftDown3" type="hidden" value="<s:property value="resultTooth28.leftDown3"/>">
-        <input id="leftDown4" type="hidden" value="<s:property value="resultTooth28.leftDown4"/>">
-        <input id="leftDown5" type="hidden" value="<s:property value="resultTooth28.leftDown5"/>">
-        <input id="leftDown6" type="hidden" value="<s:property value="resultTooth28.leftDown6"/>">
-        <input id="leftDown7" type="hidden" value="<s:property value="resultTooth28.leftDown7"/>">
-        <input id="rightDown1" type="hidden" value="<s:property value="resultTooth28.rightDown1"/>">
-        <input id="rightDown2" type="hidden" value="<s:property value="resultTooth28.rightDown2"/>">
-        <input id="rightDown3" type="hidden" value="<s:property value="resultTooth28.rightDown3"/>">
-        <input id="rightDown4" type="hidden" value="<s:property value="resultTooth28.rightDown4"/>">
-        <input id="rightDown5" type="hidden" value="<s:property value="resultTooth28.rightDown5"/>">
-        <input id="rightDown6" type="hidden" value="<s:property value="resultTooth28.rightDown6"/>">
-        <input id="rightDown7" type="hidden" value="<s:property value="resultTooth28.rightDown7"/>">
+        <input id="leftDown1" type="hidden" value="<s:property value="resultTooth.leftDown1"/>">
+        <input id="leftDown2" type="hidden" value="<s:property value="resultTooth.leftDown2"/>">
+        <input id="leftDown3" type="hidden" value="<s:property value="resultTooth.leftDown3"/>">
+        <input id="leftDown4" type="hidden" value="<s:property value="resultTooth.leftDown4"/>">
+        <input id="leftDown5" type="hidden" value="<s:property value="resultTooth.leftDown5"/>">
+        <input id="leftDown6" type="hidden" value="<s:property value="resultTooth.leftDown6"/>">
+        <input id="leftDown7" type="hidden" value="<s:property value="resultTooth.leftDown7"/>">
+        <input id="rightDown1" type="hidden" value="<s:property value="resultTooth.rightDown1"/>">
+        <input id="rightDown2" type="hidden" value="<s:property value="resultTooth.rightDown2"/>">
+        <input id="rightDown3" type="hidden" value="<s:property value="resultTooth.rightDown3"/>">
+        <input id="rightDown4" type="hidden" value="<s:property value="resultTooth.rightDown4"/>">
+        <input id="rightDown5" type="hidden" value="<s:property value="resultTooth.rightDown5"/>">
+        <input id="rightDown6" type="hidden" value="<s:property value="resultTooth.rightDown6"/>">
+        <input id="rightDown7" type="hidden" value="<s:property value="resultTooth.rightDown7"/>">
 
 
         
