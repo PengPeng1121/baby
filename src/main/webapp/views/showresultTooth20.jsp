@@ -453,7 +453,7 @@
 
 
                     <!-- 牙图 -->
-                    <img id="tooth-img" src="statics/img/tooth.jpg">
+                    <img id="tooth-img" src="statics/img/tooth20.jpg">
                     
                     <table  id="info-table">
                         <tr>
@@ -482,35 +482,35 @@
                     <div class="rightUp1 tooth-icon" style="top: 433px;left: 645px;"></div>
                     <div class="rightUp2 tooth-icon" style="top: 448px;left: 602px;"></div>
                     <div class="rightUp3 tooth-icon" style="top: 476px;left: 576px;"></div>
-                    <div class="rightUp4 tooth-icon" style="top: 508px;left: 550px;"></div>
-                    <div class="rightUp5 tooth-icon" style="top: 544px;left: 535px;"></div>
+                    <div class="rightUp4 tooth-icon" style="top: 526px;left: 550px;"></div>
+                    <div class="rightUp5 tooth-icon" style="top: 602px;left: 533px;"></div>
                     <!-- <div class="rightUp6 tooth-icon" style="top: 584px;left: 527px;"></div>
                     <div class="rightUp7 tooth-icon" style="top: 630px;left: 524px;"></div> -->
 
                     <div class="leftUp1 tooth-icon" style="top: 433px;left: 693px;"></div>
                     <div class="leftUp2 tooth-icon" style="top: 448px;left: 738px;"></div>
                     <div class="leftUp3 tooth-icon" style="top: 476px;left: 765px;"></div>
-                    <div class="leftUp4 tooth-icon" style="top: 508px;left: 792px;"></div>
-                    <div class="leftUp5 tooth-icon" style="top: 544px;left: 810px;"></div>
+                    <div class="leftUp4 tooth-icon" style="top: 522px;left: 792px;"></div>
+                    <div class="leftUp5 tooth-icon" style="top: 600px;left: 810px;"></div>
                     <!-- <div class="leftUp6 tooth-icon" style="top: 584px;left: 818px;"></div>
                     <div class="leftUp7 tooth-icon" style="top: 630px;left: 818px;"></div> -->
 
 
                     <!-- <div class="rightDown7 tooth-icon" style="top: 726px;left: 524px;"></div>
                     <div class="rightDown6 tooth-icon" style="top: 771px;left: 524px;"></div> -->
-                    <div class="rightDown5 tooth-icon" style="top: 813px;left: 534px;"></div>
-                    <div class="rightDown4 tooth-icon" style="top: 849px;left: 551px;"></div>
-                    <div class="rightDown3 tooth-icon" style="top: 879px;left: 572px;"></div>
-                    <div class="rightDown2 tooth-icon" style="top: 916px;left: 598px;"></div>
-                    <div class="rightDown1 tooth-icon" style="top: 923px;left: 646px;"></div>
+                    <div class="rightDown5 tooth-icon" style="top: 758px;left: 532px;"></div>
+                    <div class="rightDown4 tooth-icon" style="top: 825px;left: 551px;"></div>
+                    <div class="rightDown3 tooth-icon" style="top: 866px;left: 578px;"></div>
+                    <div class="rightDown2 tooth-icon" style="top: 898px;left: 605px;"></div>
+                    <div class="rightDown1 tooth-icon" style="top: 910px;left: 646px;"></div>
 
                     <!-- <div class="leftDown7 tooth-icon" style="top: 726px;left: 818px;"></div>
                     <div class="leftDown6 tooth-icon" style="top: 771px;left: 818px;"></div> -->
-                    <div class="leftDown5 tooth-icon" style="top: 813px;left: 810px;"></div>
-                    <div class="leftDown4 tooth-icon" style="top: 849px;left: 792px;"></div>
-                    <div class="leftDown3 tooth-icon" style="top: 879px;left: 765px;"></div>
-                    <div class="leftDown2 tooth-icon" style="top: 916px;left: 738px;"></div>
-                    <div class="leftDown1 tooth-icon" style="top: 923px;left: 693px;"></div>
+                    <div class="leftDown5 tooth-icon" style="top: 756px;left: 810px;"></div>
+                    <div class="leftDown4 tooth-icon" style="top: 824px;left: 792px;"></div>
+                    <div class="leftDown3 tooth-icon" style="top: 866px;left: 765px;"></div>
+                    <div class="leftDown2 tooth-icon" style="top: 896px;left: 738px;"></div>
+                    <div class="leftDown1 tooth-icon" style="top: 910px;left: 693px;"></div>
     
 
                 </div>

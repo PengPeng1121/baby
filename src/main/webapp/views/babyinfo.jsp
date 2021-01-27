@@ -240,7 +240,7 @@
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
                         <span class="front-text-title" >
-                           牙齿
+                           牙齿(28颗)
                         </span>
                                         </h4>
                                         <div class="front-text-break">
@@ -253,6 +253,32 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTooth.id"/>, 36)">选中此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultTooth20List" var="resultTooth20">
+                        <tr class="manage doctorOperate tooth view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                        <span class="front-text-title" >
+                           牙齿(20颗)
+                        </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultTooth20.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" target="_blank" href="showresultTooth20?id=<s:property value="#resultTooth20.id"/>">查看报告</a>
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTooth20.id"/>, 54)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>

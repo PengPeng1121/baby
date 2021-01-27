@@ -359,7 +359,7 @@
         #tooth #remarkTextTooth{
             position: relative;
             left: 100px;
-            top: 50px;
+            top: 10px;
             background-color: transparent;
         }
 
@@ -474,6 +474,146 @@
         }
 
         #tooth .style3::after {
+            transform: rotate(-45deg);
+        }
+
+
+
+        /*------*/
+        #tooth20 #name-table{
+            position: relative;
+            left: 70px;
+            top: 90px;
+            width: 25%;
+            font-size: 16px;
+        }
+        #tooth20 #content-table{
+            width: 300px;
+            
+            border: 0;
+            position: relative;
+            top: 30px;
+            left: 80px;
+            display: inline-block;
+        }
+        #tooth20 #remarkTextTooth-20{
+            position: relative;
+            left: 100px;
+            top: 10px;
+            background-color: transparent;
+        }
+
+        #tooth20 #tooth-img{
+            position: relative;
+            left: -520px;
+            top: 350px;
+        }
+
+        #tooth20 #info-table{
+            position: relative;
+            top: 400px;
+            left: 220px;
+        }
+
+
+        #tooth20 .info1{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #000;
+            z-index: 100;
+        }
+        #tooth20 .info2{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #000; 
+        }
+        #tooth20 .info3 {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+
+        #tooth20 .info3::before,
+        #tooth20 .info3::after {
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 2px;
+            height: 20px;
+        }
+
+        #tooth20 .info3::before {
+            transform: rotate(45deg);
+        }
+
+        #tooth20 .info3::after {
+            transform: rotate(-45deg);
+        }
+
+        #tooth20 .style0{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #FFF;
+            position: relative;
+            z-index: 100;
+        }
+
+
+        #tooth20 .style1{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #000;
+            position: relative;
+            z-index: 100;
+        }
+        #tooth20 .style2{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            position: relative;
+            z-index: 100; 
+        }
+        #tooth20 .style3 {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 100;
+        }
+
+        #tooth20 .style3::before{
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 1px;
+            height: 20px;
+            z-index: 100;
+        }
+
+        #tooth20 .style3::after {
+            position: absolute;
+            content: ' ';
+            background-color: #000;
+            left: 10px;
+            width: 1px;
+            height: 20px;
+            z-index: 100;
+        }
+
+        #tooth20 .style3::before {
+            transform: rotate(45deg);
+        }
+
+        #tooth20 .style3::after {
             transform: rotate(-45deg);
         }
         
@@ -668,7 +808,7 @@
         #tooth #remarkTextTooth{
             position: relative;
             left: 100px;
-            top: 200px;
+            top: 150px;
             background-color: transparent;
         }
 
@@ -683,6 +823,45 @@
             top: 220px;
             left: 250px;
         }
+
+        /*--------*/
+
+        #tooth20 #name-table{
+            position: relative;
+            left: 70px;
+            top: 90px;
+            width: 60%;
+            font-size: 16px;
+        }
+        #tooth20 #content-table{
+            width: 300px;
+            
+            border: 0;
+            position: relative;
+            top: 180px;
+            left: 100px;
+            display: inline-block;
+        }
+        #tooth20 #remarkTextTooth-20{
+            position: relative;
+            left: 100px;
+            top: 150px;
+            background-color: transparent;
+        }
+
+        #tooth20 #tooth-img{
+            position: relative;
+            left: 190px;
+            top: 200px;
+        }
+
+        #tooth20 #info-table{
+            position: relative;
+            top: 220px;
+            left: 250px;
+        }
+
+
         .info1{
             width: 0 !important;
             height: 0 !important;
@@ -791,7 +970,58 @@
         #tooth .style3::after {
             transform: rotate(-45deg) !important;
         }
+        /*-------*/
+        #tooth20 .style1{
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 10px solid transparent !important;
+            border-right: 10px solid transparent !important;
+            border-bottom: 20px solid #000 !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+        #tooth20 .style2{
+            border-radius: 50% !important;
+            width: 20px !important;
+            height: 20px !important;
+            background-color: #000 !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
+        #tooth20 .style3 {
+            width: 20px !important;
+            height: 20px !important;
+            position: relative !important;
+            z-index: 100 !important;
+        }
 
+        #tooth20 .style3::before{
+            position: absolute !important;
+            content: ' ' !important;
+            background-color: #000 !important;
+            left: 10px !important;
+            width: 1px !important;
+            height: 20px !important;
+            z-index: 100 !important;
+        }
+
+        #tooth20 .style3::after {
+            position: absolute !important;
+            content: ' ' !important;
+            background-color: #000 !important;
+            left: 10px !important;
+            width: 1px !important;
+            height: 20px !important;
+            z-index: 100 !important;
+        }
+
+        #tooth20 .style3::before {
+            transform: rotate(45deg) !important;
+        }
+
+        #tooth20 .style3::after {
+            transform: rotate(-45deg) !important;
+        }
         #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2, #urineImg, #ECGImg{
             left: 70px !important;
         }
@@ -971,6 +1201,46 @@
         <input id="rightDown5" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown5"/>">
         <input id="rightDown6" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown6"/>">
         <input id="rightDown7" type="hidden" value="<s:property value="allTestResultVo.resultTooth.rightDown7"/>">
+
+
+
+        <!-- tooth20 -->
+
+        <input id="attentionBrushWay-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.attentionBrushWay"/>">
+        <input id="attentionBrushHabit-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.attentionBrushHabit"/>">
+        <input id="attentionTeethSituation-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.attentionTeethSituation"/>">
+        <input id="attentionFu-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.attentionFu"/>">
+        <input id="remarkTooth-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.remark"/>">
+        
+        <input id="leftUp1-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp1"/>">
+        <input id="leftUp2-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp2"/>">
+        <input id="leftUp3-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp3"/>">
+        <input id="leftUp4-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp4"/>">
+        <input id="leftUp5-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp5"/>">
+        <input id="leftUp6-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp6"/>">
+        <input id="leftUp7-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftUp7"/>">
+        <input id="rightUp1-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp1"/>">
+        <input id="rightUp2-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp2"/>">
+        <input id="rightUp3-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp3"/>">
+        <input id="rightUp4-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp4"/>">
+        <input id="rightUp5-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp5"/>">
+        <input id="rightUp6-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp6"/>">
+        <input id="rightUp7-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightUp7"/>">
+        
+        <input id="leftDown1-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown1"/>">
+        <input id="leftDown2-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown2"/>">
+        <input id="leftDown3-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown3"/>">
+        <input id="leftDown4-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown4"/>">
+        <input id="leftDown5-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown5"/>">
+        <input id="leftDown6-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown6"/>">
+        <input id="leftDown7-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.leftDown7"/>">
+        <input id="rightDown1-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown1"/>">
+        <input id="rightDown2-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown2"/>">
+        <input id="rightDown3-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown3"/>">
+        <input id="rightDown4-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown4"/>">
+        <input id="rightDown5-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown5"/>">
+        <input id="rightDown6-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown6"/>">
+        <input id="rightDown7-20" type="hidden" value="<s:property value="allTestResultVo.resultTooth20.rightDown7"/>">
     </div>
 
     <s:if test="allTestResultVo.resultBasic1">
@@ -1234,7 +1504,7 @@
                                 <span style="margin-left: 31px">
                                     <s:property value="allTestResultVo.resultBasic2.childBearingAge"/> 周岁
                                 </span>
-                                <span style="margin-left: 105px">
+                                <!-- <span style="margin-left: 105px">
                                     胎次:
                                 </span>
                                 <span>
@@ -1245,7 +1515,7 @@
                                 </span>
                                 <span>
                                     <s:property value="allTestResultVo.resultBasic2.pregnantCount"/>
-                                </span>
+                                </span> -->
                             </td>
                         </tr>
                         <tr class="item-line">
@@ -1652,6 +1922,20 @@
                         </td>
                     </tr>
                     <tr class="item-line">
+                            <td class="item">
+                                是否检查过微量元素
+                            </td>
+                            <td>
+                                <input type="radio" name="answer-16" value="1"   id="radio-answer-16-1">
+                                <label for="radio-answer-16-1">是</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="answer-16" value="0" id="radio-answer-16-0">
+                                <label for="radio-answer-16-0">否</label>
+                            </td>
+                        </tr>
+
+                    <tr class="item-line" id="tr-micro">
                         <td class="item">
                             两种以上微量元素缺乏(如果未化验或不清楚，请填写‘无’)
                         </td>
@@ -2068,7 +2352,7 @@
                                 </span>
 
                                 <input type="checkbox" name="milkType"  value="0">
-                                <label style="font-weight: normal;margin-left: 100px"> 母乳</label>
+                                <label style="font-weight: normal;margin-left: 40px"> 母乳</label>
                                 <input type="checkbox" name="milkType"  value="1" style="">
                                 <label style="font-weight: normal;margin-left: 40px"> 配方</label>
                                 <input type="checkbox" name="milkType"  value="2" style="">
@@ -2320,30 +2604,155 @@
                 <div class="rightUp6 tooth-icon " style="top: -163px;left: 202px;"></div>
                 <div class="rightUp7 tooth-icon " style="top: -137px;left: 197px;"></div>
 
-                <div class="leftUp1 tooth-icon " style="top: -255px;left: 371px;"></div>
-                <div class="leftUp2 tooth-icon " style="top: -263px;left: 415px;"></div>
-                <div class="leftUp3 tooth-icon " style="top: -247px;left: 442px;"></div>
-                <div class="leftUp4 tooth-icon " style="top: -238px;left: 466px;"></div>
-                <div class="leftUp5 tooth-icon " style="top: -227px;left: 485px;"></div>
-                <div class="leftUp6 tooth-icon " style="top: -203px;left: 494px;"></div>
-                <div class="leftUp7 tooth-icon " style="top: -177px;left: 497px;"></div>
+                <div class="leftUp1 tooth-icon " style="top: -359px;left: 371px;"></div>
+                <div class="leftUp2 tooth-icon " style="top: -367px;left: 415px;"></div>
+                <div class="leftUp3 tooth-icon " style="top: -351px;left: 442px;"></div>
+                <div class="leftUp4 tooth-icon " style="top: -342px;left: 466px;"></div>
+                <div class="leftUp5 tooth-icon " style="top: -331px;left: 485px;"></div>
+                <div class="leftUp6 tooth-icon " style="top: -307px;left: 494px;"></div>
+                <div class="leftUp7 tooth-icon " style="top: -281px;left: 497px;"></div>
 
 
-                <div class="rightDown7 tooth-icon " style="top: 104px;left: 197px;"></div>
-                <div class="rightDown6 tooth-icon " style="top: 124px;left: 202px;"></div>
-                <div class="rightDown5 tooth-icon " style="top: 146px;left: 210px;"></div>
-                <div class="rightDown4 tooth-icon " style="top: 161px;left: 225px;"></div>
-                <div class="rightDown3 tooth-icon " style="top: 172px;left: 253px;"></div>
-                <div class="rightDown2 tooth-icon " style="top: 187px;left: 280px;"></div>
-                <div class="rightDown1 tooth-icon " style="top: 179px;left: 323px;"></div>
+                <div class="rightDown7 tooth-icon " style="top: -196px;left: 197px;"></div>
+                <div class="rightDown6 tooth-icon " style="top: -176px;left: 202px;"></div>
+                <div class="rightDown5 tooth-icon " style="top: -154px;left: 210px;"></div>
+                <div class="rightDown4 tooth-icon " style="top: -139px;left: 225px;"></div>
+                <div class="rightDown3 tooth-icon " style="top: -128px;left: 253px;"></div>
+                <div class="rightDown2 tooth-icon " style="top: -113px;left: 280px;"></div>
+                <div class="rightDown1 tooth-icon " style="top: -121px;left: 323px;"></div>
 
-                <div class="leftDown7 tooth-icon " style="top: 63px;left: 497px;"></div>
-                <div class="leftDown6 tooth-icon " style="top: 88px;left: 494px;"></div>
-                <div class="leftDown5 tooth-icon " style="top: 108px;left: 485px;"></div>
-                <div class="leftDown4 tooth-icon " style="top: 123px;left: 466px;"></div>
-                <div class="leftDown3 tooth-icon " style="top: 133px;left: 442px;"></div>
-                <div class="leftDown2 tooth-icon " style="top: 147px;left: 415px;"></div>
-                <div class="leftDown1 tooth-icon " style="top: 139px;left: 371px;"></div>
+                <div class="leftDown7 tooth-icon " style="top: -337px;left: 497px;"></div>
+                <div class="leftDown6 tooth-icon " style="top: -312px;left: 494px;"></div>
+                <div class="leftDown5 tooth-icon " style="top: -292px;left: 485px;"></div>
+                <div class="leftDown4 tooth-icon " style="top: -277px;left: 466px;"></div>
+                <div class="leftDown3 tooth-icon " style="top: -267px;left: 442px;"></div>
+                <div class="leftDown2 tooth-icon " style="top: -253px;left: 415px;"></div>
+                <div class="leftDown1 tooth-icon " style="top: -261px;left: 371px;"></div>
+            </div>
+        </div>　
+    </div>    
+    </s:if>
+
+
+    <s:if test="allTestResultVo.resultTooth20">
+    <div class="container" class="hemaFront" id="tooth20" style="height: 1122px;overflow: hidden;">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent">
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Boy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg8Girl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table  id="content-table">
+                    <tr class="item-line">
+                        <td class="item">
+                            注意刷牙方法
+                        </td>
+                        <td style="width: 85px">
+                            <input type="radio" name="answer-1-tooth-20" value="1"   id="radio-answer-1-1-tooth-20">
+                            <label for="radio-answer-1-1-tooth-20"></label>
+                        </td>
+                    </tr>
+                    <tr class="item-line">
+                        <td class="item">
+                            注意刷牙习惯
+                        </td>
+                        <td>
+                            <input type="radio" name="answer-2-tooth-20" value="1"   id="radio-answer-2-1-tooth-20">
+                            <label for="radio-answer-2-1-tooth-20"></label>
+                        </td>
+                    </tr>
+                    <tr class="item-line">
+                        <td class="item">
+                            注意换牙后的歪斜情况
+                        </td>
+                        <td>
+                            <input type="radio" name="answer-3-tooth-20" value="1"   id="radio-answer-3-1-tooth-20">
+                            <label for="radio-answer-3-1-tooth-20"></label>
+                        </td>
+                    </tr>
+                    <tr class="item-line">
+                        <td class="item">
+                            已涂氟
+                        </td>
+                        <td>
+                            <input type="radio" name="answer-4-tooth-20" value="1"   id="radio-answer-4-1-tooth-20">
+                            <label for="radio-answer-4-1-tooth"></label>
+                        </td>
+                    </tr>
+                </table>
+                <textarea id="remarkTextTooth-20" rows="3" style="resize:none;border: 0;width: 350px;height: 120px;background-color: transparent;"></textarea>
+                <!-- 牙图 -->
+                <img id="tooth-img" src="statics/img/tooth20.jpg">
+                
+                <table  id="info-table">
+                    <tr>
+                        <td style="width: 30px">
+                            <div class="info3"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            未生长
+                        </td>
+                        <td style="width: 30px">
+                            <div class="info1"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            歪斜
+                        </td>
+                        <td style="width: 30px">
+                            <div class="info2"></div>
+                        </td>
+                        <td style="width: 60px"> 
+                            龋齿
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- 点 -->
+                <div class="rightUp1-20 tooth-icon " style="top: -243px;left: 323px;"></div>
+                <div class="rightUp2-20 tooth-icon " style="top: -249px;left: 280px;"></div>
+                <div class="rightUp3-20 tooth-icon " style="top: -239px;left: 253px;"></div>
+                <div class="rightUp4-20 tooth-icon " style="top: -207px;left: 225px;"></div>
+                <div class="rightUp5-20 tooth-icon " style="top: -146px;left: 210px;"></div>
+                <!-- <div class="rightUp6-20 tooth-icon " style="top: -163px;left: 202px;"></div>
+                <div class="rightUp7-20 tooth-icon " style="top: -137px;left: 197px;"></div> -->
+
+                <div class="leftUp1-20 tooth-icon " style="top: -344px;left: 371px;"></div>
+                <div class="leftUp2-20 tooth-icon " style="top: -352px;left: 415px;"></div>
+                <div class="leftUp3-20 tooth-icon " style="top: -335px;left: 442px;"></div>
+                <div class="leftUp4-20 tooth-icon " style="top: -307px;left: 473px;"></div>
+                <div class="leftUp5-20 tooth-icon " style="top: -248px;left: 491px;"></div>
+                <!-- <div class="leftUp6-20 tooth-icon " style="top: -203px;left: 494px;"></div>
+                <div class="leftUp7-20 tooth-icon " style="top: -177px;left: 497px;"></div> -->
+
+
+                <!-- <div class="rightDown7-20 tooth-icon " style="top: 104px;left: 197px;"></div>
+                <div class="rightDown6-20 tooth-icon " style="top: 124px;left: 202px;"></div> -->
+                <div class="rightDown5-20 tooth-icon " style="top: -116px;left: 210px;"></div>
+                <div class="rightDown4-20 tooth-icon " style="top: -72px;left: 225px;"></div>
+                <div class="rightDown3-20 tooth-icon " style="top: -48px;left: 253px;"></div>
+                <div class="rightDown2-20 tooth-icon " style="top: -37px;left: 280px;"></div>
+                <div class="rightDown1-20 tooth-icon " style="top: -45px;left: 327px;"></div>
+
+                <!-- <div class="leftDown7-20 tooth-icon " style="top: 63px;left: 497px;"></div>
+                <div class="leftDown6-20 tooth-icon " style="top: 88px;left: 494px;"></div> -->
+                <div class="leftDown5-20 tooth-icon " style="top: -220px;left: 490px;"></div>
+                <div class="leftDown4-20 tooth-icon " style="top: -169px;left: 474px;"></div>
+                <div class="leftDown3-20 tooth-icon " style="top: -145px;left: 442px;"></div>
+                <div class="leftDown2-20 tooth-icon " style="top: -138px;left: 418px;"></div>
+                <div class="leftDown1-20 tooth-icon " style="top: -145px;left: 371px;"></div>
             </div>
         </div>　
     </div>    
@@ -3644,6 +4053,11 @@
     $("input:radio[name='allergy-answer-13'][value='"+ r13 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-14'][value='"+ r14 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-15'][value='"+ r15 +"']").attr('checked','true');
+    $("input:radio[name='answer-16'][value='"+ r16 +"']").attr('checked','true');
+
+    if (r16 == 0) {
+        $('#tr-micro').hide();
+    }
 </script>
 </s:if>
 
@@ -4566,6 +4980,98 @@
     $(".rightUp5").addClass(styles[rightUp5]);
     $(".rightUp6").addClass(styles[rightUp6]);
     $(".rightUp7").addClass(styles[rightUp7]);
+</script>
+</s:if>
+
+
+<!-- tooth20 -->
+<s:if test="allTestResultVo.resultTooth20">
+<script type="text/javascript">
+    var leftUp1 = $('#leftUp1-20').val();
+    var leftUp2 = $('#leftUp2-20').val();
+    var leftUp3 = $('#leftUp3-20').val();
+    var leftUp4 = $('#leftUp4-20').val();
+    var leftUp5 = $('#leftUp5-20').val();
+    // var leftUp6 = $('#leftUp6-20').val();
+    // var leftUp7 = $('#leftUp7-20').val();
+
+    var rightUp1 = $('#rightUp1-20').val();
+    var rightUp2 = $('#rightUp2-20').val();
+    var rightUp3 = $('#rightUp3-20').val();
+    var rightUp4 = $('#rightUp4-20').val();
+    var rightUp5 = $('#rightUp5-20').val();
+    // var rightUp6 = $('#rightUp6-20').val();
+    // var rightUp7 = $('#rightUp7-20').val();
+
+    var leftDown1 = $('#leftDown1-20').val();
+    var leftDown2 = $('#leftDown2-20').val();
+    var leftDown3 = $('#leftDown3-20').val();
+    var leftDown4 = $('#leftDown4-20').val();
+    var leftDown5 = $('#leftDown5-20').val();
+    // var leftDown6 = $('#leftDown6-20').val();
+    // var leftDown7 = $('#leftDown7-20').val();
+
+    var rightDown1 = $('#rightDown1-20').val();
+    var rightDown2 = $('#rightDown2-20').val();
+    var rightDown3 = $('#rightDown3-20').val();
+    var rightDown4 = $('#rightDown4-20').val();
+    var rightDown5 = $('#rightDown5-20').val();
+    // var rightDown6 = $('#rightDown6-20').val();
+    // var rightDown7 = $('#rightDown7-20').val();
+
+    var a1 = parseInt($("#attentionBrushWay-20").val());
+    var a2 = parseInt($("#attentionBrushHabit-20").val());
+    var a3 = parseInt($("#attentionTeethSituation-20").val());
+    var a4 = parseInt($("#attentionFu-20").val());
+
+
+    var remarkTooth = $('#remarkTooth-20').val();
+
+
+    var reg = new RegExp("<br>","g");//g,表示全部替换。
+    remarkTooth = remarkTooth.replace(reg,"\n");
+    $('#remarkTextTooth-20').html(remarkTooth);
+
+    // 1未生长 0歪斜 2龋齿
+    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
+
+    $("input:radio[name='answer-1-tooth-20'][value='"+ a1 +"']").attr('checked','true');
+    $("input:radio[name='answer-2-tooth-20'][value='"+ a2 +"']").attr('checked','true');
+    $("input:radio[name='answer-3-tooth-20'][value='"+ a3 +"']").attr('checked','true');
+    $("input:radio[name='answer-4-tooth-20'][value='"+ a4 +"']").attr('checked','true');
+    
+
+    // 给div样式
+    $(".leftDown1-20").addClass(styles[leftDown1]);
+    $(".leftDown2-20").addClass(styles[leftDown2]);
+    $(".leftDown3-20").addClass(styles[leftDown3]);
+    $(".leftDown4-20").addClass(styles[leftDown4]);
+    $(".leftDown5-20").addClass(styles[leftDown5]);
+    // $(".leftDown6-20").addClass(styles[leftDown6]);
+    // $(".leftDown7-20").addClass(styles[leftDown7]);
+    $(".rightDown1-20").addClass(styles[rightDown1]);
+    $(".rightDown2-20").addClass(styles[rightDown2]);
+    $(".rightDown3-20").addClass(styles[rightDown3]);
+    $(".rightDown4-20").addClass(styles[rightDown4]);
+    $(".rightDown5-20").addClass(styles[rightDown5]);
+    // $(".rightDown6-20").addClass(styles[rightDown6]);
+    // $(".rightDown7-20").addClass(styles[rightDown7]);
+    
+    $(".leftUp1-20").addClass(styles[leftUp1]);
+    $(".leftUp2-20").addClass(styles[leftUp2]);  
+    $(".leftUp3-20").addClass(styles[leftUp3]);  
+    $(".leftUp4-20").addClass(styles[leftUp4]);  
+    $(".leftUp5-20").addClass(styles[leftUp5]);  
+    // $(".leftUp6-20").addClass(styles[leftUp6]);  
+    // $(".leftUp7-20").addClass(styles[leftUp7]);      
+    
+    $(".rightUp1-20").addClass(styles[rightUp1]);
+    $(".rightUp2-20").addClass(styles[rightUp2]);
+    $(".rightUp3-20").addClass(styles[rightUp3]);
+    $(".rightUp4-20").addClass(styles[rightUp4]);
+    $(".rightUp5-20").addClass(styles[rightUp5]);
+    // $(".rightUp6-20").addClass(styles[rightUp6]);
+    // $(".rightUp7-20").addClass(styles[rightUp7]);
 </script>
 </s:if>
 
