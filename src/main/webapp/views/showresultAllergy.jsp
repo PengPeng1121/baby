@@ -141,6 +141,7 @@
         <input id="r13" type="hidden" value="<s:property value="resultAllergy.r13" />">
         <input id="r14" type="hidden" value="<s:property value="resultAllergy.r14" />">
         <input id="r15" type="hidden" value="<s:property value="resultAllergy.r15" />">
+        <input id="r16" type="hidden" value="<s:property value="resultAllergy.r16" />">
 
 
 
@@ -331,9 +332,24 @@
                                 <label for="radio-answer-12-0">无</label>
                             </td>
                         </tr>
+                        
                         <tr class="item-line">
                             <td class="item">
-                                两种以上微量元素缺乏(如果未化验或不清楚，请填写‘无’)
+                                是否检查过微量元素
+                            </td>
+                            <td>
+                                <input type="radio" name="answer-16" value="1"   id="radio-answer-16-1">
+                                <label for="radio-answer-16-1">是</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="answer-16" value="0" id="radio-answer-16-0">
+                                <label for="radio-answer-16-0">否</label>
+                            </td>
+                        </tr>
+
+                        <tr class="item-line" id="tr-micro">
+                            <td class="item">
+                                两种以上微量元素缺乏
                             </td>
                             <td>
                                 <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1">
@@ -443,6 +459,13 @@
     $("input:radio[name='answer-13'][value='"+ r13 +"']").attr('checked','true');
     $("input:radio[name='answer-14'][value='"+ r14 +"']").attr('checked','true');
     $("input:radio[name='answer-15'][value='"+ r15 +"']").attr('checked','true');
+    $("input:radio[name='answer-16'][value='"+ r16 +"']").attr('checked','true');
+
+    if (r16 == 0) {
+        $('#tr-micro').hide();
+    }
+
+
 
 
 

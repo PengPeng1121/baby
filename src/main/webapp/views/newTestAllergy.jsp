@@ -266,8 +266,25 @@
                             </td>
                             
                         </tr>
+                        
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>13</td>
+                            <td>
+                                是否检查过微量元素
+                            </td>
+                            <td>
+                                <label for="radio-answer-16-1">
+                                    <input type="radio" name="answer-16" value="1"   id="radio-answer-16-1" class="radio16" / >是
+                                </label>
+                            </td>
+                            <td>
+                                <label for="radio-answer-16-0">
+                                    <input type="radio" name="answer-16" value="0" id="radio-answer-16-0" class="radio16" />否
+                                </label>
+                            </td>
+                        </tr>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;" id="tr-micro">
+                            <td>14</td>
                             <td>
                                 两种以上微量元素缺乏
                             </td>
@@ -284,7 +301,7 @@
                             
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>14</td>
+                            <td>15</td>
                             <td>
                                 反复呼吸道感染
                             </td>
@@ -301,7 +318,7 @@
                             
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>15</td>
+                            <td>16</td>
                             <td>
                                 嗓子呼噜声
                             </td>
@@ -485,6 +502,7 @@
         var r13 = parseInt($("input:radio[name='answer-13']:checked").val());
         var r14 = parseInt($("input:radio[name='answer-14']:checked").val());
         var r15 = parseInt($("input:radio[name='answer-15']:checked").val());
+        var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
 
         
         var data = "{";
@@ -507,9 +525,21 @@
         data['resultAllergy.r13'] = r13;
         data['resultAllergy.r14'] = r14;
         data['resultAllergy.r15'] = r15;
+        data['resultAllergy.r16'] = r16;
 
         return data
     }
+
+
+    $(".radio16").change( function select(target) {
+        var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
+        console.log(r16);
+        if (r16 === 1) {
+            $('#tr-micro').show();
+        } else {
+            $('#tr-micro').hide();
+        }
+    });
 
 
 </script>
