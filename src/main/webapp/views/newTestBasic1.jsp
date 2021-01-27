@@ -89,13 +89,14 @@
                         <form id="form" method="POST" enctype="multipart/form-data" 
                          onsubmit="return check();">
                             <input type="file" accept="image/*" name="file" id="file"/>
-                            <input type="button"  onclick="uploadImg()" value="提交"/>
+                            
                         </form>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
+                    <input type="button" class="btn btn-primary" onclick="uploadImg()" value="确认使用当前照片"/>
                     
                     
                 </div>
