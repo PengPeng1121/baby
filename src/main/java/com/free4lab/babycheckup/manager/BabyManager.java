@@ -8,6 +8,7 @@ import com.free4lab.babycheckup.model.Baby;
 import com.free4lab.babycheckup.model.BabySchema;
 import com.free4lab.babycheckup.model.FamilyRelation;
 import com.free4lab.babycheckup.model.Parent;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 
@@ -72,13 +73,19 @@ public class BabyManager {
         return baby;
     }
 
-    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday, int hoid,int page,int pageSize,boolean unionFlag){
+    public static List<Baby> findBySearch(String babyName, String parentName, String parentTel, Date birthday,String lastTestTimeEnd,String lastTestTimeBegin, int hoid,int page,int pageSize,boolean unionFlag){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
         }
         if(birthday != null ) {
             babyParams.put("birthday", birthday);
+        }
+        if(StringUtils.isNotBlank(lastTestTimeBegin)){
+            babyParams.put("lastTestTimeBegin", lastTestTimeBegin+" 00:00:00");
+        }
+        if(StringUtils.isNotBlank(lastTestTimeEnd)){
+            babyParams.put("lastTestTimeEnd", lastTestTimeEnd+" 23:59:59");
         }
         Map<String, Object> parentParams = new HashMap<String, Object>();
         if(parentName != null && !parentName.equals("")) {
@@ -98,7 +105,7 @@ public class BabyManager {
         return babyList;
     }
 
-    public static List<Baby> findBySearchWithTestId(String babyName, String parentName, String parentTel, Date birthday, int hoid,Integer testId,int page,int pageSize,boolean unionFlag){
+    public static List<Baby> findBySearchWithTestId(String babyName, String parentName, String parentTel, Date birthday,String lastTestTimeEnd,String lastTestTimeBegin,  int hoid,Integer testId,int page,int pageSize,boolean unionFlag){
         Map<String, Object> babyParams = new HashMap<String, Object>();
         if(babyName != null && !babyName.equals("")) {
             babyParams.put("name", babyName);
@@ -110,6 +117,13 @@ public class BabyManager {
         if(parentName != null && !parentName.equals("")) {
             parentParams.put("name", parentName);
         }
+        if(StringUtils.isNotBlank(lastTestTimeEnd)){
+            babyParams.put("lastTestTimeEnd", lastTestTimeEnd+" 23:59:59");
+        }
+        if(StringUtils.isNotBlank(lastTestTimeBegin)){
+            babyParams.put("lastTestTimeBegin", lastTestTimeBegin+" 00:00:00");
+        }
+
         if(parentTel != null && !parentTel.equals("")) {
             parentParams.put("tel", parentTel);
         }

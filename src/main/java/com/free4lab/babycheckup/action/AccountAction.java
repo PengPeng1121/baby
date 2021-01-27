@@ -67,7 +67,7 @@ public class AccountAction {
             } else {
                 ActionContext.getContext().getSession().put("logo", hospital.getLogo());
             }
-            redirectUrl = "/home";
+            redirectUrl = "/record";
             return "success";
         }
         wrongOfTelOrPsw = true;

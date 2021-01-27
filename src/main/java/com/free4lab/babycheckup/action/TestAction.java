@@ -70,6 +70,7 @@ public class TestAction {
     private List<ResultBloodType> resultBloodTypeList = new ArrayList<ResultBloodType>();
     private List<ResultAttention> resultAttentionList = new ArrayList<ResultAttention>();
     private List<ResultEcg> resultECGList = new ArrayList<ResultEcg>();
+    private List<ResultTooth20> resultTooth20List = new ArrayList<ResultTooth20>();
     private int babyid;
     private Baby baby;
     private String SUCCESS = "success";
@@ -113,6 +114,7 @@ public class TestAction {
     private ResultBloodType resultBloodType;
     private ResultAttention resultAttention;
     private ResultEcg resultECG;
+    private ResultTooth20 resultTooth20;
     private String days;
     private int day;
     //早产天数
@@ -537,6 +539,16 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 牙 - 20
+    public String newTestTooth20() {
+        testid = 54;
+        baby = BabyManager.findById(babyid);
+        Date today = new Date(new java.util.Date().getTime());
+        Date birth = baby.getBirthday();
+        days = Math.round((differentdays(birth,today))/30.4)+"";
+        return SUCCESS;
+    }
+
     // 喂养
     public String newTestFeed() {
         testid = 37;
@@ -738,6 +750,7 @@ public class TestAction {
         resultBloodTypeList = ResultBloodTypeManager.findResultBybid(babyid);
         resultAttentionList = ResultAttentionManager.findResultBybid(babyid);
         resultECGList = ResultEcgManager.findResultBybid(babyid);
+        resultTooth20List = ResultTooth20Manager.findResultBybid(babyid);
         Date today = new Date(new java.util.Date().getTime());
         Date birth = baby.getBirthday();
         days = (differentdays(birth,today))/30+"";
@@ -1527,6 +1540,22 @@ public class TestAction {
         return SUCCESS;
     }
 
+    // 牙 - 20
+    public String saveResultTooth20(){
+
+        Integer userId = (Integer)ActionContext.getContext().getSession().get("userid");
+        resultTooth20.setHosId((Integer) ActionContext.getContext().getSession().get("hoid"));
+        resultTooth20.setUserId(userId);
+        resultTooth20.setTestId(54);
+        resultTooth20.setTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        resultTooth20.setState("finished");
+        resultTooth20.setUpdateTime(new Date());
+        resultTooth20.setCreateTime(new Date());
+        resultTooth20.setUpdateUser(userId.toString());
+        resultTooth20.setCreateUser(userId.toString());
+        ResultTooth20Manager.saveResult(resultTooth20);
+        return SUCCESS;
+    }
 
     // 喂养
     public String saveResultFeed(){
@@ -2636,5 +2665,21 @@ public class TestAction {
 
     public void setResultECG(ResultEcg resultECG) {
         this.resultECG = resultECG;
+    }
+
+    public List<ResultTooth20> getResultTooth20List() {
+        return resultTooth20List;
+    }
+
+    public void setResultTooth20List(List<ResultTooth20> resultTooth20List) {
+        this.resultTooth20List = resultTooth20List;
+    }
+
+    public ResultTooth20 getResultTooth20() {
+        return resultTooth20;
+    }
+
+    public void setResultTooth20(ResultTooth20 resultTooth20) {
+        this.resultTooth20 = resultTooth20;
     }
 }

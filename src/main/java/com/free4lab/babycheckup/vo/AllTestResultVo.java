@@ -85,6 +85,8 @@ public class AllTestResultVo {
 
     private ResultEcg resultECG;
 
+    private ResultTooth20 resultTooth20;
+
     public Result2016 getResult2016() {
         return result2016;
     }
@@ -355,5 +357,13 @@ public class AllTestResultVo {
 
     public void setResultECG(ResultEcg resultECG) {
         this.resultECG = resultECG;
+    }
+
+    public ResultTooth20 getResultTooth20() {
+        return resultTooth20;
+    }
+
+    public void setResultTooth20(ResultTooth20 resultTooth20) {
+        this.resultTooth20 = resultTooth20;
     }
 }

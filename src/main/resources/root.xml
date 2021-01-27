@@ -152,6 +152,11 @@
             <result name="success" >views/newTestTooth.jsp</result>
             <result name="fail">error.jsp</result>
         </action>
+        <!--牙-->
+        <action name="newtestTooth20" method="newTestTooth20" class="com.free4lab.babycheckup.action.TestAction">
+            <result name="success" >views/newTestTooth20.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
         <!--喂养-->
         <action name="newtestFeed" method="newTestFeed" class="com.free4lab.babycheckup.action.TestAction">
             <result name="success" >views/newTestFeed.jsp</result>
@@ -361,6 +366,11 @@
         <!--牙-->
         <action name="showresultTooth" method="showResultTooth" class="com.free4lab.babycheckup.action.ResultToothAction">
             <result name="success" >views/showresultTooth.jsp</result>
+        </action>
+
+        <!--牙-->
+        <action name="showresultTooth20" method="showResultTooth20" class="com.free4lab.babycheckup.action.ResultTooth20Action">
+            <result name="success" >views/showresultTooth20.jsp</result>
         </action>
 
         <!--喂养-->
@@ -812,6 +822,14 @@
             <result name="fail">error.jsp</result>
         </action>
 
+        <!-- 牙 -->
+        <action name="saveresultTooth20" method="saveResultTooth20" class="com.free4lab.babycheckup.action.TestAction">
+            <result type="json" name="success">
+                <param name="includeProperties">resultTooth20,resultTooth20.id</param>
+            </result>
+            <result name="fail">error.jsp</result>
+        </action>
+
         <!-- 喂养 -->
         <action name="saveresultFeed" method="saveResultFeed" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
@@ -1118,7 +1136,8 @@
         <!--刷新baby测评时间-->
         <action name="refreshExamTime" method="refreshExamTime" class="com.free4lab.babycheckup.action.BabyAction">
             <result type="json" name="success">
-                <param name="includeProperties">babyid</param>
+                <param name="includeProperties">babyid,testId,resultId</param>
+
             </result>
         </action>
     </package>

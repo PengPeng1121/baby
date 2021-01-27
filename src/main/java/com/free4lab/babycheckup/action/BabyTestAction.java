@@ -2,10 +2,7 @@ package com.free4lab.babycheckup.action;
 
 
 import com.free4lab.babycheckup.manager.*;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Result;
-import com.free4lab.babycheckup.model.Result2016;
-import com.free4lab.babycheckup.model.TestResultRecord;
+import com.free4lab.babycheckup.model.*;
 import com.free4lab.babycheckup.vo.AllTestResultVo;
 import com.free4lab.babycheckup.vo.OtherResultVo;
 import org.apache.commons.lang.StringUtils;
@@ -166,6 +163,9 @@ public class BabyTestAction {
                     break;
                 case 53:
                     allTestResultVo.setResultECG(ResultEcgManager.findResultByid(resultId));
+                    break;
+                case 54:
+                    allTestResultVo.setResultTooth20(ResultTooth20Manager.findResultByid(resultId));
                     break;
             }
         }
