@@ -83,9 +83,13 @@
         }
         var tel = getUrlParam('tel');
         var psw = getUrlParam('psw');
-        $('#tel-input').val(tel)
-        $('#psw-input').val(psw)
-        $('#thirdForm').submit();
+        
+        if (tel&psw) {
+            $('#tel-input').val($.md5(tel))
+            $('#psw-input').val($.md5(psw))
+            $('#thirdForm').submit();
+        }
+        
     })();
 
 </script>
