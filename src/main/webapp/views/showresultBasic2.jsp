@@ -269,7 +269,7 @@
                                     <span style="margin-left: 31px">
                                         <s:property value="resultBasic2.childBearingAge"/> 周岁
                                     </span>
-                                    <span style="margin-left: 105px">
+                                    <!-- <span style="margin-left: 105px">
                                         胎次:
                                     </span>
                                     <span>
@@ -280,7 +280,7 @@
                                     </span>
                                     <span>
                                         <s:property value="resultBasic2.pregnantCount"/>
-                                    </span>
+                                    </span> -->
                                 </td>
                             </tr>
                             <tr class="item-line">

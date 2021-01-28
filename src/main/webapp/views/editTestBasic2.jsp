@@ -169,7 +169,7 @@
                                     <input id="childBearingAge" style="width: 100%" /> 
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <!-- <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>7</td>
                                 <td>
                                     胎次:
@@ -177,9 +177,9 @@
                                 <td colspan="2">
                                     <input id="babyCount"  style="width: 100%" /> 
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>8</td>
+                                <td>7</td>
                                 <td>
                                     母亲妊娠期患病情况:
                                 </td>
@@ -197,7 +197,7 @@
                                     <input id="motherHeight"  style="width: 80%" /> cm
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <!-- <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                                 <td>9</td>
                                 <td>
                                     产次:
@@ -205,9 +205,9 @@
                                 <td colspan="2">
                                     <input id="pregnantCount" style="width: 100%" /> 
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>10</td>
+                                <td>8</td>
                                 <td>
                                     有无重大疾病或发生意外情况:
                                 </td>
@@ -216,7 +216,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>11</td>
+                                <td>9</td>
                                 <td>
                                     父母系三代有先天家族遗传性疾病:
                                 </td>
@@ -231,7 +231,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>12</td>
+                                <td>10</td>
                                 <td>
                                     外祖父母、祖父母有慢性咳嗽、季节性咳嗽、运动后咳嗽或哮喘病史
                                 </td>
@@ -247,7 +247,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>13</td>
+                                <td>11</td>
                                 <td>
                                     父母双方有皮肤发痒、荨麻疹、药疹、湿疹病史
                                 </td>
@@ -263,7 +263,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>14</td>
+                                <td>12</td>
                                 <td>
                                     父母双方有哮喘、鼻炎、慢性咳嗽病史
                                 </td>
@@ -279,7 +279,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>15</td>
+                                <td>13</td>
                                 <td>
                                     父母双方有食物吸收差、身体消瘦、排便异常病史。
                                 </td>
@@ -295,7 +295,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>16</td>
+                                <td>14</td>
                                 <td>
                                     是否有过敏史
                                 </td>
@@ -311,7 +311,7 @@
                                 </td>
                             </tr>
                             <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>17</td>
+                                <td>15</td>
                                 <td>
                                     过敏情况:
                                 </td>
