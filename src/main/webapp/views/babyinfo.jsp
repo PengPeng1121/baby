@@ -70,15 +70,24 @@
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
 
+
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary" onclick="nowTest()" id="now"> 查看最新体检报告</button>
+                            <button class="btn btn-default" onclick="allTest()" id="all"> 查看全部报告</button>
+                        </td>
+                    </tr>
+
+
                     <s:iterator value="resultBasic1List" var="resultBasic1">
-                        <tr class="manage doctorOperate parent view">
+                        <tr class="manage doctorOperate parent view basic1">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           基础信息
-                        </span>
+                                            <span class="front-text-title" >
+                                               基础信息
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -99,14 +108,14 @@
 
 
                     <s:iterator value="resultBasic2List" var="resultBasic2">
-                        <tr class="manage doctorOperate parent view">
+                        <tr class="manage doctorOperate parent view basic2">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           生产、既往、家族史
-                        </span>
+                                            <span class="front-text-title" >
+                                               生产、既往、家族史
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -118,7 +127,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="editTestBasic2?id=<s:property value="#resultBasic2.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultBasic2?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -126,14 +135,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultGroup2020List" var="resultGroup2020">
-                        <tr class="manage doctorOperate view">
+                        <tr class="manage doctorOperate view group2020">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           生长发育测验2020
-                        </span>
+                                            <span class="front-text-title" >
+                                               生长发育测验2020
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -153,14 +162,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultAllergyList" var="resultAllergy">
-                        <tr class="manage doctorOperate parent view">
+                        <tr class="manage doctorOperate parent view allery">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           食物过敏或不耐受风险评估
-                        </span>
+                                            <span class="front-text-title" >
+                                               食物过敏或不耐受风险评估
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -172,7 +181,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="editTestAllergy?id=<s:property value="#resultAllergy.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -180,14 +189,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultPhysicalList" var="resultPhysical">
-                        <tr class="manage doctorOperate view">
+                        <tr class="manage doctorOperate view physical">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           体格头面检查
-                        </span>
+                                            <span class="front-text-title" >
+                                               体格头面检查
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -199,7 +208,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="editresultPhysical?id=<s:property value="#resultPhysical.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -207,14 +216,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultFeedList" var="resultFeed">
-                        <tr class="manage doctorOperate feed view">
+                        <tr class="manage doctorOperate feed view feed">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           营养与喂养
-                        </span>
+                                            <span class="front-text-title" >
+                                               营养与喂养
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -226,7 +235,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="editresultFeed?id=<s:property value="#resultFeed.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -234,14 +243,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultToothList" var="resultTooth">
-                        <tr class="manage doctorOperate tooth view">
+                        <tr class="manage doctorOperate toothD view tooth">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           牙齿(28颗)
-                        </span>
+                                            <span class="front-text-title" >
+                                               牙齿(28颗)
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -252,7 +261,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTooth.id"/>, 36)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultTooth.id"/>, 36)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -260,14 +269,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultTooth20List" var="resultTooth20">
-                        <tr class="manage doctorOperate tooth view">
+                        <tr class="manage doctorOperate toothD view tooth20">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           牙齿(20颗)
-                        </span>
+                                            <span class="front-text-title" >
+                                               牙齿(20颗)
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -278,7 +287,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultTooth20?id=<s:property value="#resultTooth20.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTooth20.id"/>, 54)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultTooth20.id"/>, 54)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -286,14 +295,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultFeel2020List" var="resultFeel2020">
-                        <tr class="manage doctorOperate view">
+                        <tr class="manage doctorOperate view feel2020">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           感觉统合能力2020
-                        </span>
+                                            <span class="front-text-title" >
+                                               感觉统合能力2020
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -311,16 +320,15 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="result2016List" var="re">
-                        <tr class="new-test manage doctorOperate view">
+                        <tr class="new-test manage doctorOperate view 2016">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                            <span class="front-text-title" >
-                                0-6岁小儿神经心理发育检查表2016
-                            </span>
+                                            <span class="front-text-title" >
+                                                0-6岁小儿神经心理发育检查表2016
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -337,43 +345,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
-
-
-                    <s:iterator value="resultList" var="re">
-                        <tr class="old-test manage doctorOperate view">
-                            <td>
-                                <div class="media front-overflow-visible" style="padding: 7px;">
-                                    <div class="media-body front-overflow-visible" >
-                                        <h4 class="media-heading " >
-                            <span class="front-text-title" >
-                                0-6岁小儿神经心理发育检查表
-                            </span>
-                                        </h4>
-                                        <div class="front-text-break">
-                                            <div class="col-md-12" style="padding-left:0px;float: left;">
-                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
-                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re.time" format="yyyy-MM-dd HH:mm:ss" /></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <a class="btn btn-default" href="showreult?id=<s:property value="#re.id"/>">查看报告</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </s:iterator>
+                    </s:iterator> 
 
                     <s:iterator value="resultAttentionList" var="resultAttention">
-                        <tr class="manage doctorOperate heart view">
+                        <tr class="manage doctorOperate heart view attention">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           儿童智商.注意力评估及指导
-                        </span>
+                                            <span class="front-text-title" >
+                                               儿童智商.注意力评估及指导
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -384,7 +366,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultAttention?id=<s:property value="#resultAttention.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultAttention.id"/>, 52)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultAttention.id"/>, 52)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -392,14 +374,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultEyeList" var="resultEye">
-                        <tr class="manage doctorOperate hushi view">
+                        <tr class="manage doctorOperate hushi view eye">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           视力
-                        </span>
+                                            <span class="front-text-title" >
+                                               视力
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -410,7 +392,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultEye?id=<s:property value="#resultEye.id"/>">查看报告</a>
-                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultEye.id"/>, 41)">选中此报告</a>
+                                        <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultEye.id"/>, 41)">选中此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -418,14 +400,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultBMDList" var="resultBMD">
-                        <tr class="manage doctorOperate hushi view">
+                        <tr class="manage doctorOperate hushi view bmd">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           骨密度
-                        </span>
+                                            <span class="front-text-title" >
+                                               骨密度
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -444,14 +426,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultEarList" var="resultEar">
-                        <tr class="manage doctorOperate hushi view">
+                        <tr class="manage doctorOperate hushi view ear">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           听力
-                        </span>
+                                            <span class="front-text-title" >
+                                               听力
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -469,16 +451,15 @@
                         </tr>
                     </s:iterator>
 
-
                     <s:iterator value="resultBloodList" var="resultBlood">
-                        <tr class="manage doctorOperate jianyan view">
+                        <tr class="manage doctorOperate jianyan view blood">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           血常规
-                        </span>
+                                            <span class="front-text-title" >
+                                               血常规
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -497,14 +478,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultBoneList" var="resultBone">
-                        <tr class="manage doctorOperate jianyan view">
+                        <tr class="manage doctorOperate jianyan view bone">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           骨碱酶
-                        </span>
+                                            <span class="front-text-title" >
+                                               骨碱酶
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -523,14 +504,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultMicroList" var="resultMicro">
-                        <tr class="manage doctorOperate jianyan view">
+                        <tr class="manage doctorOperate jianyan view micro">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           微量元素
-                        </span>
+                                            <span class="front-text-title" >
+                                               微量元素
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -549,14 +530,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultUrineList" var="resultUrine">
-                        <tr class="manage doctorOperate jianyan view">
+                        <tr class="manage doctorOperate jianyan view urine">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           尿常规
-                        </span>
+                                            <span class="front-text-title" >
+                                               尿常规
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -576,14 +557,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultECGList" var="resultECG">
-                        <tr class="manage doctorOperate jianyan view">
+                        <tr class="manage doctorOperate jianyan view ecg">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           心电图
-                        </span>
+                                            <span class="front-text-title" >
+                                               心电图
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -604,14 +585,14 @@
                     </s:iterator>
 
                     <s:iterator value="resultSummaryList" var="resultSummary">
-                        <tr class="manage doctorOperate view">
+                        <tr class="manage doctorOperate view summary">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           总评
-                        </span>
+                                            <span class="front-text-title" >
+                                               总评
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -630,7 +611,30 @@
                         </tr>
                     </s:iterator>
 
-                    
+                    <s:iterator value="resultList" var="re">
+                        <tr class="old-test manage doctorOperate view">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                                0-6岁小儿神经心理发育检查表
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#re.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" href="showreult?id=<s:property value="#re.id"/>">查看报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>                   
 
                     <!-- <s:iterator value="result3_6List" var="re3_6">
                         <tr>
@@ -823,15 +827,15 @@
                         </tr>
                     </s:iterator> -->
 
-                    <s:iterator value="resultDDSTList" var="resultDDST">
+                    <!-- <s:iterator value="resultDDSTList" var="resultDDST">
                         <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           小儿智能发育筛查表
-                        </span>
+                                            <span class="front-text-title" >
+                                               小儿智能发育筛查表
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -846,7 +850,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
                     <!-- <s:iterator value="resultNeiList" var="resultNei">
                         <tr>
@@ -946,18 +950,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator> -->
-                   
+                    </s:iterator> -->                 
 
-                    <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">
+                    <!-- <s:iterator value="resultQiZhi2020List" var="resultQiZhi2020">
                         <tr class="manage doctorOperate qizhi view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           气质测评2020
-                        </span>
+                                            <span class="front-text-title" >
+                                               气质测评2020
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -972,17 +975,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultRearList" var="resultRear">
+                    <!-- <s:iterator value="resultRearList" var="resultRear">
                         <tr class="manage doctorOperate qizhi view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           养育风格指导
-                        </span>
+                                            <span class="front-text-title" >
+                                               养育风格指导
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -997,17 +1000,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultPlanList" var="resultPlan">
+                    <!-- <s:iterator value="resultPlanList" var="resultPlan">
                         <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           定制化方案
-                        </span>
+                                            <span class="front-text-title" >
+                                               定制化方案
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1022,17 +1025,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultBlessList" var="resultBless">
+                    <!-- <s:iterator value="resultBlessList" var="resultBless">
                         <tr class="manage doctorOperate view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           祝福
-                        </span>
+                                            <span class="front-text-title" >
+                                               祝福
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1047,21 +1050,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    
-
-                    
-
-                    <s:iterator value="resultHBsList" var="resultHBs">
+                    <!-- <s:iterator value="resultHBsList" var="resultHBs">
                         <tr class="manage doctorOperate jianyan view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           乙肝
-                        </span>
+                                            <span class="front-text-title" >
+                                               乙肝
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1076,17 +1075,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultFastAllergyList" var="resultFastAllergy">
+                    <!-- <s:iterator value="resultFastAllergyList" var="resultFastAllergy">
                         <tr class="manage doctorOperate jianyan view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           21项速发过敏原
-                        </span>
+                                            <span class="front-text-title" >
+                                               21项速发过敏原
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1101,17 +1100,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultFoodAllergyList" var="resultFoodAllergy">
+                    <!-- <s:iterator value="resultFoodAllergyList" var="resultFoodAllergy">
                         <tr class="manage doctorOperate jianyan view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           14项慢性食物过敏原
-                        </span>
+                                            <span class="front-text-title" >
+                                               14项慢性食物过敏原
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1126,17 +1125,17 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
 
-                    <s:iterator value="resultBloodTypeList" var="resultBloodType">
+                    <!-- <s:iterator value="resultBloodTypeList" var="resultBloodType">
                         <tr class="manage doctorOperate jianyan view">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
-                        <span class="front-text-title" >
-                           血型鉴定
-                        </span>
+                                            <span class="front-text-title" >
+                                               血型鉴定
+                                            </span>
                                         </h4>
                                         <div class="front-text-break">
                                             <div class="col-md-12" style="padding-left:0px;float: left;">
@@ -1151,7 +1150,7 @@
                                 </div>
                             </td>
                         </tr>
-                    </s:iterator>
+                    </s:iterator> -->
                     <tr>
                         <td>
                             <button class="btn btn-primary pull-right" onclick="report()"> 查看所选报告</button>
@@ -1234,56 +1233,88 @@
         }
     }
 
-    // 适配陆总
-    if (hoid != 2) {
-        $('.old-test').hide();
-    } else {
-        $('.new-test').hide();
+    function nowTest() {
+        $('#all').removeClass('btn-primary').addClass('btn-default')
+        $('#now').removeClass('btn-default').addClass('btn-primary')
+        $('.view').hide().removeClass('showView');
+        $($('.basic1')[0]).show().addClass('showView');
+        $($('.basic2')[0]).show().addClass('showView');
+        $($('.group2020')[0]).show().addClass('showView');
+        $($('.allery')[0]).show().addClass('showView');
+        $($('.physical')[0]).show().addClass('showView');
+        $($('.feed')[0]).show().addClass('showView');
+        $($('.tooth')[0]).show().addClass('showView');
+        $($('.tooth20')[0]).show().addClass('showView');
+        $($('.feel2020')[0]).show().addClass('showView');
+        $($('.2016')[0]).show().addClass('showView');
+        $($('.attention')[0]).show().addClass('showView');
+        $($('.eye')[0]).show().addClass('showView');
+        $($('.bmd')[0]).show().addClass('showView');
+        $($('.ear')[0]).show().addClass('showView');
+        $($('.blood')[0]).show().addClass('showView');
+        $($('.bone')[0]).show().addClass('showView');
+        $($('.micro')[0]).show().addClass('showView');
+        $($('.urine')[0]).show().addClass('showView');
+        $($('.ecg')[0]).show().addClass('showView');
+        $($('.summary')[0]).show().addClass('showView');
+        authorize()
+    }
+    
+    function allTest() {
+        // alert('111')
+        $('#now').removeClass('btn-primary').addClass('btn-default')
+        $('#all').removeClass('btn-default').addClass('btn-primary')
+        $('.view').show().addClass('showView');
+        authorize()
     }
 
+    function authorize() {
+        var username = $("#username").val();
+        if (username.indexOf('家长填报') != -1) {
+            console.log('家长视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.parent').show().addClass('showView');
+        }
 
+        if (username == '心理测评师') {
+            console.log('心理测评师视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.heart').show().addClass('showView');
+        }
 
-    if (username.indexOf('家长填报') != -1) {
-        console.log('家长视角。。。。。。');
-        $('.view').hide();
-        $('.parent').show();
+        if (username == '气质测评师') {
+            console.log('气质测评师视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.qizhi').show().addClass('showView');
+        }
+
+        if (username == '牙齿测评师') {
+            console.log('牙齿测评师视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.toothD').show().addClass('showView');
+        }
+
+        if (username == '营养师') {
+            console.log('营养师视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.feed').show().addClass('showView');
+        }
+
+        if (username.indexOf('检验师') != -1) {
+            console.log('检验师视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.jianyan').show().addClass('showView');
+        }
+
+        if (username.indexOf('护士') != -1) {
+            console.log('护士视角。。。。。。');
+            $('.view').hide().removeClass('showView');
+            $('.hushi').show().addClass('showView');
+        }
     }
 
-    if (username == '心理测评师') {
-        console.log('心理测评师视角。。。。。。');
-        $('.view').hide();
-        $('.heart').show();
-    }
-
-    if (username == '气质测评师') {
-        console.log('气质测评师视角。。。。。。');
-        $('.view').hide();
-        $('.qizhi').show();
-    }
-
-    if (username == '牙齿测评师') {
-        console.log('牙齿测评师视角。。。。。。');
-        $('.view').hide();
-        $('.tooth').show();
-    }
-
-    if (username == '营养师') {
-        console.log('营养师视角。。。。。。');
-        $('.view').hide();
-        $('.feed').show();
-    }
-
-    if (username.indexOf('检验师') != -1) {
-        console.log('检验师视角。。。。。。');
-        $('.view').hide();
-        $('.jianyan').show();
-    }
-
-    if (username.indexOf('护士') != -1) {
-        console.log('护士视角。。。。。。');
-        $('.view').hide();
-        $('.hushi').show();
-    }
+    nowTest();
+    
 
 
     
