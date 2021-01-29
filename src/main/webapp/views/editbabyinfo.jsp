@@ -38,18 +38,17 @@
                         <option value="满族">满族</option>
                         <option value="蒙族">蒙族</option>
                         <option value="回族">回族</option>
-                        <option value="回族">壮族</option>
-                        <option value="回族">维吾尔族</option>
-                        <option value="回族">苗族</option>
-                        <option value="回族">朝鲜族</option>
-                        <option value="回族">彝族</option>
-                        <option value="回族">藏族</option>
-                        <option value="回族">土家族</option>
-                        <option value="回族">土家族</option>
+                        <option value="壮族">壮族</option>
+                        <option value="维吾尔族">维吾尔族</option>
+                        <option value="苗族">苗族</option>
+                        <option value="朝鲜族">朝鲜族</option>
+                        <option value="彝族">彝族</option>
+                        <option value="藏族">藏族</option>
+                        <option value="土家族">土家族</option>
                         <option value="蒙古族">蒙古族</option>
-                        <option value="回族">布依族</option>
-                        <option value="回族">瑶族</option>
-                        <option value="回族">白族</option>
+                        <option value="布依族">布依族</option>
+                        <option value="瑶族">瑶族</option>
+                        <option value="白族">白族</option>
                         <option value="其他">其他</option>
                     </select></span>
                 </div>
