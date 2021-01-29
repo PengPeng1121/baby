@@ -38,18 +38,18 @@
 						<option value="满族">满族</option>
                         <option value="蒙族">蒙族</option>
                         <option value="回族">回族</option>
-                        <option value="回族">壮族</option>
-                        <option value="回族">维吾尔族</option>
-                        <option value="回族">苗族</option>
-                        <option value="回族">朝鲜族</option>
-                        <option value="回族">彝族</option>
-                        <option value="回族">藏族</option>
-                        <option value="回族">土家族</option>
-                        <option value="回族">土家族</option>
+                        <option value="壮族">壮族</option>
+                        <option value="维吾尔族">维吾尔族</option>
+                        <option value="苗族">苗族</option>
+                        <option value="朝鲜族">朝鲜族</option>
+                        <option value="彝族">彝族</option>
+                        <option value="藏族">藏族</option>
+                        <option value="土家族">土家族</option>
+                        
                         <option value="蒙古族">蒙古族</option>
-                        <option value="回族">布依族</option>
-                        <option value="回族">瑶族</option>
-                        <option value="回族">白族</option>
+                        <option value="布依族">布依族</option>
+                        <option value="瑶族">瑶族</option>
+                        <option value="白族">白族</option>
                         <option value="其他">其他</option>
                     </select></span>
                 </div>
@@ -198,34 +198,50 @@
         }else if(($("#f_tel").val().trim().length != 0)&&(($("#f_tel").val().trim().length != 11)||(isTelCode($("#f_tel").val().trim())) == false)) {
             $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '请填写格式正确的手机号！'});
         }else {
+            // 判断名字与手机号唯一
             $.ajax({
-                url : 'record/saveBaby',
+                url : 'record/babyRepeat',
                 type : 'post',
                 data : {
-                    "baby.gender": $("#gender").val(),
-                    "baby.name": $("#baby_name").val().trim(),
-                    "baby.userid": $("#doctor").val(),
-                    birthday: $("#birthday").val(),
-                    "baby.nation": $("#nation").val(),
-
-                    "father.name":'父亲',
-
-                    "father.tel":$("#f_tel").val().trim(),
-                    
-                    "mother.name":'母亲',
-                    
-                    "mother.tel":0,
-                    
+                    "babyName": $("#baby_name").val().trim(),
+                    "fatherTel":$("#f_tel").val().trim(),   
                 },
                 success : function(data) {
-                    if(data.babyid != 0 &&data.babyid != null) {
-                        $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'新建资料成功！'});
-                        $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
-                            $("#babyid").val(data.babyid);
-                        }).on('hide.bs.modal', function (){window.location.href = 'home';});
-                    } else {
-                        $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'保存失败！'});
+                    var repeatFlag = data.repeatFlag;
+                    if (!repeatFlag) {
+                        $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '病历重复，无法新建'});
+                        return;
                     }
+                    $.ajax({
+                        url : 'record/saveBaby',
+                        type : 'post',
+                        data : {
+                            "baby.gender": $("#gender").val(),
+                            "baby.name": $("#baby_name").val().trim(),
+                            "baby.userid": $("#doctor").val(),
+                            birthday: $("#birthday").val(),
+                            "baby.nation": $("#nation").val(),
+
+                            "father.name":'父亲',
+
+                            "father.tel":$("#f_tel").val().trim(),
+                            
+                            "mother.name":'母亲',
+                            
+                            "mother.tel":0,
+                            
+                        },
+                        success : function(data) {
+                            if(data.babyid != 0 &&data.babyid != null) {
+                                $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'新建资料成功！'});
+                                $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
+                                    $("#babyid").val(data.babyid);
+                                }).on('hide.bs.modal', function (){window.location.href = 'home';});
+                            } else {
+                                $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'保存失败！'});
+                            }
+                        }
+                    });
                 }
             });
         }
