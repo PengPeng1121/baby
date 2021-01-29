@@ -98,7 +98,7 @@
                         <form id="form" method="POST" enctype="multipart/form-data" 
                          onsubmit="return check();">
                             <input type="file" class="btn btn-default" accept="image/*" name="file" id="file"/>
-                            <input type="button"  class="btn btn-primary" style="margin-top: 20px"  onclick="uploadImg()" value="提交"/>
+                            <input type="button"  class="btn btn-primary" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
                         </form>
                     </div>
                     <div class="col-md-8" style="padding-bottom: 10px">
