@@ -78,6 +78,7 @@
             <input id="r13Old" type="hidden" value="<s:property value="resultAllergy.r13" />">
             <input id="r14Old" type="hidden" value="<s:property value="resultAllergy.r14" />">
             <input id="r15Old" type="hidden" value="<s:property value="resultAllergy.r15" />">
+            <input id="r16Old" type="hidden" value="<s:property value="resultAllergy.r16" />">
 
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
@@ -287,6 +288,22 @@
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
                             <td>13</td>
                             <td>
+                                是否检查过微量元素
+                            </td>
+                            <td>
+                                <label for="radio-answer-16-1">
+                                    <input type="radio" name="answer-16" value="1"   id="radio-answer-16-1" class="radio16" / >是
+                                </label>
+                            </td>
+                            <td>
+                                <label for="radio-answer-16-0">
+                                    <input type="radio" name="answer-16" value="0" id="radio-answer-16-0" class="radio16" />否
+                                </label>
+                            </td>
+                        </tr>
+                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;" id="tr-micro">
+                            <td>14</td>
+                            <td>
                                 两种以上微量元素缺乏
                             </td>
                             <td>
@@ -302,7 +319,7 @@
                             
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>14</td>
+                            <td>15</td>
                             <td>
                                 反复呼吸道感染
                             </td>
@@ -319,7 +336,7 @@
                             
                         </tr>
                         <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                            <td>15</td>
+                            <td>16</td>
                             <td>
                                 嗓子呼噜声
                             </td>
@@ -384,6 +401,7 @@
     var r13Old = $('#r13Old').val();
     var r14Old = $('#r14Old').val();
     var r15Old = $('#r15Old').val();
+    var r16Old = $('#r16Old').val();
 
     $("input:radio[name='answer-1'][value='"+ r1Old +"']").attr('checked','true');
     $("input:radio[name='answer-2'][value='"+ r2Old +"']").attr('checked','true');
@@ -400,9 +418,18 @@
     $("input:radio[name='answer-13'][value='"+ r13Old +"']").attr('checked','true');
     $("input:radio[name='answer-14'][value='"+ r14Old +"']").attr('checked','true');
     $("input:radio[name='answer-15'][value='"+ r15Old +"']").attr('checked','true');
+    $("input:radio[name='answer-16'][value='"+ r16Old +"']").attr('checked','true');
 
 
-
+    $(".radio16").change( function select(target) {
+        var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
+        console.log(r16);
+        if (r16 === 1) {
+            $('#tr-micro').show();
+        } else {
+            $('#tr-micro').hide();
+        }
+    });
 
     
 
@@ -466,6 +493,7 @@
         var r13 = parseInt($("input:radio[name='answer-13']:checked").val());
         var r14 = parseInt($("input:radio[name='answer-14']:checked").val());
         var r15 = parseInt($("input:radio[name='answer-15']:checked").val());
+        var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
 
         
         var data = "{";
@@ -488,6 +516,7 @@
         data['resultAllergy.r13'] = r13;
         data['resultAllergy.r14'] = r14;
         data['resultAllergy.r15'] = r15;
+        data['resultAllergy.r16'] = r16;
 
         resultID = $("#resultID").val();
 

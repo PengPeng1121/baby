@@ -443,6 +443,7 @@
     var r13 = $('#r13').val();
     var r14 = $('#r14').val();
     var r15 = $('#r15').val();
+    var r16 = $('#r16').val();
 
     $("input:radio[name='answer-1'][value='"+ r1 +"']").attr('checked','true');
     $("input:radio[name='answer-2'][value='"+ r2 +"']").attr('checked','true');
