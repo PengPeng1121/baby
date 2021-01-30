@@ -523,6 +523,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultMicro?id=<s:property value="#resultMicro.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultMicro.id"/>, 45)">选中此报告</a>
+                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultMicro.id"/>, 45)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -1231,6 +1232,21 @@
 
             }
         }
+    }
+
+    function delReport(target,rId, tId) {
+        $.ajax({
+            url: 'delTest',
+            type: 'post',
+            data: {
+                babyid: $("#babyid").val(),
+                testId: tId,
+                resultId: rId
+            },
+            success:function (json) {
+                history.go(0);
+            }
+        })
     }
 
     function nowTest() {
