@@ -244,80 +244,96 @@
         }else if(($("#f_tel").val().trim().length != 0)&&(($("#f_tel").val().trim().length != 11)||(isTelCode($("#f_tel").val().trim())) == false)) {
             $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '请填写格式正确的手机号！'});
         }else {
+            // 校验姓名与手机号是否唯一
             $.ajax({
-                url : 'record/editBaby',
+                url : 'record/babyRepeat',
                 type : 'post',
                 data : {
-                    "babyUpdate.babyId": window.bid,
-                    "babyUpdate.babyGender": $("#gender").val(),
-                    "babyUpdate.babyName": $("#baby_name").val(),
-                    "babyUpdate.doctorId": $("#doctor").val(),
-                    "babyUpdate.babyNation": $("#nation").val(),
-                    "babyUpdate.babyDelivery": $("#birth-way").val(),
-                    "babyUpdate.babyBirth": $("#birthday").val(),
-
-
-                    "babyUpdate.fatherName":'父亲',
-                    // "babyUpdate.fatherCareer":$("#father_career").val(),
-                    "babyUpdate.fatherTel":$("#f_tel").val(),
-                    // "babyUpdate.fatherEducation":$("#education-f").val(),
-                    // "babyUpdate.fatherWorkTime":$("#f_worktime").val(),
-                    // "babyUpdate.fatherBirth":$("#f_birthday").val(),
-                    // "babyUpdate.fatherEmail":$("#f_email").val(),
-                    
-                    "babyUpdate.motherName":'母亲',
-                    // "babyUpdate.motherCarrer":$("#mother_career").val(),
-                    // "babyUpdate.motherEducation":$("#education-m").val(),
-                    "babyUpdate.motherTel":0,
-                    // "babyUpdate.motherWorkTime":$("#m_worktime").val(),
-                    // "babyUpdate.motherBirth":$("#m_birthday").val(),
-                    // "babyUpdate.motherEmail":$("#m_email").val(),
-
-                    // "baby.relation":$("#relation").val(),
-                    // "baby.bloodtype":$("#blood").val(),
-                    // "baby.postcode":$("#postcode").val(),
-                    // "baby.account":$("#account").val(),
-                    // "baby.province":$("#province").val(),
-                    // "baby.city":$("#city").val(),
-                    // "baby.address":$("#address").val(),
-                    // "baby.motherIllness": $("#mother_illness").val(),
-                    // "baby.parity": $("#pregnant").val(),
-                    // "baby.pregnancy": $("#duration").val(),
-                    // "baby.education": $("#education").val(),
-                    // "baby.preDelivery": $("#pre_delivery").val(),
-                    // "baby.deformity": $("#deformity").val(),
-                    // "baby.onlyChild": $("#only_child").val(),
-                    // frontalSuture1:$("#frontal_suture1").val(),
-                    // frontalSuture2:$("#frontal_suture2").val(),
-                    // "baby.motherBirthage": $("#mother_birthage").val(),
-                    // "baby.marriage": $("#marriage").val(),
-                    // "baby.asphyxia": $("#choke").val(),
-                    // "baby.birthWeight": $("#birth_weight").val(),
-                    // "baby.jaundice": $("#jaundice").val(),
-                    // "baby.havePumping": $("#pumping").val(),
-                    // "baby.pumpingTimes": $("#pumping-times").val(),
-                    // "baby.pumpingBegin": $("#pumping-begin").val(),
-                    // "baby.familyHistory": $("#family_history").val(),
-                    // "baby.illnessHistory": $("#illness_history").val(),
-                    // "baby.height": $("#height").val(),
-                    // "baby.weight": $("#weight").val(),
-                    // "baby.head": $("#head").val(),
-                    // "baby.reason": $("#reason").val(),
-                    // "baby.overview": $("#overview").val(),
-                    // "baby.evaluation": $("#evaluation").val(),
-                    // "baby.diagnosis": $("#diagnosis").val(),
-                    // "baby.remarks": $("#remark").val()
+                    "babyName": $("#baby_name").val().trim(),
+                    "fatherTel":$("#f_tel").val().trim(),   
                 },
                 success : function(data) {
-                    if(data.babyid != 0 &&data.babyid != null) {
-                        $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'编辑资料成功！'});
-                        $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
-                            $("#babyid").val(data.babyid);
-                        }).on('hide.bs.modal', function (){window.location.href = 'home';});
-                    } else {
-                        $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'编辑失败！'});
+                    var repeatFlag = data.repeatFlag;
+                    if (!repeatFlag) {
+                        $.fillTipBox({type: 'danger', icon: 'glyphicon-alert', content: '病历重复，无法新建'});
+                        return;
                     }
-                }
+                    $.ajax({
+                        url : 'record/editBaby',
+                        type : 'post',
+                        data : {
+                            "babyUpdate.babyId": window.bid,
+                            "babyUpdate.babyGender": $("#gender").val(),
+                            "babyUpdate.babyName": $("#baby_name").val(),
+                            "babyUpdate.doctorId": $("#doctor").val(),
+                            "babyUpdate.babyNation": $("#nation").val(),
+                            "babyUpdate.babyDelivery": $("#birth-way").val(),
+                            "babyUpdate.babyBirth": $("#birthday").val(),
+
+
+                            "babyUpdate.fatherName":'父亲',
+                            // "babyUpdate.fatherCareer":$("#father_career").val(),
+                            "babyUpdate.fatherTel":$("#f_tel").val(),
+                            // "babyUpdate.fatherEducation":$("#education-f").val(),
+                            // "babyUpdate.fatherWorkTime":$("#f_worktime").val(),
+                            // "babyUpdate.fatherBirth":$("#f_birthday").val(),
+                            // "babyUpdate.fatherEmail":$("#f_email").val(),
+                            
+                            "babyUpdate.motherName":'母亲',
+                            // "babyUpdate.motherCarrer":$("#mother_career").val(),
+                            // "babyUpdate.motherEducation":$("#education-m").val(),
+                            "babyUpdate.motherTel":0,
+                            // "babyUpdate.motherWorkTime":$("#m_worktime").val(),
+                            // "babyUpdate.motherBirth":$("#m_birthday").val(),
+                            // "babyUpdate.motherEmail":$("#m_email").val(),
+
+                            // "baby.relation":$("#relation").val(),
+                            // "baby.bloodtype":$("#blood").val(),
+                            // "baby.postcode":$("#postcode").val(),
+                            // "baby.account":$("#account").val(),
+                            // "baby.province":$("#province").val(),
+                            // "baby.city":$("#city").val(),
+                            // "baby.address":$("#address").val(),
+                            // "baby.motherIllness": $("#mother_illness").val(),
+                            // "baby.parity": $("#pregnant").val(),
+                            // "baby.pregnancy": $("#duration").val(),
+                            // "baby.education": $("#education").val(),
+                            // "baby.preDelivery": $("#pre_delivery").val(),
+                            // "baby.deformity": $("#deformity").val(),
+                            // "baby.onlyChild": $("#only_child").val(),
+                            // frontalSuture1:$("#frontal_suture1").val(),
+                            // frontalSuture2:$("#frontal_suture2").val(),
+                            // "baby.motherBirthage": $("#mother_birthage").val(),
+                            // "baby.marriage": $("#marriage").val(),
+                            // "baby.asphyxia": $("#choke").val(),
+                            // "baby.birthWeight": $("#birth_weight").val(),
+                            // "baby.jaundice": $("#jaundice").val(),
+                            // "baby.havePumping": $("#pumping").val(),
+                            // "baby.pumpingTimes": $("#pumping-times").val(),
+                            // "baby.pumpingBegin": $("#pumping-begin").val(),
+                            // "baby.familyHistory": $("#family_history").val(),
+                            // "baby.illnessHistory": $("#illness_history").val(),
+                            // "baby.height": $("#height").val(),
+                            // "baby.weight": $("#weight").val(),
+                            // "baby.head": $("#head").val(),
+                            // "baby.reason": $("#reason").val(),
+                            // "baby.overview": $("#overview").val(),
+                            // "baby.evaluation": $("#evaluation").val(),
+                            // "baby.diagnosis": $("#diagnosis").val(),
+                            // "baby.remarks": $("#remark").val()
+                        },
+                        success : function(data) {
+                            if(data.babyid != 0 &&data.babyid != null) {
+                                $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'编辑资料成功！'});
+                                $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
+                                    $("#babyid").val(data.babyid);
+                                }).on('hide.bs.modal', function (){window.location.href = 'home';});
+                            } else {
+                                $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'编辑失败！'});
+                            }
+                        }
+                    });
+            }
             });
         }
     }
