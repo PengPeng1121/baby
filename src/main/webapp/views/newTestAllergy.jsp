@@ -503,6 +503,9 @@
         var r14 = parseInt($("input:radio[name='answer-14']:checked").val());
         var r15 = parseInt($("input:radio[name='answer-15']:checked").val());
         var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
+        if (r16 === 0) {
+            r13 = 99;
+        }
 
         
         var data = "{";

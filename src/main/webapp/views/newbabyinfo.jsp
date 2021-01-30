@@ -65,7 +65,7 @@
                 </div> -->
                 <label class="col-lg-1 col-md-2 control-label required">父母电话</label>
                 <div class="col-md-2">
-                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="13212312311">
+                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="13212312310">
                 </div>
                 <!-- <label class="col-lg-1 col-md-2 control-label required">母-姓名</label>
                 <div class="col-md-2">

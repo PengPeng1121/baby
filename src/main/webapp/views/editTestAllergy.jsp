@@ -403,6 +403,7 @@
     var r15Old = $('#r15Old').val();
     var r16Old = $('#r16Old').val();
 
+
     $("input:radio[name='answer-1'][value='"+ r1Old +"']").attr('checked','true');
     $("input:radio[name='answer-2'][value='"+ r2Old +"']").attr('checked','true');
     $("input:radio[name='answer-3'][value='"+ r3Old +"']").attr('checked','true');
@@ -494,6 +495,10 @@
         var r14 = parseInt($("input:radio[name='answer-14']:checked").val());
         var r15 = parseInt($("input:radio[name='answer-15']:checked").val());
         var r16 = parseInt($("input:radio[name='answer-16']:checked").val());
+
+        if (r16 === 0) {
+            r13 = 99;
+        }
 
         
         var data = "{";
