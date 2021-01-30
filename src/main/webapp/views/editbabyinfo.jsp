@@ -250,7 +250,8 @@
                 type : 'post',
                 data : {
                     "babyName": $("#baby_name").val().trim(),
-                    "fatherTel":$("#f_tel").val().trim(),   
+                    "fatherTel":$("#f_tel").val().trim(),
+                    "babyid":window.bid 
                 },
                 success : function(data) {
                     var repeatFlag = data.repeatFlag;
