@@ -473,71 +473,71 @@
 
     var hairIsNormalOld = $('#hairIsNormalOld').val();
     var hairReasonOld = $('#hairReasonOld').val();
-    $("#answer-1-detail").text(hairIsNormalOld);
+    $("#answer-1-detail").val(hairReasonOld);
 
     var fingernailIsNormalOld = $('#fingernailIsNormalOld').val();
     var fingernailReasonOld = $('#fingernailReasonOld').val();
-    $("#answer-2-detail").text(fingernailReasonOld);
+    $("#answer-2-detail").val(fingernailReasonOld);
 
     var skinIsNormalOld = $('#skinIsNormalOld').val();
     var skinReasonOld = $('#skinReasonOld').val();
-    $("#answer-3-detail").text(skinReasonOld);
+    $("#answer-3-detail").val(skinReasonOld);
 
     var faceIsNormalOld = $('#faceIsNormalOld').val();
     var faceReasonOld = $('#faceReasonOld').val();
-    $("#answer-4-detail").text(faceReasonOld);
+    $("#answer-4-detail").val(faceReasonOld);
 
     var headIsNormalOld = $('#headIsNormalOld').val();
     var headReasonOld = $('#headReasonOld').val();
-    $("#answer-5-detail").text(headReasonOld);
+    $("#answer-5-detail").val(headReasonOld);
 
     var eyeIsNormalOld = $('#eyeIsNormalOld').val();
     var eyeReasonOld = $('#eyeReasonOld').val();
-    $("#answer-6-detail").text(eyeReasonOld);
+    $("#answer-6-detail").val(eyeReasonOld);
 
     var earIsNormalOld = $('#earIsNormalOld').val();
     var earReasonOld = $('#earReasonOld').val();
-    $("#answer-7-detail").text(earReasonOld);
+    $("#answer-7-detail").val(earReasonOld);
 
     var mouthIsNormalOld = $('#mouthIsNormalOld').val();
     var mouthReasonOld = $('#mouthReasonOld').val();
-    $("#answer-8-detail").text(mouthReasonOld);
+    $("#answer-8-detail").val(mouthReasonOld);
 
     var neckIsNormalOld = $('#neckIsNormalOld').val();
     var neckReasonOld = $('#neckReasonOld').val();
-    $("#answer-9-detail").text(neckReasonOld);
+    $("#answer-9-detail").val(neckReasonOld);
 
     var lymphIsNormalOld = $('#lymphIsNormalOld').val();
     var lymphReasonOld = $('#lymphReasonOld').val();
-    $("#answer-10-detail").text(lymphReasonOld);
+    $("#answer-10-detail").val(lymphReasonOld);
 
     var thoracicCavityIsNormalOld = $('#thoracicCavityIsNormalOld').val();
     var thoracicCavityReasonOld = $('#thoracicCavityReasonOld').val();
-    $("#answer-11-detail").text(thoracicCavityReasonOld);
+    $("#answer-11-detail").val(thoracicCavityReasonOld);
 
     var heartIsNormalOld = $('#heartIsNormalOld').val();
     var heartReasonOld = $('#heartReasonOld').val();
-    $("#answer-12-detail").text(heartReasonOld);
+    $("#answer-12-detail").val(heartReasonOld);
 
     var lungIsNormalOld = $('#lungIsNormalOld').val();
     var lungReasonOld = $('#lungReasonOld').val();
-    $("#answer-13-detail").text(lungReasonOld);
+    $("#answer-13-detail").val(lungReasonOld);
 
     var stomachIsNormalOld = $('#stomachIsNormalOld').val();
     var stomachReasonOld = $('#stomachReasonOld').val();
-    $("#answer-14-detail").text(stomachReasonOld);
+    $("#answer-14-detail").val(stomachReasonOld);
 
     var limbIsNormalOld = $('#limbIsNormalOld').val();
     var limbReasonOld = $('#limbReasonOld').val();
-    $("#answer-15-detail").text(limbReasonOld);
+    $("#answer-15-detail").val(limbReasonOld);
 
     var sexFeaturesIsNormalOld = $('#sexFeaturesIsNormalOld').val();
     var sexFeaturesReasonOld = $('#sexFeaturesReasonOld').val();
-    $("#answer-16-detail").text(sexFeaturesReasonOld);
+    $("#answer-16-detail").val(sexFeaturesReasonOld);
 
     var vdIsNormalOld = $('#vdIsNormalOld').val();
     var vdReasonOld = $('#vdReasonOld').val();
-    $("#answer-17-detail").text(vdReasonOld);
+    $("#answer-17-detail").val(vdReasonOld);
 
     $("input:radio[name='answer-1'][value='"+ hairIsNormalOld +"']").attr('checked','true');
     $("input:radio[name='answer-2'][value='"+ fingernailIsNormalOld +"']").attr('checked','true');
