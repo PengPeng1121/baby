@@ -772,6 +772,10 @@
             width: 700px !important;
         }
 
+        #summary #content-table{
+            top: 280px !important;
+        }
+
         #attention #name-table{
             width: 700px !important;
             top: 140px;

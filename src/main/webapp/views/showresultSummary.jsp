@@ -50,7 +50,7 @@
         }
         #content-table{
             left: 100px !important;
-            top: 240px !important;
+            top: 280px !important;
         }
         #date{
             left: 550px !important;
@@ -61,15 +61,19 @@
             border-bottom: 1px solid #df938f !important;
             margin-left: 10px !important;
             width: 160px !important;
+            
         }
         #birth-text{
             display: inline-block !important;
             border-bottom: 1px solid #df938f !important;
             margin-left: 10px !important;
             width: 160px !important;
+
         }
         #name-table{
             width: 700px !important;
+            position: relative;
+            top: 120px !important;
         }
     </style>
 </head>

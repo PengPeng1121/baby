@@ -100,7 +100,7 @@
                                         <a class="btn btn-default" target="_blank" href="editTestBasic1?id=<s:property value="#resultBasic1.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultBasic1?id=<s:property value="#resultBasic1.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBasic1.id"/>, 33)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultBasic1.id"/>, 33)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBasic1.id"/>, 33)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -129,7 +129,7 @@
                                         <a class="btn btn-default" target="_blank" href="editTestBasic2?id=<s:property value="#resultBasic2.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultBasic2?id=<s:property value="#resultBasic2.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultBasic2.id"/>, 34)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultBasic2.id"/>, 34)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBasic2.id"/>, 34)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -157,7 +157,7 @@
                                         <a class="btn btn-default" target="_blank" href="editresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultGroup2020?id=<s:property value="#resultGroup2020.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultGroup2020.id"/>, 29)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultGroup2020.id"/>, 29)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultGroup2020.id"/>, 29)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -185,7 +185,7 @@
                                         <a class="btn btn-default" target="_blank" href="editTestAllergy?id=<s:property value="#resultAllergy.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultAllergy?id=<s:property value="#resultAllergy.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultAllergy.id"/>, 32)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultAllergy.id"/>, 32)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultAllergy.id"/>, 32)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -213,7 +213,7 @@
                                         <a class="btn btn-default" target="_blank" href="editresultPhysical?id=<s:property value="#resultPhysical.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultPhysical?id=<s:property value="#resultPhysical.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultPhysical.id"/>, 30)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultPhysical.id"/>, 30)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultPhysical.id"/>, 30)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -241,7 +241,7 @@
                                         <a class="btn btn-default" target="_blank" href="editresultFeed?id=<s:property value="#resultFeed.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultFeed?id=<s:property value="#resultFeed.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultFeed.id"/>, 37)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultFeed.id"/>, 37)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultFeed.id"/>, 37)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -268,7 +268,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultTooth?id=<s:property value="#resultTooth.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultTooth.id"/>, 36)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultTooth.id"/>, 36)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultTooth.id"/>, 36)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -295,7 +295,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultTooth20?id=<s:property value="#resultTooth20.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultTooth20.id"/>, 54)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultTooth20.id"/>, 54)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultTooth20.id"/>, 54)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -322,7 +322,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultFeel2020?id=<s:property value="#resultFeel2020.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultFeel2020.id"/>, 28)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultFeel2020.id"/>, 28)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultFeel2020.id"/>, 28)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -349,7 +349,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showreult2016?id=<s:property value="#re.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#re.id"/>, 26)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#re.id"/>, 26)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#re.id"/>, 26)">删除此报告</a>
 
                                     </div>
                                 </div>
@@ -377,7 +377,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultAttention?id=<s:property value="#resultAttention.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultAttention.id"/>, 52)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultAttention.id"/>, 52)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultAttention.id"/>, 52)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -404,7 +404,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultEye?id=<s:property value="#resultEye.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected " onclick="selecReport(this, <s:property value="#resultEye.id"/>, 41)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultEye.id"/>, 41)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultEye.id"/>, 41)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -431,7 +431,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultBMD?id=<s:property value="#resultBMD.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBMD.id"/>, 43)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultBMD.id"/>, 43)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBMD.id"/>, 43)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -458,7 +458,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultEar?id=<s:property value="#resultEar.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultEar.id"/>, 42)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultEar.id"/>, 42)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultEar.id"/>, 42)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -485,7 +485,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultBlood?id=<s:property value="#resultBlood.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBlood.id"/>, 44)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultBlood.id"/>, 44)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBlood.id"/>, 44)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -512,7 +512,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultBone?id=<s:property value="#resultBone.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultBone.id"/>, 46)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultBone.id"/>, 46)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBone.id"/>, 46)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -539,7 +539,7 @@
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultMicro?id=<s:property value="#resultMicro.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultMicro.id"/>, 45)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultMicro.id"/>, 45)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultMicro.id"/>, 45)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -567,7 +567,7 @@
                                         <a class="btn btn-default" target="_blank" href="showresultUrine?id=<s:property value="#resultUrine.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultUrine.id"/>, 47)">选中此报告</a>
                                         <!-- 47 -->
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultUrine.id"/>, 47)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultUrine.id"/>, 47)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -595,7 +595,7 @@
                                         <a class="btn btn-default" target="_blank" href="showresultECG?id=<s:property value="#resultECG.id"/>">查看报告</a>
                                         <!-- 53 -->
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultECG.id"/>, 53)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultECG.id"/>, 53)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultECG.id"/>, 53)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -623,7 +623,7 @@
                                         <a class="btn btn-default" target="_blank" href="editresultSummary?id=<s:property value="#resultSummary.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultSummary?id=<s:property value="#resultSummary.id"/>">查看报告</a>
                                         <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultSummary.id"/>, 31)">选中此报告</a>
-                                        <a class="btn btn-primary" onclick="delReport(this, <s:property value="#resultSummary.id"/>, 31)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultSummary.id"/>, 31)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>
@@ -1219,7 +1219,8 @@
                 ps+= ','
             }
         }
-        window.location = "showresultAll?babyid=" + babyid + "&ps=" + ps;
+        var url = "showresultAll?babyid=" + babyid + "&ps=" + ps;
+        window.open(url);
     }
 
 
