@@ -2114,11 +2114,11 @@
                             眼
                         </td>
                         <td>
-                            <input type="radio" name="answer-6" value="1"  id="radio-answer-6-1">
+                            <input type="radio" name="p-answer-6" value="1"  id="radio-answer-6-1">
                             <label for="radio-answer-6-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-6" value="0"  id="radio-answer-6-0">
+                            <input type="radio" name="p-answer-6" value="0"  id="radio-answer-6-0">
                             <label for="radio-answer-6-0">其他</label>
                         </td>
                         <td>
