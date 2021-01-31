@@ -462,7 +462,7 @@
     $("input:radio[name='answer-15'][value='"+ r15 +"']").attr('checked','true');
     $("input:radio[name='answer-16'][value='"+ r16 +"']").attr('checked','true');
 
-    if (r16 == 0) {
+    if (r16 == "0") {
         $('#tr-micro').hide();
     }
 

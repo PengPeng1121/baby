@@ -1091,7 +1091,8 @@
         <input id="lymphIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lymphIsNormal"/>">
         <input id="thoracicCavityIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.thoracicCavityIsNormal"/>">
         <input id="heartIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.heartIsNormal"/>">
-        <input id="lungIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.lungIsNormal"/>"
+        <input id="lungIsNormal" type="hidden" value="<s:property value="
+        allTestResultVo.resultPhysical.lungIsNormal"/>">
         <input id="stomachIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.stomachIsNormal"/>">
         <input id="limbIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.limbIsNormal"/>">
         <input id="sexFeaturesIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.sexFeaturesIsNormal"/>">
@@ -2033,11 +2034,11 @@
                             毛发
                         </td>
                         <td style="width: 85px">
-                            <input type="radio" name="answer-1" value="1"   id="radio-answer-1-1">
+                            <input type="radio" name="p-answer-1" value="1"   id="radio-answer-1-1">
                             <label for="radio-answer-1-1">正常</label>
                         </td>
                         <td style="width: 75px">
-                            <input type="radio" name="answer-1" value="0" id="radio-answer-1-0">
+                            <input type="radio" name="p-answer-1" value="0" id="radio-answer-1-0">
                             <label for="radio-answer-1-0">其他</label>
                         </td>
                         <td>
@@ -2049,11 +2050,11 @@
                             指甲
                         </td>
                         <td>
-                            <input type="radio" name="answer-2" value="1"   id="radio-answer-2-1">
+                            <input type="radio" name="p-answer-2" value="1"   id="radio-answer-2-1">
                             <label for="radio-answer-2-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-2" value="0" id="radio-answer-2-0">
+                            <input type="radio" name="p-answer-2" value="0" id="radio-answer-2-0">
                             <label for="radio-answer-2-0">其他</label>
                         </td>
                         <td>
@@ -2065,11 +2066,11 @@
                             皮肤
                         </td>
                         <td>
-                            <input type="radio" name="answer-3" value="1"   id="radio-answer-3-1">
+                            <input type="radio" name="p-answer-3" value="1"   id="radio-answer-3-1">
                             <label for="radio-answer-3-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-3" value="0" id="radio-answer-3-0">
+                            <input type="radio" name="p-answer-3" value="0" id="radio-answer-3-0">
                             <label for="radio-answer-3-0">其他</label>
                         </td>
                         <td>
@@ -2081,11 +2082,11 @@
                             面色
                         </td>
                         <td>
-                            <input type="radio" name="answer-4" value="1"   id="radio-answer-4-1">
+                            <input type="radio" name="p-answer-4" value="1"   id="radio-answer-4-1">
                             <label for="radio-answer-4-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-4" value="0" id="radio-answer-4-0">
+                            <input type="radio" name="p-answer-4" value="0" id="radio-answer-4-0">
                             <label for="radio-answer-4-0">其他</label>
                         </td>
                         <td>
@@ -2097,11 +2098,11 @@
                             头部
                         </td>
                         <td>
-                            <input type="radio" name="answer-5" value="1"  id="radio-answer-5-1">
+                            <input type="radio" name="p-answer-5" value="1"  id="radio-answer-5-1">
                             <label for="radio-answer-5-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-5" value="0" id="radio-answer-5-0">
+                            <input type="radio" name="p-answer-5" value="0" id="radio-answer-5-0">
                             <label for="radio-answer-5-0">其他</label>
                         </td>
                         <td>
@@ -2129,11 +2130,11 @@
                             耳
                         </td>
                         <td>
-                            <input type="radio" name="answer-7" value="1"  id="radio-answer-7-1">
+                            <input type="radio" name="p-answer-7" value="1"  id="radio-answer-7-1">
                             <label for="radio-answer-7-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-7" value="0" id="radio-answer-7-0">
+                            <input type="radio" name="p-answer-7" value="0" id="radio-answer-7-0">
                             <label for="radio-answer-7-0">其他</label>
                         </td>
                         <td>
@@ -2145,11 +2146,11 @@
                             口腔
                         </td>
                         <td>
-                            <input type="radio" name="answer-8" value="1"  id="radio-answer-8-1" >
+                            <input type="radio" name="p-answer-8" value="1"  id="radio-answer-8-1" >
                             <label for="radio-answer-8-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-8" value="0" id="radio-answer-8-0" >
+                            <input type="radio" name="p-answer-8" value="0" id="radio-answer-8-0" >
                             <label for="radio-answer-8-0">其他</label>
                         </td>
                         <td>
@@ -2161,11 +2162,11 @@
                             颈部
                         </td>
                         <td>
-                            <input type="radio" name="answer-9" value="1"  id="radio-answer-9-1" >
+                            <input type="radio" name="p-answer-9" value="1"  id="radio-answer-9-1" >
                             <label for="radio-answer-9-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-9" value="0" id="radio-answer-9-0" >
+                            <input type="radio" name="p-answer-9" value="0" id="radio-answer-9-0" >
                             <label for="radio-answer-9-0">其他</label>
                         </td>
                         <td>
@@ -2177,11 +2178,11 @@
                             淋巴结
                         </td>
                         <td>
-                            <input type="radio" name="answer-10" value="1"  id="radio-answer-10-1" >
+                            <input type="radio" name="p-answer-10" value="1"  id="radio-answer-10-1" >
                             <label for="radio-answer-10-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-10" value="0"  id="radio-answer-10-0" >
+                            <input type="radio" name="p-answer-10" value="0"  id="radio-answer-10-0" >
                             <label for="radio-answer-10-0">其他</label>
                         </td>
                         <td>
@@ -2193,11 +2194,11 @@
                             胸廓
                         </td>
                         <td>
-                            <input type="radio" name="answer-11" value="1"   id="radio-answer-11-1" >
+                            <input type="radio" name="p-answer-11" value="1"   id="radio-answer-11-1" >
                             <label for="radio-answer-11-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-11" value="0"  id="radio-answer-11-0" >
+                            <input type="radio" name="p-answer-11" value="0"  id="radio-answer-11-0" >
                             <label for="radio-answer-11-0">其他</label>
                         </td>
                         <td>
@@ -2209,11 +2210,11 @@
                             心脏
                         </td>
                         <td>
-                            <input type="radio" name="answer-12" value="1"  id="radio-answer-12-1">
+                            <input type="radio" name="p-answer-12" value="1"  id="radio-answer-12-1">
                             <label for="radio-answer-12-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-12" value="0" id="radio-answer-12-0">
+                            <input type="radio" name="p-answer-12" value="0" id="radio-answer-12-0">
                             <label for="radio-answer-12-0">其他</label>
                         </td>
                         <td>
@@ -2225,11 +2226,11 @@
                             肺
                         </td>
                         <td>
-                            <input type="radio" name="answer-13" value="1"   id="radio-answer-13-1">
+                            <input type="radio" name="p-answer-13" value="1"   id="radio-answer-13-1">
                             <label for="radio-answer-13-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-13" value="0" id="radio-answer-13-0">
+                            <input type="radio" name="p-answer-13" value="0" id="radio-answer-13-0">
                             <label for="radio-answer-13-0">其他</label>
                         </td>
                         <td>
@@ -2241,11 +2242,11 @@
                             腹
                         </td>
                         <td>
-                            <input type="radio" name="answer-14" value="1"  id="radio-answer-14-1">
+                            <input type="radio" name="p-answer-14" value="1"  id="radio-answer-14-1">
                             <label for="radio-answer-14-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-14" value="0" id="radio-answer-14-0">
+                            <input type="radio" name="p-answer-14" value="0" id="radio-answer-14-0">
                             <label for="radio-answer-14-0">其他</label>
                         </td>
                         <td>
@@ -2257,11 +2258,11 @@
                             四肢
                         </td>
                         <td>
-                            <input type="radio" name="answer-15" value="1"  id="radio-answer-15-1" >
+                            <input type="radio" name="p-answer-15" value="1"  id="radio-answer-15-1" >
                             <label for="radio-answer-15-1">正常</label>        
                         </td>
                         <td>
-                            <input type="radio" name="answer-15" value="0" id="radio-answer-15-0"  >
+                            <input type="radio" name="p-answer-15" value="0" id="radio-answer-15-0"  >
                             <label for="radio-answer-15-0">其他</label>
                         </td>
                         <td>
@@ -2273,11 +2274,11 @@
                             肛门/外生殖器
                         </td>
                         <td>
-                            <input type="radio" name="answer-16" value="1"  id="radio-answer-16-1"  >
+                            <input type="radio" name="p-answer-16" value="1"  id="radio-answer-16-1"  >
                             <label for="radio-answer-16-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-16" value="0" id="radio-answer-16-0"  >
+                            <input type="radio" name="p-answer-16" value="0" id="radio-answer-16-0"  >
                             <label for="radio-answer-16-0">其他</label>
                         </td>
                         <td>
@@ -2289,11 +2290,11 @@
                             可疑VD缺乏症状
                         </td>
                         <td>
-                            <input type="radio" name="answer-17" value="1" id="radio-answer-17-1"  >
+                            <input type="radio" name="p-answer-17" value="1" id="radio-answer-17-1"  >
                             <label for="radio-answer-17-1">正常</label>
                         </td>
                         <td>
-                            <input type="radio" name="answer-17" value="0" id="radio-answer-17-0" >
+                            <input type="radio" name="p-answer-17" value="0" id="radio-answer-17-0" >
                             <label for="radio-answer-17-0">其他</label>
                         </td>
                         <td>
@@ -4134,23 +4135,23 @@
     var vdReason = $('#vdReason').val();
     $("#answer-17-detail").text(vdReason);
 
-    $("input:radio[name='answer-1'][value='"+ hairIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-2'][value='"+ fingernailIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-3'][value='"+ skinIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-4'][value='"+ faceIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-5'][value='"+ headIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-6'][value='"+ eyeIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-7'][value='"+ earIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-8'][value='"+ mouthIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-9'][value='"+ neckIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-10'][value='"+ lymphIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-11'][value='"+ thoracicCavityIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-12'][value='"+ heartIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-13'][value='"+ lungIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-14'][value='"+ stomachIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-15'][value='"+ limbIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-16'][value='"+ sexFeaturesIsNormal +"']").attr('checked','true');
-    $("input:radio[name='answer-17'][value='"+ vdIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-1'][value='"+ hairIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-2'][value='"+ fingernailIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-3'][value='"+ skinIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-4'][value='"+ faceIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-5'][value='"+ headIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-6'][value='"+ eyeIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-7'][value='"+ earIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-8'][value='"+ mouthIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-9'][value='"+ neckIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-10'][value='"+ lymphIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-11'][value='"+ thoracicCavityIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-12'][value='"+ heartIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-13'][value='"+ lungIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-14'][value='"+ stomachIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-15'][value='"+ limbIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-16'][value='"+ sexFeaturesIsNormal +"']").attr('checked','true');
+    $("input:radio[name='p-answer-17'][value='"+ vdIsNormal +"']").attr('checked','true');
 
 
 
