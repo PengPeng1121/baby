@@ -1254,18 +1254,23 @@
     }
 
     function delReport(target,rId, tId) {
-        $.ajax({
-            url: 'delTest',
-            type: 'post',
-            data: {
-                babyid: $("#babyid").val(),
-                testId: tId,
-                resultId: rId
-            },
-            success:function (json) {
-                history.go(0);
+        $.tipModal('confirm', 'success', '确定删除本测评？', function(result) {
+            if(result) {
+                $.ajax({
+                    url: 'delTest',
+                    type: 'post',
+                    data: {
+                        babyid: $("#babyid").val(),
+                        testId: tId,
+                        resultId: rId
+                    },
+                    success:function (json) {
+                        history.go(0);
+                    }
+                });
             }
-        })
+        });
+        
     }
 
     function nowTest() {
