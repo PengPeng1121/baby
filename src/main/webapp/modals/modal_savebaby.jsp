@@ -78,6 +78,9 @@
         <a type="button" class="btn  modal-box text-center manage doctorOperate parent view" href="javascript:start_Allergy()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
 
+        <a type="button" class="btn  modal-box text-center manage doctorOperate parent view" href="javascript:start_ParentsCare()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">父母关心点</h4></a>
+
         <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Plan()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">定制化方案</h4></a>
 
@@ -525,6 +528,25 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestAllergy?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_ParentsCare() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthageAllergy",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestParentsCare?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

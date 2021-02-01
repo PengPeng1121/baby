@@ -77,6 +77,32 @@
                             <button class="btn btn-default" onclick="allTest()" id="all"> 查看全部报告</button>
                         </td>
                     </tr>
+                    <s:iterator value="resultParentsCareList" var="ParentsCare">
+                        <tr class="manage doctorOperate parent view care">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                               父母关心点
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">填写日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#ParentsCare.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" target="_blank" href="showresultParentsCare?id=<s:property value="#ParentsCare.id"/>">查看报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBasic1.id"/>, 55)">删除此报告</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
 
 
                     <s:iterator value="resultBasic1List" var="resultBasic1">
@@ -1277,6 +1303,7 @@
         $('#all').removeClass('btn-primary').addClass('btn-default')
         $('#now').removeClass('btn-default').addClass('btn-primary')
         $('.view').hide().removeClass('showView');
+        $($('.care')[0]).show().addClass('showView');
         $($('.basic1')[0]).show().addClass('showView');
         $($('.basic2')[0]).show().addClass('showView');
         $($('.group2020')[0]).show().addClass('showView');
