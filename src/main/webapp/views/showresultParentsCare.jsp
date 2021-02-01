@@ -136,7 +136,7 @@
                         </tr>
                         <tr>
                             <td>
-                                关心点1
+                                <p id="care1Text"></p>
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +146,7 @@
                         </tr>
                         <tr>
                             <td>
-                                关心点1
+                                <p id="care2Text"></p>
                             </td>
                         </tr><tr>
                             <td>
@@ -154,7 +154,7 @@
                             </td>
                         </tr><tr>
                             <td>
-                                关心点1
+                                <p id="care3Text"></p>
                             </td>
                         </tr>
                     </table>
@@ -202,9 +202,9 @@
         10: '不喜欢和小朋友交流、玩耍',
         11: '走路步态问题：如O型腿、X型腿等',
     }
-    $('#care1').text(map['care1']);
-    $('#care1').text(map['care2']);
-    $('#care1').text(map['care3']);
+    $('#care1Text').text(map['care1']);
+    $('#care2Text').text(map['care2']);
+    $('#care3Text').text(map['care3']);
     
     $('.print').click(function(){
         window.print();
