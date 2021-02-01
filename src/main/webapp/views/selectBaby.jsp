@@ -29,6 +29,7 @@
     <div class="container">
         <div class="panel panel-default front-panel" id="test">
             <div class="panel-body front-no-padding">
+                <div class="pull-right"><a type="button" class="btn btn-primary pull-right" href="record/new">新建孩子</a></div>
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
                         <s:iterator value="babyList" var="baby">
