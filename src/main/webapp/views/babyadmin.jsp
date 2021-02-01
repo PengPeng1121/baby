@@ -73,7 +73,8 @@
             </div>
         </div>--%>
         <div id="search_result">
-            正在查询中，请稍等。。。
+            <!-- <img style="width: 100%;" src="statics/img/loading.gif"> -->
+            <!-- 正在查询中，请稍等。。。 -->
         </div>
     </div>
     <footer class="footer-default">
@@ -99,7 +100,7 @@
 
 
     function searchbaby(page){
-        $('#search_result').html('正在查询中，请稍等。。。')
+        $('#search_result').html('<img style="width: 100%;" src="statics/img/loading.gif">');
         var babyName = $("#baby-name").val().trim();
         var babyBirth = $("#baby-birth").val().trim();
         var parentName = $("#parent-name").val().trim();
