@@ -28,5 +28,12 @@ public class ResultUrineManager {
         return resultUrine;
     }
     public static long countResultByHoid(int hoid) {return getResultUrineDAOInstance().countResultByHoid(hoid);}
-    public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultUrineDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+    public static long countResultByHosIdAndTestId(int hoid,int testId) {
+        return getResultUrineDAOInstance().countResultByHosIdAndTestId(hoid,testId);
+    }
+
+    public static void deleteResult(int id){
+        getResultUrineDAOInstance().deleteResult(id);
+    }
+
 }

@@ -30,4 +30,8 @@ public class ResultEcgManager {
     }
     public static long countResultByHoid(int hoid) {return getResultEcgDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultEcgDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultEcgDAOInstance().deleteResult(id);
+    }
 }

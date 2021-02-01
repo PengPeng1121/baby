@@ -25,4 +25,8 @@ public class ResultManager2016 {
     }
     public static long countResultByHoid(int hoid) {return getResult2016DAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResult2016DAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResult2016DAOInstance().deleteResult(id);
+    }
 }

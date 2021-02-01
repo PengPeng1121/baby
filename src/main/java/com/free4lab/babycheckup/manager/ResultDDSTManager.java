@@ -29,4 +29,8 @@ public class ResultDDSTManager {
     public static Integer findQuestions(int testId, int testType, int monthAge){
         return getResultDAOInstance().findQuestions(testId,testType,monthAge);
     }
+
+    public static void deleteResult(int id){
+        getResultDAOInstance().deleteResult(id);
+    }
 }

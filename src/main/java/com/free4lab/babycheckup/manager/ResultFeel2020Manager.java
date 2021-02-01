@@ -26,4 +26,7 @@ public class ResultFeel2020Manager {
     public static long countResultByHoid(int hoid) {return getResultFeel2020DAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultFeel2020DAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static void deleteResult(int id){
+        getResultFeel2020DAOInstance().deleteResult(id);
+    }
 }

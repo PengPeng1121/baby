@@ -25,4 +25,8 @@ public class ResultQiZhi2020Manager {
     }
     public static long countResultByHoid(int hoid) {return getResultQiZhiDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultQiZhiDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultQiZhiDAOInstance().deleteResult(id);
+    }
 }

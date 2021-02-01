@@ -29,4 +29,8 @@ public class ResultHbsManager {
     }
     public static long countResultByHoid(int hoid) {return getResultHbsDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultHbsDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultHbsDAOInstance().deleteResult(id);
+    }
 }

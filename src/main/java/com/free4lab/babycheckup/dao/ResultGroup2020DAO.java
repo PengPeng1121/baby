@@ -64,4 +64,8 @@ public class ResultGroup2020DAO extends AbstractDAO<ResultGroup2020> {
         String testid="testId";
         return super.countByProperty(hoid,hosid,testid,testId);
     }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

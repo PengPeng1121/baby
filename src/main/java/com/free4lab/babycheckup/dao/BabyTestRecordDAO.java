@@ -42,4 +42,22 @@ public class BabyTestRecordDAO extends AbstractDAO<BabyTestRecord> {
         super.save(record);
     }
 
+    public BabyTestRecord findByCondition(Integer testId,Integer resultId,Integer babyId){
+        List<BabyTestRecord> records = super.findByProperty2("testId",testId,"resultId",resultId);
+        if(CollectionUtils.isEmpty(records)){
+            return null;
+        }else {
+            for (BabyTestRecord record:records) {
+                if(record.getBabyId().equals(babyId)){
+                    return record;
+                }
+            }
+        }
+        return null;
+    }
+
+    public BabyTestRecord update(BabyTestRecord record) {
+        return super.update(record);
+    }
+
 }

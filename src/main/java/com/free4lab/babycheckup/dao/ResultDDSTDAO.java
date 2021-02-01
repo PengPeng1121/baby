@@ -86,4 +86,8 @@ public class ResultDDSTDAO extends AbstractDAO<ResultDDST> {
         }
         return 0;
     }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

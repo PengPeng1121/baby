@@ -64,4 +64,8 @@ public class ResultQiZhiDAO extends AbstractDAO<ResultQiZhi> {
         String testid="testId";
         return super.countByProperty(hoid,hosid,testid,testId);
     }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

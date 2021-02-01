@@ -30,4 +30,8 @@ public class ResultEyeManager {
     }
     public static long countResultByHoid(int hoid) {return getResultEyeDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultEyeDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultEyeDAOInstance().deleteResult(id);
+    }
 }

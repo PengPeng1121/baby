@@ -29,4 +29,8 @@ public class ResultFeedManager {
     public static ResultFeed update(ResultFeed resultFeed) {
         return getResultFeedDAOInstance().update(resultFeed);
     }
+
+    public static void deleteResult(int id){
+        getResultFeedDAOInstance().deleteResult(id);
+    }
 }

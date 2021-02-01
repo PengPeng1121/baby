@@ -902,13 +902,14 @@
             <result name="fail">error.jsp</result>
         </action>
 
-        <!-- 微量元素 -->
+        <!-- 微量元素 添加 -->
         <action name="saveresultMicro" method="saveResultMicro" class="com.free4lab.babycheckup.action.TestAction">
             <result type="json" name="success">
                 <param name="includeProperties">resultMicro,resultMicro.id</param>
             </result>
             <result name="fail">error.jsp</result>
         </action>
+
 
         <!-- 骨碱酶 -->
         <action name="saveresultBone" method="saveResultBone" class="com.free4lab.babycheckup.action.TestAction">
@@ -1131,6 +1132,13 @@
         <!--baby所有测评-->
         <action name="showresultAll" method="showResultAll" class="com.free4lab.babycheckup.action.BabyTestAction" >
             <result name="success">views/showresultAll.jsp</result>
+        </action>
+
+        <!--删除孩子某项测评-->
+        <action name="delTest" method="delTest" class="com.free4lab.babycheckup.action.BabyTestAction" >
+            <result type="json" name="success">
+                <param name="includeProperties">deleteFlag</param>
+            </result>
         </action>
 
         <!--刷新baby测评时间-->

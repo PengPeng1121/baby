@@ -9,10 +9,20 @@
         <action name="landing" method="landing" class="com.free4lab.babycheckup.action.AccountAction">
             <result name="success">/views/landing.jsp</result>
         </action>
+
+        <action name="thirdLanding" method="thirdLanding" class="com.free4lab.babycheckup.action.ThirdAccountAction">
+            <result name="success">/views/thirdLogin.jsp</result>
+        </action>
+
         <action name="login" method="login" class="com.free4lab.babycheckup.action.AccountAction">
             <result name="success" type="redirect">${redirectUrl}</result>
             <result name="login">/views/landing.jsp</result>
         </action>
+
+        <action name="thirdLogin" method="thirdLogin" class="com.free4lab.babycheckup.action.ThirdAccountAction">
+            <result name="success">/views/selectBaby.jsp</result>
+        </action>
+
         <action name="logout" method="logout" class="com.free4lab.babycheckup.action.AccountAction">
             <result name="success" type="redirect">${redirectUrl}</result>
         </action>

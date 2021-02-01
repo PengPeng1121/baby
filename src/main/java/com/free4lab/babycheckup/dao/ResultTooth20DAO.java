@@ -65,4 +65,7 @@ public class ResultTooth20DAO extends AbstractDAO<ResultTooth20> {
         return super.countByProperty(hoid,hosid,testid,testId);
     }
 
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

@@ -65,4 +65,8 @@ public class ResultBlessDAO extends AbstractDAO<ResultBless> {
         return super.countByProperty(hoid,hosid,testid,testId);
     }
 
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
+
 }

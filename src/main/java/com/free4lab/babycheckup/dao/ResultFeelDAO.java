@@ -68,4 +68,8 @@ public class ResultFeelDAO extends AbstractDAO<ResultFeel> {
     public void saveAdvice(ResultFeel r){
         super.update(r);
     }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

@@ -68,8 +68,10 @@ public class BabyManager {
 
     public static Baby findById(int babyid) {
         Baby baby = getBabyDAOInstance().findBabyByBabyid(babyid);
-        baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
-        baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+        if (baby != null){
+            baby.setFather(getParentByBabyAndRelation(baby, "父亲"));
+            baby.setMother(getParentByBabyAndRelation(baby, "母亲"));
+        }
         return baby;
     }
 

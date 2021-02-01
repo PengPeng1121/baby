@@ -22,6 +22,12 @@ public class BabyTestAction {
     private String ps;
     private AllTestResultVo allTestResultVo;
     private OtherResultVo otherResultVo;
+    /**
+     * 删除标识 1 成功  0没有
+     */
+    private int deleteFlag;
+    private int testId;
+    private int resultId;
 
     public String showResultAll(){
         if(StringUtils.isBlank(ps)){
@@ -108,7 +114,7 @@ public class BabyTestAction {
                     allTestResultVo.setResultBasic2(ResultBasic2Manager.findResultByid(resultId));
                     break;
                 case 35:
-                    allTestResultVo.setResultQiZhi(ResultQiZhiManager.findResultByid(resultId));
+                    allTestResultVo.setResultQiZhi2020(ResultQiZhi2020Manager.findResultByid(resultId));
                     break;
                 case 36:
                     allTestResultVo.setResultTooth(ResultToothManager.findResultByid(resultId));
@@ -172,6 +178,266 @@ public class BabyTestAction {
         return SUCCESS;
     }
 
+
+    /**
+     * 删除
+     * @return
+     */
+    public String delTest(){
+        baby = BabyManager.findById(babyid);
+        if(null == baby){
+            return "fail";
+        }
+        switch (testId) {
+            case 19:
+                ResultCognize resultCognize = ResultCognizeManager.findResultByid(resultId);
+                if(resultCognize != null && resultCognize.getBabyId() == babyid){
+                    ResultCognizeManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 21:
+                ResultDDST resultDDST = ResultDDSTManager.findResultByid(resultId);
+                if(resultDDST != null && resultDDST.getBabyId() == babyid){
+                    ResultDDSTManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 22:
+                ResultNei resultNei = ResultNeiManager.findResultByid(resultId);
+                if(resultNei != null && resultNei.getBabyId() == babyid){
+                    ResultNeiManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 23:
+                ResultGroup resultGroup = ResultGroupManager.findResultByid(resultId);
+                if(resultGroup != null && resultGroup.getBabyId() == babyid){
+                    ResultGroupManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 24:
+                ResultQiZhi resultQiZhi = ResultQiZhiManager.findResultByid(resultId);
+                if(resultQiZhi != null && resultQiZhi.getBabyId() == babyid){
+                    ResultQiZhiManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 25:
+                ResultFeel resultFeel = ResultFeelManager.findResultByid(resultId);
+                if(resultFeel != null && resultFeel.getBabyId() == babyid){
+                    ResultFeelManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 26:
+                Result2016 result2016 = ResultManager2016.findResultByid(resultId);
+                if(result2016 != null && result2016.getBabyid() == babyid){
+                    ResultManager2016.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 27:
+                ResultADHD resultADHD = ResultADHDManager.findResultByid(resultId);
+                if(resultADHD != null && resultADHD.getBabyId() == babyid){
+                    ResultADHDManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 28:
+                ResultFeel2020 resultFeel2020 = ResultFeel2020Manager.findResultByid(resultId);
+                if(resultFeel2020 != null && resultFeel2020.getBabyId() == babyid){
+                    ResultFeel2020Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 29:
+                ResultGroup2020 resultGroup2020 = ResultGroup2020Manager.findResultByid(resultId);
+                if(resultGroup2020 != null && resultGroup2020.getBabyId() == babyid){
+                    ResultGroup2020Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 30:
+                ResultPhysical resultPhysical = ResultPhysicalManager.findResultByid(resultId);
+                if(resultPhysical != null && resultPhysical.getBabyId() == babyid){
+                    ResultPhysicalManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 31:
+                ResultSummary resultSummary = ResultSummaryManager.findResultByid(resultId);
+                if(resultSummary != null && resultSummary.getBabyId() == babyid){
+                    ResultSummaryManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 32:
+                ResultAllergy resultAllergy = ResultAllergyManager.findResultByid(resultId);
+                if(resultAllergy != null && resultAllergy.getBabyId() == babyid){
+                    ResultAllergyManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 33:
+                ResultBasic1 resultBasic1 = ResultBasic1Manager.findResultByid(resultId);
+                if(resultBasic1 != null && resultBasic1.getBabyId() == babyid){
+                    ResultBasic1Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 34:
+                ResultBasic2 resultBasic2 = ResultBasic2Manager.findResultByid(resultId);
+                if(resultBasic2 != null && resultBasic2.getBabyId() == babyid){
+                    ResultBasic2Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 35:
+                ResultQiZhi2020 resultQiZhi2020 = ResultQiZhi2020Manager.findResultByid(resultId);
+                if(resultQiZhi2020 != null && resultQiZhi2020.getBabyId() == babyid){
+                    ResultQiZhi2020Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 36:
+                ResultTooth resultTooth = ResultToothManager.findResultByid(resultId);
+                if(resultTooth != null && resultTooth.getBabyId() == babyid){
+                    ResultToothManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 37:
+                ResultFeed resultFeed = ResultFeedManager.findResultByid(resultId);
+                if(resultFeed != null && resultFeed.getBabyId() == babyid){
+                    ResultFeedManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 38:
+                ResultPlan resultPlan = ResultPlanManager.findResultByid(resultId);
+                if(resultPlan != null && resultPlan.getBabyId() == babyid){
+                    ResultPlanManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 39:
+                ResultBless resultBless = ResultBlessManager.findResultByid(resultId);
+                if(resultBless != null && resultBless.getBabyId() == babyid){
+                    ResultBlessManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 40:
+                ResultRear resultRear = ResultRearManager.findResultByid(resultId);
+                if(resultRear != null && resultRear.getBabyId() == babyid){
+                    ResultRearManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 41:
+                ResultEye resultEye = ResultEyeManager.findResultByid(resultId);
+                if(resultEye != null && resultEye.getBabyId() == babyid){
+                    ResultEyeManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 42:
+                ResultEar resultEar = ResultEarManager.findResultByid(resultId);
+                if(resultEar != null && resultEar.getBabyId() == babyid){
+                    ResultEarManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 43:
+                ResultBMD resultBMD = ResultBMDManager.findResultByid(resultId);
+                if(resultBMD != null && resultBMD.getBabyId() == babyid){
+                    ResultBMDManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 44:
+                ResultBlood resultBlood = ResultBloodManager.findResultByid(resultId);
+                if(resultBlood != null && resultBlood.getBabyId() == babyid){
+                    ResultBloodManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 45:
+                  ResultMicro resultMicro = ResultMicroManager.findResultByid(resultId);
+                  if(resultMicro != null && resultMicro.getBabyId() == babyid){
+                      ResultMicroManager.deleteResult(resultId);
+                      BabyTestRecordManager.delete(testId,resultId,babyid);
+                  }
+                break;
+            case 46:
+                ResultBone resultBone = ResultBoneManager.findResultByid(resultId);
+                if(resultBone != null && resultBone.getBabyId() == babyid){
+                    ResultBoneManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 47:
+                ResultUrine resultUrine = ResultUrineManager.findResultByid(resultId);
+                if(resultUrine != null && resultUrine.getBabyId() == babyid){
+                    ResultUrineManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 48:
+                ResultHbs resultHbs = ResultHbsManager.findResultByid(resultId);
+                if(resultHbs != null && resultHbs.getBabyId() == babyid){
+                    ResultHbsManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 49:
+                ResultFastAllergy resultFastAllergy = ResultFastAllergyManager.findResultByid(resultId);
+                if(resultFastAllergy != null && resultFastAllergy.getBabyId() == babyid){
+                    ResultFastAllergyManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 50:
+                ResultFoodAllergy resultFoodAllergy = ResultFoodAllergyManager.findResultByid(resultId);
+                if(resultFoodAllergy != null && resultFoodAllergy.getBabyId() == babyid){
+                    ResultFoodAllergyManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 51:
+                ResultBloodType resultBloodType = ResultBloodTypeManager.findResultByid(resultId);
+                if(resultBloodType != null && resultBloodType.getBabyId() == babyid){
+                    ResultBloodTypeManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 52:
+                ResultAttention resultAttention = ResultAttentionManager.findResultByid(resultId);
+                if(resultAttention != null && resultAttention.getBabyId() == babyid){
+                    ResultAttentionManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 53:
+                ResultEcg resultEcg = ResultEcgManager.findResultByid(resultId);
+                if(resultEcg != null && resultEcg.getBabyId() == babyid){
+                    ResultEcgManager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+            case 54:
+                ResultTooth20 resultTooth20 = ResultTooth20Manager.findResultByid(resultId);
+                if(resultTooth20 != null && resultTooth20.getBabyId() == babyid){
+                    ResultTooth20Manager.deleteResult(resultId);
+                    BabyTestRecordManager.delete(testId,resultId,babyid);
+                }
+                break;
+        }
+        return SUCCESS;
+    }
+
     public Double diffDays(Date d1, Timestamp d2){
         DecimalFormat df=new DecimalFormat("0.0");
         return Double.parseDouble(df.format((float)(d2.getTime()-d1.getTime())/(1000*3600*24)/30.4));
@@ -215,5 +481,29 @@ public class BabyTestAction {
 
     public void setOtherResultVo(OtherResultVo otherResultVo) {
         this.otherResultVo = otherResultVo;
+    }
+
+    public int getDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(int deleteFlag) {
+        this.deleteFlag = deleteFlag;
+    }
+
+    public int getTestId() {
+        return testId;
+    }
+
+    public void setTestId(int testId) {
+        this.testId = testId;
+    }
+
+    public int getResultId() {
+        return resultId;
+    }
+
+    public void setResultId(int resultId) {
+        this.resultId = resultId;
     }
 }

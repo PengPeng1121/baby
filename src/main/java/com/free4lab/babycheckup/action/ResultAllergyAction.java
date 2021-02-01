@@ -76,6 +76,7 @@ public class ResultAllergyAction {
         old.setR13(resultAllergy.getR13());
         old.setR14(resultAllergy.getR14());
         old.setR15(resultAllergy.getR15());
+        old.setR16(resultAllergy.getR16());
         ResultAllergyManager.update(old);
         return SUCCESS;
     }

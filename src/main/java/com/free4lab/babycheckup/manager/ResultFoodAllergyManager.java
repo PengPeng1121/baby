@@ -30,4 +30,8 @@ public class ResultFoodAllergyManager {
     }
     public static long countResultByHoid(int hoid) {return getResultFoodAllergyDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultFoodAllergyDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultFoodAllergyDAOInstance().deleteResult(id);
+    }
 }

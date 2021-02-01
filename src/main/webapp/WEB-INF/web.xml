@@ -7,7 +7,7 @@
     <filter-class>com.free4lab.babycheckup.filter.LoginFilter</filter-class>
     <init-param>
       <param-name>excluded-mapping</param-name>
-      <param-value>/account/landing,/account/login,/statics/,/images/</param-value>
+      <param-value>/account/landing,/account/login,/account/thirdLanding,/account/thirdLogin,/statics/,/images/</param-value>
     </init-param>
   </filter>
 
@@ -28,5 +28,6 @@
 
   <welcome-file-list>
     <welcome-file>/views/landing.jsp</welcome-file>
+    <welcome-file>/views/thirdLanding.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -30,4 +30,8 @@ public class ResultMicroManager {
     }
     public static long countResultByHoid(int hoid) {return getResultMicroDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultMicroDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultMicroDAOInstance().deleteResult(id);
+    }
 }

@@ -61,5 +61,10 @@ public class ResultAttentionDAO extends AbstractDAO<ResultAttention> {
     public long countResultByHosIdAndTestId(int hosid,int testId) {
         String hoid="hosId";
         String testid="testId";
-        return super.countByProperty(hoid,hosid,testid,testId);}
+        return super.countByProperty(hoid,hosid,testid,testId);
+    }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

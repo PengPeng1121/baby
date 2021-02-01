@@ -65,4 +65,8 @@ public class ResultFeel2020DAO extends AbstractDAO<ResultFeel2020> {
         return super.countByProperty(hoid,hosid,testid,testId);
     }
 
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
+
 }

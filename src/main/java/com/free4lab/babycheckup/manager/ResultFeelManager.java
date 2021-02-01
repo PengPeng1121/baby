@@ -29,4 +29,8 @@ public class ResultFeelManager {
     public static void saveAdvice(ResultFeel re){
         getResultFeelDAOInstance().saveAdvice(re);
     }
+
+    public static void deleteResult(int id){
+        getResultFeelDAOInstance().deleteResult(id);
+    }
 }

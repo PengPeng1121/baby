@@ -9,6 +9,13 @@
         <action name="new" method="newBaby" class="com.free4lab.babycheckup.action.BabyAction">
             <result name="success">/views/newbabyinfo.jsp</result>
         </action>
+
+        <action name="babyRepeat" method="babyRepeat" class="com.free4lab.babycheckup.action.BabyAction">
+            <result type="json" name="success">
+                <param name="includeProperties">repeatFlag</param>
+            </result>
+        </action>
+
         <action name="saveBaby" method="saveBaby" class="com.free4lab.babycheckup.action.BabyAction">
             <result type="json" name="success">
                 <param name="includeProperties">baby,babyid,father_birth,mother_birth,frontalSuture1,frontalSuture2</param>

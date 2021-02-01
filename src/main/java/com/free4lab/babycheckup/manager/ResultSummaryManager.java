@@ -29,4 +29,8 @@ public class ResultSummaryManager {
     public static ResultSummary update(ResultSummary resultSummary) {
         return getInstance().update(resultSummary);
     }
+
+    public static void deleteResult(int id){
+        getInstance().deleteResult(id);
+    }
 }

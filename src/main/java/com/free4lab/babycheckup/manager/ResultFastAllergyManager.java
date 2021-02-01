@@ -29,4 +29,8 @@ public class ResultFastAllergyManager {
     }
     public static long countResultByHoid(int hoid) {return getResultFastAllergyDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultFastAllergyDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultFastAllergyDAOInstance().deleteResult(id);
+    }
 }

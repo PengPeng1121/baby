@@ -52,4 +52,7 @@ public class FamilyRelationDAO extends AbstractDAO<FamilyRelation> {
         }
     }
 
+    public List<FamilyRelation> findByParentId(int parentId) {
+        return super.findByProperty("parentid", parentId);
+    }
 }

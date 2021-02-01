@@ -29,4 +29,8 @@ public class ResultAllergyManager {
     public static ResultAllergy update(ResultAllergy resultAllergy) {
         return getInstance().update(resultAllergy);
     }
+
+    public static void deleteResult(int id){
+        getInstance().deleteResult(id);
+    }
 }

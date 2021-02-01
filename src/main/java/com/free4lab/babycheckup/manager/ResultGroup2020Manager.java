@@ -29,4 +29,8 @@ public class ResultGroup2020Manager {
     public static ResultGroup2020 update(ResultGroup2020 resultGroup2020) {
         return getResultDAOInstance().update(resultGroup2020);
     }
+
+    public static void deleteResult(int id){
+        getResultDAOInstance().deleteResult(id);
+    }
 }

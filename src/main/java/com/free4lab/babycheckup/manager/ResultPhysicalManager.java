@@ -30,4 +30,7 @@ public class ResultPhysicalManager {
         return getInstance().update(resultPhysical);
     }
 
+    public static void deleteResult(int id){
+        getInstance().deleteResult(id);
+    }
 }

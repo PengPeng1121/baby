@@ -29,4 +29,8 @@ public class ResultBloodTypeManager {
     }
     public static long countResultByHoid(int hoid) {return getResultBloodTypeDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBloodTypeDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultBloodTypeDAOInstance().deleteResult(id);
+    }
 }

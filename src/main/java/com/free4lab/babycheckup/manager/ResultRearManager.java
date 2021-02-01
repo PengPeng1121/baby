@@ -29,4 +29,8 @@ public class ResultRearManager {
     public static ResultRear update(ResultRear rear) {
         return getInstance().update(rear);
     }
+
+    public static void deleteResult(int id){
+        getInstance().deleteResult(id);
+    }
 }

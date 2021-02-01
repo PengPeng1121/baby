@@ -24,6 +24,11 @@ public class BabyTestRecord {
     // 修改时间
     private Date updateTime;
 
+    /**
+     * 是否删除
+     */
+    private Integer isDelete;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -126,4 +131,13 @@ public class BabyTestRecord {
         this.updateTime = updateTime;
     }
 
+    @Basic
+    @Column(name = "is_delete", nullable = false)
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
 }

@@ -1,9 +1,8 @@
 package com.free4lab.babycheckup.action;
 
+import com.free4lab.babycheckup.constant.CommonIsEnum;
 import com.free4lab.babycheckup.dto.BabyUpdateDto;
-import com.free4lab.babycheckup.manager.BabyManager;
-import com.free4lab.babycheckup.manager.AccountManager;
-import com.free4lab.babycheckup.manager.BabyTestRecordManager;
+import com.free4lab.babycheckup.manager.*;
 import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
@@ -49,6 +48,15 @@ public class BabyAction {
     private Integer testId;
     private Integer resultId;
 
+    /**
+     * 父亲电话  判断孩子重复 用
+     */
+    private String fatherTel;
+    /**
+     * 儿童是否重复 根据 父亲电话和孩子姓名查看  0 是重复
+     */
+    private Integer repeatFlag;
+
     private BabyUpdateDto babyUpdate;
 
     public String newBaby(){
@@ -77,6 +85,11 @@ public class BabyAction {
         }
         if(mother_birth != null&& mother_birth.length()>0){
             mother.setBirth(new java.sql.Date(new SimpleDateFormat("yyyy-MM-dd").parse(mother_birth).getTime()));
+        }
+
+        // 是否有父亲手机号码和儿童姓名的 baby
+        if(CommonIsEnum.IS_NO.equals(judgeBabyRepeat(fatherTel,babyName))){
+            return "fail";
         }
 
         if(mother != null && father != null){
@@ -329,12 +342,45 @@ public class BabyAction {
                 babyTestRecord.setCreateUser((String) ActionContext.getContext().getSession().get("username"));
                 babyTestRecord.setUpdateTime(new java.util.Date());
                 babyTestRecord.setCreateTime(new java.util.Date());
+                babyTestRecord.setIsDelete(CommonIsEnum.IS_NO.getCode());
                 BabyTestRecordManager.save(babyTestRecord);
             }
         }
         return "success";
     }
 
+    /**
+     * 判断是否重复
+     * 0是重复
+     */
+    public String babyRepeat(){
+        repeatFlag = judgeBabyRepeat(fatherTel,babyName);
+        return "success";
+    }
+
+    /**
+     * 私有化方法
+     * @param tel
+     * @param name
+     * @return
+     */
+    private Integer judgeBabyRepeat(String tel,String name){
+
+        Parent parent = ParentManager.find(tel);
+        if(parent != null) {
+            FamilyRelation familyRelation = FamilyRelationManager.findByParentId(parent.getParentid());
+            if (familyRelation != null) {
+                Baby baby = BabyManager.findById(familyRelation.getBabyid());
+                if (baby != null) {
+                    if (baby.getName().equals(name)) {
+                        return CommonIsEnum.IS_NO.getCode();
+                    }
+                }
+            }
+        }
+
+        return CommonIsEnum.IS_YES.getCode();
+    }
 
     public String testMonthage(){
         baby = BabyManager.findById(babyid);
@@ -812,5 +858,21 @@ public class BabyAction {
 
     public void setLastTestTimeBegin(String lastTestTimeBegin) {
         this.lastTestTimeBegin = lastTestTimeBegin;
+    }
+
+    public String getFatherTel() {
+        return fatherTel;
+    }
+
+    public void setFatherTel(String fatherTel) {
+        this.fatherTel = fatherTel;
+    }
+
+    public Integer getRepeatFlag() {
+        return repeatFlag;
+    }
+
+    public void setRepeatFlag(Integer repeatFlag) {
+        this.repeatFlag = repeatFlag;
     }
 }

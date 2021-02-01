@@ -61,5 +61,10 @@ public class Result2016DAO extends AbstractDAO<Result2016> {
     public long countResultByHosIdAndTestId(int hosid,int testId) {
         String hoid="hoid";
         String testid="testid";
-        return super.countByProperty(hoid,hosid,testid,testId);}
+        return super.countByProperty(hoid,hosid,testid,testId);
+    }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

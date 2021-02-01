@@ -31,4 +31,7 @@ public class ResultBasic2Manager {
         return getInstance().update(resultBasic2);
     }
 
+    public static void deleteResult(int id){
+        getInstance().deleteResult(id);
+    }
 }

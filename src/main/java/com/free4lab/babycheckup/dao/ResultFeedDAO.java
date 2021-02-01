@@ -65,4 +65,7 @@ public class ResultFeedDAO extends AbstractDAO<ResultFeed> {
         return super.countByProperty(hoid,hosid,testid,testId);
     }
 
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

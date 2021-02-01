@@ -36,4 +36,8 @@ public class ResultEarManager {
     }
     public static long countResultByHoid(int hoid) {return getResultEarDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultEarDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultEarDAOInstance().deleteResult(id);
+    }
 }

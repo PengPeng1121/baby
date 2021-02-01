@@ -26,4 +26,8 @@ public class ResultPlanManager {
     public static long countResultByHoid(int hoid) {return getResultPlanDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultPlanDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static void deleteResult(int id){
+        getResultPlanDAOInstance().deleteResult(id);
+    }
+
 }

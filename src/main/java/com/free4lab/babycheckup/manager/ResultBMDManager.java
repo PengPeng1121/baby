@@ -33,4 +33,8 @@ public class ResultBMDManager {
     }
     public static long countResultByHoid(int hoid) {return getResultBMDDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBMDDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultBMDDAOInstance().deleteResult(id);
+    }
 }

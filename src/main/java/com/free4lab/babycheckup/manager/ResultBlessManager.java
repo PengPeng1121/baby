@@ -26,4 +26,7 @@ public class ResultBlessManager {
     public static long countResultByHoid(int hoid) {return getResultBlessDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBlessDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static void deleteResult(int id){
+        getResultBlessDAOInstance().deleteResult(id);
+    }
 }

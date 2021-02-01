@@ -44,7 +44,7 @@
                                             </h4>
                                         </div>
                                         <div class="pull-right" style="float: left;margin-top: 7px;">
-                                            <a class="btn btn-default" target="_blank" href="newTestBasic1?id=<s:property value="#baby.id"/>">填写信息</a>
+                                            <a class="btn btn-default" target="_blank" href="newtestBasic1?babyid=<s:property value="#baby.babyid"/>">填写信息</a>
                                         </div>
                                     </div>
                                 </td>

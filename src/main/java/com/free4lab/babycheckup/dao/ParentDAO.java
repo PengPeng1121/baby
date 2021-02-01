@@ -5,6 +5,8 @@ import com.free4lab.utils.sql.AbstractDAO;
 import com.free4lab.utils.sql.IEntityManagerHelper;
 import com.free4lab.utils.sql.entitymanager.NoCacheEntityManagerHelper;
 
+import java.util.List;
+
 public class ParentDAO extends AbstractDAO<Parent> {
 
     private static class ParentDAOSingletonHolder {
@@ -44,4 +46,7 @@ public class ParentDAO extends AbstractDAO<Parent> {
         return super.findByPrimaryKey(parentid);
     }
 
+    public List<Parent> findParentByParentTel(String tel) {
+        return super.findByProperty("tel", tel);
+    }
 }

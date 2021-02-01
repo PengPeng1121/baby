@@ -30,4 +30,8 @@ public class ResultBoneManager {
     }
     public static long countResultByHoid(int hoid) {return getResultBoneDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultBoneDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultBoneDAOInstance().deleteResult(id);
+    }
 }

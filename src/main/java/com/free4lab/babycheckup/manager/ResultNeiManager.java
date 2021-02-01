@@ -25,4 +25,8 @@ public class ResultNeiManager {
     }
     public static long countResultByHoid(int hoid) {return getResultDAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
+
+    public static void deleteResult(int id){
+        getResultDAOInstance().deleteResult(id);
+    }
 }

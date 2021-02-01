@@ -26,4 +26,7 @@ public class ResultAttentionManager {
     public static long countResultByHoid(int hoid) {return getResultAttentionDAOInstance().countResultByHoid(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultAttentionDAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static void deleteResult(int id){
+        getResultAttentionDAOInstance().deleteResult(id);
+    }
 }

@@ -68,4 +68,8 @@ public class ResultRearDAO extends AbstractDAO<ResultRear> {
     public ResultRear update(ResultRear rear) {
         return super.update(rear);
     }
+
+    public void deleteResult(int id) {
+        super.deleteByPrimaryKey(id);
+    }
 }

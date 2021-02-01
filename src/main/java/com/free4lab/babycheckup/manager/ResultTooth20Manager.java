@@ -26,4 +26,7 @@ public class ResultTooth20Manager {
     public static long countResultByHoid(int hoid) {return getResultTooth20DAOInstance().countResultByHosId(hoid);}
     public static long countResultByHosIdAndTestId(int hoid,int testId) {return getResultTooth20DAOInstance().countResultByHosIdAndTestId(hoid,testId);}
 
+    public static void deleteResult(int id){
+        getResultTooth20DAOInstance().deleteResult(id);
+    }
 }
