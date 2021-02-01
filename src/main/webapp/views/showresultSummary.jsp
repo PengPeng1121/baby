@@ -50,7 +50,7 @@
         }
         #content-table{
             left: 100px !important;
-            top: 280px !important;
+            top: 260px !important;
         }
         #date{
             left: 550px !important;
