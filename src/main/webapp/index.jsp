@@ -1390,7 +1390,7 @@
 
 
 
-    if (username.indexOf('家长填报') != -1) {
+    if (username.indexOf('家长') != -1) {
         console.log('家长视角。。。。。。');
         $('.view').hide();
         $('.parent').show();

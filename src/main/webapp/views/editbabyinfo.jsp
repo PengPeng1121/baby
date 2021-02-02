@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
 </head>
 <body class="front-body">
+    <input type="hidden" id="username" value="<s:property value="#session.username"/>">
 <s:include value="nav.jsp?act=records"/>
 <div class="front-inner front-inner-media">
     <div class="container">
@@ -333,6 +334,18 @@
     function ischina(str) {
         var reg=/^[a-zA-Z·\u4E00-\u9FA5]{2,20}$/;
         return reg.test(str);
+    }
+
+
+    var username = $("#username").val();
+    if (username.indexOf('家长') != -1) {
+        console.log('家长视角。。。。。。');
+        
+        $('.navbar').hide();
+        $('.footer-default').hide();
+        $('#f_tel').attr("readonly","readonly");
+        $('#doctor').attr("readonly","readonly");
+        
     }
 
 </script>

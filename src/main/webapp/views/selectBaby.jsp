@@ -23,13 +23,11 @@
 <s:include value="nav.jsp?act=records"/>
 
 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-
-
 <div class="front-inner front-inner-media">
-    <div class="container">
-        <div class="panel panel-default front-panel" id="test">
-            <div class="panel-body front-no-padding">
-                <div class="pull-right"><a type="button" class="btn btn-primary pull-right" href="record/new">新建孩子</a></div>
+    <div class="container">  
+        <a type="button" class="btn btn-primary" href="record/new">新建孩子</a>
+        <div class="panel panel-default front-panel" id="test" style="margin-top: 50px">
+            <div class="panel-body front-no-padding">               
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>
                         <s:iterator value="babyList" var="baby">
@@ -44,7 +42,8 @@
                                             </h4>
                                         </div>
                                         <div class="pull-right" style="float: left;margin-top: 7px;">
-                                            <a class="btn btn-default" target="_blank" href="newtestBasic1?babyid=<s:property value="#baby.babyid"/>">填写信息</a>
+                                            <a class="btn btn-default front-no-box-shadow" href="record/moreinfo?babyid=<s:property value="#baby.babyid" />"><span class="glyphicon glyphicon-search"></span> 详情</a>
+                                            <!-- <a class="btn btn-default" target="_blank" href="newtestBasic1?babyid=<s:property value="#baby.babyid"/>">填写信息</a> -->
                                         </div>
                                     </div>
                                 </td>
@@ -55,13 +54,13 @@
             </div>
         </div>
     </div>
-    <s:include value="/statics/footer.jsp"/>
+    <!-- <s:include value="/statics/footer.jsp"/> -->
 </div>
 
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
-    
-
+    $('.navbar').hide();
+    // $('.footer-default').hide();
 </script>
 </body>
 </html>

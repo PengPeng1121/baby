@@ -102,6 +102,7 @@
     </footer>
     <input type="hidden" id="username" value="<s:property value="#session.username"/>">
     <input type="hidden" id="userid" value="<s:property value="#session.userid"/>">
+    <input type="hidden" id="tel" value="<s:property value="#session.tel"/>">
 </div>
 <s:include value="/statics/tail.html"/>
 <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
@@ -116,6 +117,21 @@
 
         var username = $("#username").val();
         var userid = $("#userid").val();
+        var tel = $("#tel").val();
+
+        if (username.indexOf('家长') != -1) {
+            console.log('家长视角。。。。。。');
+            
+            $('.navbar').hide();
+            $('.footer-default').hide();
+            if (tel) {
+                $('#f_tel').attr("readonly","readonly");
+            }
+            $('#doctor').attr("readonly","readonly")
+            
+        }
+
+
         // var userlist = <s:property value="userlist"/>;//用户列表
 
         // for (var i = 0, l = userlist.length; i < l; i++) {
@@ -134,6 +150,7 @@
         //     }
         // }
         $("#doctor").val(userid);
+        $("#f_tel").val(tel);
     });
 
     function changeState(state) {
@@ -248,7 +265,8 @@
     }
     function isTelCode(str) {
         var  reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
-        return reg.test(str);
+        return true;
+        // return reg.test(str);
     }
     function NumofName(str) {
         var  reg = /[0-9]/;
