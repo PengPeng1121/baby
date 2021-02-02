@@ -50,7 +50,7 @@
         }
         #content-table{
             left: 100px !important;
-            top: 260px !important;
+            top: 280px !important;
         }
         #date{
             left: 550px !important;
@@ -166,6 +166,8 @@
 
     var reg = new RegExp("<br>","g");//g,表示全部替换。
     remark = remark.replace(reg,"\n");
+    var title = '体检建议:\n'
+    remark = title + remark;
     $('#remarkText').html(remark);
 
     

@@ -4481,6 +4481,8 @@
     var summaryRemark = $('#summaryRemark').val();
     var reg = new RegExp("<br>","g");//g,表示全部替换。
     summaryRemark = summaryRemark.replace(reg,"\n");
+    var title = '体检建议:\n'
+    summaryRemark = title + summaryRemark;
     $('#summaryRemarkText').html(summaryRemark);
 </script>
 </s:if>
