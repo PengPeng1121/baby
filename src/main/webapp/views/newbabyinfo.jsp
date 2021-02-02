@@ -253,7 +253,9 @@
                                 $.fillTipBox({type:'success', icon:'glyphicon-ok-sign', content:'新建资料成功！'});
                                 $.frontModal({size: 'modal-md', href: 'modals/modal_savebaby.jsp'}).on('shown.bs.modal', function () {
                                     $("#babyid").val(data.babyid);
-                                }).on('hide.bs.modal', function (){window.location.href = 'home';});
+                                }).on('hide.bs.modal', function (){
+                                    // window.location.href = 'home';
+                                });
                             } else {
                                 $.fillTipBox({type:'danger', icon:'glyphicon-remove-sign', content:'保存失败！'});
                             }

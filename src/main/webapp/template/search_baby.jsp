@@ -74,6 +74,8 @@
 
         $.frontModal({size: 'modal-md', href: 'modals/modal_select_test.jsp'}).on('shown.bs.modal', function () {
             $("#babyid").val(bid);
-        }).on('hide.bs.modal', function (){window.location.href = 'home';});
+        }).on('hide.bs.modal', function (){
+            // window.location.href = 'home';
+        });
     }
 </script>
