@@ -1,12 +1,10 @@
 package com.free4lab.babycheckup.action;
 
-import com.free4lab.babycheckup.manager.AccountManager;
-import com.free4lab.babycheckup.manager.HospitalManager;
-import com.free4lab.babycheckup.model.Baby;
-import com.free4lab.babycheckup.model.Hospital;
-import com.free4lab.babycheckup.model.User;
+import com.free4lab.babycheckup.manager.*;
+import com.free4lab.babycheckup.model.*;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.util.CollectionUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -33,12 +31,23 @@ public class ThirdAccountAction {
             ActionContext.getContext().getSession().put("username", user.getName());
             ActionContext.getContext().getSession().put("authority", user.getAuthority());
             ActionContext.getContext().getSession().put("hoid", user.getHoid());
-
-            babyList = new ArrayList<Baby>();
-            Baby baby = new Baby();
-            baby.setBabyid(2686);
-            baby.setName("测试女");
-            babyList.add(baby);
+            ActionContext.getContext().getSession().put("tel", user.getTel());
+            // 获取登陆人的孩子信息
+            if(CollectionUtils.isEmpty(babyList)){
+                babyList = new ArrayList<Baby>();
+            }
+            Parent parent = ParentManager.find(user.getTel());
+            if(null != parent){
+                List<FamilyRelation> relationList = FamilyRelationManager.findByParentId(parent.getParentid());
+                if (!CollectionUtils.isEmpty(relationList)) {
+                    for (FamilyRelation familyRelation:relationList) {
+                        Baby baby = BabyManager.findById(familyRelation.getBabyid());
+                        if (baby != null) {
+                            babyList.add(baby);
+                        }
+                    }
+                }
+            }
             return "success";
         }
 

@@ -368,12 +368,14 @@ public class BabyAction {
 
         Parent parent = ParentManager.find(tel);
         if(parent != null) {
-            FamilyRelation familyRelation = FamilyRelationManager.findByParentId(parent.getParentid());
-            if (familyRelation != null) {
-                Baby baby = BabyManager.findById(familyRelation.getBabyid());
-                if (baby != null) {
-                    if (baby.getName().equals(name)) {
-                        return CommonIsEnum.IS_NO.getCode();
+            List<FamilyRelation> relationList = FamilyRelationManager.findByParentId(parent.getParentid());
+            if (!CollectionUtils.isEmpty(relationList)) {
+                for (FamilyRelation familyRelation:relationList) {
+                    Baby baby = BabyManager.findById(familyRelation.getBabyid());
+                    if (baby != null) {
+                        if (baby.getName().equals(name)) {
+                            return CommonIsEnum.IS_NO.getCode();
+                        }
                     }
                 }
             }

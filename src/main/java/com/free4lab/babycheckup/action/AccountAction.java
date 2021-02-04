@@ -61,6 +61,7 @@ public class AccountAction {
             ActionContext.getContext().getSession().put("username", user.getName());
             ActionContext.getContext().getSession().put("authority", user.getAuthority());
             ActionContext.getContext().getSession().put("hoid", user.getHoid());
+            ActionContext.getContext().getSession().put("tel", user.getTel());
             hospital = HospitalManager.findByHoid(user.getHoid());
             if(hospital.getLogo() == null || hospital.getLogo().equals("")) {
                 ActionContext.getContext().getSession().put("logo", "logo.png");
@@ -81,6 +82,7 @@ public class AccountAction {
         ActionContext.getContext().getSession().remove("authority");
         ActionContext.getContext().getSession().remove("hoid");
         ActionContext.getContext().getSession().remove("logo");
+        ActionContext.getContext().getSession().remove("tel");
         return "success";
     }
 

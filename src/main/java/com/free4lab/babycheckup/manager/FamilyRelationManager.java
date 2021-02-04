@@ -16,12 +16,8 @@ public class FamilyRelationManager {
     }
 
 
-    public static FamilyRelation findByParentId(int parentId) {
-        List<FamilyRelation> list = getDAOInstance().findByParentId(parentId);
-        if(!CollectionUtils.isEmpty(list)){
-            return list.get(0);
-        }
-        return null;
+    public static List<FamilyRelation> findByParentId(int parentId) {
+        return getDAOInstance().findByParentId(parentId);
     }
 
 }
