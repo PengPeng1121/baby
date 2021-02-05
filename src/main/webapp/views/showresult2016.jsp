@@ -141,7 +141,7 @@
         <div class="panel panel-default front-panel col-md-12" id="advice" style="padding: 0px;">
             <div class="panel-heading" style="text-align: left; padding: 5px 8px; font-weight: bold;">医师评价及建议</div>
             <div class="panel-body front-no-padding">
-                <textarea id="doctorRemark" rows="10" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
+                <textarea id="doctorRemark" rows="14" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
                 <div id="doctorRemarkText" style="display: none;"></div>
             </div>
         </div>
@@ -448,6 +448,11 @@
         var str3 = '';
         var str4 = '';
         var str5 = '';
+        var l = 0;
+        var j = 0;
+        var m = 0;
+        var n = 0;
+        var k = 0;
         $.ajax({
             url: 'getRemark',
             type: 'post',
@@ -461,24 +466,44 @@
                     item = instructions[i];
                     switch (item['type']) {
                         case 1:
+                            if (l > 2) {
+                                break;
+                            }
                             str1 += item['content'];
                             str1 += '<br/>';
+                            l++;
                             break;
                         case 2:
+                            if (j > 2) {
+                                break;
+                            }
                             str2 += item['content'];
                             str2 += '<br/>';
+                            j++;
                             break;
                         case 4:
+                            if (m > 2) {
+                                break;
+                            }
                             str3 += item['content'];
                             str3 += '<br/>';
+                            m++;
                             break;
                         case 3:
+                            if (n > 2) {
+                                break;
+                            }
                             str4 += item['content'];
                             str4 += '<br/>';
+                            n++;
                             break;
                         case 5:
+                            if (k > 2) {
+                                break;
+                            }
                             str5 += item['content'];
                             str5 += '<br/>';
+                            k++;
                             break;
                     } 
                 }

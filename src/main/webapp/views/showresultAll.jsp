@@ -442,6 +442,14 @@
             position: relative;
             z-index: 100; 
         }
+
+        #tooth .style4{
+            width: 20px;
+            height: 20px;
+            background-color: #FFF;
+            position: relative;
+            z-index: 100; 
+        }
         #tooth .style3 {
             width: 20px;
             height: 20px;
@@ -587,6 +595,14 @@
             height: 20px;
             position: relative;
             z-index: 100;
+        }
+
+        #tooth20 .style4{
+            width: 20px;
+            height: 20px;
+            background-color: #FFF;
+            position: relative;
+            z-index: 100; 
         }
 
         #tooth20 .style3::before{
@@ -1081,6 +1097,7 @@
         <input id="r13" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r13" />">
         <input id="r14" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r14" />">
         <input id="r15" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r15" />">
+        <input id="r16" type="hidden" value="<s:property value="allTestResultVo.resultAllergy.r16" />">
 
         <!-- physical -->
         <input id="hairIsNormal" type="hidden" value="<s:property value="allTestResultVo.resultPhysical.hairIsNormal"/>">
@@ -1931,11 +1948,11 @@
                                 是否检查过微量元素
                             </td>
                             <td>
-                                <input type="radio" name="answer-16" value="1"   id="radio-answer-16-1">
+                                <input type="radio" name="allergy-answer-16" value="1"   id="radio-answer-16-1">
                                 <label for="radio-answer-16-1">是</label>
                             </td>
                             <td>
-                                <input type="radio" name="answer-16" value="0" id="radio-answer-16-0">
+                                <input type="radio" name="allergy-answer-16" value="0" id="radio-answer-16-0">
                                 <label for="radio-answer-16-0">否</label>
                             </td>
                         </tr>
@@ -2996,7 +3013,7 @@
                     </tbody>
                 </table>
 
-                <textarea id="doctorRemark2016" rows="8" style="resize:none;border: 0;background-color: transparent;"></textarea>
+                <textarea id="doctorRemark2016" rows="14" style="resize:none;border: 0;background-color: transparent;"></textarea>
                 <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.record2016.testerName"/></p></div>
             </div>
         </div>
@@ -4042,6 +4059,7 @@
     var r13 = $('#r13').val();
     var r14 = $('#r14').val();
     var r15 = $('#r15').val();
+    var r16 = $('#r16').val();
 
     $("input:radio[name='allergy-answer-1'][value='"+ r1 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-2'][value='"+ r2 +"']").attr('checked','true');
@@ -4058,7 +4076,7 @@
     $("input:radio[name='allergy-answer-13'][value='"+ r13 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-14'][value='"+ r14 +"']").attr('checked','true');
     $("input:radio[name='allergy-answer-15'][value='"+ r15 +"']").attr('checked','true');
-    $("input:radio[name='answer-16'][value='"+ r16 +"']").attr('checked','true');
+    $("input:radio[name='allergy-answer-16'][value='"+ r16 +"']").attr('checked','true');
 
     if (r16 == 0) {
         $('#tr-micro').hide();
@@ -4396,6 +4414,11 @@
         var str3 = '';
         var str4 = '';
         var str5 = '';
+        var l = 0;
+        var j = 0;
+        var m = 0;
+        var n = 0;
+        var k = 0;
         $.ajax({
             url: 'getRemark',
             type: 'post',
@@ -4409,24 +4432,44 @@
                     item = instructions[i];
                     switch (item['type']) {
                         case 1:
+                            if (l > 2) {
+                                break;
+                            }
                             str1 += item['content'];
                             str1 += '<br/>';
+                            l++;
                             break;
                         case 2:
+                            if (j > 2) {
+                                break;
+                            }
                             str2 += item['content'];
                             str2 += '<br/>';
+                            j++;
                             break;
                         case 4:
+                            if (m > 2) {
+                                break;
+                            }
                             str3 += item['content'];
                             str3 += '<br/>';
+                            m++;
                             break;
                         case 3:
+                            if (n > 2) {
+                                break;
+                            }
                             str4 += item['content'];
                             str4 += '<br/>';
+                            n++;
                             break;
                         case 5:
+                            if (k > 2) {
+                                break;
+                            }
                             str5 += item['content'];
                             str5 += '<br/>';
+                            k++;
                             break;
                     } 
                 }
@@ -4435,8 +4478,10 @@
                 $('#remark3').html(str3)
                 $('#remark4').html(str4)
                 $('#remark5').html(str5)
+                window.flag += 1
+
             }
-        })
+        });
         str6 = "语言、社交、适应能力:"
         str7 = "运动发育:"
         // 宋佳医生建议
@@ -4948,7 +4993,7 @@
     $('#remarkTextTooth').html(remarkTooth);
 
     // 1未生长 0歪斜 2龋齿
-    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
+    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", 'NaN': "style4" }
 
     $("input:radio[name='answer-1-tooth'][value='"+ a1 +"']").attr('checked','true');
     $("input:radio[name='answer-2-tooth'][value='"+ a2 +"']").attr('checked','true');
@@ -5040,7 +5085,7 @@
     $('#remarkTextTooth-20').html(remarkTooth);
 
     // 1未生长 0歪斜 2龋齿
-    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", '99': "" }
+    var styles = { '1': "style3", '10': "style1", '11':"style1", '12': "style1", '13': "style1", '2': "style2", '99': "style4" }
 
     $("input:radio[name='answer-1-tooth-20'][value='"+ a1 +"']").attr('checked','true');
     $("input:radio[name='answer-2-tooth-20'][value='"+ a2 +"']").attr('checked','true');
