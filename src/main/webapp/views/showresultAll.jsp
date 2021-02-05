@@ -4223,10 +4223,10 @@
 
 <s:if test="allTestResultVo.result2016">
 <script type="text/javascript">
-    var dq_fix = $('#dq_fix').html();
-    var growth_fix = $('#growth_fix').html();
-    $("#DQ").html(dq_fix);
-    $("#growth").html(growth_fix);
+    var dq_fix = $('#dq_fix').val();
+    var growth_fix = $('#growth_fix').val();
+    $("#DQ").text(dq_fix);
+    $("#growth").text(growth_fix);
     var a1 = 0;
     a1 =  parseInt($('#scoreSport').html());//智龄
     var a2 = 0;
