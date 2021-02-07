@@ -4,7 +4,7 @@
 <html>
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
-    <title>编辑病历-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
     <%@include file="/statics/head.html"%>
     <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
     <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
@@ -14,7 +14,7 @@
 <s:include value="nav.jsp?act=records"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">小儿详细资料
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童资料
             <label class="pull-right" style="font-size:20px;line-height: 39px;">注 ：标有<font color='red'>*</font>为必填项</label>
         </h1>
         <form class="form-horizontal">

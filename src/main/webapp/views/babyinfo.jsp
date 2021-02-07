@@ -6,7 +6,7 @@
 <html>
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
-    <title>儿童详情-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
     <s:include value="/statics/head.html"/>
     <style>
         .selected{
@@ -76,7 +76,7 @@
                             <button class="btn btn-primary btn-parent" onclick="nowTest()" id="now"> 查看最新体检报告</button>
                             <button class="btn btn-default btn-parent" onclick="allTest()" id="all"> 查看全部报告</button>
                             <!-- 父母查看报告 -->
-                            <button class="btn btn-success btn-lg" onclick="parentCheckReport()" id="parentCheckReport" style="display: none"> 查看孩子体检报告</button>
+                            <!-- <button class="btn btn-success btn-lg" onclick="parentCheckReport()" id="parentCheckReport" style="display: none"> 查看孩子体检报告</button> -->
                         </td>
                     </tr>
 

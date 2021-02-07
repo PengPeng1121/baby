@@ -146,7 +146,7 @@
             </div>
         </div>
         <div style="width:270px;float: right">
-            <div ><p style="margin-top: 20px;font-size: 16px;">测评者： <input  id="testerName"/> </p></div>
+            <!-- <div ><p style="margin-top: 20px;font-size: 16px;">测评者： <input  id="testerName"/> </p></div> -->
             <div >
                 <a type="button" class="btn btn-primary noprint pull-right print" style="margin:20px 10px 20px 0px;">打印结果</a>
                 <!-- <a type="button" class="btn btn-primary noprint pull-right download" style="margin:50px 10px 20px 0px;">下载结果</a> -->
@@ -545,7 +545,7 @@
                             break;
                     } 
                 }
-                $('#doctorRemark').html(str6 + '\n' + str7)
+                $('#doctorRemark').html(str6  + str7)
                 window.flag += 1
             }
         })

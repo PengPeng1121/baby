@@ -4,7 +4,7 @@
 <html>
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
-    <title>新建病历-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
     <%@include file="/statics/head.html"%>
     <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
     <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
@@ -13,7 +13,7 @@
 <s:include value="nav.jsp?act=records"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">小儿详细资料
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童资料
             <label class="pull-right" style="font-size:20px;line-height: 39px;">注 ：标有<font color='red'>*</font>为必填项</label>
         </h1>
         <form class="form-horizontal">
@@ -65,7 +65,7 @@
                 </div> -->
                 <label class="col-lg-1 col-md-2 control-label required">父母电话</label>
                 <div class="col-md-2">
-                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="13212312310">
+                    <input id="f_tel" class="form-control front-no-radius front-no-box-shadow"  type="text" value="">
                 </div>
                 <!-- <label class="col-lg-1 col-md-2 control-label required">母-姓名</label>
                 <div class="col-md-2">
@@ -125,9 +125,10 @@
             $('.navbar').hide();
             $('.footer-default').hide();
             if (tel) {
-                $('#f_tel').attr("readonly","readonly");
+                // $('#f_tel').attr("readonly","readonly");
             }
-            $('#doctor').attr("readonly","readonly")
+            $('#doctor').attr("readonly","readonly");
+            $("#f_tel").val(tel);
             
         }
 
@@ -150,7 +151,7 @@
         //     }
         // }
         $("#doctor").val(userid);
-        $("#f_tel").val(tel);
+        
     });
 
     function changeState(state) {

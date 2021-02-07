@@ -32,8 +32,10 @@
 <body class="front-body">
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
+    <input type="hidden" id="username" value="<s:property value="#session.username"/>">
+    <input type="hidden" id="tel" value="<s:property value="#session.tel"/>">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童基本信息</h1>
+        <h3 style="margin-top: 0px;margin-bottom: 20px;">儿童基本信息</h3>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -106,7 +108,7 @@
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 
                 <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic2()" >保存并继续填写生育史等信息</a>
-                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
                 <!-- <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a> -->
             </div>
         </form>
@@ -115,6 +117,17 @@
 </div>
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
+    var username = $("#username").val();
+    var tel = $("#tel").val();
+    if (username.indexOf('家长') != -1) {
+        $('.navbar').hide();
+        $('.footer-default').hide();
+        if (tel) {
+            $('#contactMobile').val(tel);
+        }
+    }
+    
+
 
     var fileDom = document.getElementById("file");
     var previewDom = document.getElementById("preview");
@@ -234,7 +247,8 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultBasic1?id=" + rId;
+                        // window.location = "showresultBasic1?id=" + rId;
+                         window.location = "record/moreinfo?babyid=" + $("#babyid").val();
                     }
                 })
                 // window.location = "showresultBasic1?id=" + json.resultBasic1.id;

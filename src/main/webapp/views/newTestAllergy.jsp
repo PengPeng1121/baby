@@ -33,7 +33,8 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">食物过敏或不耐受风险评估</h1>
+        <input type="hidden" id="username" value="<s:property value="#session.username"/>">
+        <h4 style="margin-top: 0px;margin-bottom: 20px;">食物过敏或不耐受风险评估</h4>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -64,7 +65,7 @@
             <div class="panel panel-default front-panel">
                 <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                     <tbody style="width: 100%">
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>1</td>
                             <td>
                                 眼圈发紫或指尖发白
@@ -80,7 +81,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>2</td>
                             <td>
                                 头发稀疏偏黄，头两侧缺少头发
@@ -96,7 +97,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">    
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>3</td>
                             <td>
                                 有荨麻疹、慢性湿疹、口水疹、尿布疹病史
@@ -112,7 +113,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>4</td>
                             <td>
                                 皮肤爱红、爱痒
@@ -129,7 +130,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             
                             <td>5</td>
                             <td>
@@ -147,7 +148,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>6</td>
                             <td>
                                 排便异常，腹泻、便秘、便血
@@ -164,7 +165,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>7</td>
                             <td>
                                 睡眠差，俯卧睡，经常腹痛
@@ -181,7 +182,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>8</td>
                             <td>
                                 无原因的反复咳嗽、流涕、打喷嚏、喘息
@@ -198,7 +199,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>9</td>
                             <td>
                                 偶有吐奶、厌奶、吃完食物出现呕吐及腹泻
@@ -215,7 +216,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>10</td>
                             <td>
                                 一段时间内体重不增，或体重异常增加
@@ -232,7 +233,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>11</td>
                             <td>
                                 身高体重增长缓慢
@@ -249,7 +250,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>12</td>
                             <td>
                                 食欲差，积食，厌食厌奶
@@ -267,7 +268,7 @@
                             
                         </tr>
                         
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>13</td>
                             <td>
                                 是否检查过微量元素
@@ -283,7 +284,7 @@
                                 </label>
                             </td>
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;" id="tr-micro">
+                        <tr style="font-size: 14px;background-color: #d9edf7;" id="tr-micro">
                             <td>14</td>
                             <td>
                                 两种以上微量元素缺乏
@@ -300,7 +301,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>15</td>
                             <td>
                                 反复呼吸道感染
@@ -317,7 +318,7 @@
                             </td>
                             
                         </tr>
-                        <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                        <tr style="font-size: 14px;background-color: #d9edf7;">
                             <td>16</td>
                             <td>
                                 嗓子呼噜声
@@ -354,9 +355,9 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
-                <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基础信息</a>
-                <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a> -->
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
+                <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndCare()" >保存并继续填写关心点</a> -->
+                <!-- <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a> -->
             </div>
 
             <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
@@ -368,7 +369,13 @@
 </div>
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
-
+    var username = $("#username").val();
+    
+    if (username.indexOf('家长') != -1) {
+        $('.navbar').hide();
+        $('.footer-default').hide();
+        
+    }
 
 
     //月龄
@@ -425,7 +432,9 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultAllergy?id=" + rId;
+                        // window.location = "showresultAllergy?id=" + rId;
+                        // history.go(-1);
+                        window.location = "record/moreinfo?babyid=" + $("#babyid").val();
                     }
                 })
                 // window.location = "showresultAllergy?id=" + json.resultAllergy.id;
@@ -479,6 +488,31 @@
                     }
                 })
                 // window.location = "newtestBasic2?babyid=" + parseInt($("#babyid").val());
+            }
+        })
+    }
+
+
+
+    function scoreAndCare() {        
+        $.ajax({
+            url: 'saveresultAllergy',
+            type: 'post',
+            data: getData(),
+            success:function (json) {
+                var rId = json.resultAllergy.id;
+                var refreshData = {
+                    babyid: $("#babyid").val()
+                }
+                $.ajax({
+                    url: 'refreshExamTime',
+                    type: 'post',
+                    data: refreshData,
+                    success:function (json) {
+                        console.log('更新时间成功');
+                        window.location = "newtestParentsCare?babyid=" + parseInt($("#babyid").val());
+                    }
+                })
             }
         })
     }

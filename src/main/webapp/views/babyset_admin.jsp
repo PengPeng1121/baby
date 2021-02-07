@@ -4,7 +4,7 @@
 <html>
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
-    <title>病历属性设置-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
     <s:include value="/statics/head.html"/>
 </head>
 <body class="front-body">

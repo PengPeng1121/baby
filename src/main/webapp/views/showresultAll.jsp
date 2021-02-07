@@ -2932,6 +2932,14 @@
                 <table id="table2016-1">
                     <tbody>
                     <tr>
+                        <td class="col-md-2">姓名</td>
+                        <td class="col-md-2"><s:property value="baby.name"/></td>
+                        <td class="col-md-2">性别</td>
+                        <td class="col-md-2"><s:if test="baby.gender == 1">男</s:if><s:else>女</s:else></td>
+                        <td class="col-md-2">出生日期</td>
+                        <td class="col-md-2"><s:date name="baby.birthday" format="yyyy-MM-dd"/></td>
+                    </tr>
+                    <tr>
                         <td class="col-md-2">检查日期</td>
                         <td class="col-md-2">
                             <s:date name="allTestResultVo.result2016.time" format="yyyy-MM-dd"/>
@@ -3014,7 +3022,7 @@
                 </table>
 
                 <textarea id="doctorRemark2016" rows="14" style="resize:none;border: 0;background-color: transparent;"></textarea>
-                <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.record2016.testerName"/></p></div>
+                <!-- <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.record2016.testerName"/></p></div> -->
             </div>
         </div>
     </div>
@@ -4511,7 +4519,7 @@
                             break;
                     } 
                 }
-                $('#doctorRemark2016').html(str6 + '\n' + str7)
+                $('#doctorRemark2016').html(str6  + str7)
             }
         })
         $('#testerName').val($("#testerName2016").val());

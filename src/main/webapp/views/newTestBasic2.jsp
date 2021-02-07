@@ -33,7 +33,8 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">生产、既往、家族史</h1>
+        <input type="hidden" id="username" value="<s:property value="#session.username"/>">
+        <h3 style="margin-top: 0px;margin-bottom: 20px;">生产、既往、家族史</h3>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -69,24 +70,24 @@
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <table id="table-main" align="center" border="1px solid" style="margin: 0;width: 100%">
                         <tbody style="width: 100%">
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
-                                <td>1</td>
-                                <td>
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
+                                <td width="10%">1</td>
+                                <td width="40%">
                                     生产方式
                                 </td>
-                                <td>
-                                    <label for="radio-answer-1-1">
+                                <td width="25%">
+                                    <label for="radio-answer-1-1" style="font-weight: normal;">
                                         <input type="radio" name="isNormalChildbirth" value="1"  id="radio-answer-1-1" />顺产
                                     </label>
                                 </td>
-                                <td>
-                                    <label for="radio-answer-1-0">
+                                <td width="25%">
+                                    <label for="radio-answer-1-0" style="font-weight: normal;">
                                         <input type="radio" name="isNormalChildbirth" value="0" id="radio-answer-1-0" />剖腹产
                                     </label>
                                 </td>
                             </tr>
 
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>2</td>
                                 <td>
                                     出生时有无以下情况：(多选)
@@ -100,7 +101,7 @@
                                     <input type="checkbox" name="childbirthSituation"  value="5">新生儿手术(外科治疗)
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>3</td>
                                 <td>
                                     生产胎龄(周):
@@ -109,7 +110,7 @@
                                     <input id="babyBirthWeekAge" style="width: 100%" /> 
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>4</td>
                                 <td>
                                     是否早产
@@ -125,7 +126,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>5</td>
                                 <td>
                                     出生体重:
@@ -134,7 +135,7 @@
                                     <input id="babyBirthWeight" style="width: 80%" /> kg
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>6</td>
                                 <td>
                                     母亲生育年龄(周岁):
@@ -152,7 +153,7 @@
                                     <input id="babyCount"  style="width: 100%" /> 
                                 </td>
                             </tr> -->
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>7</td>
                                 <td>
                                     母亲妊娠期患病情况:
@@ -161,7 +162,7 @@
                                     <input id="motherPregnancyDiseaseSituation"  style="width: 100%" /> 
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>父亲身高</td>
                                 <td>
                                    <input id="fatherHeight"  style="width: 80%" /> cm
@@ -180,7 +181,7 @@
                                     <input id="pregnantCount" style="width: 100%" /> 
                                 </td>
                             </tr> -->
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>8</td>
                                 <td>
                                     有无重大疾病或发生意外情况:
@@ -189,7 +190,7 @@
                                     <input id="diseasePastHistory" style="width: 100%"  /> 
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>9</td>
                                 <td>
                                     父母系三代有先天家族遗传性疾病:
@@ -204,7 +205,7 @@
                                     <input type="checkbox" name="familyHeredityDisease"  value="6">神经疾病
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>10</td>
                                 <td>
                                     外祖父母、祖父母有慢性咳嗽、季节性咳嗽、运动后咳嗽或哮喘病史
@@ -220,7 +221,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>11</td>
                                 <td>
                                     父母双方有皮肤发痒、荨麻疹、药疹、湿疹病史
@@ -236,7 +237,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>12</td>
                                 <td>
                                     父母双方有哮喘、鼻炎、慢性咳嗽病史
@@ -252,7 +253,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>13</td>
                                 <td>
                                     父母双方有食物吸收差、身体消瘦、排便异常病史。
@@ -268,7 +269,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>14</td>
                                 <td>
                                     是否有过敏史
@@ -284,7 +285,7 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr style="font-weight: bold;font-size: 16px;background-color: #d9edf7;">
+                            <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>15</td>
                                 <td>
                                     过敏情况:
@@ -303,7 +304,7 @@
                 
                 <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic1()" >保存并继续填写基本信息</a> -->
                 <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a>
-                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并查看报告</a>
+                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
             </div>
         </form>
     </div>
@@ -311,7 +312,13 @@
 </div>
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
-
+    var username = $("#username").val();
+    
+    if (username.indexOf('家长') != -1) {
+        $('.navbar').hide();
+        $('.footer-default').hide();
+        
+    }
 
 
     //月龄
@@ -368,7 +375,8 @@
                     data: refreshData,
                     success:function (json) {
                         console.log('更新时间成功');
-                        window.location = "showresultBasic2?id=" + rId;
+                        // window.location = "showresultBasic2?id=" + rId;
+                        window.location = "record/moreinfo?babyid=" + $("#babyid").val();
                     }
                 })
                 // window.location = "showresultBasic2?id=" + json.resultBasic2.id;

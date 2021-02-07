@@ -4,7 +4,7 @@
 <html>
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
-    <title>病历管理-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
     <s:include value="/statics/head.html"/>
     <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
     <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>

@@ -5,7 +5,7 @@
 <head>
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <!-- <s:include value="/statics/head.html"/> -->
-    <title>用户登录-儿童发育评测平台</title>
+    <title>儿童发育评测平台</title>
 </head>
 
 <body class="front-body">
@@ -52,7 +52,8 @@
         
         if (tel && psw) {
             $('#tel-input').val(tel)
-            $('#psw-input').val($.md5(psw))
+            $('#psw-input').val(psw)
+            // $('#psw-input').val($.md5(psw))
             $('#thirdForm').submit();
         }
         
