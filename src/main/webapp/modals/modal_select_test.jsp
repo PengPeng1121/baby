@@ -115,7 +115,7 @@
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate parent view">
             <a type="button" class="btn  modal-box text-center" href="javascript:start_Allergy()"><h4
-                    style="color: white;font-size: small">食物过敏或不耐受<br/>风险评估</h4></a>
+                    style="color: white;font-size: small">食物过敏/不耐受<br/>风险评估</h4></a>
         </div>
 
         <div style="margin-top: 10px; display: inline-block; width: 200px" class="manage doctorOperate parent view">
