@@ -1585,7 +1585,7 @@
                     <tbody style="width: 100%">
                         <tr>
                             <td colspan="4">
-                                父母系三代有无先天家族遗传性疾病:
+                                父母、祖父母、外祖父母有无先天家族遗传疾病:
                             </td>
                         </tr>
                         <tr>
@@ -1682,7 +1682,7 @@
                         </tr>
                         <tr>
                             <td>
-                                是否有过敏史:
+                                宝宝是否有过敏史:
                                 <input type="radio" name="isAllergyHistory" value="1"   id="radio-answer-9-1">
                                 <label for="radio-answer-9-1" style="width: 50px;margin-left: 20px;font-weight: normal;"> 是</label>
 
@@ -1692,7 +1692,7 @@
                         </tr>
                         <tr class="item-line">
                             <td>
-                                <span> 过敏情况: </span>
+                                <span> 宝宝过敏情况: </span>
                                 <span > <s:property value="allTestResultVo.resultBasic2.allergySituation"/>  </span>
                             </td>
                         </tr>

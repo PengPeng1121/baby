@@ -193,7 +193,7 @@
                             <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>9</td>
                                 <td>
-                                    父母系三代有先天家族遗传性疾病:
+                                    父母、祖父母、外祖父母有无先天家族遗传疾病 :
                                 </td>
                                 <td colspan="2">
                                     <input type="checkbox" name="familyHeredityDisease"  value="0">无
@@ -272,7 +272,7 @@
                             <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>14</td>
                                 <td>
-                                    是否有过敏史
+                                    宝宝是否有过敏史
                                 </td>
                                 <td>
                                     <label for="radio-answer-9-1">
@@ -288,7 +288,7 @@
                             <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>15</td>
                                 <td>
-                                    过敏情况:
+                                    宝宝过敏情况:
                                 </td>
                                 <td colspan="2">
                                     <input id="allergySituation" style="width: 100%" /> 
