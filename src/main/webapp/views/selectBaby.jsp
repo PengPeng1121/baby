@@ -26,6 +26,7 @@
     <div class="container">  
         <a type="button" id="newBaby" class="btn btn-primary" href="record/new">新建孩子</a>
         <div class="panel panel-default front-panel" id="test" style="margin-top: 50px">
+            <div class="panel-heading">孩子信息</div>
             <div class="panel-body front-no-padding">               
                 <table class="table table-striped front-table" style="margin-bottom: 0px">
                     <tbody>

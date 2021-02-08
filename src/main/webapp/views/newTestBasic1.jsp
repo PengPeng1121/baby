@@ -70,37 +70,37 @@
                 <div class="panel-heading">基本信息:</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;">
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">小名:</label>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">小名:</span></label>
                         <div class="col-md-9">
                            <input id="nickName" />
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">地址:</label>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">地址:</span></label>
                         <div class="col-md-9">
                            <input id="address" />
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">联系电话:</label>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">联系电话:</span></label>
                         <div class="col-md-9">
                            <input id="contactMobile" />
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <form id="form" method="POST" enctype="multipart/form-data" 
-                         onsubmit="return check();">
-                            <input type="file" accept="image/*" name="file" id="file"/>
-                            
-                        </form>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">上传孩子照片:</span></label>
+                        <div class="col-md-9">
+                            <form id="form" method="POST" enctype="multipart/form-data" 
+                             onsubmit="return check();">
+                                <input type="file" accept="image/*" name="file" id="file"/>
+                                <input type="button"  class="btn btn-warning" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
+                            </form>
+                        </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
-                    <input type="button" class="btn btn-primary" onclick="uploadImg()" value="确认使用当前照片"/>
-                    
-                    
                 </div>
             </div>
 
