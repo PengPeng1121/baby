@@ -3582,9 +3582,13 @@
         type: 'post',
         data: eval('(' + data + ')'),
         success:function (json) {
-            babyHA = json.babyHA;
-            babyWA = json.babyWA;
-            babyHead = json.babyHead;
+            babyHA = [json.babyHA[0]];
+            babyWA = [json.babyWA[0]];
+            if (json.babyHead) {
+                babyHead = [json.babyHead[0]];
+            } else{
+                babyHead = [0,0]
+            }
             flag += 1;
         }
     })

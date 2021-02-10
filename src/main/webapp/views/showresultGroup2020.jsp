@@ -186,7 +186,11 @@
         success:function (json) {
             babyHA = [json.babyHA[0]];
             babyWA = [json.babyWA[0]];
-            babyHead = [json.babyHead[0]];
+            if (json.babyHead) {
+                babyHead = [json.babyHead[0]];
+            } else{
+                babyHead = [0,0]
+            }
             flag += 1;
         }
     })

@@ -88,12 +88,12 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input"><span class="label label-success">上传孩子照片:</span></label>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">请上传孩子照片:</span></label>
                         <div class="col-md-9">
                             <form id="form" method="POST" enctype="multipart/form-data" 
                              onsubmit="return check();">
                                 <input type="file" accept="image/*" name="file" id="file"/>
-                                <input type="button"  class="btn btn-warning" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
+                                <input type="button"  class="btn btn-warning btn-xs" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
                             </form>
                         </div>
                     </div>
@@ -104,11 +104,21 @@
                 </div>
             </div>
 
+            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    头像正在上传，请稍后
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
                 
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndBasic2()" >保存并继续填写生育史等信息</a>
-                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 5px;margin-top: 5px" onclick="saveAndBasic2()" >保存并继续填写生育史等信息</a>
+                <a type="button" class="btn btn-default pull-right" style="margin-left: 5px;margin-top: 5px" onclick="save()" >保存并返回</a>
                 <!-- <a type="button" class="btn btn-primary pull-right" onclick="saveAndAllergy()" >保存并继续填写食物过敏或不耐受风险评估</a> -->
             </div>
         </form>
@@ -167,6 +177,8 @@
         formData.append("file", file);
         formData.append("testId", 33);
         formData.append("babyId", $('#babyid').val());
+        //图片上传loading
+        $('#myModal').show();
         $.ajax({
             url: "babyImg/uploadHeadImg",
             type: "POST",
@@ -176,6 +188,8 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
+                // 关闭loading
+                $('#myModal').hide();
                 $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
                 $('#imgUrl').val(json.headImgUrl);
             }

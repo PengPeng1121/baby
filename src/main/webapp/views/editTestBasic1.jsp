@@ -96,11 +96,11 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input"><span class="label label-success">孩子照片:</span></label>
+                        <label class="col-md-3 front-label data-input"><span class="label label-success">请上传孩子照片:</span></label>
                         <div class="col-md-9">
                             <form id="form" method="POST" enctype="multipart/form-data" 
                              onsubmit="return check();">
-                                <input type="file" class="btn btn-default" accept="image/*" name="file" id="file"/>
+                                <input type="file" class="btn btn-default" accept="image/*" name="file" id="file"/ style="width: 80%;">
                                 <input type="button"  class="btn btn-warning" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
                             </form>
                         </div>
