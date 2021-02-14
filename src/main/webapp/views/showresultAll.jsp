@@ -163,7 +163,7 @@
         #test2016 #remark1, #remark2, #remark3, #remark4, #remark5, #doctorRemark{
             font-size: 10px;
         }
-        #test2016 #table2016-1, #table2016-2,  #table2016-4, #doctorRemark2016{
+        #test2016 #table2016-1, #table2016-2,  #table2016-4, #doctorRemark2016, #illustration{
             width: 60%;
             position: relative;
             left: 60px;
@@ -757,7 +757,7 @@
             left: 60px !important;
             top: 200px !important;
         }
-        #test2016 #table2016-1, #table2016-2, #table2016-3, #table2016-4, #doctorRemark2016{
+        #test2016 #table2016-1, #table2016-2, #table2016-3, #table2016-4, #doctorRemark2016, #illustration{
             width: 80%;
             position: relative;
             left: 60px;
@@ -3022,6 +3022,9 @@
                 </table>
 
                 <textarea id="doctorRemark2016" rows="14" style="resize:none;border: 0;background-color: transparent;"></textarea>
+                <p id="illustration" style="font-size: 10px;">
+                    *注：本测评反映的不是智力水平，而是儿童在一定阶段的神经心理发育水平。本测验结果准确性受被试者测验时的情绪和身体状况影响，本报告仅供参考。测查结果只代表宝宝此阶段发展情况，既不代表从前更不能定论将来。
+                </p>
                 <!-- <div id="tester2016" ><p>测评者：<s:property value="otherResultVo.record2016.testerName"/></p></div> -->
             </div>
         </div>

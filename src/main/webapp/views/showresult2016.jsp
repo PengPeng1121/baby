@@ -143,6 +143,9 @@
             <div class="panel-body front-no-padding">
                 <textarea id="doctorRemark" rows="14" style="resize:none;border: 0;width: 100%;height: 100%"></textarea>
                 <div id="doctorRemarkText" style="display: none;"></div>
+                <p style="font-size: 10px">
+                    *注：本测评反映的不是智力水平，而是儿童在一定阶段的神经心理发育水平。本测验结果准确性受被试者测验时的情绪和身体状况影响，本报告仅供参考。测查结果只代表宝宝此阶段发展情况，既不代表从前更不能定论将来。
+                </p>
             </div>
         </div>
         <div style="width:270px;float: right">
