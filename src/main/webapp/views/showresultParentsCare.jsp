@@ -131,7 +131,7 @@
                     <table style="width: 590px; border:0;font-size: 16px; position: absolute;top: 240px;left: 460px" id="content-table">
                         <tr>
                             <td>
-                                关心点1
+                                需求点1
                             </td>
                         </tr>
                         <tr>
@@ -141,7 +141,7 @@
                         </tr>
                         <tr>
                             <td>
-                                关心点2
+                                需求点2
                             </td>
                         </tr>
                         <tr>
@@ -150,7 +150,7 @@
                             </td>
                         </tr><tr>
                             <td>
-                                关心点3
+                                需求点3
                             </td>
                         </tr><tr>
                             <td>
@@ -180,6 +180,7 @@
     var care2 = $('#care2').val();
     var care3 = $('#care3').val();
     var map = {
+        0: '我想综合了解宝宝的发育的情况',
         1: '身高、体重等生长发育问题',
         2: '喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类',
         3: '营养素补充问题：如钙、铁、锌、维生素D等',
