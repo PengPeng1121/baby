@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultParentsCare?id=<s:property value="#ParentsCare.id"/>">查看</a>
-                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultBasic1.id"/>, 55)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#ParentsCare.id"/>, 55)">删除此报告</a>
                                     </div>
                                 </div>
                             </td>

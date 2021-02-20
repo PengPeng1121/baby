@@ -93,10 +93,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Boy.jpg"> -->
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/bgBoy.png">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg5Girl.jpg"> -->
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/bgGirl.png">
                     </s:if>
 
                     <table style="width: 55%;
@@ -128,7 +128,7 @@
                         </tr>
                     </table>
 
-                    <table style="width: 590px; height:660px;border:0;font-size: 16px; position: absolute;top: 390px;left: 490px" id="content-table">
+                    <table style="width: 590px; border:0;font-size: 16px; position: absolute;top: 240px;left: 460px" id="content-table">
                         <tr>
                             <td>
                                 关心点1
@@ -158,16 +158,6 @@
                             </td>
                         </tr>
                     </table>
-
-                    <p id="date" style="
-                        position: absolute;
-                        top: 1000px;
-                        left: 950px;
-                        font-weight: bold;
-                        font-size: 16px;
-                    ">
-                        <s:date name="resultSummary.summaryDate" format="yyyy-MM-dd"/>
-                    </p>
                 </div>
             </div>
             <div style="width:270px;float: right">
@@ -202,9 +192,9 @@
         10: '不喜欢和小朋友交流、玩耍',
         11: '走路步态问题：如O型腿、X型腿等',
     }
-    $('#care1Text').text(map['care1']);
-    $('#care2Text').text(map['care2']);
-    $('#care3Text').text(map['care3']);
+    $('#care1Text').text(map[care1]);
+    $('#care2Text').text(map[care2]);
+    $('#care3Text').text(map[care3]);
     
     $('.print').click(function(){
         window.print();

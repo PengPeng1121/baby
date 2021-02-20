@@ -33,7 +33,8 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">儿童基本信息</h1>
+        <input type="hidden" id="username" value="<s:property value="#session.username"/>">
+        <h3 style="margin-top: 0px;margin-bottom: 20px;">父母关心点</h3>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -65,7 +66,7 @@
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <div class="panel-heading">基本信息:</div>
+                <div class="panel-heading">父母关心点:</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;" id="content">
                     <div class="col-md-12" style="padding-bottom: 10px">
                         <label class="col-md-3 front-label data-input">第一关心点:</label>
@@ -140,9 +141,17 @@
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
 
+    var username = $("#username").val();
+    
+    if (username.indexOf('家长') != -1) {
+        $('.navbar').hide();
+        $('.footer-default').hide();
+        
+    }
+
     function save() {
         
-            $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
+            $.tipModal('confirm', 'success', '确定保存？', function(result) {
                 if(result) {
                     score();
                 }
@@ -183,7 +192,8 @@
                     success:function (json) {
                         console.log('更新时间成功');
                         // 显示填报完成
-                        $('#content').html('<p>信息填报完成</p>')
+                        $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '信息填写完成'});
+                        window.location = "record/moreinfo?babyid=" + $("#babyid").val();
                         // window.location = "showresultBasic1?id=" + rId;
                     }
                 })

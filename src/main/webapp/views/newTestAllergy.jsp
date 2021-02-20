@@ -355,8 +355,9 @@
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
-                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
-                <!-- <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndCare()" >保存并继续填写关心点</a> -->
+                
+                <a type="button" class="btn btn-primary pull-right" style="margin-left: 20px" onclick="saveAndCare()" >保存并继续填写关心点</a>
+                <a type="button" class="btn btn-default pull-right" style="margin-left: 20px" onclick="save()" >保存并返回</a>
                 <!-- <a type="button" class="btn btn-primary pull-right" onclick="saveAndBasic2()" >保存并继续填写生产史等信息</a> -->
             </div>
 
@@ -403,11 +404,11 @@
         
     }
 
-    function saveAndAllergy() {
+    function saveAndCare() {
         
             $.tipModal('confirm', 'success', '确定保存本测评？', function(result) {
                 if(result) {
-                    scoreAndAllergy();
+                    scoreAndCare();
                 }
             });
         
