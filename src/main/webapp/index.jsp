@@ -1219,7 +1219,7 @@
                         <div class="panel-body">
                             <div class="media">
                                 <div class="media-body">
-                                    <p class="media-heading" style="font-size: 16px;">父母关心点</p>
+                                    <p class="media-heading" style="font-size: 16px;">体检重点需求</p>
                                     <div class="as-desc">
                                         <div style="display: inline-block;">
                                             <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultParentsCare"/></label>

@@ -87,7 +87,7 @@
                                     <div class="media-body front-overflow-visible" >
                                         <h4 class="media-heading " >
                                             <span class="front-text-title" >
-                                               父母关心点
+                                               本次体检重点需求
                                             </span>
                                         </h4>
                                         <div class="front-text-break">
@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
                                         <a class="btn btn-default" target="_blank" href="showresultParentsCare?id=<s:property value="#ParentsCare.id"/>">查看</a>
-                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#ParentsCare.id"/>, 55)">删除此报告</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#ParentsCare.id"/>, 55)">删除</a>
                                     </div>
                                 </div>
                             </td>
@@ -660,7 +660,7 @@
                     </s:iterator>
 
                     <s:iterator value="resultList" var="re">
-                        <tr class="old-test manage doctorOperate view">
+                        <tr class="old-test manage doctorOperate view 0-6">
                             <td>
                                 <div class="media front-overflow-visible" style="padding: 7px;">
                                     <div class="media-body front-overflow-visible" >
@@ -1308,6 +1308,7 @@
         $('#all').removeClass('btn-primary').addClass('btn-default')
         $('#now').removeClass('btn-default').addClass('btn-primary')
         $('.view').hide();
+        $($('.0-6')[0]).show();
         $($('.care')[0]).show();
         $($('.basic1')[0]).show();
         $($('.basic2')[0]).show();

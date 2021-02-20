@@ -34,7 +34,7 @@
 <div class="front-inner front-inner-media">
     <div class="container">
         <input type="hidden" id="username" value="<s:property value="#session.username"/>">
-        <h3 style="margin-top: 0px;margin-bottom: 20px;">父母关心点</h3>
+        <h3 style="margin-top: 0px;margin-bottom: 20px;">本次体检重点需求</h3>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
@@ -66,12 +66,13 @@
             <div class="panel panel-default front-panel">
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
-                <div class="panel-heading">父母关心点:</div>
+                <div class="panel-heading">本次体检您的重点需求</div>
                 <div class="panel-body front-no-padding" style="padding: 15px;" id="content">
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">第一关心点:</label>
+                        <label class="col-md-3 front-label data-input">第一需求:</label>
                         <div class="col-md-9">
                            <select id="care1" class="form-control front-no-radius front-no-box-shadow">
+                                <option value="0">我想综合了解宝宝的发育的情况</option>
                                 <option value="1">身高、体重等生长发育问题</option>
                                 <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
@@ -87,9 +88,10 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">第二关心点:</label>
+                        <label class="col-md-3 front-label data-input">第二需求:</label>
                         <div class="col-md-9">
                            <select id="care2" class="form-control front-no-radius front-no-box-shadow">
+                                <option value="0">我想综合了解宝宝的发育的情况</option>
                                 <option value="1">身高、体重等生长发育问题</option>
                                 <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
@@ -105,9 +107,10 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="padding-bottom: 10px">
-                        <label class="col-md-3 front-label data-input">第三关心点:</label>
+                        <label class="col-md-3 front-label data-input">第三需求:</label>
                         <div class="col-md-9">
                            <select id="care3" class="form-control front-no-radius front-no-box-shadow">
+                                <option value="0">我想综合了解宝宝的发育的情况</option>
                                 <option value="1">身高、体重等生长发育问题</option>
                                 <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
