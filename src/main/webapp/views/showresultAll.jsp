@@ -1158,6 +1158,8 @@
         <input type="hidden" id="dq_fix" value="<s:property value="allTestResultVo.result2016.dq"/>">
         <input type="hidden" id="growth_fix" value="<s:property value="allTestResultVo.result2016.growth"/>">
         <input type="hidden" id="testerName2016" value="<s:property value="otherResultVo.record2016.testerName"/>">
+        <input type="hidden" id="remark2016" value="<s:property value="otherResultVo.record2016.remark"/>">
+
         
         <!-- blood -->
 
@@ -4242,6 +4244,7 @@
     var growth_fix = $('#growth_fix').val();
     $("#DQ").text(dq_fix);
     $("#growth").text(growth_fix);
+    
     var a1 = 0;
     a1 =  parseInt($('#scoreSport').html());//智龄
     var a2 = 0;
@@ -4497,39 +4500,14 @@
 
             }
         });
-        str6 = "语言、社交、适应能力:"
-        str7 = "运动发育:"
-        // 宋佳医生建议
-        $.ajax({
-            url: 'getRemarkHeMa',
-            type: 'post',
-            data: {
-                'resultID': resultID2016
-            },
-            success:function (json) {
-                instructions = json.instructions
-                item = {}
-                for (var i = 0, len = instructions.length; i < len ; i++) {
-                    item = instructions[i];
-                    switch (item['type']) {
-                        case 6:
-                            
-                            str6 += '\n';
-                            str6 += '&nbsp;&nbsp;';
-                            str6 += item['content'];
-                            break;
-                        case 7:
-                            
-                            str7 += '\n';
-                            str7 += '&nbsp;&nbsp;';
-                            str7 += item['content'];
-                            break;
-                    } 
-                }
-                $('#doctorRemark2016').html(str6  + str7)
-            }
-        })
-        $('#testerName').val($("#testerName2016").val());
+        
+
+        var remark2016 = $('#remark2016').val();
+        var reg = new RegExp("<br>","g");//g,表示全部替换。
+        remark2016 = remark2016.replace(reg,"\n");
+        $('#doctorRemark2016').html(remark2016);
+        
+        // $('#testerName').val($("#testerName2016").val());
     });
 </script>
 </s:if>
