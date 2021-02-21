@@ -73,17 +73,17 @@
                         <div class="col-md-9">
                            <select id="care1" class="form-control front-no-radius front-no-box-shadow">
                                 <option value="0">我想综合了解宝宝的发育的情况</option>
-                                <option value="1">身高、体重等生长发育问题</option>
-                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
+                                <option value="1">生长发育问题：身高、体重等</option>
+                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、挑食、食欲不振等</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
-                                <option value="4">睡眠不好：如摇头，夜醒频繁、哭闹等</option>
-                                <option value="5">大便：1.什么颜色答大便是正常的?2.便秘（多久不排便算便秘），便秘怎么改善；3.腹泻（每天排多少次算腹泻），腹泻可以用哪些药物；</option>
-                                <option value="6">皮肤易红、起皮疹</option>
+                                <option value="4">睡眠问题：如摇头，夜醒频繁、哭闹、失眠等</option>
+                                <option value="5">排泄问题：便秘；腹泻等</option>
+                                <option value="6">皮肤问题：皮肤泛红、起皮疹等</option>
                                 <option value="7">宝宝是否存在有过敏相关的不适</option>
                                 <option value="8">注意力不集中</option>
-                                <option value="9">语言问题：如：发音不准，说话晚</option>
-                                <option value="10">不喜欢和小朋友交流、玩耍</option>
-                                <option value="11">走路步态问题：如O型腿、X型腿等</option>
+                                <option value="9">语言问题：如：发音不准，说话晚等</option>
+                                <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
+                                <option value="11">体姿体态问题：如O型腿、X型腿等</option>
                             </select>
                         </div>
                     </div>
@@ -92,17 +92,17 @@
                         <div class="col-md-9">
                            <select id="care2" class="form-control front-no-radius front-no-box-shadow">
                                 <option value="0">我想综合了解宝宝的发育的情况</option>
-                                <option value="1">身高、体重等生长发育问题</option>
-                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
+                                <option value="1">生长发育问题：身高、体重等</option>
+                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、挑食、食欲不振等</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
-                                <option value="4">睡眠不好：如摇头，夜醒频繁、哭闹等</option>
-                                <option value="5">大便：1.什么颜色答大便是正常的?2.便秘（多久不排便算便秘），便秘怎么改善；3.腹泻（每天排多少次算腹泻），腹泻可以用哪些药物；</option>
-                                <option value="6">皮肤易红、起皮疹</option>
+                                <option value="4">睡眠问题：如摇头，夜醒频繁、哭闹、失眠等</option>
+                                <option value="5">排泄问题：便秘；腹泻等</option>
+                                <option value="6">皮肤问题：皮肤泛红、起皮疹等</option>
                                 <option value="7">宝宝是否存在有过敏相关的不适</option>
                                 <option value="8">注意力不集中</option>
-                                <option value="9">语言问题：如：发音不准，说话晚</option>
-                                <option value="10">不喜欢和小朋友交流、玩耍</option>
-                                <option value="11">走路步态问题：如O型腿、X型腿等</option>
+                                <option value="9">语言问题：如：发音不准，说话晚等</option>
+                                <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
+                                <option value="11">体姿体态问题：如O型腿、X型腿等</option>
                             </select>
                         </div>
                     </div>
@@ -111,17 +111,17 @@
                         <div class="col-md-9">
                            <select id="care3" class="form-control front-no-radius front-no-box-shadow">
                                 <option value="0">我想综合了解宝宝的发育的情况</option>
-                                <option value="1">身高、体重等生长发育问题</option>
-                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、性状、种类</option>
+                                <option value="1">生长发育问题：身高、体重等</option>
+                                <option value="2">喂养问题：如奶量、厌奶、吐奶及辅食添加顺序、挑食、食欲不振等</option>
                                 <option value="3">营养素补充问题：如钙、铁、锌、维生素D等</option>
-                                <option value="4">睡眠不好：如摇头，夜醒频繁、哭闹等</option>
-                                <option value="5">大便：1.什么颜色答大便是正常的?2.便秘（多久不排便算便秘），便秘怎么改善；3.腹泻（每天排多少次算腹泻），腹泻可以用哪些药物；</option>
-                                <option value="6">皮肤易红、起皮疹</option>
+                                <option value="4">睡眠问题：如摇头，夜醒频繁、哭闹、失眠等</option>
+                                <option value="5">排泄问题：便秘；腹泻等</option>
+                                <option value="6">皮肤问题：皮肤泛红、起皮疹等</option>
                                 <option value="7">宝宝是否存在有过敏相关的不适</option>
                                 <option value="8">注意力不集中</option>
-                                <option value="9">语言问题：如：发音不准，说话晚</option>
-                                <option value="10">不喜欢和小朋友交流、玩耍</option>
-                                <option value="11">走路步态问题：如O型腿、X型腿等</option>
+                                <option value="9">语言问题：如：发音不准，说话晚等</option>
+                                <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
+                                <option value="11">体姿体态问题：如O型腿、X型腿等</option>
                             </select>
                         </div>
                     </div>
