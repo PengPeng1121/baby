@@ -4493,7 +4493,7 @@
                 $('#remark3').html(str3)
                 $('#remark4').html(str4)
                 $('#remark5').html(str5)
-                window.flag += 1
+                // window.flag += 1
 
             }
         });
