@@ -225,7 +225,10 @@
                     style="color: white;font-size: small">总评</h4></a>
         </div>
 
-
+        <div style="margin-top: 10px; display: inline-block; width: 150px" class="manage doctorOperate view">
+            <a type="button" class="btn  modal-box text-center" href="javascript:start_TCU()"><h4
+                    style="color: white;font-size: small">复诊</h4></a>
+        </div>
 
     </div>
 </div>
@@ -606,6 +609,26 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestSummary?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+
+    function start_TCU() {
+        var babyid = $("#babyid").val();
+        
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestTCU?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

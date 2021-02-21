@@ -1214,7 +1214,7 @@
                 </s:if>
                 <!-- 父母关注点 -->
                 <s:if test="resultParentsCareLeftTimes != 0">
-                <div class="col-md-3  manage doctorOperate heart view">
+                <div class="col-md-3  manage doctorOperate  view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
                             <div class="media">
@@ -1232,6 +1232,37 @@
                                         </s:if>
                                         <s:else>
                                             <a href="record?testId=55" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
+                                        </s:else>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </s:if>
+
+                <!-- 复诊 -->
+                <s:if test="resultTCULeftTimes != 0">
+                <div class="col-md-3  manage doctorOperate  view">
+                    <div class="panel panel-default front-panel " style="height: 155px;border:0px">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="media-heading" style="font-size: 16px;">复诊</p>
+                                    <div class="as-desc">
+                                        <div style="display: inline-block;">
+                                            <label style="font-size: 30px;color: black;font-weight: normal;"><s:property value="numberOfResultTCU"/></label>
+                                            <label style="font-weight:normal;">个</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <s:if test="resultTCULeftTimes == 0">
+                                            <span>请购买</span>
+                                        </s:if>
+                                        <s:else>
+                                            <a href="record?testId=56" onclick="" ><span class="glyphicon glyphicon-edit"></span>&nbsp;管理</a>
                                         </s:else>
                                     </div>
 

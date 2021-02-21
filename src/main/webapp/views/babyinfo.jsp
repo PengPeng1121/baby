@@ -659,6 +659,36 @@
                         </tr>
                     </s:iterator>
 
+
+                    <s:iterator value="resultTCUList" var="resultTCU">
+                        <tr class="manage doctorOperate view tcu">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                               复诊
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultTCU.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <!-- <a class="btn btn-default" target="_blank" href="editresultTCU?id=<s:property value="#resultTCU.id"/>">编辑</a> -->
+                                        <a class="btn btn-default" target="_blank" href="showresultTCU?id=<s:property value="#resultTCU.id"/>">查看</a>
+                                        <!-- <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTCU.id"/>, 56)">选中</a> -->
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultTCU.id"/>, 56)">删除</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+
                     <s:iterator value="resultList" var="re">
                         <tr class="old-test manage doctorOperate view 0-6">
                             <td>
@@ -1330,6 +1360,7 @@
         $($('.urine')[0]).show();
         $($('.ecg')[0]).show();
         $($('.summary')[0]).show();
+        $($('.tcu')[0]).show();
         authorize()
     }
     
