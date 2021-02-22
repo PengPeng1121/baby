@@ -93,7 +93,7 @@
                             <form id="form" method="POST" enctype="multipart/form-data" 
                              onsubmit="return check();">
                                 <input type="file" accept="image/*" name="file" id="file"/>
-                                <input type="button"  class="btn btn-warning btn-xs" style="margin-top: 20px"  onclick="uploadImg()" value="确认使用当前照片"/>
+                                <input type="button"  class="btn btn-warning btn-xs" style="margin-top: 20px" onclick="uploadImg()" value="确认使用当前照片"/>
                             </form>
                         </div>
                     </div>
@@ -101,18 +101,17 @@
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
+                    <div class="col-md-12">
+                        
+                           <p style="color: red">
+                               注：保存之前不要忘记上传宝宝的照片哦！
+                           </p>
+                        
+                    </div>
                 </div>
             </div>
 
-            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    头像正在上传，请稍后
-                  </div>
-                </div>
-              </div>
-            </div> -->
+            
 
             <div style="margin-bottom: 73px;">
                 <!-- <a type="button" class="btn btn-primary pull-left" onclick="preview()">预览</a> -->
@@ -125,6 +124,16 @@
     </div>
     <s:include value="/statics/footer.jsp"/>
 </div>
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>图片上传中。。。 请稍后</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
     var username = $("#username").val();
@@ -177,8 +186,7 @@
         formData.append("file", file);
         formData.append("testId", 33);
         formData.append("babyId", $('#babyid').val());
-        //图片上传loading
-        $('#myModal').show();
+        $("#photoModal").modal("show");
         $.ajax({
             url: "babyImg/uploadHeadImg",
             type: "POST",
@@ -189,7 +197,7 @@
             dataType: "json",
             success: function (json) {
                 // 关闭loading
-                $('#myModal').hide();
+                $("#photoModal").modal("hide");
                 $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
                 $('#imgUrl').val(json.headImgUrl);
             }

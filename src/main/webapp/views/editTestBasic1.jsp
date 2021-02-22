@@ -109,6 +109,14 @@
                         <img id="preview" style="width: 200px">
                         <input id="imgUrl" type="hidden" >
                     </div>
+
+                    <div class="col-md-12">
+                        
+                           <p style="color: red">
+                               注：保存之前不要忘记上传宝宝的照片哦！
+                           </p>
+                        
+                    </div>
                     
                     
                 </div>
@@ -122,6 +130,15 @@
         </form>
     </div>
     <s:include value="/statics/footer.jsp"/>
+</div>
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>图片上传中。。。 请稍后</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
 </div>
 <s:include value="/statics/tail.html"/>
 <script type="text/javascript">
@@ -191,6 +208,7 @@
         formData.append("testId", 33);
         formData.append("resultID", resultID);
         formData.append("babyId", $('#babyid').val());
+        $("#photoModal").modal("show");
         $.ajax({
             url: "babyImg/uploadHeadImg",
             type: "POST",
@@ -200,6 +218,7 @@
             contentType: false,
             dataType: "json",
             success: function (json) {
+                $("#photoModal").modal("hide");
                 $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '图片提交成功,请点击保存按钮'});
                 $('#imgUrl').val(json.headImgUrl);
             }
