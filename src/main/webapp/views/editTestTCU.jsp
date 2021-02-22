@@ -65,7 +65,8 @@
                 <input id="days" type="hidden" value="<s:property value="days"/>">
                 <input id="babyid" type="hidden" value="<s:property value="baby.babyid"/>">
 
-                <input id="timeOld" type="hidden" value="<s:property value="resultTCU.time"/>">
+                <input id="resultID" type="hidden" value="<s:property value="resultTCU.id"/>">
+                <input id="timeOld" type="hidden" value="<s:property value="resultTCU.nextVisitTime"/>">
                 <input id="r2Old" type="hidden" value="<s:property value="resultTCU.r2"/>">
                 <input id="r3Old" type="hidden" value="<s:property value="resultTCU.r3"/>">
                 <input id="r4Old" type="hidden" value="<s:property value="resultTCU.r4"/>">
@@ -240,7 +241,7 @@
     }
     function score() {        
         $.ajax({
-            url: 'saveresultTCU',
+            url: 'updateresultTCU',
             type: 'post',
             data: getData(),
             success:function (json) {
@@ -316,7 +317,13 @@
         //     r8Str = r8List.join(',');
         // });
 
-        data['resultTCU.time'] = $("#time").val().trim();
+
+        resultID = $("#resultID").val();
+
+        // 结果页ID
+        data ['resultTCU.id'] = resultID;
+
+        data['resultTCU.nextVisitTime'] = $("#time").val().trim();
         // data['resultTCU.r1'] = r1Str;
         data['resultTCU.r2'] = r2Str;
         data['resultTCU.r3'] = r3Str;

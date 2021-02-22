@@ -260,7 +260,7 @@
         //     r8Str = r8List.join(',');
         // });
 
-        data['resultTCU.time'] = $("#time").val().trim();
+        data['resultTCU.nextVisitTime'] = $("#time").val().trim();
         // data['resultTCU.r1'] = r1Str;
         data['resultTCU.r2'] = r2Str;
         data['resultTCU.r3'] = r3Str;
