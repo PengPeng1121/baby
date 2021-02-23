@@ -87,7 +87,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 600px !important;
+            top: 350px !important;
         }
         #table-main2{
             border: 0px !important;
@@ -95,7 +95,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 700px !important;
+            top: 530px !important;
         }
         #table-main3{
             border: 0px !important;
@@ -103,7 +103,31 @@
             width: 85% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 820px !important;
+            top: 650px !important;
+        }
+        #table-main4{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 80% !important;
+            position: absolute !important;
+            left: 60px !important;
+            top: 730px !important;
+        }
+        #table-main5{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 85% !important;
+            position: absolute !important;
+            left: 60px !important;
+            top: 1000px !important;
+        }
+        #table-main6{
+            border: 0px !important;
+            margin: 0 !important; 
+            width: 85% !important;
+            position: absolute !important;
+            left: 60px !important;
+            top: 1030px !important;
         }
 
 
@@ -153,6 +177,7 @@
         <input id="resultid" type="hidden" value="<s:property value="resultTCU.id"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         <input id="time" type="hidden" value="<s:property value="resultTCU.time"/>">
+        <input type="hidden" id="username" value="<s:property value="#session.username"/>">
 
         <input id="r1" type="hidden" value="<s:property value="resultTCU.r1"/>">
         <input id="r2" type="hidden" value="<s:property value="resultTCU.r2"/>">
@@ -170,10 +195,10 @@
             <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;">
                 <div class="panel-body front-no-padding" style="height:1060px;border:0;background-color: transparent">
                     <s:if test="baby.gender == 1">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Boy.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgTCUBoy.jpg">
                     </s:if>
                     <s:if test="baby.gender == 0">
-                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBg7Girl.jpg">
+                    <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgTCUGirl.jpg">
                     </s:if>
 
                     <table style="width: 35%;
@@ -190,10 +215,7 @@
                             <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
                         </tr>
                     </table>
-
-
-
-                    <table id="table-main" align="center" style="border: 0px;margin: 0; width: 35%;position: absolute;left: 440px;top: 280px;">
+                    <table id="table-main"    align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;left: 440px;top: 280px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td>
@@ -208,13 +230,8 @@
                         </tbody>
                     </table>
                     
-                    <table  id="table-main1"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main1"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 390px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
-                                <td colspan="4">
-                                    发育测评
-                                </td>
-                            </tr>
                             <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r2"  value="0" id="checkbox-answer-2-1">
@@ -228,6 +245,8 @@
                                     <input type="checkbox" name="r2"  value="2" id="checkbox-answer-2-3">
                                     <label for="checkbox-answer-2-3" style="font-weight: normal"> 儿童学习能力提升</label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r2"  value="3" id="checkbox-answer-2-4">
                                     <label for="checkbox-answer-2-4" style="font-weight: normal"> 智商能力评估</label>
@@ -244,13 +263,8 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 580px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
-                                <td colspan="4">
-                                    营养与喂养
-                                </td>
-                            </tr>
                             <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r3"  value="0" id="checkbox-answer-3-1">
@@ -268,13 +282,8 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main3"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main3"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 710px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
-                                <td colspan="4">
-                                    感官筛查
-                                </td>
-                            </tr>
                             <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r4"  value="0" id="checkbox-answer-4-1">
@@ -297,13 +306,8 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main4"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main4"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 800px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
-                                <td colspan="4">
-                                    儿童综合化验检查
-                                </td>
-                            </tr>
                             <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r5"  value="0" id="checkbox-answer-5-1">
@@ -317,6 +321,8 @@
                                     <input type="checkbox" name="r5"  value="2" id="checkbox-answer-5-3">
                                     <label for="checkbox-answer-5-3" style="font-weight: normal"> ABO+Rh血型鉴定</label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r5"  value="3" id="checkbox-answer-5-4">
                                     <label for="checkbox-answer-5-4" style="font-weight: normal"> 尿常规</label>
@@ -329,6 +335,8 @@
                                     <input type="checkbox" name="r5"  value="5" id="checkbox-answer-5-6">
                                     <label for="checkbox-answer-5-6" style="font-weight: normal"> 14项慢性食物过敏原检测</label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r5"  value="6" id="checkbox-answer-5-7">
                                     <label for="checkbox-answer-5-7" style="font-weight: normal"> 21项速发性过敏原检测</label>
@@ -341,6 +349,8 @@
                                     <input type="checkbox" name="r5"  value="8" id="checkbox-answer-5-9">
                                     <label for="checkbox-answer-5-9" style="font-weight: normal"> 乙肝两对半定性</label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r5"  value="9" id="checkbox-answer-5-10">
                                     <label for="checkbox-answer-5-10" style="font-weight: normal"> 乙肝表面抗体定量</label>
@@ -353,6 +363,8 @@
                                     <input type="checkbox" name="r5"  value="11" id="checkbox-answer-5-12">
                                     <label for="checkbox-answer-5-12" style="font-weight: normal"> 心肌酶谱5项</label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r5"  value="12" id="checkbox-answer-5-13">
                                     <label for="checkbox-answer-5-13" style="font-weight: normal"> 肝功能</label>
@@ -365,19 +377,13 @@
                                     <input type="checkbox" name="r5"  value="14" id="checkbox-answer-5-15">
                                     <label for="checkbox-answer-5-15" style="font-weight: normal"> 肠道菌群</label>
                                 </td>
-                                
-                                
                             </tr>
                         </tbody>
                     </table>
 
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main5"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1060px;left: 440px;">
                         <tbody style="width: 100%">
-                            <tr>
-                                <td colspan="4">
-                                    综合体检套餐
-                                </td>
-                            </tr>
+                            
                             <tr>
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r6"  value="0" id="checkbox-answer-6-1">
@@ -386,14 +392,12 @@
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r6"  value="1" id="checkbox-answer-6-2">
                                     <label for="checkbox-answer-6-2" style="font-weight: normal"> 综合体检套餐</label>
-                                </td>
-                                
-                                
+                                </td>    
                             </tr>
                         </tbody>
                     </table>
 
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 770px;left: 440px;">
+                    <table  id="table-main6"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1110px;left: 440px;">
                         <tbody style="width: 100%">
                             
                             <tr>
@@ -435,8 +439,17 @@
 <script type="text/javascript">
 </script>
 
-<!-- basic2 -->
+
 <script type="text/javascript">
+    var username = $("#username").val();
+
+    if (username.indexOf('家长') != -1) {
+        console.log('家长视角。。。。。。');
+        $('#table-main6').hide();
+    }
+
+
+
     var babyid = $('#babyid').val();
     var resultid = $('#resultid').val();
     var time = $('#time').val();

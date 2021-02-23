@@ -8,6 +8,7 @@
     <base href="<%=request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath()%>/" />
     <title>新建评测-儿童发育评测平台</title>
     <s:include value="/statics/head.html"></s:include>
+    <link rel="stylesheet" href="statics/cxcalendar/jquery.cxcalendar.css"/>
     <style type="text/css">
         p{
             margin:0;
@@ -69,7 +70,7 @@
                         <tbody style="width: 100%">  
                             <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>1</td>
-                                <td>
+                                <td style="width: 100px">
                                     建议复诊时间
                                 </td>
                                 <td colspan="2">
@@ -82,12 +83,20 @@
                                     发育测评
                                 </td>
                                 <td colspan="2">
-                                    <input type="checkbox" name="r2"  value="0">儿心测评
-                                    <input type="checkbox" name="r2"  value="1">感觉统合测评
-                                    <input type="checkbox" name="r2"  value="2">儿童学习能力提升
-                                    <input type="checkbox" name="r2"  value="3">智商能力评估
-                                    <input type="checkbox" name="r2"  value="4">注意力评估与指导
-                                    <input type="checkbox" name="r2"  value="5">儿童综合能力评估与指导 
+                                    
+                                    <input type="checkbox" name="r2"  value="0" id="checkbox-answer-1-1">
+                                    <label for="checkbox-answer-1-1" style="font-weight: normal"> 儿心测评</label>
+                                    <input type="checkbox" name="r2"  value="1" id="checkbox-answer-1-2">
+                                    <label for="checkbox-answer-1-2" style="font-weight: normal"> 感觉统合测评</label>
+                                    <input type="checkbox" name="r2"  value="2" id="checkbox-answer-1-3">
+                                    <label for="checkbox-answer-1-3" style="font-weight: normal"> 儿童学习能力提升</label>
+                                    <input type="checkbox" name="r2"  value="3" id="checkbox-answer-1-4">
+                                    <label for="checkbox-answer-1-4" style="font-weight: normal"> 智商能力评估</label>
+                                    <input type="checkbox" name="r5"  value="4" id="checkbox-answer-1-5">
+                                    <label for="checkbox-answer-1-1" style="font-weight: normal"> 注意力评估与指导</label>
+                                    <input type="checkbox" name="r6"  value="5" id="checkbox-answer-1-6">
+                                    <label for="checkbox-answer-1-1" style="font-weight: normal"> 儿童综合能力评估与指导</label>
+                                    
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
@@ -96,10 +105,12 @@
                                     营养与喂养
                                 </td>
                                 <td colspan="2">
-                                    <input type="checkbox" name="r3"  value="0">营养评估与饮食指导
-                                    <input type="checkbox" name="r3"  value="1">个性化食谱制定
-                                    <input type="checkbox" name="r3"  value="2">乳母饮食指导
-                                    
+                                    <input type="checkbox" name="r3"  value="0" id="checkbox-answer-2-1">
+                                    <label for="checkbox-answer-2-1" style="font-weight: normal"> 营养评估与饮食指导</label>
+                                    <input type="checkbox" name="r3"  value="1" id="checkbox-answer-2-2">
+                                    <label for="checkbox-answer-2-2" style="font-weight: normal"> 个性化食谱制定</label>
+                                    <input type="checkbox" name="r3"  value="2" id="checkbox-answer-2-3">
+                                    <label for="checkbox-answer-2-3" style="font-weight: normal"> 乳母饮食指导</label>
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
@@ -108,10 +119,14 @@
                                     感官筛查
                                 </td>
                                 <td colspan="2">
-                                    <input type="checkbox" name="r4"  value="0">口腔检查
-                                    <input type="checkbox" name="r4"  value="1">牙齿涂氟
-                                    <input type="checkbox" name="r4"  value="2">窝沟封闭
-                                    <input type="checkbox" name="r4"  value="3">视力筛查
+                                    <input type="checkbox" name="r4"  value="0" id="checkbox-answer-3-1">
+                                    <label for="checkbox-answer-3-1" style="font-weight: normal"> 口腔检查</label>
+                                    <input type="checkbox" name="r4"  value="1" id="checkbox-answer-3-2">
+                                    <label for="checkbox-answer-3-2" style="font-weight: normal"> 牙齿涂氟</label>
+                                    <input type="checkbox" name="r4"  value="2" id="checkbox-answer-3-3">
+                                    <label for="checkbox-answer-3-3" style="font-weight: normal"> 窝沟封闭</label>
+                                    <input type="checkbox" name="r4"  value="3" id="checkbox-answer-3-4">
+                                    <label for="checkbox-answer-3-4" style="font-weight: normal"> 视力筛查</label>
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
@@ -120,21 +135,39 @@
                                     儿童综合化验检查
                                 </td>
                                 <td colspan="2">
-                                    <input type="checkbox" name="r5"  value="0">血常规
-                                    <input type="checkbox" name="r5"  value="1">骨源性碱性磷酸酶
-                                    <input type="checkbox" name="r5"  value="2">ABO+Rh血型鉴定
-                                    <input type="checkbox" name="r5"  value="3">尿常规
-                                    <input type="checkbox" name="r5"  value="4">维生素D
-                                    <input type="checkbox" name="r5"  value="5">14项慢性食物过敏原检测
-                                    <input type="checkbox" name="r5"  value="6">21项速发性过敏原检测
-                                    <input type="checkbox" name="r5"  value="7">微量元素
-                                    <input type="checkbox" name="r5"  value="8">乙肝两对半定性
-                                    <input type="checkbox" name="r5"  value="9">乙肝表面抗体定量
-                                    <input type="checkbox" name="r5"  value="10">总IgE
-                                    <input type="checkbox" name="r5"  value="11">心肌酶谱5项
-                                    <input type="checkbox" name="r5"  value="12">肝功能
-                                    <input type="checkbox" name="r5"  value="13">乙肝两对半定量
-                                    <input type="checkbox" name="r5"  value="14">肠道菌群
+                                    <input type="checkbox" name="r5"  value="0" id="checkbox-answer-4-1">
+                                    <label for="checkbox-answer-4-1" style="font-weight: normal"> 血常规</label>
+                                    <input type="checkbox" name="r5"  value="1" id="checkbox-answer-4-2">
+                                    <label for="checkbox-answer-4-2" style="font-weight: normal"> 骨源性碱性磷酸酶</label>
+                                    <input type="checkbox" name="r5"  value="2" id="checkbox-answer-4-3">
+                                    <label for="checkbox-answer-4-3" style="font-weight: normal"> ABO+Rh血型鉴定</label>
+                                    <input type="checkbox" name="r5"  value="3" id="checkbox-answer-4-4">
+                                    <label for="checkbox-answer-4-4" style="font-weight: normal"> 尿常规</label>
+
+                                    <input type="checkbox" name="r5"  value="4" id="checkbox-answer-4-5">
+                                    <label for="checkbox-answer-4-5" style="font-weight: normal"> 维生素D</label>
+                                    <input type="checkbox" name="r5"  value="5" id="checkbox-answer-4-6">
+                                    <label for="checkbox-answer-4-6" style="font-weight: normal"> 14项慢性食物过敏原检测</label>
+                                    <input type="checkbox" name="r5"  value="6" id="checkbox-answer-4-7">
+                                    <label for="checkbox-answer-4-7" style="font-weight: normal"> 21项速发性过敏原检测</label>
+                                    <input type="checkbox" name="r5"  value="7" id="checkbox-answer-4-8">
+                                    <label for="checkbox-answer-4-8" style="font-weight: normal"> 微量元素</label>
+
+                                    <input type="checkbox" name="r5"  value="8" id="checkbox-answer-4-9">
+                                    <label for="checkbox-answer-4-9" style="font-weight: normal"> 乙肝两对半定性</label>
+                                    <input type="checkbox" name="r5"  value="9" id="checkbox-answer-4-10">
+                                    <label for="checkbox-answer-4-10" style="font-weight: normal"> 乙肝表面抗体定量</label>
+                                    <input type="checkbox" name="r5"  value="10" id="checkbox-answer-4-11">
+                                    <label for="checkbox-answer-4-11" style="font-weight: normal"> 总IgE</label>
+                                    <input type="checkbox" name="r5"  value="11" id="checkbox-answer-4-12">
+                                    <label for="checkbox-answer-4-12" style="font-weight: normal"> 心肌酶谱5项</label>
+
+                                    <input type="checkbox" name="r5"  value="12" id="checkbox-answer-4-13">
+                                    <label for="checkbox-answer-4-13" style="font-weight: normal"> 肝功能</label>
+                                    <input type="checkbox" name="r5"  value="13" id="checkbox-answer-4-14">
+                                    <label for="checkbox-answer-4-14" style="font-weight: normal"> 乙肝两对半定量</label>
+                                    <input type="checkbox" name="r5"  value="14" id="checkbox-answer-4-15">
+                                    <label for="checkbox-answer-4-15" style="font-weight: normal"> 肠道菌群</label>
                                     
                                 </td>
                             </tr>
@@ -144,17 +177,23 @@
                                     综合体检套餐
                                 </td>
                                 <td colspan="2">
-                                    <input type="checkbox" name="r6"  value="0">身高增长综合体检
-                                    <input type="checkbox" name="r6"  value="1">综合体检套餐 
+                                    <input type="checkbox" name="r6"  value="0" id="checkbox-answer-5-1">
+                                    <label for="checkbox-answer-5-1" style="font-weight: normal"> 身高增长综合体检</label>
+                                    <input type="checkbox" name="r6"  value="1" id="checkbox-answer-5-2">
+                                    <label for="checkbox-answer-5-2" style="font-weight: normal"> 综合体检套餐</label> 
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
                                 <td>7</td>
                                 <td colspan="3">
-                                    <input type="checkbox" name="r7"  value="0">B
-                                    <input type="checkbox" name="r7"  value="1">H
-                                    <input type="checkbox" name="r7"  value="2">Z
-                                    <input type="checkbox" name="r7"  value="3">C
+                                    <input type="checkbox" name="r7"  value="0" id="checkbox-answer-6-1">
+                                    <label for="checkbox-answer-6-1" style="font-weight: normal"> B</label>
+                                    <input type="checkbox" name="r7"  value="1" id="checkbox-answer-6-2">
+                                    <label for="checkbox-answer-6-2" style="font-weight: normal"> H</label>
+                                    <input type="checkbox" name="r7"  value="2" id="checkbox-answer-6-3">
+                                    <label for="checkbox-answer-6-3" style="font-weight: normal"> Z</label>
+                                    <input type="checkbox" name="r7"  value="3" id="checkbox-answer-6-4">
+                                    <label for="checkbox-answer-6-4" style="font-weight: normal"> C</label>
                                 </td>
                             </tr>
                         </tbody>
