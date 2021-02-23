@@ -503,7 +503,9 @@
             success:function (json) {
                 var rId = json.resultAllergy.id;
                 var refreshData = {
-                    babyid: $("#babyid").val()
+                    babyid: $("#babyid").val(),
+                    testId: 32,
+                    resultId: rId
                 }
                 $.ajax({
                     url: 'refreshExamTime',

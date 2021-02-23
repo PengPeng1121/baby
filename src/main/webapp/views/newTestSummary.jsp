@@ -34,7 +34,7 @@
 <s:include value="nav.jsp?act=test"/>
 <div class="front-inner front-inner-media">
     <div class="container">
-        <h1 style="margin-top: 0px;margin-bottom: 20px;">体格头面检查</h1>
+        <h1 style="margin-top: 0px;margin-bottom: 20px;">总评</h1>
         <form class="form-horizontal">
             <div class="panel panel-default front-panel" id="info">
                 <div class="panel-heading">小儿基本资料</div>
