@@ -56,6 +56,9 @@
             border-bottom: 1px solid #df9390;
             height: 45px;
         }
+        .table-info td{
+            padding: 2px !important;
+        }
     </style>
     <style type="text/css" media="print">
         @page
@@ -87,7 +90,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 350px !important;
+            top: 330px !important;
         }
         #table-main2{
             border: 0px !important;
@@ -95,7 +98,7 @@
             width: 80% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 530px !important;
+            top: 490px !important;
         }
         #table-main3{
             border: 0px !important;
@@ -103,7 +106,7 @@
             width: 85% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 650px !important;
+            top: 620px !important;
         }
         #table-main4{
             border: 0px !important;
@@ -119,7 +122,7 @@
             width: 85% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 1000px !important;
+            top: 960px !important;
         }
         #table-main6{
             border: 0px !important;
@@ -127,7 +130,7 @@
             width: 85% !important;
             position: absolute !important;
             left: 60px !important;
-            top: 1030px !important;
+            top: 1000px !important;
         }
 
 
@@ -215,7 +218,7 @@
                             <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
                         </tr>
                     </table>
-                    <table id="table-main"    align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;left: 440px;top: 260px;">
+                    <table id="table-main"  class="table-info"   align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;left: 440px;top: 260px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td>
@@ -225,7 +228,7 @@
                         </tbody>
                     </table>
                     
-                    <table  id="table-main1"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 390px;left: 440px;">
+                    <table  id="table-main1" class="table-info"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 390px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 180px">
@@ -258,7 +261,7 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main2"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 580px;left: 440px;">
+                    <table  id="table-main2"  class="table-info" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 560px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 180px">
@@ -277,7 +280,7 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main3"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 710px;left: 440px;">
+                    <table  id="table-main3"  class="table-info" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 690px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 180px">
@@ -301,7 +304,7 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main4"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 800px;left: 440px;">
+                    <table  id="table-main4"  class="table-info" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 800px;left: 440px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td style="width: 180px">
@@ -376,7 +379,7 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main5"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1060px;left: 440px;">
+                    <table  id="table-main5"  class="table-info" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1040px;left: 440px;">
                         <tbody style="width: 100%">
                             
                             <tr>
@@ -392,7 +395,7 @@
                         </tbody>
                     </table>
 
-                    <table  id="table-main6"  align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1110px;left: 440px;">
+                    <table  id="table-main6"  class="table-info" align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;top: 1100px;left: 440px;">
                         <tbody style="width: 100%">
                             
                             <tr>
