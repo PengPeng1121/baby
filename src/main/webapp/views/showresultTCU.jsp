@@ -176,7 +176,7 @@
         <input id="babyid" type="hidden" value="<s:property value="resultTCU.babyid"/>">
         <input id="resultid" type="hidden" value="<s:property value="resultTCU.id"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
-        <input id="time" type="hidden" value="<s:property value="resultTCU.time"/>">
+        <input id="time" type="hidden" value="<s:property value="resultTCU.nextVisitTime"/>">
         <input type="hidden" id="username" value="<s:property value="#session.username"/>">
 
         <input id="r1" type="hidden" value="<s:property value="resultTCU.r1"/>">
@@ -215,16 +215,11 @@
                             <td  id="name" style="border-bottom: 1px solid #df938f;padding-left: 0px; width: 250px"><s:property value="baby.name"/></td>
                         </tr>
                     </table>
-                    <table id="table-main"    align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;left: 440px;top: 280px;">
+                    <table id="table-main"    align="center"  style="border: 0px;margin: 0;width: 35%;position: absolute;left: 440px;top: 260px;">
                         <tbody style="width: 100%">
                             <tr>
                                 <td>
-                                    建议复诊时间:
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <s:date name="resultTCU.time" format="yyyy-MM-dd"/>
+                                    <s:date name="resultTCU.nextVisitTime" format="yyyy-MM-dd"/>
                                 </td>
                             </tr>
                         </tbody>

@@ -678,7 +678,7 @@
                                         </div>
                                     </div>
                                     <div class="pull-right" style="float: left;margin-top: 7px;">
-                                        <!-- <a class="btn btn-default" target="_blank" href="editresultTCU?id=<s:property value="#resultTCU.id"/>">编辑</a> -->
+                                        <a class="btn btn-default" target="_blank" href="editTestTCU?id=<s:property value="#resultTCU.id"/>">编辑</a>
                                         <a class="btn btn-default" target="_blank" href="showresultTCU?id=<s:property value="#resultTCU.id"/>">查看</a>
                                         <!-- <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultTCU.id"/>, 56)">选中</a> -->
                                         <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultTCU.id"/>, 56)">删除</a>
