@@ -300,6 +300,30 @@
             left: 80px;
         }
 
+        #ige #igeImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 80px;
+        }
+
+        #igf1 #igf1Img{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 80px;
+        }
+
+        #vitaminD #vitaminDImg{
+            width: 650px;
+            position: relative;
+            z-index: 1;
+            top: 290px;
+            left: 80px;
+        }
+
         #ecg #name-table{
             width: 55%;
             border: 0;
@@ -1042,7 +1066,7 @@
         #tooth20 .style3::after {
             transform: rotate(-45deg) !important;
         }
-        #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2, #urineImg, #ECGImg{
+        #eyeImg, #bloodImg, #boneImg, #BMDImg, #microImg, #earImg1, #earImg2, #urineImg, #ECGImg, #igeImg, #igf1Img, #vitaminDImg{
             left: 70px !important;
         }
 
@@ -3431,7 +3455,89 @@
     </div>
     </s:if>
 
+    <s:if test="allTestResultVo.resultIgf1">
+    <div class="container" class="hemaFront" id="igf1">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgIgf1Boy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgIgf1Girl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <img id="igf1Img" src="<s:property value="allTestResultVo.resultIgf1.igf1ImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
 
+    <s:if test="allTestResultVo.resultIge">
+    <div class="container" class="hemaFront" id="ige">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgIgeBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgIgeGirl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <img id="igeImg" src="<s:property value="allTestResultVo.resultIge.igeImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
+
+    <s:if test="allTestResultVo.resultVitaminD">
+    <div class="container" class="hemaFront" id="vitaminD">
+        <div class="panel panel-default front-panel"  style="border: 0px; background-color: transparent;margin-bottom: 0px">
+            <div class="panel-body front-no-padding" style="height:1122px;border:0;background-color: transparent;margin-bottom: 0px">
+                <!-- <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgMicroBoy.jpg"> -->
+                <s:if test="baby.gender == 1">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgVitaminDBoy.jpg">
+                </s:if>
+                <s:if test="baby.gender == 0">
+                <img style="width: 822px;position: absolute;z-index: -1;height: 1122px;" src="statics/img/hemaBgVitaminDGirl.jpg">
+                </s:if>
+                <table id="name-table">
+                    <tr>
+                        <td class="col-md-12">
+                            <span style="letter-spacing: 10px">姓</span>
+                            <span style="letter-spacing: 1px">名:</span>
+                            <div id="name-text">
+                                <s:property value="baby.name"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <img id="vitaminDImg" src="<s:property value="allTestResultVo.resultVitaminD.vitaminDImgUrl"/>">
+            </div>
+        </div>
+    </div>
+    </s:if>
 
     <s:if test="allTestResultVo.resultSummary"> 
     <div class="container" class="hemaFront" id="summary" style="height:1122px; overflow: hidden;">

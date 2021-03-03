@@ -124,6 +124,15 @@
         <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_BloodType()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">血型鉴定</h4></a>
 
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_VitaminD()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">25羟基维生素D</h4></a>
+
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_IGF_1()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">胰岛素样生长因子IGF-1</h4></a>
+
+        <a type="button" class="btn  modal-box text-center manage doctorOperate jianyan view" href="javascript:start_Ige()" style="margin-top: 10px"><h4
+        style="color: white;font-size: small">免疫球蛋白E(总ige)</h4></a>
+
         <a type="button" class="btn  modal-box text-center manage doctorOperate view" href="javascript:start_Summary()" style="margin-top: 10px"><h4
         style="color: white;font-size: small">总评</h4></a>
         <input type="hidden" id="username" value="<s:property value="#session.username"/>">
@@ -948,6 +957,60 @@
             }, success: function (data) {
                 if (data.flag == true) {
                     location.href = "newtestBloodType?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_VitaminD() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestVitaminD?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_IGF_1() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestIGF-1?babyid=" + babyid;
+                } else {
+                    $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
+                }
+            }
+
+        })
+    }
+
+    function start_Ige() {
+        var babyid = $("#babyid").val();
+        $.ajax({
+            url: "monthage",
+            type: "post",
+            data: {
+                babyid: babyid
+            }, success: function (data) {
+                if (data.flag == true) {
+                    location.href = "newtestIge?babyid=" + babyid;
                 } else {
                     $.fillTipBox({type: 'info', icon: 'glyphicon-info-sign', content: '该儿童不在本系统测查年龄范围之内！'});
                 }

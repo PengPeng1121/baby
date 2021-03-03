@@ -631,6 +631,90 @@
                         </tr>
                     </s:iterator>
 
+                    <s:iterator value="resultVitaminDList" var="resultVitaminD">
+                        <tr class="manage doctorOperate jianyan view vitaminD">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                               25羟基维生素D
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultVitaminD.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" target="_blank" href="showresultVitaminD?id=<s:property value="#resultVitaminD.id"/>">查看</a>
+                                        <!-- 53 -->
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultVitaminD.id"/>, 57)">选中</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultVitaminD.id"/>, 57)">删除</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultIGF-1List" var="resultIGF-1">
+                        <tr class="manage doctorOperate jianyan view igf-1">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                               胰岛素样生长因子IGF-1
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultIGF-1.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" target="_blank" href="showresultIGF-1?id=<s:property value="#resultIGF-1.id"/>">查看</a>
+                                        <!-- 53 -->
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultIGF-1.id"/>, 58)">选中</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultIGF-1.id"/>, 58)">删除</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
+                    <s:iterator value="resultIgeList" var="resultIge">
+                        <tr class="manage doctorOperate jianyan view ige">
+                            <td>
+                                <div class="media front-overflow-visible" style="padding: 7px;">
+                                    <div class="media-body front-overflow-visible" >
+                                        <h4 class="media-heading " >
+                                            <span class="front-text-title" >
+                                               免疫球蛋白E(总ige)
+                                            </span>
+                                        </h4>
+                                        <div class="front-text-break">
+                                            <div class="col-md-12" style="padding-left:0px;float: left;">
+                                                <label class="col-md-1 control-label front-label" style="padding-left:0px;">检查日期</label>
+                                                <span class="col-md-2 control-label front-label" style="padding-left:30px;"><s:date name="#resultIge.time" format="yyyy-MM-dd HH:mm:ss" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="float: left;margin-top: 7px;">
+                                        <a class="btn btn-default" target="_blank" href="showresultIge?id=<s:property value="#resultIge.id"/>">查看</a>
+                                        <!-- 53 -->
+                                        <a class="btn btn-default unSelected" onclick="selecReport(this, <s:property value="#resultIge.id"/>, 59)">选中</a>
+                                        <a class="btn btn-danger" onclick="delReport(this, <s:property value="#resultIge.id"/>, 59)">删除</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </s:iterator>
+
                     <s:iterator value="resultSummaryList" var="resultSummary">
                         <tr class="manage doctorOperate view summary">
                             <td>
@@ -1359,6 +1443,9 @@
         $($('.micro')[0]).show();
         $($('.urine')[0]).show();
         $($('.ecg')[0]).show();
+        $($('.vitaminD')[0]).show();
+        $($('.igf-1')[0]).show();
+        $($('.ige')[0]).show();
         $($('.summary')[0]).show();
         $($('.tcu')[0]).show();
         authorize()
