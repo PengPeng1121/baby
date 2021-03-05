@@ -12,7 +12,7 @@
         }
         .print{
             position: fixed;
-            top: 700px;
+            top: 500px;
             right: 300px;
         }
         input[type="radio"] {
@@ -3047,7 +3047,7 @@
                     </tbody>
                 </table>
 
-                <textarea id="doctorRemark2016" rows="14" style="resize:none;border: 0;background-color: transparent;"></textarea>
+                <textarea id="doctorRemark2016" rows="14" style="resize:none;border: 0;background-color: transparent; font-size: 10px"></textarea>
                 <p id="illustration" style="font-size: 10px;">
                     *注：本测评反映的不是智力水平，而是儿童在一定阶段的神经心理发育水平。本测验结果准确性受被试者测验时的情绪和身体状况影响，本报告仅供参考。测查结果只代表宝宝此阶段发展情况，既不代表从前更不能定论将来。
                 </p>
