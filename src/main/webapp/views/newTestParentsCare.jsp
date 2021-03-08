@@ -84,6 +84,7 @@
                                 <option value="9">语言问题：如：发音不准，说话晚等</option>
                                 <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
                                 <option value="11">体姿体态问题：如O型腿、X型腿等</option>
+                                <option value="12">其他</option>
                             </select>
                         </div>
                     </div>
@@ -103,6 +104,7 @@
                                 <option value="9">语言问题：如：发音不准，说话晚等</option>
                                 <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
                                 <option value="11">体姿体态问题：如O型腿、X型腿等</option>
+                                <option value="12">其他</option>
                             </select>
                         </div>
                     </div>
@@ -122,6 +124,7 @@
                                 <option value="9">语言问题：如：发音不准，说话晚等</option>
                                 <option value="10">社交问题：不喜欢和小朋友交流、玩耍等</option>
                                 <option value="11">体姿体态问题：如O型腿、X型腿等</option>
+                                <option value="12">其他</option>
                             </select>
                         </div>
                     </div>
