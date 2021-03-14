@@ -540,7 +540,7 @@
                 </s:if>
 
                 <!-- 生长发育(河马) -->
-                <s:if test="resultGroup2020LeftTimes != 0">
+                <!-- <s:if test="resultGroup2020LeftTimes != 0"> -->
                 <div class="col-md-3  manage doctorOperate view">
                     <div class="panel panel-default front-panel " style="height: 155px;border:0px">
                         <div class="panel-body">
@@ -568,7 +568,7 @@
                         </div>
                     </div>
                 </div>
-                </s:if>
+                <!-- </s:if> -->
 
                 <!-- 体格头面检查(河马) -->
                 <s:if test="resultPhysicalLeftTimes != 0">

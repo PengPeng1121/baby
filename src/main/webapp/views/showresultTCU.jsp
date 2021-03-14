@@ -125,12 +125,7 @@
             top: 960px !important;
         }
         #table-main6{
-            border: 0px !important;
-            margin: 0 !important; 
-            width: 85% !important;
-            position: absolute !important;
-            left: 60px !important;
-            top: 1000px !important;
+            display: none;
         }
 
 
@@ -180,6 +175,8 @@
         <input id="resultid" type="hidden" value="<s:property value="resultTCU.id"/>">
         <input id="gender" type="hidden" value="<s:property value="baby.gender"/>">
         <input id="time" type="hidden" value="<s:property value="resultTCU.nextVisitTime"/>">
+        <input id="testTime" type="hidden" value="<s:property value="resultTCU.nextTestTime"/>">
+        <input id="feedTime" type="hidden" value="<s:property value="resultTCU.nextFeedTime"/>">
         <input type="hidden" id="username" value="<s:property value="#session.username"/>">
 
         <input id="r1" type="hidden" value="<s:property value="resultTCU.r1"/>">
@@ -258,6 +255,11 @@
                                     <label for="checkbox-answer-2-6" style="font-weight: normal"> 儿童综合能力评估与指导</label>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <s:date name="resultTCU.nextTestTime" format="yyyy-MM-dd"/>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -275,6 +277,11 @@
                                 <td style="width: 180px">
                                     <input type="checkbox" name="r3"  value="2" id="checkbox-answer-3-3">
                                     <label for="checkbox-answer-3-3" style="font-weight: normal"> 乳母饮食指导</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <s:date name="resultTCU.nextFeedTime" format="yyyy-MM-dd"/>
                                 </td>
                             </tr>
                         </tbody>
@@ -497,6 +504,7 @@
 
     
     $('.print').click(function(){
+        
         window.print();
     });
 </script>

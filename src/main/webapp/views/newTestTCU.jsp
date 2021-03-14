@@ -82,7 +82,7 @@
                                 <td>
                                     发育测评
                                 </td>
-                                <td colspan="2">
+                                <td>
                                     
                                     <input type="checkbox" name="r2"  value="0" id="checkbox-answer-1-1">
                                     <label for="checkbox-answer-1-1" style="font-weight: normal"> 儿心测评</label>
@@ -96,7 +96,9 @@
                                     <label for="checkbox-answer-1-1" style="font-weight: normal"> 注意力评估与指导</label>
                                     <input type="checkbox" name="r6"  value="5" id="checkbox-answer-1-6">
                                     <label for="checkbox-answer-1-1" style="font-weight: normal"> 儿童综合能力评估与指导</label>
-                                    
+                                </td>
+                                <td>
+                                    <input id="testTime" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
@@ -104,13 +106,16 @@
                                 <td>
                                     营养与喂养
                                 </td>
-                                <td colspan="2">
+                                <td>
                                     <input type="checkbox" name="r3"  value="0" id="checkbox-answer-2-1">
                                     <label for="checkbox-answer-2-1" style="font-weight: normal"> 营养评估与饮食指导</label>
                                     <input type="checkbox" name="r3"  value="1" id="checkbox-answer-2-2">
                                     <label for="checkbox-answer-2-2" style="font-weight: normal"> 个性化食谱制定</label>
                                     <input type="checkbox" name="r3"  value="2" id="checkbox-answer-2-3">
                                     <label for="checkbox-answer-2-3" style="font-weight: normal"> 乳母饮食指导</label>
+                                </td>
+                                <td>
+                                    <input id="feedTime" class="form-control front-no-radius front-no-box-shadow"  type="text" readonly>
                                 </td>
                             </tr>
                             <tr style="font-size: 14px;background-color: #d9edf7;">
@@ -212,6 +217,8 @@
 <script src="statics/cxcalendar/jquery.cxcalendar.js"></script>
 <script type="text/javascript">
     $('#time').cxCalendar();
+    $('#testTime').cxCalendar();
+    $('#feedTime').cxCalendar();
     function save() {
         
             $.tipModal('confirm', 'success', '确定保存？', function(result) {
@@ -300,6 +307,8 @@
         // });
 
         data['resultTCU.nextVisitTime'] = $("#time").val().trim();
+        data['resultTCU.nextTestTime'] = $("#testTime").val().trim();
+        data['resultTCU.nextFeedTime'] = $("#feedTime").val().trim();
         // data['resultTCU.r1'] = r1Str;
         data['resultTCU.r2'] = r2Str;
         data['resultTCU.r3'] = r3Str;
