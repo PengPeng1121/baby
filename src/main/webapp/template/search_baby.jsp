@@ -29,10 +29,10 @@
                                     <span class="col-md-2 control-label front-label"><s:if test="#baby.gender == 0">女</s:if><s:else>男</s:else></span>
                                     <label class="col-md-1 control-label front-label" style="padding-left:0px;">出生日期</label>
                                     <span class="col-md-2 control-label front-label"><s:date name="#baby.birthday" format="yyyy-MM-dd"/></span>
-                                    <label class="col-md-1 control-label front-label" style="padding-left:0px;">父亲</label>
-                                    <span class="col-md-2 control-label front-label"><s:property value="#baby.father.name"/></span>
-                                    <label class="col-md-1 control-label front-label" style="padding-left:0px;">母亲</label>
-                                    <span class="col-md-2 control-label front-label"><s:property value="#baby.mother.name"/></span>
+                                    <!-- <label class="col-md-1 control-label front-label" style="padding-left:0px;">父亲</label>
+                                    <span class="col-md-2 control-label front-label"><s:property value="#baby.father.name"/></span> -->
+                                    <label class="col-md-1 control-label front-label" style="padding-left:0px;">建档时间</label>
+                                    <span class="col-md-2 control-label front-label"><s:property value="#baby.time"/></span>
                                 </div>
                             </div>
                             <%--<div class="front-checkboxes front-checkboxes-bottom pull-right" style="margin-bottom:0px;">
