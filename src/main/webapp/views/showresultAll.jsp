@@ -2820,6 +2820,8 @@
                 <table id="tableFeel1">
                     <tbody>
                         <tr>
+                            <td class="col-md-3">姓名:<s:property value="baby.name"/></td>
+                            
                             <td class="col-md-3">测评日期:<s:date name="allTestResultVo.resultFeel2020.time" format="yyyy-MM-dd"/></td>
                         </tr>
                     </tbody>
